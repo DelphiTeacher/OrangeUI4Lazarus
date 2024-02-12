@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="project1.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="24"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unit1.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit1"/>
+        <CursorPos X="11" Y="45"/>
+        <UsageCount Value="24"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIStyles_VCLNew\ListItemStyle_IconCaptionLeft_ArrowRight.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameListItemStyle_IconCaptionLeft_ArrowRight"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="36"/>
+        <CursorPos X="57" Y="51"/>
+        <UsageCount Value="24"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Controls\uSkinTreeViewType.pas"/>
+        <EditorIndex Value="7"/>
+        <TopLine Value="1043"/>
+        <CursorPos Y="1067"/>
+        <UsageCount Value="11"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Base\uBinaryObjectList.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1126"/>
+        <CursorPos X="29" Y="1154"/>
+        <UsageCount Value="11"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Base\uSkinListLayouts.pas"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="1958"/>
+        <CursorPos Y="1972"/>
+        <UsageCount Value="11"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Base\uSkinItems.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="3817"/>
+        <CursorPos X="31" Y="3824"/>
+        <UsageCount Value="11"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\Lazarus\fpc\3.2.2\source\rtl\objpas\classes\classesh.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="525"/>
+        <CursorPos X="3" Y="522"/>
+        <UsageCount Value="11"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\Lazarus\fpc\3.2.2\source\rtl\objpas\classes\collect.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="349"/>
+        <CursorPos X="3" Y="351"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Controls\uSkinCustomListType.pas"/>
+        <EditorIndex Value="9"/>
+        <TopLine Value="5363"/>
+        <CursorPos Y="5377"/>
+        <UsageCount Value="11"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Controls\uSkinListViewType.pas"/>
+        <EditorIndex Value="8"/>
+        <TopLine Value="2144"/>
+        <CursorPos Y="2164"/>
+        <UsageCount Value="11"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\Lazarus\fpc\3.2.2\source\rtl\inc\objpash.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="180"/>
+        <CursorPos X="23" Y="206"/>
+        <UsageCount Value="11"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Base\backup\uDrawTextParam.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="220"/>
+        <CursorPos X="42" Y="247"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Base\backup\uSkinListLayouts.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1811"/>
+        <CursorPos X="37" Y="1838"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Base\backup\uSkinItems.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="5977"/>
+        <CursorPos Y="6008"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControlNew\Source\VCL\uSkinWindowsControl.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="407"/>
+        <CursorPos X="8" Y="418"/>
+        <UsageCount Value="11"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Controls\uSkinVirtualGridType.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="586"/>
+        <CursorPos Y="609"/>
+        <UsageCount Value="11"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Controls\uSkinItemGridType.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="173"/>
+        <CursorPos Y="197"/>
+        <UsageCount Value="11"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Controls\uSkinDBGridType.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="5849"/>
+        <CursorPos Y="5875"/>
+        <UsageCount Value="11"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Controls\uSkinVirtualChartType.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2962"/>
+        <CursorPos X="77" Y="2978"/>
+        <UsageCount Value="11"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Base\uDrawTextParam.pas"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="55"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControlNew\Source\VCL\NativeCanvas\uNativeDrawCanvas.pas"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="3086"/>
+        <CursorPos X="6" Y="3093"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControlNew\Source\VCL\NativeCanvas\uNativeSkinPictureEngine.pas"/>
+        <EditorIndex Value="12"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Controls\uSkinVirtualListType.pas"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="4029"/>
+        <CursorPos Y="4043"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Controls\uSkinScrollControlType.pas"/>
+        <EditorIndex Value="10"/>
+        <TopLine Value="2314"/>
+        <CursorPos Y="2329"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Base\uComponentType.pas"/>
+        <EditorIndex Value="11"/>
+        <TopLine Value="3096"/>
+        <CursorPos Y="3110"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Base\uGraphicCommon.pas"/>
+        <EditorIndex Value="6"/>
+        <TopLine Value="844"/>
+        <CursorPos X="36" Y="858"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="29">
+      <Position>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Base\uSkinListLayouts.pas"/>
+        <Caret Line="1731" TopLine="1717"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Base\uSkinListLayouts.pas"/>
+        <Caret Line="1736" Column="10" TopLine="1717"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Controls\uSkinTreeViewType.pas"/>
+        <Caret Line="1057" TopLine="1043"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Controls\uSkinTreeViewType.pas"/>
+        <Caret Line="1058" TopLine="1043"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Controls\uSkinTreeViewType.pas"/>
+        <Caret Line="1059" TopLine="1043"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Controls\uSkinTreeViewType.pas"/>
+        <Caret Line="1060" TopLine="1043"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Controls\uSkinTreeViewType.pas"/>
+        <Caret Line="1061" TopLine="1043"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Controls\uSkinTreeViewType.pas"/>
+        <Caret Line="1067" TopLine="1043"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Base\uSkinListLayouts.pas"/>
+        <Caret Line="2730" TopLine="2715"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Base\uSkinListLayouts.pas"/>
+        <Caret Line="2732" TopLine="2715"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Base\uSkinListLayouts.pas"/>
+        <Caret Line="2734" TopLine="2715"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Base\uSkinListLayouts.pas"/>
+        <Caret Line="2737" TopLine="2715"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Controls\uSkinListViewType.pas"/>
+        <Caret Line="2159" TopLine="2144"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Controls\uSkinListViewType.pas"/>
+        <Caret Line="2160" TopLine="2144"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Controls\uSkinListViewType.pas"/>
+        <Caret Line="2164" TopLine="2144"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Base\uSkinListLayouts.pas"/>
+        <Caret Line="1957" TopLine="1943"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Base\uSkinListLayouts.pas"/>
+        <Caret Line="1958" TopLine="1943"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Base\uSkinListLayouts.pas"/>
+        <Caret Line="1960" TopLine="1943"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Base\uSkinListLayouts.pas"/>
+        <Caret Line="1964" TopLine="1943"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Base\uSkinListLayouts.pas"/>
+        <Caret Line="1971" Column="18" TopLine="1952"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Base\uGraphicCommon.pas"/>
+        <Caret Line="889" TopLine="874"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Base\uGraphicCommon.pas"/>
+        <Caret Line="890" Column="5" TopLine="877"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Base\uSkinListLayouts.pas"/>
+        <Caret Line="1972" TopLine="1952"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Base\uSkinListLayouts.pas"/>
+        <Caret Line="1958" TopLine="1952"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Base\uSkinListLayouts.pas"/>
+        <Caret Line="1972" TopLine="1952"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Base\uGraphicCommon.pas"/>
+        <Caret Line="889" TopLine="877"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Base\uGraphicCommon.pas"/>
+        <Caret Line="890" TopLine="877"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Base\uGraphicCommon.pas"/>
+        <Caret Line="884" TopLine="877"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Base\uGraphicCommon.pas"/>
+        <Caret Line="858" Column="36" TopLine="844"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Base\uSkinListLayouts.pas"/>
+        <Caret Line="2226" TopLine="2212"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="TestItemGrid_MultiColorProgressBarColumnFrame.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="3"/>
+        <CursorPos X="26" Y="19"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="testitemgrid_multicolorprogressbarcolumnframeform.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="TestItemGrid_MultiColorProgressBarColumnFrameForm"/>
+        <CursorPos X="117" Y="8"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="DashBoard_Analyse_ItemGrid_MutliColorProgressBarColumnFrame.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameItemGrid_MultiColorProgressBarColumn"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <EditorIndex Value="2"/>
+        <CursorPos X="85" Y="22"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeProjectCommon\EasyServiceCommonMaterialDataMoudle_VCL_Lazarus.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="dmEasyServiceCommonMaterial"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="20"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIStyles_VCL\ListItemStyle_ProgressBar.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameListItemStyle_ProgressBar"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="4"/>
+        <CursorPos X="75" Y="20"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="DashBoard_AnalyseFrame.pas"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="22"/>
+        <CursorPos Y="56"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Controls\uSkinProgressBarType.pas"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="868"/>
+        <CursorPos X="3" Y="757"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="16">
+      <Position>
+        <Filename Value="testitemgrid_multicolorprogressbarcolumnframeform.pas"/>
+      </Position>
+      <Position>
+        <Filename Value="DashBoard_Analyse_ItemGrid_MutliColorProgressBarColumnFrame.pas"/>
+        <Caret Line="82" Column="48" TopLine="47"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Controls\uSkinProgressBarType.pas"/>
+        <Caret Line="480" Column="44" TopLine="448"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Controls\uSkinProgressBarType.pas"/>
+        <Caret Line="1787" Column="73" TopLine="1744"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Controls\uSkinProgressBarType.pas"/>
+        <Caret Line="492" Column="20" TopLine="473"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Controls\uSkinProgressBarType.pas"/>
+        <Caret Line="1167" Column="3" TopLine="1162"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Controls\uSkinProgressBarType.pas"/>
+        <Caret Line="435" Column="21" TopLine="403"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Controls\uSkinProgressBarType.pas"/>
+        <Caret Line="758" Column="46" TopLine="745"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Controls\uSkinProgressBarType.pas"/>
+        <Caret Line="492" Column="22" TopLine="463"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Controls\uSkinProgressBarType.pas"/>
+        <Caret Line="1167" Column="3" TopLine="1153"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Controls\uSkinProgressBarType.pas"/>
+        <Caret Line="492" Column="14" TopLine="457"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Controls\uSkinProgressBarType.pas"/>
+        <Caret Line="1216" Column="13" TopLine="1202"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Controls\uSkinProgressBarType.pas"/>
+        <Caret Line="435" Column="18" TopLine="414"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Controls\uSkinProgressBarType.pas"/>
+        <Caret Line="442" Column="24" TopLine="414"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Controls\uSkinProgressBarType.pas"/>
+        <Caret Line="801" Column="35" TopLine="777"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Controls\uSkinProgressBarType.pas"/>
+        <Caret Line="431" TopLine="402"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Controls\uSkinProgressBarType.pas"/>
+        <Caret Line="739" TopLine="713"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

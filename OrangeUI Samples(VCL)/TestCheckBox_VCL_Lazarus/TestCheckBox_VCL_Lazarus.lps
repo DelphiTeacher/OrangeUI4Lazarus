@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="TestCheckBox_VCL_Lazarus.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="26"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unit1.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit1"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="20"/>
+        <CursorPos X="27" Y="42"/>
+        <UsageCount Value="26"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeProjectCommon\EasyServiceCommonMaterialDataMoudle_VCL_Lazarus.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="dmEasyServiceCommonMaterial"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="25"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Controls\uSkinCheckBoxType.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="553"/>
+        <CursorPos X="24" Y="568"/>
+        <UsageCount Value="12"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Base\uComponentType.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="3072"/>
+        <CursorPos Y="3108"/>
+        <UsageCount Value="12"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Controls\INC\Common\ISkinComponent_Skin_Impl_Field_Code.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="393"/>
+        <CursorPos Y="406"/>
+        <UsageCount Value="12"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Controls\INC\Common\ISkinComponent_Skin_Impl_Create_Code.inc"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos Y="43"/>
+        <UsageCount Value="12"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Base\uSkinRegManager.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="178"/>
+        <CursorPos X="23" Y="199"/>
+        <UsageCount Value="12"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControlNew\Source\VCL\uSkinWindowsControl.pas"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="400"/>
+        <CursorPos X="41" Y="422"/>
+        <UsageCount Value="12"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Controls\INC\Common\ISkinComponent_Skin_Impl_Field_Declare.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="38"/>
+        <CursorPos X="15" Y="56"/>
+        <UsageCount Value="12"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControlNew\Source\VCL\uSkinWindowsForm.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="3642"/>
+        <CursorPos Y="3668"/>
+        <UsageCount Value="12"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unit1.lfm"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Controls\INC\Common\nouse\ISkinComponent_BaseSkinControl_Skin_Impl_Field_Code.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="118"/>
+        <CursorPos X="60" Y="291"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControlNew\Source\VCL\GDIPlus\uGDIPlusDrawCanvas.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="785"/>
+        <CursorPos Y="807"/>
+        <UsageCount Value="11"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Base\uDrawPathParam.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="862"/>
+        <CursorPos Y="892"/>
+        <UsageCount Value="12"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Controls\INC\Common\ISkinControl_Control_Impl_Mouse_Code.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="364"/>
+        <CursorPos X="51" Y="376"/>
+        <UsageCount Value="12"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Controls\uSkinRadioButtonType.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="655"/>
+        <CursorPos Y="670"/>
+        <UsageCount Value="12"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="3">
+      <Position>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="33" Column="52"/>
+      </Position>
+      <Position>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="31" Column="16" TopLine="14"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControlNew\Source\VCL\uSkinWindowsControl.pas"/>
+        <Caret Line="502" Column="29" TopLine="487"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControlNew\Source\VCL\uSkinWindowsControl.pas"/>
+        <Caret Line="109" Column="21" TopLine="96"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+  <Debugging>
+    <BreakPoints>
+      <Item>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="..\..\OrangeUIControlNew\Source\Controls\uSkinCheckBoxType.pas"/>
+        <Line Value="1684"/>
+      </Item>
+      <Item>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="..\..\OrangeUIControlNew\Source\Controls\uSkinCheckBoxType.pas"/>
+        <Line Value="1681"/>
+      </Item>
+      <Item>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="..\..\OrangeUIControlNew\Source\Controls\INC\Common\ISkinComponent_Skin_Impl_Field_Code.inc"/>
+        <Line Value="167"/>
+      </Item>
+      <Item>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="..\..\OrangeUIControlNew\Source\Controls\uSkinCheckBoxType.pas"/>
+        <Line Value="1023"/>
+      </Item>
+      <Item>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="..\..\OrangeUIControlNew\Source\VCL\uSkinWindowsControl.pas"/>
+        <Line Value="403"/>
+      </Item>
+    </BreakPoints>
+    <Watches>
+      <Item>
+        <Expression Value="Self.FProperties.GetComponentClassify"/>
+      </Item>
+    </Watches>
+  </Debugging>
+</CONFIG>

@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="TestListView_VCL_Lazarus.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="27"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unit1.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit1"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="30"/>
+        <CursorPos Y="50"/>
+        <UsageCount Value="27"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\MainSample_VCL_Lazarus\DashBoard_ProjectsFrame.pas"/>
+        <ComponentName Value="FrameDashBoard_Projects"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <EditorIndex Value="13"/>
+        <CursorPos X="118" Y="19"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControlNew\Source\VCL\GDIPlus\uGDIPlusSkinPictureEngine.pas"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="153"/>
+        <CursorPos X="62" Y="193"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControlNew\Source\VCL\GDIPlus\uGDIPlusDrawCanvas.pas"/>
+        <EditorIndex Value="5"/>
+        <CursorPos X="24"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Controls\uSkinVirtualListType.pas"/>
+        <EditorIndex Value="11"/>
+        <TopLine Value="4206"/>
+        <CursorPos Y="4211"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIStyles_VCLNew\ListItemStyle_IconTop_CaptionDetailBottom.pas"/>
+        <HasResources Value="True"/>
+        <EditorIndex Value="2"/>
+        <CursorPos X="47"/>
+        <UsageCount Value="23"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Base\uDrawCanvas.pas"/>
+        <EditorIndex Value="6"/>
+        <TopLine Value="1340"/>
+        <CursorPos X="37" Y="1350"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Controls\uSkinImageType.pas"/>
+        <EditorIndex Value="9"/>
+        <TopLine Value="487"/>
+        <CursorPos Y="493"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Base\uComponentType.pas"/>
+        <EditorIndex Value="10"/>
+        <TopLine Value="3095"/>
+        <CursorPos Y="3117"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Base\uSkinItems.pas"/>
+        <EditorIndex Value="12"/>
+        <TopLine Value="4929"/>
+        <CursorPos Y="4955"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Base\uDrawPicture.pas"/>
+        <EditorIndex Value="7"/>
+        <TopLine Value="429"/>
+        <CursorPos X="42" Y="815"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Base\uSkinPicture.pas"/>
+        <EditorIndex Value="8"/>
+        <TopLine Value="79"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControlNew\Source\VCL\uSkinWindowsControl.pas"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="362"/>
+        <CursorPos X="13" Y="388"/>
+        <UsageCount Value="12"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Controls\uSkinListViewType.pas"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="742"/>
+        <CursorPos Y="761"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="29">
+      <Position>
+        <Filename Value="..\..\OrangeUIControlNew\Source\VCL\GDIPlus\uGDIPlusSkinPictureEngine.pas"/>
+        <Caret Line="151" TopLine="135"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControlNew\Source\VCL\GDIPlus\uGDIPlusSkinPictureEngine.pas"/>
+        <Caret Line="152" TopLine="135"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControlNew\Source\VCL\GDIPlus\uGDIPlusSkinPictureEngine.pas"/>
+        <Caret Line="153" TopLine="122"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControlNew\Source\VCL\GDIPlus\uGDIPlusDrawCanvas.pas"/>
+        <Caret Line="1112" TopLine="1097"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControlNew\Source\VCL\GDIPlus\uGDIPlusSkinPictureEngine.pas"/>
+        <Caret Line="120" TopLine="110"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControlNew\Source\VCL\GDIPlus\uGDIPlusSkinPictureEngine.pas"/>
+        <Caret Line="122" TopLine="110"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControlNew\Source\VCL\GDIPlus\uGDIPlusSkinPictureEngine.pas"/>
+        <Caret Line="130" Column="8" TopLine="111"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControlNew\Source\VCL\GDIPlus\uGDIPlusDrawCanvas.pas"/>
+        <Caret Line="119" Column="21" TopLine="95"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControlNew\Source\VCL\GDIPlus\uGDIPlusDrawCanvas.pas"/>
+        <Caret Line="148" Column="20" TopLine="25"/>
+      </Position>
+      <Position>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="21" Column="12"/>
+      </Position>
+      <Position>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="36" TopLine="6"/>
+      </Position>
+      <Position>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="38" TopLine="6"/>
+      </Position>
+      <Position>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="43" TopLine="13"/>
+      </Position>
+      <Position>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="42" Column="5" TopLine="15"/>
+      </Position>
+      <Position>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="43" TopLine="15"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Controls\uSkinListViewType.pas"/>
+        <Caret Line="2351" TopLine="2334"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Controls\uSkinListViewType.pas"/>
+        <Caret Line="2352" TopLine="2334"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Controls\uSkinListViewType.pas"/>
+        <Caret Line="2353" TopLine="2334"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Controls\uSkinListViewType.pas"/>
+        <Caret Line="759" TopLine="742"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Controls\uSkinListViewType.pas"/>
+        <Caret Line="760" TopLine="742"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Controls\uSkinListViewType.pas"/>
+        <Caret Line="761" TopLine="742"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Base\uSkinItems.pas"/>
+        <Caret Line="7047" TopLine="7030"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Base\uSkinItems.pas"/>
+        <Caret Line="7048" TopLine="7030"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Base\uSkinItems.pas"/>
+        <Caret Line="7049" TopLine="7030"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Base\uSkinItems.pas"/>
+        <Caret Line="4946" TopLine="4929"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Base\uSkinItems.pas"/>
+        <Caret Line="4947" TopLine="4929"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Base\uSkinItems.pas"/>
+        <Caret Line="4954" TopLine="4929"/>
+      </Position>
+      <Position>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="43" Column="61" TopLine="15"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControlNew\Source\VCL\GDIPlus\uGDIPlusDrawCanvas.pas"/>
+        <Caret Line="1428" Column="37" TopLine="1410"/>
+      </Position>
+      <Position>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="55" Column="57" TopLine="28"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+  <Debugging>
+    <BreakPoints>
+      <Item>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="..\..\OrangeUIControlNew\Source\Controls\uSkinImageType.pas"/>
+        <Line Value="484"/>
+      </Item>
+      <Item>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="..\..\OrangeUIControlNew\Source\VCL\GDIPlus\uGDIPlusDrawCanvas.pas"/>
+        <Line Value="267"/>
+      </Item>
+      <Item>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="..\..\OrangeUIControlNew\Source\VCL\GDIPlus\uGDIPlusDrawCanvas.pas"/>
+        <Line Value="272"/>
+      </Item>
+    </BreakPoints>
+  </Debugging>
+</CONFIG>

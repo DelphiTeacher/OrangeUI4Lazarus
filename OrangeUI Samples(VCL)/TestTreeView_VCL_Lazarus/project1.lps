@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="project1.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="21"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unit1.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit1"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="11" Y="23"/>
+        <UsageCount Value="21"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIStyles_VCLNew\ListItemStyle_TreeMainMenu_LabelAndArrow.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameListItemStyle_TreeMainMenu_LabelAndArrow"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="19" Y="9"/>
+        <UsageCount Value="21"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIStyles_VCLNew\ListItemStyle_IconCaptionLeft_ArrowRight.pas"/>
+        <ComponentName Value="FrameListItemStyle_IconCaptionLeft_ArrowRight"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="13"/>
+        <CursorPos X="21" Y="9"/>
+        <ComponentState Value="1"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Controls\uSkinCustomListType.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2383"/>
+        <CursorPos Y="2404"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Base\uDrawTextParam.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1586"/>
+        <CursorPos Y="1620"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Base\uDrawParam.pas"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="980"/>
+        <CursorPos X="14" Y="1005"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Base\uGraphicCommon.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1219"/>
+        <CursorPos Y="1268"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIStyles_VCLNew\ListItemStyle_IconCaptionLeft_DetailRight.pas"/>
+        <ComponentName Value="FrameListItemStyle_IconCaptionLeft_DetailRight"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="52" Y="8"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControlNew\Source\VCL\GDIPlus\uGDIPlusDrawCanvas.pas"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Controls\uSkinImageType.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1028"/>
+        <CursorPos Y="1036"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Base\uDrawPicture.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2817"/>
+        <CursorPos X="8" Y="2846"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControlNew\Source\Base\uDrawCanvas.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1320"/>
+        <CursorPos Y="1346"/>
+        <UsageCount Value="10"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="-1"/>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+  <Debugging>
+    <BreakPoints>
+      <Item>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="..\..\OrangeUIControlNew\Source\Controls\uSkinCustomListType.pas"/>
+        <Line Value="2298"/>
+      </Item>
+      <Item>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="..\..\OrangeUIControlNew\Source\Controls\uSkinImageType.pas"/>
+        <Line Value="1537"/>
+      </Item>
+      <Item>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="..\..\OrangeUIControlNew\Source\VCL\GDIPlus\uGDIPlusDrawCanvas.pas"/>
+        <Line Value="1128"/>
+      </Item>
+    </BreakPoints>
+  </Debugging>
+</CONFIG>
