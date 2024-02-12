@@ -1,0 +1,30 @@
+{ This is an automatically generated lazarus resource file }
+
+LazarusResources.Add('TfrmDrawPicturePropertyEditor','FORMDATA',[
+  'TPF0'#29'TfrmDrawPicturePropertyEditor'#28'frmDrawPicturePropertyEditor'#4'L'
+  +'eft'#2#0#6'Height'#3#1#2#3'Top'#2#0#5'Width'#3#165#3#7'Caption'#6#15#229#155
+  +#190#231#137#135#231#188#150#232#190#145#229#153#168#12'ClientHeight'#3#1#2
+  +#11'ClientWidth'#3#165#3#5'Color'#7#9'clBtnFace'#10'Font.Color'#7#12'clWindo'
+  +'wText'#11'Font.Height'#2#245#9'Font.Name'#6#6'Tahoma'#8'OnCreate'#7#10'Form'
+  +'Create'#9'OnDestroy'#7#11'FormDestroy'#10'LCLVersion'#6#7'2.2.6.0'#0#10'TSc'
+  +'rollBox'#10'ScrollBox1'#4'Left'#2#4#6'Height'#3#222#1#3'Top'#2#3#5'Width'#3
+  +'6'#3#18'HorzScrollBar.Page'#2'i'#18'VertScrollBar.Page'#2'i'#7'Anchors'#11#5
+  +'akTop'#6'akLeft'#7'akRight'#8'akBottom'#0#12'ClientHeight'#3#218#1#11'Clien'
+  +'tWidth'#3'2'#3#8'TabOrder'#2#0#0#9'TPaintBox'#9'PaintBox1'#4'Left'#2#0#6'He'
+  +'ight'#2'i'#3'Top'#2#0#5'Width'#2'i'#7'OnPaint'#7#14'PaintBox1Paint'#0#0#0#7
+  +'TButton'#7'Button1'#4'Left'#3'A'#3#6'Height'#2#25#3'Top'#2#23#5'Width'#2'd'
+  +#7'Anchors'#11#5'akTop'#7'akRight'#0#7'Caption'#6#9#230#137#147#229#188#128
+  +'...'#7'OnClick'#7#12'Button1Click'#8'TabOrder'#2#1#0#0#7'TButton'#7'btnSave'
+  +#4'Left'#3'A'#3#6'Height'#2#25#3'Top'#2'<'#5'Width'#2'd'#7'Anchors'#11#5'akT'
+  +'op'#7'akRight'#0#7'Caption'#6#12#229#143#166#229#173#152#228#184#186'...'#7
+  +'OnClick'#7#12'btnSaveClick'#8'TabOrder'#2#2#0#0#7'TButton'#5'btnOk'#4'Left'
+  +#3'A'#3#6'Height'#2#25#3'Top'#2'^'#5'Width'#2'd'#7'Anchors'#11#5'akTop'#7'ak'
+  +'Right'#0#7'Caption'#6#6#231#161#174#229#174#154#7'OnClick'#7#10'btnOkClick'
+  +#8'TabOrder'#2#3#0#0#7'TButton'#7'Button2'#4'Left'#3'A'#3#6'Height'#2#25#3'T'
+  +'op'#3#128#0#5'Width'#2'd'#7'Anchors'#11#5'akTop'#7'akRight'#0#7'Caption'#6#6
+  +#229#143#150#230#182#136#7'OnClick'#7#12'Button2Click'#8'TabOrder'#2#4#0#0#7
+  +'TButton'#7'Button4'#4'Left'#3'A'#3#6'Height'#2#25#3'Top'#3#192#0#5'Width'#2
+  +'d'#7'Anchors'#11#5'akTop'#7'akRight'#0#7'Caption'#6#6#230#184#133#233#153
+  +#164#7'OnClick'#7#12'Button4Click'#8'TabOrder'#2#5#0#0#18'TSavePictureDialog'
+  +#11'SaveDialog1'#4'Left'#3'='#1#3'Top'#2'T'#0#0#0
+]);
