@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <Units>
+      <Unit>
+        <Filename Value="..\OrangeProjectCommon\OrangeUI\uFuncCommon.pas"/>
+        <TopLine Value="86"/>
+        <CursorPos X="17" Y="114"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\OrangeProjectCommon\OrangeUI\uBaseLog.pas"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="9"/>
+        <CursorPos X="18" Y="47"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Base\uDrawCanvas.pas"/>
+        <EditorIndex Value="2"/>
+        <CursorPos X="12" Y="24"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Base\uBasePathData.pas"/>
+        <EditorIndex Value="3"/>
+        <CursorPos X="10" Y="14"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Base\uGraphicCommon.pas"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="114"/>
+        <CursorPos X="25" Y="51"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="21">
+      <Position>
+        <Filename Value="..\OrangeProjectCommon\OrangeUI\uFuncCommon.pas"/>
+        <Caret Line="1409" Column="12" TopLine="1383"/>
+      </Position>
+      <Position>
+        <Filename Value="..\OrangeProjectCommon\OrangeUI\uFuncCommon.pas"/>
+        <Caret Line="1703" Column="8" TopLine="1780"/>
+      </Position>
+      <Position>
+        <Filename Value="..\OrangeProjectCommon\OrangeUI\uFuncCommon.pas"/>
+        <Caret Line="2021" Column="18" TopLine="1983"/>
+      </Position>
+      <Position>
+        <Filename Value="..\OrangeProjectCommon\OrangeUI\uFuncCommon.pas"/>
+        <Caret Line="2098" Column="24" TopLine="2053"/>
+      </Position>
+      <Position>
+        <Filename Value="..\OrangeProjectCommon\OrangeUI\uFuncCommon.pas"/>
+        <Caret Line="2110" TopLine="2074"/>
+      </Position>
+      <Position>
+        <Filename Value="..\OrangeProjectCommon\OrangeUI\uFuncCommon.pas"/>
+        <Caret Line="2131" Column="40" TopLine="2097"/>
+      </Position>
+      <Position>
+        <Filename Value="..\OrangeProjectCommon\OrangeUI\uFuncCommon.pas"/>
+        <Caret Line="2133" Column="47" TopLine="2103"/>
+      </Position>
+      <Position>
+        <Filename Value="..\OrangeProjectCommon\OrangeUI\uFuncCommon.pas"/>
+        <Caret Line="2146" Column="10" TopLine="2127"/>
+      </Position>
+      <Position>
+        <Filename Value="..\OrangeProjectCommon\OrangeUI\uFuncCommon.pas"/>
+        <Caret Line="2178" TopLine="2151"/>
+      </Position>
+      <Position>
+        <Filename Value="..\OrangeProjectCommon\OrangeUI\uFuncCommon.pas"/>
+        <Caret Line="2279" Column="34" TopLine="2234"/>
+      </Position>
+      <Position>
+        <Filename Value="..\OrangeProjectCommon\OrangeUI\uFuncCommon.pas"/>
+        <Caret Line="2335" Column="16" TopLine="2320"/>
+      </Position>
+      <Position>
+        <Filename Value="..\OrangeProjectCommon\OrangeUI\uFuncCommon.pas"/>
+        <Caret Line="2837" Column="16" TopLine="2792"/>
+      </Position>
+      <Position>
+        <Filename Value="..\OrangeProjectCommon\OrangeUI\uFuncCommon.pas"/>
+        <Caret Line="114" Column="17" TopLine="86"/>
+      </Position>
+      <Position>
+        <Filename Value="..\OrangeProjectCommon\OrangeUI\uBaseLog.pas"/>
+        <Caret Line="44" Column="17" TopLine="11"/>
+      </Position>
+      <Position>
+        <Filename Value="..\OrangeProjectCommon\OrangeUI\uBaseLog.pas"/>
+        <Caret Line="37" Column="10" TopLine="6"/>
+      </Position>
+      <Position>
+        <Filename Value="..\OrangeProjectCommon\OrangeUI\uBaseLog.pas"/>
+        <Caret Line="47" Column="18" TopLine="9"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Base\uDrawCanvas.pas"/>
+        <Caret Line="21" Column="7"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Base\uDrawCanvas.pas"/>
+        <Caret Line="24" Column="12"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Base\uBasePathData.pas"/>
+        <Caret Line="14" Column="10"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Base\uGraphicCommon.pas"/>
+        <Caret Line="24" Column="10"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Base\uGraphicCommon.pas"/>
+        <Caret Line="51" Column="59" TopLine="18"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Base\uGraphicCommon.pas"/>
+        <Caret Line="48" Column="49" TopLine="32"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

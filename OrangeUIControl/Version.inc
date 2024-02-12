@@ -1,0 +1,6 @@
+//출롤경
+//{$DEFINE FREE_VERSION}
+
+//역都경
+//{$DEFINE OPENSOURCE_VERSION}
+

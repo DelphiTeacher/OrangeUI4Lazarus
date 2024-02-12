@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{D6D7D955-08C8-4219-9AE6-E49AFA19E42B}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="OrangeUIControl_Base_D10_3.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="DelphiTestOrangeUIBase_VCL_D10_3.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\OrangeUI Samples(VCL) - New\MainSample_VCL_Lazarus\MainSample_VCL_D10_3.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="OrangeUIControl_Base_D10_3">
+        <MSBuild Projects="OrangeUIControl_Base_D10_3.dproj"/>
+    </Target>
+    <Target Name="OrangeUIControl_Base_D10_3:Clean">
+        <MSBuild Projects="OrangeUIControl_Base_D10_3.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="OrangeUIControl_Base_D10_3:Make">
+        <MSBuild Projects="OrangeUIControl_Base_D10_3.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="DelphiTestOrangeUIBase_VCL_D10_3">
+        <MSBuild Projects="DelphiTestOrangeUIBase_VCL_D10_3.dproj"/>
+    </Target>
+    <Target Name="DelphiTestOrangeUIBase_VCL_D10_3:Clean">
+        <MSBuild Projects="DelphiTestOrangeUIBase_VCL_D10_3.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DelphiTestOrangeUIBase_VCL_D10_3:Make">
+        <MSBuild Projects="DelphiTestOrangeUIBase_VCL_D10_3.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="MainSample_VCL_D10_3">
+        <MSBuild Projects="..\OrangeUI Samples(VCL) - New\MainSample_VCL_Lazarus\MainSample_VCL_D10_3.dproj"/>
+    </Target>
+    <Target Name="MainSample_VCL_D10_3:Clean">
+        <MSBuild Projects="..\OrangeUI Samples(VCL) - New\MainSample_VCL_Lazarus\MainSample_VCL_D10_3.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="MainSample_VCL_D10_3:Make">
+        <MSBuild Projects="..\OrangeUI Samples(VCL) - New\MainSample_VCL_Lazarus\MainSample_VCL_D10_3.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="OrangeUIControl_Base_D10_3;DelphiTestOrangeUIBase_VCL_D10_3;MainSample_VCL_D10_3"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="OrangeUIControl_Base_D10_3:Clean;DelphiTestOrangeUIBase_VCL_D10_3:Clean;MainSample_VCL_D10_3:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="OrangeUIControl_Base_D10_3:Make;DelphiTestOrangeUIBase_VCL_D10_3:Make;MainSample_VCL_D10_3:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

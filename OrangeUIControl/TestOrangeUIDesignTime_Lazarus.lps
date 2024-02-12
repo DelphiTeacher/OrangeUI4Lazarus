@@ -1,0 +1,943 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="TestOrangeUIDesignTime_Lazarus.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos Y="23"/>
+        <UsageCount Value="91"/>
+      </Unit>
+      <Unit>
+        <Filename Value="utestorangeuidesigntime.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uTestOrangeUIDesignTime"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="13"/>
+        <CursorPos X="20" Y="40"/>
+        <UsageCount Value="91"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\OrangeProjectCommon\GDIPlus\GdiPlus.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="9357"/>
+        <CursorPos X="46" Y="9372"/>
+        <UsageCount Value="84"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\OrangeProjectCommon\GDIPlus\GdiPlusHelpers.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="84"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\OrangeProjectCommon\EasyServiceCommonMaterialDataMoudle_VCL.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="59" Y="20"/>
+        <UsageCount Value="21"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Controls\uComponentTypeRegister.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="178"/>
+        <CursorPos X="3" Y="193"/>
+        <UsageCount Value="16"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Controls\uSkinButtonType.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="4614"/>
+        <CursorPos X="39" Y="1661"/>
+        <UsageCount Value="41"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Controls\uSkinLabelType.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1148"/>
+        <CursorPos Y="1205"/>
+        <UsageCount Value="44"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Controls\uSkinCheckBoxType.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="602"/>
+        <CursorPos X="41" Y="602"/>
+        <UsageCount Value="43"/>
+        <Bookmarks Count="1">
+          <Item0 Y="1400" ID="3"/>
+        </Bookmarks>
+      </Unit>
+      <Unit>
+        <Filename Value="orangeuicontrol_lazarus.pas"/>
+        <UnitName Value="OrangeUIControl_Lazarus"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="67" Y="29"/>
+        <UsageCount Value="3"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Base\uDrawEngine.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="98"/>
+        <CursorPos X="28" Y="132"/>
+        <UsageCount Value="5"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Base\uDrawCanvas.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="556"/>
+        <CursorPos X="42" Y="583"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Controls\uBasePageStructureControls.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="27" Y="11"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Controls\uSkinCalloutRectType.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="7"/>
+        <CursorPos X="48" Y="12"/>
+        <UsageCount Value="42"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\Lazarus\components\fpdebug\fpdbgdwarf.pas"/>
+        <UnitName Value="FpDbgDwarf"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1089"/>
+        <CursorPos X="17" Y="1117"/>
+        <UsageCount Value="5"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\Lazarus\fpc\3.2.2\source\rtl\os2\pmgpi.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="548"/>
+        <CursorPos X="21" Y="576"/>
+        <UsageCount Value="5"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Controls\uSkinCommonFrames.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="61"/>
+        <CursorPos X="97" Y="88"/>
+        <UsageCount Value="5"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Controls\uSkinImageType.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1557"/>
+        <CursorPos Y="1625"/>
+        <UsageCount Value="44"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Controls\uSkinScrollBarType.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="455"/>
+        <CursorPos X="39" Y="836"/>
+        <UsageCount Value="43"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Controls\uSkinScrollControlType.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1177"/>
+        <CursorPos X="39" Y="680"/>
+        <UsageCount Value="43"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Controls\uSkinVirtualListType.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="5290"/>
+        <CursorPos X="39" Y="1389"/>
+        <UsageCount Value="42"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Controls\uSkinCustomListType.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="6985"/>
+        <CursorPos X="35" Y="7020"/>
+        <UsageCount Value="42"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Base\uGraphicCommon.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="828"/>
+        <CursorPos X="12" Y="860"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Controls\uSkinMultiColorLabelType.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1093"/>
+        <CursorPos X="39" Y="384"/>
+        <UsageCount Value="43"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Base\uBinaryObjectList.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="184"/>
+        <CursorPos X="27" Y="207"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Controls\uSkinItemDesignerPanelType.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2783"/>
+        <CursorPos X="39" Y="616"/>
+        <UsageCount Value="43"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Controls\uSkinDBGridType.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1951"/>
+        <CursorPos X="79" Y="1985"/>
+        <UsageCount Value="43"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\VCL\uSkinWindowsEdit.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="90"/>
+        <CursorPos X="125" Y="103"/>
+        <UsageCount Value="42"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Controls\uSkinVirtualGridType.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="19"/>
+        <CursorPos X="77" Y="32"/>
+        <UsageCount Value="42"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Base\uDrawTextParam.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2074"/>
+        <CursorPos X="20" Y="2102"/>
+        <UsageCount Value="5"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\Lazarus\components\datetimectrls\dbdatetimepicker.pas"/>
+        <UnitName Value="DBDateTimePicker"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="7"/>
+        <CursorPos X="19" Y="55"/>
+        <UsageCount Value="4"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\Lazarus\fpc\3.2.2\source\packages\fcl-db\src\base\datasource.inc"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="11" Y="33"/>
+        <UsageCount Value="4"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\Lazarus\components\tachart\tadbsource.pas"/>
+        <UnitName Value="TADbSource"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="63"/>
+        <CursorPos X="34" Y="91"/>
+        <UsageCount Value="4"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\Lazarus\components\PascalScript\Source\uPSC_DB.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="769"/>
+        <CursorPos X="30" Y="797"/>
+        <UsageCount Value="4"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\Lazarus\fpc\3.2.2\source\packages\fcl-db\src\base\db.pas"/>
+        <UnitName Value="DB"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="421"/>
+        <CursorPos X="23" Y="449"/>
+        <UsageCount Value="4"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\Lazarus\fpc\3.2.2\source\packages\fcl-db\src\base\dataset.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="647"/>
+        <CursorPos X="27" Y="694"/>
+        <UsageCount Value="4"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Controls\uSkinFrameImageType.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="396"/>
+        <CursorPos X="39" Y="195"/>
+        <UsageCount Value="42"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Controls\uSkinItemGridType.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1141"/>
+        <CursorPos X="39" Y="351"/>
+        <UsageCount Value="42"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Controls\uSkinListViewType.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2612"/>
+        <CursorPos X="39" Y="667"/>
+        <UsageCount Value="42"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Controls\uSkinPageControlType.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="3883"/>
+        <CursorPos X="39" Y="1172"/>
+        <UsageCount Value="42"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Controls\uSkinRegExTagLabelViewType.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="9"/>
+        <CursorPos X="20" Y="55"/>
+        <UsageCount Value="4"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Controls\uSkinScrollBoxType.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="525"/>
+        <CursorPos X="39" Y="269"/>
+        <UsageCount Value="42"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Controls\uSkinSwitchBarType.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1363"/>
+        <CursorPos X="39" Y="306"/>
+        <UsageCount Value="42"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Controls\uSkinTrackBarType.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1714"/>
+        <CursorPos X="39" Y="417"/>
+        <UsageCount Value="42"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Controls\uSkinVirtualChartType.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="4413"/>
+        <CursorPos X="39" Y="742"/>
+        <UsageCount Value="42"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\VCL\uSkinFormType.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="26"/>
+        <CursorPos X="3" Y="35"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Controls\uSkinRadioButtonType.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1098"/>
+        <CursorPos X="39" Y="392"/>
+        <UsageCount Value="41"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Controls\uSkinPanelType.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="441"/>
+        <CursorPos X="39" Y="187"/>
+        <UsageCount Value="42"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Controls\uSkinDrawPanelType.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="964"/>
+        <CursorPos X="39" Y="352"/>
+        <UsageCount Value="42"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Controls\uSkinPullLoadPanelType.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2023"/>
+        <CursorPos X="39" Y="668"/>
+        <UsageCount Value="42"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Base\uComponentType.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="805"/>
+        <CursorPos X="22" Y="819"/>
+        <UsageCount Value="42"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Controls\INC\Common\ISkinComponent_Skin_Impl_Property_Declare.inc"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="7" Y="18"/>
+        <UsageCount Value="42"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Controls\uSkinSwitchType.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1074"/>
+        <CursorPos X="39" Y="225"/>
+        <UsageCount Value="42"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Controls\uSkinProgressBarType.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1603"/>
+        <CursorPos X="39" Y="505"/>
+        <UsageCount Value="42"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Controls\uSkinScrollControlCornerType.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="264"/>
+        <CursorPos X="39" Y="124"/>
+        <UsageCount Value="42"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Controls\uSkinScrollBoxContentType.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="417"/>
+        <CursorPos X="39" Y="147"/>
+        <UsageCount Value="42"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Controls\uSkinSwitchPageListPanelType.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="420"/>
+        <CursorPos Y="472"/>
+        <UsageCount Value="5"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Controls\uSkinNotifyNumberIconType.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1399"/>
+        <CursorPos X="39" Y="551"/>
+        <UsageCount Value="42"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Controls\uSkinRoundImageType.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="437"/>
+        <CursorPos X="39" Y="221"/>
+        <UsageCount Value="42"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Controls\uSkinImageListPlayerType.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1488"/>
+        <CursorPos X="39" Y="387"/>
+        <UsageCount Value="42"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Controls\uSkinImageListViewerType.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="3544"/>
+        <CursorPos X="23" Y="3578"/>
+        <UsageCount Value="42"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Controls\uSkinListBoxType.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="354"/>
+        <CursorPos X="42" Y="381"/>
+        <UsageCount Value="42"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Controls\uSkinTreeViewType.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1141"/>
+        <CursorPos X="39" Y="478"/>
+        <UsageCount Value="42"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Controls\uSkinEditType.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="678"/>
+        <CursorPos X="39" Y="184"/>
+        <UsageCount Value="42"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Controls\uSkinComboBoxType.pas"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="334"/>
+        <CursorPos X="39" Y="151"/>
+        <UsageCount Value="42"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Controls\uSkinDateEditType.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="473"/>
+        <CursorPos X="39" Y="109"/>
+        <UsageCount Value="42"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Controls\uSkinTimeEditType.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="319"/>
+        <CursorPos X="39" Y="119"/>
+        <UsageCount Value="42"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Controls\uSkinPopupType.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="292"/>
+        <CursorPos X="39" Y="112"/>
+        <UsageCount Value="42"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Controls\uSkinComboEditType.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="182"/>
+        <CursorPos X="39" Y="182"/>
+        <UsageCount Value="42"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Controls\uSkinMemoType.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1001"/>
+        <CursorPos X="39" Y="203"/>
+        <UsageCount Value="42"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\VCL\uSkinWindowsForm.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="3646"/>
+        <CursorPos X="25" Y="3686"/>
+        <UsageCount Value="41"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\Lazarus\components\sparta\dockedformeditor\source\sparta_designedform.pas"/>
+        <UnitName Value="sparta_DesignedForm"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="16" Y="42"/>
+        <UsageCount Value="4"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\Lazarus\components\sparta\dockedformeditor\source\sparta_fakeform.pas"/>
+        <UnitName Value="sparta_FakeForm"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="53"/>
+        <CursorPos X="51" Y="80"/>
+        <UsageCount Value="4"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\Lazarus\components\PascalScript\Source\uPSC_forms.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="221"/>
+        <CursorPos X="16" Y="249"/>
+        <UsageCount Value="4"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\Lazarus\components\synedit\synedit.pp"/>
+        <UnitName Value="SynEdit"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2417"/>
+        <CursorPos X="19" Y="2439"/>
+        <UsageCount Value="4"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\Lazarus\lcl\controls.pp"/>
+        <UnitName Value="Controls"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="157"/>
+        <CursorPos X="19" Y="183"/>
+        <UsageCount Value="4"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Controls\INC\Common\ISkinComponent_Skin_Impl_Create_Code.inc"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="60" Y="25"/>
+        <UsageCount Value="4"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\VCL\uSkinWindowsComboBox.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="6" Y="3"/>
+        <UsageCount Value="41"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\VCL\uSkinSelectPopupForm.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="249"/>
+        <CursorPos X="25" Y="278"/>
+        <UsageCount Value="4"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\Lazarus\components\opengl\glcarbonaglcontext.pas"/>
+        <UnitName Value="GLCarbonAGLContext"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="35" Y="34"/>
+        <UsageCount Value="4"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\Lazarus\components\ideintf\objectinspector.pp"/>
+        <UnitName Value="ObjectInspector"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="4139"/>
+        <CursorPos X="20" Y="4167"/>
+        <UsageCount Value="4"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\Lazarus\lcl\lcltype.pp"/>
+        <UnitName Value="LCLType"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2385"/>
+        <CursorPos X="3" Y="2667"/>
+        <UsageCount Value="4"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\VCL\uSkinWindowsMyComboBox.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="12" Y="5"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\OrangeProjectCommon\SkinSuperObject\uskinsuperobject.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1046"/>
+        <CursorPos X="31" Y="1056"/>
+        <UsageCount Value="4"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\VCL\uSkinWindowsDateEdit.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="326"/>
+        <CursorPos X="3" Y="360"/>
+        <UsageCount Value="15"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\Lazarus\components\datetimectrls\datetimepicker.pas"/>
+        <UnitName Value="DateTimePicker"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="20" Y="38"/>
+        <UsageCount Value="15"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\VCL\uSkinWindowsMemo.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="893"/>
+        <CursorPos X="29" Y="958"/>
+        <UsageCount Value="41"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Controls\uSkinControlGestureManager.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="399"/>
+        <CursorPos X="39" Y="257"/>
+        <UsageCount Value="41"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Base\backup\uGraphicCommon.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="571"/>
+        <CursorPos X="5" Y="599"/>
+        <UsageCount Value="4"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Base\backup\uDrawParam.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="340"/>
+        <CursorPos X="5" Y="367"/>
+        <UsageCount Value="4"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Controls\INC\Common\ISkinControl_Control_Impl_Common_Declare.inc"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="21" Y="25"/>
+        <UsageCount Value="4"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Controls\INC\Common\ISkinControl_Declare.inc"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="13" Y="13"/>
+        <UsageCount Value="4"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\VCL\GDIPlus\uGDIPlusDrawCanvas.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2071"/>
+        <CursorPos Y="2093"/>
+        <UsageCount Value="16"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Base\backup\uSkinPicture.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="133"/>
+        <UsageCount Value="4"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Base\uSkinPicture.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1411"/>
+        <CursorPos X="30" Y="1416"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Base\uDrawPicture.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2688"/>
+        <CursorPos Y="2690"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\VCL\GDIPlus\uGDIPlusSkinPictureEngine.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="3" Y="10"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\VCL\GDIPlus\GDIPlus\uSkinGDIPlus.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="16845"/>
+        <CursorPos Y="16869"/>
+        <UsageCount Value="16"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\Lazarus\lcl\graphics.pp"/>
+        <UnitName Value="Graphics"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="966"/>
+        <CursorPos X="20" Y="993"/>
+        <UsageCount Value="5"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\Lazarus\lcl\include\canvas.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1595"/>
+        <CursorPos X="104" Y="1607"/>
+        <UsageCount Value="5"/>
+      </Unit>
+      <Unit>
+        <Filename Value="backup\utestorangeuidesigntime.pas"/>
+        <UnitName Value="uTestOrangeUIDesignTime"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="45"/>
+        <CursorPos X="13" Y="79"/>
+        <UsageCount Value="4"/>
+      </Unit>
+      <Unit>
+        <Filename Value="utestorangeuidesigntime.lfm"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="10560"/>
+        <CursorPos X="49" Y="10606"/>
+        <UsageCount Value="41"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Base\backup\uComponentType.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="814"/>
+        <CursorPos X="145" Y="824"/>
+        <UsageCount Value="41"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Controls\INC\Common\nouse\ISkinComponent_BaseSkinControl_Skin_Impl_Field_Code.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="65"/>
+        <CursorPos X="137" Y="73"/>
+        <UsageCount Value="41"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Controls\INC\Common\ISkinComponent_Skin_Impl_Field_Code.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="224"/>
+        <CursorPos X="53" Y="250"/>
+        <UsageCount Value="41"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Base\uSkinRegManager.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="373"/>
+        <CursorPos X="24" Y="412"/>
+        <UsageCount Value="16"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\OrangeUIDesignNew\Source\uComponentTypeNameEditor.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="299"/>
+        <CursorPos Y="323"/>
+        <UsageCount Value="16"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\Lazarus\components\ideintf\propedits.pp"/>
+        <UnitName Value="PropEdits"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="4599"/>
+        <CursorPos X="11" Y="4633"/>
+        <UsageCount Value="15"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\Lazarus\components\lazreport\source\lr_crosstabeditor.pas"/>
+        <UnitName Value="lr_CrossTabEditor"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="91"/>
+        <CursorPos X="45" Y="124"/>
+        <UsageCount Value="15"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\Lazarus\components\customdrawn\customdrawnextras.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="145"/>
+        <CursorPos X="19" Y="163"/>
+        <UsageCount Value="15"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\Lazarus\components\dockedformeditor\source\dockeddesignform.pas"/>
+        <UnitName Value="DockedDesignForm"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="150"/>
+        <CursorPos X="41" Y="193"/>
+        <UsageCount Value="15"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\Lazarus\components\dockedformeditor\source\dockedmainide.pas"/>
+        <UnitName Value="DockedMainIDE"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="3"/>
+        <CursorPos X="37" Y="40"/>
+        <UsageCount Value="15"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\Lazarus\components\dockedformeditor\source\dockedtools.pas"/>
+        <UnitName Value="DockedTools"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="51" Y="35"/>
+        <UsageCount Value="15"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\Lazarus\components\ideintf\componenttreeview.pas"/>
+        <UnitName Value="ComponentTreeView"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="325"/>
+        <CursorPos X="56" Y="353"/>
+        <UsageCount Value="15"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\Lazarus\lcl\forms.pp"/>
+        <UnitName Value="Forms"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1757"/>
+        <CursorPos X="24" Y="1810"/>
+        <UsageCount Value="15"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\OrangeUIDesignNew\Source\uDrawPictureEditor.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="53"/>
+        <CursorPos X="37" Y="60"/>
+        <UsageCount Value="15"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\OrangeUIDesignNew\Source\VCL_DrawPicturePropertyEditorForm.pas"/>
+        <HasResources Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos Y="9"/>
+        <UsageCount Value="12"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\OrangeUIDesignNew\Source\VCL_DrawPicturePropertyEditorForm.dfm"/>
+        <HasResources Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="5" Y="51"/>
+        <UsageCount Value="12"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Base\uBaseLog.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="658"/>
+        <CursorPos X="12" Y="692"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Base\uSkinItems.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2682"/>
+        <CursorPos X="7" Y="2717"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\Lazarus\fpc\3.2.2\source\rtl\objpas\classes\classesh.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="515"/>
+        <CursorPos X="17" Y="549"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Base\uSkinListLayouts.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2749"/>
+        <CursorPos X="33" Y="2781"/>
+        <UsageCount Value="12"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Base\uBaseList.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="869"/>
+        <CursorPos Y="909"/>
+        <UsageCount Value="12"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\OrangeUIDesignNew\Source\uCollectionEditor.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="3"/>
+        <CursorPos X="18" Y="44"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\Lazarus\components\ideintf\collectionpropeditform.pas"/>
+        <UnitName Value="CollectionPropEditForm"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\Lazarus\components\ideintf\dbpropedits.pas"/>
+        <UnitName Value="DBPropEdits"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="122"/>
+        <CursorPos X="3" Y="126"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\OrangeProjectCommon\EasyServiceCommonMaterialDataMoudle_VCL.dfm"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="-1"/>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+  <Debugging>
+    <BreakPoints>
+      <Item>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="Source\Base\uSkinListLayouts.pas"/>
+        <Line Value="1780"/>
+      </Item>
+      <Item>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="Source\Base\uSkinListLayouts.pas"/>
+        <Line Value="1777"/>
+      </Item>
+    </BreakPoints>
+  </Debugging>
+</CONFIG>

@@ -1,0 +1,42 @@
+object Form1: TForm1
+  Left = 435
+  Height = 240
+  Top = 230
+  Width = 320
+  Caption = 'Form1'
+  ClientHeight = 240
+  ClientWidth = 320
+  OnCreate = FormCreate
+  LCLVersion = '2.2.6.0'
+  object Memo1: TMemo
+    Left = 0
+    Height = 190
+    Top = 50
+    Width = 320
+    Align = alClient
+    Lines.Strings = (
+      'Memo1'
+    )
+    TabOrder = 0
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 50
+    Top = 0
+    Width = 320
+    Align = alTop
+    Caption = 'Panel1'
+    ClientHeight = 50
+    ClientWidth = 320
+    TabOrder = 1
+    OnPaint = Panel1Paint
+    object Button1: TButton
+      Left = 168
+      Height = 25
+      Top = 13
+      Width = 75
+      Caption = 'Button1'
+      TabOrder = 0
+    end
+  end
+end

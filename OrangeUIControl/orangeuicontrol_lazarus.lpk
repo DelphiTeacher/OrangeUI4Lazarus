@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Package Version="5">
+    <PathDelim Value="\"/>
+    <Name Value="OrangeUIControl_Lazarus"/>
+    <Type Value="RunAndDesignTime"/>
+    <CompilerOptions>
+      <Version Value="11"/>
+      <PathDelim Value="\"/>
+      <SearchPaths>
+        <IncludeFiles Value="Source\VCL"/>
+        <OtherUnitFiles Value="Source\Base;Source\Controls;Source\VCL;..\OrangeProjectCommon\SkinSuperObject;..\OrangeUIDesignNew\Source;..\OrangeProjectCommon;..\OrangeProjectCommon\SVGIconImageList\Svg;..\OrangeProjectCommon\GDIPlus;Source\VCL\GDIPlusNew;Source\VCL\GDIPlusNewCanvas;Source\VCL\NativeCanvas"/>
+        <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+      </SearchPaths>
+      <Other>
+        <CompilerPath Value="D:\Lazarus\fpc\3.2.2\bin\x86_64-win64\fpc.exe"/>
+      </Other>
+    </CompilerOptions>
+    <Files>
+      <Item>
+        <Filename Value="Source\Base\MD5_OrangeUI.pas"/>
+        <UnitName Value="MD5_OrangeUI"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Base\uBasePageStructure.pas"/>
+        <UnitName Value="uBasePageStructure"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Base\uBasePathData.pas"/>
+        <UnitName Value="uBasePathData"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Base\uBinaryObjectList.pas"/>
+        <UnitName Value="uBinaryObjectList"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Base\uDownloadPictureManager.pas"/>
+        <UnitName Value="uDownloadPictureManager"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Base\uFrameContext.pas"/>
+        <UnitName Value="uFrameContext"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Base\uLang.pas"/>
+        <UnitName Value="uLang"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Base\uSkinBufferBitmap.pas"/>
+        <UnitName Value="uSkinBufferBitmap"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Base\uSkinGIFImage.pas"/>
+        <UnitName Value="uSkinGIFImage"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Base\uUIFunction.pas"/>
+        <UnitName Value="uUIFunction"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Base\uUrlPicture.pas"/>
+        <UnitName Value="uUrlPicture"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Base\uVersion.pas"/>
+        <UnitName Value="uVersion"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Base\uBaseHttpControl.pas"/>
+        <UnitName Value="uBaseHttpControl"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Base\uBaseList.pas"/>
+        <UnitName Value="uBaseList"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Base\uBaseLog.pas"/>
+        <UnitName Value="uBaseLog"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Base\uBinaryTreeDoc.pas"/>
+        <UnitName Value="uBinaryTreeDoc"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Base\uComponentType.pas"/>
+        <UnitName Value="uComponentType"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Base\uDrawCanvas.pas"/>
+        <UnitName Value="uDrawCanvas"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Base\uDrawEngine.pas"/>
+        <UnitName Value="uDrawEngine"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Base\uDrawLineParam.pas"/>
+        <UnitName Value="uDrawLineParam"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Base\uDrawParam.pas"/>
+        <UnitName Value="uDrawParam"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Base\uDrawPathParam.pas"/>
+        <UnitName Value="uDrawPathParam"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Base\uDrawPicture.pas"/>
+        <UnitName Value="uDrawPicture"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Base\uDrawPictureParam.pas"/>
+        <UnitName Value="uDrawPictureParam"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Base\uDrawRectParam.pas"/>
+        <UnitName Value="uDrawRectParam"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Base\uDrawTextParam.pas"/>
+        <UnitName Value="uDrawTextParam"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Base\uFileCommon.pas"/>
+        <UnitName Value="uFileCommon"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Base\uFuncCommon.pas"/>
+        <UnitName Value="uFuncCommon"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Base\uGraphicCommon.pas"/>
+        <UnitName Value="uGraphicCommon"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Base\uSkinAnimator.pas"/>
+        <UnitName Value="uSkinAnimator"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Base\uSkinImageList.pas"/>
+        <UnitName Value="uSkinImageList"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Base\uSkinItems.pas"/>
+        <UnitName Value="uSkinItems"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Base\uSkinListLayouts.pas"/>
+        <UnitName Value="uSkinListLayouts"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Base\uSkinMaterial.pas"/>
+        <UnitName Value="uSkinMaterial"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Base\uSkinPicture.pas"/>
+        <UnitName Value="uSkinPicture"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Base\uSkinPublic.pas"/>
+        <UnitName Value="uSkinPublic"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Base\uSkinRegManager.pas"/>
+        <UnitName Value="uSkinRegManager"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Base\uTimerTask.pas"/>
+        <UnitName Value="uTimerTask"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Base\uTimerTaskEvent.pas"/>
+        <UnitName Value="uTimerTaskEvent"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Controls\uSkinButtonType.pas"/>
+        <UnitName Value="uSkinButtonType"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Controls\uSkinLabelType.pas"/>
+        <UnitName Value="uSkinLabelType"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\VCL\uBaseSkinControl.pas"/>
+        <UnitName Value="uBaseSkinControl"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\VCL\uSkinWindowsControl.pas"/>
+        <UnitName Value="uSkinWindowsControl"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Controls\uSkinCheckBoxType.pas"/>
+        <UnitName Value="uSkinCheckBoxType"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Controls\uComponentTypeRegister.pas"/>
+        <HasRegisterProc Value="True"/>
+        <UnitName Value="uComponentTypeRegister"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Controls\uSkinCalloutRectType.pas"/>
+        <UnitName Value="uSkinCalloutRectType"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Controls\uSkinComboBoxType.pas"/>
+        <UnitName Value="uSkinComboBoxType"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Controls\uSkinComboEditType.pas"/>
+        <UnitName Value="uSkinComboEditType"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Controls\uSkinControlGestureManager.pas"/>
+        <UnitName Value="uSkinControlGestureManager"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Controls\uSkinControlPanDragGestureManager.pas"/>
+        <UnitName Value="uSkinControlPanDragGestureManager"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Controls\uSkinCustomListType.pas"/>
+        <UnitName Value="uSkinCustomListType"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Controls\uSkinDateEditType.pas"/>
+        <UnitName Value="uSkinDateEditType"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Controls\uSkinDBGridType.pas"/>
+        <UnitName Value="uSkinDBGridType"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Controls\uSkinDrawPanelType.pas"/>
+        <UnitName Value="uSkinDrawPanelType"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Controls\uSkinEditType.pas"/>
+        <UnitName Value="uSkinEditType"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Controls\uSkinFrameImageType.pas"/>
+        <UnitName Value="uSkinFrameImageType"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Controls\uSkinImageListPlayerType.pas"/>
+        <UnitName Value="uSkinImageListPlayerType"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Controls\uSkinImageListViewerType.pas"/>
+        <UnitName Value="uSkinImageListViewerType"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Controls\uSkinImageType.pas"/>
+        <UnitName Value="uSkinImageType"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Controls\uSkinItemDesignerPanelType.pas"/>
+        <UnitName Value="uSkinItemDesignerPanelType"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Controls\uSkinItemGridType.pas"/>
+        <UnitName Value="uSkinItemGridType"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Controls\uSkinListBoxType.pas"/>
+        <UnitName Value="uSkinListBoxType"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Controls\uSkinListViewType.pas"/>
+        <UnitName Value="uSkinListViewType"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Controls\uSkinMemoType.pas"/>
+        <UnitName Value="uSkinMemoType"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Controls\uSkinMultiColorLabelType.pas"/>
+        <UnitName Value="uSkinMultiColorLabelType"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Controls\uSkinNotifyNumberIconType.pas"/>
+        <UnitName Value="uSkinNotifyNumberIconType"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Controls\uSkinPageControlType.pas"/>
+        <UnitName Value="uSkinPageControlType"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Controls\uSkinPanelType.pas"/>
+        <UnitName Value="uSkinPanelType"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Controls\uSkinPopupType.pas"/>
+        <UnitName Value="uSkinPopupType"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Controls\uSkinProgressBarType.pas"/>
+        <UnitName Value="uSkinProgressBarType"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Controls\uSkinPullLoadPanelType.pas"/>
+        <UnitName Value="uSkinPullLoadPanelType"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Controls\uSkinRadioButtonType.pas"/>
+        <UnitName Value="uSkinRadioButtonType"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Controls\uSkinRoundImageType.pas"/>
+        <UnitName Value="uSkinRoundImageType"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Controls\uSkinScrollBarType.pas"/>
+        <UnitName Value="uSkinScrollBarType"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Controls\uSkinScrollBoxContentType.pas"/>
+        <UnitName Value="uSkinScrollBoxContentType"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Controls\uSkinScrollBoxType.pas"/>
+        <UnitName Value="uSkinScrollBoxType"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Controls\uSkinScrollControlCornerType.pas"/>
+        <UnitName Value="uSkinScrollControlCornerType"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Controls\uSkinScrollControlType.pas"/>
+        <UnitName Value="uSkinScrollControlType"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Controls\uSkinSwitchBarType.pas"/>
+        <UnitName Value="uSkinSwitchBarType"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Controls\uSkinSwitchPageListControlGestureManager.pas"/>
+        <UnitName Value="uSkinSwitchPageListControlGestureManager"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Controls\uSkinSwitchPageListPanelType.pas"/>
+        <UnitName Value="uSkinSwitchPageListPanelType"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Controls\uSkinSwitchType.pas"/>
+        <UnitName Value="uSkinSwitchType"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Controls\uSkinTimeEditType.pas"/>
+        <UnitName Value="uSkinTimeEditType"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Controls\uSkinTrackBarType.pas"/>
+        <UnitName Value="uSkinTrackBarType"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Controls\uSkinTreeViewType.pas"/>
+        <UnitName Value="uSkinTreeViewType"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Controls\uSkinVirtualChartType.pas"/>
+        <UnitName Value="uSkinVirtualChartType"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Controls\uSkinVirtualGridType.pas"/>
+        <UnitName Value="uSkinVirtualGridType"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\Controls\uSkinVirtualListType.pas"/>
+        <UnitName Value="uSkinVirtualListType"/>
+      </Item>
+      <Item>
+        <Filename Value="..\OrangeProjectCommon\SkinSuperObject\uskinsuperobject.pas"/>
+        <UnitName Value="uskinsuperobject"/>
+      </Item>
+      <Item>
+        <Filename Value="..\OrangeUIDesignNew\Source\uComponentTypeNameEditor.pas"/>
+        <HasRegisterProc Value="True"/>
+        <UnitName Value="uComponentTypeNameEditor"/>
+      </Item>
+      <Item>
+        <Filename Value="..\OrangeUIDesignNew\Source\uDrawPictureEditor.pas"/>
+        <HasRegisterProc Value="True"/>
+        <UnitName Value="uDrawPictureEditor"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\VCL\NativeCanvas\uNativeDrawCanvas.pas"/>
+        <UnitName Value="uNativeDrawCanvas"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\VCL\NativeCanvas\uNativeSkinPictureEngine.pas"/>
+        <UnitName Value="uNativeSkinPictureEngine"/>
+      </Item>
+      <Item>
+        <Filename Value="Source\VCL\uSkinFormType.pas"/>
+        <UnitName Value="uSkinFormType"/>
+      </Item>
+    </Files>
+    <RequiredPkgs>
+      <Item>
+        <PackageName Value="IDEIntf"/>
+      </Item>
+      <Item>
+        <PackageName Value="DateTimeCtrls"/>
+      </Item>
+      <Item>
+        <PackageName Value="LCLBase"/>
+      </Item>
+      <Item>
+        <PackageName Value="FCL"/>
+      </Item>
+    </RequiredPkgs>
+    <UsageOptions>
+      <UnitPath Value="$(PkgOutDir)"/>
+    </UsageOptions>
+    <PublishOptions>
+      <Version Value="2"/>
+      <UseFileFilters Value="True"/>
+    </PublishOptions>
+  </Package>
+</CONFIG>

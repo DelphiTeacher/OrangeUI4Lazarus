@@ -1,0 +1,72 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{A7B6C0D7-6510-4580-910B-3D42B3F0D8D9}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="OrangeUIControl_FMX_D11.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\OrangeUIProduct\门业扫码入库\App_Client\DoorManager_FMX_D11_Test.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="C:\Users\ggggcexx\Documents\Embarcadero\Studio\Projects\Project3.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\OrangeUIProduct\门业扫码入库\App_Client\DoorManager_FMX_D11.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="OrangeUIControl_FMX_D11">
+        <MSBuild Projects="OrangeUIControl_FMX_D11.dproj"/>
+    </Target>
+    <Target Name="OrangeUIControl_FMX_D11:Clean">
+        <MSBuild Projects="OrangeUIControl_FMX_D11.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="OrangeUIControl_FMX_D11:Make">
+        <MSBuild Projects="OrangeUIControl_FMX_D11.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="DoorManager_FMX_D11_Test">
+        <MSBuild Projects="..\OrangeUIProduct\门业扫码入库\App_Client\DoorManager_FMX_D11_Test.dproj"/>
+    </Target>
+    <Target Name="DoorManager_FMX_D11_Test:Clean">
+        <MSBuild Projects="..\OrangeUIProduct\门业扫码入库\App_Client\DoorManager_FMX_D11_Test.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DoorManager_FMX_D11_Test:Make">
+        <MSBuild Projects="..\OrangeUIProduct\门业扫码入库\App_Client\DoorManager_FMX_D11_Test.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Project3">
+        <MSBuild Projects="C:\Users\ggggcexx\Documents\Embarcadero\Studio\Projects\Project3.dproj"/>
+    </Target>
+    <Target Name="Project3:Clean">
+        <MSBuild Projects="C:\Users\ggggcexx\Documents\Embarcadero\Studio\Projects\Project3.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Project3:Make">
+        <MSBuild Projects="C:\Users\ggggcexx\Documents\Embarcadero\Studio\Projects\Project3.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="DoorManager_FMX_D11">
+        <MSBuild Projects="..\OrangeUIProduct\门业扫码入库\App_Client\DoorManager_FMX_D11.dproj"/>
+    </Target>
+    <Target Name="DoorManager_FMX_D11:Clean">
+        <MSBuild Projects="..\OrangeUIProduct\门业扫码入库\App_Client\DoorManager_FMX_D11.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DoorManager_FMX_D11:Make">
+        <MSBuild Projects="..\OrangeUIProduct\门业扫码入库\App_Client\DoorManager_FMX_D11.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="OrangeUIControl_FMX_D11;DoorManager_FMX_D11_Test;Project3;DoorManager_FMX_D11"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="OrangeUIControl_FMX_D11:Clean;DoorManager_FMX_D11_Test:Clean;Project3:Clean;DoorManager_FMX_D11:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="OrangeUIControl_FMX_D11:Make;DoorManager_FMX_D11_Test:Make;Project3:Make;DoorManager_FMX_D11:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
