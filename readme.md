@@ -98,6 +98,6 @@ Mobile: +86-18957901025
 Email: ggggcexx@163.com  
 Facebook: ggggcexx@163.com  
 Twitter: ggggcexx@163.com  
-WhatsApp: +8618957901025  
+WhatsApp: +86 18957901025  
 CSDN blog: http://blog.csdn.net/delphiteacher
 

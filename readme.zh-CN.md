@@ -98,7 +98,7 @@ QQ: 452330643 (https://www.imqq.com)
 Mobile: +86-18957901025  
 Facebook: ggggcexx@163.com  
 Twitter: ggggcexx@163.com  
-WhatsApp: +8618957901025  
+WhatsApp: +86 18957901025  
 CSDN 博客: http://blog.csdn.net/delphiteacher
 
 
