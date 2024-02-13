@@ -23,6 +23,7 @@ OrangeUI还支持Lazarus，因此又能运行在Windows、Linux、MacOS、i386�
 
 
 ## 演示程序下载：
+![预览](https://github.com/DelphiTeacher/OrangeUI4Lazarus/blob/main/preview-pc.png)  
 Windows  
 Android  
 iOS  
