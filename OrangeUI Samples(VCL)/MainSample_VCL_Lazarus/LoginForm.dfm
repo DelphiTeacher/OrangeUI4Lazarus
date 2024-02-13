@@ -490,9 +490,4 @@ object frmLogin: TfrmLogin
     Text = '系统登录'
     Properties.AutoSize = False
   end
-  object Timer1: TTimer
-    OnTimer = Timer1Timer
-    Left = 208
-    Top = 72
-  end
 end

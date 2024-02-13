@@ -73,6 +73,9 @@ uses
 
 
 type
+
+  { TfrmMain }
+
   TfrmMain = class(TForm)
     lbSubMenu: TSkinWinTreeView;
     imgUserHead: TImage;
@@ -121,6 +124,7 @@ type
     procedure lbSubMenuPrepareDrawItem(Sender: TObject; ACanvas: TDrawCanvas;
       AItemDesignerPanel: TItemDesignerPanel; AItem: TSkinItem;
       AItemDrawRect: TRect);
+    procedure sbClientClick(Sender: TObject);
 //    procedure lbSubMenuPrepareDrawItem(Sender: TObject; ACanvas: TDrawCanvas;
 //      AItemDesignerPanel: TSkinItemDesignerPanel; AItem: TSkinItem;
 //      AItemDrawRect: TRect);
@@ -529,6 +533,11 @@ begin
   //
 end;
 
+procedure TfrmMain.sbClientClick(Sender: TObject);
+begin
+
+end;
+
 //  if (AItemDesignerPanel<>nil) and (AItemDesignerPanel.Parent is TFrameListItemStyle_IconLeft_CaptionRight) then
 //  begin
 //    //如果当前绘制的Item为鼠标所在的Item则显示
@@ -549,8 +558,8 @@ procedure TfrmMain.Load;
 begin
 //  Self.FCustomerInfoFrame.Load;
 
-  //Self.lbSubMenu.Prop.Items.FindItemByName('dashboard_analyse').Selected:=True;
-  //Self.lbSubMenuClickItem(Self.lbSubMenu.Prop.Items.FindItemByName('dashboard_analyse'));
+  Self.lbSubMenu.Prop.Items.FindItemByName('dashboard_analyse').Selected:=True;
+  Self.lbSubMenuClickItem(Self.lbSubMenu.Prop.Items.FindItemByName('dashboard_analyse'));
 
 
 //  ATestChartFrame:=TFrameTestChart.Create(Self);

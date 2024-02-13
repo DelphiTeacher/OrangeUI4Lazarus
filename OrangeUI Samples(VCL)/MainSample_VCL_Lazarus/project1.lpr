@@ -10,10 +10,10 @@ uses
   athreads,
   {$ENDIF}
   Interfaces, // this includes the LCL widgetset
-
+  Types,
+  Controls,
   uDrawCanvas, uSkinPicture, uDrawPicture, uBasePathData, Forms,
-  uNativeDrawCanvas, uNativeSkinPictureEngine,
-  EasyServiceCommonMaterialDataMoudle_VCL_Lazarus, ListItemStyle_Default,
+  EasyServiceCommonMaterialDataMoudle_VCL_Lazarus,
   MainForm, ButtonFrame, CheckBoxFrame, DashBoard_AnalyseFrame,
   DashBoard_ProjectsFrame, DashBoard_Analyse_BarChart_MonthSummaryFrame,
   DashBoard_Projects_PieChart_ProjectStatusFrame,
@@ -36,12 +36,16 @@ begin
   Application.Scaled:=True;
   Application.Initialize;
   //Application.CreateForm(TdmEasyServiceCommonMaterial, dmEasyServiceCommonMaterial);
-  //Application.CreateForm(TfrmMain, frmMain);
-  Application.CreateForm(TfrmLogin, frmLogin);
+  Application.CreateForm(TfrmMain, frmMain);
+  //Application.CreateForm(TfrmLogin, frmLogin);
+  frmLogin:=TfrmLogin.Create(nil);
+  if frmLogin.ShowModal=mrOK then
+  begin
+    Application.Run;
+  end;
 
-  Application.Run;
 
-  frmMain.Free;
+  //frmMain.Free;
   //dmEasyServiceCommonMaterial.Free;
 end.
 

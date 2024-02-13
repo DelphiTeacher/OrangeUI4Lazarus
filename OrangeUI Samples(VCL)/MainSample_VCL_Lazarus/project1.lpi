@@ -108,24 +108,11 @@
         <ResourceBaseClass Value="Frame"/>
       </Unit>
       <Unit>
-        <Filename Value="..\..\OrangeUIControlNew\Source\VCL\NativeCanvas\uNativeDrawCanvas.pas"/>
-        <IsPartOfProject Value="True"/>
-      </Unit>
-      <Unit>
-        <Filename Value="..\..\OrangeUIControlNew\Source\VCL\NativeCanvas\uNativeSkinPictureEngine.pas"/>
-        <IsPartOfProject Value="True"/>
-      </Unit>
-      <Unit>
         <Filename Value="LoginForm.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmLogin"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-      </Unit>
-      <Unit>
-        <Filename Value="..\..\OrangeUIStyles_VCLNew\ListItemStyle_Default.pas"/>
-        <IsPartOfProject Value="True"/>
-        <HasResources Value="True"/>
       </Unit>
     </Units>
   </ProjectOptions>
@@ -137,7 +124,7 @@
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
-      <OtherUnitFiles Value="D:\MyFiles\OrangeUIControlNew\lib\x86_64-win64\;..\..\OrangeProjectCommon;..\..\OrangeUIControlNew\Source\VCL\NativeCanvas;..\..\OrangeUIStyles_VCLNew"/>
+      <OtherUnitFiles Value="D:\MyFiles\OrangeUIControlNew\lib\x86_64-win64\;..\..\OrangeProjectCommon"/>
       <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <Linking>

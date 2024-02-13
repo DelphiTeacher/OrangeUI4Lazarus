@@ -19,7 +19,6 @@ type
     chkRememberPassword: TCheckBox;
     lblForget: TSkinWinLabel;
     btnLogin: TSkinWinButton;
-    Timer1: TTimer;
     procedure btnCloseClick(Sender: TObject);
     procedure btnMinClick(Sender: TObject);
     procedure btnLoginClick(Sender: TObject);
@@ -74,8 +73,6 @@ end;
 
 procedure TfrmLogin.Timer1Timer(Sender: TObject);
 begin
-//  SetFormShadow(Handle,True,Self.fsdForm.FIsSetedFormShadow);
-
 end;
 
 end.
