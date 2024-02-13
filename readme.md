@@ -22,7 +22,8 @@ OrangeUI also supports Lazarus, so it can run on Windows, Linux, MacOS, i386 pla
 
 
 ## Demo program download：
-![Preview](https://github.com/DelphiTeacher/OrangeUI4Lazarus/blob/main/preview-pc.png)  
+![Preview](https://github.com/DelphiTeacher/OrangeUI4Lazarus/blob/main/preview-pc-1.png)  
+![Preview](https://github.com/DelphiTeacher/OrangeUI4Lazarus/blob/main/preview-pc-2.png)  
 Windows  
 Android  
 iOS  
