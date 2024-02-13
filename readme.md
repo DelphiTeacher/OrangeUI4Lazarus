@@ -4,31 +4,30 @@
 
 
 ## 官网
-Website：www.orangeui.cn
+[www.orangeui.cn](https://www.orangeui.cn)
 
-简体中文 | [English](./README.md) | [日本語](./README.ja.md) | [Spanish](./README.es.md)
+简体中文 | [English](./README.md)
 
 
 
 ## 简介
 
-OrangeUI是一套Pascal的界面增强控件包，因为Delphi自带的控件已经满足不了开发者对美观界面的要求，而OrangeUI的控件可以自定义出你想要的任何界面效果。OrangeUI还包含强大的列表控件，方便开发者在列表项中添加图片、文本、按钮等显示项。
-OrangeUI在全球多个国家都有使用者，美国、墨西哥、德国、俄罗斯、日本、泰国、土耳其、新加坡、中国等。
-OrangeUI支持Delphi，在Delphi下又分别支持VCL和FMX框架，因此即可以开发Windows应用程序，也可以开发跨平台应用，比如Android、iOS、MacOS、Linux等。
-OrangeUI还支持Lazarus，因此又能运行在Windows、Linux、MacOS、i386平台、ARM平台等等
+OrangeUI是一套Pascal的界面增强控件包。  
+因为Delphi自带的控件已经满足不了开发者对美观界面的要求，而OrangeUI的控件可以自定义出你想要的任何界面效果。  
+OrangeUI在全球多个国家都有使用者，美国、墨西哥、德国、俄罗斯、日本、泰国、土耳其、新加坡、中国等。  
+OrangeUI支持Delphi，在Delphi下又分别支持VCL和FMX框架，因此即可以开发Windows应用程序，也可以开发跨平台应用，比如Android、iOS、MacOS、Linux等。  
+OrangeUI还支持Lazarus，因此又能运行在Windows、Linux、MacOS、i386平台、ARM平台等等  
 
 
 - [使用文档](https://www.orangeui.cn/components/install)
 
 
 ## 演示程序下载：
-Windows
-Android
-iOS
-Linux
-
-
-控件安装：
+Windows  
+Android  
+iOS  
+Linux  
+MacOS  
 
 
 
@@ -56,28 +55,23 @@ Linux
 ```
 
 
-## 赞助：
-
-如果你觉得这个项目帮助到了你，你可以帮作者买一杯果汁表示鼓励 :tropical_drink:
-![donate](http://www.orangeui.cn/image/alipay_barcode.jpg)(http://www.orangeui.cn/image/wechatpay_barcode.png)
-
-[Paypal Me](https://www.paypal.me/DelphiTeacher)
 
 
 ## 购买VIP：
-如果您在控件的使用过程中遇到问题，VIP提供技术支持。
-费用为688/年。
-[Alipay](http://www.orangeui.cn/image/alipay_barcode.jpg)
-[Wechat](http://www.orangeui.cn/image/wechatpay_barcode.png)
-[Paypal](https://www.paypal.me/DelphiTeacher)
+如果您在控件的使用过程中遇到问题，VIP提供技术支持，费用为688/年。  
+付款方式：  
+支付宝  
+<img src="https://www.orangeui.cn/image/alipay_barcode.jpg" width="300" />  
+微信    
+<img src="https://www.orangeui.cn/image/wechatpay_barcode.png" width="300" />    
+[Paypal Me](https://www.paypal.me/DelphiTeacher)  
 
 
 ## 授权方式：
 [MIT](https://github.com/DelphiTeacher/OrangeUI4Lazarus/blob/master/LICENSE)
 
-
-## 版权：
 金华劲界信息技术有限公司
+
 
 
 
@@ -88,9 +82,9 @@ Linux
 请访问 [Telegram](https://t.me/+ucRAUnwMlnxiZWU1) 来加入 Telegram 群组
 
 <div>
-  <img data-type="orangeui_qqgroup" src="http://www.orangeui.cn/image/orangeui_qqgroup_qrcode.jpg" width="300" />
-  <img data-type="delphi_mp" src="http://www.orangeui.cn/image/delphi_mp_qrcode.jpg" width="300" />
-  <img data-type="my_wechat" src="http://www.orangeui.cn/image/my_wechat_qrcode.jpg" width="300" />
+  <img data-type="orangeui_qqgroup" src="https://www.orangeui.cn/image/orangeui_qqgroup_qrcode.jpg" width="300" />
+  <img data-type="delphi_mp" src="https://www.orangeui.cn/image/delphi_mp_qrcode.jpg" width="300" />
+  <img data-type="my_wechat" src="https://www.orangeui.cn/image/my_wechat_qrcode.jpg" width="300" />
 </div>
 
 
