@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="320" src="https://www.orangeui.cn/orangeui.png">
+  <img width="320" src="https://github.com/DelphiTeacher/OrangeUI4Lazarus/blob/main/orangeui.png">
 </p>
 
 
@@ -61,9 +61,9 @@ MacOS
 If you encounter problems while using the control, VIP provides technical support at a cost of $99/year.  
 payment method：  
 Alipay  
-<img src="https://www.orangeui.cn/image/alipay_barcode.jpg" width="300" />  
+<img src="https://github.com/DelphiTeacher/OrangeUI4Lazarus/blob/main/alipay_barcode.jpg" width="300" />  
 Wechat    
-<img src="https://www.orangeui.cn/image/wechatpay_barcode.png" width="300" />    
+<img src="https://github.com/DelphiTeacher/OrangeUI4Lazarus/blob/main/wechatpay_barcode.png" width="300" />    
 [Paypal Me](https://www.paypal.me/DelphiTeacher)  
 
 
@@ -82,9 +82,9 @@ Please visit [Whatsapp](https://chat.whatsapp.com/HnsO8lr9nHGHMAZCUiJZtR) to joi
 Please visit [Telegram](https://t.me/+ucRAUnwMlnxiZWU1) to join the Telegram discuss group
 
 <div>
-  <img data-type="orangeui_qqgroup" src="https://www.orangeui.cn/image/orangeui_qqgroup_qrcode.jpg" width="300" />
-  <img data-type="delphi_mp" src="https://www.orangeui.cn/image/delphi_mp_qrcode.jpg" width="300" />
-  <img data-type="my_wechat" src="https://www.orangeui.cn/image/my_wechat_qrcode.jpg" width="300" />
+  <img data-type="orangeui_qqgroup" src="https://github.com/DelphiTeacher/OrangeUI4Lazarus/blob/main/orangeui_qqgroup_qrcode.jpg" width="300" />
+  <img data-type="delphi_mp" src="https://github.com/DelphiTeacher/OrangeUI4Lazarus/blob/main/delphi_mp_qrcode.jpg" width="300" />
+  <img data-type="my_wechat" src="https://github.com/DelphiTeacher/OrangeUI4Lazarus/blob/main/my_wechat_qrcode.jpg" width="300" />
 </div>
 
 

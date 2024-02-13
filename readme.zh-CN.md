@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="320" src="https://www.orangeui.cn/orangeui.png">
+  <img width="320" src="https://github.com/DelphiTeacher/OrangeUI4Lazarus/blob/main/orangeui.png">
 </p>
 
 
@@ -62,9 +62,9 @@ MacOS
 如果您在控件的使用过程中遇到问题，VIP提供技术支持，费用为688/年。  
 付款方式：  
 支付宝  
-<img src="https://www.orangeui.cn/image/alipay_barcode.jpg" width="300" />  
+<img src="https://github.com/DelphiTeacher/OrangeUI4Lazarus/blob/main/alipay_barcode.jpg" width="300" />  
 微信    
-<img src="https://www.orangeui.cn/image/wechatpay_barcode.png" width="300" />    
+<img src="https://github.com/DelphiTeacher/OrangeUI4Lazarus/blob/main/wechatpay_barcode.png" width="300" />    
 [Paypal Me](https://www.paypal.me/DelphiTeacher)  
 
 
@@ -83,9 +83,9 @@ Copyright (c) 2012-2024 金华劲界信息技术有限公司
 请访问 [Telegram](https://t.me/+ucRAUnwMlnxiZWU1) 来加入 Telegram 群组
 
 <div>
-  <img data-type="orangeui_qqgroup" src="https://www.orangeui.cn/image/orangeui_qqgroup_qrcode.jpg" width="300" />
-  <img data-type="delphi_mp" src="https://www.orangeui.cn/image/delphi_mp_qrcode.jpg" width="300" />
-  <img data-type="my_wechat" src="https://www.orangeui.cn/image/my_wechat_qrcode.jpg" width="300" />
+  <img data-type="orangeui_qqgroup" src="https://github.com/DelphiTeacher/OrangeUI4Lazarus/blob/main/orangeui_qqgroup_qrcode.jpg" width="300" />
+  <img data-type="delphi_mp" src="https://github.com/DelphiTeacher/OrangeUI4Lazarus/blob/main/delphi_mp_qrcode.jpg" width="300" />
+  <img data-type="my_wechat" src="https://github.com/DelphiTeacher/OrangeUI4Lazarus/blob/main/my_wechat_qrcode.jpg" width="300" />
 </div>
 
 
