@@ -3,26 +3,25 @@
 </p>
 
 
-## 官网
+## Website
 [www.orangeui.cn](https://www.orangeui.cn)
 
-简体中文 | [English](./README.md)
+English | [简体中文](./README.zh-CN.md)
 
 
 
-## 简介
+## Introduction
 
-OrangeUI是一套Pascal的界面增强控件包。  
-因为Delphi自带的控件已经满足不了开发者对美观界面的要求，而OrangeUI的控件可以自定义出你想要的任何界面效果。  
-OrangeUI在全球多个国家都有使用者，美国、墨西哥、德国、俄罗斯、日本、泰国、土耳其、新加坡、中国等。  
-OrangeUI支持Delphi，在Delphi下又分别支持VCL和FMX框架，因此即可以开发Windows应用程序，也可以开发跨平台应用，比如Android、iOS、MacOS、Linux等。  
-OrangeUI还支持Lazarus，因此又能运行在Windows、Linux、MacOS、i386平台、ARM平台等等  
+OrangeUI is a set of Pascal's interface enhancement control package.  
+Because Delphi's own controls can no longer meet developers' requirements for beautiful interfaces, and OrangeUI's controls can customize any interface effect you want.  
+OrangeUI has users in many countries around the world, including the United States, Mexico, Germany, Russia, Japan, Thailand, Turkey, Singapore, China, etc.  
+OrangeUI supports Delphi, and under Delphi it supports the VCL and FMX frameworks respectively, so it can develop Windows applications and cross-platform applications, such as Android, iOS, MacOS, Linux, etc.  
+OrangeUI also supports Lazarus, so it can run on Windows, Linux, MacOS, i386 platform, ARM platform, etc.  
+
+- [Documentation](https://www.orangeui.cn/en-US/components/install)
 
 
-- [使用文档](https://www.orangeui.cn/components/install)
-
-
-## 演示程序下载：
+## Demo program download：
 Windows  
 Android  
 iOS  
@@ -31,24 +30,24 @@ MacOS
 
 
 
-## 功能
+## Features
 
 ```
 
-- 組件
-  - 按钮
-  - 单选框
-  - 复选框
-  - 图片框
-  - 进度条
-  - 图片轮换框
-  - 列表视图
-  - 树型视图
-  - 表格
-  - 图表
-  - 画板
-  - 多彩标签
-  - 分页控件
+- Components
+  - Button
+  - RadioButton
+  - CheckBox
+  - Image
+  - ProgressBar
+  - ImageListViewer
+  - ListView
+  - TreeView
+  - Grid
+  - Chart
+  - DrawPanel
+  - MultiColorLabel
+  - PageControl
 
 
 
@@ -57,29 +56,29 @@ MacOS
 
 
 
-## 购买VIP：
-如果您在控件的使用过程中遇到问题，VIP提供技术支持，费用为688/年。  
-付款方式：  
-支付宝  
+## Buy VIP：
+If you encounter problems while using the control, VIP provides technical support at a cost of $99/year.  
+payment method：  
+Alipay  
 <img src="https://www.orangeui.cn/image/alipay_barcode.jpg" width="300" />  
-微信    
+Wechat    
 <img src="https://www.orangeui.cn/image/wechatpay_barcode.png" width="300" />    
 [Paypal Me](https://www.paypal.me/DelphiTeacher)  
 
 
-## 授权方式：
+## License：
 [MIT](https://github.com/DelphiTeacher/OrangeUI4Lazarus/blob/master/LICENSE)
 
-金华劲界信息技术有限公司
+Copyright (c) 2012-present Jinhua JinJie Information Technology Co., Ltd.  
 
 
 
 
-## 反馈与共建
+## Feedback
 
-请访问 [GitHub](https://github.com/DelphiTeacher/OrangeUI4Lazarus) 来与我共同建设  
-请访问 [Whatsapp](https://chat.whatsapp.com/HnsO8lr9nHGHMAZCUiJZtR) 来加入 Whatsapp 群组  
-请访问 [Telegram](https://t.me/+ucRAUnwMlnxiZWU1) 来加入 Telegram 群组
+Please visit [GitHub](https://github.com/DelphiTeacher/OrangeUI4Lazarus) to complete it with me  
+Please visit [Whatsapp](https://chat.whatsapp.com/HnsO8lr9nHGHMAZCUiJZtR) to join the Whatsapp discuss group  
+Please visit [Telegram](https://t.me/+ucRAUnwMlnxiZWU1) to join the Telegram discuss group
 
 <div>
   <img data-type="orangeui_qqgroup" src="https://www.orangeui.cn/image/orangeui_qqgroup_qrcode.jpg" width="300" />
@@ -89,16 +88,16 @@ MacOS
 
 
 
-## 联系我们
 
-Email: ggggcexx@163.com  
+## Contact us
+
 QQ: 452330643 (https://www.imqq.com)  
-微信: DelphiTeacher (https://www.wechat.com/en/)  
-技术支持 QQ 群: 10900297 (https://www.imqq.com)  
+Wechat: DelphiTeacher (https://www.wechat.com/en/)  
+Technical QQ group: 10900297 (https://www.imqq.com)  
 Mobile: +86-18957901025  
+Email: ggggcexx@163.com  
 Facebook: ggggcexx@163.com  
 Twitter: ggggcexx@163.com  
 WhatsApp: +8618957901025  
-CSDN 博客: http://blog.csdn.net/delphiteacher
-
+CSDN blog: http://blog.csdn.net/delphiteacher
 
