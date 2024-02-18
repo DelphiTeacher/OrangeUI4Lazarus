@@ -49,10 +49,6 @@
         <UnitName Value="Unit1"/>
       </Unit>
       <Unit>
-        <Filename Value="..\..\OrangeUIControl\Source\VCL\BGRACanvas\uBGRABufferBitmap.pas"/>
-        <IsPartOfProject Value="True"/>
-      </Unit>
-      <Unit>
         <Filename Value="..\..\OrangeUIControl\Source\VCL\BGRACanvas\uBGRADrawCanvas.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit>
@@ -61,11 +57,11 @@
         <IsPartOfProject Value="True"/>
       </Unit>
       <Unit>
-        <Filename Value="..\..\OrangeUIControl\Source\VCL\NativeCanvas\uNativeSkinPictureEngine.pas"/>
+        <Filename Value="..\..\OrangeUIControl\Source\VCL\BGRACanvas\uBGRABufferBitmap.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit>
       <Unit>
-        <Filename Value="..\..\OrangeUIControl\Source\VCL\NativeCanvas\uNativeDrawCanvas.pas"/>
+        <Filename Value="..\..\OrangeProjectCommon\uBGRASVGSupport.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit>
     </Units>
@@ -78,7 +74,7 @@
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
-      <OtherUnitFiles Value="..\..\OrangeUIControl\Source\VCL\BGRACanvas;..\..\OrangeUIControl\Source\VCL\NativeCanvas"/>
+      <OtherUnitFiles Value="..\..\OrangeUIControl\Source\VCL\BGRACanvas;..\..\OrangeProjectCommon"/>
       <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <Linking>

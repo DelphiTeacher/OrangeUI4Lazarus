@@ -10,9 +10,7 @@ uses
   athreads,
   {$ENDIF}
   Interfaces, // this includes the LCL widgetset
-  Forms, uBGRABufferBitmap, uBGRADrawCanvas, uBGRASkinPictureEngine,
-  uNativeDrawCanvas, uNativeSkinPictureEngine, Unit1
-  { you can add units after this };
+  Forms, uBGRADrawCanvas, uBGRASkinPictureEngine, Unit1;
 
 {$R *.res}
 

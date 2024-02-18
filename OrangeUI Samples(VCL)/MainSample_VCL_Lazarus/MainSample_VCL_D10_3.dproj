@@ -176,10 +176,6 @@
             <Form>FrameEdit</Form>
             <DesignClass>TFrame</DesignClass>
         </DCCReference>
-        <DCCReference Include="MemoFrame.pas">
-            <Form>FrameMemo</Form>
-            <DesignClass>TFrame</DesignClass>
-        </DCCReference>
         <DCCReference Include="..\..\OrangeProjectCommon\XSuperObject\XSuperJSON.pas"/>
         <DCCReference Include="..\..\OrangeProjectCommon\XSuperObject\XSuperObject.pas"/>
         <DCCReference Include="..\..\OrangeProjectCommon\uMultiSelectFrame.pas"/>
@@ -191,8 +187,6 @@
             <DesignClass>TFrame</DesignClass>
         </DCCReference>
         <DCCReference Include="..\..\OrangeProjectCommon\VCLFrames\HintFrame_VCL.pas"/>
-        <DCCReference Include="..\..\OrangeProjectCommon\MultiSelectPhotos\uPhotoManager.pas"/>
-        <DCCReference Include="..\..\OrangeProjectCommon\MultiSelectPhotos\uPhotoManager.Windows.pas"/>
         <DCCReference Include="..\..\OrangeProjectCommon\VCLFrames\FrameParentForm_VCL.pas"/>
         <DCCReference Include="..\..\OrangeProjectCommon\OrangeUIStyles_VCL\ListItemStyle_Default.pas"/>
         <DCCReference Include="..\..\OrangeProjectCommon\OrangeUIStyles_VCL\ListItemStyle_IconCaptionLeft_NotifyNumberRight.pas">
@@ -209,18 +203,6 @@
         </DCCReference>
         <DCCReference Include="..\..\OrangeProjectCommon\OrangeUIStyles_VCL\ListItemStyle_IconCaptionLeft_ArrowRight.pas">
             <Form>FrameListItemStyle_IconCaptionLeft_ArrowRight</Form>
-            <DesignClass>TFrame</DesignClass>
-        </DCCReference>
-        <DCCReference Include="PageControlFrame.pas">
-            <Form>FramePageControl</Form>
-            <DesignClass>TFrame</DesignClass>
-        </DCCReference>
-        <DCCReference Include="ListBoxFrame.pas">
-            <Form>FrameListBox</Form>
-            <DesignClass>TFrame</DesignClass>
-        </DCCReference>
-        <DCCReference Include="ListViewFrame.pas">
-            <Form>Frame4</Form>
             <DesignClass>TFrame</DesignClass>
         </DCCReference>
         <DCCReference Include="DashBoard_AnalyseFrame.pas">
@@ -241,12 +223,6 @@
         <DCCReference Include="DashBoard_ProjectsFrame.pas">
             <Form>FrameDashBoard_Projects</Form>
         </DCCReference>
-        <DCCReference Include="TestChartFrame.pas">
-            <Form>FrameTestChart</Form>
-        </DCCReference>
-        <DCCReference Include="Unit5.pas">
-            <Form>Form5</Form>
-        </DCCReference>
         <DCCReference Include="DashBoard_Analyse_BarChart_MonthSummaryFrame.pas"/>
         <DCCReference Include="DashBoard_Projects_PieChart_ProjectStatusFrame.pas">
             <Form>FramePieChart_ProjectStatus</Form>
@@ -260,14 +236,8 @@
         <DCCReference Include="..\..\OrangeProjectCommon\OrangeUIStyles_VCL\ListItemStyle_CheckBoxIconLeft_CaptionRight.pas"/>
         <DCCReference Include="..\..\OrangeProjectCommon\RestIntfMemTable\uRestIntfMemTable.pas"/>
         <DCCReference Include="..\..\OrangeProjectCommon\uJsonToDataset.pas"/>
-        <DCCReference Include="BaseForm.pas">
-            <Form>frmBase</Form>
-        </DCCReference>
         <DCCReference Include="MainForm.pas">
             <Form>frmMain</Form>
-        </DCCReference>
-        <DCCReference Include="WhiteMainForm.pas">
-            <Form>frmWhiteMain</Form>
         </DCCReference>
         <DCCReference Include="..\..\OrangeProjectCommon\VCLFrames\GridSwitchPage2Frame.pas"/>
         <DCCReference Include="..\..\OrangeProjectCommon\VCLFrames\GridSwitchPageFrame.pas"/>

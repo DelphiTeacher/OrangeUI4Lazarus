@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="project1.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="42"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unit1.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit1"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="65"/>
+        <CursorPos Y="117"/>
+        <UsageCount Value="42"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControl\Source\VCL\BGRACanvas\uBGRADrawCanvas.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="36"/>
+        <TopLine Value="3503"/>
+        <CursorPos X="34" Y="3536"/>
+        <UsageCount Value="36"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControl\Source\VCL\BGRACanvas\uBGRASkinPictureEngine.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="39"/>
+        <TopLine Value="89"/>
+        <CursorPos X="39" Y="119"/>
+        <UsageCount Value="36"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControl\Source\VCL\BGRACanvas\uBGRABufferBitmap.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="24"/>
+        <TopLine Value="54"/>
+        <CursorPos X="28" Y="97"/>
+        <UsageCount Value="36"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeProjectCommon\uBGRASVGSupport.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="71"/>
+        <CursorPos X="55" Y="117"/>
+        <UsageCount Value="32"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeProjectCommon\uLCLSVGSupport.pas"/>
+        <EditorIndex Value="31"/>
+        <TopLine Value="40"/>
+        <CursorPos X="3" Y="70"/>
+        <UsageCount Value="34"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\Users\Administrator\AppData\Local\lazarus\onlinepackagemanager\packages\BGRABitmap\bgrabitmap\bgrasvg.pas"/>
+        <UnitName Value="BGRASVG"/>
+        <EditorIndex Value="23"/>
+        <TopLine Value="207"/>
+        <CursorPos X="3" Y="137"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\Users\Administrator\AppData\Local\lazarus\onlinepackagemanager\packages\BGRABitmap\bgrabitmap\bgrapixel.inc"/>
+        <EditorIndex Value="29"/>
+        <TopLine Value="12"/>
+        <CursorPos X="3" Y="34"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\Lazarus\lcl\graphics.pp"/>
+        <UnitName Value="Graphics"/>
+        <EditorIndex Value="22"/>
+        <TopLine Value="541"/>
+        <CursorPos X="3" Y="570"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\Users\Administrator\AppData\Local\lazarus\onlinepackagemanager\packages\BGRABitmap\bgrabitmap\bgrasvgtype.pas"/>
+        <UnitName Value="BGRASVGType"/>
+        <EditorIndex Value="28"/>
+        <TopLine Value="156"/>
+        <CursorPos X="3" Y="189"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\Lazarus\lcl\include\customform.inc"/>
+        <EditorIndex Value="27"/>
+        <TopLine Value="46"/>
+        <CursorPos Y="77"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\Users\Administrator\AppData\Local\lazarus\onlinepackagemanager\packages\BGRABitmap\bgrabitmap\basiccolorspace.inc"/>
+        <EditorIndex Value="30"/>
+        <TopLine Value="280"/>
+        <CursorPos Y="302"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\Users\Administrator\AppData\Local\lazarus\onlinepackagemanager\packages\BGRABitmap\bgrabitmap\bgradefaultbitmap.pas"/>
+        <UnitName Value="BGRADefaultBitmap"/>
+        <EditorIndex Value="8"/>
+        <TopLine Value="106"/>
+        <CursorPos X="3" Y="37"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\Users\Administrator\AppData\Local\lazarus\onlinepackagemanager\packages\BGRABitmap\bgrabitmap\bgracanvas2d.pas"/>
+        <UnitName Value="BGRACanvas2D"/>
+        <EditorIndex Value="17"/>
+        <TopLine Value="249"/>
+        <CursorPos X="15" Y="277"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControl\Source\Base\uDrawPictureParam.pas"/>
+        <EditorIndex Value="5"/>
+        <CursorPos X="12" Y="25"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControl\Source\Base\uSkinPicture.pas"/>
+        <EditorIndex Value="6"/>
+        <TopLine Value="66"/>
+        <CursorPos X="15" Y="96"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControl\Source\Base\uDrawPicture.pas"/>
+        <EditorIndex Value="7"/>
+        <TopLine Value="2089"/>
+        <CursorPos X="25" Y="2091"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\Users\Administrator\AppData\Local\lazarus\onlinepackagemanager\packages\BGRABitmap\bgrabitmap\bgrabitmap.pas"/>
+        <UnitName Value="BGRABitmap"/>
+        <EditorIndex Value="32"/>
+        <TopLine Value="41"/>
+        <CursorPos X="9" Y="79"/>
+        <UsageCount Value="19"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\Users\Administrator\AppData\Local\lazarus\onlinepackagemanager\packages\BGRABitmap\bgrabitmap\bgrawinbitmap.pas"/>
+        <UnitName Value="BGRAWinBitmap"/>
+        <EditorIndex Value="33"/>
+        <CursorPos X="3" Y="23"/>
+        <UsageCount Value="19"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\Users\Administrator\AppData\Local\lazarus\onlinepackagemanager\packages\BGRABitmap\bgrabitmap\bgralclbitmap.pas"/>
+        <UnitName Value="BGRALCLBitmap"/>
+        <EditorIndex Value="43"/>
+        <CursorPos X="3" Y="14"/>
+        <UsageCount Value="19"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\Users\Administrator\AppData\Local\lazarus\onlinepackagemanager\packages\BGRABitmap\bgrabitmap\bgracustombitmap.inc"/>
+        <EditorIndex Value="16"/>
+        <TopLine Value="20"/>
+        <CursorPos X="6" Y="168"/>
+        <UsageCount Value="19"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\Lazarus\fpc\3.2.2\source\rtl\win\wininc\func.inc"/>
+        <EditorIndex Value="42"/>
+        <TopLine Value="786"/>
+        <CursorPos X="10" Y="815"/>
+        <UsageCount Value="19"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\Users\Administrator\AppData\Local\lazarus\onlinepackagemanager\packages\BGRABitmap\bgrabitmap\unibitmapgeneric.inc"/>
+        <EditorIndex Value="41"/>
+        <TopLine Value="17"/>
+        <CursorPos X="15" Y="47"/>
+        <UsageCount Value="19"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\Users\Administrator\AppData\Local\lazarus\onlinepackagemanager\packages\BGRABitmap\bgrabitmap\csscolorconst.inc"/>
+        <EditorIndex Value="15"/>
+        <CursorPos X="23" Y="10"/>
+        <UsageCount Value="19"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\Lazarus\lcl\extctrls.pp"/>
+        <UnitName Value="ExtCtrls"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="418"/>
+        <CursorPos X="3" Y="449"/>
+        <UsageCount Value="19"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\Lazarus\fpc\3.2.2\source\packages\fcl-image\src\fpcanvas.pp"/>
+        <UnitName Value="FPCanvas"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="80"/>
+        <CursorPos X="3" Y="111"/>
+        <UsageCount Value="18"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControl\Source\Base\uSkinBufferBitmap.pas"/>
+        <EditorIndex Value="34"/>
+        <TopLine Value="266"/>
+        <CursorPos X="82" Y="297"/>
+        <UsageCount Value="18"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControl\Source\VCL\uSkinWindowsControl.pas"/>
+        <EditorIndex Value="35"/>
+        <TopLine Value="431"/>
+        <CursorPos X="9" Y="59"/>
+        <UsageCount Value="18"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControl\Source\Base\uDrawCanvas.pas"/>
+        <EditorIndex Value="25"/>
+        <TopLine Value="1504"/>
+        <CursorPos Y="1549"/>
+        <UsageCount Value="18"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\三方控件\bgrabitmap-lazarus\bgrabitmap\bgracanvas2d.pas"/>
+        <UnitName Value="BGRACanvas2D"/>
+        <EditorIndex Value="2"/>
+        <CursorPos X="18" Y="2"/>
+        <UsageCount Value="18"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControl\Source\VCL\GDIPlusNewCanvas\uGDIPlusDrawCanvas.pas"/>
+        <EditorIndex Value="21"/>
+        <TopLine Value="489"/>
+        <CursorPos Y="536"/>
+        <UsageCount Value="17"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\Users\Administrator\AppData\Local\lazarus\onlinepackagemanager\packages\BGRABitmap\bgrabitmap\unibitmap.inc"/>
+        <EditorIndex Value="10"/>
+        <TopLine Value="2455"/>
+        <CursorPos X="3" Y="2461"/>
+        <UsageCount Value="17"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\Users\Administrator\AppData\Local\lazarus\onlinepackagemanager\packages\BGRABitmap\bgrabitmap\geometrytypes.inc"/>
+        <EditorIndex Value="14"/>
+        <TopLine Value="182"/>
+        <CursorPos X="3" Y="210"/>
+        <UsageCount Value="17"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\Users\Administrator\AppData\Local\lazarus\onlinepackagemanager\packages\BGRABitmap\bgrabitmap\bgracanvas.pas"/>
+        <UnitName Value="BGRACanvas"/>
+        <EditorIndex Value="9"/>
+        <TopLine Value="71"/>
+        <CursorPos X="5" Y="101"/>
+        <UsageCount Value="17"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\Lazarus\fpc\3.2.2\source\rtl\inc\typshrdh.inc"/>
+        <EditorIndex Value="38"/>
+        <CursorPos X="17" Y="57"/>
+        <UsageCount Value="16"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControl\Source\VCL\GDIPlusNewCanvas\uGDIPlusSkinPictureEngine.pas"/>
+        <EditorIndex Value="40"/>
+        <TopLine Value="129"/>
+        <CursorPos X="26" Y="162"/>
+        <UsageCount Value="16"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\Lazarus\fpc\3.2.2\source\packages\fcl-image\src\fpimage.pp"/>
+        <UnitName Value="FPImage"/>
+        <EditorIndex Value="11"/>
+        <TopLine Value="100"/>
+        <CursorPos X="17" Y="130"/>
+        <UsageCount Value="16"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\Lazarus\fpc\3.2.2\source\packages\fcl-image\src\fpimage.inc"/>
+        <EditorIndex Value="12"/>
+        <TopLine Value="462"/>
+        <CursorPos X="29" Y="478"/>
+        <UsageCount Value="16"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\Lazarus\fpc\3.2.2\source\rtl\objpas\classes\classesh.inc"/>
+        <EditorIndex Value="13"/>
+        <TopLine Value="408"/>
+        <CursorPos X="15" Y="439"/>
+        <UsageCount Value="16"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControl\Source\Base\uDrawParam.pas"/>
+        <EditorIndex Value="26"/>
+        <TopLine Value="1724"/>
+        <CursorPos Y="1778"/>
+        <UsageCount Value="15"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\Users\Administrator\AppData\Local\lazarus\onlinepackagemanager\packages\BGRABitmap\bgrabitmap\bgragraphics.pas"/>
+        <UnitName Value="BGRAGraphics"/>
+        <EditorIndex Value="20"/>
+        <CursorPos X="3" Y="19"/>
+        <UsageCount Value="14"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\Users\Administrator\AppData\Local\lazarus\onlinepackagemanager\packages\BGRABitmap\bgrabitmap\bgrapath.pas"/>
+        <UnitName Value="BGRAPath"/>
+        <EditorIndex Value="19"/>
+        <CursorPos X="3" Y="51"/>
+        <UsageCount Value="12"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\Users\Administrator\AppData\Local\lazarus\onlinepackagemanager\packages\BGRABitmap\bgrabitmap\bgrapen.pas"/>
+        <UnitName Value="BGRAPen"/>
+        <EditorIndex Value="18"/>
+        <CursorPos X="3" Y="25"/>
+        <UsageCount Value="12"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControl\Source\Base\uBasePathData.pas"/>
+        <EditorIndex Value="37"/>
+        <TopLine Value="34"/>
+        <CursorPos Y="101"/>
+        <UsageCount Value="11"/>
+        <Loaded Value="True"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="28">
+      <Position>
+        <Filename Value="C:\Users\Administrator\AppData\Local\lazarus\onlinepackagemanager\packages\BGRABitmap\bgrabitmap\bgracanvas2d.pas"/>
+        <Caret Line="847" Column="36" TopLine="797"/>
+      </Position>
+      <Position>
+        <Filename Value="C:\Users\Administrator\AppData\Local\lazarus\onlinepackagemanager\packages\BGRABitmap\bgrabitmap\bgracanvas2d.pas"/>
+        <Caret Line="882" Column="36" TopLine="832"/>
+      </Position>
+      <Position>
+        <Filename Value="C:\Users\Administrator\AppData\Local\lazarus\onlinepackagemanager\packages\BGRABitmap\bgrabitmap\bgracanvas2d.pas"/>
+        <Caret Line="1111" Column="28" TopLine="1061"/>
+      </Position>
+      <Position>
+        <Filename Value="C:\Users\Administrator\AppData\Local\lazarus\onlinepackagemanager\packages\BGRABitmap\bgrabitmap\bgracanvas2d.pas"/>
+        <Caret Line="1113" Column="28" TopLine="1063"/>
+      </Position>
+      <Position>
+        <Filename Value="C:\Users\Administrator\AppData\Local\lazarus\onlinepackagemanager\packages\BGRABitmap\bgrabitmap\bgracanvas2d.pas"/>
+        <Caret Line="1115" Column="28" TopLine="1065"/>
+      </Position>
+      <Position>
+        <Filename Value="C:\Users\Administrator\AppData\Local\lazarus\onlinepackagemanager\packages\BGRABitmap\bgrabitmap\bgracanvas2d.pas"/>
+        <Caret Line="1120" Column="26" TopLine="1070"/>
+      </Position>
+      <Position>
+        <Filename Value="C:\Users\Administrator\AppData\Local\lazarus\onlinepackagemanager\packages\BGRABitmap\bgrabitmap\bgracanvas2d.pas"/>
+        <Caret Line="1126" Column="28" TopLine="1076"/>
+      </Position>
+      <Position>
+        <Filename Value="C:\Users\Administrator\AppData\Local\lazarus\onlinepackagemanager\packages\BGRABitmap\bgrabitmap\bgracanvas2d.pas"/>
+        <Caret Line="1128" Column="28" TopLine="1078"/>
+      </Position>
+      <Position>
+        <Filename Value="C:\Users\Administrator\AppData\Local\lazarus\onlinepackagemanager\packages\BGRABitmap\bgrabitmap\bgracanvas2d.pas"/>
+        <Caret Line="1130" Column="28" TopLine="1080"/>
+      </Position>
+      <Position>
+        <Filename Value="C:\Users\Administrator\AppData\Local\lazarus\onlinepackagemanager\packages\BGRABitmap\bgrabitmap\bgracanvas2d.pas"/>
+        <Caret Line="1220" Column="39" TopLine="1170"/>
+      </Position>
+      <Position>
+        <Filename Value="C:\Users\Administrator\AppData\Local\lazarus\onlinepackagemanager\packages\BGRABitmap\bgrabitmap\bgracanvas2d.pas"/>
+        <Caret Line="1381" Column="26" TopLine="1331"/>
+      </Position>
+      <Position>
+        <Filename Value="C:\Users\Administrator\AppData\Local\lazarus\onlinepackagemanager\packages\BGRABitmap\bgrabitmap\bgracanvas2d.pas"/>
+        <Caret Line="1400" Column="26" TopLine="1350"/>
+      </Position>
+      <Position>
+        <Filename Value="C:\Users\Administrator\AppData\Local\lazarus\onlinepackagemanager\packages\BGRABitmap\bgrabitmap\bgracanvas2d.pas"/>
+        <Caret Line="1537" Column="26" TopLine="1487"/>
+      </Position>
+      <Position>
+        <Filename Value="C:\Users\Administrator\AppData\Local\lazarus\onlinepackagemanager\packages\BGRABitmap\bgrabitmap\bgracanvas2d.pas"/>
+        <Caret Line="1577" Column="26" TopLine="1527"/>
+      </Position>
+      <Position>
+        <Filename Value="C:\Users\Administrator\AppData\Local\lazarus\onlinepackagemanager\packages\BGRABitmap\bgrabitmap\bgracanvas2d.pas"/>
+        <Caret Line="1608" Column="37" TopLine="1558"/>
+      </Position>
+      <Position>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="63" Column="121" TopLine="39"/>
+      </Position>
+      <Position>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="79" Column="48" TopLine="39"/>
+      </Position>
+      <Position>
+        <Filename Value="C:\Users\Administrator\AppData\Local\lazarus\onlinepackagemanager\packages\BGRABitmap\bgrabitmap\bgracanvas2d.pas"/>
+        <Caret Line="272" Column="15" TopLine="246"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\VCL\BGRACanvas\uBGRADrawCanvas.pas"/>
+        <Caret Line="1397" TopLine="1770"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\VCL\BGRACanvas\uBGRADrawCanvas.pas"/>
+        <Caret Line="72" Column="18" TopLine="37"/>
+      </Position>
+      <Position>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="95" Column="69" TopLine="61"/>
+      </Position>
+      <Position>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="94" Column="42" TopLine="59"/>
+      </Position>
+      <Position>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="108" Column="22" TopLine="59"/>
+      </Position>
+      <Position>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="91" TopLine="59"/>
+      </Position>
+      <Position>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="94" Column="45" TopLine="59"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\VCL\BGRACanvas\uBGRADrawCanvas.pas"/>
+        <Caret Line="3503" Column="37" TopLine="3482"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\VCL\BGRACanvas\uBGRADrawCanvas.pas"/>
+        <Caret Line="72" Column="15" TopLine="43"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\VCL\BGRACanvas\uBGRADrawCanvas.pas"/>
+        <Caret Line="91" Column="32" TopLine="53"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\VCL\BGRACanvas\uBGRADrawCanvas.pas"/>
+        <Caret Line="3535" Column="29" TopLine="3494"/>
+      </Position>
+      <Position>
+        <Filename Value="C:\Users\Administrator\AppData\Local\lazarus\onlinepackagemanager\packages\BGRABitmap\bgrabitmap\bgracanvas2d.pas"/>
+        <Caret Line="277" Column="15" TopLine="249"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

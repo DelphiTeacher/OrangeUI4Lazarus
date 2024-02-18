@@ -10,15 +10,22 @@ uses
   athreads,
   {$ENDIF}
   Interfaces, // this includes the LCL widgetset
-  Types,
-  Controls,
-  uDrawCanvas, uSkinPicture, uDrawPicture, uBasePathData, Forms,
-  EasyServiceCommonMaterialDataMoudle_VCL_Lazarus,
-  MainForm, ButtonFrame, CheckBoxFrame, DashBoard_AnalyseFrame,
-  DashBoard_ProjectsFrame, DashBoard_Analyse_BarChart_MonthSummaryFrame,
+  Types, Controls, uDrawCanvas, uSkinPicture, uDrawPicture, uBasePathData,
+  Forms,
+
+  uSkinBufferBitmap,
+  uBGRABufferBitmap, uBGRADrawCanvas, uBGRASkinPictureEngine, uNativeDrawCanvas,
+  uNativeSkinPictureEngine,
+
+
+  EasyServiceCommonMaterialDataMoudle_VCL_Lazarus, uLCLSVGSupport,
+  ListItemStyle_Default, MainForm, ButtonFrame, CheckBoxFrame,
+  DashBoard_AnalyseFrame, DashBoard_ProjectsFrame,
+  DashBoard_Analyse_BarChart_MonthSummaryFrame,
   DashBoard_Projects_PieChart_ProjectStatusFrame,
   DashBoard_Analyse_ItemGrid_TwoCellTextFrame,
-  DashBoard_Projects_ItemGrid_TwoCellTextHasBackColorFrame, LoginForm;
+  DashBoard_Projects_ItemGrid_TwoCellTextHasBackColorFrame, LoginForm,
+  HomeFrame;
 
 {$R *.res}
 
@@ -30,6 +37,13 @@ begin
   //GlobalSkinPictureEngineClass:=TSkinPictureEngine;
   //GlobalSkinGIFPictureEngineClass:=TNativeSkinGIFPictureEngine;
   //GlobalDrawPathDataClass:=TNativeDrawPathData;
+
+  GlobalDrawCanvasClass:=TBGRADrawCanvas;
+  GlobalSkinPictureClass:=TSkinPicture;
+  GlobalSkinPictureEngineClass:=TBGRASkinPictureEngine;
+  GlobalSkinGIFPictureEngineClass:=TBGRASkinGIFPictureEngine;
+  GlobalDrawPathDataClass:=TBGRADrawPathData;
+  GlobalBufferBitmapClass:=TBGRABufferBitmap;
 
 
 

@@ -1,5 +1,5 @@
 ﻿//convert pas to utf8 by ¥
-unit DashBoard_Projects_PieChart_ProjectStatusFrame;
+unit DashBoard_Analyse_LineChart_MonthSummaryFrame;
 
 interface
 
@@ -14,7 +14,6 @@ uses
   ////公共素材模块
   //EasyServiceCommonMaterialDataMoudle_VCL_Lazarus,
 
-  ListItemStyle_IconTop_CaptionDetailBottom,
 
   uSkinVirtualChartType,
   uDrawPathParam,
@@ -23,14 +22,13 @@ uses
 
   uSkinWindowsControl, uSkinScrollControlType, uSkinCustomListType,
   uSkinVirtualGridType, uSkinItemGridType, uSkinPanelType, StdCtrls,
-  uSkinButtonType, uSkinVirtualListType, uSkinListViewType;
+  uSkinButtonType;
 
 type
-  TFramePieChart_ProjectStatus = class(TFrame)
+  TFrameLineChart_MonthSummary = class(TFrame)
     pnlClient: TSkinWinPanel;
     lblCaption: TLabel;
     SkinWinButton1: TSkinWinButton;
-    lvData: TSkinWinListView;
     procedure gridDataResize(Sender: TObject);
   private
     { Private declarations }
@@ -44,13 +42,13 @@ implementation
 
 {$R *.dfm}
 
-procedure TFramePieChart_ProjectStatus.gridDataResize(Sender: TObject);
+procedure TFrameLineChart_MonthSummary.gridDataResize(Sender: TObject);
 begin
   //如果表格列是按比例的,那么每次拖动尺寸,都要重新计算
   //Self.gridData.Prop.Columns.GetListLayoutsManager.DoItemSizeChange(nil);
 end;
 
-constructor TFramePieChart_ProjectStatus.Create(AOwner: TComponent);
+constructor TFrameLineChart_MonthSummary.Create(AOwner: TComponent);
 var
   ASeries:TVirtualChartSeries;
   ADataItem:TVirtualChartSeriesDataItem;
@@ -60,27 +58,20 @@ begin
   FSkinVirtualChart.Parent:=Self;
   FSkinVirtualChart.SetBounds(
                           10,
-                          Self.lblCaption.Top+lblCaption.Height+10,
+                          FSkinVirtualChart.Top+FSkinVirtualChart.Height+10,
                           Width-10-10,
-                          Height-(lblCaption.Top+lblCaption.Height+10)-lvData.Height-10
+                          Height-(FSkinVirtualChart.Top+FSkinVirtualChart.Height+10)-10
                           );
   FSkinVirtualChart.Anchors:=[akLeft,akTop,akRight,akBottom];
 //  FSkinVirtualChart.Align:=alClient;
 //  FSkinVirtualChart.AlignWithMargins:=True;
 
+  FSkinVirtualChart.SelfOwnMaterialToDefault.IsTransparent:=True;
 
-//  FSkinVirtualChart.SelfOwnMaterialToDefault.BarSizePercent:=0.4;
-//  FSkinVirtualChart.SelfOwnMaterialToDefault.BackColor.IsFill:=True;
-//  FSkinVirtualChart.SelfOwnMaterialToDefault.BarAxisLineParam.Color.Color:=clGray;
-//  FSkinVirtualChart.SelfOwnMaterialToDefault.DrawAxisCaptionParam.FontColor:=clGray;
-  FSkinVirtualChart.SelfOwnMaterialToDefault.SeriesLegendListViewVisible:=False;
-  FSkinVirtualChart.SelfOwnMaterialToDefault.PieInfoVisible:=False;
-  FSkinVirtualChart.SelfOwnMaterialToDefault.PieColorParam.PenWidth:=1;
-  FSkinVirtualChart.SelfOwnMaterialToDefault.PieColorParam.PenColor.Color:=clRed;
-  FSkinVirtualChart.SelfOwnMaterialToDefault.PieInnerRadiusPercent:=0.5;
-  FSkinVirtualChart.SelfOwnMaterialToDefault.FSeriesColorArray[0]:=$97CF0A;
-  FSkinVirtualChart.SelfOwnMaterialToDefault.FSeriesColorArray[1]:=$F57C72;
-  FSkinVirtualChart.SelfOwnMaterialToDefault.FSeriesColorArray[2]:=$7C5CFA;
+  FSkinVirtualChart.SelfOwnMaterialToDefault.BarSizePercent:=0.4;
+  FSkinVirtualChart.SelfOwnMaterialToDefault.BackColor.IsFill:=True;
+  FSkinVirtualChart.SelfOwnMaterialToDefault.BarAxisLineParam.Color.Color:=clGray;
+  FSkinVirtualChart.SelfOwnMaterialToDefault.DrawAxisCaptionParam.FontColor:=clGray;
 
 
 //  //显示X轴的分隔线
@@ -97,10 +88,19 @@ begin
 
 
 
-//  //X轴坐标
-//  FSkinVirtualChart.Properties.XAxisItems.Add.Caption:='已完成';
-//  FSkinVirtualChart.Properties.XAxisItems.Add.Caption:='进行中';
-//  FSkinVirtualChart.Properties.XAxisItems.Add.Caption:='延期';
+  //X轴坐标
+  FSkinVirtualChart.Properties.AxisItems.Add.Caption:='Jan';
+  FSkinVirtualChart.Properties.AxisItems.Add.Caption:='Feb';
+  FSkinVirtualChart.Properties.AxisItems.Add.Caption:='Mar';
+  FSkinVirtualChart.Properties.AxisItems.Add.Caption:='Apr';
+  FSkinVirtualChart.Properties.AxisItems.Add.Caption:='May';
+  FSkinVirtualChart.Properties.AxisItems.Add.Caption:='Jun';
+  FSkinVirtualChart.Properties.AxisItems.Add.Caption:='Jul';
+  FSkinVirtualChart.Properties.AxisItems.Add.Caption:='Aug';
+  FSkinVirtualChart.Properties.AxisItems.Add.Caption:='Sep';
+  FSkinVirtualChart.Properties.AxisItems.Add.Caption:='Oct';
+  FSkinVirtualChart.Properties.AxisItems.Add.Caption:='Nov';
+  FSkinVirtualChart.Properties.AxisItems.Add.Caption:='Dec';
 
 
 
@@ -117,30 +117,63 @@ begin
 
   //数据
   ASeries:=TVirtualChartSeries(FSkinVirtualChart.Properties.SeriesList.Add);
-  //饼图
-  ASeries.ChartType:=sctPie;
-  ASeries.Caption:='进度';
-
+  ASeries.Caption:='金额';
+  ASeries.ChartType:=sctLine;
 
   ASeries.DataItems.BeginUpdate;
 
-  //测试分块绘制
   ADataItem:=ASeries.DataItems.Add;
-  ADataItem.Caption:='已完成';
-  ADataItem.Value:=64;
+  ADataItem.Caption:='Jan';
+  ADataItem.Value:=300;
 
   ADataItem:=ASeries.DataItems.Add;
-  ADataItem.Caption:='进行中';
-  ADataItem.Value:=26;
-  //ADataItem.Visible:=False;
+  ADataItem.Caption:='Feb';
+  ADataItem.Value:=600;
 
   ADataItem:=ASeries.DataItems.Add;
-  ADataItem.Caption:='延期';
-  ADataItem.Value:=10;
-  //ADataItem.Visible:=False;
+  ADataItem.Caption:='Mar';
+  ADataItem.Value:=700;
 
+  ADataItem:=ASeries.DataItems.Add;
+  ADataItem.Caption:='Apr';
+  ADataItem.Value:=900;
+//  ADataItem.Color:=clGreen;
+
+  ADataItem:=ASeries.DataItems.Add;
+  ADataItem.Caption:='May';
+  ADataItem.Value:=1300;
+
+  ADataItem:=ASeries.DataItems.Add;
+  ADataItem.Caption:='Hun';
+  ADataItem.Value:=1600;
+
+  ADataItem:=ASeries.DataItems.Add;
+  ADataItem.Caption:='Jul';
+  ADataItem.Value:=1800;
+
+  ADataItem:=ASeries.DataItems.Add;
+  ADataItem.Caption:='Aug';
+  ADataItem.Value:=1400;
+
+  ADataItem:=ASeries.DataItems.Add;
+  ADataItem.Caption:='Sep';
+  ADataItem.Value:=800;
+
+  ADataItem:=ASeries.DataItems.Add;
+  ADataItem.Caption:='Oct';
+  ADataItem.Value:=700;
+
+  ADataItem:=ASeries.DataItems.Add;
+  ADataItem.Caption:='Nov';
+  ADataItem.Value:=1500;
+
+  ADataItem:=ASeries.DataItems.Add;
+  ADataItem.Caption:='Dev';
+  ADataItem.Value:=1100;
 
   ASeries.DataItems.EndUpdate;
+
+
 
 
 

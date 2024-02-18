@@ -61,12 +61,14 @@
         <IsPartOfProject Value="True"/>
       </Unit>
       <Unit>
-        <Filename Value="..\..\OrangeUIControl\Source\VCL\NativeCanvas\uNativeSkinPictureEngine.pas"/>
+        <Filename Value="..\..\OrangeUIListItemStyles_VCL\ListItemStyle_IconTop_CaptionDetailBottom.pas"/>
         <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
       </Unit>
       <Unit>
-        <Filename Value="..\..\OrangeUIControl\Source\VCL\NativeCanvas\uNativeDrawCanvas.pas"/>
+        <Filename Value="..\MainSample_VCL_Lazarus\DashBoard_Analyse_BarChart_MonthSummaryFrame.pas"/>
         <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
       </Unit>
     </Units>
   </ProjectOptions>
@@ -78,7 +80,7 @@
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
-      <OtherUnitFiles Value="..\..\OrangeUIControl\Source\VCL\BGRACanvas;..\..\OrangeUIControl\Source\VCL\NativeCanvas"/>
+      <OtherUnitFiles Value="..\..\OrangeUIControl\Source\VCL\BGRACanvas;..\..\OrangeUIListItemStyles_VCL;..\MainSample_VCL_Lazarus"/>
       <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <Linking>

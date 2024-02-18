@@ -1,0 +1,1484 @@
+object FrameHome: TFrameHome
+  Left = 0
+  Height = 558
+  Top = 0
+  Width = 616
+  ClientHeight = 558
+  ClientWidth = 616
+  TabOrder = 0
+  DesignLeft = 1445
+  DesignTop = 428
+  object SkinListView1: TSkinListView
+    Left = 16
+    Height = 100
+    Top = 16
+    Width = 584
+    ParentMouseEvent = False
+    DirectUIVisible = False
+    AlignWithMagins = False
+    ComponentTypeUseKind = ctukDefault
+    MaterialUseKind = mukSelfOwn
+    KeepSelfOwnMaterial = True
+    SelfOwnMaterial.BackColor.Color = clWhite
+    SelfOwnMaterial.BackColor.IsFill = True
+    SelfOwnMaterial.BackColor.FillColor.Alpha = 255
+    SelfOwnMaterial.BackColor.BorderColor.Alpha = 255
+    SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
+    SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
+    SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
+    SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.FillColor.Alpha = 255
+    SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.FillColorChangeType = cctNone
+    SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.BorderColor.Alpha = 255
+    SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
+    SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
+    SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
+    SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
+    SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
+    SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.BorderColor.Alpha = 255
+    SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
+    SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.FillColorChangeType = cctNone
+    SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
+    SelfOwnMaterial.IsTransparent = False
+    SelfOwnMaterial.PullDownRefreshPanelMaterial.BackColor.Color = clWhite
+    SelfOwnMaterial.PullDownRefreshPanelMaterial.BackColor.IsFill = True
+    SelfOwnMaterial.PullDownRefreshPanelMaterial.BackColor.FillColor.Alpha = 255
+    SelfOwnMaterial.PullDownRefreshPanelMaterial.BackColor.BorderColor.Alpha = 255
+    SelfOwnMaterial.PullDownRefreshPanelMaterial.BackColor.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
+    SelfOwnMaterial.PullDownRefreshPanelMaterial.BackColor.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
+    SelfOwnMaterial.PullDownRefreshPanelMaterial.BackColor.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
+    SelfOwnMaterial.PullDownRefreshPanelMaterial.BackColor.DrawEffectSetting.MouseOverEffect.FillColor.Alpha = 255
+    SelfOwnMaterial.PullDownRefreshPanelMaterial.BackColor.DrawEffectSetting.MouseOverEffect.FillColorChangeType = cctNone
+    SelfOwnMaterial.PullDownRefreshPanelMaterial.BackColor.DrawEffectSetting.MouseOverEffect.BorderColor.Alpha = 255
+    SelfOwnMaterial.PullDownRefreshPanelMaterial.BackColor.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
+    SelfOwnMaterial.PullDownRefreshPanelMaterial.BackColor.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
+    SelfOwnMaterial.PullDownRefreshPanelMaterial.BackColor.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
+    SelfOwnMaterial.PullDownRefreshPanelMaterial.BackColor.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
+    SelfOwnMaterial.PullDownRefreshPanelMaterial.BackColor.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
+    SelfOwnMaterial.PullDownRefreshPanelMaterial.BackColor.DrawEffectSetting.DisabledEffect.BorderColor.Alpha = 255
+    SelfOwnMaterial.PullDownRefreshPanelMaterial.BackColor.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
+    SelfOwnMaterial.PullDownRefreshPanelMaterial.BackColor.DrawEffectSetting.FocusedEffect.FillColorChangeType = cctNone
+    SelfOwnMaterial.PullDownRefreshPanelMaterial.BackColor.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
+    SelfOwnMaterial.PullDownRefreshPanelMaterial.IsTransparent = False
+    SelfOwnMaterial.PullDownRefreshPanelMaterial.IndicatorColor = clBlack
+    SelfOwnMaterial.PullDownRefreshPanelMaterial.LoadingPicture.IsClipRound = False
+    SelfOwnMaterial.PullDownRefreshPanelMaterial.LoadingPicture.FixedColor.Alpha = 255
+    SelfOwnMaterial.PullDownRefreshPanelMaterial.DrawLoadingCaptionParam.FontName = 'default'
+    SelfOwnMaterial.PullDownRefreshPanelMaterial.DrawLoadingCaptionParam.FontSize = 12
+    SelfOwnMaterial.PullDownRefreshPanelMaterial.DrawLoadingCaptionParam.DrawFont.Height = -16
+    SelfOwnMaterial.PullDownRefreshPanelMaterial.DrawLoadingCaptionParam.DrawFont.FontColor.Alpha = 255
+    SelfOwnMaterial.PullDownRefreshPanelMaterial.DrawLoadingCaptionParam.FontTrimming = fttNone
+    SelfOwnMaterial.PullDownRefreshPanelMaterial.DrawLoadingCaptionParam.FontHorzAlign = fhaLeft
+    SelfOwnMaterial.PullDownRefreshPanelMaterial.DrawLoadingCaptionParam.FontVertAlign = fvaTop
+    SelfOwnMaterial.PullDownRefreshPanelMaterial.DrawLoadingCaptionParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.PullDownRefreshPanelMaterial.DrawLoadingCaptionParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+    SelfOwnMaterial.PullDownRefreshPanelMaterial.DrawLoadingCaptionParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.PullDownRefreshPanelMaterial.DrawLoadingCaptionParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+    SelfOwnMaterial.PullDownRefreshPanelMaterial.DrawLoadingCaptionParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.PullDownRefreshPanelMaterial.DrawLoadingCaptionParam.DrawEffectSetting.PushedEffect.FontSize = 12
+    SelfOwnMaterial.PullDownRefreshPanelMaterial.DrawLoadingCaptionParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.PullDownRefreshPanelMaterial.DrawLoadingCaptionParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+    SelfOwnMaterial.PullDownRefreshPanelMaterial.DrawLoadingCaptionParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.PullDownRefreshPanelMaterial.DrawLoadingCaptionParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+    SelfOwnMaterial.PullDownRefreshPanelMaterial.EnableAutoCenterPosition = False
+    SelfOwnMaterial.PullDownRefreshPanelMaterial.EnableLoadingImageBiggerEffect = False
+    SelfOwnMaterial.PullDownRefreshPanelMaterial.EnableLoadingImageRotateEffect = True
+    SelfOwnMaterial.PullDownRefreshPanelMaterial.LoadingCaption = '正在刷新...'
+    SelfOwnMaterial.PullDownRefreshPanelMaterial.DecidedLoadCaption = '松开刷新'
+    SelfOwnMaterial.PullDownRefreshPanelMaterial.UnDecidedLoadCaption = '下拉刷新'
+    SelfOwnMaterial.PullUpLoadMorePanelMaterial.BackColor.Color = clWhite
+    SelfOwnMaterial.PullUpLoadMorePanelMaterial.BackColor.IsFill = True
+    SelfOwnMaterial.PullUpLoadMorePanelMaterial.BackColor.FillColor.Alpha = 255
+    SelfOwnMaterial.PullUpLoadMorePanelMaterial.BackColor.BorderColor.Alpha = 255
+    SelfOwnMaterial.PullUpLoadMorePanelMaterial.BackColor.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
+    SelfOwnMaterial.PullUpLoadMorePanelMaterial.BackColor.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
+    SelfOwnMaterial.PullUpLoadMorePanelMaterial.BackColor.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
+    SelfOwnMaterial.PullUpLoadMorePanelMaterial.BackColor.DrawEffectSetting.MouseOverEffect.FillColor.Alpha = 255
+    SelfOwnMaterial.PullUpLoadMorePanelMaterial.BackColor.DrawEffectSetting.MouseOverEffect.FillColorChangeType = cctNone
+    SelfOwnMaterial.PullUpLoadMorePanelMaterial.BackColor.DrawEffectSetting.MouseOverEffect.BorderColor.Alpha = 255
+    SelfOwnMaterial.PullUpLoadMorePanelMaterial.BackColor.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
+    SelfOwnMaterial.PullUpLoadMorePanelMaterial.BackColor.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
+    SelfOwnMaterial.PullUpLoadMorePanelMaterial.BackColor.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
+    SelfOwnMaterial.PullUpLoadMorePanelMaterial.BackColor.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
+    SelfOwnMaterial.PullUpLoadMorePanelMaterial.BackColor.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
+    SelfOwnMaterial.PullUpLoadMorePanelMaterial.BackColor.DrawEffectSetting.DisabledEffect.BorderColor.Alpha = 255
+    SelfOwnMaterial.PullUpLoadMorePanelMaterial.BackColor.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
+    SelfOwnMaterial.PullUpLoadMorePanelMaterial.BackColor.DrawEffectSetting.FocusedEffect.FillColorChangeType = cctNone
+    SelfOwnMaterial.PullUpLoadMorePanelMaterial.BackColor.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
+    SelfOwnMaterial.PullUpLoadMorePanelMaterial.IsTransparent = False
+    SelfOwnMaterial.PullUpLoadMorePanelMaterial.IndicatorColor = clBlack
+    SelfOwnMaterial.PullUpLoadMorePanelMaterial.LoadingPicture.IsClipRound = False
+    SelfOwnMaterial.PullUpLoadMorePanelMaterial.LoadingPicture.FixedColor.Alpha = 255
+    SelfOwnMaterial.PullUpLoadMorePanelMaterial.DrawLoadingCaptionParam.FontName = 'default'
+    SelfOwnMaterial.PullUpLoadMorePanelMaterial.DrawLoadingCaptionParam.FontSize = 12
+    SelfOwnMaterial.PullUpLoadMorePanelMaterial.DrawLoadingCaptionParam.DrawFont.Height = -16
+    SelfOwnMaterial.PullUpLoadMorePanelMaterial.DrawLoadingCaptionParam.DrawFont.FontColor.Alpha = 255
+    SelfOwnMaterial.PullUpLoadMorePanelMaterial.DrawLoadingCaptionParam.FontTrimming = fttNone
+    SelfOwnMaterial.PullUpLoadMorePanelMaterial.DrawLoadingCaptionParam.FontHorzAlign = fhaLeft
+    SelfOwnMaterial.PullUpLoadMorePanelMaterial.DrawLoadingCaptionParam.FontVertAlign = fvaTop
+    SelfOwnMaterial.PullUpLoadMorePanelMaterial.DrawLoadingCaptionParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.PullUpLoadMorePanelMaterial.DrawLoadingCaptionParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+    SelfOwnMaterial.PullUpLoadMorePanelMaterial.DrawLoadingCaptionParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.PullUpLoadMorePanelMaterial.DrawLoadingCaptionParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+    SelfOwnMaterial.PullUpLoadMorePanelMaterial.DrawLoadingCaptionParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.PullUpLoadMorePanelMaterial.DrawLoadingCaptionParam.DrawEffectSetting.PushedEffect.FontSize = 12
+    SelfOwnMaterial.PullUpLoadMorePanelMaterial.DrawLoadingCaptionParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.PullUpLoadMorePanelMaterial.DrawLoadingCaptionParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+    SelfOwnMaterial.PullUpLoadMorePanelMaterial.DrawLoadingCaptionParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.PullUpLoadMorePanelMaterial.DrawLoadingCaptionParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+    SelfOwnMaterial.PullUpLoadMorePanelMaterial.EnableAutoCenterPosition = False
+    SelfOwnMaterial.PullUpLoadMorePanelMaterial.EnableLoadingImageBiggerEffect = False
+    SelfOwnMaterial.PullUpLoadMorePanelMaterial.EnableLoadingImageRotateEffect = True
+    SelfOwnMaterial.PullUpLoadMorePanelMaterial.LoadingCaption = '正在加载...'
+    SelfOwnMaterial.PullUpLoadMorePanelMaterial.DecidedLoadCaption = '松开加载更多'
+    SelfOwnMaterial.PullUpLoadMorePanelMaterial.UnDecidedLoadCaption = '上拉加载更多'
+    SelfOwnMaterial.DrawEmptyContentCaptionParam.FontName = 'default'
+    SelfOwnMaterial.DrawEmptyContentCaptionParam.FontSize = 12
+    SelfOwnMaterial.DrawEmptyContentCaptionParam.DrawFont.Height = -16
+    SelfOwnMaterial.DrawEmptyContentCaptionParam.DrawFont.FontColor.Alpha = 255
+    SelfOwnMaterial.DrawEmptyContentCaptionParam.FontTrimming = fttNone
+    SelfOwnMaterial.DrawEmptyContentCaptionParam.FontHorzAlign = fhaLeft
+    SelfOwnMaterial.DrawEmptyContentCaptionParam.FontVertAlign = fvaTop
+    SelfOwnMaterial.DrawEmptyContentCaptionParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DrawEmptyContentCaptionParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+    SelfOwnMaterial.DrawEmptyContentCaptionParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DrawEmptyContentCaptionParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+    SelfOwnMaterial.DrawEmptyContentCaptionParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DrawEmptyContentCaptionParam.DrawEffectSetting.PushedEffect.FontSize = 12
+    SelfOwnMaterial.DrawEmptyContentCaptionParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DrawEmptyContentCaptionParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+    SelfOwnMaterial.DrawEmptyContentCaptionParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DrawEmptyContentCaptionParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+    SelfOwnMaterial.DrawEmptyContentDescriptionParam.FontName = 'default'
+    SelfOwnMaterial.DrawEmptyContentDescriptionParam.FontSize = 12
+    SelfOwnMaterial.DrawEmptyContentDescriptionParam.DrawFont.Height = -16
+    SelfOwnMaterial.DrawEmptyContentDescriptionParam.DrawFont.FontColor.Alpha = 255
+    SelfOwnMaterial.DrawEmptyContentDescriptionParam.FontTrimming = fttNone
+    SelfOwnMaterial.DrawEmptyContentDescriptionParam.FontHorzAlign = fhaLeft
+    SelfOwnMaterial.DrawEmptyContentDescriptionParam.FontVertAlign = fvaTop
+    SelfOwnMaterial.DrawEmptyContentDescriptionParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DrawEmptyContentDescriptionParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+    SelfOwnMaterial.DrawEmptyContentDescriptionParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DrawEmptyContentDescriptionParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+    SelfOwnMaterial.DrawEmptyContentDescriptionParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DrawEmptyContentDescriptionParam.DrawEffectSetting.PushedEffect.FontSize = 12
+    SelfOwnMaterial.DrawEmptyContentDescriptionParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DrawEmptyContentDescriptionParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+    SelfOwnMaterial.DrawEmptyContentDescriptionParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DrawEmptyContentDescriptionParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+    SelfOwnMaterial.DrawEmptyContentPictureParam.FixedColor.Alpha = 255
+    SelfOwnMaterial.DrawEmptyContentPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.DrawEmptyContentPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.DrawEmptyContentPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.DrawEmptyContentPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.DrawEmptyContentPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.DrawSpaceParam.Color = clWhite
+    SelfOwnMaterial.DrawSpaceParam.IsFill = False
+    SelfOwnMaterial.DrawSpaceParam.FillColor.Alpha = 255
+    SelfOwnMaterial.DrawSpaceParam.BorderColor.Alpha = 255
+    SelfOwnMaterial.DrawSpaceParam.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
+    SelfOwnMaterial.DrawSpaceParam.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
+    SelfOwnMaterial.DrawSpaceParam.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
+    SelfOwnMaterial.DrawSpaceParam.DrawEffectSetting.MouseOverEffect.FillColor.Alpha = 255
+    SelfOwnMaterial.DrawSpaceParam.DrawEffectSetting.MouseOverEffect.FillColorChangeType = cctNone
+    SelfOwnMaterial.DrawSpaceParam.DrawEffectSetting.MouseOverEffect.BorderColor.Alpha = 255
+    SelfOwnMaterial.DrawSpaceParam.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
+    SelfOwnMaterial.DrawSpaceParam.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
+    SelfOwnMaterial.DrawSpaceParam.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
+    SelfOwnMaterial.DrawSpaceParam.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
+    SelfOwnMaterial.DrawSpaceParam.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
+    SelfOwnMaterial.DrawSpaceParam.DrawEffectSetting.DisabledEffect.BorderColor.Alpha = 255
+    SelfOwnMaterial.DrawSpaceParam.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
+    SelfOwnMaterial.DrawSpaceParam.DrawEffectSetting.FocusedEffect.FillColorChangeType = cctNone
+    SelfOwnMaterial.DrawSpaceParam.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
+    SelfOwnMaterial.IsSimpleDrawGroupRoundRect = False
+    SelfOwnMaterial.IsSimpleDrawGroupBeginDevide = True
+    SelfOwnMaterial.IsSimpleDrawGroupEndDevide = True
+    SelfOwnMaterial.DrawGroupBeginDevideParam.Color = 15592941
+    SelfOwnMaterial.DrawGroupBeginDevideParam.IsFill = False
+    SelfOwnMaterial.DrawGroupBeginDevideParam.FillColor.Alpha = 255
+    SelfOwnMaterial.DrawGroupBeginDevideParam.BorderColor.Alpha = 255
+    SelfOwnMaterial.DrawGroupBeginDevideParam.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
+    SelfOwnMaterial.DrawGroupBeginDevideParam.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
+    SelfOwnMaterial.DrawGroupBeginDevideParam.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
+    SelfOwnMaterial.DrawGroupBeginDevideParam.DrawEffectSetting.MouseOverEffect.FillColor.Alpha = 255
+    SelfOwnMaterial.DrawGroupBeginDevideParam.DrawEffectSetting.MouseOverEffect.FillColorChangeType = cctNone
+    SelfOwnMaterial.DrawGroupBeginDevideParam.DrawEffectSetting.MouseOverEffect.BorderColor.Alpha = 255
+    SelfOwnMaterial.DrawGroupBeginDevideParam.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
+    SelfOwnMaterial.DrawGroupBeginDevideParam.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
+    SelfOwnMaterial.DrawGroupBeginDevideParam.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
+    SelfOwnMaterial.DrawGroupBeginDevideParam.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
+    SelfOwnMaterial.DrawGroupBeginDevideParam.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
+    SelfOwnMaterial.DrawGroupBeginDevideParam.DrawEffectSetting.DisabledEffect.BorderColor.Alpha = 255
+    SelfOwnMaterial.DrawGroupBeginDevideParam.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
+    SelfOwnMaterial.DrawGroupBeginDevideParam.DrawEffectSetting.FocusedEffect.FillColorChangeType = cctNone
+    SelfOwnMaterial.DrawGroupBeginDevideParam.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
+    SelfOwnMaterial.DrawGroupBackColorParam.Color = 15592941
+    SelfOwnMaterial.DrawGroupBackColorParam.IsFill = False
+    SelfOwnMaterial.DrawGroupBackColorParam.FillColor.Alpha = 255
+    SelfOwnMaterial.DrawGroupBackColorParam.BorderColor.Alpha = 255
+    SelfOwnMaterial.DrawGroupBackColorParam.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
+    SelfOwnMaterial.DrawGroupBackColorParam.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
+    SelfOwnMaterial.DrawGroupBackColorParam.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
+    SelfOwnMaterial.DrawGroupBackColorParam.DrawEffectSetting.MouseOverEffect.FillColor.Alpha = 255
+    SelfOwnMaterial.DrawGroupBackColorParam.DrawEffectSetting.MouseOverEffect.FillColorChangeType = cctNone
+    SelfOwnMaterial.DrawGroupBackColorParam.DrawEffectSetting.MouseOverEffect.BorderColor.Alpha = 255
+    SelfOwnMaterial.DrawGroupBackColorParam.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
+    SelfOwnMaterial.DrawGroupBackColorParam.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
+    SelfOwnMaterial.DrawGroupBackColorParam.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
+    SelfOwnMaterial.DrawGroupBackColorParam.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
+    SelfOwnMaterial.DrawGroupBackColorParam.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
+    SelfOwnMaterial.DrawGroupBackColorParam.DrawEffectSetting.DisabledEffect.BorderColor.Alpha = 255
+    SelfOwnMaterial.DrawGroupBackColorParam.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
+    SelfOwnMaterial.DrawGroupBackColorParam.DrawEffectSetting.FocusedEffect.FillColorChangeType = cctNone
+    SelfOwnMaterial.DrawGroupBackColorParam.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
+    SelfOwnMaterial.GroupBackPicture.IsClipRound = False
+    SelfOwnMaterial.GroupBackPicture.FixedColor.Alpha = 255
+    SelfOwnMaterial.DrawGroupBackPictureParam.FixedColor.Alpha = 255
+    SelfOwnMaterial.DrawGroupBackPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.DrawGroupBackPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.DrawGroupBackPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.DrawGroupBackPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.DrawGroupBackPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.DrawGroupEndDevideParam.Color = 15592941
+    SelfOwnMaterial.DrawGroupEndDevideParam.IsFill = False
+    SelfOwnMaterial.DrawGroupEndDevideParam.FillColor.Alpha = 255
+    SelfOwnMaterial.DrawGroupEndDevideParam.BorderColor.Alpha = 255
+    SelfOwnMaterial.DrawGroupEndDevideParam.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
+    SelfOwnMaterial.DrawGroupEndDevideParam.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
+    SelfOwnMaterial.DrawGroupEndDevideParam.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
+    SelfOwnMaterial.DrawGroupEndDevideParam.DrawEffectSetting.MouseOverEffect.FillColor.Alpha = 255
+    SelfOwnMaterial.DrawGroupEndDevideParam.DrawEffectSetting.MouseOverEffect.FillColorChangeType = cctNone
+    SelfOwnMaterial.DrawGroupEndDevideParam.DrawEffectSetting.MouseOverEffect.BorderColor.Alpha = 255
+    SelfOwnMaterial.DrawGroupEndDevideParam.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
+    SelfOwnMaterial.DrawGroupEndDevideParam.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
+    SelfOwnMaterial.DrawGroupEndDevideParam.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
+    SelfOwnMaterial.DrawGroupEndDevideParam.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
+    SelfOwnMaterial.DrawGroupEndDevideParam.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
+    SelfOwnMaterial.DrawGroupEndDevideParam.DrawEffectSetting.DisabledEffect.BorderColor.Alpha = 255
+    SelfOwnMaterial.DrawGroupEndDevideParam.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
+    SelfOwnMaterial.DrawGroupEndDevideParam.DrawEffectSetting.FocusedEffect.FillColorChangeType = cctNone
+    SelfOwnMaterial.DrawGroupEndDevideParam.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
+    SelfOwnMaterial.ItemBackNormalPicture.IsClipRound = False
+    SelfOwnMaterial.ItemBackNormalPicture.FixedColor.Alpha = 255
+    SelfOwnMaterial.ItemBackHoverPicture.IsClipRound = False
+    SelfOwnMaterial.ItemBackHoverPicture.FixedColor.Alpha = 255
+    SelfOwnMaterial.ItemBackDownPicture.IsClipRound = False
+    SelfOwnMaterial.ItemBackDownPicture.FixedColor.Alpha = 255
+    SelfOwnMaterial.ItemBackPushedPicture.IsClipRound = False
+    SelfOwnMaterial.ItemBackPushedPicture.FixedColor.Alpha = 255
+    SelfOwnMaterial.DrawItemBackColorParam.Color = clWhite
+    SelfOwnMaterial.DrawItemBackColorParam.IsFill = False
+    SelfOwnMaterial.DrawItemBackColorParam.FillColor.Alpha = 255
+    SelfOwnMaterial.DrawItemBackColorParam.BorderColor.Alpha = 255
+    SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
+    SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
+    SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
+    SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseOverEffect.FillColor.Alpha = 255
+    SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseOverEffect.FillColorChangeType = cctNone
+    SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseOverEffect.BorderColor.Alpha = 255
+    SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
+    SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
+    SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
+    SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
+    SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
+    SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.DisabledEffect.BorderColor.Alpha = 255
+    SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
+    SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.FocusedEffect.FillColorChangeType = cctNone
+    SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
+    SelfOwnMaterial.DrawItemBackGndPictureParam.FixedColor.Alpha = 255
+    SelfOwnMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.ItemAccessoryPicture.IsClipRound = False
+    SelfOwnMaterial.ItemAccessoryPicture.FixedColor.Alpha = 255
+    SelfOwnMaterial.DrawItemAccessoryPictureParam.FixedColor.Alpha = 255
+    SelfOwnMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.IsDrawCenterItemRect = False
+    SelfOwnMaterial.DrawCenterItemRectParam.Color = 15592941
+    SelfOwnMaterial.DrawCenterItemRectParam.IsFill = False
+    SelfOwnMaterial.DrawCenterItemRectParam.FillColor.Alpha = 255
+    SelfOwnMaterial.DrawCenterItemRectParam.BorderColor.Alpha = 255
+    SelfOwnMaterial.DrawCenterItemRectParam.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
+    SelfOwnMaterial.DrawCenterItemRectParam.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
+    SelfOwnMaterial.DrawCenterItemRectParam.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
+    SelfOwnMaterial.DrawCenterItemRectParam.DrawEffectSetting.MouseOverEffect.FillColor.Alpha = 255
+    SelfOwnMaterial.DrawCenterItemRectParam.DrawEffectSetting.MouseOverEffect.FillColorChangeType = cctNone
+    SelfOwnMaterial.DrawCenterItemRectParam.DrawEffectSetting.MouseOverEffect.BorderColor.Alpha = 255
+    SelfOwnMaterial.DrawCenterItemRectParam.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
+    SelfOwnMaterial.DrawCenterItemRectParam.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
+    SelfOwnMaterial.DrawCenterItemRectParam.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
+    SelfOwnMaterial.DrawCenterItemRectParam.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
+    SelfOwnMaterial.DrawCenterItemRectParam.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
+    SelfOwnMaterial.DrawCenterItemRectParam.DrawEffectSetting.DisabledEffect.BorderColor.Alpha = 255
+    SelfOwnMaterial.DrawCenterItemRectParam.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
+    SelfOwnMaterial.DrawCenterItemRectParam.DrawEffectSetting.FocusedEffect.FillColorChangeType = cctNone
+    SelfOwnMaterial.DrawCenterItemRectParam.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
+    SelfOwnMaterial.IsSimpleDrawItemDevide = True
+    SelfOwnMaterial.DrawItemDevideParam.Color = 15592941
+    SelfOwnMaterial.DrawItemDevideParam.IsFill = False
+    SelfOwnMaterial.DrawItemDevideParam.FillColor.Alpha = 255
+    SelfOwnMaterial.DrawItemDevideParam.BorderColor.Alpha = 255
+    SelfOwnMaterial.DrawItemDevideParam.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
+    SelfOwnMaterial.DrawItemDevideParam.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
+    SelfOwnMaterial.DrawItemDevideParam.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
+    SelfOwnMaterial.DrawItemDevideParam.DrawEffectSetting.MouseOverEffect.FillColor.Alpha = 255
+    SelfOwnMaterial.DrawItemDevideParam.DrawEffectSetting.MouseOverEffect.FillColorChangeType = cctNone
+    SelfOwnMaterial.DrawItemDevideParam.DrawEffectSetting.MouseOverEffect.BorderColor.Alpha = 255
+    SelfOwnMaterial.DrawItemDevideParam.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
+    SelfOwnMaterial.DrawItemDevideParam.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
+    SelfOwnMaterial.DrawItemDevideParam.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
+    SelfOwnMaterial.DrawItemDevideParam.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
+    SelfOwnMaterial.DrawItemDevideParam.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
+    SelfOwnMaterial.DrawItemDevideParam.DrawEffectSetting.DisabledEffect.BorderColor.Alpha = 255
+    SelfOwnMaterial.DrawItemDevideParam.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
+    SelfOwnMaterial.DrawItemDevideParam.DrawEffectSetting.FocusedEffect.FillColorChangeType = cctNone
+    SelfOwnMaterial.DrawItemDevideParam.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
+    SelfOwnMaterial.DrawItemCaptionParam.FontName = 'default'
+    SelfOwnMaterial.DrawItemCaptionParam.FontSize = 12
+    SelfOwnMaterial.DrawItemCaptionParam.DrawFont.Height = -16
+    SelfOwnMaterial.DrawItemCaptionParam.DrawFont.FontColor.Alpha = 255
+    SelfOwnMaterial.DrawItemCaptionParam.FontTrimming = fttNone
+    SelfOwnMaterial.DrawItemCaptionParam.FontHorzAlign = fhaLeft
+    SelfOwnMaterial.DrawItemCaptionParam.FontVertAlign = fvaTop
+    SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+    SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+    SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.PushedEffect.FontSize = 12
+    SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+    SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+    SelfOwnMaterial.DrawItemIconParam.FixedColor.Alpha = 255
+    SelfOwnMaterial.DrawItemIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.DrawItemIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.DrawItemIconParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.DrawItemIconParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.DrawItemIconParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.DrawItemPicParam.FixedColor.Alpha = 255
+    SelfOwnMaterial.DrawItemPicParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.DrawItemPicParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.DrawItemPicParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.DrawItemPicParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.DrawItemPicParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.DrawItemDetailParam.FontName = 'default'
+    SelfOwnMaterial.DrawItemDetailParam.FontSize = 12
+    SelfOwnMaterial.DrawItemDetailParam.DrawFont.Height = -16
+    SelfOwnMaterial.DrawItemDetailParam.DrawFont.FontColor.Alpha = 255
+    SelfOwnMaterial.DrawItemDetailParam.FontTrimming = fttNone
+    SelfOwnMaterial.DrawItemDetailParam.FontHorzAlign = fhaLeft
+    SelfOwnMaterial.DrawItemDetailParam.FontVertAlign = fvaTop
+    SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+    SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+    SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.PushedEffect.FontSize = 12
+    SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+    SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+    SelfOwnMaterial.DrawItemDetail1Param.FontName = 'default'
+    SelfOwnMaterial.DrawItemDetail1Param.FontSize = 12
+    SelfOwnMaterial.DrawItemDetail1Param.DrawFont.Height = -16
+    SelfOwnMaterial.DrawItemDetail1Param.DrawFont.FontColor.Alpha = 255
+    SelfOwnMaterial.DrawItemDetail1Param.FontTrimming = fttNone
+    SelfOwnMaterial.DrawItemDetail1Param.FontHorzAlign = fhaLeft
+    SelfOwnMaterial.DrawItemDetail1Param.FontVertAlign = fvaTop
+    SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+    SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+    SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.PushedEffect.FontSize = 12
+    SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+    SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+    SelfOwnMaterial.DrawItemDetail2Param.FontName = 'default'
+    SelfOwnMaterial.DrawItemDetail2Param.FontSize = 12
+    SelfOwnMaterial.DrawItemDetail2Param.DrawFont.Height = -16
+    SelfOwnMaterial.DrawItemDetail2Param.DrawFont.FontColor.Alpha = 255
+    SelfOwnMaterial.DrawItemDetail2Param.FontTrimming = fttNone
+    SelfOwnMaterial.DrawItemDetail2Param.FontHorzAlign = fhaLeft
+    SelfOwnMaterial.DrawItemDetail2Param.FontVertAlign = fvaTop
+    SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+    SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+    SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.PushedEffect.FontSize = 12
+    SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+    SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+    SelfOwnMaterial.DrawItemDetail3Param.FontName = 'default'
+    SelfOwnMaterial.DrawItemDetail3Param.FontSize = 12
+    SelfOwnMaterial.DrawItemDetail3Param.DrawFont.Height = -16
+    SelfOwnMaterial.DrawItemDetail3Param.DrawFont.FontColor.Alpha = 255
+    SelfOwnMaterial.DrawItemDetail3Param.FontTrimming = fttNone
+    SelfOwnMaterial.DrawItemDetail3Param.FontHorzAlign = fhaLeft
+    SelfOwnMaterial.DrawItemDetail3Param.FontVertAlign = fvaTop
+    SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+    SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+    SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.PushedEffect.FontSize = 12
+    SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+    SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+    SelfOwnMaterial.DrawItemDetail4Param.FontName = 'default'
+    SelfOwnMaterial.DrawItemDetail4Param.FontSize = 12
+    SelfOwnMaterial.DrawItemDetail4Param.DrawFont.Height = -16
+    SelfOwnMaterial.DrawItemDetail4Param.DrawFont.FontColor.Alpha = 255
+    SelfOwnMaterial.DrawItemDetail4Param.FontTrimming = fttNone
+    SelfOwnMaterial.DrawItemDetail4Param.FontHorzAlign = fhaLeft
+    SelfOwnMaterial.DrawItemDetail4Param.FontVertAlign = fvaTop
+    SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+    SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+    SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.PushedEffect.FontSize = 12
+    SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+    SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+    SelfOwnMaterial.DrawItemDetail5Param.FontName = 'default'
+    SelfOwnMaterial.DrawItemDetail5Param.FontSize = 12
+    SelfOwnMaterial.DrawItemDetail5Param.DrawFont.Height = -16
+    SelfOwnMaterial.DrawItemDetail5Param.DrawFont.FontColor.Alpha = 255
+    SelfOwnMaterial.DrawItemDetail5Param.FontTrimming = fttNone
+    SelfOwnMaterial.DrawItemDetail5Param.FontHorzAlign = fhaLeft
+    SelfOwnMaterial.DrawItemDetail5Param.FontVertAlign = fvaTop
+    SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+    SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+    SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.PushedEffect.FontSize = 12
+    SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+    SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+    SelfOwnMaterial.DrawItemDetail6Param.FontName = 'default'
+    SelfOwnMaterial.DrawItemDetail6Param.FontSize = 12
+    SelfOwnMaterial.DrawItemDetail6Param.DrawFont.Height = -16
+    SelfOwnMaterial.DrawItemDetail6Param.DrawFont.FontColor.Alpha = 255
+    SelfOwnMaterial.DrawItemDetail6Param.FontTrimming = fttNone
+    SelfOwnMaterial.DrawItemDetail6Param.FontHorzAlign = fhaLeft
+    SelfOwnMaterial.DrawItemDetail6Param.FontVertAlign = fvaTop
+    SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+    SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+    SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.PushedEffect.FontSize = 12
+    SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+    SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+    SelfOwnMaterial.DefaultTypeItemMaterial.ItemAccessoryPicture.IsClipRound = False
+    SelfOwnMaterial.DefaultTypeItemMaterial.ItemAccessoryPicture.FixedColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemAccessoryPictureParam.FixedColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.ItemBackNormalPicture.IsClipRound = False
+    SelfOwnMaterial.DefaultTypeItemMaterial.ItemBackNormalPicture.FixedColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.ItemBackHoverPicture.IsClipRound = False
+    SelfOwnMaterial.DefaultTypeItemMaterial.ItemBackHoverPicture.FixedColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.ItemBackDownPicture.IsClipRound = False
+    SelfOwnMaterial.DefaultTypeItemMaterial.ItemBackDownPicture.FixedColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.ItemBackPushedPicture.IsClipRound = False
+    SelfOwnMaterial.DefaultTypeItemMaterial.ItemBackPushedPicture.FixedColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemBackColorParam.Color = clWhite
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemBackColorParam.IsFill = False
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemBackColorParam.FillColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemBackColorParam.BorderColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseOverEffect.FillColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseOverEffect.FillColorChangeType = cctNone
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseOverEffect.BorderColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.DisabledEffect.BorderColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.FocusedEffect.FillColorChangeType = cctNone
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemBackGndPictureParam.FixedColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemCaptionParam.FontName = 'default'
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemCaptionParam.FontSize = 12
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemCaptionParam.DrawFont.Height = -16
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemCaptionParam.DrawFont.FontColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemCaptionParam.FontTrimming = fttNone
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemCaptionParam.FontHorzAlign = fhaLeft
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemCaptionParam.FontVertAlign = fvaTop
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemCaptionParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemCaptionParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemCaptionParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemCaptionParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemCaptionParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemCaptionParam.DrawEffectSetting.PushedEffect.FontSize = 12
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemCaptionParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemCaptionParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemCaptionParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemCaptionParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemIconParam.FixedColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemIconParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemIconParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemIconParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemPicParam.FixedColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemPicParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemPicParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemPicParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemPicParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemPicParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetailParam.FontName = 'default'
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetailParam.FontSize = 12
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetailParam.DrawFont.Height = -16
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetailParam.DrawFont.FontColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetailParam.FontTrimming = fttNone
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetailParam.FontHorzAlign = fhaLeft
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetailParam.FontVertAlign = fvaTop
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetailParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetailParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetailParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetailParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetailParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetailParam.DrawEffectSetting.PushedEffect.FontSize = 12
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetailParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetailParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetailParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetailParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail1Param.FontName = 'default'
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail1Param.FontSize = 12
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail1Param.DrawFont.Height = -16
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail1Param.DrawFont.FontColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail1Param.FontTrimming = fttNone
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail1Param.FontHorzAlign = fhaLeft
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail1Param.FontVertAlign = fvaTop
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail1Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail1Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail1Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail1Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail1Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail1Param.DrawEffectSetting.PushedEffect.FontSize = 12
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail1Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail1Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail1Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail1Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail2Param.FontName = 'default'
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail2Param.FontSize = 12
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail2Param.DrawFont.Height = -16
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail2Param.DrawFont.FontColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail2Param.FontTrimming = fttNone
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail2Param.FontHorzAlign = fhaLeft
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail2Param.FontVertAlign = fvaTop
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail2Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail2Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail2Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail2Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail2Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail2Param.DrawEffectSetting.PushedEffect.FontSize = 12
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail2Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail2Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail2Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail2Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail3Param.FontName = 'default'
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail3Param.FontSize = 12
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail3Param.DrawFont.Height = -16
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail3Param.DrawFont.FontColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail3Param.FontTrimming = fttNone
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail3Param.FontHorzAlign = fhaLeft
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail3Param.FontVertAlign = fvaTop
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail3Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail3Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail3Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail3Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail3Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail3Param.DrawEffectSetting.PushedEffect.FontSize = 12
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail3Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail3Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail3Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail3Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail4Param.FontName = 'default'
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail4Param.FontSize = 12
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail4Param.DrawFont.Height = -16
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail4Param.DrawFont.FontColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail4Param.FontTrimming = fttNone
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail4Param.FontHorzAlign = fhaLeft
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail4Param.FontVertAlign = fvaTop
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail4Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail4Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail4Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail4Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail4Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail4Param.DrawEffectSetting.PushedEffect.FontSize = 12
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail4Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail4Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail4Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail4Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail5Param.FontName = 'default'
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail5Param.FontSize = 12
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail5Param.DrawFont.Height = -16
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail5Param.DrawFont.FontColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail5Param.FontTrimming = fttNone
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail5Param.FontHorzAlign = fhaLeft
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail5Param.FontVertAlign = fvaTop
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail5Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail5Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail5Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail5Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail5Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail5Param.DrawEffectSetting.PushedEffect.FontSize = 12
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail5Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail5Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail5Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail5Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail6Param.FontName = 'default'
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail6Param.FontSize = 12
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail6Param.DrawFont.Height = -16
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail6Param.DrawFont.FontColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail6Param.FontTrimming = fttNone
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail6Param.FontHorzAlign = fhaLeft
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail6Param.FontVertAlign = fvaTop
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail6Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail6Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail6Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail6Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail6Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail6Param.DrawEffectSetting.PushedEffect.FontSize = 12
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail6Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail6Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail6Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail6Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+    SelfOwnMaterial.Item1TypeItemMaterial.ItemAccessoryPicture.IsClipRound = False
+    SelfOwnMaterial.Item1TypeItemMaterial.ItemAccessoryPicture.FixedColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemAccessoryPictureParam.FixedColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.ItemBackNormalPicture.IsClipRound = False
+    SelfOwnMaterial.Item1TypeItemMaterial.ItemBackNormalPicture.FixedColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.ItemBackHoverPicture.IsClipRound = False
+    SelfOwnMaterial.Item1TypeItemMaterial.ItemBackHoverPicture.FixedColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.ItemBackDownPicture.IsClipRound = False
+    SelfOwnMaterial.Item1TypeItemMaterial.ItemBackDownPicture.FixedColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.ItemBackPushedPicture.IsClipRound = False
+    SelfOwnMaterial.Item1TypeItemMaterial.ItemBackPushedPicture.FixedColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemBackColorParam.Color = clWhite
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemBackColorParam.IsFill = False
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemBackColorParam.FillColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemBackColorParam.BorderColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseOverEffect.FillColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseOverEffect.FillColorChangeType = cctNone
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseOverEffect.BorderColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.DisabledEffect.BorderColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.FocusedEffect.FillColorChangeType = cctNone
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemBackGndPictureParam.FixedColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemCaptionParam.FontName = 'default'
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemCaptionParam.FontSize = 12
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemCaptionParam.DrawFont.Height = -16
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemCaptionParam.DrawFont.FontColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemCaptionParam.FontTrimming = fttNone
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemCaptionParam.FontHorzAlign = fhaLeft
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemCaptionParam.FontVertAlign = fvaTop
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemCaptionParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemCaptionParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemCaptionParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemCaptionParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemCaptionParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemCaptionParam.DrawEffectSetting.PushedEffect.FontSize = 12
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemCaptionParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemCaptionParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemCaptionParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemCaptionParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemIconParam.FixedColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemIconParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemIconParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemIconParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemPicParam.FixedColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemPicParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemPicParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemPicParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemPicParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemPicParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetailParam.FontName = 'default'
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetailParam.FontSize = 12
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetailParam.DrawFont.Height = -16
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetailParam.DrawFont.FontColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetailParam.FontTrimming = fttNone
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetailParam.FontHorzAlign = fhaLeft
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetailParam.FontVertAlign = fvaTop
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetailParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetailParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetailParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetailParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetailParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetailParam.DrawEffectSetting.PushedEffect.FontSize = 12
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetailParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetailParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetailParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetailParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail1Param.FontName = 'default'
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail1Param.FontSize = 12
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail1Param.DrawFont.Height = -16
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail1Param.DrawFont.FontColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail1Param.FontTrimming = fttNone
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail1Param.FontHorzAlign = fhaLeft
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail1Param.FontVertAlign = fvaTop
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail1Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail1Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail1Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail1Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail1Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail1Param.DrawEffectSetting.PushedEffect.FontSize = 12
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail1Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail1Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail1Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail1Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail2Param.FontName = 'default'
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail2Param.FontSize = 12
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail2Param.DrawFont.Height = -16
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail2Param.DrawFont.FontColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail2Param.FontTrimming = fttNone
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail2Param.FontHorzAlign = fhaLeft
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail2Param.FontVertAlign = fvaTop
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail2Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail2Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail2Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail2Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail2Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail2Param.DrawEffectSetting.PushedEffect.FontSize = 12
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail2Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail2Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail2Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail2Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail3Param.FontName = 'default'
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail3Param.FontSize = 12
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail3Param.DrawFont.Height = -16
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail3Param.DrawFont.FontColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail3Param.FontTrimming = fttNone
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail3Param.FontHorzAlign = fhaLeft
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail3Param.FontVertAlign = fvaTop
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail3Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail3Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail3Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail3Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail3Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail3Param.DrawEffectSetting.PushedEffect.FontSize = 12
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail3Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail3Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail3Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail3Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail4Param.FontName = 'default'
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail4Param.FontSize = 12
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail4Param.DrawFont.Height = -16
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail4Param.DrawFont.FontColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail4Param.FontTrimming = fttNone
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail4Param.FontHorzAlign = fhaLeft
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail4Param.FontVertAlign = fvaTop
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail4Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail4Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail4Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail4Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail4Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail4Param.DrawEffectSetting.PushedEffect.FontSize = 12
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail4Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail4Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail4Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail4Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail5Param.FontName = 'default'
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail5Param.FontSize = 12
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail5Param.DrawFont.Height = -16
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail5Param.DrawFont.FontColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail5Param.FontTrimming = fttNone
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail5Param.FontHorzAlign = fhaLeft
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail5Param.FontVertAlign = fvaTop
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail5Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail5Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail5Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail5Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail5Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail5Param.DrawEffectSetting.PushedEffect.FontSize = 12
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail5Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail5Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail5Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail5Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail6Param.FontName = 'default'
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail6Param.FontSize = 12
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail6Param.DrawFont.Height = -16
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail6Param.DrawFont.FontColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail6Param.FontTrimming = fttNone
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail6Param.FontHorzAlign = fhaLeft
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail6Param.FontVertAlign = fvaTop
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail6Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail6Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail6Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail6Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail6Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail6Param.DrawEffectSetting.PushedEffect.FontSize = 12
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail6Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail6Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail6Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+    SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail6Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+    SelfOwnMaterial.IsAutoAdjustItemDesignerPanelSize = True
+    SelfOwnMaterial.IsDrawRowLine = False
+    SelfOwnMaterial.IsDrawRowBeginLine = False
+    SelfOwnMaterial.IsDrawRowEndLine = False
+    SelfOwnMaterial.IsDrawColLine = False
+    SelfOwnMaterial.IsDrawColBeginLine = False
+    SelfOwnMaterial.IsDrawColEndLine = False
+    SelfOwnMaterial.DrawRowLineParam.Color.Alpha = 255
+    SelfOwnMaterial.DrawRowLineParam.Color.Color = -2830136
+    SelfOwnMaterial.DrawRowLineParam.PenWidth = 1
+    SelfOwnMaterial.DrawColLineParam.Color.Alpha = 255
+    SelfOwnMaterial.DrawColLineParam.Color.Color = -2830136
+    SelfOwnMaterial.DrawColLineParam.PenWidth = 1
+    HitTest = False
+    MouseDownFocus = False
+    ParentBackground = False
+    TabOrder = 0
+    VertScrollBar.Left = 572
+    VertScrollBar.Height = 100
+    VertScrollBar.Top = 0
+    VertScrollBar.Width = 12
+    VertScrollBar.ParentMouseEvent = False
+    VertScrollBar.DirectUIVisible = False
+    VertScrollBar.AlignWithMagins = False
+    VertScrollBar.ComponentTypeUseKind = ctukDefault
+    VertScrollBar.MaterialUseKind = mukSelfOwn
+    VertScrollBar.KeepSelfOwnMaterial = True
+    VertScrollBar.SelfOwnMaterial.BackColor.Color = clWhite
+    VertScrollBar.SelfOwnMaterial.BackColor.IsFill = True
+    VertScrollBar.SelfOwnMaterial.BackColor.FillColor.Alpha = 255
+    VertScrollBar.SelfOwnMaterial.BackColor.BorderColor.Alpha = 255
+    VertScrollBar.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
+    VertScrollBar.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
+    VertScrollBar.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
+    VertScrollBar.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.FillColor.Alpha = 255
+    VertScrollBar.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.FillColorChangeType = cctNone
+    VertScrollBar.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.BorderColor.Alpha = 255
+    VertScrollBar.SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
+    VertScrollBar.SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
+    VertScrollBar.SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
+    VertScrollBar.SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
+    VertScrollBar.SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
+    VertScrollBar.SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.BorderColor.Alpha = 255
+    VertScrollBar.SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
+    VertScrollBar.SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.FillColorChangeType = cctNone
+    VertScrollBar.SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
+    VertScrollBar.SelfOwnMaterial.IsTransparent = False
+    VertScrollBar.SelfOwnMaterial.ThumbBtnMinSize = 40
+    VertScrollBar.SelfOwnMaterial.ThumbBtnDrawSize = 4
+    VertScrollBar.SelfOwnMaterial.IsDefaultDrawThumbBtn = True
+    VertScrollBar.SelfOwnMaterial.ThumbBtnRectParam.Color = 11513775
+    VertScrollBar.SelfOwnMaterial.ThumbBtnRectParam.IsFill = False
+    VertScrollBar.SelfOwnMaterial.ThumbBtnRectParam.FillColor.Alpha = 255
+    VertScrollBar.SelfOwnMaterial.ThumbBtnRectParam.FillColor.Color = 11513775
+    VertScrollBar.SelfOwnMaterial.ThumbBtnRectParam.BorderColor.Alpha = 255
+    VertScrollBar.SelfOwnMaterial.ThumbBtnRectParam.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
+    VertScrollBar.SelfOwnMaterial.ThumbBtnRectParam.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
+    VertScrollBar.SelfOwnMaterial.ThumbBtnRectParam.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
+    VertScrollBar.SelfOwnMaterial.ThumbBtnRectParam.DrawEffectSetting.MouseOverEffect.FillColor.Alpha = 255
+    VertScrollBar.SelfOwnMaterial.ThumbBtnRectParam.DrawEffectSetting.MouseOverEffect.FillColorChangeType = cctNone
+    VertScrollBar.SelfOwnMaterial.ThumbBtnRectParam.DrawEffectSetting.MouseOverEffect.BorderColor.Alpha = 255
+    VertScrollBar.SelfOwnMaterial.ThumbBtnRectParam.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
+    VertScrollBar.SelfOwnMaterial.ThumbBtnRectParam.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
+    VertScrollBar.SelfOwnMaterial.ThumbBtnRectParam.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
+    VertScrollBar.SelfOwnMaterial.ThumbBtnRectParam.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
+    VertScrollBar.SelfOwnMaterial.ThumbBtnRectParam.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
+    VertScrollBar.SelfOwnMaterial.ThumbBtnRectParam.DrawEffectSetting.DisabledEffect.BorderColor.Alpha = 255
+    VertScrollBar.SelfOwnMaterial.ThumbBtnRectParam.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
+    VertScrollBar.SelfOwnMaterial.ThumbBtnRectParam.DrawEffectSetting.FocusedEffect.FillColorChangeType = cctNone
+    VertScrollBar.SelfOwnMaterial.ThumbBtnRectParam.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
+    VertScrollBar.HitTest = False
+    VertScrollBar.MouseDownFocus = False
+    VertScrollBar.ParentBackground = False
+    VertScrollBar.Properties.AutoSize = False
+    VertScrollBar.Properties.Kind = sbVertical
+    VertScrollBar.Properties.SmallChange = 1
+    VertScrollBar.Properties.LargeChange = 10
+    VertScrollBar.Properties.CanOverRangeTypes = [cortMin, cortMax]
+    HorzScrollBar.Left = 0
+    HorzScrollBar.Height = 12
+    HorzScrollBar.Top = 88
+    HorzScrollBar.Width = 584
+    HorzScrollBar.ParentMouseEvent = False
+    HorzScrollBar.DirectUIVisible = False
+    HorzScrollBar.AlignWithMagins = False
+    HorzScrollBar.ComponentTypeUseKind = ctukDefault
+    HorzScrollBar.MaterialUseKind = mukSelfOwn
+    HorzScrollBar.KeepSelfOwnMaterial = True
+    HorzScrollBar.SelfOwnMaterial.BackColor.Color = clWhite
+    HorzScrollBar.SelfOwnMaterial.BackColor.IsFill = True
+    HorzScrollBar.SelfOwnMaterial.BackColor.FillColor.Alpha = 255
+    HorzScrollBar.SelfOwnMaterial.BackColor.BorderColor.Alpha = 255
+    HorzScrollBar.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
+    HorzScrollBar.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
+    HorzScrollBar.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
+    HorzScrollBar.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.FillColor.Alpha = 255
+    HorzScrollBar.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.FillColorChangeType = cctNone
+    HorzScrollBar.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.BorderColor.Alpha = 255
+    HorzScrollBar.SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
+    HorzScrollBar.SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
+    HorzScrollBar.SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
+    HorzScrollBar.SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
+    HorzScrollBar.SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
+    HorzScrollBar.SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.BorderColor.Alpha = 255
+    HorzScrollBar.SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
+    HorzScrollBar.SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.FillColorChangeType = cctNone
+    HorzScrollBar.SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
+    HorzScrollBar.SelfOwnMaterial.IsTransparent = False
+    HorzScrollBar.SelfOwnMaterial.ThumbBtnMinSize = 40
+    HorzScrollBar.SelfOwnMaterial.ThumbBtnDrawSize = 4
+    HorzScrollBar.SelfOwnMaterial.IsDefaultDrawThumbBtn = True
+    HorzScrollBar.SelfOwnMaterial.ThumbBtnRectParam.Color = 11513775
+    HorzScrollBar.SelfOwnMaterial.ThumbBtnRectParam.IsFill = False
+    HorzScrollBar.SelfOwnMaterial.ThumbBtnRectParam.FillColor.Alpha = 255
+    HorzScrollBar.SelfOwnMaterial.ThumbBtnRectParam.FillColor.Color = 11513775
+    HorzScrollBar.SelfOwnMaterial.ThumbBtnRectParam.BorderColor.Alpha = 255
+    HorzScrollBar.SelfOwnMaterial.ThumbBtnRectParam.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
+    HorzScrollBar.SelfOwnMaterial.ThumbBtnRectParam.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
+    HorzScrollBar.SelfOwnMaterial.ThumbBtnRectParam.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
+    HorzScrollBar.SelfOwnMaterial.ThumbBtnRectParam.DrawEffectSetting.MouseOverEffect.FillColor.Alpha = 255
+    HorzScrollBar.SelfOwnMaterial.ThumbBtnRectParam.DrawEffectSetting.MouseOverEffect.FillColorChangeType = cctNone
+    HorzScrollBar.SelfOwnMaterial.ThumbBtnRectParam.DrawEffectSetting.MouseOverEffect.BorderColor.Alpha = 255
+    HorzScrollBar.SelfOwnMaterial.ThumbBtnRectParam.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
+    HorzScrollBar.SelfOwnMaterial.ThumbBtnRectParam.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
+    HorzScrollBar.SelfOwnMaterial.ThumbBtnRectParam.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
+    HorzScrollBar.SelfOwnMaterial.ThumbBtnRectParam.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
+    HorzScrollBar.SelfOwnMaterial.ThumbBtnRectParam.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
+    HorzScrollBar.SelfOwnMaterial.ThumbBtnRectParam.DrawEffectSetting.DisabledEffect.BorderColor.Alpha = 255
+    HorzScrollBar.SelfOwnMaterial.ThumbBtnRectParam.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
+    HorzScrollBar.SelfOwnMaterial.ThumbBtnRectParam.DrawEffectSetting.FocusedEffect.FillColorChangeType = cctNone
+    HorzScrollBar.SelfOwnMaterial.ThumbBtnRectParam.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
+    HorzScrollBar.HitTest = False
+    HorzScrollBar.MouseDownFocus = False
+    HorzScrollBar.ParentBackground = False
+    HorzScrollBar.Properties.AutoSize = False
+    HorzScrollBar.Properties.Kind = sbHorizontal
+    HorzScrollBar.Properties.SmallChange = 1
+    HorzScrollBar.Properties.LargeChange = 10
+    HorzScrollBar.Properties.CanOverRangeTypes = []
+    ScrollControlCorner.Left = 572
+    ScrollControlCorner.Height = 12
+    ScrollControlCorner.Top = 88
+    ScrollControlCorner.Width = 12
+    ScrollControlCorner.ParentMouseEvent = False
+    ScrollControlCorner.DirectUIVisible = False
+    ScrollControlCorner.AlignWithMagins = False
+    ScrollControlCorner.ComponentTypeUseKind = ctukDefault
+    ScrollControlCorner.MaterialUseKind = mukSelfOwn
+    ScrollControlCorner.KeepSelfOwnMaterial = True
+    ScrollControlCorner.SelfOwnMaterial.BackColor.Color = clWhite
+    ScrollControlCorner.SelfOwnMaterial.BackColor.IsFill = True
+    ScrollControlCorner.SelfOwnMaterial.BackColor.FillColor.Alpha = 255
+    ScrollControlCorner.SelfOwnMaterial.BackColor.BorderColor.Alpha = 255
+    ScrollControlCorner.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
+    ScrollControlCorner.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
+    ScrollControlCorner.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
+    ScrollControlCorner.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.FillColor.Alpha = 255
+    ScrollControlCorner.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.FillColorChangeType = cctNone
+    ScrollControlCorner.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.BorderColor.Alpha = 255
+    ScrollControlCorner.SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
+    ScrollControlCorner.SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
+    ScrollControlCorner.SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
+    ScrollControlCorner.SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
+    ScrollControlCorner.SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
+    ScrollControlCorner.SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.BorderColor.Alpha = 255
+    ScrollControlCorner.SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
+    ScrollControlCorner.SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.FillColorChangeType = cctNone
+    ScrollControlCorner.SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
+    ScrollControlCorner.SelfOwnMaterial.IsTransparent = False
+    ScrollControlCorner.HitTest = False
+    ScrollControlCorner.MouseDownFocus = False
+    ScrollControlCorner.ParentBackground = False
+    Properties.ContentWidth = -1
+    Properties.ContentHeight = -1
+    Properties.EnableAutoPullDownRefreshPanel = False
+    Properties.EnableAutoPullUpLoadMorePanel = False
+    Properties.VertCanOverRangeTypes = [cortMin, cortMax]
+    Properties.HorzCanOverRangeTypes = []
+    Properties.VertScrollBarShowType = sbstAutoCoverShow
+    Properties.HorzScrollBarShowType = sbstNone
+    Properties.MultiSelect = False
+    Properties.IsAutoSelected = True
+    Properties.ItemHeight = 60
+    Properties.ItemSpaceType = sistDefault
+    Properties.SelectedItemHeight = -1
+    Properties.ItemHeightCalcType = isctSeparate
+    Properties.ItemPanDragGestureDirection = ipdgdtLeft
+    Properties.IsEmptyContent = False
+    Properties.EmptyContentPicture.IsClipRound = False
+    Properties.EmptyContentPicture.FixedColor.Alpha = 255
+    Properties.IsEnabledCenterItemSelectMode = False
+    Properties.ItemWidth = 60
+    Properties.SelectedItemWidth = -1
+    Properties.ItemWidthCalcType = isctSeparate
+    Properties.ItemLayoutType = iltVertical
+    Properties.ItemColorType = sictNone
+    Properties.ItemColorFieldSetType = sicstNone
+    Properties.Items.Data = {
+      140000040000000400000000005C00000018160000001A000000000042696E61
+      72794F626A65637400000000E9FD010000000000FFFF0E000000000E00080000
+      004865696768740000E9FD01000000000000000000F0BF0E000000000C000800
+      00005769647468000000E9FD0100000000000000F0BF15000000001000040000
+      0056697369626C6500E9FD010000000000FFFFFFFF04000000000A0000000000
+      4E616D6500000000E9FD07000000000800040000005461670000000000000000
+      0007000000000A00040000005461673100000000E9FD00000000150000000010
+      0004000000436865636B656400E9FD0100000000000000000007000000001200
+      040000004974656D547970650000000000000000E9FD0000000018120000000A
+      001A00000049636F6E00000000E9FD54447261775069637475726500000000E9
+      FD010000000000FFFF0400000000140000000000496D6167654E616D65000000
+      00000000E9FD0100170000000018000000000047494646696C65446174610000
+      000000E9FD010000000000170000000018000000000053564746696C65446174
+      610000000000E9FD01000000000004000000000A0E0A0000004E616D65000000
+      00E9FDE5908DE7A7B00000E9FD0100000049636F6E00000000E9FD0400000000
+      100E0E00000043617074696F6E00E9FD010000000000E6A087E9A2980000E9FD
+      01000000E59BBEE6A0870000E9FD0100000004000000000C0E0000000047726F
+      7570000000E9FD0100E58886E7BB840000E9FD010000000700000000120E0400
+      0000526F77436F756E740000000000000000E9FDE8A18CE695B00000E9FD0100
+      0000010000000700000000120E04000000436F6C436F756E7400000000000000
+      00E9FDE58897E695B00000E9FD01000000010000000700000000121404000000
+      526F77496E6465780000000000000000E9FDE8A18CE4B88BE6A0870000000000
+      0000E9FD0100FFFFFFFF0700000000121404000000436F6C496E646578000000
+      0000000000E9FDE58897E4B88BE6A08700000000000000E9FD0100FFFFFFFF07
+      00000000201A0400000050696374757265447261775479706500E9FD01000000
+      0000FFFFFFFFFFFFFFFFE7BB98E588B6E7B1BBE59E8B00000000E9FD01000000
+      0000FFFF000000000700000000161A04000000496D616765496E646578000000
+      000000E9FD01000000E59BBEE78987E4B88BE6A08700000000E9FD0100000000
+      00FFFFFFFFFFFF0400000000141A00000000496D6167654E616D650000000000
+      0000E9FD0100E59BBEE78987E5908DE7A7B000000000E9FD010000000000FFFF
+      040000000012200000000046696C654E616D650000000000000000E9FDE59BBE
+      E78987E69687E4BBB6E5908D00E9FD010000000000FFFFFFFFFFFFFFFF040000
+      00001A26000000005265736F757263654E616D6500000000E9FD010000000000
+      FFFFE59BBEE78987E8B584E6BA90E5908DE7A7B0000000000000E9FD01000000
+      0000FFFFFFFFFFFF0400000000081A0000000055726C0000000000E59BBEE789
+      87E993BEE68EA500000000E9FD010000000000FFFF1500000000182C04000000
+      4973436C6970526F756E640000000000E9FD010000000000E698AFE590A6E589
+      AAE8A381E68890E59C86E5BDA20000000F16544472617750696374757265436F
+      6C6C6563000000001900000000161A050000004669786564436F6C6F72000000
+      000000000001000000E8B083E695B4E9A29CE889B200000000E9FD0100000000
+      00FFFF0000000069181200000008001A00000050696300000000005444726177
+      5069637475726500000000E9FD010000000000FFFF0400000000140000000000
+      496D6167654E616D6500000000000000E9FD0100170000000018000000000047
+      494646696C65446174610000000000E9FD010000000000170000000018000000
+      000053564746696C65446174610000000000E9FD01000000000004000000000A
+      0E080000004E616D6500000000E9FDE5908DE7A7B00000E9FD01000000506963
+      00000000000400000000100E0E00000043617074696F6E00E9FD010000000000
+      E6A087E9A2980000E9FD01000000E59BBEE789870000E9FD0100000004000000
+      000C0E0000000047726F7570000000E9FD0100E58886E7BB840000E9FD010000
+      000700000000120E04000000526F77436F756E740000000000000000E9FDE8A1
+      8CE695B00000E9FD01000000010000000700000000120E04000000436F6C436F
+      756E740000000000000000E9FDE58897E695B00000E9FD010000000100000007
+      00000000121404000000526F77496E6465780000000000000000E9FDE8A18CE4
+      B88BE6A08700000000000000E9FD0100FFFFFFFF070000000012140400000043
+      6F6C496E6465780000000000000000E9FDE58897E4B88BE6A087000000000000
+      00E9FD0100FFFFFFFF0700000000201A04000000506963747572654472617754
+      79706500E9FD010000000000FFFFFFFFFFFFFFFFE7BB98E588B6E7B1BBE59E8B
+      00000000E9FD010000000000FFFF000000000700000000161A04000000496D61
+      6765496E646578000000000000E9FD01000000E59BBEE78987E4B88BE6A08700
+      000000E9FD010000000000FFFFFFFFFFFF0400000000141A00000000496D6167
+      654E616D6500000000000000E9FD0100E59BBEE78987E5908DE7A7B000000000
+      E9FD010000000000FFFF040000000012200000000046696C654E616D65000000
+      0000000000E9FDE59BBEE78987E69687E4BBB6E5908D00E9FD010000000000FF
+      FFFFFFFFFFFFFF04000000001A26000000005265736F757263654E616D650000
+      0000E9FD010000000000FFFFE59BBEE78987E8B584E6BA90E5908DE7A7B00000
+      00000000E9FD010000000000FFFFFFFFFFFF0400000000081A0000000055726C
+      0000000000E59BBEE78987E993BEE68EA500000000E9FD010000000000FFFF15
+      00000000182C040000004973436C6970526F756E640000000000E9FD01000000
+      0000E698AFE590A6E589AAE8A381E68890E59C86E5BDA20000000F1654447261
+      7750696374757265436F6C6C6563000000001900000000161A05000000466978
+      6564436F6C6F72000000000000000001000000E8B083E695B4E9A29CE889B200
+      000000E9FD010000000000FFFF000000006E0700000000120004000000497465
+      6D547970650000000000000000E9FD0000000015000000001C00040000004175
+      746F53697A655769647468000000E9FD010000000000FFFFFFFF000000001500
+      0000001E00040000004175746F53697A65486569676874000000000100000000
+      00FFFFFFFFFFFF00000000040000000010001600000043617074696F6E00E9FD
+      0100000000004E657720566973697473006F7200450064006900740004000000
+      000E000000000044657461696C0000E9FD010000000400000000100000000000
+      44657461696C3100E9FD01000000000004000000001000000000004465746169
+      6C3200E9FD010000000000040000000010000000000044657461696C3300E9FD
+      010000000000040000000010000000000044657461696C3400E9FD0100000000
+      00040000000010000000000044657461696C3500E9FD01000000000004000000
+      0010000000000044657461696C3600E9FD010000000000070000000014000400
+      00004163636573736F727900000000000000E9FD01000000000018160000001A
+      000000000042696E6172794F626A65637400000000E9FD010000000000FFFF0E
+      000000000E00080000004865696768740000E9FD01000000000000000000F0BF
+      0E000000000C00080000005769647468000000E9FD0100000000000000F0BF15
+      0000000010000400000056697369626C6500E9FD010000000000FFFFFFFF0400
+      0000000A00000000004E616D6500000000E9FD07000000000800040000005461
+      6700000000000000000007000000000A00040000005461673100000000E9FD00
+      0000001500000000100004000000436865636B656400E9FD0100000000000000
+      000007000000001200040000004974656D547970650000000000000000E9FD00
+      00000018120000000A001A00000049636F6E00000000E9FD5444726177506963
+      7475726500000000E9FD010000000000FFFF0400000000140000000000496D61
+      67654E616D6500000000000000E9FD0100170000000018000000000047494646
+      696C65446174610000000000E9FD010000000000170000000018000000000053
+      564746696C65446174610000000000E9FD01000000000004000000000A0E0A00
+      00004E616D6500000000E9FDE5908DE7A7B00000E9FD0100000049636F6E0000
+      0000E9FD0400000000100E0E00000043617074696F6E00E9FD010000000000E6
+      A087E9A2980000E9FD01000000E59BBEE6A0870000E9FD010000000400000000
+      0C0E0000000047726F7570000000E9FD0100E58886E7BB840000E9FD01000000
+      0700000000120E04000000526F77436F756E740000000000000000E9FDE8A18C
+      E695B00000E9FD01000000010000000700000000120E04000000436F6C436F75
+      6E740000000000000000E9FDE58897E695B00000E9FD01000000010000000700
+      000000121404000000526F77496E6465780000000000000000E9FDE8A18CE4B8
+      8BE6A08700000000000000E9FD0100FFFFFFFF0700000000121404000000436F
+      6C496E6465780000000000000000E9FDE58897E4B88BE6A08700000000000000
+      E9FD0100FFFFFFFF0700000000201A0400000050696374757265447261775479
+      706500E9FD010000000000FFFFFFFFFFFFFFFFE7BB98E588B6E7B1BBE59E8B00
+      000000E9FD010000000000FFFF000000000700000000161A04000000496D6167
+      65496E646578000000000000E9FD01000000E59BBEE78987E4B88BE6A0870000
+      0000E9FD010000000000FFFFFFFFFFFF0400000000141A00000000496D616765
+      4E616D6500000000000000E9FD0100E59BBEE78987E5908DE7A7B000000000E9
+      FD010000000000FFFF040000000012200000000046696C654E616D6500000000
+      00000000E9FDE59BBEE78987E69687E4BBB6E5908D00E9FD010000000000FFFF
+      FFFFFFFFFFFF04000000001A26000000005265736F757263654E616D65000000
+      00E9FD010000000000FFFFE59BBEE78987E8B584E6BA90E5908DE7A7B0000000
+      000000E9FD010000000000FFFFFFFFFFFF0400000000081A0000000055726C00
+      00000000E59BBEE78987E993BEE68EA500000000E9FD010000000000FFFF1500
+      000000182C040000004973436C6970526F756E640000000000E9FD0100000000
+      00E698AFE590A6E589AAE8A381E68890E59C86E5BDA20000000F165444726177
+      50696374757265436F6C6C6563000000001900000000161A0500000046697865
+      64436F6C6F72000000000000000001000000E8B083E695B4E9A29CE889B20000
+      0000E9FD010000000000FFFF0000000065181200000008001A00000050696300
+      0000000054447261775069637475726500000000E9FD010000000000FFFF0400
+      000000140000000000496D6167654E616D6500000000000000E9FD0100170000
+      000018000000000047494646696C65446174610000000000E9FD010000000000
+      170000000018000000000053564746696C65446174610000000000E9FD010000
+      00000004000000000A0E080000004E616D6500000000E9FDE5908DE7A7B00000
+      E9FD0100000050696300000000000400000000100E0E00000043617074696F6E
+      00E9FD010000000000E6A087E9A2980000E9FD01000000E59BBEE789870000E9
+      FD0100000004000000000C0E0000000047726F7570000000E9FD0100E58886E7
+      BB840000E9FD010000000700000000120E04000000526F77436F756E74000000
+      0000000000E9FDE8A18CE695B00000E9FD01000000010000000700000000120E
+      04000000436F6C436F756E740000000000000000E9FDE58897E695B00000E9FD
+      01000000010000000700000000121404000000526F77496E6465780000000000
+      000000E9FDE8A18CE4B88BE6A08700000000000000E9FD0100FFFFFFFF070000
+      0000121404000000436F6C496E6465780000000000000000E9FDE58897E4B88B
+      E6A08700000000000000E9FD0100FFFFFFFF0700000000201A04000000506963
+      74757265447261775479706500E9FD010000000000FFFFFFFFFFFFFFFFE7BB98
+      E588B6E7B1BBE59E8B00000000E9FD010000000000FFFF000000000700000000
+      161A04000000496D616765496E646578000000000000E9FD01000000E59BBEE7
+      8987E4B88BE6A08700000000E9FD010000000000FFFFFFFFFFFF040000000014
+      1A00000000496D6167654E616D6500000000000000E9FD0100E59BBEE78987E5
+      908DE7A7B000000000E9FD010000000000FFFF04000000001220000000004669
+      6C654E616D650000000000000000E9FDE59BBEE78987E69687E4BBB6E5908D00
+      E9FD010000000000FFFFFFFFFFFFFFFF04000000001A26000000005265736F75
+      7263654E616D6500000000E9FD010000000000FFFFE59BBEE78987E8B584E6BA
+      90E5908DE7A7B0000000000000E9FD010000000000FFFFFFFFFFFF0400000000
+      081A0000000055726C0000000000E59BBEE78987E993BEE68EA500000000E9FD
+      010000000000FFFF1500000000182C040000004973436C6970526F756E640000
+      000000E9FD010000000000E698AFE590A6E589AAE8A381E68890E59C86E5BDA2
+      0000000F16544472617750696374757265436F6C6C6563000000001900000000
+      161A050000004669786564436F6C6F72000000000000000001000000E8B083E6
+      95B4E9A29CE889B200000000E9FD010000000000FFFF00000000FF0700000000
+      1200040000004974656D547970650000000000000000E9FD0000000015000000
+      001C00040000004175746F53697A655769647468000000E9FD010000000000FF
+      FFFFFF0000000015000000001E00040000004175746F53697A65486569676874
+      00000000010000000000FFFFFFFFFFFF00000000040000000010001200000043
+      617074696F6E00E9FD0100000000004D65737361676573007700002900000057
+      0004000000000E000000000044657461696C0000E9FD01000000040000000010
+      000000000044657461696C3100E9FD0100000000000400000000100000000000
+      44657461696C3200E9FD01000000000004000000001000000000004465746169
+      6C3300E9FD010000000000040000000010000000000044657461696C3400E9FD
+      010000000000040000000010000000000044657461696C3500E9FD0100000000
+      00040000000010000000000044657461696C3600E9FD01000000000007000000
+      001400040000004163636573736F727900000000000000E9FD01000000000018
+      160000001A000000000042696E6172794F626A65637400000000E9FD01000000
+      0000FFFF0E000000000E00080000004865696768740000E9FD01000000000000
+      000000F0BF0E000000000C00080000005769647468000000E9FD010000000000
+      0000F0BF150000000010000400000056697369626C6500E9FD010000000000FF
+      FFFFFF04000000000A00000000004E616D6500000000E9FD0700000000080004
+      00000054616700000000000000000007000000000A0004000000546167310000
+      0000E9FD000000001500000000100004000000436865636B656400E9FD010000
+      0000000000000007000000001200040000004974656D54797065000000000000
+      0000E9FD0000000018120000000A001A00000049636F6E00000000E9FD544472
+      61775069637475726500000000E9FD010000000000FFFF040000000014000000
+      0000496D6167654E616D6500000000000000E9FD010017000000001800000000
+      0047494646696C65446174610000000000E9FD01000000000017000000001800
+      0000000053564746696C65446174610000000000E9FD01000000000004000000
+      000A0E0A0000004E616D6500000000E9FDE5908DE7A7B00000E9FD0100000049
+      636F6E00000000E9FD0400000000100E0E00000043617074696F6E00E9FD0100
+      00000000E6A087E9A2980000E9FD01000000E59BBEE6A0870000E9FD01000000
+      04000000000C0E0000000047726F7570000000E9FD0100E58886E7BB840000E9
+      FD010000000700000000120E04000000526F77436F756E740000000000000000
+      E9FDE8A18CE695B00000E9FD01000000010000000700000000120E0400000043
+      6F6C436F756E740000000000000000E9FDE58897E695B00000E9FD0100000001
+      0000000700000000121404000000526F77496E6465780000000000000000E9FD
+      E8A18CE4B88BE6A08700000000000000E9FD0100FFFFFFFF0700000000121404
+      000000436F6C496E6465780000000000000000E9FDE58897E4B88BE6A0870000
+      0000000000E9FD0100FFFFFFFF0700000000201A040000005069637475726544
+      7261775479706500E9FD010000000000FFFFFFFFFFFFFFFFE7BB98E588B6E7B1
+      BBE59E8B00000000E9FD010000000000FFFF000000000700000000161A040000
+      00496D616765496E646578000000000000E9FD01000000E59BBEE78987E4B88B
+      E6A08700000000E9FD010000000000FFFFFFFFFFFF0400000000141A00000000
+      496D6167654E616D6500000000000000E9FD0100E59BBEE78987E5908DE7A7B0
+      00000000E9FD010000000000FFFF040000000012200000000046696C654E616D
+      650000000000000000E9FDE59BBEE78987E69687E4BBB6E5908D00E9FD010000
+      000000FFFFFFFFFFFFFFFF04000000001A26000000005265736F757263654E61
+      6D6500000000E9FD010000000000FFFFE59BBEE78987E8B584E6BA90E5908DE7
+      A7B0000000000000E9FD010000000000FFFFFFFFFFFF0400000000081A000000
+      0055726C0000000000E59BBEE78987E993BEE68EA500000000E9FD0100000000
+      00FFFF1500000000182C040000004973436C6970526F756E640000000000E9FD
+      010000000000E698AFE590A6E589AAE8A381E68890E59C86E5BDA20000000F16
+      544472617750696374757265436F6C6C6563000000001900000000161A050000
+      004669786564436F6C6F72000000000000000001000000E8B083E695B4E9A29C
+      E889B200000000E9FD010000000000FFFF0000000053181200000008001A0000
+      00506963000000000054447261775069637475726500000000E9FD0100000000
+      00FFFF0400000000140000000000496D6167654E616D6500000000000000E9FD
+      0100170000000018000000000047494646696C65446174610000000000E9FD01
+      0000000000170000000018000000000053564746696C65446174610000000000
+      E9FD01000000000004000000000A0E080000004E616D6500000000E9FDE5908D
+      E7A7B00000E9FD0100000050696300000000000400000000100E0E0000004361
+      7074696F6E00E9FD010000000000E6A087E9A2980000E9FD01000000E59BBEE7
+      89870000E9FD0100000004000000000C0E0000000047726F7570000000E9FD01
+      00E58886E7BB840000E9FD010000000700000000120E04000000526F77436F75
+      6E740000000000000000E9FDE8A18CE695B00000E9FD01000000010000000700
+      000000120E04000000436F6C436F756E740000000000000000E9FDE58897E695
+      B00000E9FD01000000010000000700000000121404000000526F77496E646578
+      0000000000000000E9FDE8A18CE4B88BE6A08700000000000000E9FD0100FFFF
+      FFFF0700000000121404000000436F6C496E6465780000000000000000E9FDE5
+      8897E4B88BE6A08700000000000000E9FD0100FFFFFFFF0700000000201A0400
+      000050696374757265447261775479706500E9FD010000000000FFFFFFFFFFFF
+      FFFFE7BB98E588B6E7B1BBE59E8B00000000E9FD010000000000FFFF00000000
+      0700000000161A04000000496D616765496E646578000000000000E9FD010000
+      00E59BBEE78987E4B88BE6A08700000000E9FD010000000000FFFFFFFFFFFF04
+      00000000141A00000000496D6167654E616D6500000000000000E9FD0100E59B
+      BEE78987E5908DE7A7B000000000E9FD010000000000FFFF0400000000122000
+      00000046696C654E616D650000000000000000E9FDE59BBEE78987E69687E4BB
+      B6E5908D00E9FD010000000000FFFFFFFFFFFFFFFF04000000001A2600000000
+      5265736F757263654E616D6500000000E9FD010000000000FFFFE59BBEE78987
+      E8B584E6BA90E5908DE7A7B0000000000000E9FD010000000000FFFFFFFFFFFF
+      0400000000081A0000000055726C0000000000E59BBEE78987E993BEE68EA500
+      000000E9FD010000000000FFFF1500000000182C040000004973436C6970526F
+      756E640000000000E9FD010000000000E698AFE590A6E589AAE8A381E68890E5
+      9C86E5BDA20000000F16544472617750696374757265436F6C6C656300000000
+      1900000000161A050000004669786564436F6C6F720000000000000000010000
+      00E8B083E695B4E9A29CE889B200000000E9FD010000000000FFFF0000000061
+      07000000001200040000004974656D547970650000000000000000E9FD000000
+      0015000000001C00040000004175746F53697A655769647468000000E9FD0100
+      00000000FFFFFFFF0000000015000000001E00040000004175746F53697A6548
+      656967687400000000010000000000FFFFFFFFFFFF0000000004000000001000
+      1400000043617074696F6E00E9FD010000000000507572636861736573006500
+      290000007900000004000000000E000000000044657461696C0000E9FD010000
+      00040000000010000000000044657461696C3100E9FD01000000000004000000
+      0010000000000044657461696C3200E9FD010000000000040000000010000000
+      000044657461696C3300E9FD0100000000000400000000100000000000446574
+      61696C3400E9FD010000000000040000000010000000000044657461696C3500
+      E9FD010000000000040000000010000000000044657461696C3600E9FD010000
+      00000007000000001400040000004163636573736F727900000000000000E9FD
+      01000000000018160000001A000000000042696E6172794F626A656374000000
+      00E9FD010000000000FFFF0E000000000E00080000004865696768740000E9FD
+      01000000000000000000F0BF0E000000000C00080000005769647468000000E9
+      FD0100000000000000F0BF150000000010000400000056697369626C6500E9FD
+      010000000000FFFFFFFF04000000000A00000000004E616D6500000000E9FD07
+      0000000008000400000054616700000000000000000007000000000A00040000
+      005461673100000000E9FD000000001500000000100004000000436865636B65
+      6400E9FD0100000000000000000007000000001200040000004974656D547970
+      650000000000000000E9FD0000000018120000000A001A00000049636F6E0000
+      0000E9FD54447261775069637475726500000000E9FD010000000000FFFF0400
+      000000140000000000496D6167654E616D6500000000000000E9FD0100170000
+      000018000000000047494646696C65446174610000000000E9FD010000000000
+      170000000018000000000053564746696C65446174610000000000E9FD010000
+      00000004000000000A0E0A0000004E616D6500000000E9FDE5908DE7A7B00000
+      E9FD0100000049636F6E00000000E9FD0400000000100E0E0000004361707469
+      6F6E00E9FD010000000000E6A087E9A2980000E9FD01000000E59BBEE6A08700
+      00E9FD0100000004000000000C0E0000000047726F7570000000E9FD0100E588
+      86E7BB840000E9FD010000000700000000120E04000000526F77436F756E7400
+      00000000000000E9FDE8A18CE695B00000E9FD01000000010000000700000000
+      120E04000000436F6C436F756E740000000000000000E9FDE58897E695B00000
+      E9FD01000000010000000700000000121404000000526F77496E646578000000
+      0000000000E9FDE8A18CE4B88BE6A08700000000000000E9FD0100FFFFFFFF07
+      00000000121404000000436F6C496E6465780000000000000000E9FDE58897E4
+      B88BE6A08700000000000000E9FD0100FFFFFFFF0700000000201A0400000050
+      696374757265447261775479706500E9FD010000000000FFFFFFFFFFFFFFFFE7
+      BB98E588B6E7B1BBE59E8B00000000E9FD010000000000FFFF00000000070000
+      0000161A04000000496D616765496E646578000000000000E9FD01000000E59B
+      BEE78987E4B88BE6A08700000000E9FD010000000000FFFFFFFFFFFF04000000
+      00141A00000000496D6167654E616D6500000000000000E9FD0100E59BBEE789
+      87E5908DE7A7B000000000E9FD010000000000FFFF0400000000122000000000
+      46696C654E616D650000000000000000E9FDE59BBEE78987E69687E4BBB6E590
+      8D00E9FD010000000000FFFFFFFFFFFFFFFF04000000001A2600000000526573
+      6F757263654E616D6500000000E9FD010000000000FFFFE59BBEE78987E8B584
+      E6BA90E5908DE7A7B0000000000000E9FD010000000000FFFFFFFFFFFF040000
+      0000081A0000000055726C0000000000E59BBEE78987E993BEE68EA500000000
+      E9FD010000000000FFFF1500000000182C040000004973436C6970526F756E64
+      0000000000E9FD010000000000E698AFE590A6E589AAE8A381E68890E59C86E5
+      BDA20000000F16544472617750696374757265436F6C6C656300000000190000
+      0000161A050000004669786564436F6C6F72000000000000000001000000E8B0
+      83E695B4E9A29CE889B200000000E9FD010000000000FFFF0000000053181200
+      000008001A000000506963000000000054447261775069637475726500000000
+      E9FD010000000000FFFF0400000000140000000000496D6167654E616D650000
+      0000000000E9FD0100170000000018000000000047494646696C654461746100
+      00000000E9FD010000000000170000000018000000000053564746696C654461
+      74610000000000E9FD01000000000004000000000A0E080000004E616D650000
+      0000E9FDE5908DE7A7B00000E9FD010000005069630000000000040000000010
+      0E0E00000043617074696F6E00E9FD010000000000E6A087E9A2980000E9FD01
+      000000E59BBEE789870000E9FD0100000004000000000C0E0000000047726F75
+      70000000E9FD0100E58886E7BB840000E9FD010000000700000000120E040000
+      00526F77436F756E740000000000000000E9FDE8A18CE695B00000E9FD010000
+      00010000000700000000120E04000000436F6C436F756E740000000000000000
+      E9FDE58897E695B00000E9FD0100000001000000070000000012140400000052
+      6F77496E6465780000000000000000E9FDE8A18CE4B88BE6A087000000000000
+      00E9FD0100FFFFFFFF0700000000121404000000436F6C496E64657800000000
+      00000000E9FDE58897E4B88BE6A08700000000000000E9FD0100FFFFFFFF0700
+      000000201A0400000050696374757265447261775479706500E9FD0100000000
+      00FFFFFFFFFFFFFFFFE7BB98E588B6E7B1BBE59E8B00000000E9FD0100000000
+      00FFFF000000000700000000161A04000000496D616765496E64657800000000
+      0000E9FD01000000E59BBEE78987E4B88BE6A08700000000E9FD010000000000
+      FFFFFFFFFFFF0400000000141A00000000496D6167654E616D65000000000000
+      00E9FD0100E59BBEE78987E5908DE7A7B000000000E9FD010000000000FFFF04
+      0000000012200000000046696C654E616D650000000000000000E9FDE59BBEE7
+      8987E69687E4BBB6E5908D00E9FD010000000000FFFFFFFFFFFFFFFF04000000
+      001A26000000005265736F757263654E616D6500000000E9FD010000000000FF
+      FFE59BBEE78987E8B584E6BA90E5908DE7A7B0000000000000E9FD0100000000
+      00FFFFFFFFFFFF0400000000081A0000000055726C0000000000E59BBEE78987
+      E993BEE68EA500000000E9FD010000000000FFFF1500000000182C0400000049
+      73436C6970526F756E640000000000E9FD010000000000E698AFE590A6E589AA
+      E8A381E68890E59C86E5BDA20000000F16544472617750696374757265436F6C
+      6C6563000000001900000000161A050000004669786564436F6C6F7200000000
+      0000000001000000E8B083E695B4E9A29CE889B200000000E9FD010000000000
+      FFFF000000006507000000001200040000004974656D54797065000000000000
+      0000E9FD0000000015000000001C00040000004175746F53697A655769647468
+      000000E9FD010000000000FFFFFFFF0000000015000000001E00040000004175
+      746F53697A6548656967687400000000010000000000FFFFFFFFFFFF00000000
+      040000000010001400000043617074696F6E00E9FD01000000000053686F7070
+      696E6773000074680000005700690004000000000E000000000044657461696C
+      0000E9FD01000000040000000010000000000044657461696C3100E9FD010000
+      000000040000000010000000000044657461696C3200E9FD0100000000000400
+      00000010000000000044657461696C3300E9FD01000000000004000000001000
+      0000000044657461696C3400E9FD010000000000040000000010000000000044
+      657461696C3500E9FD010000000000040000000010000000000044657461696C
+      3600E9FD01000000000007000000001400040000004163636573736F72790000
+      0000000000E9FD010000000000
+    }
+    Properties.Items = <    
+      item
+        Selected = False
+        Checked = False
+        Height = -1
+        Visible = True
+        Color = clBlack
+        Width = -1
+        Icon.IsClipRound = False
+        Icon.FixedColor.Alpha = 255
+        Pic.IsClipRound = False
+        Pic.FixedColor.Alpha = 255
+        Tag = 0
+        Tag1 = 0
+        ItemType = sitDefault
+        Caption = 'New Visits'
+        Accessory = satNone
+        AutoSizeWidth = False
+        AutoSizeHeight = False
+      end    
+      item
+        Selected = False
+        Checked = False
+        Height = -1
+        Visible = True
+        Color = clBlack
+        Width = -1
+        Icon.IsClipRound = False
+        Icon.FixedColor.Alpha = 255
+        Pic.IsClipRound = False
+        Pic.FixedColor.Alpha = 255
+        Tag = 0
+        Tag1 = 0
+        ItemType = sitDefault
+        Caption = 'Messages'
+        Accessory = satNone
+        AutoSizeWidth = False
+        AutoSizeHeight = False
+      end    
+      item
+        Selected = False
+        Checked = False
+        Height = -1
+        Visible = True
+        Color = clBlack
+        Width = -1
+        Icon.IsClipRound = False
+        Icon.FixedColor.Alpha = 255
+        Pic.IsClipRound = False
+        Pic.FixedColor.Alpha = 255
+        Tag = 0
+        Tag1 = 0
+        ItemType = sitDefault
+        Caption = 'Purchases'
+        Accessory = satNone
+        AutoSizeWidth = False
+        AutoSizeHeight = False
+      end    
+      item
+        Selected = False
+        Checked = False
+        Height = -1
+        Visible = True
+        Color = clBlack
+        Width = -1
+        Icon.IsClipRound = False
+        Icon.FixedColor.Alpha = 255
+        Pic.IsClipRound = False
+        Pic.FixedColor.Alpha = 255
+        Tag = 0
+        Tag1 = 0
+        ItemType = sitDefault
+        Caption = 'Shoppings'
+        Accessory = satNone
+        AutoSizeWidth = False
+        AutoSizeHeight = False
+      end>
+    Properties.EnableBuffer = False
+    Properties.ColCount = -1
+    Properties.ItemCountPerLine = -1
+    Properties.IsItemCountFitControl = True
+    Properties.ViewType = lvtIcon
+  end
+end

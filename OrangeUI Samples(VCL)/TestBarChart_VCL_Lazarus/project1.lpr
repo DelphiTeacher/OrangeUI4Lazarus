@@ -10,8 +10,9 @@ uses
   athreads,
   {$ENDIF}
   Interfaces, // this includes the LCL widgetset
-  Forms, uBGRABufferBitmap, uBGRADrawCanvas, uBGRASkinPictureEngine,
-  uNativeDrawCanvas, uNativeSkinPictureEngine, Unit1
+  Forms, uBGRABufferBitmap, uBGRADrawCanvas, uBGRASkinPictureEngine, Unit1,
+  DashBoard_Analyse_BarChart_MonthSummaryFrame,
+  ListItemStyle_IconTop_CaptionDetailBottom
   { you can add units after this };
 
 {$R *.res}

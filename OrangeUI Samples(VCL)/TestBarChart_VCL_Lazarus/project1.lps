@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="project1.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="21"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unit1.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit1"/>
+        <TopLine Value="5"/>
+        <CursorPos X="33" Y="33"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\MainSample_VCL_Lazarus\DashBoard_Projects_PieChart_ProjectStatusFrame.pas"/>
+        <ComponentName Value="FramePieChart_ProjectStatus"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <EditorIndex Value="10"/>
+        <TopLine Value="86"/>
+        <CursorPos X="20" Y="137"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControl\Source\VCL\BGRACanvas\uBGRABufferBitmap.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="3"/>
+        <CursorPos X="82" Y="5"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControl\Source\VCL\BGRACanvas\uBGRADrawCanvas.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="3581"/>
+        <CursorPos Y="3605"/>
+        <UsageCount Value="21"/>
+        <Bookmarks Count="1">
+          <Item0 Y="1861" ID="3"/>
+        </Bookmarks>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControl\Source\VCL\BGRACanvas\uBGRASkinPictureEngine.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="82"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIListItemStyles_VCL\ListItemStyle_IconTop_CaptionDetailBottom.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="21"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControl\Source\Controls\uSkinVirtualChartType.pas"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="9"/>
+        <TopLine Value="2811"/>
+        <CursorPos X="23" Y="2856"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\Users\Administrator\AppData\Local\lazarus\onlinepackagemanager\packages\BGRABitmap\bgrabitmap\bgracanvas.pas"/>
+        <UnitName Value="BGRACanvas"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="132"/>
+        <CursorPos X="20" Y="234"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControl\Source\Controls\uSkinVirtualListType.pas"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="4182"/>
+        <CursorPos Y="4213"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControl\Source\Base\uDrawCanvas.pas"/>
+        <EditorIndex Value="8"/>
+        <TopLine Value="205"/>
+        <CursorPos X="14" Y="231"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\Users\Administrator\AppData\Local\lazarus\onlinepackagemanager\packages\BGRABitmap\bgrabitmap\bgracanvas2d.pas"/>
+        <UnitName Value="BGRACanvas2D"/>
+        <EditorIndex Value="7"/>
+        <TopLine Value="2626"/>
+        <CursorPos X="80" Y="2629"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControl\Source\Base\uBasePathData.pas"/>
+        <EditorIndex Value="6"/>
+        <TopLine Value="73"/>
+        <CursorPos X="15" Y="89"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\MainSample_VCL_Lazarus\DashBoard_ProjectsFrame.pas"/>
+        <EditorIndex Value="11"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\MainSample_VCL_Lazarus\DashBoard_Analyse_BarChart_MonthSummaryFrame.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+        <EditorIndex Value="12"/>
+        <CursorPos X="30" Y="28"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="29">
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\Controls\uSkinVirtualChartType.pas"/>
+        <Caret Line="2838" TopLine="2808"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\Controls\uSkinVirtualChartType.pas"/>
+        <Caret Line="2839" TopLine="2808"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\Controls\uSkinVirtualChartType.pas"/>
+        <Caret Line="2841" TopLine="2808"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\Controls\uSkinVirtualChartType.pas"/>
+        <Caret Line="2842" TopLine="2808"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\Controls\uSkinVirtualChartType.pas"/>
+        <Caret Line="2843" TopLine="2808"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\VCL\BGRACanvas\uBGRADrawCanvas.pas"/>
+        <Caret Line="2010" TopLine="1992"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\VCL\BGRACanvas\uBGRADrawCanvas.pas"/>
+        <Caret Line="69" Column="15" TopLine="40"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\VCL\BGRACanvas\uBGRADrawCanvas.pas"/>
+        <Caret Line="3622" Column="33" TopLine="3594"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\VCL\BGRACanvas\uBGRADrawCanvas.pas"/>
+        <Caret Line="3605" Column="25" TopLine="3594"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\VCL\BGRACanvas\uBGRADrawCanvas.pas"/>
+        <Caret Line="3606" TopLine="3594"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\VCL\BGRACanvas\uBGRADrawCanvas.pas"/>
+        <Caret Line="1906" TopLine="1878"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\VCL\BGRACanvas\uBGRADrawCanvas.pas"/>
+        <Caret Line="1908" TopLine="1878"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\VCL\BGRACanvas\uBGRADrawCanvas.pas"/>
+        <Caret Line="1909" TopLine="1878"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\VCL\BGRACanvas\uBGRADrawCanvas.pas"/>
+        <Caret Line="1924" TopLine="1878"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\VCL\BGRACanvas\uBGRADrawCanvas.pas"/>
+        <Caret Line="1906" TopLine="1878"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\VCL\BGRACanvas\uBGRADrawCanvas.pas"/>
+        <Caret Line="1908" TopLine="1878"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\VCL\BGRACanvas\uBGRADrawCanvas.pas"/>
+        <Caret Line="1909" TopLine="1878"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\VCL\BGRACanvas\uBGRADrawCanvas.pas"/>
+        <Caret Line="1990" TopLine="1962"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\VCL\BGRACanvas\uBGRADrawCanvas.pas"/>
+        <Caret Line="1906" TopLine="1878"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\VCL\BGRACanvas\uBGRADrawCanvas.pas"/>
+        <Caret Line="3655" TopLine="3606"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\VCL\BGRACanvas\uBGRADrawCanvas.pas"/>
+        <Caret Line="3611" TopLine="3603"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\VCL\BGRACanvas\uBGRADrawCanvas.pas"/>
+        <Caret Line="3650" TopLine="3603"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\VCL\BGRACanvas\uBGRADrawCanvas.pas"/>
+        <Caret Line="3655" TopLine="3605"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\VCL\BGRACanvas\uBGRADrawCanvas.pas"/>
+        <Caret Line="3628" Column="65" TopLine="3603"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\VCL\BGRACanvas\uBGRADrawCanvas.pas"/>
+        <Caret Line="3611" TopLine="3603"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\VCL\BGRACanvas\uBGRADrawCanvas.pas"/>
+        <Caret Line="3617" TopLine="3603"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\VCL\BGRACanvas\uBGRADrawCanvas.pas"/>
+        <Caret Line="3655" TopLine="3605"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\VCL\BGRACanvas\uBGRADrawCanvas.pas"/>
+        <Caret Line="3617" TopLine="3605"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\Controls\uSkinVirtualChartType.pas"/>
+        <Caret Line="2855" Column="42" TopLine="2817"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\Controls\uSkinVirtualChartType.pas"/>
+        <Caret Line="371" Column="18" TopLine="340"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

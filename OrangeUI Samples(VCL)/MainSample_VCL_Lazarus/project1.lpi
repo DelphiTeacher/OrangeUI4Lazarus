@@ -26,6 +26,12 @@
     </RunParams>
     <RequiredPackages>
       <Item>
+        <PackageName Value="OrangeUIListItemStyle"/>
+      </Item>
+      <Item>
+        <PackageName Value="BGRABitmapPack"/>
+      </Item>
+      <Item>
         <PackageName Value="OrangeUIControl_Lazarus"/>
       </Item>
       <Item>
@@ -114,6 +120,43 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
       </Unit>
+      <Unit>
+        <Filename Value="homeframe.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameHome"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <UnitName Value="HomeFrame"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeProjectCommon\uLCLSVGSupport.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControl\Source\VCL\NativeCanvas\uNativeSkinPictureEngine.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControl\Source\VCL\NativeCanvas\uNativeDrawCanvas.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIListItemStyles_VCL\ListItemStyle_Default.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControl\Source\VCL\BGRACanvas\uBGRABufferBitmap.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControl\Source\VCL\BGRACanvas\uBGRADrawCanvas.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControl\Source\VCL\BGRACanvas\uBGRASkinPictureEngine.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
@@ -124,7 +167,7 @@
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
-      <OtherUnitFiles Value="D:\MyFiles\OrangeUIControlNew\lib\x86_64-win64\;..\..\OrangeProjectCommon"/>
+      <OtherUnitFiles Value="D:\MyFiles\OrangeUIControlNew\lib\x86_64-win64\;..\..\OrangeProjectCommon;..\..\OrangeUIListItemStyles_VCL;..\..\OrangeUIControl\Source\VCL\BGRACanvas;..\..\OrangeUIControl\Source\VCL\NativeCanvas"/>
       <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <Linking>

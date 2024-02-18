@@ -8,8 +8,8 @@ uses
   Classes, SysUtils, Forms, Controls, Graphics,
 
 
-    uNativeDrawCanvas,
-    uNativeSkinPictureEngine,
+//    uNativeDrawCanvas,
+//    uNativeSkinPictureEngine,
     uDrawEngine,
     uSkinPicture,
     uBasePathData,
@@ -18,6 +18,9 @@ uses
     uSkinProgressBarType,
   //  DashBoard_Projects_PieChart_ProjectStatusFrame,
 
+  uSkinBufferBitmap,
+  BGRACanvas,BGRABitmap,
+  uBGRADrawCanvas,uBGRABufferBitmap,uBGRASkinPictureEngine,
 
   Dialogs;
 
@@ -45,18 +48,26 @@ implementation
 
 procedure TForm1.FormCreate(Sender: TObject);
 begin
-    GlobalDrawCanvasClass:=TNativeDrawCanvas;
+    //GlobalDrawCanvasClass:=TNativeDrawCanvas;
+    //GlobalSkinPictureClass:=TSkinPicture;
+    //GlobalSkinPictureEngineClass:=TSkinPictureEngine;
+    //GlobalSkinGIFPictureEngineClass:=TNativeSkinGIFPictureEngine;
+    //GlobalDrawPathDataClass:=TNativeDrawPathData;
+
+
+    GlobalDrawCanvasClass:=TBGRADrawCanvas;
     GlobalSkinPictureClass:=TSkinPicture;
-    GlobalSkinPictureEngineClass:=TSkinPictureEngine;
-    GlobalSkinGIFPictureEngineClass:=TNativeSkinGIFPictureEngine;
-    GlobalDrawPathDataClass:=TNativeDrawPathData;
+    GlobalSkinPictureEngineClass:=TBGRASkinPictureEngine;
+    GlobalSkinGIFPictureEngineClass:=TBGRASkinGIFPictureEngine;
+    GlobalDrawPathDataClass:=TBGRADrawPathData;
+    GlobalBufferBitmapClass:=TBGRABufferBitmap;
 
 
     FSkinRoundProgressBar:=TSkinRoundProgressBar.Create(Self);
     FSkinRoundProgressBar.Parent:=Self;
     FSkinRoundProgressBar.SetBounds(0,0,100,100);
     FSkinRoundProgressBar.Properties.Position:=50;
-    FSkinRoundProgressBar.SelfOwnMaterial.MaxAngle:=120;
+    FSkinRoundProgressBar.SelfOwnMaterial.MaxAngle:=270;
     FSkinRoundProgressBar.SelfOwnMaterial.BackColor.IsFill:=True;
     FSkinRoundProgressBar.SelfOwnMaterial.BackColor.Color:=clRed;
 

@@ -11,8 +11,8 @@ uses
   Messages, SysUtils, Variants, Classes,
   Graphics, Controls, Forms, Dialogs, uDrawCanvas, uSkinItems,
 
-  //公共素材模块
-  EasyServiceCommonMaterialDataMoudle_VCL_Lazarus,
+  ////公共素材模块
+  //EasyServiceCommonMaterialDataMoudle_VCL_Lazarus,
 
 
   uSkinVirtualChartType,
@@ -119,6 +119,8 @@ begin
   ASeries:=TVirtualChartSeries(FSkinVirtualChart.Properties.SeriesList.Add);
   ASeries.Caption:='金额';
 
+  ASeries.DataItems.BeginUpdate;
+
   ADataItem:=ASeries.DataItems.Add;
   ADataItem.Caption:='Jan';
   ADataItem.Value:=300;
@@ -168,6 +170,7 @@ begin
   ADataItem.Caption:='Dev';
   ADataItem.Value:=1100;
 
+  ASeries.DataItems.EndUpdate;
 
 
 

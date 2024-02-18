@@ -1,7 +1,7 @@
 object frmLogin: TfrmLogin
-  Left = 843
+  Left = 844
   Height = 401
-  Top = 503
+  Top = 505
   Width = 457
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsToolWindow
