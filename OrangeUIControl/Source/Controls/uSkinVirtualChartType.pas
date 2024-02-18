@@ -254,6 +254,12 @@ type
     function Insert(Index:Integer):TVirtualChartSeriesDataItem;
     property Items[Index:Integer]:TVirtualChartSeriesDataItem read GetItem write SetItem;default;
   end;
+
+
+
+
+
+
   TSkinChartType=(sctBar,sctLine,sctPie//,
                   //极坐标
                   //sctPolar
@@ -1513,6 +1519,7 @@ procedure TSkinVirtualChartDefaultType.CustomMouseMove(Shift: TShiftState; X,
   Y: Double);
 var
   I: Integer;
+  ASeries:TVirtualChartSeries;
   AMouseOverDataItem:TVirtualChartSeriesDataItem;
 begin
   inherited;
@@ -1521,11 +1528,11 @@ begin
   for I := 0 to FSkinVirtualChartIntf.Properties.FSeriesList.Count-1 do
   begin
     //设置数据项是否鼠标停靠
-    FSkinVirtualChartIntf.Properties.FSeriesList[I].FListLayoutsManager.CustomMouseMove(Shift,X,Y);
-    if FSkinVirtualChartIntf.Properties.FSeriesList[I].FListLayoutsManager.MouseOverItem<>nil then
+    ASeries:=FSkinVirtualChartIntf.Properties.FSeriesList[I];
+    ASeries.FListLayoutsManager.CustomMouseMove(Shift,X,Y);
+    if ASeries.FListLayoutsManager.MouseOverItem<>nil then
     begin
-      AMouseOverDataItem:=TVirtualChartSeriesDataItem(
-        FSkinVirtualChartIntf.Properties.FSeriesList[I].FListLayoutsManager.MouseOverItem.GetObject);
+      AMouseOverDataItem:=TVirtualChartSeriesDataItem(ASeries.FListLayoutsManager.MouseOverItem.GetObject);
     end;
   end;
 
@@ -2696,6 +2703,10 @@ begin
     ASkinVirtualChartDefaultMaterial.FBarColorParam.FillColor.FColor:=Self.GetDataItemColor(ADataItem);
 
 
+    //ASkinVirtualChartDefaultMaterial.FBarColorParam.PenWidth:=1;
+    //ASkinVirtualChartDefaultMaterial.FBarColorParam.PenColor.FColor:=Self.GetDataItemColor(ADataItem);
+
+
     //处理绘制参数的透明度
     ASkinVirtualChartDefaultMaterial.FBarColorParam.DrawAlpha:=
                   Ceil(ASkinVirtualChartDefaultMaterial.FBarColorParam.CurrentEffectAlpha*1);
@@ -2830,6 +2841,8 @@ begin
       ADataItemPathRect.Right:=ADataItemPathRect.Left+ADataItemWidth;
       ADataItemPathRect.Bottom:=ADataItemRect.Bottom;
 
+      APathActionItem:=TPathActionItem(ADataItem.FDrawPathActions.Add);
+      APathActionItem.ActionType:=patStart;
 
       //生成柱子的Path
       APathActionItem:=TPathActionItem(ADataItem.FDrawPathActions.Add);
@@ -2840,9 +2853,14 @@ begin
       APathActionItem.X1:=ADataItemPathRect.Right;
       APathActionItem.Y1:=ADataItemPathRect.Bottom;
 
+
+      APathActionItem:=TPathActionItem(ADataItem.FDrawPathActions.Add);
+      APathActionItem.ActionType:=patStop;
+
       //填充
       APathActionItem:=TPathActionItem(ADataItem.FDrawPathActions.Add);
       APathActionItem.ActionType:=patFillPath;
+      //APathActionItem.ActionType:=patDrawPath;
 
 
 
@@ -3401,7 +3419,7 @@ begin
   for I := 0 to Self.FSeries.FDataItems.Count-1 do
   begin
     ADataItem:=Self.FSeries.FDataItems[I];
-
+    if not ADataItem.Visible then Continue;
 
     //给数据项加上状态
     AItemEffectStates:=Self.FSeries.FListLayoutsManager.ProcessItemDrawEffectStates(ADataItem);
@@ -3411,15 +3429,15 @@ begin
     ASkinVirtualChartDefaultMaterial.FPieColorParam.FillColor.FColor:=ADataItemColor;
 
 
-    {$IFDEF FPC}
-    //FPC下面画圆弧有难度,改画粗线
-    ASkinVirtualChartDefaultMaterial.FPieColorParam.PenColor.FColor:=ADataItemColor;
-    ////大半径
-    //FRadius:Double;
-    ////小半径,中空那个圆的半径
-    //FInnerRadius:Double;
-    ASkinVirtualChartDefaultMaterial.FPieColorParam.PenWidth:=Ceil(FRadius-FInnerRadius);
-    {$ENDIF}
+    //{$IFDEF FPC}
+    ////FPC下面画圆弧有难度,改画粗线
+    //ASkinVirtualChartDefaultMaterial.FPieColorParam.PenColor.FColor:=ADataItemColor;
+    //////大半径
+    ////FRadius:Double;
+    //////小半径,中空那个圆的半径
+    ////FInnerRadius:Double;
+    //ASkinVirtualChartDefaultMaterial.FPieColorParam.PenWidth:=Ceil(FRadius-FInnerRadius);
+    //{$ENDIF}
 
 
     //处理绘制参数的透明度
@@ -3657,6 +3675,9 @@ begin
 
       ADataItem.FDrawPathActions.Clear;
 
+      APathActionItem:=TPathActionItem(ADataItem.FDrawPathActions.Add);
+      APathActionItem.ActionType:=patStart;
+
 
 //      ADataItemPathRect.Left:=ADataItemRect.Left+AItemWidth*(1-ABarSizePercent)/2;
 //      ADataItemPathRect.Top:=ADataItemRect.Top+APathDrawRect.Height*(1-ADataItem.FDrawPercent);
@@ -3684,7 +3705,8 @@ begin
           //圆环
 
 
-          {$IFDEF DELPHI}
+          //{$IFDEF DELPHI}
+
 
           //外环
           AOutPathActionItem:=TPathActionItem(ADataItem.FDrawPathActions.Add);
@@ -3711,47 +3733,48 @@ begin
           AInnerPathActionItem.StartAngle:=AStartAngle-90+ADataItem.FDrawPercent*360;
           AInnerPathActionItem.SweepAngle:=-ADataItem.FDrawPercent*360;
 
-          {$ENDIF}
 
-          {$IFDEF FPC}
-          //外环
-          AOutPathActionItem:=TPathActionItem(ADataItem.FDrawPathActions.Add);
-          AOutPathActionItem.ActionType:=patAddArc;
-          AOutPathActionItem.X:=0;
-          AOutPathActionItem.Y:=0;
-          AOutPathActionItem.X1:=APathDrawRect.Width;
-          AOutPathActionItem.Y1:=APathDrawRect.Height;
-
-          AOutPathActionItem.StartAngle:=AStartAngle-90;
-          AOutPathActionItem.SweepAngle:=ADataItem.FDrawPercent*360;
-
-          {$ENDIF}
-
-          ////连接两个圆弧的终点
+          //{$ENDIF}
           //
-          ////必须先起点移动  内弧终点到外弧起点
-          //AStopPoint:=AInnerPathActionItem.GetArcStopPoint(RectF(0,0,Ceil(APathDrawRect.Width),Ceil(APathDrawRect.Height)));
-          //APathActionItem:=TPathActionItem(ADataItem.FDrawPathActions.Add);
-          //APathActionItem.ActionType:=patMoveTo;
-          //APathActionItem.X:=AStopPoint.X;
-          //APathActionItem.Y:=AStopPoint.Y;
-          //APathActionItem.Index:=AOutPathActionItem.Index;
+          //{$IFDEF FPC}
+          ////外环
+          //AOutPathActionItem:=TPathActionItem(ADataItem.FDrawPathActions.Add);
+          //AOutPathActionItem.ActionType:=patAddArc;
+          //AOutPathActionItem.X:=0;
+          //AOutPathActionItem.Y:=0;
+          //AOutPathActionItem.X1:=APathDrawRect.Width;
+          //AOutPathActionItem.Y1:=APathDrawRect.Height;
           //
-          ////画线 内弧终点到外弧起点
-          //AStartPoint:=AOutPathActionItem.GetArcStartPoint(RectF(0,0,Ceil(APathDrawRect.Width),Ceil(APathDrawRect.Height)));
-          //APathActionItem:=TPathActionItem(ADataItem.FDrawPathActions.Add);
-          //APathActionItem.ActionType:=patLineTo;
-          //APathActionItem.X:=AStartPoint.X;
-          //APathActionItem.Y:=AStartPoint.Y;
-          //APathActionItem.Index:=AOutPathActionItem.Index;
+          //AOutPathActionItem.StartAngle:=AStartAngle-90;
+          //AOutPathActionItem.SweepAngle:=ADataItem.FDrawPercent*360;
           //
-          ////画线 外弧终点到内弧起点
-          //AStopPoint:=AInnerPathActionItem.GetArcStartPoint(RectF(0,0,Ceil(APathDrawRect.Width),Ceil(APathDrawRect.Height)));
-          //APathActionItem:=TPathActionItem(ADataItem.FDrawPathActions.Add);
-          //APathActionItem.ActionType:=patLineTo;
-          //APathActionItem.X:=AStopPoint.X;
-          //APathActionItem.Y:=AStopPoint.Y;
-          //APathActionItem.Index:=AInnerPathActionItem.Index;
+          //          ////连接两个圆弧的终点
+          //          //
+          //          ////必须先起点移动  内弧终点到外弧起点
+          //          //AStopPoint:=AInnerPathActionItem.GetArcStopPoint(RectF(0,0,Ceil(APathDrawRect.Width),Ceil(APathDrawRect.Height)));
+          //          //APathActionItem:=TPathActionItem(ADataItem.FDrawPathActions.Add);
+          //          //APathActionItem.ActionType:=patMoveTo;
+          //          //APathActionItem.X:=AStopPoint.X;
+          //          //APathActionItem.Y:=AStopPoint.Y;
+          //          //APathActionItem.Index:=AOutPathActionItem.Index;
+          //          //
+          //          ////画线 内弧终点到外弧起点
+          //          //AStartPoint:=AOutPathActionItem.GetArcStartPoint(RectF(0,0,Ceil(APathDrawRect.Width),Ceil(APathDrawRect.Height)));
+          //          //APathActionItem:=TPathActionItem(ADataItem.FDrawPathActions.Add);
+          //          //APathActionItem.ActionType:=patLineTo;
+          //          //APathActionItem.X:=AStartPoint.X;
+          //          //APathActionItem.Y:=AStartPoint.Y;
+          //          //APathActionItem.Index:=AOutPathActionItem.Index;
+          //          //
+          //          ////画线 外弧终点到内弧起点
+          //          //AStopPoint:=AInnerPathActionItem.GetArcStartPoint(RectF(0,0,Ceil(APathDrawRect.Width),Ceil(APathDrawRect.Height)));
+          //          //APathActionItem:=TPathActionItem(ADataItem.FDrawPathActions.Add);
+          //          //APathActionItem.ActionType:=patLineTo;
+          //          //APathActionItem.X:=AStopPoint.X;
+          //          //APathActionItem.Y:=AStopPoint.Y;
+          //          //APathActionItem.Index:=AInnerPathActionItem.Index;
+          //
+          //{$ENDIF}
 
 
 
@@ -3760,12 +3783,20 @@ begin
       ADataItem.FPieStartAngle:=AStartAngle-90;
       ADataItem.FPieSweepAngle:=ADataItem.FDrawPercent*360;
 
+      APathActionItem:=TPathActionItem(ADataItem.FDrawPathActions.Add);
+      APathActionItem.ActionType:=patClose;
 
-      {$IFDEF DELPHI}
+      APathActionItem:=TPathActionItem(ADataItem.FDrawPathActions.Add);
+      APathActionItem.ActionType:=patStop;
+
+      //{$IFDEF DELPHI}
       //填充
+      //APathActionItem:=TPathActionItem(ADataItem.FDrawPathActions.Add);
+      //APathActionItem.ActionType:=patDrawPath;
+      ////填充
       APathActionItem:=TPathActionItem(ADataItem.FDrawPathActions.Add);
       APathActionItem.ActionType:=patFillPath;
-      {$ENDIF}
+      //{$ENDIF}
 
 
 
@@ -4075,9 +4106,9 @@ begin
     ASkinVirtualChartDefaultMaterial.FLineDotParam.PenColor.FColor:=Self.GetDataItemColor(ADataItem);
 
 
-    {$IFDEF FPC}
-    ASkinVirtualChartDefaultMaterial.FLineDotParam.PenWidth:=10;
-    {$ENDIF}
+    //{$IFDEF FPC}
+    //ASkinVirtualChartDefaultMaterial.FLineDotParam.PenWidth:=10;
+    //{$ENDIF}
 
 
 
@@ -4418,6 +4449,8 @@ begin
 
       ADataItem.FDrawPathActions.Clear;
 
+      APathActionItem:=TPathActionItem(ADataItem.FDrawPathActions.Add);
+      APathActionItem.ActionType:=patStart;
 
 //      ADataItemPathRect.Left:=ADataItemRect.Left+AItemWidth*(1-ABarSizePercent)/2;
 //      ADataItemPathRect.Top:=ADataItemRect.Top+APathDrawRect.Height*(1-ADataItem.FDrawPercent);
@@ -4442,6 +4475,9 @@ begin
 
 //      APathActionItem:=TPathActionItem(ADataItem.FDrawPathActions.Add);
 //      APathActionItem.ActionType:=patGetRegion;
+
+      APathActionItem:=TPathActionItem(ADataItem.FDrawPathActions.Add);
+      APathActionItem.ActionType:=patStop;
 
       //填充
       APathActionItem:=TPathActionItem(ADataItem.FDrawPathActions.Add);

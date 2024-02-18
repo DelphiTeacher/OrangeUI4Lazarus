@@ -22,6 +22,7 @@ uses
 
   UITypes,
   StrUtils,
+  Graphics,
 //  XSuperObject,
 
 
@@ -1265,10 +1266,10 @@ begin
 //  FFixedColor.StoredDefaultColor:=WhiteColor;
 //  {$ENDIF}
   {$IFDEF VCL}
-    {$IFDEF DELPHI}
-    FFixedColor.StoredDefaultColor:=TColors.SysDefault;
-    FFixedColor.FColor:=TColors.SysDefault;
-    {$ENDIF}
+    //{$IFDEF DELPHI}
+    FFixedColor.StoredDefaultColor:=clDefault;
+    FFixedColor.FColor:=clDefault;
+    //{$ENDIF}
   {$ENDIF}
   {$IFDEF FMX}
   FFixedColor.StoredDefaultColor:=TAlphaColorRec.Null;

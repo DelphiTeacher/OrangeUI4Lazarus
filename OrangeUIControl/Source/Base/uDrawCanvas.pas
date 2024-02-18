@@ -561,6 +561,7 @@ type
     //函数//
     //准备DC,一般用于初始绘制引擎
     function Prepare(const Canvas:TCanvas):Boolean;{$IFDEF VCL}overload;{$ENDIF}
+    procedure PrepareBitmap(const ABitmap:TObject);virtual;abstract;overload;
     {$IFDEF VCL}
     function Prepare(const DC:HDC):Boolean;overload;
     {$ENDIF}
@@ -771,16 +772,17 @@ implementation
 
 
   {$IFDEF VCL}
-  {$IFDEF DELPHI}
-uses
-  uGDIPlusSkinPictureEngine,
-  uGDIPlusDrawCanvas;
-  {$ELSE}
+//  {$IFDEF DELPHI}
+//uses
+//  uGDIPlusSkinPictureEngine,
+//  uGDIPlusDrawCanvas;
+//  {$ELSE}
 uses
   uNativeSkinPictureEngine,
   uNativeDrawCanvas;
+//  {$ENDIF}
   {$ENDIF}
-  {$ENDIF}
+
   {$IFDEF FMX}
 uses
   uFireMonkeySkinPictureEngine,
@@ -1753,19 +1755,19 @@ initialization
 //  GlobalCanvasNameList:=TList.Create;
 
   {$IFDEF VCL}
-  {$IFDEF DELPHI}
-  GlobalDrawCanvasClass:=TGDIPlusDrawCanvas;
-  GlobalSkinPictureClass:=TSkinPicture;
-  GlobalSkinPictureEngineClass:=TGDIPlusSkinPictureEngine;
-  GlobalSkinGIFPictureEngineClass:=TGDIPlusSkinGIFPictureEngine;
-  GlobalDrawPathDataClass:=TGDIPlusDrawPathData;
-  {$ELSE}
+//  {$IFDEF DELPHI}
+//  GlobalDrawCanvasClass:=TGDIPlusDrawCanvas;
+//  GlobalSkinPictureClass:=TSkinPicture;
+//  GlobalSkinPictureEngineClass:=TGDIPlusSkinPictureEngine;
+//  GlobalSkinGIFPictureEngineClass:=TGDIPlusSkinGIFPictureEngine;
+//  GlobalDrawPathDataClass:=TGDIPlusDrawPathData;
+//  {$ELSE}
   GlobalDrawCanvasClass:=TNativeDrawCanvas;
   GlobalSkinPictureClass:=TSkinPicture;
   GlobalSkinPictureEngineClass:=TSkinPictureEngine;
   GlobalSkinGIFPictureEngineClass:=TNativeSkinGIFPictureEngine;
   GlobalDrawPathDataClass:=TNativeDrawPathData;
-  {$ENDIF}
+//  {$ENDIF}
 
 
   {$ENDIF}

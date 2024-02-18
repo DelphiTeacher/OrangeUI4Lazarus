@@ -1,7 +1,7 @@
 ﻿//convert pas to utf8 by ¥
 
 //FMX画布
-unit uNativeDrawCanvas;
+unit uBGRADrawCanvas;
 
 interface
 {$I FrameWork.inc}
@@ -11,8 +11,10 @@ uses
   Classes,
   Types,
   Math,
+  Forms,
   //UITypes,
   uBaseLog,
+  Graphics,
   {$IFDEF MSWINDOWS}
     Windows,
   {$ENDIF}
@@ -20,8 +22,9 @@ uses
     LCLType,
   {$ENDIF}
 
-
-  Graphics,
+  BGRABitmap,
+  BGRACanvas,
+  BGRACanvas2D,
 
   uSkinPicture,
   uDrawPicture,
@@ -42,10 +45,13 @@ uses
 type
 
   //路径数据
-  TNativeDrawPathData=class(TBaseDrawPathData)
+
+  { TBGRADrawPathData }
+
+  TBGRADrawPathData=class(TBaseDrawPathData)
   public
-    FCanvas:TCanvas;
 //    Path:TPathData;
+    FBGRACanvas2D:TBGRACanvas2D;
 //    Stroke:TStrokeBrush;
   public
     constructor Create;override;
@@ -81,19 +87,21 @@ type
 //    procedure GetRegion;override;
 //    //判断鼠标是否在路径内
 //    function IsInRegion(const APoint: TPointF):Boolean;override;
+    procedure FillPath;override;
+    procedure DrawPath;override;
+
   end;
 
-  TDrawPathData=TNativeDrawPathData;
+  TDrawPathData=TBGRADrawPathData;
 
 
 
-  //Native画布
-
-  { TNativeDrawCanvas }
-
-  TNativeDrawCanvas=class(TDrawCanvas)
-  private
-  private
+  //BGRA画布
+  TBGRADrawCanvas=class(TDrawCanvas)
+  public
+    FBGRACanvas:TBGRACanvas;
+    FBGRACanvas2D:TBGRACanvas2D;
+    //FBGRABitmap:TBGRABitmap;
 //    FCanvasState: TCanvasSaveState;
 //    function CreateRectF(const X,Y,Width,Height:Double):TRectF;overload;
     function PrepareFont(ADrawTextParam: TDrawTextParam): Boolean;overload;
@@ -173,7 +181,7 @@ type
                        X2:Double;
                        Y2:Double):Boolean;override;
 
-    //绘制路径
+    //绘制路径,用于DrawPanel
     function DrawPathData(ADrawPathData:TBaseDrawPathData):Boolean;override;
     function FillPathData(ADrawPathParam:TDrawPathParam;ADrawPathData:TBaseDrawPathData):Boolean;override;
     //绘制路径
@@ -181,8 +189,8 @@ type
 
 
   end;
-//
-//
+
+
 //  //模拟圆角矩形的缓存位图,使圆角更平滑
 //  TColorRoundRectBitmap=class
 //  public
@@ -286,6 +294,9 @@ type
 
 implementation
 
+
+uses
+  uBGRASkinPictureEngine;
 
 //type
 //  TLineType=(ltDirect,
@@ -1382,99 +1393,114 @@ implementation
 
 
 
-{ TNativeDrawCanvas }
+{ TBGRADrawCanvas }
 
-function TNativeDrawCanvas.CustomPrepare: Boolean;
+procedure TBGRADrawCanvas.PrepareBitmap(const ABitmap:TObject);
 begin
-  GetCanvas;
+  //FBGRABitmap:=TBGRABitmap(ABitmap);
+  FBGRACanvas:=TBGRABitmap(ABitmap).CanvasBGRA;
+  FBGRACanvas2D:=TBGRABitmap(ABitmap).Canvas2D;
 end;
 
-function TNativeDrawCanvas.CustomUnPrepare: Boolean;
+function TBGRADrawCanvas.CustomPrepare: Boolean;
 begin
-  Result:=False;
-  FCanvas:=nil;
-  Result:=True;
+  //GetCanvas;
 end;
 
-procedure TNativeDrawCanvas.SetClip(const AClipRect: TRectF);
+function TBGRADrawCanvas.CustomUnPrepare: Boolean;
 begin
-//  FCanvasState:=FCanvas.SaveState;
-//  Self.FCanvas.IntersectClipRect(AClipRect);
+  //Result:=False;
+  //FBGRACanvas:=nil;
+  //Result:=True;
 end;
 
-procedure TNativeDrawCanvas.ResetClip;
+procedure TBGRADrawCanvas.SetClip(const AClipRect: TRectF);
 begin
-//  FCanvas.RestoreState(FCanvasState);
+//  FCanvasState:=FBGRACanvas.SaveState;
+//  Self.FBGRACanvas.IntersectClipRect(AClipRect);
 end;
 
-constructor TNativeDrawCanvas.Create;
+procedure TBGRADrawCanvas.ResetClip;
+begin
+//  FBGRACanvas.RestoreState(FCanvasState);
+end;
+
+constructor TBGRADrawCanvas.Create;
 begin
   inherited;
 
 end;
 
-//function TNativeDrawCanvas.CreateRectF(const X, Y, Width,Height: Double): TRectF;
+//function TBGRADrawCanvas.CreateRectF(const X, Y, Width,Height: Double): TRectF;
 //begin
 //  Result:=TRectF.Create(X,Y,X+Width,Y+Height);
 //end;
 
-function TNativeDrawCanvas.PrepareFont(ADrawTextParam: TDrawTextParam): Boolean;
+function TBGRADrawCanvas.PrepareFont(ADrawTextParam: TDrawTextParam): Boolean;
 begin
   Result:=False;
 
-  FCanvas.Font.Name:=ADrawTextParam.CurrentEffectFontName;
+  FBGRACanvas.Font.Name:=ADrawTextParam.CurrentEffectFontName;
+
+  //FBGRACanvas.FontName:=ADrawTextParam.CurrentEffectFontName;
 
   //一定要加Ceil,如果不加Ceil,在Windows上会出现字体异常
-  FCanvas.Font.Size:=Floor(ADrawTextParam.CurrentEffectFontSize);
-  FCanvas.Font.Style:=ADrawTextParam.CurrentEffectFontStyle;
+  FBGRACanvas.Font.Height:=Floor(-MulDiv(ADrawTextParam.CurrentEffectFontSize, Screen.PixelsPerInch, 72));
+  FBGRACanvas.Font.Style:=ADrawTextParam.CurrentEffectFontStyle;
 
-  FCanvas.Font.Color:=ADrawTextParam.CurrentEffectFontColor.Color;
+  FBGRACanvas.Font.Color:=ADrawTextParam.CurrentEffectFontColor.Color;
+
+
+  //FBGRABitmap.FontColor:=(ADrawTextParam.CurrentEffectFontColor.Color);
   Result:=True;
 end;
 
-destructor TNativeDrawCanvas.Destroy;
+destructor TBGRADrawCanvas.Destroy;
 begin
 
   inherited;
 end;
 
-function TNativeDrawCanvas.DrawDesigningRect(const ADrawRect: TRectF;
+function TBGRADrawCanvas.DrawDesigningRect(const ADrawRect: TRectF;
                                                 const ABorderColor:TDelphiColor): Boolean;
 begin
   if GlobalIsDrawDesigningRect then
   begin
     //创建虚线框
-    FCanvas.Pen.Width := 1;
+    //FBGRACanvas.strokeStyle(1);
 //    {$IF CompilerVersion >= 35.0}
-//    FCanvas.Pen.Dash := TStrokeDash.Dash;
+//    FBGRACanvas.Pen.Dash := TStrokeDash.Dash;
 //    {$ELSE}
-//    FCanvas.Pen.Dash := TStrokeDash.sdDash;
-    FCanvas.Pen.Style := TPenStyle.psSolid;
+//    FBGRACanvas.Pen.Dash := TStrokeDash.sdDash;
+    //FBGRACanvas.strokeStyle(TPenStyle.psSolid);
 //    {$ENDIF}
 
-
-    FCanvas.Pen.Color := ABorderColor;
-    FCanvas.Rectangle(Ceil(ADrawRect.Left+1),Ceil(ADrawRect.Top+1),Ceil(ADrawRect.Right),Ceil(ADrawRect.Bottom));
+    FBGRACanvas.Pen.Style:=TPenStyle.psDash;
+    //FBGRABitmap.Pen.Widht
+    FBGRACanvas.Pen.Color:=ABorderColor;
+    //FBGRACanvas.strokeRect(Ceil(ADrawRect.Left+1),Ceil(ADrawRect.Top+1),Ceil(ADrawRect.Width),Ceil(ADrawRect.Height));
 //    {$IF CompilerVersion >= 35.0}
-//    FCanvas.Pen.Dash := TStrokeDash.Solid;
+//    FBGRACanvas.Pen.Dash := TStrokeDash.Solid;
 //    {$ELSE}
-//    FCanvas.Pen.Dash := TStrokeDash.sdSolid;
+//    FBGRACanvas.Pen.Dash := TStrokeDash.sdSolid;
 //    {$ENDIF}
+
+    FBGRACanvas.Rectangle(Ceil(ADrawRect.Left+1),Ceil(ADrawRect.Top+1),Ceil(ADrawRect.Width),Ceil(ADrawRect.Height),False);
   end;
 end;
 
-function TNativeDrawCanvas.DrawDesigningText(const ADrawRect:TRectF;
+function TBGRADrawCanvas.DrawDesigningText(const ADrawRect:TRectF;
                                                   const AText:String):Boolean;
 begin
   if GlobalIsDrawDesigningName then
   begin
-    FCanvas.Font.Size:=12;
-    FCanvas.Font.Color:=clBlack;
+    FBGRACanvas.Font.Height:=Floor(-MulDiv(12, Screen.PixelsPerInch, 72));
+    FBGRACanvas.Font.Color:=clBlack;
 
 //    {$IF CompilerVersion >= 35.0}
-//    FCanvas.FillText(ADrawRect,AText,True,0.6,[],TTextAlign.Leading,TTextAlign.Leading);
+//    FBGRACanvas.FillText(ADrawRect,AText,True,0.6,[],TTextAlign.Leading,TTextAlign.Leading);
 //    {$ELSE}
-//    FCanvas.FillText(ADrawRect,AText,True,0.6,[],TTextAlign.taLeading,TTextAlign.taLeading);
+//    FBGRACanvas.FillText(ADrawRect,AText,True,0.6,[],TTextAlign.taLeading,TTextAlign.taLeading);
 //    {$ENDIF}
 //  TTextFormats = (tfBottom, tfCalcRect, tfCenter, tfEditControl, tfEndEllipsis,
 //    tfPathEllipsis, tfExpandTabs, tfExternalLeading, tfLeft, tfModifyString,
@@ -1482,14 +1508,14 @@ begin
 //    tfVerticalCenter, tfWordBreak, tfHidePrefix, tfNoFullWidthCharBreak,
 //    tfPrefixOnly, tfTabStop, tfWordEllipsis, tfComposited);
 //  TTextFormat = set of TTextFormats;
-//    FCanvas.TextRect(Rect(Ceil(ADrawRect.Left),Ceil(ADrawRect.Top),Ceil(ADrawRect.Right),Ceil(ADrawRect.Bottom)),AText,[]);
-    FCanvas.TextRect(RectF2Rect(ADrawRect),0,0,AText);
+//    FBGRACanvas.TextRect(Rect(Ceil(ADrawRect.Left),Ceil(ADrawRect.Top),Ceil(ADrawRect.Right),Ceil(ADrawRect.Bottom)),AText,[]);
+    FBGRACanvas.TextRect(RectF2Rect(ADrawRect),0,0,AText);
   end;
 end;
 
-function TNativeDrawCanvas.BeginDraw: Boolean;
+function TBGRADrawCanvas.BeginDraw: Boolean;
 begin
-//  Result:=Self.FCanvas.BeginScene;
+//  Result:=Self.FBGRACanvas.BeginScene;
 end;
 
 //function TPresentedTextControl_CalcTextObjectSize(ACanvas:TCanvas;
@@ -1596,7 +1622,7 @@ end;
 //end;
 //
 
-function TNativeDrawCanvas.CalcTextDrawSize(const ADrawTextParam:TDrawTextParam;
+function TBGRADrawCanvas.CalcTextDrawSize(const ADrawTextParam:TDrawTextParam;
                                                 const AText:String;
                                                 const ADrawRect:TRectF;
                                                 var ADrawWidth:TControlSize;
@@ -1614,13 +1640,13 @@ function TNativeDrawCanvas.CalcTextDrawSize(const ADrawTextParam:TDrawTextParam;
 //      //不换行
 //      if AText<>'' then
 //      begin
-//        ADrawWidth:=FCanvas.TextWidth(AText);
-//        ADrawHeight:=FCanvas.TextHeight(AText);
+//        ADrawWidth:=FBGRACanvas.TextWidth(AText);
+//        ADrawHeight:=FBGRACanvas.TextHeight(AText);
 //      end
 //      else
 //      begin
 //        ADrawWidth:=0;
-//        ADrawHeight:=FCanvas.TextHeight(' ');
+//        ADrawHeight:=FBGRACanvas.TextHeight(' ');
 //      end;
 //  end
 //  else
@@ -1630,7 +1656,7 @@ function TNativeDrawCanvas.CalcTextDrawSize(const ADrawTextParam:TDrawTextParam;
 //      begin
 //        ADrawRectF:=ADrawTextParam.CalcDrawRect(ADrawRect);
 //        ADrawRectF.Bottom:=ADrawRectF.Top+MaxInt;
-//        FCanvas.MeasureText(ADrawRectF,
+//        FBGRACanvas.MeasureText(ADrawRectF,
 //                            AText,
 //                            ADrawTextParam.IsWordWrap,
 //                            [],
@@ -1642,7 +1668,7 @@ function TNativeDrawCanvas.CalcTextDrawSize(const ADrawTextParam:TDrawTextParam;
 //      else
 //      begin
 //        ADrawWidth:=0;
-//        ADrawHeight:=FCanvas.TextHeight(' ');
+//        ADrawHeight:=FBGRACanvas.TextHeight(' ');
 //      end;
 //  end;
 //  Result:=True;
@@ -1672,11 +1698,11 @@ begin
   BDrawRect:=ADrawTextParam.CalcDrawRect(ADrawRect);
 
   Self.PrepareFont(ADrawTextParam);
-  ASize:=FCanvas.TextExtent(AText);
+  ASize:=FBGRACanvas.TextExtent(AText);
 
 //  if Length(AText)<10 then
 //  begin
-//    TPresentedTextControl_CalcTextObjectSize(FCanvas,
+//    TPresentedTextControl_CalcTextObjectSize(FBGRACanvas,
 //                                              BDrawRect,//MaxInt,
 //                                              ADrawTextParam,
 //                                              AText+' ',//加上一个空格较正
@@ -1685,7 +1711,7 @@ begin
 //  end
 //  else
 //  begin
-//    TPresentedTextControl_CalcTextObjectSize(FCanvas,
+//    TPresentedTextControl_CalcTextObjectSize(FBGRACanvas,
 //                                              BDrawRect,//MaxInt,
 //                                              ADrawTextParam,
 //                                              AText+'修',//要修正,加上一个字符
@@ -1705,7 +1731,7 @@ begin
 
 
 
-//  ATextLayout := TTextLayoutManager.TextLayoutByCanvas(FCanvas.ClassType).Create(FCanvas);
+//  ATextLayout := TTextLayoutManager.TextLayoutByCanvas(FBGRACanvas.ClassType).Create(FBGRACanvas);
 //  try
 //
 //      ATextLayout.BeginUpdate;
@@ -1734,7 +1760,7 @@ begin
 //        end;
 //
 //
-//        FCanvas.Font.Size:=Floor(ADrawTextParam.FontSize);
+//        FBGRACanvas.Font.Size:=Floor(ADrawTextParam.FontSize);
 //        //一定要加Ceil,如果不加Ceil,在Windows上会出现字体异常
 //        ATextLayout.Font.Size:=Floor(ADrawTextParam.FontSize);
 //
@@ -1746,7 +1772,7 @@ begin
 //        ATextLayout.EndUpdate;
 //      end;
 //
-//      ATextLayout.RenderLayout(FCanvas);
+//      ATextLayout.RenderLayout(FBGRACanvas);
 //
 //      ADrawWidth:=ATextLayout.Width;
 //      ADrawHeight:=ATextLayout.Height;
@@ -1758,19 +1784,14 @@ begin
   Result:=True;
 end;
 
-procedure TNativeDrawCanvas.Clear(AColor: TColor;ADrawRect:TRectF);
+procedure TBGRADrawCanvas.Clear(AColor: TColor;ADrawRect:TRectF);
 begin
-  FCanvas.Brush.Style:=bsSolid;
-  FCanvas.Brush.Color:=AColor;
-  FCanvas.FillRect(RectF2Rect(ADrawRect));
+  FBGRACanvas.Brush.Style:=bsSolid;
+  FBGRACanvas.Brush.Color:=AColor;
+  FBGRACanvas.FillRect(RectF2Rect(ADrawRect));
 end;
 
-procedure TNativeDrawCanvas.PrepareBitmap(const ABitmap: TObject);
-begin
-  Prepare(TBitmap(ABitmap).Canvas);
-end;
-
-function TNativeDrawCanvas.DrawLine(const ADrawLineParam: TDrawLineParam;
+function TBGRADrawCanvas.DrawLine(const ADrawLineParam: TDrawLineParam;
                                          X1: Double;
                                          Y1: Double;
                                          X2: Double;
@@ -1798,19 +1819,19 @@ begin
   Y2:=ARectF.Bottom;
 
 
-  Self.FCanvas.Pen.Width:=Ceil(ADrawLineParam.PenWidth);
-  Self.FCanvas.Pen.Style := TPenStyle.psSolid;
-  Self.FCanvas.Pen.Color := ADrawLineParam.PenDrawColor.Color;
+  Self.FBGRACanvas.Pen.Width:=Ceil(ADrawLineParam.PenWidth);
+  Self.FBGRACanvas.Pen.Style := TPenStyle.psSolid;
+  Self.FBGRACanvas.Pen.Color := ADrawLineParam.PenDrawColor.Color;
 
 
 
-  Self.FCanvas.MoveTo(Ceil(X1),Ceil(Y1));
-  Self.FCanvas.LineTo(Ceil(X2),Ceil(Y2));
+  Self.FBGRACanvas.MoveTo(Ceil(X1),Ceil(Y1));
+  Self.FBGRACanvas.LineTo(Ceil(X2),Ceil(Y2));
 
 
-//  Self.FCanvas.Stroke.Thickness:=ADrawLineParam.PenWidth;
-//  Self.FCanvas.Stroke.Kind := TBrushKind.Solid;
-//  Self.FCanvas.Stroke.Color := ADrawLineParam.PenDrawColor.Color;
+//  Self.FBGRACanvas.Stroke.Thickness:=ADrawLineParam.PenWidth;
+//  Self.FBGRACanvas.Stroke.Kind := TBrushKind.Solid;
+//  Self.FBGRACanvas.Stroke.Color := ADrawLineParam.PenDrawColor.Color;
 
 
 //  //校正成0.5
@@ -1831,15 +1852,15 @@ begin
 //    APt2:=TPointF.Create(X2,Y2);
 //  end;
 //
-//  FCanvas.DrawLine(APt1,APt2,ADrawLineParam.DrawAlpha/255);
+//  FBGRACanvas.DrawLine(APt1,APt2,ADrawLineParam.DrawAlpha/255);
 end;
 
-function TNativeDrawCanvas.DrawPath(ADrawPathParam: TDrawPathParam;const ADrawRect: TRectF;APathActions:TPathActionCollection): Boolean;
+function TBGRADrawCanvas.DrawPath(ADrawPathParam: TDrawPathParam;const ADrawRect: TRectF;APathActions:TPathActionCollection): Boolean;
 var
   I: Integer;
   BDrawRect:TRectF;
   APathActionItem:TPathActionItem;
-  ADrawPathData:TNativeDrawPathData;
+  ADrawPathData:TBGRADrawPathData;
   ARect:TRectF;
 //  AIsEnd:Boolean;
 begin
@@ -1848,35 +1869,39 @@ begin
   //根据DrawRectSetting返回需要绘制的实际矩形
   BDrawRect:=ADrawPathParam.CalcDrawRect(ADrawRect);
 
-  ADrawPathData:=TNativeDrawPathData(APathActions.FDrawPathData);
-  ADrawPathData.FCanvas:=FCanvas;
+  ADrawPathData:=TBGRADrawPathData(APathActions.FDrawPathData);
+  //ADrawPathData.FBGRACanvas:=FBGRACanvas;
+  ADrawPathData.FBGRACanvas2D:=FBGRACanvas2D;
 
 
 
   //创建画刷
-  ////  Self.FCanvas.Brush.Kind:=FMX.Graphics.TBrushKind.{$IF CompilerVersion >= 35.0}Solid{$ELSE}bkSolid{$IFEND};
-  //  Self.FCanvas.Brush.Color:=ADrawPathParam.CurrentEffectFillDrawColor.Color;
+  ////  Self.FBGRACanvas.Brush.Kind:=FMX.Graphics.TBrushKind.{$IF CompilerVersion >= 35.0}Solid{$ELSE}bkSolid{$IFEND};
+  //  Self.FBGRACanvas.Brush.Color:=ADrawPathParam.CurrentEffectFillDrawColor.Color;
 
   //  ADrawPathData.Stroke.Thickness:=ADrawPathParam.CurrentEffectPenWidth;
   //  ADrawPathData.Stroke.Kind := TBrushKind.Solid;
   //  ADrawPathData.Stroke.Color := ADrawPathParam.CurrentEffectPenColor.Color;
-  FCanvas.Pen.Width:=ADrawPathParam.CurrentEffectPenWidth;
-  FCanvas.Pen.Style := TPenStyle.psSolid;
-  FCanvas.Pen.Color := ADrawPathParam.CurrentEffectPenColor.Color;
+//  FBGRACanvas.Pen.Width:=ADrawPathParam.CurrentEffectPenWidth;
+//  FBGRACanvas.Pen.Style := TPenStyle.psSolid;
+//  FBGRACanvas.Pen.Color := ADrawPathParam.CurrentEffectPenColor.Color;
 
-
+  FBGRACanvas2D.strokeStyle(ADrawPathParam.CurrentEffectPenColor.Color);
+  FBGRACanvas2D.LineWidth:=ADrawPathParam.CurrentEffectPenWidth;
+  FBGRACanvas2D.lineStyle(TPenStyle.psSolid);
 
   //创建画刷
-  //  Self.FCanvas.Fill.Kind:=FMX.Graphics.TBrushKind.{$IF CompilerVersion >= 35.0}Solid{$ELSE}bkSolid{$IFEND};
-  //  Self.FCanvas.Fill.Color:=ADrawPathParam.CurrentEffectFillDrawColor.Color;
-  Self.FCanvas.Brush.Style:=bsSolid;
-  Self.FCanvas.Brush.Color:=ADrawPathParam.CurrentEffectFillDrawColor.Color;
+  //  Self.FBGRACanvas.Fill.Kind:=FMX.Graphics.TBrushKind.{$IF CompilerVersion >= 35.0}Solid{$ELSE}bkSolid{$IFEND};
+  //  Self.FBGRACanvas.Fill.Color:=ADrawPathParam.CurrentEffectFillDrawColor.Color;
+  //Self.FBGRACanvas.Brush.Style:=bsSolid;
+  //Self.FBGRACanvas.Brush.Color:=ADrawPathParam.CurrentEffectFillDrawColor.Color;
 
+  FBGRACanvas2D.fillStyle(ADrawPathParam.CurrentEffectFillDrawColor.Color);
 
 
 
   ADrawPathData.Clear;
-  //BeginPath(FCanvas.Handle);
+  //BeginPath(FBGRACanvas.Handle);
 
   for I := 0 to APathActions.Count-1 do
   begin
@@ -1930,19 +1955,20 @@ begin
 //          if not AIsEnd then
 //          begin
 //            AIsEnd:=True;
-////            CloseFigure(FCanvas.Handle);
-//            //EndPath(FCanvas.Handle);
+////            CloseFigure(FBGRACanvas.Handle);
+//            //EndPath(FBGRACanvas.Handle);
 //          end;
 
-//          Self.FCanvas.DrawPath(
+//          Self.FBGRACanvas.DrawPath(
 //                ADrawPathData.Path,
 //                ADrawPathParam.DrawAlpha/255,
 //                ADrawPathData.Stroke);
 
 
 
-          //StrokePath(FCanvas.Handle);
-//          StrokeAndFillPath(FCanvas.Handle);
+          //StrokePath(FBGRACanvas.Handle);
+//          StrokeAndFillPath(FBGRACanvas.Handle);
+          ADrawPathData.DrawPath;
         end;
       end;
       patFillPath:
@@ -1950,34 +1976,37 @@ begin
 //        if not AIsEnd then
 //        begin
 //          AIsEnd:=True;
-////          CloseFigure(FCanvas.Handle);
-//          //EndPath(FCanvas.Handle);
+////          CloseFigure(FBGRACanvas.Handle);
+//          //EndPath(FBGRACanvas.Handle);
 //        end;
 
 
-//          Self.FCanvas.FillPath(
+//          Self.FBGRACanvas.FillPath(
 //                ADrawPathData.Path,
 //                ADrawPathParam.DrawAlpha/255,
-//                Self.FCanvas.Fill);
+//                Self.FBGRACanvas.Fill);
 
-        //FillPath(FCanvas.Handle);
+        //FillPath(FBGRACanvas.Handle);
+        ADrawPathData.fillPath;
       end;
       patDrawAndFillPath:
       begin
 //        if not AIsEnd then
 //        begin
 //          AIsEnd:=True;
-////          CloseFigure(FCanvas.Handle);
-//          //EndPath(FCanvas.Handle);
+////          CloseFigure(FBGRACanvas.Handle);
+//          //EndPath(FBGRACanvas.Handle);
 //        end;
 
 
-//          Self.FCanvas.FillPath(
+//          Self.FBGRACanvas.FillPath(
 //                ADrawPathData.Path,
 //                ADrawPathParam.DrawAlpha/255,
-//                Self.FCanvas.Fill);
+//                Self.FBGRACanvas.Fill);
 
-        //StrokeAndFillPath(FCanvas.Handle);
+        //StrokeAndFillPath(FBGRACanvas.Handle);
+        ADrawPathData.DrawPath;
+        ADrawPathData.fillPath;
       end;
 
 
@@ -2048,19 +2077,19 @@ begin
   end;
 end;
 
-function TNativeDrawCanvas.DrawPathData(ADrawPathData: TBaseDrawPathData): Boolean;
+function TBGRADrawCanvas.DrawPathData(ADrawPathData: TBaseDrawPathData): Boolean;
 begin
-  TNativeDrawPathData(ADrawPathData).FCanvas:=FCanvas;
+  TBGRADrawPathData(ADrawPathData).FBGRACanvas2D:=FBGRACanvas2D;
 
 //  DrawPath();
 
-//  Self.FCanvas.Stroke.Thickness:=ADrawPathData.PenWidth;
-//  Self.FCanvas.Stroke.Kind := TBrushKind.Solid;
-//  Self.FCanvas.Stroke.Color := ADrawPathData.PenColor.Color;
-//  Self.FCanvas.DrawPath(TNativeDrawPathData(ADrawPathData).Path,1,Self.FCanvas.Stroke);
+//  Self.FBGRACanvas.Stroke.Thickness:=ADrawPathData.PenWidth;
+//  Self.FBGRACanvas.Stroke.Kind := TBrushKind.Solid;
+//  Self.FBGRACanvas.Stroke.Color := ADrawPathData.PenColor.Color;
+//  Self.FBGRACanvas.DrawPath(TBGRADrawPathData(ADrawPathData).Path,1,Self.FBGRACanvas.Stroke);
 end;
 
-function TNativeDrawCanvas.DrawSkinPicture(const ADrawPictureParam: TDrawPictureParam;
+function TBGRADrawCanvas.DrawSkinPicture(const ADrawPictureParam: TDrawPictureParam;
                                               const ASkinPicture:TSkinPicture;
                                               const ADrawRect: TRectF;
                                               const AIsUseSrcRectAndDestDrawRect:Boolean;
@@ -2128,7 +2157,7 @@ begin
 //    if ADrawPictureParam.CurrentEffectRotateAngle <> 0 then
 //    begin
 //
-////        AbsoluteMatrix:=FCanvas.Matrix;
+////        AbsoluteMatrix:=FBGRACanvas.Matrix;
 //
 //
 //
@@ -2246,8 +2275,8 @@ begin
 //
 //
 //        { rotate }
-//        FCanvas.BeginScene;
-//        FCanvas.SetMatrix(M);
+//        FBGRACanvas.BeginScene;
+//        FBGRACanvas.SetMatrix(M);
 //
 //
 //    end;
@@ -2284,18 +2313,18 @@ begin
 //
 //
 //            //DrawLeftSide
-//            FCanvas.DrawBitmap(ASkinPicture,
+//            FBGRACanvas.DrawBitmap(ASkinPicture,
 //                      CreateRectF(BImageSrcRect.Left,BImageSrcRect.Top,DrawSrcLeft,BImageSrcRect.Bottom),
 //                      CreateRectF(BImageDestDrawRect.Left,BImageDestDrawRect.Top,DrawDstLeft,RectHeightF(BImageDestDrawRect)),
 //                      ADrawPictureParam.DrawAlpha/255,GlobalIsDrawBitmapHignSpeed);
 //            //DrawRightSide
-//            FCanvas.DrawBitmap(ASkinPicture,
+//            FBGRACanvas.DrawBitmap(ASkinPicture,
 //                      CreateRectF(BImageSrcRect.Right-DrawSrcRight,BImageSrcRect.Top,DrawSrcRight,BImageSrcRect.Bottom),
 //                      CreateRectF(BImageDestDrawRect.Right-DrawDstRight,BImageDestDrawRect.Top,DrawDstRight,RectHeightF(BImageDestDrawRect)),
 //                      ADrawPictureParam.DrawAlpha/255,GlobalIsDrawBitmapHignSpeed);
 //
 //            //DrawCenterBlock
-//            FCanvas.DrawBitmap(ASkinPicture,
+//            FBGRACanvas.DrawBitmap(ASkinPicture,
 //                      CreateRectF(BImageSrcRect.Left+DrawSrcLeft,BImageSrcRect.Top,RectWidthF(BImageSrcRect)-DrawSrcLeft-DrawSrcRight,RectHeightF(BImageSrcRect)),
 //                      CreateRectF(BImageDestDrawRect.Left+DrawDstLeft,BImageDestDrawRect.Top,RectWidthF(BImageDestDrawRect)-DrawDstLeft-DrawDstRight,RectHeightF(BImageDestDrawRect)),
 //                      ADrawPictureParam.DrawAlpha/255,GlobalIsDrawBitmapHignSpeed);
@@ -2307,7 +2336,7 @@ begin
 //            case ADrawPictureParam.PictureTooSmallProcessType of
 //              itsptTensile:
 //              begin
-//                FCanvas.DrawBitmap(ASkinPicture,
+//                FBGRACanvas.DrawBitmap(ASkinPicture,
 //                                    CreateRectF(BImageSrcRect.Left,BImageSrcRect.Top,RectWidthF(BImageSrcRect),RectHeightF(BImageSrcRect)),
 //                                    BImageDestDrawRect,
 //                                    ADrawPictureParam.DrawAlpha/255,GlobalIsDrawBitmapHignSpeed);
@@ -2315,7 +2344,7 @@ begin
 //              itsptPart:
 //              begin
 //                //DrawLeftSide
-//                FCanvas.DrawBitmap(ASkinPicture,
+//                FBGRACanvas.DrawBitmap(ASkinPicture,
 //                          CreateRectF(BImageSrcRect.Left,BImageSrcRect.Top,RectWidthF(BImageDestDrawRect),BImageSrcRect.Bottom),
 //                          BImageDestDrawRect,
 //                          ADrawPictureParam.DrawAlpha/255,GlobalIsDrawBitmapHignSpeed);
@@ -2351,18 +2380,18 @@ begin
 //
 //
 //            //DrawTopSide
-//            FCanvas.DrawBitmap(ASkinPicture,
+//            FBGRACanvas.DrawBitmap(ASkinPicture,
 //                      CreateRectF(BImageSrcRect.Left,BImageSrcRect.Top,RectWidthF(BImageSrcRect),DrawSrcTop),
 //                      CreateRectF(BImageDestDrawRect.Left,BImageDestDrawRect.Top,RectWidthF(BImageDestDrawRect),DrawDstTop),
 //                      ADrawPictureParam.DrawAlpha/255,GlobalIsDrawBitmapHignSpeed);
 //            //DrawBottomSide
-//            FCanvas.DrawBitmap(ASkinPicture,
+//            FBGRACanvas.DrawBitmap(ASkinPicture,
 //                      CreateRectF(BImageSrcRect.Left,BImageSrcRect.Bottom-DrawSrcBottom,RectWidthF(BImageSrcRect),DrawSrcBottom),
 //                      CreateRectF(BImageDestDrawRect.Left,BImageDestDrawRect.Bottom-DrawDstBottom,RectWidthF(BImageDestDrawRect),DrawDstBottom),
 //                      ADrawPictureParam.DrawAlpha/255,GlobalIsDrawBitmapHignSpeed);
 //
 //            //DrawCenterBlock
-//            FCanvas.DrawBitmap(ASkinPicture,
+//            FBGRACanvas.DrawBitmap(ASkinPicture,
 //                      CreateRectF(BImageSrcRect.Left,BImageSrcRect.Top+DrawSrcTop,RectWidthF(BImageSrcRect),RectHeightF(BImageSrcRect)-DrawSrcTop-DrawSrcBottom),
 //                      CreateRectF(BImageDestDrawRect.Left,BImageDestDrawRect.Top+DrawDstTop,RectWidthF(BImageDestDrawRect),RectHeightF(BImageDestDrawRect)-DrawDstTop-DrawDstBottom),
 //                      ADrawPictureParam.DrawAlpha/255,GlobalIsDrawBitmapHignSpeed);
@@ -2374,7 +2403,7 @@ begin
 //            case ADrawPictureParam.PictureTooSmallProcessType of
 //              itsptTensile:
 //              begin
-//                FCanvas.DrawBitmap(ASkinPicture,
+//                FBGRACanvas.DrawBitmap(ASkinPicture,
 //                                    CreateRectF(BImageSrcRect.Left,BImageSrcRect.Top,RectWidthF(BImageSrcRect),RectHeightF(BImageSrcRect)),
 //                                    BImageDestDrawRect,
 //                                    ADrawPictureParam.DrawAlpha/255,GlobalIsDrawBitmapHignSpeed);
@@ -2382,7 +2411,7 @@ begin
 //              itsptPart:
 //              begin
 //                //DrawTopSide
-//                FCanvas.DrawBitmap(ASkinPicture,
+//                FBGRACanvas.DrawBitmap(ASkinPicture,
 //                          CreateRectF(BImageSrcRect.Left,BImageSrcRect.Top,BImageSrcRect.Right,RectHeightF(BImageDestDrawRect)),
 //                          BImageDestDrawRect,
 //                          ADrawPictureParam.DrawAlpha/255,GlobalIsDrawBitmapHignSpeed);
@@ -2424,22 +2453,22 @@ begin
 //
 //
 //            //DrawLeftTopBlock
-//            FCanvas.DrawBitmap(ASkinPicture,
+//            FBGRACanvas.DrawBitmap(ASkinPicture,
 //                      CreateRectF(BImageSrcRect.Left,BImageSrcRect.Top,DrawSrcLeft,DrawSrcTop),
 //                      CreateRectF(BImageDestDrawRect.Left,BImageDestDrawRect.Top,DrawDstLeft,DrawDstTop),
 //                      ADrawPictureParam.DrawAlpha/255,GlobalIsDrawBitmapHignSpeed);
 //            //DrawRightTopBlock
-//            FCanvas.DrawBitmap(ASkinPicture,
+//            FBGRACanvas.DrawBitmap(ASkinPicture,
 //                      CreateRectF(BImageSrcRect.Right-DrawSrcRight,BImageSrcRect.Top,DrawSrcRight,DrawSrcTop),
 //                      CreateRectF(BImageDestDrawRect.Right-DrawDstRight,BImageDestDrawRect.Top,DrawDstRight,DrawDstTop),
 //                      ADrawPictureParam.DrawAlpha/255,GlobalIsDrawBitmapHignSpeed);
 //            //DrawLeftBottomBlock
-//            FCanvas.DrawBitmap(ASkinPicture,
+//            FBGRACanvas.DrawBitmap(ASkinPicture,
 //                      CreateRectF(BImageSrcRect.Left,BImageSrcRect.Bottom-DrawSrcBottom,DrawSrcLeft,DrawSrcBottom),
 //                      CreateRectF(BImageDestDrawRect.Left,BImageDestDrawRect.Bottom-DrawDstBottom,DrawDstLeft,DrawDstBottom),
 //                      ADrawPictureParam.DrawAlpha/255,GlobalIsDrawBitmapHignSpeed);
 //            //DrawRightBottomBlock
-//            FCanvas.DrawBitmap(ASkinPicture,
+//            FBGRACanvas.DrawBitmap(ASkinPicture,
 //                      CreateRectF(BImageSrcRect.Right-DrawSrcRight,BImageSrcRect.Bottom-DrawSrcBottom,DrawSrcRight,DrawSrcBottom),
 //                      CreateRectF(BImageDestDrawRect.Right-DrawDstRight,BImageDestDrawRect.Bottom-DrawDstBottom,DrawDstRight,DrawDstBottom),
 //                      ADrawPictureParam.DrawAlpha/255,GlobalIsDrawBitmapHignSpeed);
@@ -2447,7 +2476,7 @@ begin
 //
 //
 //            //DrawTopSide
-//            FCanvas.DrawBitmap(ASkinPicture,
+//            FBGRACanvas.DrawBitmap(ASkinPicture,
 //                      CreateRectF(BImageSrcRect.Left+DrawSrcLeft,BImageSrcRect.Top,BImageSrcRect.Right-DrawSrcLeft-DrawSrcRight,DrawSrcTop),
 //                      CreateRectF(BImageDestDrawRect.Left+DrawDstLeft-ADrawAdjust,
 //                                  BImageDestDrawRect.Top,
@@ -2455,7 +2484,7 @@ begin
 //                                  DrawDstTop),
 //                      ADrawPictureParam.DrawAlpha/255,GlobalIsDrawBitmapHignSpeed);
 //            //DrawBottomSide
-//            FCanvas.DrawBitmap(ASkinPicture,
+//            FBGRACanvas.DrawBitmap(ASkinPicture,
 //                      CreateRectF(BImageSrcRect.Left+DrawSrcLeft,BImageSrcRect.Bottom-DrawSrcBottom,BImageSrcRect.Right-DrawSrcLeft-DrawSrcRight,DrawSrcBottom),
 //                      CreateRectF(BImageDestDrawRect.Left+DrawDstLeft-ADrawAdjust,
 //                                  BImageDestDrawRect.Bottom-DrawDstBottom,
@@ -2464,7 +2493,7 @@ begin
 //                      ADrawPictureParam.DrawAlpha/255,GlobalIsDrawBitmapHignSpeed);
 //
 //            //DrawLeftSide
-//            FCanvas.DrawBitmap(ASkinPicture,
+//            FBGRACanvas.DrawBitmap(ASkinPicture,
 //                      CreateRectF(BImageSrcRect.Left,BImageSrcRect.Top+DrawSrcTop,DrawSrcLeft,BImageSrcRect.Bottom-DrawSrcTop-DrawSrcBottom),
 //                      CreateRectF(BImageDestDrawRect.Left,
 //                                  BImageDestDrawRect.Top+DrawDstTop-ADrawAdjust,
@@ -2472,7 +2501,7 @@ begin
 //                                  RectHeightF(BImageDestDrawRect)-DrawDstTop-DrawDstBottom+2*ADrawAdjust),
 //                      ADrawPictureParam.DrawAlpha/255,GlobalIsDrawBitmapHignSpeed);
 //            //DrawRightSide
-//            FCanvas.DrawBitmap(ASkinPicture,
+//            FBGRACanvas.DrawBitmap(ASkinPicture,
 //                      CreateRectF(BImageSrcRect.Right-DrawSrcRight,BImageSrcRect.Top+DrawSrcTop,DrawSrcRight,BImageSrcRect.Bottom-DrawSrcTop-DrawSrcBottom),
 //                      CreateRectF(BImageDestDrawRect.Right-DrawDstRight,
 //                                  BImageDestDrawRect.Top+DrawDstTop-ADrawAdjust,
@@ -2482,7 +2511,7 @@ begin
 //
 //
 //            //DrawCenterBlock
-//            FCanvas.DrawBitmap(ASkinPicture,
+//            FBGRACanvas.DrawBitmap(ASkinPicture,
 //                      CreateRectF(BImageSrcRect.Left+DrawSrcLeft,BImageSrcRect.Top+DrawSrcTop,RectWidthF(BImageSrcRect)-DrawSrcLeft-DrawSrcRight,RectHeightF(BImageSrcRect)-DrawSrcTop-DrawSrcBottom),
 //                      CreateRectF(BImageDestDrawRect.Left+DrawDstLeft-ADrawAdjust,
 //                                  BImageDestDrawRect.Top+DrawDstTop-ADrawAdjust,
@@ -2497,7 +2526,7 @@ begin
 //          end
 //          else
 //          begin
-//            FCanvas.DrawBitmap(ASkinPicture,
+//            FBGRACanvas.DrawBitmap(ASkinPicture,
 //                                CreateRectF(BImageSrcRect.Left,BImageSrcRect.Top,RectWidthF(BImageSrcRect),RectHeightF(BImageSrcRect)),
 //                                BImageDestDrawRect,
 //                                ADrawPictureParam.DrawAlpha/255,GlobalIsDrawBitmapHignSpeed);
@@ -2539,7 +2568,7 @@ begin
 ////                        (BImageSrcRect.Bottom-BImageSrcRect.Top);
 ////              end;
 //          end;
-//          FCanvas.DrawBitmap(ASkinPicture,
+//          FBGRACanvas.DrawBitmap(ASkinPicture,
 //                            BImageSrcRect,
 //                            BImageDestDrawRect,
 //                            ADrawPictureParam.DrawAlpha/255,GlobalIsDrawBitmapHignSpeed);
@@ -2547,11 +2576,11 @@ begin
 //      else
 //      begin
 
-//          FCanvas.DrawBitmap(ASkinPicture,
+//          FBGRACanvas.DrawBitmap(ASkinPicture,
 //                            CreateRectF(BImageSrcRect.Left,BImageSrcRect.Top,RectWidthF(BImageSrcRect),RectHeightF(BImageSrcRect)),
 //                            BImageDestDrawRect,
 //                            ADrawPictureParam.DrawAlpha/255,GlobalIsDrawBitmapHignSpeed);
-          FCanvas.StretchDraw(RectF2Rect(BImageDestDrawRect),ASkinPicture.Graphic);
+          FBGRACanvas.StretchDraw(RectF2Rect(BImageDestDrawRect),TBGRASkinPictureEngine(ASkinPicture.SkinPictureEngine).Bitmap);
 
 //      end;
 //    end;
@@ -2560,11 +2589,15 @@ begin
   else
   begin
 
-//    FCanvas.DrawBitmap(ASkinPicture,
+//    FBGRACanvas.DrawBitmap(ASkinPicture,
 //                        BImageSrcRect,
 //                        BImageDestDrawRect,
 //                        ADrawPictureParam.DrawAlpha/255,GlobalIsDrawBitmapHignSpeed);
-      FCanvas.StretchDraw(RectF2Rect(BImageDestDrawRect),ASkinPicture.Graphic);
+      if TBGRASkinPictureEngine(ASkinPicture.SkinPictureEngine).Bitmap<>nil then
+      begin
+        FBGRACanvas.StretchDraw(RectF2Rect(BImageDestDrawRect),TBGRASkinPictureEngine(ASkinPicture.SkinPictureEngine).Bitmap);
+
+      end;
 
   end;
 
@@ -2572,12 +2605,12 @@ begin
 
 //  if ADrawPictureParam.CurrentEffectRotateAngle <> 0 then
 //  begin
-//    FCanvas.EndScene;
-//    FCanvas.SetMatrix(AbsoluteMatrix);
+//    FBGRACanvas.EndScene;
+//    FBGRACanvas.SetMatrix(AbsoluteMatrix);
 //  end;
 end;
 
-//function TNativeDrawCanvas.DrawPolygon(ADrawPolygonParam:TDrawPolygonParam;const ADrawPoints: array of TPoint):Boolean;
+//function TBGRADrawCanvas.DrawPolygon(ADrawPolygonParam:TDrawPolygonParam;const ADrawPoints: array of TPoint):Boolean;
 //var
 //  I: Integer;
 //  APolygon: TPolygon;
@@ -2605,38 +2638,38 @@ end;
 //    //创建画刷
 //    if ADrawPolygonParam.LinearGradientType=lgtNone then
 //    begin
-//      Self.FCanvas.Fill.Kind:=FMX.Graphics.TBrushKind.bkSolid;
-//      Self.FCanvas.Fill.Color:=ADrawPolygonParam.FillColor.Color;
+//      Self.FBGRACanvas.Fill.Kind:=FMX.Graphics.TBrushKind.bkSolid;
+//      Self.FBGRACanvas.Fill.Color:=ADrawPolygonParam.FillColor.Color;
 //    end
 //    else
 //    begin
-//      Self.FCanvas.Fill.Kind:=FMX.Graphics.TBrushKind.bkSolid;
-//      Self.FCanvas.Fill.Gradient.Color:=ADrawPolygonParam.LinearGradientFillColor1.Color;
-//      Self.FCanvas.Fill.Gradient.Color1:=ADrawPolygonParam.LinearGradientFillColor2.Color;
+//      Self.FBGRACanvas.Fill.Kind:=FMX.Graphics.TBrushKind.bkSolid;
+//      Self.FBGRACanvas.Fill.Gradient.Color:=ADrawPolygonParam.LinearGradientFillColor1.Color;
+//      Self.FBGRACanvas.Fill.Gradient.Color1:=ADrawPolygonParam.LinearGradientFillColor2.Color;
 //      case ADrawPolygonParam.LinearGradientType of
-//        lgtVert: Self.FCanvas.Fill.Gradient.Style:=FMX.Graphics.TGradientStyle.gsRadial;
-//        lgtHorz: Self.FCanvas.Fill.Gradient.Style:=FMX.Graphics.TGradientStyle.gsLinear;
+//        lgtVert: Self.FBGRACanvas.Fill.Gradient.Style:=FMX.Graphics.TGradientStyle.gsRadial;
+//        lgtHorz: Self.FBGRACanvas.Fill.Gradient.Style:=FMX.Graphics.TGradientStyle.gsLinear;
 //      end;
 //    end;
-//    FCanvas.FillPolygon(APolygon,(ADrawPolygonParam.FillColor.Alpha/255)*(ADrawPolygonParam.DrawAlpha/255));
+//    FBGRACanvas.FillPolygon(APolygon,(ADrawPolygonParam.FillColor.Alpha/255)*(ADrawPolygonParam.DrawAlpha/255));
 //  end;
 //
 //  if //ADrawPolygonParam.IsDrawBorder and
 //   (ADrawPolygonParam.BorderWidth>0) then
 //  begin
 //    //创建画笔
-//    Self.FCanvas.Stroke.Color:=ADrawPolygonParam.BorderColor.Color;
-//    Self.FCanvas.Stroke.Thickness:=ADrawPolygonParam.BorderWidth;
-//    Self.FCanvas.Stroke.Kind := TBrushKind.Solid;
+//    Self.FBGRACanvas.Stroke.Color:=ADrawPolygonParam.BorderColor.Color;
+//    Self.FBGRACanvas.Stroke.Thickness:=ADrawPolygonParam.BorderWidth;
+//    Self.FBGRACanvas.Stroke.Kind := TBrushKind.Solid;
 //
-//    Self.FCanvas.DrawPolygon(APolygon,(ADrawPolygonParam.BorderColor.Alpha/255)*(ADrawPolygonParam.DrawAlpha/255));
+//    Self.FBGRACanvas.DrawPolygon(APolygon,(ADrawPolygonParam.BorderColor.Alpha/255)*(ADrawPolygonParam.DrawAlpha/255));
 //  end;
 //
 //  SetLength(APolygon,0);
 //end;
 
 
-function TNativeDrawCanvas.DrawRect(const ADrawRectParam: TDrawRectParam;
+function TBGRADrawCanvas.DrawRect(const ADrawRectParam: TDrawRectParam;
                                         const ADrawRect: TRectF): Boolean;
 var
   AFillRect:TRectF;
@@ -2816,7 +2849,7 @@ begin
 //              end;
 //
 //
-//              FCanvas.DrawBitmap(ADrawRectParam.FShadowEffectBitmap,
+//              FBGRACanvas.DrawBitmap(ADrawRectParam.FShadowEffectBitmap,
 //                                RectF(0, 0, ADrawRectParam.FShadowEffectBitmap.Width, ADrawRectParam.FShadowEffectBitmap.Height),
 //                                ADrawRectParam.FShadowEffectRect,
 //                                1,
@@ -2828,36 +2861,36 @@ begin
 
 //          //创建画刷
 //          case ADrawRectParam.BrushKind of
-//            drpbkNone: Self.FCanvas.Fill.Kind:=FMX.Graphics.TBrushKind.None;
-//            drpbkFill: Self.FCanvas.Fill.Kind:=FMX.Graphics.TBrushKind.Solid;
-//            drpbkGradient: Self.FCanvas.Fill.Kind:=FMX.Graphics.TBrushKind.Gradient;
+//            drpbkNone: Self.FBGRACanvas.Fill.Kind:=FMX.Graphics.TBrushKind.None;
+//            drpbkFill: Self.FBGRACanvas.Fill.Kind:=FMX.Graphics.TBrushKind.Solid;
+//            drpbkGradient: Self.FBGRACanvas.Fill.Kind:=FMX.Graphics.TBrushKind.Gradient;
 //          end;
 
 //          //创建画刷
 //          case ADrawRectParam.BrushKind of
 //            drpbkNone:
-//              Self.FCanvas.Brush.Kind:=FMX.Graphics.TBrushKind.None;
+//              Self.FBGRACanvas.Brush.Kind:=FMX.Graphics.TBrushKind.None;
 //            drpbkFill:
-//              Self.FCanvas.Brush.Kind:=FMX.Graphics.TBrushKind.Solid;
+//              Self.FBGRACanvas.Brush.Kind:=FMX.Graphics.TBrushKind.Solid;
 //            drpbkGradient:
 //            begin
-//              Self.FCanvas.Brush.Kind:=FMX.Graphics.TBrushKind.Gradient;
-//              Self.FCanvas.Brush.Gradient.Assign(ADrawRectParam.Gradient);
-//              Self.FCanvas.Brush.Gradient.Color:=ADrawRectParam.FillColor.Color;
+//              Self.FBGRACanvas.Brush.Kind:=FMX.Graphics.TBrushKind.Gradient;
+//              Self.FBGRACanvas.Brush.Gradient.Assign(ADrawRectParam.Gradient);
+//              Self.FBGRACanvas.Brush.Gradient.Color:=ADrawRectParam.FillColor.Color;
 //            end;
 //          end;
-          Self.FCanvas.Pen.Style:=psClear;
-          Self.FCanvas.Brush.Style:=TBrushStyle.bsSolid;
+          Self.FBGRACanvas.Pen.Style:=psClear;
+          Self.FBGRACanvas.Brush.Style:=TBrushStyle.bsSolid;
 
-          Self.FCanvas.Brush.Color:=ADrawRectParam.CurrentEffectFillDrawColor.Color;
+          Self.FBGRACanvas.Brush.Color:=ADrawRectParam.CurrentEffectFillDrawColor.Color;
 
 
 
 //          //创建画刷
 //          case ADrawRectParam.BrushKind of
-//            drpbkNone: Self.FCanvas.Fill.Kind:=FMX.Graphics.TBrushKind.None;
-//            drpbkFill: Self.FCanvas.Fill.Kind:=FMX.Graphics.TBrushKind.Solid;
-//            drpbkGradient: Self.FCanvas.Fill.Kind:=FMX.Graphics.TBrushKind.Gradient;
+//            drpbkNone: Self.FBGRACanvas.Fill.Kind:=FMX.Graphics.TBrushKind.None;
+//            drpbkFill: Self.FBGRACanvas.Fill.Kind:=FMX.Graphics.TBrushKind.Solid;
+//            drpbkGradient: Self.FBGRACanvas.Fill.Kind:=FMX.Graphics.TBrushKind.Gradient;
 //          end;
 
 //          if ADrawRectParam.FIsClipRound then
@@ -2895,13 +2928,13 @@ begin
                 begin
 
                       //不是圆角
-//                      FCanvas.FillRect(AFillRect,0,0,[],ADrawRectParam.DrawAlpha/255);
-                      FCanvas.FillRect(RectF2Rect(AFillRect));
+//                      FBGRACanvas.FillRect(AFillRect,0,0,[],ADrawRectParam.DrawAlpha/255);
+                      FBGRACanvas.FillRect(RectF2Rect(AFillRect));
                 end
                 else
                 begin
 
-                      FCanvas.RoundRect(RectF2Rect(AFillRect),Ceil(ARoundWidth),Ceil(ARoundHeight));
+                      FBGRACanvas.RoundRect(RectF2Rect(AFillRect),Ceil(ARoundWidth),Ceil(ARoundHeight));
 
                 end;
 
@@ -2912,7 +2945,7 @@ begin
       end
       else
       begin
-          Self.FCanvas.Brush.Style:=TBrushStyle.bsClear;
+          Self.FBGRACanvas.Brush.Style:=TBrushStyle.bsClear;
 
       end;
 
@@ -2921,13 +2954,13 @@ begin
       //有边框
       if (ADrawRectParamCurrentEffectBorderWidth>0) then
       begin
-          Self.FCanvas.Brush.Style:=bsClear;
+          Self.FBGRACanvas.Brush.Style:=bsClear;
 
           //创建画笔
-          Self.FCanvas.Pen.Color:=ADrawRectParam.CurrentEffectBorderColor.Color;
-          Self.FCanvas.Pen.Width:=Ceil(ADrawRectParamCurrentEffectBorderWidth);
-          Self.FCanvas.Pen.Style:=TPenStyle.psSolid;
-//          Self.FCanvas.Pen.Dash:=TStrokeDash.{$IF CompilerVersion >= 35.0}Solid{$ELSE}sdSolid{$IFEND};
+          Self.FBGRACanvas.Pen.Color:=ADrawRectParam.CurrentEffectBorderColor.Color;
+          Self.FBGRACanvas.Pen.Width:=Ceil(ADrawRectParamCurrentEffectBorderWidth);
+          Self.FBGRACanvas.Pen.Style:=TPenStyle.psSolid;
+//          Self.FBGRACanvas.Pen.Dash:=TStrokeDash.{$IF CompilerVersion >= 35.0}Solid{$ELSE}sdSolid{$IFEND};
 
           ADrawBorderRect:=BDrawRect;
 
@@ -2939,29 +2972,29 @@ begin
               //四边俱全
               if Not ADrawRectParam.IsRound then
               begin
-//                FCanvas.DrawRect(ADrawBorderRect,
+//                FBGRACanvas.DrawRect(ADrawBorderRect,
 //                                  0,
 //                                  0,
 //                                  [],
 //                                  ADrawRectParam.DrawAlpha/255);
-                  FCanvas.Rectangle(Ceil(ADrawBorderRect.Left),Ceil(ADrawBorderRect.Top),Ceil(ADrawBorderRect.Right),Ceil(ADrawBorderRect.Bottom));
+                  FBGRACanvas.Rectangle(Ceil(ADrawBorderRect.Left),Ceil(ADrawBorderRect.Top),Ceil(ADrawBorderRect.Right),Ceil(ADrawBorderRect.Bottom));
 
               end
               else
               begin
-//                CanvasDrawRectRoundFix(FCanvas,
+//                CanvasDrawRectRoundFix(FBGRACanvas,
 //                                        ADrawBorderRect,
 //                                        ARoundWidth,
 //                                        ARoundHeight,
 //                                        ACorners,
 //                                        ADrawRectParam.DrawAlpha/255,
-//                                        Self.FCanvas.Stroke);
-////                FCanvas.DrawRect(ADrawBorderRect,
+//                                        Self.FBGRACanvas.Stroke);
+////                FBGRACanvas.DrawRect(ADrawBorderRect,
 ////                                  ARoundWidth,
 ////                                  ARoundHeight,
 ////                                  ACorners,
 ////                                  ADrawRectParam.DrawAlpha/255);
-                  FCanvas.RoundRect(RectF2Rect(AFillRect),Ceil(ARoundWidth),Ceil(ARoundHeight));
+                  FBGRACanvas.RoundRect(RectF2Rect(AFillRect),Ceil(ARoundWidth),Ceil(ARoundHeight));
               end;
 
 
@@ -2971,24 +3004,24 @@ begin
 //              //四边不全
 //              if Not ADrawRectParam.IsRound then
 //              begin
-//                  FCanvas.DrawRectSides(ADrawBorderRect,0,0,ACorners,ADrawRectParam.DrawAlpha/255,ASides);
+//                  FBGRACanvas.DrawRectSides(ADrawBorderRect,0,0,ACorners,ADrawRectParam.DrawAlpha/255,ASides);
 //              end
 //              else
 //              begin
-//                CanvasDrawRectSidesRoundFix(FCanvas,
+//                CanvasDrawRectSidesRoundFix(FBGRACanvas,
 //                                            ADrawBorderRect,
 //                                            ADrawRectParam.RoundWidth,
 //                                            ADrawRectParam.RoundHeight,
 //                                            ACorners,
 //                                            ADrawRectParam.DrawAlpha/255,
 //                                            ASides,
-//                                            FCanvas.Stroke);
+//                                            FBGRACanvas.Stroke);
 //              end;
 //          end;
       end
       else
       begin
-//          Self.FCanvas.Pen.Style:=TPenStyle.psClear;
+//          Self.FBGRACanvas.Pen.Style:=TPenStyle.psClear;
 
       end;
 
@@ -2999,10 +3032,10 @@ begin
 //
 //
 //      //宽度或高度为1,或小于1
-//      Self.FCanvas.Stroke.Thickness:=DefaultPenWidth;
-//      Self.FCanvas.Stroke.Kind := TBrushKind.Solid;
-//      Self.FCanvas.Stroke.Color := ADrawRectParam.FillDrawColor.Color;
-//      Self.FCanvas.Stroke.Dash := TStrokeDash.{$IF CompilerVersion >= 35.0}Solid{$ELSE}sdSolid{$IFEND};
+//      Self.FBGRACanvas.Stroke.Thickness:=DefaultPenWidth;
+//      Self.FBGRACanvas.Stroke.Kind := TBrushKind.Solid;
+//      Self.FBGRACanvas.Stroke.Color := ADrawRectParam.FillDrawColor.Color;
+//      Self.FBGRACanvas.Stroke.Dash := TStrokeDash.{$IF CompilerVersion >= 35.0}Solid{$ELSE}sdSolid{$IFEND};
 //
 //
 //      APt1:=TPointF.Create(0,0);
@@ -3051,7 +3084,7 @@ begin
 //      end;
 //
 //
-//      FCanvas.DrawLine(APt1,APt2,ADrawRectParam.DrawAlpha/255);
+//      FBGRACanvas.DrawLine(APt1,APt2,ADrawRectParam.DrawAlpha/255);
 //  end;
 
 
@@ -3060,13 +3093,13 @@ begin
 //  begin
 //
 //        //不是圆角
-////                      FCanvas.FillRect(AFillRect,0,0,[],ADrawRectParam.DrawAlpha/255);
-//        FCanvas.FillRect(Rect(Ceil(AFillRect.Left),Ceil(AFillRect.Top),Ceil(AFillRect.Right),Ceil(AFillRect.Bottom)));
+////                      FBGRACanvas.FillRect(AFillRect,0,0,[],ADrawRectParam.DrawAlpha/255);
+//        FBGRACanvas.FillRect(Rect(Ceil(AFillRect.Left),Ceil(AFillRect.Top),Ceil(AFillRect.Right),Ceil(AFillRect.Bottom)));
 //  end
 //  else
 //  begin
 //
-//        FCanvas.RoundRect(RectF2Rect(AFillRect),Ceil(ARoundWidth),Ceil(ARoundHeight));
+//        FBGRACanvas.RoundRect(RectF2Rect(AFillRect),Ceil(ARoundWidth),Ceil(ARoundHeight));
 //  end;
 
 
@@ -3075,13 +3108,13 @@ begin
 //  except
 //    on E:Exception do
 //    begin
-//      FMX.Types.Log.d('OrangeUI TNativeDrawCanvas.DrawRect '+E.Message)
+//      FMX.Types.Log.d('OrangeUI TBGRADrawCanvas.DrawRect '+E.Message)
 //    end;
 //  end;
 
 end;
 
-function TNativeDrawCanvas.DrawText(const ADrawTextParam: TDrawTextParam;
+function TBGRADrawCanvas.DrawText(const ADrawTextParam: TDrawTextParam;
                                         const AText: String;
                                         const ADrawRect:TRectF;
                                         const AColorTextList:IColorTextList): Boolean;
@@ -3115,7 +3148,7 @@ begin
 
 
   //无背景
-  FCanvas.Brush.Style:=bsClear;
+  FBGRACanvas.Brush.Style:=bsClear;
 
 
   BText:=AText;
@@ -3159,7 +3192,7 @@ begin
   {$ENDIF}
 
   {$IFDEF FPC}
-  ATextStyle := Canvas.TextStyle;
+  ATextStyle := FBGRACanvas.TextStyle;
   //  //水平对齐
   //  AHTextAlign:=TTextAlign.{$IF CompilerVersion >= 35.0}Leading{$ELSE}taLeading{$IFEND};
     case ADrawTextParam.FontHorzAlign of
@@ -3200,12 +3233,12 @@ begin
                 ADrawFontColor:=ADrawTextParam.CurrentEffectFontColor;
               end;
 
-              FCanvas.Font.Assign(ADrawFont);
-              FCanvas.Font.Color:=ADrawFontColor.Color;
+              FBGRACanvas.Font.Assign(ADrawFont);
+              FBGRACanvas.Font.Color:=ADrawFontColor.Color;
 
 
-              AColorTextItem.DrawWidth:=FCanvas.TextWidth(AColorTextItem.FText);
-              AColorTextItem.DrawHeight:=FCanvas.TextHeight(AColorTextItem.FText);
+              AColorTextItem.DrawWidth:=FBGRACanvas.TextWidth(AColorTextItem.FText);
+              AColorTextItem.DrawHeight:=FBGRACanvas.TextHeight(AColorTextItem.FText);
               ADrawTextSumWidth:=ADrawTextSumWidth+AColorTextItem.DrawWidth;
 
               AColorTextItem.DrawTop:=0;
@@ -3257,11 +3290,11 @@ begin
           end;
 
 
-          FCanvas.Font.Assign(ADrawFont);
-          FCanvas.Font.Color:=ADrawFontColor.Color;
+          FBGRACanvas.Font.Assign(ADrawFont);
+          FBGRACanvas.Font.Color:=ADrawFontColor.Color;
 
 
-//          FCanvas.FillText(RectF(BDrawRect.Left+ADrawStartLeft,
+//          FBGRACanvas.FillText(RectF(BDrawRect.Left+ADrawStartLeft,
 //                                 BDrawRect.Top+AColorTextItem.DrawTop,
 //                                 BDrawRect.Left+ADrawStartLeft+AColorTextItem.DrawWidth,
 //                                 BDrawRect.Top+AColorTextItem.DrawTop+AColorTextItem.DrawHeight
@@ -3273,7 +3306,7 @@ begin
 //                                 TTextAlign.{$IF CompilerVersion >= 35.0}Leading{$ELSE}taLeading{$IFEND},
 //                                 AVTextAlign
 //                                 );
-          FCanvas.TextOut(Ceil(BDrawRect.Left+ADrawStartLeft),Ceil(BDrawRect.Top+AColorTextItem.DrawTop),AColorTextItem.FText);
+          FBGRACanvas.TextOut(Ceil(BDrawRect.Left+ADrawStartLeft),Ceil(BDrawRect.Top+AColorTextItem.DrawTop),AColorTextItem.FText);
           ADrawStartLeft:=ADrawStartLeft+AColorTextItem.DrawWidth;
         end;
 
@@ -3285,7 +3318,7 @@ begin
 
 //  if ADrawTextParam.FTextLayout=nil then
 //  begin
-//    ADrawTextParam.FTextLayout := TTextLayoutManager.TextLayoutByCanvas(FCanvas.ClassType).Create(FCanvas);
+//    ADrawTextParam.FTextLayout := TTextLayoutManager.TextLayoutByCanvas(FBGRACanvas.ClassType).Create(FBGRACanvas);
 //  end;
 //
 //
@@ -3323,7 +3356,7 @@ begin
 //  end;
 
 
-  FCanvas.Font.Size:=Floor(ADrawTextParam.CurrentEffectFontSize);
+  FBGRACanvas.Font.Height:=Floor(-MulDiv(ADrawFont.Size, Screen.PixelsPerInch, 72));
 //  //一定要加Ceil,如果不加Ceil,在Windows上会出现字体异常
 //  ADrawTextParam.FTextLayout.Font.Size:=Floor(ADrawTextParam.CurrentEffectFontSize);
 ////  uBaseLog.OutputDebugString('CurrentEffectFontSize'+FloatToStr(ADrawTextParam.CurrentEffectFontSize));
@@ -3378,14 +3411,14 @@ begin
   tempDrawRect:=RectF2Rect(BDrawRect);
 
   {$IFDEF FPC}
-  //Self.FCanvas.TextOut(Ceil(BDrawRect.Left),Ceil(BDrawRect.Top),BText);
-  Canvas.TextRect(tempDrawRect, tempDrawRect.Left, tempDrawRect.Top, BText, ATextStyle);
+  //Self.FBGRACanvas.TextOut(Ceil(BDrawRect.Left),Ceil(BDrawRect.Top),BText);
+  FBGRACanvas.TextRect(tempDrawRect, tempDrawRect.Left, tempDrawRect.Top, BText, ATextStyle);
   {$ENDIF}
 
 
   {$IFDEF DELPHI}
 //  TTextFormat = set of TTextFormats;
-  Self.FCanvas.TextRect(tempDrawRect,BText,ATextFormat);
+  Self.FBGRACanvas.TextRect(tempDrawRect,BText,ATextFormat);
 //    procedure TextRect(var Rect: TRect; var Text: string; TextFormat: TTextFormat = []); overload; override;
 //    procedure TextRect(Rect: TRect; X, Y: Integer; const Text: string); overload; override;
   {$ENDIF}
@@ -3396,7 +3429,7 @@ begin
 
 //  ADrawTextParam.FTextLayout.EndUpdate;
 //
-//  ADrawTextParam.FTextLayout.RenderLayout(FCanvas);
+//  ADrawTextParam.FTextLayout.RenderLayout(FBGRACanvas);
 //
 //  if AColorTextList<>nil then
 //  begin
@@ -3412,37 +3445,37 @@ begin
   Result:=True;
 end;
 
-procedure TNativeDrawCanvas.EndDraw;
+procedure TBGRADrawCanvas.EndDraw;
 begin
-//  FCanvas.EndScene;
+//  FBGRACanvas.EndScene;
 end;
 
-function TNativeDrawCanvas.FillPathData(ADrawPathParam:TDrawPathParam;ADrawPathData: TBaseDrawPathData): Boolean;
+function TBGRADrawCanvas.FillPathData(ADrawPathParam:TDrawPathParam;ADrawPathData: TBaseDrawPathData): Boolean;
 begin
 //  //创建画刷
-//  Self.FCanvas.Fill.Kind:=FMX.Graphics.TBrushKind.{$IF CompilerVersion >= 35.0}Solid{$ELSE}bkSolid{$IFEND};
-//  Self.FCanvas.Fill.Color:=ADrawPathParam.CurrentEffectFillDrawColor.Color;
+//  Self.FBGRACanvas.Fill.Kind:=FMX.Graphics.TBrushKind.{$IF CompilerVersion >= 35.0}Solid{$ELSE}bkSolid{$IFEND};
+//  Self.FBGRACanvas.Fill.Color:=ADrawPathParam.CurrentEffectFillDrawColor.Color;
 //
-//  Self.FCanvas.FillPath(
-//        TNativeDrawPathData(ADrawPathData).Path,
+//  Self.FBGRACanvas.FillPath(
+//        TBGRADrawPathData(ADrawPathData).Path,
 //        ADrawPathParam.DrawAlpha/255,
-//        Self.FCanvas.Fill);
+//        Self.FBGRACanvas.Fill);
 
 end;
 
-function TNativeDrawCanvas.PrepareFont(ADrawFont: TDrawFont;ADrawFontColor: TDrawColor): Boolean;
+function TBGRADrawCanvas.PrepareFont(ADrawFont: TDrawFont;ADrawFontColor: TDrawColor): Boolean;
 begin
   Result:=False;
 
   if Not GlobalIsUseDefaultFontFamily then
   begin
-    FCanvas.Font.Name:=ADrawFont.Name;
+    FBGRACanvas.Font.Name:=ADrawFont.Name;
   end
   else
   begin
     if GlobalDefaultFontFamily<>'' then
     begin
-      FCanvas.Font.Name:=GlobalDefaultFontFamily;
+      FBGRACanvas.Font.Name:=GlobalDefaultFontFamily;
     end
     else
     begin
@@ -3450,23 +3483,25 @@ begin
     end;
   end;
 
-  FCanvas.Font.Size:=Floor(ADrawFont.Size);
-  FCanvas.Font.Style:=ADrawFont.Style;
+  FBGRACanvas.Font.Height:=Floor(-MulDiv(ADrawFont.Size, Screen.PixelsPerInch, 72));
+  FBGRACanvas.Font.Style:=ADrawFont.Style;
 
-  FCanvas.Font.Color:=ADrawFontColor.Color;
+  FBGRACanvas.Font.Color:=ADrawFontColor.Color;
   Result:=True;
 
 end;
 
-{ TNativeDrawPathData }
+{ TBGRADrawPathData }
 
-procedure TNativeDrawPathData.AddArc(const ARect: TRectF; AStartAngle,
+procedure TBGRADrawPathData.AddArc(const ARect: TRectF; AStartAngle,
   ASweepAngle: Double);
 var
   ACenter:TPointF;
   ARadius:TPointF;
-  ARad:Double;
-  ACos:Double;
+  AStartRad:Double;
+  AStartCos:Double;
+  AStopRad:Double;
+  AStopCos:Double;
   AStartPoint:TPointF;
   AStopPoint:TPointF;
 begin
@@ -3479,13 +3514,6 @@ begin
   ARadius.Y:=ARect.Width/2;
 
 
-//  AStartAngle:=0;
-//  ASweepAngle:=90;
-//  AStartAngle:=-180;
-//  ASweepAngle:=90;
-
-//  AStartAngle:=-AStartAngle;
-//  ASweepAngle:=-ASweepAngle;
 
 
   //通过这个算法算出来的,0是在最右边的，90度是在下边的，-180在最左边，-90度在最上边
@@ -3493,202 +3521,55 @@ begin
   //      ARad:=Math.DegToRad(AAngle);
   //      ARad:=Math.CycleToRad(AAngle);
   //      ARad:=Math.GradToRad(AAngle);
-  //x都是弧度
-  ARad:=AStartAngle*PI/180;
-  ACos:=Cos(ARad);
-  AStartPoint.X := ACenter.X + ARadius.X * ACos;
-  AStartPoint.Y := ACenter.Y + ARadius.X * Sin(ARad);
 
+  //2pi是360度,那么pi是180度,那么一度是pi/180
 
   //x都是弧度
-  ARad:=(AStartAngle+ASweepAngle)*PI/180;
-  ACos:=Cos(ARad);
-  AStopPoint.X := ACenter.X + ARadius.X * ACos;
-  AStopPoint.Y := ACenter.Y + ARadius.X * Sin(ARad);
+  AStartRad:=AStartAngle*PI/180;
+  AStartCos:=Cos(AStartRad);
+  AStartPoint.X := ACenter.X + ARadius.X * AStartCos;
+  AStartPoint.Y := ACenter.Y + ARadius.X * Sin(AStartRad);
 
 
+  //x都是弧度
+  AStopRad:=(AStartAngle+ASweepAngle)*PI/180;
+  AStopCos:=Cos(AStopRad);
+  AStopPoint.X := ACenter.X + ARadius.X * AStopCos;
+  AStopPoint.Y := ACenter.Y + ARadius.X * Sin(AStopRad);
 
 
-  //方向,默认是逆时针AD_COUNTERCLOCKWISE的
-  if ASweepAngle>0 then
-  begin
-    SetArcDirection(FCanvas.Handle, AD_CLOCKWISE);
-  end
-  else
-  begin
-    SetArcDirection(FCanvas.Handle, AD_COUNTERCLOCKWISE);
-  end;
+  //改用2D画布来画
+  //Self.FBGRACanvas2D.MoveTo(AStartPoint.X,AStartPoint.Y);
 
-  //ARC的实现不一样，在Delphi和Lazarus中
-
-  //Lazarus下面的实现
-  //r:=Rect(ALeft, ATop, ARight, ABottom);
-  //LineTo(RadialPoint(EccentricAngle(Point(SX, SY), r), r));
-  //Arc(ALeft, ATop, ARight, ABottom, SX, SY, EX, EY);
-  //MoveTo(RadialPoint(EccentricAngle(Point(EX, EY), r), r));
-//  FCanvas.LineTo(Ceil(AStartPoint.X),Ceil(AStartPoint.Y));
-  FCanvas.MoveTo(Ceil(AStartPoint.X),Ceil(AStartPoint.Y));
-  Self.FCanvas.Arc(Ceil(ARect.Left),Ceil(ARect.Top),
-                   Ceil(ARect.Right),Ceil(ARect.Bottom),
-                   //计算出起点
-                   Ceil(AStartPoint.X),
-                   Ceil(AStartPoint.Y),
-                   //计算出终点
-                   Ceil(AStopPoint.X),
-                   Ceil(AStopPoint.Y)
-                    );
-  FCanvas.MoveTo(Ceil(AStopPoint.X),Ceil(AStopPoint.Y));
-  FCanvas.LineTo(Ceil(AStopPoint.X),Ceil(AStopPoint.Y));
-//  FCanvas.LineTo(0,0);
+  //Self.FBGRACanvas2D.ArcTo(ACenter.X,ACenter.Y,ARadius.X,AStartRad,AStopRad);
+  Self.FBGRACanvas2D.Arc(ACenter.X,ACenter.Y,ARadius.X,AStartRad,AStopRad,(ASweepAngle<0));
 
 
-
-
-//
-//  if ASweepAngle>0 then
-//  begin
-//    SetArcDirection(FCanvas.Handle, AD_CLOCKWISE);
-//  end
-//  else
-//  begin
-//    SetArcDirection(FCanvas.Handle, AD_COUNTERCLOCKWISE);
-//  end;
-//
-//  //ARC的实现不一样，在Delphi和Lazarus中
-//  Self.FCanvas.ArcTo(Ceil(ARect.Left),Ceil(ARect.Top),
-//                   Ceil(ARect.Right),Ceil(ARect.Bottom),
-//                   //计算出起点
-//                   Ceil(AStartPoint.X),
-//                   Ceil(AStartPoint.Y),
-//                   //计算出终点
-//                   Ceil(AStopPoint.X),
-//                   Ceil(AStopPoint.Y)
-//                    );
-//
-//
-
-
-
-
-
-
+  //Self.FBGRACanvas2D.Arc(ACenter.X,ACenter.Y,ARadius.X,AStartRad,AStopRad);
 
 
 
   //ARC的实现不一样，在Delphi和Lazarus中
-  //AngleArc的话，可以使用角度，0度的起点是右边中点（100，50），默认是是逆时针画的
-  //AngleArc的实现在Delphi和Lazarus中不一样
-//  if ASweepAngle>0 then
-//  begin
-//    Self.FCanvas.MoveTo(
-//                         //计算出起点
-//                         Ceil(AStartPoint.X),
-//                         Ceil(AStartPoint.Y)
-//                        );
-//    Self.FCanvas.AngleArc(Ceil(ACenter.X),Ceil(ACenter.Y),
-//                           Ceil(ARadius.X),
-//  //                         0,60
-//                           -AStartAngle,
-//                           -ASweepAngle
-//                            );
-//  end
-//  else
-//  begin
-//    Self.FCanvas.MoveTo(
-//                         //计算出起点
-//                         Ceil(AStopPoint.X),
-//                         Ceil(AStopPoint.Y)
-//                        );
-//    Self.FCanvas.AngleArc(Ceil(ACenter.X),Ceil(ACenter.Y),
-//                           Ceil(ARadius.X),
-//  //                         0,60
-//                           -AStartAngle,
-//                           -ASweepAngle
-//                            );
-//  end;
 
 
-
-
-
-
-
-
-
-
-  //Delphi,Lazarus通用 MoveTo会影响Path的闭合会多几条线
-//  if ASweepAngle>0 then
-//  begin
-//    Self.FCanvas.MoveTo(
-//                         //计算出起点
-//                         Ceil(AStartPoint.X),
-//                         Ceil(AStartPoint.Y)
-//                        );
-//  end
-//  else
-//  begin
-//    Self.FCanvas.MoveTo(
-//                         //计算出起点
-//                         Ceil(AStopPoint.X),
-//                         Ceil(AStopPoint.Y)
-//                        );
-//  end;
-  //Lazarus下面AngleArc的实现
-  //x1:=trunc(x+cos(pi*StartAngle/180)*Radius);
-  //y1:=trunc(y-sin(pi*StartAngle/180)*Radius);
-  //x2:=trunc(x+cos(pi*(StartAngle+SweepAngle)/180)*Radius);
-  //y2:=trunc(y-sin(pi*(StartAngle+SweepAngle)/180)*Radius);
-  //LineTo(x1,y1);
-  //if SweepAngle>0 then
-  //  Arc(x-Radius, y-Radius, x+Radius, y+Radius, x1, y1, x2, y2)
-  //else
-  //  Arc(x-Radius, y-Radius, x+Radius, y+Radius, x2, y2, x1, y1);
-  //MoveTo(x2,y2);
-//
-//  Self.FCanvas.AngleArc(Ceil(ACenter.X),Ceil(ACenter.Y),
-//                         Ceil(ARadius.X),
-//                         -AStartAngle,
-//                         -ASweepAngle
-//                          );
-//
-
-
-
-
-
-
-
-
-
-//  //Delphi,Lazarus通用
-//  if ASweepAngle>0 then
-//  begin
-//    SetArcDirection(FCanvas.Handle, AD_CLOCKWISE);
-//  end
-//  else
-//  begin
-//    SetArcDirection(FCanvas.Handle, AD_COUNTERCLOCKWISE);
-//  end;
-//  Self.FCanvas.Arc(Ceil(ARect.Left),Ceil(ARect.Top),
-//                   Ceil(ARect.Right),Ceil(ARect.Bottom),
-//                   //计算出起点
-//                   Ceil(AStartPoint.X),
-//                   Ceil(AStartPoint.Y),
-//                   //计算出终点
-//                   Ceil(AStopPoint.X),
-//                   Ceil(AStopPoint.Y)
-//                    );
-
+  //BGRA的画弧逻辑，0度在右边，-180\180在左边,-90在下边，默认是逆时针画弧
+  //ASweepAngle为负，不是表示反方向
+  //Self.FBGRACanvas.Arc(Ceil(ARect.Left),Ceil(ARect.Top),
+  //                     Ceil(ARect.Right),Ceil(ARect.Bottom),
+  //                     Ceil(-(AStartAngle+ASweepAngle))*16,
+  //                     Ceil(ASweepAngle)*16
+  //                     );
 
 end;
 
-procedure TNativeDrawPathData.AddEllipse(const ARect: TRectF);
+procedure TBGRADrawPathData.AddEllipse(const ARect: TRectF);
 begin
 //  Self.Path.AddEllipse(ARect);
-  Self.FCanvas.Ellipse(RectF2Rect(ARect));
+  //圆心,水平半径和垂直半径
+  Self.FBGRACanvas2D.Ellipse(ARect.Left+ARect.Width/2,ARect.Top+ARect.Height/2,ARect.Width/2,ARect.Height/2);
 end;
 
-procedure TNativeDrawPathData.AddPie(const ARect: TRectF; AStartAngle,
+procedure TBGRADrawPathData.AddPie(const ARect: TRectF; AStartAngle,
   ASweepAngle: Double);
 var
   ACenter:TPointF;
@@ -3705,45 +3586,44 @@ begin
 //  Self.Path.LineTo(ACenter);
 //
 //  Self.Path.AddArc(ACenter,ARadius,AStartAngle,ASweepAngle);
-//  FCanvas.Arc(Ceil(ARect.Left),Ceil(ARect.Top),Ceil(ARect.Right),Ceil(ARect.Bottom),
+//  FBGRACanvas.Arc(Ceil(ARect.Left),Ceil(ARect.Top),Ceil(ARect.Right),Ceil(ARect.Bottom),
 //
 //              );
 
 end;
 
-procedure TNativeDrawPathData.AddRect(const ARect: TRectF);
+procedure TBGRADrawPathData.AddRect(const ARect: TRectF);
 begin
 //  Self.Path.AddRectangle(ARect,0,0,[]);
 //  if AIsFill then
 //  begin
-//    FCanvas.Brush.Style:=bsSolid;
+//    FBGRACanvas.Brush.Style:=bsSolid;
 //  end
 //  else
 //  begin
-//    FCanvas.Brush.Style:=bsClear;
+//    FBGRACanvas.Brush.Style:=bsClear;
 //  end;
-  FCanvas.Rectangle(RectF2Rect(ARect));
+  FBGRACanvas2D.rect(ARect.Left,ARect.Top,ARect.Width,ARect.Height);
 end;
 
-procedure TNativeDrawPathData.StartPath;
+procedure TBGRADrawPathData.StartPath;
 begin
-  //BeginPath(FCanvas.Handle);
-
+  //BeginPath(FBGRACanvas.Handle);
+  FBGRACanvas2D.beginPath;
 end;
 
-procedure TNativeDrawPathData.Clear;
+procedure TBGRADrawPathData.Clear;
 begin
 //  Path.Clear;
-
+  //FBGRACanvas2D.clearPath;
 end;
 
-procedure TNativeDrawPathData.Close;
+procedure TBGRADrawPathData.Close;
 begin
-  //CloseFigure(FCanvas.Handle);
-
+  //CloseFigure(FBGRACanvas.Handle);
 end;
 
-constructor TNativeDrawPathData.Create;
+constructor TBGRADrawPathData.Create;
 begin
   inherited;
 //  Path:=TPathData.Create;
@@ -3751,44 +3631,54 @@ begin
 
 end;
 
-procedure TNativeDrawPathData.CurveTo(const X, Y, X1, Y1, X2,
-  Y2: Double);
+procedure TBGRADrawPathData.CurveTo(const X: Double; const Y: Double;
+  const X1: Double; const Y1: Double; const X2: Double; const Y2: Double);
 begin
 //  Path.CurveTo(PointF(X,Y),PointF(X1,Y1),PointF(X2,Y2));
 //  FC?anvas.
 end;
 
-destructor TNativeDrawPathData.Destroy;
+destructor TBGRADrawPathData.Destroy;
 begin
 //  FreeAndNil(Stroke);
 //  FreeAndNil(Path);
   inherited;
 end;
 
-procedure TNativeDrawPathData.StopPath;
+procedure TBGRADrawPathData.StopPath;
 begin
-  //EndPath(FCanvas.Handle);
-
+  //EndPath(FBGRACanvas.Handle);
+  FBGRACanvas2D.closePath;
 end;
 
-//procedure TNativeDrawPathData.GetRegion;
+procedure TBGRADrawPathData.FillPath;
+begin
+  FBGRACanvas2D.fill;
+end;
+
+procedure TBGRADrawPathData.DrawPath;
+begin
+  FBGRACanvas2D.stroke;
+end;
+
+//procedure TBGRADrawPathData.GetRegion;
 //begin
 //
 //end;
 //
-//function TNativeDrawPathData.IsInRegion(const APoint: TPointF): Boolean;
+//function TBGRADrawPathData.IsInRegion(const APoint: TPointF): Boolean;
 //begin
 //  Result:=False;
 //end;
 
-procedure TNativeDrawPathData.LineTo(const X:Double;const Y:Double);
+procedure TBGRADrawPathData.LineTo(const X:Double;const Y:Double);
 begin
-  FCanvas.LineTo(Ceil(X),Ceil(Y));
+  FBGRACanvas2D.LineTo(X,Y);
 end;
 
-procedure TNativeDrawPathData.MoveTo(const X:Double;const Y:Double);
+procedure TBGRADrawPathData.MoveTo(const X:Double;const Y:Double);
 begin
-  FCanvas.MoveTo(Ceil(X),Ceil(Y));
+  FBGRACanvas2D.MoveTo(X,Y);
 
 end;
 

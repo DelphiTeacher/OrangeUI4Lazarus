@@ -375,16 +375,6 @@
         <UnitName Value="uskinsuperobject"/>
       </Item>
       <Item>
-        <Filename Value="..\OrangeUIDesignNew\Source\uComponentTypeNameEditor.pas"/>
-        <HasRegisterProc Value="True"/>
-        <UnitName Value="uComponentTypeNameEditor"/>
-      </Item>
-      <Item>
-        <Filename Value="..\OrangeUIDesignNew\Source\uDrawPictureEditor.pas"/>
-        <HasRegisterProc Value="True"/>
-        <UnitName Value="uDrawPictureEditor"/>
-      </Item>
-      <Item>
         <Filename Value="Source\VCL\NativeCanvas\uNativeDrawCanvas.pas"/>
         <UnitName Value="uNativeDrawCanvas"/>
       </Item>

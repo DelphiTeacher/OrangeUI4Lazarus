@@ -72,11 +72,11 @@ Type
   protected
 //    EnableBuffer:Boolean;//=True
     //缓存位图
-    FBufferBitmap:TBufferBitmap;
+    FBufferBitmap:TBaseBufferBitmap;
     //缓存位图
-    function GetBufferBitmap: TBufferBitmap;
+    function GetBufferBitmap: TBaseBufferBitmap;
     //缓存位图
-    property BufferBitmap:TBufferBitmap read GetBufferBitmap;
+    property BufferBitmap:TBaseBufferBitmap read GetBufferBitmap;
   public
     //记录多语言的索引
     procedure RecordControlLangIndex(APrefix:String;ALang:TLang;ACurLang:String);virtual;
@@ -366,6 +366,7 @@ procedure TSkinWindowsControl.Paint(DC: HDC;EnableBuffer: Boolean
     );
 var
   ADrawCanvas:TDrawCanvas;
+  ACanvas:TCanvas;
 begin
 //    OutputDebugString('TSkinWindowsControl.Paint '+ClassName+' '+Name+' '+FormatDateTime('HH:MM:SS:ZZZ',Now)+' Begin');
 
@@ -452,13 +453,20 @@ begin
         and
         (GetBufferBitmap<>nil) then
       begin
-        ////绘制到界面上
+        //绘制到界面上
         //Bitblt(DC,0,0,
         //       Self.FBufferBitmap.Width,
         //       Self.FBufferBitmap.Height,
         //       ADrawCanvas.Handle,
         //       0,0,
         //       SRCCOPY);
+        ACanvas:=TCanvas.Create;
+        ACanvas.Handle:=DC;
+        try
+           FBufferBitmap.DrawTo(ACanvas);
+        finally
+          FreeAndNil(ACanvas);
+        end;
       end
       else
       begin
@@ -473,8 +481,8 @@ end;
 procedure TSkinWindowsControl.PaintWindow(DC: HDC);
 begin
   Paint(DC
-          //,True
-          ,False//会闪
+          ,True
+          //,False//会闪
           );
 end;
 
@@ -587,11 +595,11 @@ begin
   end;
 end;
 
-function TSkinWindowsControl.GetBufferBitmap: TBufferBitmap;
+function TSkinWindowsControl.GetBufferBitmap: TBaseBufferBitmap;
 begin
   if (FBufferBitmap=nil) then
   begin
-    FBufferBitmap:=TBufferBitmap.Create;
+    FBufferBitmap:=GlobalBufferBitmapClass.Create;
   end;
   Result:=Self.FBufferBitmap;
 end;

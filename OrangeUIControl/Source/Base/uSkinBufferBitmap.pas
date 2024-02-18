@@ -150,35 +150,25 @@ type
 
 
 
-  //缓存位图
-  TBufferBitmap=class
-  private
-    FPlatformBitmap:TPlatformBitmap;
-    //画布
+  TBaseBufferBitmap=class
+  public  //画布
     FDrawCanvas:TDrawCanvas;
     //{$IFDEF VCL}
     //function GetHandle:HDC;
     //{$ENDIF}
-    function GetWidth:Integer;
-    function GetHeight:Integer;
+    //function GetWidth:Integer;
+    //function GetHeight:Integer;
     function GetScale:Single;
     function GetDrawCanvas: TDrawCanvas;
   public
-    constructor Create;
-    destructor Destroy;override;
-  public
     //创建位图
-    function CreateBufferBitmap(AWidth:Integer;AHeight:Integer;AScale:Single=1):Boolean;
+    procedure CreateBufferBitmap(AWidth:Integer;AHeight:Integer;AScale:Single=1);virtual;abstract;
+    procedure DrawTo(ACanvas:TCanvas);virtual;abstract;
   public
     property Scale:Single read GetScale;
-
-    //{$IFDEF VCL}
-    //property Handle:HDC read GetHandle;
-    //{$ENDIF}
   public
     Width:Integer;
     Height:Integer;
-    property SelfBitmap:TPlatformBitmap read FPlatformBitmap;
 
     /// <summary>
     ///   <para>
@@ -208,15 +198,38 @@ type
     ///   </para>
     /// </summary>
     property DrawCanvas:TDrawCanvas read GetDrawCanvas;
+
+
+  end;
+
+  //缓存位图
+
+  { TBufferBitmap }
+
+  TBufferBitmap=class(TBaseBufferBitmap)
+  private
+    FPlatformBitmap:TPlatformBitmap;
+  public
+    constructor Create;
+    destructor Destroy;override;
+  public
+    //创建位图
+    procedure CreateBufferBitmap(AWidth:Integer;AHeight:Integer;AScale:Single=1);override;
+    procedure DrawTo(ACanvas:TCanvas);override;
+    //{$IFDEF VCL}
+    //property Handle:HDC read GetHandle;
+    //{$ENDIF}
+    property SelfBitmap:TPlatformBitmap read FPlatformBitmap;
   end;
 
 
+  TBaseBufferBitmapClass=class of TBaseBufferBitmap;
 
 
 
 
-
-
+var
+   GlobalBufferBitmapClass:TBaseBufferBitmapClass;
 
 /// <summary>
 ///   <para>
@@ -226,7 +239,7 @@ type
 ///     Get global bitmap which is used for calculating size
 ///   </para>
 /// </summary>
-function GetGlobalAutoSizeBufferBitmap:TBufferBitmap;
+function GetGlobalAutoSizeBufferBitmap:TBaseBufferBitmap;
 
 /// <summary>
 ///   <para>
@@ -286,7 +299,7 @@ implementation
 
 
 var
-  GlobalAutoSizeBufferBitmap:TBufferBitmap;
+  GlobalAutoSizeBufferBitmap:TBaseBufferBitmap;
 
 //function CalcTextObjectSize(const MaxWidth: Single; var Size: TSizeF): Boolean;
 //const
@@ -578,11 +591,11 @@ begin
 
 end;
 
-function GetGlobalAutoSizeBufferBitmap:TBufferBitmap;
+function GetGlobalAutoSizeBufferBitmap:TBaseBufferBitmap;
 begin
   if GlobalAutoSizeBufferBitmap=nil then
   begin
-    GlobalAutoSizeBufferBitmap:=TBufferBitmap.Create;
+    GlobalAutoSizeBufferBitmap:=GlobalBufferBitmapClass.Create;
     GlobalAutoSizeBufferBitmap.CreateBufferBitmap(100,100,1);
   end;
   Result:=GlobalAutoSizeBufferBitmap;
@@ -811,21 +824,35 @@ end;
 
 constructor TBufferBitmap.Create;
 begin
-  FPlatformBitmap:=TPlatformBitmap.Create;
+  //FPlatformBitmap:=TPlatformBitmap.Create;
 end;
 
-function TBufferBitmap.CreateBufferBitmap(AWidth:Integer;AHeight:Integer;AScale:Single=1):Boolean;
+procedure TBufferBitmap.CreateBufferBitmap(AWidth:Integer;AHeight:Integer;AScale:Single=1);
 begin
   Width:=AWidth;
   Height:=AHeight;
-  {$IFDEF FMX}
-  Result:=Self.FPlatformBitmap.CreateBitmap(AWidth,AHeight,AScale);
-  {$ENDIF}
+  //{$IFDEF FMX}
+  //Result:=Self.FPlatformBitmap.CreateBitmap(AWidth,AHeight,AScale);
+  //{$ENDIF}
 
   FreeAndNil(FDrawCanvas);
+  FreeAndNil(FPlatformBitmap);
+
+  FPlatformBitmap:=TPlatformBitmap.Create;
   FPlatformBitmap.SetSize(AWidth,AHeight);
   FDrawCanvas:=CreateDrawCanvas('TBufferBitmap');
   FDrawCanvas.Prepare(FPlatformBitmap.Canvas);
+end;
+
+procedure TBufferBitmap.DrawTo(ACanvas:TCanvas);
+begin
+  Bitblt(ACanvas.Handle,0,0,
+         Self.Width,
+         Self.Height,
+         FDrawCanvas.Handle,
+         0,0,
+         SRCCOPY);
+
 end;
 
 //{$IFDEF VCL}
@@ -842,25 +869,28 @@ begin
   inherited;
 end;
 
-function TBufferBitmap.GetDrawCanvas: TDrawCanvas;
+
+{ TBaseBufferBitmap }
+
+function TBaseBufferBitmap.GetDrawCanvas: TDrawCanvas;
 begin
   Result:=FDrawCanvas;
-  {$IFDEF FMX}
-  Result:=Self.FPlatformBitmap.DrawCanvas;
-  {$ENDIF}
+  //{$IFDEF FMX}
+  //Result:=Self.FPlatformBitmap.DrawCanvas;
+  //{$ENDIF}
 end;
 
-function TBufferBitmap.GetHeight: Integer;
-begin
-  Result:=Self.FPlatformBitmap.Height;
-end;
+//function TBaseBufferBitmap.GetHeight: Integer;
+//begin
+//  Result:=Self.FPlatformBitmap.Height;
+//end;
 
-function TBufferBitmap.GetWidth: Integer;
-begin
-  Result:=Self.FPlatformBitmap.Width;
-end;
+//function TBaseBufferBitmap.GetWidth: Integer;
+//begin
+//  Result:=Self.FPlatformBitmap.Width;
+//end;
 
-function TBufferBitmap.GetScale: Single;
+function TBaseBufferBitmap.GetScale: Single;
 begin
   Result:=1;
   {$IFDEF FMX}
@@ -874,6 +904,7 @@ end;
 
 initialization
   GlobalAutoSizeBufferBitmap:=nil;
+  GlobalBufferBitmapClass:=TBufferBitmap;
 
 finalization
   SysUtils.FreeAndNil(GlobalAutoSizeBufferBitmap);

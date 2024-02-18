@@ -32,17 +32,14 @@ uses
   uSkinSwitchPageListControlGestureManager, uSkinSwitchPageListPanelType, 
   uSkinSwitchType, uSkinTimeEditType, uSkinTrackBarType, uSkinTreeViewType, 
   uSkinVirtualChartType, uSkinVirtualGridType, uSkinVirtualListType, 
-  uskinsuperobject, uComponentTypeNameEditor, uDrawPictureEditor, 
-  uNativeDrawCanvas, uNativeSkinPictureEngine, uSkinFormType, 
-  LazarusPackageIntf;
+  uskinsuperobject, uNativeDrawCanvas, uNativeSkinPictureEngine, 
+  uSkinFormType, LazarusPackageIntf;
 
 implementation
 
 procedure Register;
 begin
   RegisterUnit('uComponentTypeRegister', @uComponentTypeRegister.Register);
-  RegisterUnit('uComponentTypeNameEditor', @uComponentTypeNameEditor.Register);
-  RegisterUnit('uDrawPictureEditor', @uDrawPictureEditor.Register);
 end;
 
 initialization

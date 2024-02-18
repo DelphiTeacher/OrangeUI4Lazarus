@@ -462,13 +462,7 @@ type
 
 
 
-
-
-  {$IFDEF FMX}
-  {$ELSE}
-  TAlignLayout=TAlign;
-
-
+  {$IFDEF VCL}
     {$IFDEF DELPHIXE4}
     {$ELSE}
     //没有定义TRectF
@@ -478,6 +472,7 @@ type
     end;
 
 
+    {$IFDEF DELPHI}
     TPointFType = array [0..1] of Single;
 
     TPointF = record
@@ -506,11 +501,16 @@ type
         0: (Left, Top, Right, Bottom: Single);
         1: (TopLeft, BottomRight: TPointF);
     end;
-    PRectF=^TRectF;
     {$ENDIF}
 
   {$ENDIF}
+  {$ENDIF}
 
+
+  {$IFDEF VCL}
+    TAlignLayout=TAlign;
+    PRectF=^TRectF;
+  {$ENDIF}
 
 
 
@@ -2056,6 +2056,7 @@ end;
 
 
 
+{$IFDEF DELPHI}
 {$IFDEF VCL}
     {$IFNDEF DELPHIXE4}
     //没有定义TRectF
@@ -2094,6 +2095,7 @@ begin
 end;
     {$ENDIF}
 
+{$ENDIF}
 {$ENDIF}
 
 

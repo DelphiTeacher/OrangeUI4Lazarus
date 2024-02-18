@@ -2084,10 +2084,12 @@ begin
   FFixedColor:=TDrawColor.Create('FixedColor','调整颜色');
 
   {$IFDEF VCL}
-  {$IFDEF DELPHI}
-  FFixedColor.StoredDefaultColor:=TColors.SysDefault;
-  FFixedColor.FColor:=TColors.SysDefault;
-  {$ENDIF}
+  //{$IFDEF DELPHI}
+  //FFixedColor.StoredDefaultColor:=TColors.SysDefault;
+  //FFixedColor.FColor:=TColors.SysDefault;
+  FFixedColor.StoredDefaultColor:=clDefault;
+  FFixedColor.FColor:=clDefault;
+  //{$ENDIF}
   {$ENDIF}
   {$IFDEF FMX}
   FFixedColor.StoredDefaultColor:=TAlphaColorRec.Null;

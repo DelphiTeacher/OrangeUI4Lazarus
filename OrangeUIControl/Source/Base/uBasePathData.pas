@@ -98,6 +98,8 @@ type
     //闭合路径
     procedure StopPath;virtual;abstract;
 
+    procedure FillPath;virtual;abstract;
+    procedure DrawPath;virtual;abstract;
 
 
 //    //获取区域,用来判断鼠标是否在区域内
