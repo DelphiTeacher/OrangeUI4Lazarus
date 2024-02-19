@@ -42,6 +42,8 @@ uses
   uFuncCommon
   ;
 
+//TWorkBeginEvent = procedure(ASender: TObject; AWorkMode: TWorkMode; AWorkCountMax: Int64) of object;
+  //TWorkEvent = procedure(ASender: TObject; AWorkMode: TWorkMode; AWorkCount: Int64) of object;
 
 type
   TIdHttpControl=class(THttpControl)
@@ -78,7 +80,7 @@ begin
 
   FIdHttp:=TIdHttp.Create(nil);
 
-  FIdHttp.OnWork:=DoWork;
+  FIdHttp.OnWork:=@DoWork;
 
 
   if IsIdHttpNeedSSL then

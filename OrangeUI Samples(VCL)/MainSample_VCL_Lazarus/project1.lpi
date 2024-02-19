@@ -26,6 +26,9 @@
     </RunParams>
     <RequiredPackages>
       <Item>
+        <PackageName Value="indylaz"/>
+      </Item>
+      <Item>
         <PackageName Value="OrangeUIListItemStyle"/>
       </Item>
       <Item>
@@ -129,10 +132,6 @@
         <UnitName Value="HomeFrame"/>
       </Unit>
       <Unit>
-        <Filename Value="..\..\OrangeProjectCommon\uLCLSVGSupport.pas"/>
-        <IsPartOfProject Value="True"/>
-      </Unit>
-      <Unit>
         <Filename Value="..\..\OrangeUIControl\Source\VCL\NativeCanvas\uNativeSkinPictureEngine.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit>
@@ -155,6 +154,49 @@
       </Unit>
       <Unit>
         <Filename Value="..\..\OrangeUIControl\Source\VCL\BGRACanvas\uBGRASkinPictureEngine.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="EditFrame.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameEdit"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit>
+      <Unit>
+        <Filename Value="EditGoodsFrame.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameEditGoods"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeProjectCommon\uBGRASVGSupport.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeProjectCommon\uRestInterfaceCall.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeProjectCommon\uDataSetToJson.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeProjectCommon\uIdHttpControl.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="uconst.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uConst"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeProjectCommon\uOpenClientCommon.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeProjectCommon\uManager.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit>
     </Units>

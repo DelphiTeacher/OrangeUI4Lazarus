@@ -4,7 +4,16 @@ unit uDataSetToJson;
 
 interface
 
-//{$DEFINE SKIN_SUPEROBJECT}
+{$IFDEF FPC}
+
+{$ELSE}
+{$IF CompilerVersion <= 21.0} // D2010之前
+
+{$ELSE}
+{$DEFINE XSUPEROBJECT}
+{$IFEND}
+{$ENDIF}
+
 
 
 uses
@@ -16,7 +25,9 @@ uses
   uBaseLog,
 
 
-
+  {$IFDEF FPC}
+  uSkinSuperObject,
+  {$ELSE}
   {$IF CompilerVersion <= 21.0} // D2010之前
     //Delphi2010不能用XSuperObject
     SuperObject,
@@ -29,7 +40,7 @@ uses
     XSuperJson,
     {$ENDIF}
   {$IFEND}
-
+  {$ENDIF}
 
 
   Variants,
@@ -59,7 +70,16 @@ Const
   //网页表格中有些字段为空,则会显示为undefined
   DEFAULT_IsNeedNullField=True;//Integer;//
 
+  {$IFDEF FPC}
+  varObject=varByRef;
+  {$ENDIF}
+
+
+
+
 type
+
+
   //有些接口传入的查询条件要能特殊处理来组成条件
   //比如keyword的参数,需要name、addr、phone等多列来查询
   //所以需要拼成一个很长的SQL
@@ -150,6 +170,8 @@ procedure JSonFromRecordTo(DataSet: TDataSet;ASuperObject:ISuperObject;AFieldMap
                                 ANoNeedFieldNameList:TStringList=nil);
 
 
+{$IFDEF FPC}
+{$ELSE}
 {$IF CompilerVersion > 21.0} // XE or older
 //将字段的值放入JsonArray中
 function CreateJsonArrayElementValueByField(JsonArray: ISuperArray;AIndex:Integer;Field: TField): Boolean;
@@ -158,7 +180,7 @@ function CompressedJSonFromRecord(DataSet: TDataSet): ISuperArray;
 function CompressedJSonFromDataSetTo(DataSet: TDataSet;tableName: string;sj:ISuperObject): ISuperObject;
 function CompressedJSonFromDataSet(DataSet: TDataSet;tableName: string='RecordList'): ISuperObject;
 {$IFEND} // XE or older
-
+{$ENDIF}
 
 
 function JSonFromDataSetTo(DataSet: TDataSet;tableName: string;sj:ISuperObject;AFieldMapList:TStringList=nil;AIsNeedNullField:Boolean=DEFAULT_IsNeedNullField): ISuperObject;
@@ -271,8 +293,8 @@ function MergeJsonStringKey(AFromJson:ISuperObject;AToJson:ISuperObject;AFieldNa
 function MergeJsonObjectArrayKey(AFromJson:ISuperObject;AToJson:ISuperObject;AFieldName:String;AIsOverride:Boolean;ACheckDumpKeyName:String):Boolean;
 function MergeJsonObjectArrayKeys(AFromJson:ISuperObject;AToJson:ISuperObject;AFieldName:String;AIsOverride:Boolean;ACheckDumpKeyNames:TStringDynArray):Boolean;
 function MergeJsonValueArrayKey(AFromJson:ISuperObject;AToJson:ISuperObject;AFieldName:String;AIsOverride:Boolean):Boolean;
-procedure MergeJson(AFromJson:ISuperObject;AToJson:ISuperObject;AIsOverride:Boolean=True;AIsMergeArray:Boolean=False;AIgnoreFieldList:TStringDynArray=[]);
-
+//procedure MergeJson(AFromJson:ISuperObject;AToJson:ISuperObject;AIsOverride:Boolean=True;AIsMergeArray:Boolean=False;AIgnoreFieldList:TStringDynArray=[]);
+procedure MergeJson(AFromJson:ISuperObject;AToJson:ISuperObject;AIsOverride:Boolean;AIsMergeArray:Boolean;AIgnoreFieldList:TStringDynArray);
 
 
 
@@ -437,7 +459,8 @@ begin
                   Result:=True;
                 end;
             end
-            else if ARecordDataJson.GetType(AParamNames[I])=varObject then
+
+            else if {$IFDEF FPC}(ARecordDataJson.GetType(AParamNames[I])=varByRef){$ELSE}(ARecordDataJson.GetType(AParamNames[I])=varObject){$ENDIF} then
             begin
                 if AFieldDefJson.Contains('FieldList') then
                 begin
@@ -456,7 +479,9 @@ begin
                   ADesc:=ADesc+AParentFieldName+AParamNames[I]+'字段类型不匹配';
                   Result:=True;
                 end;
-            end;
+            end
+
+            ;
 
 
     end;
@@ -497,7 +522,7 @@ var
   AWhereKeyJson:ISuperObject;
   AWhereKeyJsonArray:ISuperArray;
 begin
-  AWhereKeyJsonArray:=TSuperArray.Create;
+  AWhereKeyJsonArray:=SA();
 
   for I := 0 to Length(AFieldNames)-1 do
   begin
@@ -532,7 +557,7 @@ var
   AWhereKeyJson:ISuperObject;
   AWhereKeyJsonArray:ISuperArray;
 begin
-  AWhereKeyJsonArray:=TSuperArray.Create;
+  AWhereKeyJsonArray:=SA();
 
   for I := 0 to Length(AFieldNames)-1 do
   begin
@@ -1068,7 +1093,7 @@ var
   ADataTypeName:String;
   AFieldDef:TFieldDef;
 begin
-  Result:=TSuperArray.Create();
+  Result:=SA();
   for I := 0 to ADataset.FieldDefs.Count-1 do
   begin
     AFieldDef:=ADataset.FieldDefs[I];
@@ -1264,6 +1289,8 @@ begin
           ADataTypeName:='widememo';
 //          ASuperObject.I['size']:=2048;//如果memo转成string字段,因为没有datasize,所以创建会报错
         end;
+        {$IFDEF FPC}
+        {$ELSE}
         ftOraTimeStamp:
         begin
           ADataTypeName:='oratimestamp';
@@ -1312,6 +1339,7 @@ begin
         begin
           ADataTypeName:='single';
         end;
+        {$ENDIF}
       end;; //49..51
 
 
@@ -1464,6 +1492,15 @@ begin
     Result:=False;
     //判断AFromJson中值是不是为空,为空不合并
     if not AFromJson.Contains(AFieldName) then Exit;
+    //case AChild.DataType of
+    //  stBoolean:Result:=varBoolean;
+    //  stDouble:Result:=varDouble;
+    //  stCurrency:Result:=varDouble;
+    //  stInt:Result:=varInteger;
+    //  stObject:Result:=varByRef;
+    //  stArray:Result:=varArray;
+    //  stString:Result:=varString;
+    //end;
 
     case AFromJson.GetType(AFieldName) of
       varArray:
@@ -1471,7 +1508,11 @@ begin
         if AFromJson.A[AFieldName].Length=0 then Exit;
         
       end;
-      varObject:
+      {$IFDEF FPC}
+      {$ELSE}
+      varObject,
+      {$ENDIF}
+      varByRef:
       begin
         if AFromJson.O[AFieldName].AsJSON='{}' then Exit;
       end;
@@ -1547,7 +1588,7 @@ begin
 
 end;
 
-procedure MergeJson(AFromJson:ISuperObject;AToJson:ISuperObject;AIsOverride:Boolean=True;AIsMergeArray:Boolean=False;AIgnoreFieldList:TStringDynArray=[]);
+procedure MergeJson(AFromJson:ISuperObject;AToJson:ISuperObject;AIsOverride:Boolean;AIsMergeArray:Boolean;AIgnoreFieldList:TStringDynArray);
 var
   I: Integer;
   AParamNames:TStringDynArray;
@@ -1570,7 +1611,7 @@ begin
       end
       else
       //是否需要覆盖对象
-      if AFromJson.GetType(AParamNames[I])=varObject then
+      if {$IFDEF FPC}(AFromJson.GetType(AParamNames[I])=varByRef){$ELSE}(AFromJson.GetType(AParamNames[I])=varObject){$ENDIF} then
       begin
         AToJson.O[AParamNames[I]]:=AFromJson.O[AParamNames[I]];
       end
@@ -1649,7 +1690,7 @@ function GetWhereConditionArray(AFieldNames:Array of String;
 var
   I:Integer;
 begin
-  Result:=TSuperArray.Create;
+  Result:=SA();
 
   for I := 0 to Length(AFieldNames)-1 do
   begin
@@ -1664,7 +1705,7 @@ var
   I:Integer;
   AWhereKeyJsonArray:ISuperArray;
 begin
-  AWhereKeyJsonArray:=TSuperArray.Create;
+  AWhereKeyJsonArray:=SA();
 
   for I := 0 to Length(AFieldNames)-1 do
   begin
@@ -1976,7 +2017,7 @@ function ComposeJsonObjectsToArray(AJsonObjects:Array of ISuperObject):ISuperArr
 var
   I: Integer;
 begin
-  Result:=TSuperArray.Create();
+  Result:=SA();
   for I := 0 to Length(AJsonObjects)-1 do
   begin
     Result.O[I]:=AJsonObjects[I];
@@ -1994,11 +2035,12 @@ function ConvertJsonToArray(AJson:ISuperObject;
                             AIsNeedObjectValueField:Boolean):Integer;
 var
   I:Integer;
-  {$IF CompilerVersion > 21.0} // XE or older
+
+  {$IFDEF XSUPEROBJECT} // XE or older
   ASuperEnumerator:TSuperEnumerator<IJSONPair>;
   {$ELSE} // D2010之前
   ASuperEnumerator:TSuperAvlIterator;
-  {$IFEND} // XE or older
+  {$ENDIF} // XE or older
   ACurrentName:String;
   ACurrentValue:Variant;
 begin
@@ -2009,7 +2051,7 @@ begin
   I:=0;
 
   //XSuperObject
-  {$IF CompilerVersion > 21.0} // XE or older
+  {$IFDEF XSUPEROBJECT} // XE or older
   ASuperEnumerator:=AJson.GetEnumerator;
   {$ELSE} // D2010之前
   ASuperEnumerator:=AJson.AsObject.GetEnumerator;
@@ -2017,7 +2059,7 @@ begin
 
   while ASuperEnumerator.MoveNext do
   begin
-      {$IF CompilerVersion > 21.0} // XE or older
+      {$IFDEF XSUPEROBJECT} // XE or older
       ACurrentName:=ASuperEnumerator.GetCurrent.Name;
       ACurrentValue:=ASuperEnumerator.GetCurrent.AsVariant;
       {$ELSE} // D2010之前
@@ -2065,7 +2107,7 @@ function ConvertJsonToArray(AJson:ISuperObject;
                             AIsNeedObjectValueField:Boolean):Integer;
 var
   I:Integer;
-  {$IF CompilerVersion > 21.0} // XE or older
+  {$IFDEF XSUPEROBJECT} // XE or older
   ASuperEnumerator:TSuperEnumerator<IJSONPair>;
   {$ELSE} // D2010之前
   ASuperEnumerator:TSuperAvlIterator;
@@ -2081,7 +2123,7 @@ begin
   I:=0;
 
     //XSuperObject
-    {$IF CompilerVersion > 21.0} // XE or older
+    {$IFDEF XSUPEROBJECT} // XE or older
     ASuperEnumerator:=AJson.GetEnumerator;
     {$ELSE} // D2010之前
     ASuperEnumerator:=AJson.AsObject.GetEnumerator;
@@ -2090,7 +2132,7 @@ begin
     while ASuperEnumerator.MoveNext do
     begin
 
-      {$IF CompilerVersion > 21.0} // XE or older
+      {$IFDEF XSUPEROBJECT} // XE or older
       ACurrentName:=ASuperEnumerator.GetCurrent.Name;
       ACurrentValue:=ASuperEnumerator.GetCurrent.AsVariant;
       {$ELSE} // D2010之前
@@ -2128,7 +2170,7 @@ function GetJsonCount(AJson:ISuperObject;AFieldList:TStringList;
                             AIsNeedArrayValueField:Boolean;
                             AIsNeedObjectValueField:Boolean):Integer;
 var
-  {$IF CompilerVersion > 21.0} // XE or older
+  {$IFDEF XSUPEROBJECT} // XE or older
   ASuperEnumerator:TSuperEnumerator<IJSONPair>;
   {$ELSE} // D2010之前
   ASuperEnumerator:TSuperAvlIterator;
@@ -2138,7 +2180,7 @@ var
 begin
   Result:=0;
 
-  {$IF CompilerVersion > 21.0} // XE or older
+  {$IFDEF XSUPEROBJECT} // XE or older
   ASuperEnumerator:=AJson.GetEnumerator;
   {$ELSE} // D2010之前
   ASuperEnumerator:=AJson.AsObject.GetEnumerator;
@@ -2147,7 +2189,7 @@ begin
   while ASuperEnumerator.MoveNext do
   begin
 
-      {$IF CompilerVersion > 21.0} // XE or older
+      {$IFDEF XSUPEROBJECT} // XE or older
       ACurrentName:=ASuperEnumerator.GetCurrent.Name;
       ACurrentValue:=ASuperEnumerator.GetCurrent.AsVariant;
       {$ELSE} // D2010之前
@@ -2181,7 +2223,7 @@ function GetJsonNameArray(AJson:ISuperObject;AIgnoreFieldList:TStringList;
                             AIsNeedObjectValueField:Boolean):TStringDynArray;
 var
   I:Integer;
-  {$IF CompilerVersion > 21.0} // XE or older
+  {$IFDEF XSUPEROBJECT} // XE or older
   ASuperEnumerator:TSuperEnumerator<IJSONPair>;
   {$ELSE} // D2010之前
   ASuperEnumerator:TSuperAvlIterator;
@@ -2194,7 +2236,7 @@ begin
 
   //遍历所有key
   I:=0;
-  {$IF CompilerVersion > 21.0} // XE or older
+  {$IFDEF XSUPEROBJECT} // XE or older
   ASuperEnumerator:=AJson.GetEnumerator;
   {$ELSE} // D2010之前
   ASuperEnumerator:=AJson.AsObject.GetEnumerator;
@@ -2204,7 +2246,7 @@ begin
   while ASuperEnumerator.MoveNext do
   begin
 
-    {$IF CompilerVersion > 21.0} // XE or older
+    {$IFDEF XSUPEROBJECT} // XE or older
     ACurrentName:=ASuperEnumerator.GetCurrent.Name;
     ACurrentValue:=ASuperEnumerator.GetCurrent.AsVariant;
     {$ELSE} // D2010之前
@@ -2238,11 +2280,11 @@ function CopyJson(AJson:ISuperObject;AIgnoreFieldList:TStringList=nil;
                             AIsNeedObjectValueField:Boolean=True):ISuperObject;
 var
   I:Integer;
-  {$IF CompilerVersion > 21.0} // XE or older
+  {$IFDEF XSUPEROBJECT} // XE or older
   ASuperEnumerator:TSuperEnumerator<IJSONPair>;
   {$ELSE} // D2010之前
   ASuperEnumerator:TSuperAvlIterator;
-  {$IFEND} // XE or older
+  {$ENDIF} // XE or older
   ACurrentName:String;
   ACurrentValue:Variant;
 begin
@@ -2251,23 +2293,23 @@ begin
 
   //遍历所有key
   I:=0;
-  {$IF CompilerVersion > 21.0} // XE or older
+  {$IFDEF XSUPEROBJECT} // XE or older
   ASuperEnumerator:=AJson.GetEnumerator;
   {$ELSE} // D2010之前
   ASuperEnumerator:=AJson.AsObject.GetEnumerator;
-  {$IFEND} // XE or older
+  {$ENDIF} // XE or older
 
 
   while ASuperEnumerator.MoveNext do
   begin
 
-    {$IF CompilerVersion > 21.0} // XE or older
+    {$IFDEF XSUPEROBJECT} // XE or older
     ACurrentName:=ASuperEnumerator.GetCurrent.Name;
     ACurrentValue:=ASuperEnumerator.GetCurrent.AsVariant;
     {$ELSE} // D2010之前
     ACurrentName:=ASuperEnumerator.Current.Name;
     ACurrentValue:=AJson.V[ASuperEnumerator.Current.Name];
-    {$IFEND} // XE or older
+    {$ENDIF} // XE or older
 
     if Not SameText(
           Copy(ACurrentName,1,Length(NOPOST)),
@@ -2637,11 +2679,11 @@ begin
                   begin
                     Json.S[AKeyName]:='';
                   end;
-                  ftSmallint,ftInteger,ftWord,ftLargeint,ftTimeStamp,ftLongWord,ftShortint,ftByte:
+                  ftSmallint,ftInteger,ftWord,ftLargeint,ftTimeStamp{$IFDEF FPC}{$ELSE},ftLongWord,ftShortint,ftByte{$ENDIF}:
                   begin
                     Json.I[AKeyName] := 0;
                   end;
-                  ftFloat,ftCurrency,ftBCD,ftFMTBcd,ftExtended,ftSingle:
+                  ftFloat,ftCurrency,ftBCD,ftFMTBcd{$IFDEF FPC}{$ELSE},ftExtended,ftSingle{$ENDIF}:
                   begin
                     Json.F[AKeyName] := 0.0;
                   end;
@@ -2671,8 +2713,13 @@ begin
               begin
                 Json.S[AKeyName]:=FormatDateTime('YYYY-MM-DD HH:MM:SS',Field.AsDateTime);
               end;
-              ftSmallint,ftInteger,ftWord,//ftTimeStamp,
-              ftLongWord,ftShortint,ftByte:
+              ftSmallint,ftInteger,ftWord
+              {$IFDEF FPC}
+              {$ELSE}
+              ,//ftTimeStamp,
+              ftLongWord,ftShortint,ftByte
+              {$ENDIF}
+              :
               begin
                 Json.I[AKeyName] := Field.AsInteger;
               end;
@@ -2680,7 +2727,7 @@ begin
               begin
                 Json.I[AKeyName] := Field.AsLargeInt;
               end;
-              ftFloat,ftCurrency,ftBCD,ftFMTBcd,ftExtended,ftSingle,ftTimeStamp:
+              ftFloat,ftCurrency,ftBCD,ftFMTBcd,ftTimeStamp{$IFDEF FPC}{$ELSE},ftExtended,ftSingle{$ENDIF}:
               begin
                 Json.F[AKeyName] := Field.AsFloat;
               end;
@@ -2772,7 +2819,7 @@ begin
 ////  end;
 end;
 
-{$IF CompilerVersion > 21.0} // XE or older
+{$IFDEF XSUPEROBJECT} // XE or older
 function CreateJsonArrayElementValueByField(JsonArray: ISuperArray;AIndex:Integer;Field: TField): Boolean;
 var
   APicStream:TMemoryStream;
@@ -2818,7 +2865,7 @@ begin
 
 
 end;
-{$IFEND}
+{$ENDIF}
 
 function JSonFromRecord(DataSet: TDataSet;AFieldMapList:TStringList=nil;AIsNeedNullField:Boolean=DEFAULT_IsNeedNullField): ISuperObject;
 begin
@@ -2853,7 +2900,7 @@ begin
     end;
 end;
 
-{$IF CompilerVersion > 21.0} // XE or older
+{$IFDEF XSUPEROBJECT} // XE or older
 function CompressedJSonFromRecord(DataSet: TDataSet): ISuperArray;
 var
   i:Integer;
@@ -2911,7 +2958,7 @@ begin
   Result:=CompressedJSonFromDataSetTo(DataSet,tableName,sj);
 end;
 
-{$IFEND} // XE or older
+{$ENDIF} // XE or older
 
 function JSonFromDataSetTo(DataSet: TDataSet;tableName: string;sj:ISuperObject;AFieldMapList:TStringList=nil;AIsNeedNullField:Boolean=DEFAULT_IsNeedNullField): ISuperObject;
 var
@@ -2922,7 +2969,7 @@ begin
 
     //创建数据集的数据
     DataSet.First;
-    aj := TSuperArray.Create();
+    aj := SA();
     index:=0;
     while not DataSet.Eof do
     begin
@@ -2952,7 +2999,7 @@ var
 begin
     //创建数据集的数据
     DataSet.First;
-    Result := TSuperArray.Create();
+    Result := SA();
     index:=0;
     while not DataSet.Eof do
     begin
@@ -2971,7 +3018,7 @@ function SliceJsonArray(JsonArray: ISuperArray; StartIndex,EndIndex: Integer): I
 var
   I: Integer;
 begin
-  Result := TSuperArray.Create();
+  Result := SA();
   for I := 0 to JsonArray.Length-1 do
   begin
     if (I >= StartIndex) and (I <= EndIndex) then

@@ -1469,8 +1469,8 @@ begin
 
   if (ACurrentPicture.FSVGObject<>nil) then
   begin
-      APictureDrawWidth:=Ceil(ADrawRect.Width);
-      APictureDrawHeight:=Ceil(ADrawRect.Height);
+      APictureDrawWidth:=Ceil(ACalcDrawRect.Width);
+      APictureDrawHeight:=Ceil(ACalcDrawRect.Height);
 
       if (ADrawPicture.FixedSVGWidth<>0) and (ADrawPicture.FixedSVGHeight<>0) then
       begin

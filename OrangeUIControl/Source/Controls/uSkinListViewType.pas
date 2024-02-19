@@ -556,6 +556,7 @@ type
 
   TControlLayoutItem=class(TInterfacedPersistent,ISkinItem)
   public
+    HintLabel:TComponent;
     //比如TTS是Component,而不是Control
     Component:TComponent;
 
@@ -633,6 +634,12 @@ type
     //调用DoItemVisibleChange
     procedure EndUpdate(AIsForce:Boolean=False);override;
   public
+    //提示Label的宽度
+    HintLabelWidth:Integer;
+    FParent:TControl;
+    procedure SetParent(const Value:TControl);
+    function DoGetParentControlWidth(Sender:TObject):Double;
+    function DoGetParentControlHeight(Sender:TObject):Double;
     constructor Create(
                         const AObjectOwnership:TObjectOwnership=ooOwned;
                         const AIsCreateObjectChangeManager:Boolean=True
@@ -641,8 +648,13 @@ type
     //排列控件
     procedure AlignControls;
     function Add(AControl:TControl;
-                  AItemWidth:Double;
-                  AItemHeight:Double):TControlLayoutItem;overload;
+                  AItemWidth:Double=-1;
+                  AItemHeight:Double=-1):TControlLayoutItem;overload;
+    function Add(AHintLabel,AControl:TControl;
+                  AItemWidth:Double=-1;
+                  AItemHeight:Double=-1):TControlLayoutItem;overload;
+
+    property Parent:TControl read FParent write SetParent;
   end;
 
 
@@ -2517,11 +2529,42 @@ end;
 
 { TControlLayoutItems }
 
+function TControlLayoutItems.DoGetParentControlWidth(Sender:TObject):Double;
+begin
+  Result:=0;
+  if FParent<>nil then Result:=FParent.Width;
+end;
+
+function TControlLayoutItems.DoGetParentControlHeight(Sender:TObject):Double;
+begin
+  Result:=0;
+  if FParent<>nil then Result:=FParent.Height;
+end;
+
+
+procedure TControlLayoutItems.SetParent(const Value:TControl);
+begin
+  FParent:=Value;
+  FListLayoutsManager.FOnGetControlWidth:=DoGetParentControlWidth;
+  FListLayoutsManager.FOnGetControlHeight:=DoGetParentControlHeight;
+end;
 
 function TControlLayoutItems.Add(AControl: TControl; AItemWidth: Double;
   AItemHeight: Double): TControlLayoutItem;
 begin
   Result:=TControlLayoutItem.Create;//(nil);
+  Result.Component:=AControl;
+  Result.FWidth:=AItemWidth;
+  Result.FHeight:=AItemHeight;
+
+  Self.Add(Result);
+end;
+
+function TControlLayoutItems.Add(AHintLabel,AControl: TControl; AItemWidth: Double;
+  AItemHeight: Double): TControlLayoutItem;
+begin
+  Result:=TControlLayoutItem.Create;//(nil);
+  Result.HintLabel:=AHintLabel;
   Result.Component:=AControl;
   Result.FWidth:=AItemWidth;
   Result.FHeight:=AItemHeight;
@@ -2536,6 +2579,7 @@ var
   AControlLayoutItem:TControlLayoutItem;
   AItemRect:TRectF;
 begin
+      FListLayoutsManager.DoItemSizeChange(nil);
 
       //for I := 0 to Self.FListLayoutsManager.GetVisibleItemsCount-1 do
       for I := 0 to Self.FListLayoutsManager.SkinListIntf.Count-1 do
@@ -2558,12 +2602,30 @@ begin
             //设置控件的位置和尺寸
             //AControlLayoutItem.AlignControl(AItemRect,LayoutSetting);
 
-            TControl(AControlLayoutItem.Component).SetBounds(
-                ControlSize(AItemRect.Left),
-                ControlSize(AItemRect.Top),
-                ControlSize(AItemRect.Width),
-                ControlSize(AItemRect.Height)
-                );
+            if AControlLayoutItem.HintLabel=nil then
+            begin
+              TControl(AControlLayoutItem.Component).SetBounds(
+                  ControlSize(AItemRect.Left),
+                  ControlSize(AItemRect.Top),
+                  ControlSize(AItemRect.Width),
+                  ControlSize(AItemRect.Height)
+                  );
+            end
+            else
+            begin
+              TControl(AControlLayoutItem.HintLabel).SetBounds(
+                  ControlSize(AItemRect.Left),
+                  ControlSize(AItemRect.Top),
+                  ControlSize(HintLabelWidth),
+                  ControlSize(AItemRect.Height)
+                  );
+              TControl(AControlLayoutItem.Component).SetBounds(
+                  ControlSize(AItemRect.Left+HintLabelWidth+5),
+                  ControlSize(AItemRect.Top),
+                  ControlSize(AItemRect.Width-HintLabelWidth-5),
+                  ControlSize(AItemRect.Height)
+                  );
+            end;
 
         end
         else
@@ -2581,6 +2643,7 @@ constructor TControlLayoutItems.Create(
 begin
   inherited Create(AObjectOwnership,AIsCreateObjectChangeManager);
 
+  HintLabelWidth:=80;
   //布局管理
   FListLayoutsManager:=TSkinListViewLayoutsManager.Create(Self);
   FListLayoutsManager.ItemSizeCalcType:=isctSeparate;//isctFixed;

@@ -3,9 +3,9 @@ unit uVCLSVGSupport;
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Winapi.GDIPOBJ
-  , Winapi.GDIPAPI
+  Windows, Messages, SysUtils, Variants, Classes, Vcl.Graphics,
+  GDIPOBJ
+  , GDIPAPI
   , SVGTypes,
     SVG,
     uSkinWindowsControl,

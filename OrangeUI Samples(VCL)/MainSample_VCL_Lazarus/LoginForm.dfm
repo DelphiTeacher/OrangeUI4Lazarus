@@ -3,8 +3,8 @@ object frmLogin: TfrmLogin
   Height = 401
   Top = 505
   Width = 457
-  BorderIcons = [biSystemMenu, biMinimize]
-  BorderStyle = bsToolWindow
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
   Caption = '登录'
   ClientHeight = 401
   ClientWidth = 457
@@ -131,7 +131,13 @@ object frmLogin: TfrmLogin
         Top = 0
         Width = 200
         Align = alClient
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Tahoma'
+        OnChange = edtUserChange
+        ParentFont = False
         TabOrder = 0
+        Text = '18957901025'
       end
     end
     object pnlPassword: TSkinWinPanel
@@ -195,7 +201,14 @@ object frmLogin: TfrmLogin
         Top = 0
         Width = 200
         Align = alClient
+        EchoMode = emPassword
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Tahoma'
+        ParentFont = False
+        PasswordChar = '*'
         TabOrder = 0
+        Text = '123456'
       end
     end
     object chkRememberPassword: TCheckBox
@@ -489,5 +502,14 @@ object frmLogin: TfrmLogin
     Caption = '系统登录'
     Text = '系统登录'
     Properties.AutoSize = False
+  end
+  object tteLogin: TTimerTaskEvent
+    TaskID = 0
+    TaskTag = 0
+    OnBegin = tteLoginBegin
+    OnExecute = tteLoginExecute
+    OnExecuteEnd = tteLoginExecuteEnd
+    Left = 368
+    Top = 232
   end
 end

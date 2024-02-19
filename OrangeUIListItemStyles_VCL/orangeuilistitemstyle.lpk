@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Package Version="5">
+    <PathDelim Value="\"/>
+    <Name Value="OrangeUIListItemStyle"/>
+    <Type Value="RunAndDesignTime"/>
+    <CompilerOptions>
+      <Version Value="11"/>
+      <PathDelim Value="\"/>
+      <SearchPaths>
+        <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)\"/>
+      </SearchPaths>
+    </CompilerOptions>
+    <Files>
+      <Item>
+        <Filename Value="ListItemStyle_Default.dfm"/>
+        <Type Value="Text"/>
+      </Item>
+      <Item>
+        <Filename Value="ListItemStyle_Default.pas"/>
+        <UnitName Value="ListItemStyle_Default"/>
+      </Item>
+      <Item>
+        <Filename Value="ListItemStyle_AddFriendsDemoSelectItem.pas"/>
+        <UnitName Value="ListItemStyle_AddFriendsDemoSelectItem"/>
+      </Item>
+      <Item>
+        <Filename Value="ListItemStyle_CaptionCenter_CloseBtnRight_TopBorderSelected.pas"/>
+        <UnitName Value="ListItemStyle_CaptionCenter_CloseBtnRight_TopBorderSelected"/>
+      </Item>
+      <Item>
+        <Filename Value="ListItemStyle_CaptionCenter_SelectedWhiteBackThemeFont.pas"/>
+        <UnitName Value="ListItemStyle_CaptionCenter_SelectedWhiteBackThemeFont"/>
+      </Item>
+      <Item>
+        <Filename Value="ListItemStyle_CaptionDetailItem.pas"/>
+        <UnitName Value="ListItemStyle_CaptionDetailItem"/>
+      </Item>
+      <Item>
+        <Filename Value="ListItemStyle_CaptionSelectedMark.pas"/>
+        <UnitName Value="ListItemStyle_CaptionSelectedMark"/>
+      </Item>
+      <Item>
+        <Filename Value="ListItemStyle_CaptionTopDetailBottom.pas"/>
+        <UnitName Value="ListItemStyle_CaptionTopDetailBottom"/>
+      </Item>
+      <Item>
+        <Filename Value="ListItemStyle_CaptionTopDetailBottom_Summary.pas"/>
+        <UnitName Value="ListItemStyle_CaptionTopDetailBottom_Summary"/>
+      </Item>
+      <Item>
+        <Filename Value="ListItemStyle_CarLocation.pas"/>
+        <UnitName Value="ListItemStyle_CarLocation"/>
+      </Item>
+      <Item>
+        <Filename Value="ListItemStyle_CarLocationSummary.pas"/>
+        <UnitName Value="ListItemStyle_CarLocationSummary"/>
+      </Item>
+      <Item>
+        <Filename Value="ListItemStyle_CheckBoxIconLeft_CaptionRight.pas"/>
+        <UnitName Value="ListItemStyle_CheckBoxIconLeft_CaptionRight"/>
+      </Item>
+      <Item>
+        <Filename Value="ListItemStyle_ClassifyHasSelectedEffect.pas"/>
+        <UnitName Value="ListItemStyle_ClassifyHasSelectedEffect"/>
+      </Item>
+      <Item>
+        <Filename Value="ListItemStyle_CompanyInfo.pas"/>
+        <UnitName Value="ListItemStyle_CompanyInfo"/>
+      </Item>
+      <Item>
+        <Filename Value="ListItemStyle_ConstructionSiteCarProgress.pas"/>
+        <UnitName Value="ListItemStyle_ConstructionSiteCarProgress"/>
+      </Item>
+      <Item>
+        <Filename Value="ListItemStyle_ContactInfo.pas"/>
+        <UnitName Value="ListItemStyle_ContactInfo"/>
+      </Item>
+      <Item>
+        <Filename Value="ListItemStyle_CustomerInfo.pas"/>
+        <UnitName Value="ListItemStyle_CustomerInfo"/>
+      </Item>
+      <Item>
+        <Filename Value="ListItemStyle_CustomerTag.pas"/>
+        <UnitName Value="ListItemStyle_CustomerTag"/>
+      </Item>
+      <Item>
+        <Filename Value="ListItemStyle_DashBoardSummaryItem.pas"/>
+        <UnitName Value="ListItemStyle_DashBoardSummaryItem"/>
+      </Item>
+      <Item>
+        <Filename Value="ListItemStyle_GoodsItem.pas"/>
+        <UnitName Value="ListItemStyle_GoodsItem"/>
+      </Item>
+      <Item>
+        <Filename Value="ListItemStyle_GoodsSelectItem.pas"/>
+        <UnitName Value="ListItemStyle_GoodsSelectItem"/>
+      </Item>
+      <Item>
+        <Filename Value="ListItemStyle_GroupsSelectItem.pas"/>
+        <UnitName Value="ListItemStyle_GroupsSelectItem"/>
+      </Item>
+      <Item>
+        <Filename Value="ListItemStyle_HistoryMadical.pas"/>
+        <UnitName Value="ListItemStyle_HistoryMadical"/>
+      </Item>
+      <Item>
+        <Filename Value="ListItemStyle_HorzSelectedSignBottom_CaptionCenter.pas"/>
+        <UnitName Value="ListItemStyle_HorzSelectedSignBottom_CaptionCenter"/>
+      </Item>
+      <Item>
+        <Filename Value="ListItemStyle_HospitalDoctorForRegisterNumber.pas"/>
+        <UnitName Value="ListItemStyle_HospitalDoctorForRegisterNumber"/>
+      </Item>
+      <Item>
+        <Filename Value="ListItemStyle_IconButton.pas"/>
+        <UnitName Value="ListItemStyle_IconButton"/>
+      </Item>
+      <Item>
+        <Filename Value="ListItemStyle_IconCaptionLeft_ArrowRight.pas"/>
+        <UnitName Value="ListItemStyle_IconCaptionLeft_ArrowRight"/>
+      </Item>
+      <Item>
+        <Filename Value="ListItemStyle_IconCaptionLeft_DetailRight.pas"/>
+        <UnitName Value="ListItemStyle_IconCaptionLeft_DetailRight"/>
+      </Item>
+      <Item>
+        <Filename Value="ListItemStyle_IconCaptionLeft_NotifyIconRight.pas"/>
+        <UnitName Value="ListItemStyle_IconCaptionLeft_NotifyIconRight"/>
+      </Item>
+      <Item>
+        <Filename Value="ListItemStyle_IconCaptionLeft_NotifyNumberRight.pas"/>
+        <UnitName Value="ListItemStyle_IconCaptionLeft_NotifyNumberRight"/>
+      </Item>
+      <Item>
+        <Filename Value="ListItemStyle_IconLeft_CaptionLeft.pas"/>
+        <UnitName Value="ListItemStyle_IconLeft_CaptionLeft"/>
+      </Item>
+      <Item>
+        <Filename Value="ListItemStyle_IconLeft_CaptionRight.pas"/>
+        <UnitName Value="ListItemStyle_IconLeft_CaptionRight"/>
+      </Item>
+      <Item>
+        <Filename Value="ListItemStyle_IconLeft_CaptionRight_CloseBtnRight.pas"/>
+        <UnitName Value="ListItemStyle_IconLeft_CaptionRight_CloseBtnRight"/>
+      </Item>
+      <Item>
+        <Filename Value="ListItemStyle_IconTop_CaptionBottom.pas"/>
+        <UnitName Value="ListItemStyle_IconTop_CaptionBottom"/>
+      </Item>
+      <Item>
+        <Filename Value="ListItemStyle_IconTop_CaptionDetailBottom.pas"/>
+        <UnitName Value="ListItemStyle_IconTop_CaptionDetailBottom"/>
+      </Item>
+      <Item>
+        <Filename Value="ListItemStyle_IconTop_CaptionWhiteBottom_BackSelectedWhite.pas"/>
+        <UnitName Value="ListItemStyle_IconTop_CaptionWhiteBottom_BackSelectedWhite"/>
+      </Item>
+      <Item>
+        <Filename Value="ListItemStyle_MailList.pas"/>
+        <UnitName Value="ListItemStyle_MailList"/>
+      </Item>
+      <Item>
+        <Filename Value="ListItemStyle_MailList2.pas"/>
+        <UnitName Value="ListItemStyle_MailList2"/>
+      </Item>
+      <Item>
+        <Filename Value="ListItemStyle_MailListWithTag.pas"/>
+        <UnitName Value="ListItemStyle_MailListWithTag"/>
+      </Item>
+      <Item>
+        <Filename Value="ListItemStyle_MessageHintCard.pas"/>
+        <UnitName Value="ListItemStyle_MessageHintCard"/>
+      </Item>
+      <Item>
+        <Filename Value="ListItemStyle_MessageHintCard2.pas"/>
+        <UnitName Value="ListItemStyle_MessageHintCard2"/>
+      </Item>
+      <Item>
+        <Filename Value="ListItemStyle_MessageHintCard3.pas"/>
+        <UnitName Value="ListItemStyle_MessageHintCard3"/>
+      </Item>
+      <Item>
+        <Filename Value="ListItemStyle_ProgressBar.pas"/>
+        <UnitName Value="ListItemStyle_ProgressBar"/>
+      </Item>
+      <Item>
+        <Filename Value="ListItemStyle_PublishSettingItem.pas"/>
+        <UnitName Value="ListItemStyle_PublishSettingItem"/>
+      </Item>
+      <Item>
+        <Filename Value="ListItemStyle_RoundColorLabel.pas"/>
+        <UnitName Value="ListItemStyle_RoundColorLabel"/>
+      </Item>
+      <Item>
+        <Filename Value="ListItemStyle_RoundColorRectAndLabel.pas"/>
+        <UnitName Value="ListItemStyle_RoundColorRectAndLabel"/>
+      </Item>
+      <Item>
+        <Filename Value="ListItemStyle_TreeChildListBox.pas"/>
+        <UnitName Value="ListItemStyle_TreeChildListBox"/>
+      </Item>
+      <Item>
+        <Filename Value="ListItemStyle_TreeHistoryMadicalList_Child.pas"/>
+        <UnitName Value="ListItemStyle_TreeHistoryMadicalList_Child"/>
+      </Item>
+      <Item>
+        <Filename Value="ListItemStyle_TreeHistoryMadicalList_Diag.pas"/>
+        <UnitName Value="ListItemStyle_TreeHistoryMadicalList_Diag"/>
+      </Item>
+      <Item>
+        <Filename Value="ListItemStyle_TreeHistoryMadicalList_Item.pas"/>
+        <UnitName Value="ListItemStyle_TreeHistoryMadicalList_Item"/>
+      </Item>
+      <Item>
+        <Filename Value="ListItemStyle_TreeMainMenu.pas"/>
+        <UnitName Value="ListItemStyle_TreeMainMenu"/>
+      </Item>
+      <Item>
+        <Filename Value="ListItemStyle_TreeMainMenu_LabelAndArrow.pas"/>
+        <UnitName Value="ListItemStyle_TreeMainMenu_LabelAndArrow"/>
+      </Item>
+      <Item>
+        <Filename Value="ListItemStyle_TreeMainMenuItem.pas"/>
+        <UnitName Value="ListItemStyle_TreeMainMenuItem"/>
+      </Item>
+      <Item>
+        <Filename Value="ListItemStyle_TreeParentNode.pas"/>
+        <UnitName Value="ListItemStyle_TreeParentNode"/>
+      </Item>
+      <Item>
+        <Filename Value="ListItemStyle_TwoButton.pas"/>
+        <UnitName Value="ListItemStyle_TwoButton"/>
+      </Item>
+      <Item>
+        <Filename Value="ListItemStyle_TwoButtonDel.pas"/>
+        <UnitName Value="ListItemStyle_TwoButtonDel"/>
+      </Item>
+      <Item>
+        <Filename Value="ListItemStyle_TwoIconButton.pas"/>
+        <UnitName Value="ListItemStyle_TwoIconButton"/>
+      </Item>
+      <Item>
+        <Filename Value="ListItemStyle_VertSelectedGray_CaptionLeft.pas"/>
+        <UnitName Value="ListItemStyle_VertSelectedGray_CaptionLeft"/>
+      </Item>
+      <Item>
+        <Filename Value="ListItemStyle_VertSelectedSignIconLeft_CaptionRight.pas"/>
+        <UnitName Value="ListItemStyle_VertSelectedSignIconLeft_CaptionRight"/>
+      </Item>
+      <Item>
+        <Filename Value="ListItemStyle_VertSelectedSignLeft_CaptionRight.pas"/>
+        <UnitName Value="ListItemStyle_VertSelectedSignLeft_CaptionRight"/>
+      </Item>
+    </Files>
+    <RequiredPkgs>
+      <Item>
+        <PackageName Value="OrangeUIControl_Lazarus"/>
+      </Item>
+      <Item>
+        <PackageName Value="FCL"/>
+      </Item>
+    </RequiredPkgs>
+    <UsageOptions>
+      <UnitPath Value="$(PkgOutDir)"/>
+    </UsageOptions>
+    <PublishOptions>
+      <Version Value="2"/>
+      <UseFileFilters Value="True"/>
+    </PublishOptions>
+  </Package>
+</CONFIG>

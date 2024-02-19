@@ -252,6 +252,8 @@ type
     procedure PutB(const index: integer; Value: Boolean);
     function GetI(const index: integer): SuperInt;
     procedure PutI(const index: integer; Value: SuperInt);
+    function GetV(const index: integer): Variant;
+    procedure PutV(const index: integer; Value: Variant);
     function GetD(const index: integer): Double;
     procedure PutD(const index: integer; Value: Double);
     function GetC(const index: integer): Currency;
@@ -281,6 +283,7 @@ type
     property D[const index: integer]: Double read GetD write PutD;
     property C[const index: integer]: Currency read GetC write PutC;
     property S[const index: integer]: SOString read GetS write PutS;
+    property V[const index: integer]: Variant read GetV write PutV;
 {$IFDEF SUPER_METHOD}
     property M[const index: integer]: TSuperMethod read GetM write PutM;
 {$ENDIF}
@@ -497,6 +500,7 @@ type
 
   //wn
   ISuperArray=interface
+  ['{8B4D6082-DC4B-450F-94F6-84DE5174DD49}']
     //返回自已这个对象,
     function GetSelf:ISuperObject;
     //对象类型的元素
@@ -505,6 +509,13 @@ type
     //整型类型的元素
     function GetArrayItemI(const AIndex: Integer): Integer;
     procedure PutArrayItemI(const AIndex: Integer; const Value: Integer);
+    //字符类型的元素
+    function GetArrayItemS(const AIndex: Integer): String;
+    procedure PutArrayItemS(const AIndex: Integer; const Value: String);
+    function GetArrayItemV(const AIndex: Integer): Variant;
+    procedure PutArrayItemV(const AIndex: Integer; const Value: Variant);
+    function GetArrayItemA(const AIndex: Integer): ISuperArray;
+    procedure PutArrayItemA(const AIndex: Integer; const Value: ISuperArray);
     //长度
     function Length:Integer;
     //
@@ -514,6 +525,9 @@ type
 
     property O[const AIndex: Integer]: ISuperObject read GetArrayItemO write PutArrayItemO;
     property I[const AIndex: Integer]: Integer read GetArrayItemI write PutArrayItemI;
+    property S[const AIndex: Integer]: String read GetArrayItemS write PutArrayItemS;
+    property V[const AIndex: Integer]: Variant read GetArrayItemV write PutArrayItemV;
+    property A[const AIndex: Integer]: ISuperArray read GetArrayItemA write PutArrayItemA;
   end;
 
 
@@ -575,6 +589,7 @@ type
     function AsCurrency: Currency;
     function AsString: SOString;
     function AsArray: TSuperArray;
+    function AsVariant: Variant;
     function AsObject: TSuperTableString;
 {$IFDEF SUPER_METHOD}
     function AsMethod: TSuperMethod;
@@ -704,7 +719,13 @@ type
     procedure PutArrayItemO(const AIndex: Integer; const Value: ISuperObject);
     function GetArrayItemI(const AIndex: Integer): Integer;
     procedure PutArrayItemI(const AIndex: Integer; const Value: Integer);
-    //wn
+    function GetArrayItemS(const AIndex: Integer): String;
+    procedure PutArrayItemS(const AIndex: Integer; const Value: String);
+    function GetArrayItemV(const AIndex: Integer): Variant;
+    procedure PutArrayItemV(const AIndex: Integer; const Value: Variant);
+    function GetArrayItemA(const AIndex: Integer): ISuperArray;
+    procedure PutArrayItemA(const AIndex: Integer; const Value: ISuperArray);
+   //wn
     function AsISuperArray: ISuperArray;
     function Contains(AKey:String):Boolean;
     function AsTSuperObject:TSuperObject;
@@ -760,6 +781,7 @@ type
     function AsCurrency: Currency; virtual;
     function AsString: SOString; virtual;
     function AsArray: TSuperArray; virtual;
+    function AsVariant: Variant; virtual;
     function AsObject: TSuperTableString; virtual;
 {$IFDEF SUPER_METHOD}
     function AsMethod: TSuperMethod; virtual;
@@ -879,6 +901,8 @@ function SO(const value: Variant): ISuperObject; overload;
 function SO(const Args: array of const): ISuperObject; overload;
 
 function SA(const Args: array of const): ISuperObject; overload;
+function SA(): ISuperArray; overload;
+function SA(const s: SOString): ISuperArray; overload;
 
 function JavaToDelphiDateTime(const dt: int64): TDateTime;
 function DelphiToJavaDateTime(const dt: TDateTime): int64;
@@ -1362,6 +1386,16 @@ end;
 function SO(const s: SOString): ISuperObject; overload;
 begin
   Result := TSuperObject.ParseString(PSOChar(s), False);
+end;
+
+function SA(const s: SOString): ISuperArray; overload;
+begin
+  Result := TSuperObject.ParseString(PSOChar(s), False) as ISuperArray;
+end;
+
+function SA(): ISuperArray;
+begin
+  Result := TSuperObject.Create(stArray);
 end;
 
 function SA(const Args: array of const): ISuperObject; overload;
@@ -2254,6 +2288,32 @@ begin
     Result := AsJSon(false, false);
 end;
 
+function TSuperObject.AsVariant: Variant;
+begin
+  //if FDataType = stString then
+  //  Result := FOString else
+  //  Result := AsJSon(false, false);
+
+  //stNull,
+  //stBoolean,
+  //stDouble,
+  //stCurrency,
+  //stInt,
+  //stObject,
+  //stArray,
+  //stString
+  case FDataType of
+    stNull:Result:='';
+    stBoolean:Result:=AsBoolean;
+    stDouble:Result:=AsDouble;
+    stCurrency:Result:=AsCurrency;
+    stInt:Result:=AsInteger;
+    //stObject:Result:='';
+    //stArray:Result:=;
+    stString:Result:=AsString;
+  end;
+end;
+
 
 //wn
 function TSuperObject.GetSelf:ISuperObject;
@@ -2271,14 +2331,34 @@ begin
   Result:=Self.AsArray.O[AIndex];
 end;
 
+function TSuperObject.GetArrayItemA(const AIndex: Integer): ISuperArray;
+begin
+  Result:=Self.AsArray.O[AIndex] as ISuperArray;
+end;
+
 procedure TSuperObject.PutArrayItemO(const AIndex: Integer; const Value: ISuperObject);
 begin
   Self.AsArray.O[AIndex]:=Value;
 end;
 
+procedure TSuperObject.PutArrayItemA(const AIndex: Integer; const Value: ISuperArray);
+begin
+  Self.AsArray.O[AIndex]:=Value.GetSelf;
+end;
+
 function TSuperObject.GetArrayItemI(const AIndex: Integer): Integer;
 begin
   Result:=Self.AsArray.I[AIndex];
+end;
+
+function TSuperObject.GetArrayItemS(const AIndex: Integer): String;
+begin
+  Result:=Self.AsArray.S[AIndex];
+end;
+
+function TSuperObject.GetArrayItemV(const AIndex: Integer): Variant;
+begin
+  Result:=Self.AsArray.V[AIndex];
 end;
 
 procedure TSuperObject.PutArrayItemI(const AIndex: Integer; const Value: Integer);
@@ -2287,8 +2367,28 @@ begin
 //  begin
 //    Self.AsArray.Add
 //  end;
-  
+
   Self.AsArray.I[AIndex]:=Value;
+end;
+
+procedure TSuperObject.PutArrayItemS(const AIndex: Integer; const Value: String);
+begin
+//  if AIndex>=Self.AsArray.Length then
+//  begin
+//    Self.AsArray.Add
+//  end;
+
+  Self.AsArray.S[AIndex]:=Value;
+end;
+
+procedure TSuperObject.PutArrayItemV(const AIndex: Integer; const Value: Variant);
+begin
+//  if AIndex>=Self.AsArray.Length then
+//  begin
+//    Self.AsArray.Add
+//  end;
+
+  Self.AsArray.V[AIndex]:=Value;
 end;
 
 function TSuperObject.GetType(Key: String): TVarType;
@@ -4829,6 +4929,16 @@ begin
     Result := 0;
 end;
 
+function TSuperArray.GetV(const index: integer): Variant;
+var
+  obj: ISuperObject;
+begin
+  obj := GetO(index);
+  if obj <> nil then
+    Result := obj.AsInteger else
+    Result := 0;
+end;
+
 function TSuperArray.GetS(const index: integer): SOString;
 var
   obj: ISuperObject;
@@ -4895,14 +5005,36 @@ begin
   PutO(index, TSuperObject.Create(Value));
 end;
 
+procedure TSuperArray.PutV(const index: integer; Value: Variant);
+begin
+  //PutO(index, TSuperObject.Create(Value));
+  //case AChild.DataType of
+  //  stBoolean:Result:=varBoolean;
+  //  stDouble:Result:=varDouble;
+  //  stCurrency:Result:=varDouble;
+  //  stInt:Result:=varInteger;
+  //  stObject:Result:=varByRef;
+  //  stArray:Result:=varArray;
+  //  stString:Result:=varString;
+  //end;
+  case VarType(Value) of
+    varBoolean:B[index]:=Value;
+    varDouble:D[index]:=Value;
+    varInteger:I[index]:=Value;
+    //varByRef:B[index]:=Value;
+    //varArray:B[index]:=Value;
+    varString:S[index]:=Value;
+  end;
+end;
+
 {$IFDEF SUPER_METHOD}
 function TSuperArray.GetM(const index: integer): TSuperMethod;
 var
-  v: ISuperObject;
+  av: ISuperObject;
 begin
-  v := GetO(index);
-  if (ObjectGetType(v) = stMethod) then
-    Result := v.AsMethod else
+  av := GetO(index);
+  if (ObjectGetType(av) = stMethod) then
+    Result := av.AsMethod else
     Result := nil;
 end;
 {$ENDIF}

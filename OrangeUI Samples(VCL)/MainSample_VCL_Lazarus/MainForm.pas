@@ -66,6 +66,8 @@ uses
   //MultiSelectFrame_VCL,
   //uMultiSelectFrame,
 
+  EditGoodsFrame,
+
   uSkinCustomListType, uSkinVirtualListType, uSkinListBoxType, uSkinButtonType,
   uSkinMaterial, uSkinPageControlType, uSkinImageType, uSkinLabelType, StdCtrls,
   uSkinEditType, Menus, uSkinListViewType,
@@ -456,6 +458,14 @@ begin
 //  //  FCurrentFrame.Top:=0;
 //  //  Exit;
 //  //end;
+
+
+
+  //编辑表单页面
+  if AItem.Name='edit_goods_frame' then
+  begin
+    FCurrentFrame:=TFrameEditGoods.Create(Self);
+  end;
 
 
   if FCurrentFrame=nil then

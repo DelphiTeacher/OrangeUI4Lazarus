@@ -8,13 +8,12 @@ uses
 
   EasyServiceCommonMaterialDataMoudle_VCL_Lazarus,
 
-  Graphics, Controls, Forms, Dialogs, uSkinWindowsEdit,
+  Graphics, Controls, Forms, Dialogs,
   StdCtrls;
 
 type
   TFrameEdit = class(TFrame)
     Edit1: TEdit;
-    SkinWinEdit1: TSkinWinEdit;
   private
     { Private declarations }
   public

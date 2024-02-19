@@ -16,6 +16,7 @@ uses
   uAndroidPermission_D10_2,
   {$ENDIF ANDROID}
   uOpenCommon,
+  uFuncCommon,
   UITypes,
 
   SysUtils;
@@ -108,7 +109,7 @@ var
 var
   AIndex:Integer;
   //Android所需要的权限
-  Const_Android_RequestPermissions:TArray<string>;
+  Const_Android_RequestPermissions:TStringDynArray;
 
 
 

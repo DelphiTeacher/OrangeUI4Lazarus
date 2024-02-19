@@ -48,18 +48,21 @@ uses
   uBaseList,
   uDataSetToJson,
 
-  {$IFDEF OPEN_PLATFORM_SERVER}
-    //在开放平台服务端中使用
-  {$ELSE}
-      //在开放平台客户端中使用
-    //  {$IF CompilerVersion > 21.0} // XE or older
-      uGPSUtils,
-    //  {$IFEND}
-  {$ENDIF}
+  //{$IFDEF OPEN_PLATFORM_SERVER}
+  //  //在开放平台服务端中使用
+  //{$ELSE}
+  //    //在开放平台客户端中使用
+  //  //  {$IF CompilerVersion > 21.0} // XE or older
+  //    uGPSUtils,
+  //  //  {$IFEND}
+  //{$ENDIF}
 
 //  uOpenClientCommon,
 
 
+  {$IFDEF FPC}
+  uSkinSuperObject,
+  {$ELSE}
   {$IF CompilerVersion <= 21.0} // XE or older
   SuperObject,
   superobjecthelper,
@@ -71,6 +74,7 @@ uses
     XSuperJson,
     {$ENDIF}
   {$IFEND}
+  {$ENDIF}
 
 
 
@@ -375,13 +379,13 @@ type
   public
     //获取默认的收货地址
     function GetDefaultRecvAddr:TUserRecvAddr;
-    //获取离商家最近的收货地址
-    function GetNearestRecvAddr(AShopLongitude:Double;//商家的位置
-                                AShopLatitude:Double;
-                                AShopMaxDeliveryDistance:Double;//商家的配送最大范围
-                                AMyLongitude:Double;//我的位置
-                                AMyLatitude:Double
-                                ):TUserRecvAddr;
+    ////获取离商家最近的收货地址
+    //function GetNearestRecvAddr(AShopLongitude:Double;//商家的位置
+    //                            AShopLatitude:Double;
+    //                            AShopMaxDeliveryDistance:Double;//商家的配送最大范围
+    //                            AMyLongitude:Double;//我的位置
+    //                            AMyLatitude:Double
+    //                            ):TUserRecvAddr;
     property Items[Index:Integer]:TUserRecvAddr read GetItem;default;
   end;
   {$ENDREGION '用户收货地址列表'}
@@ -2733,7 +2737,8 @@ begin
       begin
           APicPath:=ImageHttpServerUrl+'/'+ReplaceStr(APicPath,'\','/');
 
-
+          {$IFDEF FPC}
+          {$ELSE}
           {$IF CompilerVersion > 21.0} // XE or older
           if AIsThumb then
           begin
@@ -2745,6 +2750,7 @@ begin
 //            APicPath:=ExtractFilePath(APicPath)+'thumb_'+ExtractFileName(APicPath);
           end;
           {$IFEND}
+          {$ENDIF}
 
           Result:=APicPath;
       end;
@@ -3994,48 +4000,48 @@ begin
   Result:=TUserRecvAddr(Inherited Items[Index]);
 end;
 
-function TUserRecvAddrList.GetNearestRecvAddr(
-                                AShopLongitude:Double;//商家的位置
-                                AShopLatitude:Double;
-                                AShopMaxDeliveryDistance:Double;//商家的配送最大范围
-                                AMyLongitude:Double;//我的位置
-                                AMyLatitude:Double): TUserRecvAddr;
-var
-  AShopDistance:Double;
-  AMyDistance:Double;
-  AMin:Double;
-  I: Integer;
-begin
-  AMin:=MaxInt;
-  Result:=nil;
-
-  uBaseLog.HandleException(nil,'OrangeUI GetNearestRecvAddr');
-
-  //先获取在商家配送范围内的收货地址,并且离我最近的
-  for I := 0 to Self.Count-1 do
-  begin
-    AShopDistance:=uGPSUtils.GetFlatternDistance(
-                  AShopLatitude,AShopLongitude,
-                  Items[I].latitude,Items[I].longitude
-                  );
-    uBaseLog.HandleException(nil,'OrangeUI AShopDistance');
-
-    AMyDistance:=uGPSUtils.GetFlatternDistance(
-                  AMyLatitude,AMyLongitude,
-                  Items[I].latitude,Items[I].longitude
-                  );
-    uBaseLog.HandleException(nil,'OrangeUI AMyDistance');
-
-    if (AShopDistance<AShopMaxDeliveryDistance)//收货地址在商家配送范围之内
-       and (AMyDistance<AMin)
-       then
-    begin
-      AMin:=AMyDistance;
-      Result:=Items[I];
-    end;
-
-  end;
-end;
+//function TUserRecvAddrList.GetNearestRecvAddr(
+//                                AShopLongitude:Double;//商家的位置
+//                                AShopLatitude:Double;
+//                                AShopMaxDeliveryDistance:Double;//商家的配送最大范围
+//                                AMyLongitude:Double;//我的位置
+//                                AMyLatitude:Double): TUserRecvAddr;
+//var
+//  AShopDistance:Double;
+//  AMyDistance:Double;
+//  AMin:Double;
+//  I: Integer;
+//begin
+//  AMin:=MaxInt;
+//  Result:=nil;
+//
+//  uBaseLog.HandleException(nil,'OrangeUI GetNearestRecvAddr');
+//
+//  //先获取在商家配送范围内的收货地址,并且离我最近的
+//  for I := 0 to Self.Count-1 do
+//  begin
+//    AShopDistance:=uGPSUtils.GetFlatternDistance(
+//                  AShopLatitude,AShopLongitude,
+//                  Items[I].latitude,Items[I].longitude
+//                  );
+//    uBaseLog.HandleException(nil,'OrangeUI AShopDistance');
+//
+//    AMyDistance:=uGPSUtils.GetFlatternDistance(
+//                  AMyLatitude,AMyLongitude,
+//                  Items[I].latitude,Items[I].longitude
+//                  );
+//    uBaseLog.HandleException(nil,'OrangeUI AMyDistance');
+//
+//    if (AShopDistance<AShopMaxDeliveryDistance)//收货地址在商家配送范围之内
+//       and (AMyDistance<AMin)
+//       then
+//    begin
+//      AMin:=AMyDistance;
+//      Result:=Items[I];
+//    end;
+//
+//  end;
+//end;
 
 
 
@@ -8339,7 +8345,7 @@ begin
       AStringStream.LoadFromFile(AFilePath);
       AStringStream.Position:=0;
 
-      AJsonArray:=TSuperArray.Create(AStringStream.DataString);
+      AJsonArray:=SA(AStringStream.DataString);
 
 
     finally

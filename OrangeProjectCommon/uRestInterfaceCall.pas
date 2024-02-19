@@ -31,7 +31,6 @@ uses
   DateUtils,
   StrUtils,
   INIFiles,
-  IdURI,
 //  uLang,
   uBaseLog,
   uBaseList,
@@ -40,9 +39,15 @@ uses
   uFuncCommon,
   uFileCommon,
   uTimerTask,
+  IdURI,
 
 
+  {$IFDEF FPC}
+  uSkinSuperObject,
+  uIdHttpControl,
+  {$ENDIF}
 
+  {$IFDEF DELPHI}
   {$IF CompilerVersion <= 21.0} // Delphi 2010以前
   SuperObject,
   superobjecthelper,
@@ -75,12 +80,16 @@ uses
   System.Net.HttpClientComponent,
   {$IFEND}
 
-//  {$ENDIF}
+  //  {$ENDIF}
+  {$ENDIF}
 
   ZLib,
   uDatasetToJson,
   uBaseHttpControl
   ;
+
+
+
 
 const
   //Rest接口签名类型
@@ -92,19 +101,24 @@ Const
   FAIL=400;
 
 
-{$IF CompilerVersion<=33.0}
-    {$IFDEF MSWINDOWS}
-    const
-      ENCRYPT_STRING_BASE_OFFSET=0;
-    {$ELSE}
-    const
-      ENCRYPT_STRING_BASE_OFFSET=-1;
-    {$ENDIF}
-{$ELSE}
-    const
-      //10.4统计字符串下标了
-      ENCRYPT_STRING_BASE_OFFSET=0;
-{$IFEND}
+
+//{$IF CompilerVersion<=33.0}
+//    {$IFDEF MSWINDOWS}
+//    const
+//      ENCRYPT_STRING_BASE_OFFSET=0;
+//    {$ELSE}
+//    const
+//      ENCRYPT_STRING_BASE_OFFSET=-1;
+//    {$ENDIF}
+//{$ELSE}
+//    const
+//      //10.4统计字符串下标了
+//      ENCRYPT_STRING_BASE_OFFSET=0;
+//{$IFEND}
+
+  ENCRYPT_STRING_BASE_OFFSET=0;
+
+
 
 
 type
@@ -113,6 +127,9 @@ type
   protected
     function CompareStrings(const S1, S2: string): Integer; override;
   end;
+
+
+
 
 type
 
@@ -161,6 +178,10 @@ function GetUrl(API: String;
 
 procedure SaveServerResponseLog(API:String;AResponseStream:TStringStream);
 
+
+
+
+
 //调用rest接口,返回数据流
 function SimpleGet(API: String;
                   AHttpControl: THttpControl;
@@ -168,36 +189,39 @@ function SimpleGet(API: String;
                   AUrlParamNames:TStringDynArray;
                   AUrlParamValues:TVariantDynArray;
                   AResponseStream: TStream;
-                  ASignType:String='';
-                  ASignSecret:String='';
-                  AIsPost:Boolean=False;
-                  APostStream:TStream=nil;
-                  ACustomHeaderPairs:TVariantDynArray=[]):Boolean;
+                  ASignType:String{$IFNDEF FPC}=''{$ENDIF};
+                  ASignSecret:String{$IFNDEF FPC}=''{$ENDIF};
+                  AIsPost:Boolean{$IFNDEF FPC}=False{$ENDIF};
+                  APostStream:TStream{$IFNDEF FPC}=nil{$ENDIF};
+                  ACustomHeaderPairs:TVariantDynArray{$IFNDEF FPC}=[]{$ENDIF}
+                  ):Boolean;
 
 
 
 //调用rest接口,返回字符串
 function SimpleCallAPI(API: String;
-                      AHttpControl: THttpControl=nil;
-                      AInterfaceUrl:String='';
-                      AUrlParamNames:TStringDynArray=[];
-                      AUrlParamValues:TVariantDynArray=[];
-                      ASignType:String='';
-                      ASignSecret:String='';
-                      AIsPost:Boolean=False;
-                      APostStream:TStream=nil;
-                      APostString:String='';
-                      ACustomHeaderPairs:TVariantDynArray=[]): String;overload;
+                      AHttpControl: THttpControl{$IFNDEF FPC}=nil{$ENDIF};
+                      AInterfaceUrl:String{$IFNDEF FPC}=''{$ENDIF};
+                      AUrlParamNames:TStringDynArray{$IFNDEF FPC}=[]{$ENDIF};
+                      AUrlParamValues:TVariantDynArray{$IFNDEF FPC}=[]{$ENDIF};
+                      ASignType:String{$IFNDEF FPC}=''{$ENDIF};
+                      ASignSecret:String{$IFNDEF FPC}=''{$ENDIF};
+                      AIsPost:Boolean{$IFNDEF FPC}=False{$ENDIF};
+                      APostStream:TStream{$IFNDEF FPC}=nil{$ENDIF};
+                      APostString:String{$IFNDEF FPC}=''{$ENDIF};
+                      ACustomHeaderPairs:TVariantDynArray{$IFNDEF FPC}=[]{$ENDIF}
+                      ): String;overload;
 function SimpleCallAPIPostString(API: String;
                       AHttpControl: THttpControl;
                       AInterfaceUrl:String;
                       AUrlParamNames:TStringDynArray;
                       AUrlParamValues:TVariantDynArray;
-                      ASignType:String='';
-                      ASignSecret:String='';
-                      AIsPost:Boolean=False;
-                      APostString:String='';
-                      ACustomHeaderPairs:TVariantDynArray=[]): String;overload;
+                      ASignType:String{$IFNDEF FPC}=''{$ENDIF};
+                      ASignSecret:String{$IFNDEF FPC}=''{$ENDIF};
+                      AIsPost:Boolean{$IFNDEF FPC}=False{$ENDIF};
+                      APostString:String{$IFNDEF FPC}=''{$ENDIF};
+                      ACustomHeaderPairs:TVariantDynArray{$IFNDEF FPC}=[]{$ENDIF}
+                      ): String;overload;
 
 //调用rest接口,返回字符串,在服务端中使用
 function SimpleCallAPI(API: String;
@@ -208,11 +232,12 @@ function SimpleCallAPI(API: String;
                       var ACode:Integer;
                       var ADesc:String;
                       var ADataJson:ISuperObject;
-                      ASignType:String='';
-                      ASignSecret:String='';
-                      AIsPost:Boolean=False;
-                      APostStream:TStream=nil;
-                      APostString:String=''): Boolean;overload;
+                      ASignType:String{$IFNDEF FPC}=''{$ENDIF};
+                      ASignSecret:String{$IFNDEF FPC}=''{$ENDIF};
+                      AIsPost:Boolean{$IFNDEF FPC}=False{$ENDIF};
+                      APostStream:TStream{$IFNDEF FPC}=nil{$ENDIF};
+                      APostString:String{$IFNDEF FPC}=''{$ENDIF}
+                      ): Boolean;overload;
 
 
 
@@ -241,24 +266,24 @@ function SaveRecordToServer(AInterfaceUrl:String;
                             AUpdateWhereKeyJson:String=''):Boolean;
 
 
-{$IF CompilerVersion > 21.0}
-//调用TableCommonRest的获取记录列表接口get_record_list,返回字符串
-function SimpleCallAPI_TableCommonGetRecordList(
-                            ARestName: String;
-                            AHttpControl: THttpControl;
-                            AInterfaceUrl:String;
-                            AAppID:String;
-                            AUserFID:String;
-                            AKey:String;
-                            APageIndex:Integer=1;
-                            APageSize:Integer=MaxInt;
-                            //4个String一组
-                            AWhereConditions:TVariantDynArray=[];
-                            AOrderBy:String='';
-                            AWhereSQL:String='';
-                            ASignType:String='';
-                            ASignSecret:String=''): String;
-{$IFEND}
+//{$IF CompilerVersion > 21.0}
+////调用TableCommonRest的获取记录列表接口get_record_list,返回字符串
+//function SimpleCallAPI_TableCommonGetRecordList(
+//                            ARestName: String;
+//                            AHttpControl: THttpControl;
+//                            AInterfaceUrl:String;
+//                            AAppID:String;
+//                            AUserFID:String;
+//                            AKey:String;
+//                            APageIndex:Integer=1;
+//                            APageSize:Integer=MaxInt;
+//                            //4个String一组
+//                            AWhereConditions:TVariantDynArray=[];
+//                            AOrderBy:String='';
+//                            AWhereSQL:String='';
+//                            ASignType:String='';
+//                            ASignSecret:String=''): String;
+//{$IFEND}
 
 
 
@@ -324,6 +349,13 @@ function UnionUrlParams(AUrlParamNameValues:TVariantDynArray):String;overload;
 //                        AUrlParamValues:TVariantDynArray):String;
 
 
+{$IFDEF FPC}
+{$ELSE}
+{$IF CompilerVersion > 21.0}
+function LoadSignAsStringList(sl:TStringList; skey:string):string;
+function LoadMD5SignAsStringList(sl:TStringList; skey:string):string;   //获取sign签名
+function LoadSignString(sl:TStringList):string;   //获取sign签名的字符串
+
 Function myStrtoHex(s:string):string;                       //原字符串转16进制字符串
 Function smyHextoStr(s:string):string;                      //16进制字符串转原字符串
 function encryptstr(const s:string; skey:string):string;overload;    //加密字符串
@@ -331,13 +363,16 @@ function decryptstr(const s:string; skey:string):string;overload;    //解密字
 
 //function encryptstr(const s:string):string; overload;       //加密字符串
 //function decryptstr(const s:string):string; overload;       //解密字符串
-
-{$IF CompilerVersion > 21.0}
-function LoadSignAsStringList(sl:TStringList; skey:string):string;
-function LoadMD5SignAsStringList(sl:TStringList; skey:string):string;   //获取sign签名
-function LoadSignString(sl:TStringList):string;   //获取sign签名的字符串
 {$IFEND}
+function DownloadAndUpload(
+                  AImageHttpServerUrl:String;
+                  AAppID:String;
+                  APicUrl:String;
+                  AUploadDir:string;
+                  var AUploadedRemotePath:String;
+                  var AError:String):Boolean;
 
+{$ENDIF}
 
 var
   OnCallAPIEvent:TCallAPIEvent;
@@ -360,15 +395,10 @@ function SignParam(
                   ASignType:String;
                   ASignSecret:String):String;
 
-function DownloadAndUpload(
-                  AImageHttpServerUrl:String;
-                  AAppID:String;
-                  APicUrl:String;
-                  AUploadDir:string;
-                  var AUploadedRemotePath:String;
-                  var AError:String):Boolean;
-
 procedure RegisterParamSigner(AParamSigner:TParamSigner);
+
+
+function URLEncode(AStr:String):String;
 
 implementation
 
@@ -377,6 +407,17 @@ begin
   GlobalParamSignerList.Add(AParamSigner);
 end;
 
+
+function URLEncode(AStr:String):String;
+begin
+  {$IFDEF FPC}
+  Result:=TIdURI.urldecode(AStr);
+  {$ELSE}
+  Result:=TNetEncoding.URL.Encode(AStr);
+  {$ENDIF}
+end;
+
+{$IFDEF DELPHI}
 
 function DownloadAndUpload(
                   AImageHttpServerUrl:String;
@@ -475,7 +516,7 @@ begin
   end;
 
 end;
-
+{$ENDIF}
 
 
 function DoUploadFile(ALocalFilePath:String;
@@ -559,8 +600,8 @@ begin
 
   finally
     FreeAndNil(AHttpControl);
-    uFuncCommon.FreeAndNil(APicStream);
-    uFuncCommon.FreeAndNil(AResponseStream);
+    FreeAndNil(APicStream);
+    FreeAndNil(AResponseStream);
   end;
 
 end;
@@ -650,6 +691,7 @@ end;
 //  Result:=AWhereKeyJsonArray.AsJSON;
 //end;
 
+{$IFDEF DELPHI}
 {$IF CompilerVersion > 21.0}
 function SimpleCallAPI_TableCommonGetRecordList(
                       ARestName: String;
@@ -718,6 +760,7 @@ begin
 
 end;
 {$IFEND}
+{$ENDIF}
 
 function SaveRecordToServer(AInterfaceUrl:String;
                             AAppID:String;
@@ -790,9 +833,12 @@ begin
             or (VarType(AFID)=varByte)
             or (VarType(AFID)=varWord)
             or (VarType(AFID)=varLongWord)
+            {$IFDEF FPC}
+            {$ELSE}
             {$IF CompilerVersion > 21.0}
             or (VarType(AFID)=varUInt32)
             {$IFEND}
+            {$ENDIF}
             or (VarType(AFID)=varUInt64)
             then
           begin
@@ -877,7 +923,8 @@ begin
                               ADesc,
                               ADataJson,
                               ASignType,
-                              ASignSecret) or (ACode<>SUCC)  then
+                              ASignSecret,
+                              False,nil,'') or (ACode<>SUCC)  then
       begin
         uBaseLog.HandleError(nil,'SaveRecordToServer '+ADesc);
         Exit;
@@ -1095,7 +1142,7 @@ begin
   Result:='';
 
 
-  AParamJsonArray:=TSuperArray.Create;
+  AParamJsonArray:=SA();
   AParamJson:=TSuperObject.Create;
   AParamJsonArray.O[0]:=AParamJson;
 
@@ -1341,7 +1388,9 @@ begin
                               ASignType,
                               ASignSecret,
                               AIsPost,
-                              APostStream
+                              APostStream,
+                              '',
+                              []
                               );
 
 
@@ -1461,6 +1510,8 @@ begin
 //  Result:=AParamSigner.SignParam(AUrlParamNames,AUrlParamValues,ASignSecret);
 //  Exit;
 
+  {$IFDEF FPC}
+  {$ELSE}
   {$IF CompilerVersion > 21.0}
 
 //  if ASignType=CONST_REST_SIGNTYPE_XFAPP then
@@ -1532,6 +1583,7 @@ begin
 
 
   {$IFEND}
+  {$ENDIF}
 
 end;
 
@@ -1550,7 +1602,7 @@ begin
     AStrValue:='';
     if not VarIsNull(AUrlParamValues[I]) then
     begin
-      AStrValue:=TNetEncoding.URL.Encode(AUrlParamValues[I]);
+      AStrValue:=URLEncode(AUrlParamValues[I]);
     end;
 
     if AParamsStr<>'' then
@@ -1580,7 +1632,7 @@ begin
     AStrValue:='';
     if not VarIsNull(AUrlParamNameValues[I*2+1]) then
     begin
-      AStrValue:=TNetEncoding.URL.Encode(AUrlParamNameValues[I*2+1]);
+      AStrValue:=URLEncode(AUrlParamNameValues[I*2+1]);
     end;
 
     if AParamsStr<>'' then
@@ -1731,11 +1783,11 @@ begin
 
         if AParamsStr<>'' then
         begin
-          AParamsStr:=AParamsStr+'&'+AUrlParamNames[I]+'='+TNetEncoding.URL.Encode(AStrValue);
+          AParamsStr:=AParamsStr+'&'+AUrlParamNames[I]+'='+URLEncode(AStrValue);
         end
         else
         begin
-          AParamsStr:=AUrlParamNames[I]+'='+TNetEncoding.URL.Encode(AStrValue);
+          AParamsStr:=AUrlParamNames[I]+'='+URLEncode(AStrValue);
         end;
 
       end;
@@ -1922,6 +1974,8 @@ begin
 
 
       finally
+        {$IFDEF FPC}
+        {$ELSE}
         if (Pos('compressed=1',AUrlEncode)>0) then
         begin
 
@@ -1941,6 +1995,7 @@ begin
 
           FreeAndNil(AExtractResponseStream);
         end;
+        {$ENDIF}
       end;
 
 
@@ -1996,8 +2051,8 @@ begin
 
 end;
 
-
 { TNStringList }
+
 function TNStringList.CompareStrings(const S1, S2: string): Integer;
   begin
     if CaseSensitive then
@@ -2006,6 +2061,9 @@ function TNStringList.CompareStrings(const S1, S2: string): Integer;
       Result := CompareText(S1, S2);
   end;
 
+
+{$IFDEF FPC}
+{$ELSE}
 
 Function smyHextoStr(s:string):string;
   var
@@ -2129,6 +2187,8 @@ Function myStrtoHex(s: string): string;
 //  end;
 
 {$IF CompilerVersion > 21.0}
+
+
 function LoadSignAsStringList(sl:TStringList; skey:string):string;   //获取sign签名
   var
     i     : Integer;
@@ -2212,6 +2272,9 @@ function LoadSignString(sl:TStringList):string;   //获取sign签名的字符串
     sl1.Free;
   end;
 {$IFEND}
+
+{$ENDIF}
+
 
 
 //function SimpleCallAPIByTimerTask(API: String;
@@ -2381,7 +2444,10 @@ begin
 
 
           //GlobalRestAPISignType_AppSecret_XFApp
+          {$IFDEF FPC}
+          {$ELSE}
           Result:=LoadMD5SignAsStringList(sl,ASignSecret);
+          {$ENDIF}
 
 
       finally

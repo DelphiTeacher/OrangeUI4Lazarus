@@ -626,6 +626,15 @@ begin
       Self.GetCurrentUseMaterial;
     end;
 
+    //如果当前使用的是皮肤包素材名称
+    if Self.FMaterialUseKind=mukRef then
+    begin
+      //先清除
+      Self.UnUseCurrentUseMaterial;
+      //根据素材名称获取当前使用的皮肤素材
+      Self.GetCurrentUseMaterial;
+    end;
+
 
 
     if not (csReading in Self.ComponentState)

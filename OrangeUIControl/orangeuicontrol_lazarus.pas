@@ -33,13 +33,14 @@ uses
   uSkinSwitchType, uSkinTimeEditType, uSkinTrackBarType, uSkinTreeViewType, 
   uSkinVirtualChartType, uSkinVirtualGridType, uSkinVirtualListType, 
   uskinsuperobject, uNativeDrawCanvas, uNativeSkinPictureEngine, 
-  uSkinFormType, LazarusPackageIntf;
+  uSkinFormType, uDrawPictureEditor, LazarusPackageIntf;
 
 implementation
 
 procedure Register;
 begin
   RegisterUnit('uComponentTypeRegister', @uComponentTypeRegister.Register);
+  RegisterUnit('uDrawPictureEditor', @uDrawPictureEditor.Register);
 end;
 
 initialization

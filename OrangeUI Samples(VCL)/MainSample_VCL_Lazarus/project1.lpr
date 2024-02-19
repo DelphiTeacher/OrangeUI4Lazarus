@@ -18,14 +18,15 @@ uses
   uNativeSkinPictureEngine,
 
 
-  EasyServiceCommonMaterialDataMoudle_VCL_Lazarus, uLCLSVGSupport,
-  ListItemStyle_Default, MainForm, ButtonFrame, CheckBoxFrame,
+  EasyServiceCommonMaterialDataMoudle_VCL_Lazarus, uBGRASVGSupport,
+  uRestInterfaceCall, uDataSetToJson, uIdHttpControl, uOpenClientCommon,
+  ListItemStyle_Default, indylaz, MainForm, ButtonFrame, CheckBoxFrame,
   DashBoard_AnalyseFrame, DashBoard_ProjectsFrame,
   DashBoard_Analyse_BarChart_MonthSummaryFrame,
   DashBoard_Projects_PieChart_ProjectStatusFrame,
   DashBoard_Analyse_ItemGrid_TwoCellTextFrame,
   DashBoard_Projects_ItemGrid_TwoCellTextHasBackColorFrame, LoginForm,
-  HomeFrame;
+  HomeFrame, EditFrame, uConst;
 
 {$R *.res}
 
@@ -49,7 +50,7 @@ begin
 
   Application.Scaled:=True;
   Application.Initialize;
-  //Application.CreateForm(TdmEasyServiceCommonMaterial, dmEasyServiceCommonMaterial);
+  Application.CreateForm(TdmEasyServiceCommonMaterial, dmEasyServiceCommonMaterial);
   Application.CreateForm(TfrmMain, frmMain);
   //Application.CreateForm(TfrmLogin, frmLogin);
   frmLogin:=TfrmLogin.Create(nil);

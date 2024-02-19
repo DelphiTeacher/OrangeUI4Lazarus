@@ -123,9 +123,9 @@ type
 var
   dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial;
 
-function GetBankIconIndex(ABankName:String):Integer;
-
-procedure SetAllLabelFontName(AParent:TWinControl);
+//function GetBankIconIndex(ABankName:String):Integer;
+//
+//procedure SetAllLabelFontName(AParent:TWinControl);
 
 
 implementation
@@ -139,53 +139,53 @@ implementation
 
 
 
-procedure SetAllLabelFontName(AParent:TWinControl);
-var
-  I: Integer;
-begin
-  for I := 0 to AParent.ControlCount-1 do
-  begin
-    if AParent.Controls[I] is TLabel then
-    begin
-      TLabel(AParent.Controls[I]).Font.Name:='微软雅黑';
-    end;
-
-    if AParent.Controls[I] is TWinControl then
-    begin
-      SetAllLabelFontName(TWinControl(AParent.Controls[I]));
-    end;
-  end;
-end;
-
-
-function GetBankIconIndex(ABankName:String):Integer;
-begin
-  Result:=0;
-  if Pos('交通银行',ABankName)>0 then
-  begin
-    Result:=1;
-  end;
-  if Pos('兴业银行',ABankName)>0 then
-  begin
-    Result:=2;
-  end;
-  if Pos('工商银行',ABankName)>0 then
-  begin
-    Result:=3;
-  end;
-  if Pos('建设银行',ABankName)>0 then
-  begin
-    Result:=4;
-  end;
-  if Pos('农业银行',ABankName)>0 then
-  begin
-    Result:=5;
-  end;
-  if Pos('中国银行',ABankName)>0 then
-  begin
-    Result:=6;
-  end;
-end;
+//procedure SetAllLabelFontName(AParent:TWinControl);
+//var
+//  I: Integer;
+//begin
+//  for I := 0 to AParent.ControlCount-1 do
+//  begin
+//    if AParent.Controls[I] is TLabel then
+//    begin
+//      TLabel(AParent.Controls[I]).Font.Name:='微软雅黑';
+//    end;
+//
+//    if AParent.Controls[I] is TWinControl then
+//    begin
+//      SetAllLabelFontName(TWinControl(AParent.Controls[I]));
+//    end;
+//  end;
+//end;
+//
+//
+//function GetBankIconIndex(ABankName:String):Integer;
+//begin
+//  Result:=0;
+//  if Pos('交通银行',ABankName)>0 then
+//  begin
+//    Result:=1;
+//  end;
+//  if Pos('兴业银行',ABankName)>0 then
+//  begin
+//    Result:=2;
+//  end;
+//  if Pos('工商银行',ABankName)>0 then
+//  begin
+//    Result:=3;
+//  end;
+//  if Pos('建设银行',ABankName)>0 then
+//  begin
+//    Result:=4;
+//  end;
+//  if Pos('农业银行',ABankName)>0 then
+//  begin
+//    Result:=5;
+//  end;
+//  if Pos('中国银行',ABankName)>0 then
+//  begin
+//    Result:=6;
+//  end;
+//end;
 
 
 { TdmEasyServiceCommonMaterial }

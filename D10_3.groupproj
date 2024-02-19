@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{8EC9DE03-8143-456A-9346-1582087F3B62}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="OrangeUIControl\OrangeUIControl_VCL_D10_3.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="OrangeUI Samples(VCL)\MainSample_VCL_Lazarus\MainSample_VCL_D10_3.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="OrangeUIControl_VCL_D10_3">
+        <MSBuild Projects="OrangeUIControl\OrangeUIControl_VCL_D10_3.dproj"/>
+    </Target>
+    <Target Name="OrangeUIControl_VCL_D10_3:Clean">
+        <MSBuild Projects="OrangeUIControl\OrangeUIControl_VCL_D10_3.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="OrangeUIControl_VCL_D10_3:Make">
+        <MSBuild Projects="OrangeUIControl\OrangeUIControl_VCL_D10_3.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="MainSample_VCL_D10_3">
+        <MSBuild Projects="OrangeUI Samples(VCL)\MainSample_VCL_Lazarus\MainSample_VCL_D10_3.dproj"/>
+    </Target>
+    <Target Name="MainSample_VCL_D10_3:Clean">
+        <MSBuild Projects="OrangeUI Samples(VCL)\MainSample_VCL_Lazarus\MainSample_VCL_D10_3.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="MainSample_VCL_D10_3:Make">
+        <MSBuild Projects="OrangeUI Samples(VCL)\MainSample_VCL_Lazarus\MainSample_VCL_D10_3.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="OrangeUIControl_VCL_D10_3;MainSample_VCL_D10_3"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="OrangeUIControl_VCL_D10_3:Clean;MainSample_VCL_D10_3:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="OrangeUIControl_VCL_D10_3:Make;MainSample_VCL_D10_3:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

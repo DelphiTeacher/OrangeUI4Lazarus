@@ -9,7 +9,7 @@
       <PathDelim Value="\"/>
       <SearchPaths>
         <IncludeFiles Value="Source\VCL"/>
-        <OtherUnitFiles Value="Source\Base;Source\Controls;Source\VCL;..\OrangeProjectCommon\SkinSuperObject;..\OrangeUIDesignNew\Source;..\OrangeProjectCommon;..\OrangeProjectCommon\SVGIconImageList\Svg;..\OrangeProjectCommon\GDIPlus;Source\VCL\GDIPlusNew;Source\VCL\GDIPlusNewCanvas;Source\VCL\NativeCanvas"/>
+        <OtherUnitFiles Value="Source\Base;Source\Controls;Source\VCL;..\OrangeProjectCommon\SkinSuperObject;..\OrangeUIDesignNew\Source;..\OrangeProjectCommon;..\OrangeProjectCommon\SVGIconImageList\Svg;..\OrangeProjectCommon\GDIPlus;Source\VCL\GDIPlusNew;Source\VCL\GDIPlusNewCanvas;Source\VCL\NativeCanvas;..\OrangeUIDesign\Source"/>
         <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
       </SearchPaths>
       <Other>
@@ -385,6 +385,11 @@
       <Item>
         <Filename Value="Source\VCL\uSkinFormType.pas"/>
         <UnitName Value="uSkinFormType"/>
+      </Item>
+      <Item>
+        <Filename Value="..\OrangeUIDesign\Source\uDrawPictureEditor.pas"/>
+        <HasRegisterProc Value="True"/>
+        <UnitName Value="uDrawPictureEditor"/>
       </Item>
     </Files>
     <RequiredPkgs>

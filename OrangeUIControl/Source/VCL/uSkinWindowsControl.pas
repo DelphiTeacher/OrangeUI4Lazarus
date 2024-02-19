@@ -172,6 +172,9 @@ Type
     property ParentBiDiMode;
     property ParentBackground;
     property ParentColor;
+    {$IFDEF FPC}
+    property BorderSpacing;
+    {$ENDIF}
     {$IFDEF DELPHI}
     property ParentCtl3D;
     {$ENDIF}
@@ -331,7 +334,7 @@ type
 
 function GetClearColor(AControl:TWinControl):TColor;
 begin
-  Result:=clBlack;
+  Result:=clDefault;
   AControl:=AControl.Parent;
 
   while AControl<>nil do

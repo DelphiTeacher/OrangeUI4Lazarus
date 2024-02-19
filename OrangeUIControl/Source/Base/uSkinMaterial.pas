@@ -347,6 +347,7 @@ type
 //  end;
 var
   GlobalMaterialStyleList:TBaseList;
+  GlobalMaterialList:TBaseList;
 //  //主题色
 //  GlobalSkinThemeColor:TDelphiColor;
 //  //主题色2
@@ -716,6 +717,12 @@ begin
   FDrawBackColorParam.IsFill:=True;
   {$ENDIF}
 
+  if GlobalMaterialList<>nil then
+  begin
+    GlobalMaterialList.Add(Self);
+  end;
+
+
 end;
 
 destructor TSkinControlMaterial.Destroy;
@@ -729,6 +736,13 @@ begin
       GlobalMaterialStyleList.Remove(Self,False);
     end;
   end;
+
+
+  if GlobalMaterialList<>nil then
+  begin
+    GlobalMaterialList.Remove(Self,False);
+  end;
+
 
   FreeAndNil(FStyleNameAliases);
 
@@ -843,9 +857,11 @@ end;
 
 initialization
   GlobalMaterialStyleList:=TBaseList.Create(ooReference);
+  GlobalMaterialList:=TBaseList.Create(ooReference);
 
 finalization
   FreeAndNil(GlobalMaterialStyleList);
+  FreeAndNil(GlobalMaterialList);
 
 end.
 

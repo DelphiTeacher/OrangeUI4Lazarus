@@ -210,6 +210,21 @@ begin
     end;
   end;
 
+
+  //所有控件素材列表
+  for I := 0 to GlobalMaterialList.Count-1 do
+  begin
+    //控件名称
+    if not (csSubComponent in TSkinControlMaterial(GlobalMaterialList[I]).ComponentStyle)
+       and SameText(TSkinControlMaterial(GlobalMaterialList[I]).Name,AStyleName) then
+    begin
+        AComponentTypeName:='';
+        Result:=TSkinControlMaterial(GlobalMaterialList[I]);
+        Exit;
+    end;
+
+  end;
+
 end;
 
 function RegisterSkinControlStyle(const AControlClassify:String;

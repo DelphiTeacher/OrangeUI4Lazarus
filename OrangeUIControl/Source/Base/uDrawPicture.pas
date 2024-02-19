@@ -2475,11 +2475,39 @@ end;
 //  Self.DoChange;
 //end;
 
+function GetLoadedFilePath(AFileDir:String;AFileNameNoExt,AFileExt:String):String;
+var
+  AScale:Integer;
+  AScaleName:String;
+begin
+  Result:='';
+  for AScale := Ceil(Const_BufferBitmapScale) downto 1 do
+  begin
+    AScaleName:=AFileNameNoExt;
+    if AScale>1 then
+    begin
+      AScaleName:=AScaleName+'@'+IntToStr(AScale)+'x';
+    end;
+
+    if FileExists(AFileDir+AScaleName+AFileExt) then
+    begin
+      Result:=AFileDir+AScaleName+AFileExt;
+      //uBaseLog.HandleException(nil,'OrangeUI TBaseDrawPicture.FileNamePicture FLoadedFilePath:'+FLoadedFilePath+' Exists');
+      Break;
+    end
+    else
+    begin
+//                uBaseLog.HandleException(nil,'OrangeUI TBaseDrawPicture.FileNamePicture FLoadedFilePath:'+GlobalFilePictureSearchPaths[I]+AScaleName+AFileExt+' None');
+    end;
+
+
+  end;
+
+end;
+
 function TBaseDrawPicture.FileNamePicture: TSkinPicture;
 var
   I: Integer;
-  AScale:Integer;
-  AScaleName:String;
   AFileNameNoExt:String;
   AFileExt:String;
 begin
@@ -2532,35 +2560,21 @@ begin
         else
         begin
 
-            //搜索路径
-    //        uBaseLog.HandleException(nil,'OrangeUI TBaseDrawPicture.FileNamePicture GlobalFilePictureSearchPaths.Count:'+IntToStr(GlobalFilePictureSearchPaths.Count));
-            for I := 0 to GlobalFilePictureSearchPaths.Count-1 do
+            FLoadedFilePath:=GetLoadedFilePath(GetApplicationPath+'icons'+PathDelim,AFileNameNoExt,AFileExt);
+
+            if FLoadedFilePath='' then
             begin
 
-    //            uBaseLog.HandleException(nil,'OrangeUI TBaseDrawPicture.FileNamePicture GlobalFilePictureSearchPaths:'+GlobalFilePictureSearchPaths[I]);
+              //搜索路径
+      //        uBaseLog.HandleException(nil,'OrangeUI TBaseDrawPicture.FileNamePicture GlobalFilePictureSearchPaths.Count:'+IntToStr(GlobalFilePictureSearchPaths.Count));
+              for I := 0 to GlobalFilePictureSearchPaths.Count-1 do
+              begin
 
-                for AScale := Ceil(Const_BufferBitmapScale) downto 1 do
-                begin
-                  AScaleName:=AFileNameNoExt;
-                  if AScale>1 then
-                  begin
-                    AScaleName:=AScaleName+'@'+IntToStr(AScale)+'x';
-                  end;
+      //            uBaseLog.HandleException(nil,'OrangeUI TBaseDrawPicture.FileNamePicture GlobalFilePictureSearchPaths:'+GlobalFilePictureSearchPaths[I]);
+                FLoadedFilePath:=GetLoadedFilePath(GlobalFilePictureSearchPaths[I],AFileNameNoExt,AFileExt);
+                if FLoadedFilePath<>'' then Break;
 
-                  if FileExists(GlobalFilePictureSearchPaths[I]+AScaleName+AFileExt) then
-                  begin
-                    FLoadedFilePath:=GlobalFilePictureSearchPaths[I]+AScaleName+AFileExt;
-                    //uBaseLog.HandleException(nil,'OrangeUI TBaseDrawPicture.FileNamePicture FLoadedFilePath:'+FLoadedFilePath+' Exists');
-                    Break;
-                  end
-                  else
-                  begin
-    //                uBaseLog.HandleException(nil,'OrangeUI TBaseDrawPicture.FileNamePicture FLoadedFilePath:'+GlobalFilePictureSearchPaths[I]+AScaleName+AFileExt+' None');
-                  end;
-
-
-                end;
-
+              end;
 
             end;
 

@@ -5,7 +5,8 @@ unit uSkinWindowsEdit;
 interface
 {$I FrameWork.inc}
 
-{$I Source\VCL\WinEdit.inc}
+//{$I Source\VCL\WinEdit.inc}
+{$DEFINE WinEdit}
 
 uses
   {$IFDEF MSWINDOWS}
