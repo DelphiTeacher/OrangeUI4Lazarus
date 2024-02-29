@@ -9,9 +9,9 @@ uses
   Classes,
   SysUtils,
   ActiveX,
-  AxCtrls,
+  //AxCtrls,
   Forms,
-  StdVcl,
+  //StdVcl,
   Windows,
   FormWaiting;
 
@@ -23,14 +23,14 @@ type
   public
     destructor Destroy;override;
   public
-    procedure Show; safecall;
-    procedure Hide; safecall;
-    procedure SetHintStr(AHintStr: PWideChar); safecall;
-    procedure AdjustFormSize(out AWidth, AHeight: Integer); safecall;
+    procedure Show;
+    procedure Hide;
+    procedure SetHintStr(AHintStr: PWideChar);
+    procedure AdjustFormSize(out AWidth, AHeight: Integer);
 //    procedure SetCheckWindow(ACheckWindow: Integer); safecall;
-    procedure GetWaitingFormHandle(out AWaitingFormHandle: Integer); safecall;
-    procedure SetFollowWindow(AFollowWindowHandle: Integer); safecall;
-    procedure CreateWindow(AWindowParent: Integer); safecall;
+    procedure GetWaitingFormHandle(out AWaitingFormHandle: Integer);
+    procedure SetFollowWindow(AFollowWindowHandle: Integer);
+    procedure CreateWindow(AWindowParent: Integer);
   end;
 
 

@@ -105,7 +105,7 @@ type
     destructor Destroy;override;
 
   public
-    procedure Clear(AColor:TColor);override;
+    procedure Clear(AColor:TColor;ADrawRect:TRectF);override;
 
     //º¯Êý//
     //×¼±¸DC
@@ -590,7 +590,7 @@ begin
   inherited;
 end;
 
-procedure TGDIPlusDrawCanvas.Clear(AColor:TColor);
+procedure TGDIPlusDrawCanvas.Clear(AColor:TColor;ADrawRect:TRectF);
 begin
   FGraphics.Clear(TGPColor_CreateFromColorRef(AColor));
 end;
@@ -2120,7 +2120,7 @@ var
   ADrawTextWidth:Double;
   ADrawTextSumWidth:Double;
   AColorTextItem:TBaseColorTextItem;
-  ADrawStartLeft:Integer;
+  ADrawStartLeft:Double;
   ARect:TGPRectF;
 begin
   Result:=False;

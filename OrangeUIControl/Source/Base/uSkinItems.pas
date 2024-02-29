@@ -104,6 +104,9 @@ type
 
   {$REGION 'TBaseSkinItem 仅实现基本的排列功能'}
   //仅实现基本的排列功能,没有Caption
+
+  { TBaseSkinItem }
+
   TBaseSkinItem=class(TBinaryObject,ISkinItem)
 //  TBaseSkinItem=class(TCollectionItem,ISkinItem)
   protected
@@ -140,6 +143,7 @@ type
     procedure SetSelected(const Value: Boolean);virtual;
 
     procedure SetHeight(const Value: Double);
+    procedure SetWidth(const Value: Double);virtual;
     procedure SetChecked(const Value: Boolean);
     //鼠标是否在Item里面
     function PtInItem(APoint:TPointF):Boolean;virtual;
@@ -236,6 +240,11 @@ type
     /// </summary>
     procedure DoVisibleChange;virtual;
   public
+    //是否可以调整宽度和高度
+    FCanResizeWidth,FCanResizeHeight:Boolean;
+//    //拖动改变尺寸时的最小和最大尺寸
+//    FMinWidth,FMaxWidth,FMinHeight,FMaxHeight:Double;
+  public
     /// <summary>
     ///   <para>
     ///     属性更改
@@ -255,6 +264,7 @@ type
   protected
     //在列表中的顺序
     function GetIndex:Integer;
+    //procedure GetIndex:Integer;
   public
     //不需要绘制分隔线
     IsNotNeedDrawDevide:Boolean;
@@ -280,7 +290,7 @@ type
     ///     Index
     ///   </para>
     /// </summary>
-    property Index:Integer read GetIndex;
+    //property Index:Integer read GetIndex write SetIndex;
     /// <summary>
     ///   <para>
     ///     是否选中
@@ -321,6 +331,7 @@ type
     property ItemDrawRect:TRectF read GetItemDrawRect write SetItemDrawRect;
     property StaticHeight:Double read FHeight write FHeight;
     property StaticWidth:Double read FWidth write FWidth;
+    property Width:Double read GetWidth write SetWidth;
   published
 
     /// <summary>
@@ -596,7 +607,6 @@ type
 
     //设置自带的数据
     procedure SetItemType(const Value: TSkinItemType);
-    procedure SetWidth(const Value: Double);
     procedure SetDataObject(const Value: TObject);
 
 
@@ -923,7 +933,7 @@ type
     ///     Width ,if it is -1,means use default width
     ///   </para>
     /// </summary>
-    property Width:Double read GetWidth write SetWidth;
+    property Width;///:Double read GetWidth write SetWidth;
 
     /// <summary>
     ///   <para>
@@ -3760,6 +3770,18 @@ begin
   end;
 end;
 
+procedure TBaseSkinItem.SetWidth(const Value: Double);
+begin
+  if FWidth<>Value then
+  begin
+    FWidth := Value;
+
+    DoSizeChange;
+
+    DoPropChange;
+  end;
+end;
+
 //procedure TBaseSkinItem.AfterConstruction;
 //begin
 //  inherited;
@@ -4076,7 +4098,7 @@ begin
 end;
 
 procedure TBaseSkinItem.SetValueByBindItemField(AFieldName: String;
-  AValue: Variant; APageDataDir, AImageServerUrl: String);
+  AValue: Variant; APageDataDir: String; AImageServerUrl: String);
 begin
   if AFieldName='ItemChecked' then
   begin
@@ -4343,6 +4365,9 @@ begin
 
 //  FVisible:=True;
 
+  //是否可以调整宽度和高度
+  FCanResizeWidth:=True;
+  FCanResizeHeight:=True;
 
   FIconImageIndex:=-1;
   FPicImageIndex:=-1;
@@ -4570,17 +4595,6 @@ begin
 
 end;
 
-procedure TSkinItem.SetWidth(const Value: Double);
-begin
-  if FWidth<>Value then
-  begin
-    FWidth := Value;
-
-    DoSizeChange;
-
-    DoPropChange;
-  end;
-end;
 
 procedure TSkinItem.StartAnimate;
 begin

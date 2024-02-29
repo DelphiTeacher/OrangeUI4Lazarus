@@ -77,6 +77,12 @@
   {$MODE OBJFPC}{$H+}
 {$ENDIF}
 
+{$IFDEF FPC}
+{$ELSE}
+  {$DEFINE DELPHI}
+{$ENDIF}
+
+
 {$DEFINE SUPER_METHOD}
 {$DEFINE WINDOWSNT_COMPATIBILITY}
 {.$DEFINE DEBUG} // track memory leack
@@ -659,7 +665,7 @@ type
   end;
 
 
-  TSuperObject = class(TObject, ISuperObject, ISuperArray)
+  TSuperObject = class(TObject, ISuperObject, ISuperArray, IInterface)
   private
     FRefCount: Integer;
     FProcessing: boolean;
@@ -684,9 +690,15 @@ type
     function GetDataPtr: Pointer;
     procedure SetDataPtr(const Value: Pointer);
   protected
+    {$IFDEF FPC}
     function QueryInterface({$IFDEF DELPHI}const{$ENDIF}{$IFDEF FPC}constref{$ENDIF} IID: TGUID; out Obj): {$IFDEF LINUX}longint{$ELSE}HResult{$ENDIF}; virtual; {$IFNDEF WINDOWS}cdecl{$ELSE}stdcall{$ENDIF};
     function _AddRef: {$IFDEF LINUX}longint{$ELSE}Integer{$ENDIF}; virtual; {$IFNDEF WINDOWS}cdecl{$ELSE}stdcall{$ENDIF};
     function _Release: {$IFDEF LINUX}longint{$ELSE}Integer{$ENDIF}; virtual; {$IFNDEF WINDOWS}cdecl{$ELSE}stdcall{$ENDIF};
+    {$ELSE}
+    function QueryInterface(const IID: TGUID; out Obj): HResult; stdcall;
+    function _AddRef: Integer; stdcall;
+    function _Release: Integer; stdcall;
+    {$ENDIF}
 
     function GetO(const path: SOString): ISuperObject;
     procedure PutO(const path: SOString; const Value: ISuperObject);
@@ -3654,6 +3666,8 @@ begin
   ParseString(PSOChar(path), true, False, self, [foCreatePath, foPutValue], TSuperObject.Create(Value));
 end;
 
+{$IFDEF FPC}
+
 function TSuperObject.QueryInterface({$IFDEF DELPHI}const{$ENDIF}{$IFDEF FPC}constref{$ENDIF} IID: TGUID; out Obj): {$IFDEF LINUX}longint{$ELSE}HResult{$ENDIF}; {$IFNDEF WINDOWS}cdecl{$ELSE}stdcall{$ENDIF};
 begin
   if GetInterface(IID, Obj) then
@@ -3661,6 +3675,43 @@ begin
   else
     Result := E_NOINTERFACE;
 end;
+
+function TSuperObject._AddRef: {$IFDEF LINUX}longint{$ELSE}Integer{$ENDIF}; {$IFNDEF WINDOWS}cdecl{$ELSE}stdcall{$ENDIF};
+begin
+  Result := InterlockedIncrement(FRefCount);
+end;
+
+function TSuperObject._Release: {$IFDEF LINUX}longint{$ELSE}Integer{$ENDIF}; {$IFNDEF WINDOWS}cdecl{$ELSE}stdcall{$ENDIF};
+begin
+  Result := InterlockedDecrement(FRefCount);
+  if Result = 0 then
+    Destroy;
+end;
+
+{$ELSE}
+
+function TSuperObject.QueryInterface(const IID: TGUID; out Obj): HResult; stdcall;
+begin
+  if GetInterface(IID, Obj) then
+    Result := 0
+  else
+    Result := E_NOINTERFACE;
+end;
+
+function TSuperObject._AddRef: Integer; stdcall;
+begin
+  Result := InterlockedIncrement(FRefCount);
+end;
+
+function TSuperObject._Release: Integer; stdcall;
+begin
+  Result := InterlockedDecrement(FRefCount);
+  if Result = 0 then
+    Destroy;
+end;
+
+{$ENDIF}
+
 
 function TSuperObject.SaveTo(stream: TStream; indent, escape: boolean): integer;
 var
@@ -4617,18 +4668,6 @@ begin
     datatypes := nil;
     names := nil;
   end;
-end;
-
-function TSuperObject._AddRef: {$IFDEF LINUX}longint{$ELSE}Integer{$ENDIF}; {$IFNDEF WINDOWS}cdecl{$ELSE}stdcall{$ENDIF};
-begin
-  Result := InterlockedIncrement(FRefCount);
-end;
-
-function TSuperObject._Release: {$IFDEF LINUX}longint{$ELSE}Integer{$ENDIF}; {$IFNDEF WINDOWS}cdecl{$ELSE}stdcall{$ENDIF};
-begin
-  Result := InterlockedDecrement(FRefCount);
-  if Result = 0 then
-    Destroy;
 end;
 
 function TSuperObject.Compare(const str: SOString): TSuperCompareResult;

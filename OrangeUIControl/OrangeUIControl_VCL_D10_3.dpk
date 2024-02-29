@@ -1,6 +1,7 @@
 package OrangeUIControl_VCL_D10_3;
 
 {$R *.res}
+{$R '..\OrangeProjectCommon\GDIPlus\GdiPlus11.RES'}
 {$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
 {$ALIGN 8}
 {$ASSERTIONS ON}
@@ -112,8 +113,6 @@ contains
   uSkinBufferBitmap in 'Source\Base\uSkinBufferBitmap.pas',
   uFrameContext in 'Source\Base\uFrameContext.pas',
   MD5_OrangeUI in '..\OrangeProjectCommon\MD5\MD5_OrangeUI.pas',
-  uSkinSuperJSON in '..\OrangeProjectCommon\SkinXSuperObject\uSkinSuperJSON.pas',
-  uSkinSuperObject in '..\OrangeProjectCommon\SkinXSuperObject\uSkinSuperObject.pas',
   uSkinCommonFrames in 'Source\Controls\uSkinCommonFrames.pas',
   uSkinVirtualChartType in 'Source\Controls\uSkinVirtualChartType.pas',
   uFileCommon in 'Source\Base\uFileCommon.pas',
@@ -131,6 +130,10 @@ contains
   uSkinAnimator in 'Source\Base\uSkinAnimator.pas',
   uNativeDrawCanvas in 'Source\VCL\NativeCanvas\uNativeDrawCanvas.pas',
   uNativeSkinPictureEngine in 'Source\VCL\NativeCanvas\uNativeSkinPictureEngine.pas',
-  uSkinWindowsControl in 'Source\VCL\uSkinWindowsControl.pas';
+  uSkinWindowsControl in 'Source\VCL\uSkinWindowsControl.pas',
+  uskinsuperobject in '..\OrangeProjectCommon\SkinSuperObject\uskinsuperobject.pas',
+  uGDIPlusDrawCanvas in 'Source\VCL\GDIPlusCanvas\uGDIPlusDrawCanvas.pas',
+  uGDIPlusSkinPictureEngine in 'Source\VCL\GDIPlusCanvas\uGDIPlusSkinPictureEngine.pas',
+  uSkinGDIPlus in 'Source\VCL\GDIPlusCanvas\GDIPlus\uSkinGDIPlus.pas';
 
 end.

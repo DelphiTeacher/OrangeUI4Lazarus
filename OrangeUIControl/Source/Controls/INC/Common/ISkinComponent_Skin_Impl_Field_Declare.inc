@@ -119,7 +119,7 @@
 
     {$IFDEF FPC}
   public
-    FAlignWithMagins:Boolean;
+    FAlignWithMargins:Boolean;
     FMargins:TBorderMargins;
     FPadding:TBorderMargins;
     procedure SetMargins(const Value: TBorderMargins);
@@ -128,7 +128,7 @@
   published
     property Margins:TBorderMargins read FMargins write SetMargins;
     property Padding:TBorderMargins read FPadding write SetPadding;
-    property AlignWithMagins:Boolean read FAlignWithMagins write FAlignWithMagins;
+    property AlignWithMargins:Boolean read FAlignWithMargins write FAlignWithMargins;
     {$ENDIF}
   published
     property _Version:String read Get_Version;

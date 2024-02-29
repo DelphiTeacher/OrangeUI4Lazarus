@@ -22,6 +22,7 @@ uses
   StrUtils,
 
   {$IFDEF VCL}
+  Windows,
   Messages,
   ExtCtrls,
   Controls,
@@ -29,6 +30,8 @@ uses
   StdCtrls,
   Graphics,
   Dialogs,
+  //ImageList_SetDragCursorImage
+  CommCtrl,
   {$ENDIF}
   {$IFDEF FMX}
   UITypes,
@@ -44,6 +47,7 @@ uses
   FMX.Forms,
   {$ENDIF}
 
+  ImgList,
 
   uSkinPicture,
   uFuncCommon,
@@ -101,7 +105,7 @@ uses
 
 const
   IID_ISkinCustomList:TGUID='{5DDEC959-1404-4586-878C-B9FA44EEE20C}';
-
+  RESIZE_GAP=5;
 
 const
   IID_IFrameBaseListItemStyle:TGUID='{5600B7F4-122E-4E7B-AD72-F9F3C3B4CB1D}';
@@ -112,7 +116,7 @@ type
   TSkinCustomListLayoutsManagerClass=class of TSkinCustomListLayoutsManager;
   TBaseSkinItemMaterialClass=class of TBaseSkinListItemMaterial;
   TCustomListProperties=class;
-
+  TSkinCustomList=class;
 
 
 
@@ -177,6 +181,10 @@ type
 //                                ipdgdtTop,
 //                                ipdgdtBottom
                                 );
+
+
+  //滚动Item的位置类型
+  TScrollItemPositionType=(siptNone,siptFirst,siptLast);
 
 
 
@@ -448,6 +456,20 @@ type
 
 
 
+  TMyListItemDragObject = class(TDragObjectEx)
+  private
+    FDragImages: TDragImageList;
+    FListControl: TSkinCustomList;
+    FItem: TBaseSkinItem;
+  protected
+    function GetDragImages: TDragImageList; override;
+  public
+    constructor Create(AListControl: TSkinCustomList;AListItem:TBaseSkinItem);
+    destructor Destroy; override;
+  end;
+
+
+
 
 
 
@@ -520,6 +542,8 @@ type
     FAdjustCenterItemPositionAnimator:TSkinAnimator;
 
 
+
+
     FEmptyContentCaption: String;
     FEmptyContentDescription: String;
     FEmptyContentPicture: TDrawPicture;
@@ -578,6 +602,20 @@ type
     //更新编辑控件的位置(在绘制的时候)
     procedure SyncEditControlBounds;
   public
+    //自己调整大小，当鼠标移动到分隔线的时候，鼠标变为可以调整宽度
+    FEnableResizeItemWidth:Boolean;
+    FEnableResizeItemHeight:Boolean;
+    FIsInResizeArea:Boolean;
+    FResizingItem:TBaseSkinItem;
+    FResizingItemWidth:Double;
+    FResizingItemHeight:Double;
+    FCanResizeItemMinWidth:Double;
+    FCanResizeItemMinHeight:Double;
+    FCanResizeItemMaxWidth:Double;
+    FCanResizeItemMaxHeight:Double;
+
+
+
     /// <summary>
     ///   <para>
     ///     开始编辑列表项
@@ -924,6 +962,12 @@ type
     constructor Create(ASkinControl:TControl);override;
     destructor Destroy;override;
   public
+    //自动拖拽
+    FEnableAutoDragDropItem:Boolean;
+    FListItemDragObject:TMyListItemDragObject;
+    //开始拖拽Item
+    procedure StartDragItem;
+  public
     //设置列表项的风格
     function SetListBoxItemStyle(AItemType:TSkinItemType;
                                   AListItemStyle:String):Boolean;virtual;
@@ -948,7 +992,7 @@ type
     ///     Scroll to assigned ListItem
     ///   </para>
     /// </summary>
-    procedure ScrollToItem(Item: TBaseSkinItem);
+    procedure ScrollToItem(AItem: TBaseSkinItem;AScrollItemPositionType:TScrollItemPositionType);
     /// <summary>
     ///   <para>
     ///     获取列表项的宽度
@@ -1825,7 +1869,7 @@ type
     function CustomBind(ASkinControl:TControl):Boolean;override;
     //解除绑定
     procedure CustomUnBind;override;
-  protected
+  public
     function GetSkinMaterial:TSkinCustomListDefaultMaterial;
     //决定列表项所使用的素材
     function DecideItemMaterial(AItem:TBaseSkinItem;ASkinMaterial:TSkinCustomListDefaultMaterial): TBaseSkinListItemMaterial;virtual;
@@ -1996,6 +2040,10 @@ type
     //获取控件属性类
     function GetPropertiesClassType:TPropertiesClassType;override;
 
+    procedure DoAutoDragScroll(ADragOverPoint:TPointF);override;
+    procedure DoCustomDragDrop(ADragObject:TObject; const Point: TPointF);override;
+    procedure DoStartDrag(var DragObject: TDragObject); override;
+    procedure DoCustomDragOver(const Data: TObject; const Point: TPointF;var Accept: Boolean);override;
   protected
     //ISkinItems接口的实现
     function GetItems:TBaseSkinItems;
@@ -4335,38 +4383,132 @@ begin
 
 end;
 
-procedure TCustomListProperties.ScrollToItem(Item: TBaseSkinItem);
+procedure TCustomListProperties.ScrollToItem(AItem: TBaseSkinItem;AScrollItemPositionType:TScrollItemPositionType);
 var
   AVisibleItemIndex:Integer;
   AItemRect:TRectF;
 begin
 //  uBaseLog.OutputDebugString('UpdateScrollBars In ScrollToItem');
-  UpdateScrollBars;
+        UpdateScrollBars;
 
-  AVisibleItemIndex:=Self.FListLayoutsManager.GetVisibleItemObjectIndex(Item);
-  if (AVisibleItemIndex <> -1) and (AVisibleItemIndex<Self.FListLayoutsManager.GetVisibleItemsCount) then
-  begin
-        //如果选中的列表项在可视区域外,那么移动的可视区域内
-        AItemRect:=Self.FListLayoutsManager.VisibleItemRectByIndex(AVisibleItemIndex);
+        AVisibleItemIndex:=Self.FListLayoutsManager.GetVisibleItemObjectIndex(AItem);
 
-
-        if (AItemRect.Top - Self.FVertControlGestureManager.Position < Self.GetClientRect.Top) then
+        if (AVisibleItemIndex <> -1) and (AVisibleItemIndex<Self.FListLayoutsManager.GetVisibleItemsCount) then
         begin
-          Self.FVertControlGestureManager.Position:=AItemRect.Top;
-        end;
-        if (AItemRect.Bottom - Self.FVertControlGestureManager.Position > Self.GetClientRect.Bottom) then
-        begin
-          if Self.FVertControlGestureManager.Max<AItemRect.Bottom then
-          begin
-            Self.FVertControlGestureManager.Position:=AItemRect.Bottom;
-          end
-          else
-          begin
-            Self.FVertControlGestureManager.Position:=AItemRect.Top;
-          end;
-        end;
+              //如果选中的列表项在可视区域外,那么移动的可视区域内
+              AItemRect:=Self.FListLayoutsManager.VisibleItemRectByIndex(AVisibleItemIndex);
 
-  end;
+              if (AItemRect.Top - Self.FVertControlGestureManager.Position >= Self.GetClientRect.Top)
+                and (AItemRect.Bottom - Self.FVertControlGestureManager.Position <= Self.GetClientRect.Bottom)
+                and (AItemRect.Left - Self.FHorzControlGestureManager.Position >= Self.GetClientRect.Left)
+                and (AItemRect.Right - Self.FHorzControlGestureManager.Position <= Self.GetClientRect.Right)
+                then
+              begin
+                //整个Item都显示出来了
+                Exit;
+              end;
+
+
+              case Self.ItemLayoutType of
+                iltVertical:
+                begin
+
+                    case AScrollItemPositionType of
+                      siptNone:
+                      begin
+
+
+                                if (AItemRect.Top - Self.FVertControlGestureManager.Position < Self.GetClientRect.Top) then
+                                begin
+                                  Self.FVertControlGestureManager.Position:=AItemRect.Top;
+                                end;
+                                if (AItemRect.Bottom - Self.FVertControlGestureManager.Position > Self.GetClientRect.Bottom) then
+                                begin
+                                  if Self.FVertControlGestureManager.Max<AItemRect.Bottom then
+                                  begin
+                                    Self.FVertControlGestureManager.Position:=AItemRect.Bottom;
+                                  end
+                                  else
+                                  begin
+                                    Self.FVertControlGestureManager.Position:=AItemRect.Top;
+                                  end;
+                                end;
+
+
+                      end;
+                      siptFirst:
+                      begin
+
+                                //把Item放在可视范围第一个
+                                uBaseLog.OutputDebugString('Calced Position'+FloatToStr(AItemRect.Top));
+
+                                Self.FVertControlGestureManager.Position:=AItemRect.Top;
+                                uBaseLog.OutputDebugString('Final Position'+FloatToStr(Self.FVertControlGestureManager.Position));
+
+
+                      end;
+                      siptLast:
+                      begin
+                                //把Item放在可视范围最后一个
+                                uBaseLog.OutputDebugString('Calced Position'+FloatToStr(AItemRect.Bottom-Self.GetClientRect.Bottom));
+                                Self.FVertControlGestureManager.Position:=AItemRect.Bottom-Self.GetClientRect.Bottom;
+                                uBaseLog.OutputDebugString('Final Position'+FloatToStr(Self.FVertControlGestureManager.Position));
+
+//                                uBaseLog.OutputDebugString(FloatToStr(AItemRect.Bottom));
+                      end;
+                    end;
+
+                end;
+                iltHorizontal:
+                begin
+
+
+                    case AScrollItemPositionType of
+                      siptNone:
+                      begin
+
+
+                                if (AItemRect.Left - Self.FHorzControlGestureManager.Position < Self.GetClientRect.Left) then
+                                begin
+                                  Self.FHorzControlGestureManager.Position:=AItemRect.Left;
+                                end;
+                                if (AItemRect.Right - Self.FHorzControlGestureManager.Position > Self.GetClientRect.Right) then
+                                begin
+                                  if Self.FHorzControlGestureManager.Max<AItemRect.Right then
+                                  begin
+                                    Self.FHorzControlGestureManager.Position:=AItemRect.Right;
+                                  end
+                                  else
+                                  begin
+                                    Self.FHorzControlGestureManager.Position:=AItemRect.Left;
+                                  end;
+                                end;
+
+
+                      end;
+                      siptFirst:
+                      begin
+
+
+                                Self.FHorzControlGestureManager.Position:=AItemRect.Left;
+
+
+                      end;
+                      siptLast:
+                      begin
+                                Self.FHorzControlGestureManager.Position:=AItemRect.Right-Self.GetClientRect.Right;
+
+
+                      end;
+                    end;
+
+
+                end;
+              end;
+
+
+        end;
+        Self.Invalidate;
 end;
 
 procedure TCustomListProperties.SetIsEmptyContent(const Value: Boolean);
@@ -4469,6 +4611,29 @@ begin
   begin
     FCheckStayPressedItemTimer.Enabled:=True;
   end;
+end;
+
+//procedure TCustomListProperties.DoStartDrag(var DragObject: TDragObject);
+//begin
+//  Inherited;
+//  DragObject:=Self.FPro
+//end;
+
+procedure TCustomListProperties.StartDragItem;
+var
+  DragObject:TMyListItemDragObject;
+begin
+  DragObject := TMyListItemDragObject.Create(Self.FSkinControl as TSkinCustomList,Self.MouseDownItem);
+  DragObject.AlwaysShowDragImages := True;
+  FListItemDragObject := DragObject;
+//    procedure BeginDrag(Immediate: Boolean; Threshold: Integer = -1);
+  FSkinControl.BeginDrag(False);
+
+  // OnStartDrag is called during the above call so FDragImages is
+  // assigned now.
+  // The below is the only difference with a normal drag image implementation.
+  ImageList_SetDragCursorImage(
+      (FListItemDragObject as TMyListItemDragObject).GetDragImages.Handle, 0, 0, 0);
 end;
 
 procedure TCustomListProperties.SyncEditControlBounds;
@@ -5963,12 +6128,17 @@ begin
 
 end;
 
+type
+  TProtectedControl=class(TControl)
+  end;
+
 procedure TSkinCustomListDefaultType.CustomMouseDown(Button: TMouseButton;Shift: TShiftState;X, Y: Double);
 var
   AItemDrawRect:TRectF;
   APanDragItemDrawRect:TRectF;
   APanDragItemDrawItemDesignerPanel:TSkinItemDesignerPanel;
   APanDragItemDesignerPanelClipRect:TRectF;
+  AResizingItem:TBaseSkinItem;
 begin
 //  uBaseLog.OutputDebugString('TSkinCustomListDefaultType.CustomMouseDown');
 
@@ -6119,6 +6289,77 @@ begin
 
     end;
 
+
+
+    //鼠标移动调整尺寸
+    AResizingItem:=nil;
+    if (Self.FSkinCustomListIntf.Prop.FEnableResizeItemWidth) or (Self.FSkinCustomListIntf.Prop.FEnableResizeItemHeight) then
+    begin
+        if Self.FSkinCustomListIntf.Prop.MouseOverItem<>nil then
+        begin
+            //判断要调整哪个Item的尺寸
+            if (Self.FSkinCustomListIntf.Prop.FEnableResizeItemWidth) then
+            begin
+                if (X>Self.FSkinCustomListIntf.Prop.MouseOverItem.FItemDrawRect.Right-RESIZE_GAP) then
+                begin
+                  //调整自己Item
+                  AResizingItem:=Self.FSkinCustomListIntf.Prop.MouseOverItem;
+                end
+                else if (X<Self.FSkinCustomListIntf.Prop.MouseOverItem.FItemDrawRect.Left+RESIZE_GAP) then
+                begin
+                  //调整前一个Item
+                  AResizingItem:=Self.FSkinCustomListIntf.Prop.VisibleItemAt(X-RESIZE_GAP*2,Y);
+                end;
+                if (AResizingItem<>nil) and AResizingItem.FCanResizeWidth then
+                begin
+                  Self.FSkinCustomListIntf.Prop.FResizingItem:=AResizingItem;
+                end;
+              
+            end
+            else
+            if (Self.FSkinCustomListIntf.Prop.FEnableResizeItemHeight) then
+            begin
+                if (Y>Self.FSkinCustomListIntf.Prop.MouseOverItem.FItemDrawRect.Bottom-RESIZE_GAP) then
+                begin
+                  //调整自己Item
+                  AResizingItem:=Self.FSkinCustomListIntf.Prop.MouseOverItem;
+                end
+                else if (Y<Self.FSkinCustomListIntf.Prop.MouseOverItem.FItemDrawRect.Top+RESIZE_GAP) then
+                begin
+                  //调整前一个Item
+                  AResizingItem:=Self.FSkinCustomListIntf.Prop.VisibleItemAt(X,Y-RESIZE_GAP*2);
+                end;
+                if (AResizingItem<>nil) and AResizingItem.FCanResizeHeight then
+                begin
+                  Self.FSkinCustomListIntf.Prop.FResizingItem:=AResizingItem;
+                end;
+            end;
+
+
+            if (Self.FSkinCustomListIntf.Prop.FResizingItem<>nil)
+            and (Self.FSkinCustomListIntf.Prop.FResizingItem.FCanResizeWidth or Self.FSkinCustomListIntf.Prop.FResizingItem.FCanResizeHeight) then
+            begin
+              Self.FSkinCustomListIntf.Prop.FResizingItemWidth:=Self.FSkinCustomListIntf.Prop.CalcItemWidth(Self.FSkinCustomListIntf.Prop.FResizingItem);
+              Self.FSkinCustomListIntf.Prop.FResizingItemHeight:=Self.FSkinCustomListIntf.Prop.CalcItemHeight(Self.FSkinCustomListIntf.Prop.FResizingItem);
+              uBaseLog.OutputDebugString(FloatToStr(Self.FSkinCustomListIntf.Prop.FResizingItemHeight));
+              //不能够鼠标滑动了
+              Self.FSkinCustomListIntf.Prop.FVertControlGestureManager.Enabled:=False;
+              Self.FSkinCustomListIntf.Prop.FHorzControlGestureManager.Enabled:=False;
+              //鼠标掉鼠标滑动按下的状态
+              Self.FSkinCustomListIntf.Prop.FVertControlGestureManager.CancelMouseUp;
+              Self.FSkinCustomListIntf.Prop.FHorzControlGestureManager.CancelMouseUp;
+            end;
+
+        end;
+
+    end;
+
+
+    if (AResizingItem=nil) and (TProtectedControl(Self.FSkinCustomListIntf.Prop.FSkinControl).DragMode=dmManual) and (Self.FSkinCustomListIntf.Prop.FEnableAutoDragDropItem) then
+    begin
+      Self.FSkinCustomListIntf.Prop.StartDragItem;
+    end;
+
 end;
 
 procedure TSkinCustomListDefaultType.CustomMouseEnter;
@@ -6152,6 +6393,8 @@ var
   AItemDrawRect:TRectF;
   APanDragItemDrawItemDesignerPanel:TSkinItemDesignerPanel;
   APanDragItemDesignerPanelClipRect:TRectF;
+  ANewWidth,ANewHeight:Double;
+  AResizingItem:TBaseSkinItem;
 begin
   inherited;
 
@@ -6220,7 +6463,120 @@ begin
 
   //现ItemDesignerPanel处理鼠标移动效果
   Self.DoProcessItemCustomMouseMove(Self.FSkinCustomListIntf.Prop.FMouseOverItem,
-                  Shift,X,Y);
+                                    Shift,X,Y);
+
+
+
+  //鼠标移动调整尺寸
+  Self.FSkinCustomListIntf.Prop.FIsInResizeArea:=False;
+  if (Self.FSkinCustomListIntf.Prop.FEnableResizeItemWidth) or (Self.FSkinCustomListIntf.Prop.FEnableResizeItemHeight) then
+  begin
+
+      AResizingItem:=nil;
+      //判断在不在鼠标可调整区域中
+      if Self.FSkinCustomListIntf.Prop.MouseOverItem<>nil then
+      begin
+          //判断要调整哪个Item的尺寸
+          if (Self.FSkinCustomListIntf.Prop.FEnableResizeItemWidth) then
+          begin
+              if (X>Self.FSkinCustomListIntf.Prop.MouseOverItem.FItemDrawRect.Right-RESIZE_GAP) then
+              begin
+                //调整自己Item
+                AResizingItem:=Self.FSkinCustomListIntf.Prop.MouseOverItem;
+              end
+              else if (X<Self.FSkinCustomListIntf.Prop.MouseOverItem.FItemDrawRect.Left+RESIZE_GAP) then
+              begin
+                //调整前一个Item
+                AResizingItem:=Self.FSkinCustomListIntf.Prop.VisibleItemAt(X-RESIZE_GAP*2,Y);
+              end;
+              if (AResizingItem<>nil) and AResizingItem.FCanResizeWidth then
+              begin
+                Self.FSkinCustomListIntf.Prop.FIsInResizeArea:=True;
+              end;
+
+          end
+          else
+          if (Self.FSkinCustomListIntf.Prop.FEnableResizeItemHeight) then
+          begin
+              if (Y>Self.FSkinCustomListIntf.Prop.MouseOverItem.FItemDrawRect.Bottom-RESIZE_GAP) then
+              begin
+                //调整自己Item
+                AResizingItem:=Self.FSkinCustomListIntf.Prop.MouseOverItem;
+              end
+              else if (Y<Self.FSkinCustomListIntf.Prop.MouseOverItem.FItemDrawRect.Top+RESIZE_GAP) then
+              begin
+                //调整前一个Item
+                AResizingItem:=Self.FSkinCustomListIntf.Prop.VisibleItemAt(X,Y-RESIZE_GAP*2);
+              end;
+              if (AResizingItem<>nil) and AResizingItem.FCanResizeHeight then
+              begin
+                Self.FSkinCustomListIntf.Prop.FIsInResizeArea:=True;
+              end;
+          end;
+
+      end;
+
+      //在可调整区域中,则切换光标
+      if Self.FSkinCustomListIntf.Prop.FIsInResizeArea then
+      begin
+          if (Self.FSkinCustomListIntf.Prop.FEnableResizeItemWidth) then
+          begin
+            Self.FSkinControl.Cursor:=crHSplit;
+          end
+          else if (Self.FSkinCustomListIntf.Prop.FEnableResizeItemHeight) then
+          begin
+            Self.FSkinControl.Cursor:=crVSplit;
+          end;
+      end
+      else
+      begin
+          Self.FSkinControl.Cursor:=crDefault;
+      end;
+
+      //如果已经确定了调整了,则么执行调整
+      if Self.FSkinCustomListIntf.Prop.FResizingItem<>nil then
+      begin
+          //不能超过最小值，不能超过最大值
+          if (Self.FSkinCustomListIntf.Prop.FEnableResizeItemWidth) then
+          begin
+
+              ANewWidth:=Self.FSkinCustomListIntf.Prop.FResizingItemWidth+(Self.FMouseMoveAbsolutePt.X-FMouseDownAbsolutePt.X);
+              if (ANewWidth<Self.FSkinCustomListIntf.Prop.FCanResizeItemMinWidth) then
+              begin
+                ANewWidth:=Self.FSkinCustomListIntf.Prop.FCanResizeItemMinWidth;
+              end
+              else if ((Self.FSkinCustomListIntf.Prop.FCanResizeItemMaxWidth>0) and (ANewWidth>Self.FSkinCustomListIntf.Prop.FCanResizeItemMaxWidth)) then
+              begin
+                ANewWidth:=Self.FSkinCustomListIntf.Prop.FCanResizeItemMaxWidth;
+              end;
+              Self.FSkinCustomListIntf.Prop.FResizingItem.Width:=ANewWidth;
+
+          end
+          else if (Self.FSkinCustomListIntf.Prop.FEnableResizeItemHeight) then
+          begin
+
+              ANewHeight:=Self.FSkinCustomListIntf.Prop.FResizingItemHeight+(Self.FMouseMoveAbsolutePt.Y-FMouseDownAbsolutePt.Y);
+              if (ANewHeight<Self.FSkinCustomListIntf.Prop.FCanResizeItemMinHeight) then
+              begin
+                ANewHeight:=Self.FSkinCustomListIntf.Prop.FCanResizeItemMinHeight;
+              end
+              else if ((Self.FSkinCustomListIntf.Prop.FCanResizeItemMaxHeight>0) and (ANewHeight>Self.FSkinCustomListIntf.Prop.FCanResizeItemMaxHeight)) then
+              begin
+                ANewHeight:=Self.FSkinCustomListIntf.Prop.FCanResizeItemMaxHeight;
+              end;
+              Self.FSkinCustomListIntf.Prop.FResizingItem.Height:=ANewHeight;
+
+
+
+            uBaseLog.OutputDebugString(FloatToStr(Self.FSkinCustomListIntf.Prop.FResizingItem.Height));
+          end;
+
+
+      end;
+
+  end;
+
+
 
 
 end;
@@ -6339,8 +6695,21 @@ begin
 
 
 
+
+      //鼠标调整尺寸结束,可以恢复滑动了
+      if Self.FSkinCustomListIntf.Prop.FResizingItem<>nil then
+      begin
+        Self.FSkinCustomListIntf.Prop.FVertControlGestureManager.Enabled:=True;
+        Self.FSkinCustomListIntf.Prop.FHorzControlGestureManager.Enabled:=True;
+        Self.FSkinCustomListIntf.Prop.FResizingItem:=nil;
+      end;
+
       Self.FSkinCustomListIntf.Prop.FMouseDownItem:=nil;
       Self.FSkinCustomListIntf.Prop.FInnerMouseDownItem:=nil;
+
+
+
+
 
       Invalidate;
 
@@ -6975,6 +7344,116 @@ end;
 //
 //
 //end;
+procedure TSkinCustomList.DoCustomDragDrop(ADragObject:TObject; const Point: TPointF);
+var
+  ANewIndex:Integer;
+  ADragOverItem:TBaseSkinItem;
+begin
+  if (Self.DragMode=dmManual) and (Self.Prop.FEnableAutoDragDropItem) then
+  begin
+    if ADragObject=Properties.FListItemDragObject then
+    begin
+
+      //插入到这个位置上
+      ADragOverItem:=Self.Prop.VisibleItemAt(Point.X,Point.Y);
+      if (ADragOverItem<>nil) and (Properties.FListItemDragObject.FItem<>ADragOverItem) then
+      begin
+        ANewIndex:=ADragOverItem.Index;
+        Properties.Items.BeginUpdate;
+        try
+          Self.Prop.Items.Remove(Properties.FListItemDragObject.FItem,False);
+          Self.Prop.Items.Insert(ANewIndex,Properties.FListItemDragObject.FItem);
+        finally
+          Properties.Items.EndUpdate;
+        end;
+      end;
+    end;
+  end;
+
+end;
+
+procedure TSkinCustomList.DoCustomDragOver(const Data: TObject; const Point: TPointF;var Accept: Boolean);
+begin
+  Inherited;
+  if (Self.DragMode=dmManual) and (Self.Prop.FEnableAutoDragDropItem) then
+  begin
+    Accept:=True;
+  end;
+end;
+
+procedure TSkinCustomList.DoStartDrag(var DragObject: TDragObject);
+begin
+  inherited;
+  if (Self.DragMode=dmManual) and (Self.Prop.FEnableAutoDragDropItem) then
+  begin
+    DragObject:=Properties.FListItemDragObject;
+  end;
+end;
+
+procedure TSkinCustomList.DoAutoDragScroll(ADragOverPoint:TPointF);
+var
+  ADragOverItem:TBaseSkinItem;
+  ADragOverItemIndex:Integer;
+  ANewItem:TBaseSkinItem;
+begin
+  ADragOverItem:=Self.Prop.VisibleItemAt(ADragOverPoint.X,ADragOverPoint.Y);
+  if ADragOverItem=nil then Exit;
+
+  ADragOverItemIndex:=Self.Prop.FListLayoutsManager.FVisibleItems.IndexOf(ADragOverItem);
+  uBaseLog.OutputDebugString('ADragOverItemIndex:'+IntToStr(ADragOverItemIndex));
+  uBaseLog.OutputDebugString('ADragOverItemCaption:'+TSkinItem(ADragOverItem).Caption);
+
+  ANewItem:=nil;
+
+//  case Self.Prop.ItemLayoutType of
+//    iltVertical:
+//    begin
+        //找到要滚动到哪个Item
+        case FAutoDragScrollVertDirection of
+          isdNone: ;
+          isdScrollToMin:
+          begin
+            //Self.Properties.FVertControlGestureManager.Position:=Self.Properties.FVertControlGestureManager.Position-60;
+            if ADragOverItemIndex>0 then
+            begin
+              ANewItem:=TBaseSkinItem(Self.Prop.FListLayoutsManager.FVisibleItems[ADragOverItemIndex-1]);
+              Self.Prop.ScrollToItem(ANewItem,TScrollItemPositionType.siptFirst);
+            end;
+          end;
+          isdScrollToMax:
+          begin
+            //Self.Properties.FVertControlGestureManager.Position:=Self.Properties.FVertControlGestureManager.Position+60;
+            if ADragOverItemIndex<Self.Prop.FListLayoutsManager.FVisibleItems.Count-1 then
+            begin
+              ANewItem:=TBaseSkinItem(Self.Prop.FListLayoutsManager.FVisibleItems[ADragOverItemIndex+1]);
+              Self.Prop.ScrollToItem(ANewItem,TScrollItemPositionType.siptLast);
+            end;
+          end;
+        end;
+//    end;
+//    iltHorizontal:
+//    begin
+//        case FAutoDragScrollHorzDirection of
+//          isdNone: ;
+//          isdScrollToMin:
+//          begin
+//            //Self.Properties.FHorzControlGestureManager.Position:=Self.Properties.FVertControlGestureManager.Position-60;
+//
+//          end;
+//
+//          isdScrollToMax:
+//          begin
+//            //Self.Properties.FHorzControlGestureManager.Position:=Self.Properties.FVertControlGestureManager.Position+60;
+//
+//          end;
+//        end;
+//    end;
+//  end;
+
+
+end;
+
+
 
 function TSkinCustomList.GetPropertiesClassType: TPropertiesClassType;
 begin
@@ -7918,6 +8397,96 @@ function TListItemTypeStyleSettingList.GetItem(Index: Integer): TListItemTypeSty
 begin
   Result:=TListItemTypeStyleSetting(Inherited Items[Index]);
 end;
+
+
+{ TMyListItemDragObject }
+
+constructor TMyListItemDragObject.Create(AListControl: TSkinCustomList;
+  AListItem: TBaseSkinItem);
+begin
+  Inherited Create;
+  FListControl:=AListControl;
+  FItem:=AListItem;
+
+end;
+
+destructor TMyListItemDragObject.Destroy;
+begin
+  FreeAndNil(FDragImages);
+
+  inherited;
+end;
+
+function TMyListItemDragObject.GetDragImages: TDragImageList;
+var
+  Bmp: TBitmap;
+  Pt: TPoint;
+  ADrawCanvas:TDrawCanvas;
+  APaintData:TPaintData;
+begin
+  if not Assigned(FDragImages) then begin
+    Bmp := TBitmap.Create;
+    try
+      Bmp.PixelFormat := pf32bit;
+      Bmp.Canvas.Brush.Color := clBlack;
+
+      // 2px margin at each side just to show image can have transparency.
+      Bmp.Width := Ceil(FListControl.Prop.CalcItemWidth(FItem)) + 4;
+      Bmp.Height := Ceil(FListControl.Prop.CalcItemHeight(FItem)) + 4;
+
+      ADrawCanvas:=CreateDrawCanvas('');
+      ADrawCanvas.Prepare(Bmp.Canvas);
+      Bmp.Canvas.Lock;
+      //将Item绘制在bmp上面
+      //.FItem.PaintTo(Bmp.Canvas.Handle, 2, 2);
+//    //绘制Item
+//    function PaintItem(ACanvas: TDrawCanvas;
+//                        AItemIndex:Integer;
+//                        AItem:TBaseSkinItem;
+//                        AItemDrawRect:TRectF;
+//                        ASkinMaterial:TSkinCustomListDefaultMaterial;
+//                        const ADrawRect: TRectF;
+//                        ACustomListPaintData:TPaintData
+//                        ): Boolean;
+
+//      ADrawCanvas.Clear(0,RectF(0,0,Bmp.Width,Bmp.Height));
+//      FListControl.Material.DrawItemBackColorParam.FillColor.Color:=clBlack;
+      //需要白色的背景，但是半透明该怎么实现
+      TSkinCustomListDefaultType(FListControl.SkinControlType).PaintItem(ADrawCanvas,
+                                  FItem.Index,
+                                  FItem,
+                                  RectF(0,0,Bmp.Width-2,Bmp.Height-2),
+                                  FListControl.Material,
+                                  RectF(0,0,FListControl.Width,FListControl.Height),
+                                  APaintData);
+//      FListControl.Material.DrawItemBackColorParam.FillColor.Color:=clWhite;
+      Bmp.Canvas.Unlock;
+
+//      Bmp.SaveToFile('D:\item.bmp');
+
+      ADrawCanvas.UnPrepare;
+      FreeAndNil(ADrawCanvas);
+
+      FDragImages := TDragImageList.Create(nil);
+      FDragImages.ColorDepth:=TColorDepth.cd32Bit;//如果是32位的话，黑色会变成透明的了
+      FDragImages.Width := Bmp.Width;
+      FDragImages.Height := Bmp.Height;
+      Pt := Mouse.CursorPos;
+      MapWindowPoints(HWND_DESKTOP, FListControl.Handle, Pt, 1);
+      Pt.X:=Pt.X-Ceil(FItem.FItemDrawRect.Left);
+      Pt.Y:=Pt.Y-Ceil(FItem.FItemDrawRect.Top);
+      FDragImages.DragHotspot := Pt;
+      FDragImages.Masked := True;
+      FDragImages.AddMasked(Bmp, clBlack);
+//      FDragImages.AddMasked(Bmp,clWhite);
+    finally
+      Bmp.Free;
+    end;
+  end;
+  Result := FDragImages;
+
+end;
+
 
 initialization
 

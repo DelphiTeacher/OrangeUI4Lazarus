@@ -58,51 +58,55 @@ const
 
 
 type
-  //{$IFDEF VCL}
-  //TVCLPlatformBitmap=class
-  //private
-  //  //绘制句柄
-  //  FHandle:HDC;
-  //  //位图数据
-  //  FBits: Pointer;
-  //  //缓存位图的宽度
-  //  FWidth:Integer;
-  //  //缓存位图的高度
-  //  FHeight:Integer;
-  //  //缓存位图的句柄
-  //  FBitmap:HBITMAP;
-  //  //原绘制句柄的位图
-  //  FOldBitmap:HBITMAP;
-  //  //画布
-  //  FDrawCanvas:TDrawCanvas;
-  //  //位图信息
-  //  FBitmapInfo: TBitmapInfo;
-  //
-  //  //无用
-  //  FScale:Single;
-  //
-  //  procedure Clear;
-  //  function GetDrawCanvas: TDrawCanvas;
-  //  function DestroyBitmap:Boolean;
-  //  property Bits:Pointer read FBits;
-  //  property OldBitmap:HBITMAP read FOldBitmap;
-  //public
-  //  constructor Create;
-  //  destructor Destroy;override;
-  //public
-  //  //创建缓存位图
-  //  function CreateBitmap(AWidth:Integer;AHeight:Integer;AScale:Single):Boolean;
-  //public
-  //  property Handle:HDC read FHandle;
-  //  property Bitmap:HBITMAP read FBitmap;
-  //  property Width:Integer read FWidth;
-  //  property Height:Integer read FHeight;
-  //
-  //  property Scale:Single read FScale write FScale;
-  //
-  //  property DrawCanvas:TDrawCanvas read GetDrawCanvas;
-  //end;
-  //{$ENDIF}
+  {$IFDEF VCL}
+  TWindowsBitmap=class
+  private
+    //绘制句柄
+    FHandle:HDC;
+    //位图数据
+    FBits: Pointer;
+    //缓存位图的宽度
+    FWidth:Integer;
+    //缓存位图的高度
+    FHeight:Integer;
+    //缓存位图的句柄
+    FBitmap:HBITMAP;
+    //原绘制句柄的位图
+    FOldBitmap:HBITMAP;
+    //画布
+//    FDrawCanvas:TDrawCanvas;
+    //位图信息
+    FBitmapInfo: TBitmapInfo;
+
+    //无用
+    FScale:Single;
+
+    FBitmapCanvas:TCanvas;
+    procedure Clear;
+//    function GetDrawCanvas: TDrawCanvas;
+    function DestroyBitmap:Boolean;
+    property Bits:Pointer read FBits;
+    property OldBitmap:HBITMAP read FOldBitmap;
+    function GetBitmapCanvas: TCanvas;
+  public
+    constructor Create;
+    destructor Destroy;override;
+  public
+    //创建缓存位图
+    function SetSize(AWidth:Integer;AHeight:Integer):Boolean;
+    procedure DrawTo(ACanvas:TCanvas);
+  public
+    property Handle:HDC read FHandle;
+    property Bitmap:HBITMAP read FBitmap;
+    property Width:Integer read FWidth;
+    property Height:Integer read FHeight;
+
+    property Scale:Single read FScale write FScale;
+
+    property Canvas:TCanvas read GetBitmapCanvas;
+//    property DrawCanvas:TDrawCanvas read GetDrawCanvas;
+  end;
+  {$ENDIF}
 
 
 
@@ -120,7 +124,7 @@ type
     FHeight:Integer;
 
     //画布
-    FDrawCanvas:TDrawCanvas;
+//    FDrawCanvas:TDrawCanvas;
 
     FScale:Single;
     procedure Clear;
@@ -129,7 +133,7 @@ type
   public
     constructor Create;
     destructor Destroy;override;
-    function CreateBitmap(AWidth:Integer;AHeight:Integer;AScale:Single):Boolean;
+    function SetSize(AWidth:Integer;AHeight:Integer;AScale:Single):Boolean;
     function DestroyBitmap:Boolean;
   public
     property Width:Integer read FWidth;
@@ -138,15 +142,24 @@ type
 
     property Scale:Single read FScale write FScale;
 
-    property BitmapCanvas:TCanvas read GetBitmapCanvas;
-    property DrawCanvas:TDrawCanvas read GetDrawCanvas;
+    property Canvas:TCanvas read GetBitmapCanvas;
+//    property DrawCanvas:TDrawCanvas read GetDrawCanvas;
   end;
   {$ENDIF}
 
 
   //平台无关Bitmap
-  //TPlatformBitmap={$IFDEF FMX}TFMXPlatformBitmap{$ENDIF}{$IFDEF VCL}TVCLPlatformBitmap{$ENDIF};
-  TPlatformBitmap={$IFDEF FMX}TFMXPlatformBitmap{$ENDIF}{$IFDEF VCL}TBitmap{$ENDIF};
+  //TPlatformBitmap={$IFDEF FMX}TFMXPlatformBitmap{$ENDIF}{$IFDEF VCL}TWindowsBitmap{$ENDIF};
+  {$IFDEF FMX}
+  TPlatformBitmap=TFMXPlatformBitmap
+  {$ENDIF}
+  {$IFDEF VCL}
+  {$IFDEF MSWINDOWS}
+  TPlatformBitmap=TWindowsBitmap
+  {$ELSE}
+  TPlatformBitmap=TBitmap
+  {$ENDIF}
+  {$ENDIF};
 
 
 
@@ -202,8 +215,11 @@ type
 
   end;
 
-  //缓存位图
 
+
+
+
+  //缓存位图
   { TBufferBitmap }
 
   TBufferBitmap=class(TBaseBufferBitmap)
@@ -224,6 +240,9 @@ type
 
 
   TBaseBufferBitmapClass=class of TBaseBufferBitmap;
+
+
+
 
 
 
@@ -606,103 +625,124 @@ end;
 
 
 
-//{$IFDEF VCL}
-//{ TVCLPlatformBitmap }
-//
-//procedure TVCLPlatformBitmap.Clear;
-//begin
-//  FHandle:=0;
-//  FWidth:=0;
-//  FHeight:=0;
-//  FScale:=1;
-//  FBitmap:=0;
-//  FOldBitmap:=0;
+{$IFDEF VCL}
+{ TWindowsBitmap }
+
+procedure TWindowsBitmap.Clear;
+begin
+  FHandle:=0;
+  FWidth:=0;
+  FHeight:=0;
+  FScale:=1;
+  FBitmap:=0;
+  FOldBitmap:=0;
 //  FDrawCanvas:=nil;
-//  FBits:=nil;
-//end;
-//
-//constructor TVCLPlatformBitmap.Create;
-//begin
-//  Clear;
-//end;
-//
-//function TVCLPlatformBitmap.CreateBitmap(AWidth:Integer;AHeight:Integer;AScale:Single): Boolean;
-//var
-//  ADC:HDC;
-//begin
-//  Result:=False;
-//
-//  DestroyBitmap;
-//
-//  FWidth:=AWidth;
-//  FHeight:=AHeight;
+  FBits:=nil;
+end;
+
+constructor TWindowsBitmap.Create;
+begin
+  Clear;
+end;
+
+function TWindowsBitmap.SetSize(AWidth:Integer;AHeight:Integer): Boolean;
+var
+  ADC:HDC;
+begin
+  Result:=False;
+
+  DestroyBitmap;
+
+  FWidth:=AWidth;
+  FHeight:=AHeight;
 //  FScale:=AScale;
-//
-//  ADC:=0;
-//
-//  FHandle:=CreateCompatibleDC(ADC);
-//
-//  //设置位图头
-//  with FBitmapInfo.bmiHeader do
-//  begin
-//    biSize := SizeOf(TBitmapInfoHeader);
-//    biWidth := FWidth;
-//    biHeight := FHeight;
-//    biPlanes := 1;
-//    biBitCount := 32;
-//    biCompression := BI_RGB;
-//    biSizeImage := FWidth * FHeight * 4;
-//    biXPelsPerMeter := 0;
-//    biYPelsPerMeter := 0;
-//    biClrUsed := 0;
-//    biClrImportant := 0;
-//  end;
-//  //创建位图
-//  FBitmap := CreateDIBSection(FHandle, FBitmapInfo, DIB_RGB_COLORS, FBits, 0, 0);
-//
-//  FOldBitmap:=SelectObject(FHandle,FBitmap);
-//  Result:=True;
-//end;
-//
-//destructor TVCLPlatformBitmap.Destroy;
-//begin
-//  DestroyBitmap;
-//  inherited;
-//end;
-//
-//function TVCLPlatformBitmap.DestroyBitmap: Boolean;
-//begin
-//  Result:=False;
-//  if FBitmap<>0 then
-//  begin
-//
-//    SelectObject(FHandle,FOldBitmap);
-//
-//    DeleteDC(FHandle);
-//
-//    DeleteObject(FBitmap);
-//
-//  end;
+
+  ADC:=0;
+
+  FHandle:=CreateCompatibleDC(ADC);
+
+  //设置位图头
+  with FBitmapInfo.bmiHeader do
+  begin
+    biSize := SizeOf(TBitmapInfoHeader);
+    biWidth := FWidth;
+    biHeight := FHeight;
+    biPlanes := 1;
+    biBitCount := 32;
+    biCompression := BI_RGB;
+    biSizeImage := FWidth * FHeight * 4;
+    biXPelsPerMeter := 0;
+    biYPelsPerMeter := 0;
+    biClrUsed := 0;
+    biClrImportant := 0;
+  end;
+  //创建位图
+  FBitmap := CreateDIBSection(FHandle, FBitmapInfo, DIB_RGB_COLORS, FBits, 0, 0);
+
+  FOldBitmap:=SelectObject(FHandle,FBitmap);
+  Result:=True;
+end;
+
+destructor TWindowsBitmap.Destroy;
+begin
+  DestroyBitmap;
+  inherited;
+end;
+
+function TWindowsBitmap.DestroyBitmap: Boolean;
+begin
+  Result:=False;
+  if FBitmap<>0 then
+  begin
+
+    SelectObject(FHandle,FOldBitmap);
+
+    DeleteDC(FHandle);
+
+    DeleteObject(FBitmap);
+
+  end;
 //  SysUtils.FreeAndNil(FDrawCanvas);
-//
-//  Clear;
-//  Result:=True;
-//end;
-//
-//function TVCLPlatformBitmap.GetDrawCanvas: TDrawCanvas;
+
+  Clear;
+  Result:=True;
+end;
+
+//function TWindowsBitmap.GetDrawCanvas: TDrawCanvas;
 //begin
 //  if FDrawCanvas=nil then
 //  begin
 //    if FHandle<>0 then
 //    begin
-//      FDrawCanvas:=CreateDrawCanvas('TVCLPlatformBitmap.GetDrawCanvas');
+//      FDrawCanvas:=CreateDrawCanvas('TWindowsBitmap.GetDrawCanvas');
 //      FDrawCanvas.Prepare(FHandle);
 //    end;
 //  end;
 //  Result:=FDrawCanvas;
 //end;
-//
-//{$ENDIF}
+
+function TWindowsBitmap.GetBitmapCanvas: TCanvas;
+begin
+  if FBitmapCanvas=nil then
+  begin
+    FBitmapCanvas:=TCanvas.Create;
+    FBitmapCanvas.Handle:=FHandle;
+  end;
+  Result:=FBitmapCanvas;
+end;
+
+procedure TWindowsBitmap.DrawTo(ACanvas:TCanvas);
+begin
+  Bitblt(ACanvas.Handle,0,0,
+         Self.Width,
+         Self.Height,
+         Handle,
+         0,0,
+         SRCCOPY);
+//  FPlatformBitmap.DrawTo();
+end;
+
+{$ENDIF}
 
 
 
@@ -839,6 +879,8 @@ begin
   FreeAndNil(FPlatformBitmap);
 
   FPlatformBitmap:=TPlatformBitmap.Create;
+//  FPlatformBitmap.PixelFormat:=TPixelFormat.pf32bit;
+
   FPlatformBitmap.SetSize(AWidth,AHeight);
   FDrawCanvas:=CreateDrawCanvas('TBufferBitmap');
   FDrawCanvas.Prepare(FPlatformBitmap.Canvas);
@@ -846,12 +888,14 @@ end;
 
 procedure TBufferBitmap.DrawTo(ACanvas:TCanvas);
 begin
-  Bitblt(ACanvas.Handle,0,0,
-         Self.Width,
-         Self.Height,
-         FDrawCanvas.Handle,
-         0,0,
-         SRCCOPY);
+//  Bitblt(ACanvas.Handle,0,0,
+//         Self.Width,
+//         Self.Height,
+//         FDrawCanvas.Handle,
+//         0,0,
+//         SRCCOPY);
+  FPlatformBitmap.DrawTo(ACanvas);
+//  ACanvas.Draw(0,0,FPlatformBitmap);
 
 end;
 

@@ -259,6 +259,7 @@ type
 
     //水平手势管理者
     FHorzControlGestureManager: TSkinControlGestureManager;
+    FIsRefHorzControlGestureManager: Boolean;
     //垂直手势管理者
     FVertControlGestureManager: TSkinControlGestureManager;
 
@@ -752,6 +753,35 @@ type
     procedure Notification(AComponent:TComponent;Operation:TOperation);override;
     //获取控件属性类
     function GetPropertiesClassType:TPropertiesClassType;override;
+  protected
+    FIsStartedAutoDragScroll:Boolean;
+    FDragOverPoint:TPointF;
+    FAutoDragScrollTimer:TTimer;
+    FAutoDragScrollVertDirection:TGestureDirection;
+    FAutoDragScrollHorzDirection:TGestureDirection;
+    procedure DoAutoDragScroll(ADragOverPoint:TPointF);virtual;
+    procedure DoAutoDragScrollTimer(Sender:TObject);
+//    procedure DoCustomStartDrag(var DragObject: TObject);virtual;
+    procedure DoCustomDragOver(const Data: TObject; const Point: TPointF;var Accept: Boolean);virtual;
+    procedure DoCustomDragDrop(ADragObject:TObject; const Point: TPointF);virtual;
+
+    {$IFDEF FMX}
+    //拖拽
+    procedure DragEnter(const Data: TDragObject; const Point: TPointF); override;
+    procedure DragOver(const Data: TDragObject; const Point: TPointF; var Operation: TDragOperation); override;
+    procedure DragDrop(const Data: TDragObject; const Point: TPointF); override;
+    procedure DragLeave; override;
+    procedure DragEnd; override;
+    {$ENDIF}
+    {$IFDEF VCL}
+    //拖拽
+    procedure DragCanceled; override;
+    procedure DragOver(Source: TObject; X, Y: Integer; State: TDragState;
+      var Accept: Boolean); override;
+    procedure DoEndDrag(Target: TObject; X, Y: Integer); override;
+//    procedure DoStartDrag(var DragObject: TDragObject); override;
+    procedure DragDrop(Source: TObject; X, Y: Integer); override;
+    {$ENDIF}
   public
     constructor Create(AOwner:TComponent);override;
     destructor Destroy;override;
@@ -1281,7 +1311,7 @@ begin
   FreeAndNil(FAutoPullDownRefreshPanel);
   FreeAndNil(FAutoPullUpLoadMorePanel);
 
-  FreeAndNil(FHorzControlGestureManager);
+  if not FIsRefHorzControlGestureManager then FreeAndNil(FHorzControlGestureManager);
   FreeAndNil(FVertControlGestureManager);
 
 
@@ -2856,6 +2886,7 @@ end;
 
 destructor TSkinScrollControl.Destroy;
 begin
+  FreeAndNil(FAutoDragScrollTimer);
   Inherited;
 end;
 
@@ -2873,6 +2904,202 @@ function TSkinScrollControl.GetOnPullUpLoadMore:TNotifyEvent;
 begin
   Result:=FOnPullUpLoadMore;
 end;
+
+
+{$IFDEF FMX}
+
+//拖拽
+procedure TSkinScrollControl.DragEnter(const Data: TDragObject; const Point: TPointF);
+begin
+  Inherited;
+end;
+
+procedure TSkinScrollControl.DragOver(const Data: TDragObject; const Point: TPointF; var Operation: TDragOperation);
+begin
+  Inherited;
+
+  //移动的光标
+  Operation:=TDragOperation.Move;
+  DoDragOver(Data,Point);
+
+end;
+
+procedure TSkinScrollControl.DragDrop(const Data: TDragObject; const Point: TPointF);
+begin
+  Inherited;
+
+  if FAutoDragScrollTimer<>nil then
+  begin
+    FAutoDragScrollTimer.Enabled:=False;
+  end;
+
+  DoCustomDragDrop(Data,Point);
+end;
+
+procedure TSkinScrollControl.DragLeave;
+begin
+  Inherited;
+end;
+
+procedure TSkinScrollControl.DragEnd;
+begin
+  Inherited;
+  if FAutoDragScrollTimer<>nil then
+  begin
+    FAutoDragScrollTimer.Enabled:=False;
+  end;
+end;
+
+{$ENDIF}
+
+procedure TSkinScrollControl.DoAutoDragScroll(ADragOverPoint:TPointF);
+begin
+  case FAutoDragScrollVertDirection of
+    isdNone: ;
+    isdScrollToMin:
+    begin
+      Self.Properties.FVertControlGestureManager.Position:=Self.Properties.FVertControlGestureManager.Position-60;
+    end;
+    isdScrollToMax:
+    begin
+      Self.Properties.FVertControlGestureManager.Position:=Self.Properties.FVertControlGestureManager.Position+60;
+    end;
+  end;
+  case FAutoDragScrollHorzDirection of
+    isdNone: ;
+    isdScrollToMin:
+    begin
+      Self.Properties.FHorzControlGestureManager.Position:=Self.Properties.FVertControlGestureManager.Position-60;
+    end;
+    isdScrollToMax:
+    begin
+      Self.Properties.FHorzControlGestureManager.Position:=Self.Properties.FVertControlGestureManager.Position+60;
+    end;
+  end;
+
+end;
+
+procedure TSkinScrollControl.DoCustomDragDrop(ADragObject:TObject; const Point: TPointF);
+begin
+
+end;
+
+procedure TSkinScrollControl.DoCustomDragOver(const Data: TObject; const Point: TPointF;var Accept: Boolean);
+var
+  ATopRect:TRectF;
+  ABottomRect:TRectF;
+  ALeftRect:TRectF;
+  ARightRect:TRectF;
+begin
+
+  ATopRect:=RectF(0,0,Width,60);
+  ABottomRect:=RectF(0,Height-60,Width,Height);
+  ALeftRect:=RectF(0,0,Height,60);
+  ARightRect:=RectF(Width-60,0,Width,Height);
+
+  FDragOverPoint:=Point;
+  FAutoDragScrollVertDirection:=TGestureDirection.isdNone;
+  FAutoDragScrollHorzDirection:=TGestureDirection.isdNone;
+  //确定垂直自动滚动的方向
+  if PtInRect(ATopRect,Point) then
+  begin
+    FAutoDragScrollVertDirection:=TGestureDirection.isdScrollToMin;
+  end
+  else if PtInRect(ABottomRect,Point) then
+  begin
+    FAutoDragScrollVertDirection:=TGestureDirection.isdScrollToMax;
+  end;
+
+  //确定水平自动滚动的方向
+  if PtInRect(ALeftRect,Point) then
+  begin
+    FAutoDragScrollHorzDirection:=TGestureDirection.isdScrollToMin;
+  end
+  else if PtInRect(ARightRect,Point) then
+  begin
+    FAutoDragScrollHorzDirection:=TGestureDirection.isdScrollToMax;
+  end;
+
+
+  //到顶了就让滚动条自动滚动
+  //到底了也让滚动条自动滚动
+  if ((FAutoDragScrollVertDirection<>TGestureDirection.isdNone) or (FAutoDragScrollHorzDirection<>TGestureDirection.isdNone)) and (not FIsStartedAutoDragScroll) then
+  begin
+
+      if FAutoDragScrollTimer=nil then
+      begin
+        FAutoDragScrollTimer:=TTimer.Create(nil);
+        FAutoDragScrollTimer.Interval:=500;
+        FAutoDragScrollTimer.OnTimer:=DoAutoDragScrollTimer;
+      end;
+      FAutoDragScrollTimer.Enabled:=True;
+  end
+  else
+  begin
+      if FAutoDragScrollTimer<>nil then
+      begin
+        FAutoDragScrollTimer.Enabled:=True;
+      end;
+  end;
+
+
+end;
+
+
+procedure TSkinScrollControl.DoAutoDragScrollTimer(Sender:TObject);
+begin
+  DoAutoDragScroll(FDragOverPoint);
+
+  Self.FAutoDragScrollTimer.Enabled:=(FAutoDragScrollVertDirection<>isdNone) or (FAutoDragScrollHorzDirection<>isdNone);
+end;
+
+
+{$IFDEF VCL}
+//拖拽
+procedure TSkinScrollControl.DragCanceled;
+begin
+  Inherited;
+  if FAutoDragScrollTimer<>nil then
+  begin
+    FAutoDragScrollTimer.Enabled:=False;
+  end;
+end;
+
+procedure TSkinScrollControl.DragOver(Source: TObject; X, Y: Integer; State: TDragState;
+  var Accept: Boolean);
+begin
+  Inherited;
+//  TDragState = (dsDragEnter, dsDragLeave, dsDragMove);
+  DoCustomDragOver(Source,PointF(X,Y),Accept);
+end;
+
+procedure TSkinScrollControl.DoEndDrag(Target: TObject; X, Y: Integer);
+begin
+  Inherited;
+  if FAutoDragScrollTimer<>nil then
+  begin
+    FAutoDragScrollTimer.Enabled:=False;
+  end;
+end;
+
+procedure TSkinScrollControl.DragDrop(Source: TObject; X, Y: Integer);
+begin
+  Inherited;
+  if FAutoDragScrollTimer<>nil then
+  begin
+    FAutoDragScrollTimer.Enabled:=False;
+  end;
+  DoCustomDragDrop(Source,PointF(X,Y));
+end;
+
+//procedure TSkinScrollControl.DoStartDrag(var DragObject: TDragObject);
+//begin
+//  Inherited;
+//  DoCustomStartDrag(DragObject);
+//end;
+
+{$ENDIF}
+
 
 function TSkinScrollControl.GetPropertiesClassType: TPropertiesClassType;
 begin

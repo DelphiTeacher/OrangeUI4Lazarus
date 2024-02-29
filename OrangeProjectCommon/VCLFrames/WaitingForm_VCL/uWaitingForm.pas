@@ -12,6 +12,7 @@ uses
   Controls,
   Forms,
   Types,
+  uGraphicCommon,
   uWaiting;
 
 const
@@ -79,8 +80,8 @@ procedure HideWaitingFrame;//(AParentForm:TForm);
 implementation
 
 var
-  //是否注册
-  IsRegWaitingCom:Boolean;
+  ////是否注册
+  //IsRegWaitingCom:Boolean;
 //  //等待界面
 //  GlobalWaitingFormList:TList;
   //全局WaitingForm
@@ -148,12 +149,12 @@ var
 //  AWaitingForm:TWaitingFormClass;
   AWindowParentHandle: Integer;
 begin
-  Try
+  //Try
     if DisableWaitingForm then Exit;
     
 
     IsEnableTiming:=False;
-    if Not IsRegWaitingCom then Exit;
+    //if Not IsRegWaitingCom then Exit;
 
 //    //先关闭等待界面
 //    CloseWaitingForm(AParentForm);
@@ -214,12 +215,12 @@ begin
       WaitSomeTime;
     end;
 
-  Except
-    On E:Exception do
-    begin
-      OutputDebugString(PWideChar(E.Message));
-    end;
-  End;
+  //Except
+  //  On E:Exception do
+  //  begin
+  //    OutputDebugString(PWideChar(E.Message));
+  //  end;
+  //End;
 end;
 
 procedure HideWaitingFrame;//(AParentForm:TForm);
@@ -297,30 +298,30 @@ end;
 //end;
 
 function TWaitingFormClass.CreateWaitingForm: Boolean;
-var
-  TryTimes:Integer;
+//var
+  //TryTimes:Integer;
 begin
   Result:=False;
-  TryTimes:=0;
-  while TryTimes<=2 do
-  begin
-    Try
-      if IsRegWaitingCom then
-      begin
+  //TryTimes:=0;
+  //while TryTimes<=2 do
+  //begin
+  //  Try
+  //    if IsRegWaitingCom then
+  //    begin
         //FWaiting:=CoWaitingForm.Create;
         FWaiting:=TWaitingForm.Create;
         Result:=True;
-        Break;
-      end;
-    Except
-      On E:Exception do
-      begin
-        OutputDebugString(PWideChar('创建失败:'+E.Message));
-        Inc(TryTimes);
-        //RegisterWaitingCom;
-      end;
-    End;
-  end;
+        //Break;
+//      end;
+//    Except
+//      On E:Exception do
+//      begin
+//        OutputDebugString(PWideChar('创建失败:'+E.Message));
+//        Inc(TryTimes);
+//        //RegisterWaitingCom;
+//      end;
+//    End;
+//  end;
 end;
 
 destructor TWaitingFormClass.Destroy;
@@ -408,7 +409,7 @@ initialization
 //  //注册WaitingForm
 //  GlobalWaitingFormList:=TList.Create;
   DisableWaitingForm:=False;
-  IsRegWaitingCom:=True;
+  //IsRegWaitingCom:=True;
   GlobalWaitingForm:=nil;
   //RegisterWaitingCom;
 

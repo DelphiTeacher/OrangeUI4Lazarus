@@ -1011,7 +1011,7 @@ begin
 
         {$IFDEF FMX}
         BSkinMaterial.FThumbBtnRectParam.FillDrawColor.Color:=$64000000;
-        {$ENDIF FMX}
+        {$ENDIF}
 
 
         BSkinMaterial.FThumbBtnRectParam.DrawRectSetting.Enabled:=True;

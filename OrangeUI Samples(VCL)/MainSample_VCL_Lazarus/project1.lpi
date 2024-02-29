@@ -199,6 +199,13 @@
         <Filename Value="..\..\OrangeProjectCommon\uManager.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeProjectCommon\VCLFrames\WaitingForm_VCL\FormWaiting.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmWaiting"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
@@ -209,7 +216,7 @@
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
-      <OtherUnitFiles Value="D:\MyFiles\OrangeUIControlNew\lib\x86_64-win64\;..\..\OrangeProjectCommon;..\..\OrangeUIListItemStyles_VCL;..\..\OrangeUIControl\Source\VCL\BGRACanvas;..\..\OrangeUIControl\Source\VCL\NativeCanvas"/>
+      <OtherUnitFiles Value="D:\MyFiles\OrangeUIControlNew\lib\x86_64-win64\;..\..\OrangeProjectCommon;..\..\OrangeUIListItemStyles_VCL;..\..\OrangeUIControl\Source\VCL\BGRACanvas;..\..\OrangeUIControl\Source\VCL\NativeCanvas;..\..\OrangeProjectCommon\VCLFrames\WaitingForm_VCL"/>
       <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <Linking>

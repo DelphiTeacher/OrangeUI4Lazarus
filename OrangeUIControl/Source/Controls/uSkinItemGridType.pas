@@ -71,6 +71,9 @@ type
   TSkinItemGridColumnMaterial=class;
 
 
+
+
+
   ISkinItemGrid=interface
     ['{076173C7-BBA6-447A-91EB-657C78E0D8C8}']
 
@@ -171,6 +174,9 @@ type
   private
     function GetItem(Index: Integer): TSkinItemGridColumn;
   public
+    //创建列表项
+    function GetSkinItemClass:TBaseSkinItemClass;override;
+  public
     function Add:TSkinItemGridColumn;overload;
     function Find(ABindItemFieldName:String):TSkinItemGridColumn;
     property Items[Index:Integer]:TSkinItemGridColumn read GetItem;default;
@@ -237,8 +243,8 @@ type
     //获取表格数据行的列表布局管理者
     function GetCustomListLayoutsManagerClass:TSkinCustomListLayoutsManagerClass;override;
     //创建列管理
-    function GetColumnClass:TSkinVirtualGridColumnClass;override;
-    function GetColumnsClass:TSkinVirtualGridColumnsClass;override;
+    //function GetColumnClass:TSkinVirtualGridColumnClass;override;
+    //function GetColumnsClass:TSkinVirtualGridColumnsClass;override;
 
     //获取表格列排列管理类
     function GetColumnLayoutsManagerClass:TSkinListLayoutsManagerClass;override;
@@ -356,6 +362,7 @@ type
     procedure SetItemGridProperties(Value:TItemGridProperties);
 
   protected
+    function GetColumnsClass:TSkinVirtualGridColumnsClass;override;
     //获取控件属性类
     function GetPropertiesClassType:TPropertiesClassType;override;
   public
@@ -458,14 +465,20 @@ procedure TSkinItemGridRows.EndUpdate;//(AIsForce: Boolean);
 var
   AVirtualGridProperties:TVirtualGridProperties;
 begin
-  //如果有自适应尺寸的列
-  if FListLayoutsManager<>nil then
-  begin
-    AVirtualGridProperties:=TSkinVirtualGridRowLayoutsManager(Self.FListLayoutsManager).FVirtualGridProperties;
-    AVirtualGridProperties.CalcAutoSizeColumnWidth;
-  end;
 
   inherited;
+
+  if UpdateCount=0 then
+  begin
+
+    //如果有自适应尺寸的列
+    if FListLayoutsManager<>nil then
+    begin
+      AVirtualGridProperties:=TSkinVirtualGridRowLayoutsManager(Self.FListLayoutsManager).FVirtualGridProperties;
+      AVirtualGridProperties.CalcAutoSizeColumnWidth;
+    end;
+
+  end;
 
 end;
 
@@ -503,10 +516,10 @@ begin
   Result:=TSkinItemGridRowLayoutsManager;
 end;
 
-function TItemGridProperties.GetColumnsClass: TSkinVirtualGridColumnsClass;
-begin
-  Result:=TSkinItemGridColumns;
-end;
+//function TItemGridProperties.GetColumnsClass: TSkinVirtualGridColumnsClass;
+//begin
+//  Result:=TSkinItemGridColumns;
+//end;
 
 //procedure TItemGridProperties.DoClickCell(ARow: TBaseSkinItem;ACol: TSkinVirtualGridColumn);
 //begin
@@ -606,10 +619,10 @@ begin
 
 end;
 
-function TItemGridProperties.GetColumnClass: TSkinVirtualGridColumnClass;
-begin
-  Result:=TSkinItemGridColumn;
-end;
+//function TItemGridProperties.GetColumnClass: TSkinVirtualGridColumnClass;
+//begin
+//  Result:=TSkinItemGridColumn;
+//end;
 
 function TItemGridProperties.GetColumnLayoutsManagerClass: TSkinListLayoutsManagerClass;
 begin
@@ -993,6 +1006,12 @@ begin
   Result:=TSkinItemGridColumn(Inherited Items[Index]);
 end;
 
+//创建列表项
+function TSkinItemGridColumns.GetSkinItemClass:TBaseSkinItemClass;
+begin
+  Result:=TSkinItemGridColumn;
+end;
+
 { TSkinItemGridDefaultMaterial }
 
 function TSkinItemGridDefaultMaterial.GetColumnMaterialClass: TSkinVirtualGridColumnMaterialClass;
@@ -1185,6 +1204,12 @@ function TSkinItemGrid.CurrentUseMaterialToDefault:TSkinItemGridDefaultMaterial;
 begin
   Result:=TSkinItemGridDefaultMaterial(CurrentUseMaterial);
 end;
+
+function TSkinItemGrid.GetColumnsClass:TSkinVirtualGridColumnsClass;
+begin
+  Result:=TSkinItemGridColumns;
+end;
+
 
 function TSkinItemGrid.GetPropertiesClassType: TPropertiesClassType;
 begin

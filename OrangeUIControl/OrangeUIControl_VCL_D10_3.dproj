@@ -74,15 +74,15 @@
         <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;System;Xml;Data;Datasnap;Web;Soap;VCL;Vcl.Imaging;$(DCC_Namespace)</DCC_Namespace>
         <SanitizedProjectName>OrangeUIControl_VCL_D10_3</SanitizedProjectName>
         <DCC_CBuilderOutput>All</DCC_CBuilderOutput>
-        <DCC_DcuOutput>..\OrangeUIDesignNew\DCU\VCL\D10_3\$(Platform)\$(Config)</DCC_DcuOutput>
+        <DCC_DcuOutput>..\OrangeUIDesign\DCU\VCL\D10_3\$(Platform)\$(Config)</DCC_DcuOutput>
         <DCC_ExeOutput>.\$(Platform)\$(Config)</DCC_ExeOutput>
         <DCC_E>false</DCC_E>
         <DCC_N>false</DCC_N>
         <DCC_S>false</DCC_S>
         <DCC_F>false</DCC_F>
         <DCC_K>false</DCC_K>
-        <DCC_DcpOutput>..\OrangeUIDesignNew\DCU\VCL\D10_3\$(Platform)\$(Config)</DCC_DcpOutput>
-        <DCC_BplOutput>..\OrangeUIDesignNew\DCU\VCL\D10_3\$(Platform)\$(Config)</DCC_BplOutput>
+        <DCC_DcpOutput>..\OrangeUIDesign\DCU\VCL\D10_3\$(Platform)\$(Config)</DCC_DcpOutput>
+        <DCC_BplOutput>..\OrangeUIDesign\DCU\VCL\D10_3\$(Platform)\$(Config)</DCC_BplOutput>
         <DCC_Define>SKIN_SUPEROBJECT;NEED_SystemHttpControl;$(DCC_Define)</DCC_Define>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Android)'!=''">
@@ -135,6 +135,7 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
+        <DCCReference Include="..\OrangeProjectCommon\GDIPlus\GdiPlus11.RES"/>
         <DCCReference Include="rtl.dcp"/>
         <DCCReference Include="vcl.dcp"/>
         <DCCReference Include="vclimg.dcp"/>
@@ -215,8 +216,6 @@
         <DCCReference Include="Source\Base\uSkinBufferBitmap.pas"/>
         <DCCReference Include="Source\Base\uFrameContext.pas"/>
         <DCCReference Include="..\OrangeProjectCommon\MD5\MD5_OrangeUI.pas"/>
-        <DCCReference Include="..\OrangeProjectCommon\SkinXSuperObject\uSkinSuperJSON.pas"/>
-        <DCCReference Include="..\OrangeProjectCommon\SkinXSuperObject\uSkinSuperObject.pas"/>
         <DCCReference Include="Source\Controls\uSkinCommonFrames.pas"/>
         <DCCReference Include="Source\Controls\uSkinVirtualChartType.pas"/>
         <DCCReference Include="Source\Base\uFileCommon.pas"/>
@@ -235,6 +234,10 @@
         <DCCReference Include="Source\VCL\NativeCanvas\uNativeDrawCanvas.pas"/>
         <DCCReference Include="Source\VCL\NativeCanvas\uNativeSkinPictureEngine.pas"/>
         <DCCReference Include="Source\VCL\uSkinWindowsControl.pas"/>
+        <DCCReference Include="..\OrangeProjectCommon\SkinSuperObject\uskinsuperobject.pas"/>
+        <DCCReference Include="Source\VCL\GDIPlusCanvas\uGDIPlusDrawCanvas.pas"/>
+        <DCCReference Include="Source\VCL\GDIPlusCanvas\uGDIPlusSkinPictureEngine.pas"/>
+        <DCCReference Include="Source\VCL\GDIPlusCanvas\GDIPlus\uSkinGDIPlus.pas"/>
         <None Include="Source\Controls\INC\VCL\ISkinControl_Control_Impl_Mouse_Code_VCL.inc"/>
         <None Include="Source\Controls\INC\VCL\ISkinControl_Control_Impl_Mouse_Declare_VCL.inc"/>
         <None Include="Source\Controls\INC\VCL\ISkinControl_Control_Impl_Code_VCL.inc"/>
@@ -325,6 +328,12 @@
                 </VersionInfoKeys>
             </Delphi.Personality>
             <Deployment Version="3">
+                <DeployFile LocalName="..\OrangeUIDesign\DCU\VCL\D10_3\Win32\Debug\OrangeUIControl_VCL_D10_3.rsm" Configuration="Debug" Class="DebugSymbols">
+                    <Platform Name="Win32">
+                        <RemoteName>OrangeUIControl_VCL_D10_3.rsm</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
                 <DeployFile LocalName="$(BDS)\Redist\osx32\libcgunwind.1.0.dylib" Class="DependencyModule">
                     <Platform Name="OSX32">
                         <Overwrite>true</Overwrite>
@@ -362,7 +371,7 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="..\OrangeUIDesignNew\DCU\VCL\D10_3\Win32\Debug\OrangeUIControl_VCL_D10_3.bpl" Configuration="Debug" Class="ProjectOutput">
+                <DeployFile LocalName="..\OrangeUIDesign\DCU\VCL\D10_3\Win32\Debug\OrangeUIControl_VCL_D10_3.bpl" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win32">
                         <RemoteName>OrangeUIControl_VCL_D10_3.bpl</RemoteName>
                         <Overwrite>true</Overwrite>

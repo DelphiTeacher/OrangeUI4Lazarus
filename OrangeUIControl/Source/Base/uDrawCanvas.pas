@@ -560,8 +560,8 @@ type
 
     //函数//
     //准备DC,一般用于初始绘制引擎
-    function Prepare(const Canvas:TCanvas):Boolean;{$IFDEF VCL}overload;{$ENDIF}
-    procedure PrepareBitmap(const ABitmap:TObject);virtual;abstract;overload;
+    function Prepare(const ACanvas:TCanvas):Boolean;{$IFDEF VCL}overload;{$ENDIF}
+    procedure PrepareBitmap(const ABitmap:TObject);virtual;abstract;
     {$IFDEF VCL}
     function Prepare(const DC:HDC):Boolean;overload;
     {$ENDIF}
@@ -772,15 +772,15 @@ implementation
 
 
   {$IFDEF VCL}
-//  {$IFDEF DELPHI}
-//uses
-//  uGDIPlusSkinPictureEngine,
-//  uGDIPlusDrawCanvas;
-//  {$ELSE}
+  {$IFDEF MSWINDOWS}
+uses
+  uGDIPlusSkinPictureEngine,
+  uGDIPlusDrawCanvas;
+  {$ELSE}
 uses
   uNativeSkinPictureEngine,
   uNativeDrawCanvas;
-//  {$ENDIF}
+  {$ENDIF}
   {$ENDIF}
 
   {$IFDEF FMX}
@@ -1352,20 +1352,20 @@ begin
   begin
     FCanvas:=TCanvas.Create;
     FCanvasIsOwn:=True;
+    FCanvas.Handle:=FHandle;
   end;
-  FCanvas.Handle:=FHandle;
   {$ENDIF}
   Result:=FCanvas;
 end;
 
-function TDrawCanvas.Prepare(const Canvas: TCanvas): Boolean;
+function TDrawCanvas.Prepare(const ACanvas: TCanvas): Boolean;
 begin
   if FParepareCount=0 then
   begin
     {$IFDEF VCL}
-    FHandle:=Canvas.Handle;
+    FHandle:=ACanvas.Handle;
     {$ENDIF}
-    FCanvas:=Canvas;
+    FCanvas:=ACanvas;
 
     CustomPrepare;
     Result:=True;
@@ -1755,19 +1755,20 @@ initialization
 //  GlobalCanvasNameList:=TList.Create;
 
   {$IFDEF VCL}
-//  {$IFDEF DELPHI}
-//  GlobalDrawCanvasClass:=TGDIPlusDrawCanvas;
-//  GlobalSkinPictureClass:=TSkinPicture;
-//  GlobalSkinPictureEngineClass:=TGDIPlusSkinPictureEngine;
-//  GlobalSkinGIFPictureEngineClass:=TGDIPlusSkinGIFPictureEngine;
-//  GlobalDrawPathDataClass:=TGDIPlusDrawPathData;
-//  {$ELSE}
+
+  {$IFDEF MSWINDOWS}
+  GlobalDrawCanvasClass:=TGDIPlusDrawCanvas;
+  GlobalSkinPictureClass:=TSkinPicture;
+  GlobalSkinPictureEngineClass:=TGDIPlusSkinPictureEngine;
+  GlobalSkinGIFPictureEngineClass:=TGDIPlusSkinGIFPictureEngine;
+  GlobalDrawPathDataClass:=TGDIPlusDrawPathData;
+  {$ELSE}
   GlobalDrawCanvasClass:=TNativeDrawCanvas;
   GlobalSkinPictureClass:=TSkinPicture;
   GlobalSkinPictureEngineClass:=TSkinPictureEngine;
   GlobalSkinGIFPictureEngineClass:=TNativeSkinGIFPictureEngine;
   GlobalDrawPathDataClass:=TNativeDrawPathData;
-//  {$ENDIF}
+  {$ENDIF}
 
 
   {$ENDIF}

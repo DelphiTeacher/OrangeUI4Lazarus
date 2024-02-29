@@ -362,6 +362,8 @@ type
 //    function Add(AObject:TInterfacedPersistent):Integer;overload;
     procedure Clear(AIsFree:Boolean=True;AIsNeedDelete:Boolean=True);overload;
     procedure Add(AObject:TCollectionItem);overload;
+    function Remove(AObject:TObject;AIsFree:Boolean=True):Integer;virtual;
+    function Insert(AIndex: Integer;AObject:TObject):Integer;overload;virtual;
     /// <summary>
     ///   <para>
     ///     创建并插入子对象
@@ -1088,6 +1090,12 @@ begin
   Result:=TCollectionItem(AObject).Index;
 end;
 
+function TBinaryCollection.Insert(AIndex: Integer; AObject: TObject): Integer;
+begin
+  TCollectionItem(AObject).Collection:=Self;
+  TCollectionItem(AObject).Index:=AIndex;
+end;
+
 //function TBinaryCollection.GetItem(Index: Integer): TObject;//TInterfacedPersistent;
 //begin
 //  Result:=TBinaryObject(Inherited Items[Index]);
@@ -1226,6 +1234,12 @@ end;
 procedure TBinaryCollection.ReadData(Stream: TStream);
 begin
   DoReadData(Stream);
+end;
+
+function TBinaryCollection.Remove(AObject: TObject; AIsFree: Boolean): Integer;
+begin
+  TCollectionItem(AObject).Collection:=nil;
+  if AIsFree then FreeAndNil(AObject);
 end;
 
 procedure TBinaryCollection.WriteData(Stream: TStream);

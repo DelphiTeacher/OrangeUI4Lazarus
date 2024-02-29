@@ -62,6 +62,7 @@ uses
   uBinaryTreeDoc,
   uDrawPicture,
   uSkinMaterial,
+  uSkinRegManager,
   uDrawTextParam,
   uDrawLineParam,
   uDrawRectParam,
@@ -69,6 +70,7 @@ uses
   uSkinImageList,
   uSkinCustomListType,
   uSkinCheckBoxType,
+  uSkinVirtualListType,
   uSkinEditType,
   uSkinControlGestureManager,
   uSkinScrollControlType,
@@ -84,6 +86,8 @@ uses
 
 
 
+const
+  IID_ISkinColumnHeader:TGUID='{D3D65F7C-398C-42DA-B745-B095EF372A4B}';
 
 const
   IID_ISkinVirtualGrid:TGUID='{06786B16-959B-49B5-A48A-227F76786231}';
@@ -103,7 +107,11 @@ const
 
 
 
+
 type
+  TSkinColumnHeader=class;
+  TSkinColumnHeaderClass=class of TSkinColumnHeader;
+
   TSkinVirtualGridRow=class;
   TSkinVirtualGridRows=class;
   TSkinVirtualGridColumn=class;
@@ -176,6 +184,11 @@ type
 
 
 
+
+
+
+
+
   ISkinVirtualGrid=interface//(ISkinScrollControl)
     ['{06786B16-959B-49B5-A48A-227F76786231}']
     function GetOnClickCell:TGridClickCellEvent;
@@ -186,7 +199,7 @@ type
     function GetOnCustomPaintCellEnd:TGridCustomPaintCellBeginEvent;
 
 
-//    function GetColumnHeader:TSkinListBox;
+    function GetColumnHeader:TSkinColumnHeader;
 //    procedure SyncColumnHeader;
 
     //单元格点击事件
@@ -294,16 +307,18 @@ type
 
 
   //表格列
-  TSkinVirtualGridColumn=class(TCollectionItem,ISkinItem,IInterface)
+  //TSkinVirtualGridColumn=class(TCollectionItem,ISkinItem,IInterface)
+  //TSkinVirtualGridColumn=class(TCollectionItem,ISkinItem,IInterface)
+  TSkinVirtualGridColumn=class(TRealSkinItem)
   private
-    //IInterface接口
-    FOwnerInterface: IInterface;
-//    function GetContentTypes: TSkinGridColumnContentTypes;
-  protected
-    { IInterface }
-  function QueryInterface({$IFDEF DELPHI}const{$ENDIF}{$IFDEF FPC}constref{$ENDIF} IID: TGUID; out Obj): {$IFDEF LINUX}longint{$ELSE}HResult{$ENDIF}; virtual; {$IFNDEF WINDOWS}cdecl{$ELSE}stdcall{$ENDIF};
-  function _AddRef: {$IFDEF LINUX}longint{$ELSE}Integer{$ENDIF}; virtual; {$IFNDEF WINDOWS}cdecl{$ELSE}stdcall{$ENDIF};
-  function _Release: {$IFDEF LINUX}longint{$ELSE}Integer{$ENDIF}; virtual; {$IFNDEF WINDOWS}cdecl{$ELSE}stdcall{$ENDIF};
+//    //IInterface接口
+//    FOwnerInterface: IInterface;
+////    function GetContentTypes: TSkinGridColumnContentTypes;
+//  protected
+//    { IInterface }
+//  function QueryInterface({$IFDEF DELPHI}const{$ENDIF}{$IFDEF FPC}constref{$ENDIF} IID: TGUID; out Obj): {$IFDEF LINUX}longint{$ELSE}HResult{$ENDIF}; virtual; {$IFNDEF WINDOWS}cdecl{$ELSE}stdcall{$ENDIF};
+//  function _AddRef: {$IFDEF LINUX}longint{$ELSE}Integer{$ENDIF}; virtual; {$IFNDEF WINDOWS}cdecl{$ELSE}stdcall{$ENDIF};
+//  function _Release: {$IFDEF LINUX}longint{$ELSE}Integer{$ENDIF}; virtual; {$IFNDEF WINDOWS}cdecl{$ELSE}stdcall{$ENDIF};
 
   protected
     //自动计算时的内容宽度
@@ -316,65 +331,65 @@ type
     function GetPickList: TStrings;
     procedure SetPickList(Value: TStrings);
   protected
-
-    //ISkinItem接口需要,用于排列
-    //宽度
-    FWidth: Double;
-    //是否显示
-    FVisible:Boolean;
-    FSelected:Boolean;
-
-    //所在的位置
-    FItemRect:TRectF;
-    //绘制矩形
-    FItemDrawRect:TRectF;
+//
+//    //ISkinItem接口需要,用于排列
+//    //宽度
+//    FWidth: Double;
+//    //是否显示
+//    FVisible:Boolean;
+//    FSelected:Boolean;
+//
+//    //所在的位置
+//    FItemRect:TRectF;
+//    //绘制矩形
+//    FItemDrawRect:TRectF;
 
     //自适应尺寸
     FAutoSize:Boolean;
     FAutoSizeMinWidth:TControlSize;
 
-    FSkinListIntf:ISkinList;
-
-    //宽度
-    function GetWidth: Double;virtual;
-    //表格列头的高度都是统一的
-    function GetHeight: Double;
-    //层级
-    function GetLevel:Integer;
-    function GetVisible: Boolean;
-    function GetObject:TObject;
-    function GetSelected: Boolean;
-    procedure SetItemRect(Value:TRectF);
-    function GetItemRect:TRectF;
-    function GetItemDrawRect:TRectF;
-    procedure SetItemDrawRect(Value:TRectF);
-    function GetIsRowEnd:Boolean;
-    function GetThisRowItemCount:Integer;
-    procedure SetSkinListIntf(ASkinListIntf:ISkinList);
-    function GetListLayoutsManager:TSkinListLayoutsManager;
-
-    procedure ClearItemRect;
-    //鼠标是否在Item里面
-    function PtInItem(APoint:TPointF):Boolean;
-  protected
-    //标题
-    FCaption:String;
-    procedure SetVisible(const Value: Boolean);
-    procedure SetCaption(const Value: String);
-
-    //DBGrid要扩展,默认显示字段名FieldName
-    function GetCaption: String;virtual;
-    //DBGrid要扩展
-    procedure SetWidth(const Value: Double);virtual;
-
-  protected
-    //属性更改
-    procedure DoPropChange(Sender:TObject=nil);virtual;
-    //尺寸更改
-    procedure DoSizeChange;virtual;
-    //可视化更改
-    procedure DoVisibleChange;virtual;
-  protected
+//    FSkinListIntf:ISkinList;
+//
+//    //宽度
+//    function GetWidth: Double;virtual;
+//    //表格列头的高度都是统一的
+//    function GetHeight: Double;
+//    //层级
+//    function GetLevel:Integer;
+//    function GetVisible: Boolean;
+//    function GetObject:TObject;
+//    function GetSelected: Boolean;
+//    procedure SetItemRect(Value:TRectF);
+//    function GetItemRect:TRectF;
+//    function GetItemDrawRect:TRectF;
+//    procedure SetItemDrawRect(Value:TRectF);
+//    function GetIsRowEnd:Boolean;
+//    function GetThisRowItemCount:Integer;
+//    procedure SetSkinListIntf(ASkinListIntf:ISkinList);
+//    function GetListLayoutsManager:TSkinListLayoutsManager;
+//
+//    procedure ClearItemRect;
+//    //鼠标是否在Item里面
+//    function PtInItem(APoint:TPointF):Boolean;
+  //protected
+    ////标题
+    //FCaption:String;
+    //procedure SetVisible(const Value: Boolean);
+    //procedure SetCaption(const Value: String);
+    //
+    ////DBGrid要扩展,默认显示字段名FieldName
+    //function GetCaption: String;virtual;
+    ////DBGrid要扩展
+    //procedure SetWidth(const Value: Double);virtual;
+//
+//  protected
+//    //属性更改
+//    procedure DoPropChange(Sender:TObject=nil);virtual;
+//    //尺寸更改
+//    procedure DoSizeChange;virtual;
+//    //可视化更改
+//    procedure DoVisibleChange;virtual;
+//  protected
     {$IFDEF FMX}
     FKeyboardType : TVirtualkeyboardType;
     {$ENDIF}
@@ -454,12 +469,15 @@ type
     property DefaultItemStyle:String read GetDefaultItemStyle write SetDefaultItemStyle;
     property ItemDesignerPanel: TSkinItemDesignerPanel read GetItemDesignerPanel write SetItemDesignerPanel;
 
-    //列标题
-    property Caption: String read GetCaption write SetCaption;
-    //宽度,如果为-1,表示使用默认宽度
-    property Width:Double read FWidth write SetWidth;
-    //是否显示
-    property Visible:Boolean read FVisible write SetVisible;
+    ////列标题
+    //property Caption: String read GetCaption write SetCaption;
+    ////宽度,如果为-1,表示使用默认宽度
+    //property Width:Double read FWidth write SetWidth;
+    ////是否显示
+    //property Visible:Boolean read FVisible write SetVisible;
+
+
+
     //是否只读(不允许编辑)
     property ReadOnly: Boolean read FReadOnly write FReadOnly;
     //下拉选项
@@ -500,70 +518,74 @@ type
 
   { TSkinVirtualGridColumns }
 
-  TSkinVirtualGridColumns=class(TCollection,ISkinList)
-  private
-    FOwnerInterface: IInterface;
+  //TSkinVirtualGridColumns=class(TCollection,ISkinList)
+  TSkinVirtualGridColumns=class(TSkinItems)
+  //private
+  //  FOwnerInterface: IInterface;
+  //protected
+  //  function QueryInterface({$IFDEF DELPHI}const{$ENDIF}{$IFDEF FPC}constref{$ENDIF} IID: TGUID; out Obj): {$IFDEF LINUX}longint{$ELSE}HResult{$ENDIF}; virtual; {$IFNDEF WINDOWS}cdecl{$ELSE}stdcall{$ENDIF};
+  //  function _AddRef: {$IFDEF LINUX}longint{$ELSE}Integer{$ENDIF}; virtual; {$IFNDEF WINDOWS}cdecl{$ELSE}stdcall{$ENDIF};
+  //  function _Release: {$IFDEF LINUX}longint{$ELSE}Integer{$ENDIF}; virtual; {$IFNDEF WINDOWS}cdecl{$ELSE}stdcall{$ENDIF};
+  //
   protected
-    function QueryInterface({$IFDEF DELPHI}const{$ENDIF}{$IFDEF FPC}constref{$ENDIF} IID: TGUID; out Obj): {$IFDEF LINUX}longint{$ELSE}HResult{$ENDIF}; virtual; {$IFNDEF WINDOWS}cdecl{$ELSE}stdcall{$ENDIF};
-    function _AddRef: {$IFDEF LINUX}longint{$ELSE}Integer{$ENDIF}; virtual; {$IFNDEF WINDOWS}cdecl{$ELSE}stdcall{$ENDIF};
-    function _Release: {$IFDEF LINUX}longint{$ELSE}Integer{$ENDIF}; virtual; {$IFNDEF WINDOWS}cdecl{$ELSE}stdcall{$ENDIF};
-
-  protected
-    FIsDestroying:Boolean;
+  //  FIsDestroying:Boolean;
 
     function GetItem(Index: Integer): TSkinVirtualGridColumn;
     procedure SetItem(Index: Integer; const Value: TSkinVirtualGridColumn);
 
-    {$IFDEF DELPHI}
-    //添加列之后调用
-    procedure Added(var Item: TCollectionItem); override;
-    //删除列之后调用
-    procedure Deleting(Item: TCollectionItem); override;
-    {$ENDIF}
+//    {$IFDEF DELPHI}
+//    //添加列之后调用
+//    procedure Added(var Item: TCollectionItem); override;
+//    //删除列之后调用
+//    procedure Deleting(Item: TCollectionItem); override;
+//    {$ENDIF}
 
     //列释放或添加,或插入删除之后调用
     procedure Update(Item: TCollectionItem); override;
-  protected
-    //ISkinList接口的实现
-    //布局管理(调用它的事件,来通知是否需要重新计算内容)
-    FListLayoutsManager:TSkinListLayoutsManager;
-
-
-    //停止更改调用的次数
-    FUpdateCount: Integer;
-
-    //更新个数
-    function GetUpdateCount:Integer;
-    //获取某一项
-    function GetSkinItem(const Index:Integer):ISkinItem;
-    function GetSkinObject(const Index:Integer):TObject;
-    //获取个数
-    function GetCount:Integer;
-    //获取下标
-    function IndexOf(AObject:TObject):Integer;
-    function GetObject:TObject;
-    function GetOwnerProperties:TObject;
+  //protected
+  //  //ISkinList接口的实现
+  //  //布局管理(调用它的事件,来通知是否需要重新计算内容)
+  //  FListLayoutsManager:TSkinListLayoutsManager;
+  //
+  //
+  //  //停止更改调用的次数
+  //  FUpdateCount: Integer;
+  //
+  //  //更新个数
+  //  function GetUpdateCount:Integer;
+  //  //获取某一项
+  //  function GetSkinItem(const Index:Integer):ISkinItem;
+  //  function GetSkinObject(const Index:Integer):TObject;
+  //  //获取个数
+  //  function GetCount:Integer;
+  //  //获取下标
+  //  function IndexOf(AObject:TObject):Integer;
+  //  function GetObject:TObject;
+  //  function GetOwnerProperties:TObject;
   public
-    //调用DoItemVisibleChange
-    procedure DoChange;//override;
-    //调用DoItemVisibleChange
+    ////调用DoItemVisibleChange
+    //procedure DoChange;//override;
+    ////调用DoItemVisibleChange
 //    procedure EndUpdate(AIsForce:Boolean=False);//override;
-    //开始更新
-    procedure BeginUpdate;override;
-    //结束更新
-    procedure EndUpdate;override;
-    //设置布局排列
-    procedure SetListLayoutsManager(ALayoutsManager:TSkinListLayoutsManager);virtual;
-    function GetListLayoutsManager:TSkinListLayoutsManager;
+    ////开始更新
+    //procedure BeginUpdate;override;
+    ////结束更新
+    //procedure EndUpdate;override;
+    ////设置布局排列
+    //procedure SetListLayoutsManager(ALayoutsManager:TSkinListLayoutsManager);virtual;
+    //function GetListLayoutsManager:TSkinListLayoutsManager;
   public
-    function Add:TSkinVirtualGridColumn;overload;
+    //function Add:TSkinVirtualGridColumn;overload;
     function FindByCaption(ACaption:String):TSkinVirtualGridColumn;
+  public
+    //创建列表项
+    function GetSkinItemClass:TBaseSkinItemClass;override;
   public
     //控件
     FVirtualGridProperties:TVirtualGridProperties;
     //AProperties控件设计器需要
-    constructor Create(AProperties:TVirtualGridProperties;
-                        ItemClass: TCollectionItemClass);virtual;
+    //constructor Create(AProperties:TVirtualGridProperties;
+    //                    ItemClass: TCollectionItemClass);virtual;
     destructor Destroy;override;
   public
     //表格列
@@ -572,9 +594,287 @@ type
 
 
 
-//  TSkinColumnItem=class(TSkinItem)
+
+
+
+
+
+
+
+
+
+
+//type
+  //TSkinColumnHeaderItems=class;
+  //TSkinColumnHeaderItemsClass=class of TSkinColumnHeaderItems;
+  TColumnHeaderProperties=class;
+  //TSkinColumnHeaderLayoutsManager=class;
+
+  /// <summary>
+  ///   <para>
+  ///     列表框接口
+  ///   </para>
+  ///   <para>
+  ///     Interface of ColumnHeader
+  ///   </para>
+  /// </summary>
+  ISkinColumnHeader=interface//(ISkinScrollControl)
+  ['{D3D65F7C-398C-42DA-B745-B095EF372A4B}']
+
+
+    function GetColumnHeaderProperties:TColumnHeaderProperties;
+    property Properties:TColumnHeaderProperties read GetColumnHeaderProperties;
+    property Prop:TColumnHeaderProperties read GetColumnHeaderProperties;
+  end;
+
+
+
+
+
+    /// <summary>
+    ///   <para>
+    ///     列表框属性
+    ///   </para>
+    ///   <para>
+    ///     Properties of ColumnHeader
+    ///   </para>
+    /// </summary>
+    TColumnHeaderProperties=class(TVirtualListProperties)
+    protected
+      FSkinColumnHeaderIntf:ISkinColumnHeader;
+      function GetItems: TSkinVirtualGridColumns;
+      procedure SetItems(const Value: TSkinVirtualGridColumns);
+    //protected
+    //  function GetMouseDownItem: TSkinItem;
+    //  function GetMouseOverItem: TSkinItem;
+    //  function GetSelectedItem: TSkinItem;
+    //  function GetPanDragItem: TSkinItem;
+    //
+    //  procedure SetMouseDownItem(Value: TSkinItem);
+    //  procedure SetMouseOverItem(Value: TSkinItem);
+    //  procedure SetSelectedItem(Value: TSkinItem);
+    //  procedure SetPanDragItem(Value: TSkinItem);
+    protected
+      ////列表逻辑
+      //function GetListLayoutsManager: TSkinColumnHeaderLayoutsManager;
+      //获取列表项列表的类
+      function GetItemsClass:TBaseSkinItemsClass;override;
+      ////获取列表逻辑类
+      //function GetCustomListLayoutsManagerClass:TSkinCustomListLayoutsManagerClass;override;
+
+    protected
+      //获取分类名称
+      function GetComponentClassify:String;override;
+    protected
+    public
+      constructor Create(ASkinControl:TControl);override;
+    public
+
+      /// <summary>
+      ///   <para>
+      ///     列表项布局管理者
+      ///   </para>
+      ///   <para>
+      ///     ??
+      ///   </para>
+      /// </summary>
+      //property ListLayoutsManager:TSkinColumnHeaderLayoutsManager read GetListLayoutsManager;
 //
-//  end;
+//        /// <summary>
+//        ///   <para>
+//        ///     获取当前交互的列表项
+//        ///   </para>
+//        ///   <para>
+//        ///     Get interactive ListItem
+//        ///   </para>
+//        /// </summary>
+//        function GetInteractiveItem:TSkinItem;
+//        /// <summary>
+//        ///   <para>
+//        ///     获取当前交互的列表项
+//        ///   </para>
+//        ///   <para>
+//        ///     Get interactive ListItem
+//        ///   </para>
+//        /// </summary>
+//        property InteractiveItem:TSkinItem read GetInteractiveItem;
+//        /// <summary>
+//        ///   <para>
+//        ///     选中的列表项
+//        ///   </para>
+//        ///   <para>
+//        ///     Selected ListItem
+//        ///   </para>
+//        /// </summary>
+//        property SelectedItem:TSkinItem read GetSelectedItem write SetSelectedItem;
+//
+//        /// <summary>
+//        ///   <para>
+//        ///     按下的列表项
+//        ///   </para>
+//        ///   <para>
+//        ///     Pressed ListeItem
+//        ///   </para>
+//        /// </summary>
+//        property MouseDownItem:TSkinItem read GetMouseDownItem write SetMouseDownItem;
+//
+//        /// <summary>
+//        ///   <para>
+//        ///     停靠的列表项
+//        ///   </para>
+//        ///   <para>
+//        ///     Hovered ListItem
+//        ///   </para>
+//        /// </summary>
+//        property MouseOverItem:TSkinItem read GetMouseOverItem write SetMouseOverItem;
+//
+//
+//        /// <summary>
+//        ///   <para>
+//        ///     平拖的列表项
+//        ///   </para>
+//        ///   <para>
+//        ///     PanDrag ListItem
+//        ///   </para>
+//        /// </summary>
+//        property PanDragItem:TSkinItem read GetPanDragItem write SetPanDragItem;
+
+
+    published
+
+      /// <summary>
+      ///   <para>
+      ///     列表项列表
+      ///   </para>
+      ///   <para>
+      ///     ListItem List
+      ///   </para>
+      /// </summary>
+      property Items:TSkinVirtualGridColumns read GetItems write SetItems;
+
+      /// <summary>
+      ///   <para>
+      ///     是否启用居中选择模式
+      ///   </para>
+      ///   <para>
+      ///     Center selected pattern
+      ///   </para>
+      /// </summary>
+      //property IsEnabledCenterItemSelectMode;
+    end;
+
+
+
+    /// <summary>
+    ///   <para>
+    ///     列表项列表
+    ///   </para>
+    ///   <para>
+    ///     ListItem List
+    ///   </para>
+    /// </summary>
+  //  TSkinColumnHeaderItems=class(TSkinItems)
+  //  private
+  //    function GetItem(Index: Integer): TSkinColumnHeaderItem;
+  //    procedure SetItem(Index: Integer; const Value: TSkinColumnHeaderItem);
+  //  protected
+  ////    function CreateBinaryObject(const AClassName:String=''):TInterfacedPersistent;override;
+  ////    procedure InitSkinItemClass;override;
+  //    function GetSkinItemClass:TBaseSkinItemClass;override;
+  //  public
+  //    function Add:TSkinColumnHeaderItem;overload;
+  //    function Insert(Index:Integer):TSkinColumnHeaderItem;
+  //    property Items[Index:Integer]:TSkinColumnHeaderItem read GetItem write SetItem;default;
+  //  end;
+
+
+
+
+
+
+    /// <summary>
+    ///   <para>
+    ///     列表项逻辑
+    ///   </para>
+    ///   <para>
+    ///     ListItem Logic
+    ///   </para>
+    /// </summary>
+    //TSkinColumnHeaderLayoutsManager=class(TSkinVirtualListLayoutsManager)
+    //end;
+
+
+
+    /// <summary>
+    ///   <para>
+    ///     列表框素材基类
+    ///   </para>
+    ///   <para>
+    ///     Base class of ColumnHeader material
+    ///   </para>
+    /// </summary>
+    {$I ComponentPlatformsAttribute.inc}
+    TSkinColumnHeaderDefaultMaterial=class(TSkinVirtualListDefaultMaterial)
+    end;
+
+    TSkinColumnHeaderDefaultType=class(TSkinVirtualListDefaultType)
+    protected
+      FSkinColumnHeaderIntf:ISkinColumnHeader;
+    protected
+      //绑定对象
+      function CustomBind(ASkinControl:TControl):Boolean;override;
+      //解除绑定
+      procedure CustomUnBind;override;
+    protected
+      function GetSkinMaterial:TSkinColumnHeaderDefaultMaterial;
+    end;
+
+
+    {$I ComponentPlatformsAttribute.inc}
+    TSkinColumnHeader=class(TSkinVirtualList,ISkinColumnHeader)
+    private
+
+      function GetColumnHeaderProperties:TColumnHeaderProperties;
+      procedure SetColumnHeaderProperties(Value:TColumnHeaderProperties);
+    protected
+      //获取控件属性类
+      function GetPropertiesClassType:TPropertiesClassType;override;
+    public
+      function SelfOwnMaterialToDefault:TSkinColumnHeaderDefaultMaterial;
+      function CurrentUseMaterialToDefault:TSkinColumnHeaderDefaultMaterial;
+      function Material:TSkinColumnHeaderDefaultMaterial;
+
+      property Prop:TColumnHeaderProperties read GetColumnHeaderProperties write SetColumnHeaderProperties;
+    published
+      //属性(必须在VertScrollBar和HorzScrollBar之前)
+      property Properties:TColumnHeaderProperties read GetColumnHeaderProperties write SetColumnHeaderProperties;
+
+    end;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   
   //表格列布局类型
@@ -801,8 +1101,8 @@ type
     function GetCustomListLayoutsManagerClass:TSkinCustomListLayoutsManagerClass;override;
 
     //创建列管理
-    function GetColumnClass:TSkinVirtualGridColumnClass;virtual;
-    function GetColumnsClass:TSkinVirtualGridColumnsClass;virtual;
+    //function GetColumnClass:TSkinVirtualGridColumnClass;virtual;
+    //function GetColumnsClass:TSkinVirtualGridColumnsClass;virtual;
     //获取表格列排列管理类
     function GetColumnLayoutsManagerClass:TSkinListLayoutsManagerClass;virtual;
   protected
@@ -818,6 +1118,7 @@ type
     //ListLayoutsManager传递出的列表项隐藏显示更改事件(需要重新计算内容尺寸,重绘列表)
     procedure DoColumnVisibleChange(Sender:TObject);
 
+    procedure DoHorz_InnerPositionChange(Sender:TObject);override;
 
   protected
     //赋值
@@ -1544,21 +1845,19 @@ type
 
 
 
-
-
   {$I ComponentPlatformsAttribute.inc}
   TSkinVirtualGrid=class(TSkinCustomList,ISkinVirtualGrid)
-//  private
-//    FColumnHeader:TSkinListBox;
-//
-//    FSyncColumnHeaderTimer:TTimer;
-//    procedure DoColumnHeader_HorzScrollBar_OnPositionChange(Sender:TObject);
-//
-//    procedure DoSyncColumnHeaderTimer(Sender:TObject);
-//    function GetColumnHeader:TSkinListBox;
-//    procedure SetColumnHeader(Value: TSkinListBox);
-//    procedure SyncColumnHeader;
-//  private
+  //使用ListBox做为表头
+  private
+    FColumnHeader:TSkinColumnHeader;
+
+    //FSyncColumnHeaderTimer:TTimer;
+    //procedure DoColumnHeader_HorzScrollBar_OnPositionChange(Sender:TObject);
+
+    //procedure DoSyncColumnHeaderTimer(Sender:TObject);
+    function GetColumnHeader:TSkinColumnHeader;
+    //procedure SetColumnHeader(Value: TSkinListBox);
+    //procedure SyncColumnHeader;
 //    procedure DoHorzScrollBar_OnPositionChange(Sender:TObject);
   private
     FOnClickColumn:TGridClickColumnEvent;
@@ -1579,6 +1878,7 @@ type
     function GetVirtualGridProperties:TVirtualGridProperties;
     procedure SetVirtualGridProperties(Value:TVirtualGridProperties);
   protected
+    function GetColumnsClass:TSkinVirtualGridColumnsClass;virtual;
     procedure ReadState(Reader: TReader); override;
 
     procedure Loaded;override;
@@ -1596,6 +1896,8 @@ type
     constructor Create(AOwner:TComponent);override;
     destructor Destroy;override;
   public
+  //表头
+    property ColumnHeader:TSkinColumnHeader read FColumnHeader;// write SetColumnHeader;
     procedure StayClick;override;
     property Prop:TVirtualGridProperties read GetVirtualGridProperties write SetVirtualGridProperties;
   published
@@ -1608,8 +1910,6 @@ type
     //水平滚动条
     property HorzScrollBar;
 
-    //表头
-//    property ColumnHeader:TSkinListBox read GetColumnHeader write SetColumnHeader;
 
     property OnClickCell:TGridClickCellEvent read GetOnClickCell write FOnClickCell;
     property OnClickColumn:TGridClickColumnEvent read FOnClickColumn write FOnClickColumn;
@@ -1634,6 +1934,204 @@ type
 
 implementation
 
+
+
+
+{ TColumnHeaderProperties }
+
+
+constructor TColumnHeaderProperties.Create(ASkinControl:TControl);
+begin
+  inherited Create(ASkinControl);
+  if Not ASkinControl.GetInterface(IID_ISkinColumnHeader,Self.FSkinColumnHeaderIntf) then
+  begin
+    ShowException('This Component Do not Support ISkinColumnHeader Interface');
+  end
+  else
+  begin
+  end;
+end;
+
+function TColumnHeaderProperties.GetComponentClassify: String;
+begin
+  Result:='SkinColumnHeader';
+end;
+
+//function TColumnHeaderProperties.GetInteractiveItem: TSkinItem;
+//begin
+//  Result:=TSkinItem(Inherited InteractiveItem);
+//end;
+
+function TColumnHeaderProperties.GetItems: TSkinVirtualGridColumns;
+begin
+  Result:=TSkinVirtualGridColumns(FItems);
+end;
+
+function TColumnHeaderProperties.GetItemsClass: TBaseSkinItemsClass;
+begin
+  //Result:=TSkinVirtualGridColumns;
+  Result:=TSkinVirtualGrid(FSkinControl.Owner).GetColumnsClass;
+end;
+
+//function TColumnHeaderProperties.GetListLayoutsManager: TSkinColumnHeaderLayoutsManager;
+//begin
+//  Result:=TSkinColumnHeaderLayoutsManager(Self.FListLayoutsManager);
+//end;
+//
+//function TColumnHeaderProperties.GetCustomListLayoutsManagerClass: TSkinCustomListLayoutsManagerClass;
+//begin
+//  Result:=TSkinColumnHeaderLayoutsManager;
+//end;
+
+procedure TColumnHeaderProperties.SetItems(const Value: TSkinVirtualGridColumns);
+begin
+  Inherited SetItems(Value);
+end;
+
+//function TColumnHeaderProperties.GetMouseDownItem: TSkinItem;
+//begin
+//  Result:=TSkinItem(Inherited MouseDownItem);
+//end;
+//
+//function TColumnHeaderProperties.GetMouseOverItem: TSkinItem;
+//begin
+//  Result:=TSkinItem(Inherited MouseOverItem);
+//end;
+//
+//function TColumnHeaderProperties.GetPanDragItem: TSkinItem;
+//begin
+//  Result:=TSkinItem(Inherited PanDragItem);
+//end;
+//
+//function TColumnHeaderProperties.GetSelectedItem: TSkinItem;
+//begin
+//  Result:=TSkinItem(Inherited SelectedItem);
+//end;
+//
+//procedure TColumnHeaderProperties.SetMouseDownItem(Value: TSkinItem);
+//begin
+//  Inherited MouseDownItem:=Value;
+//end;
+//
+//procedure TColumnHeaderProperties.SetMouseOverItem(Value: TSkinItem);
+//begin
+//  Inherited MouseOverItem:=Value;
+//end;
+//
+//procedure TColumnHeaderProperties.SetSelectedItem(Value: TSkinItem);
+//begin
+//  Inherited SelectedItem:=Value;
+//end;
+//
+//procedure TColumnHeaderProperties.SetPanDragItem(Value: TSkinItem);
+//begin
+//  Inherited PanDragItem:=Value;
+//end;
+
+{ TSkinColumnHeaderDefaultType }
+
+function TSkinColumnHeaderDefaultType.CustomBind(ASkinControl:TControl):Boolean;
+begin
+  if Inherited CustomBind(ASkinControl) then
+  begin
+    if ASkinControl.GetInterface(IID_ISkinColumnHeader,Self.FSkinColumnHeaderIntf) then
+    begin
+      Result:=True;
+    end
+    else
+    begin
+      ShowException('This Component Do not Support ISkinColumnHeader Interface');
+    end;
+  end;
+end;
+
+procedure TSkinColumnHeaderDefaultType.CustomUnBind;
+begin
+  Inherited CustomUnBind;
+  Self.FSkinColumnHeaderIntf:=nil;
+end;
+
+function TSkinColumnHeaderDefaultType.GetSkinMaterial: TSkinColumnHeaderDefaultMaterial;
+begin
+  if Self.FSkinControlIntf.GetCurrentUseMaterial<>nil then
+  begin
+    Result:=TSkinColumnHeaderDefaultMaterial(Self.FSkinControlIntf.GetCurrentUseMaterial);
+  end
+  else
+  begin
+    Result:=nil;
+  end;
+end;
+//
+//{ TSkinColumnHeaderItems }
+//
+//
+//function TSkinColumnHeaderItems.Add: TSkinColumnHeaderItem;
+//begin
+//  Result:=TSkinColumnHeaderItem(Inherited Add);
+//end;
+//
+////procedure TSkinColumnHeaderItems.InitSkinItemClass;
+////begin
+////  SkinItemClass:=TSkinColumnHeaderItem;
+////end;
+//
+//function TSkinColumnHeaderItems.Insert(Index:Integer): TSkinColumnHeaderItem;
+//begin
+//  Result:=TSkinColumnHeaderItem(Inherited Insert(Index));
+//end;
+//
+//procedure TSkinColumnHeaderItems.SetItem(Index: Integer;const Value: TSkinColumnHeaderItem);
+//begin
+//  Inherited Items[Index]:=Value;
+//end;
+//
+////function TSkinColumnHeaderItems.CreateBinaryObject(const AClassName:String=''): TInterfacedPersistent;
+////begin
+////  Result:=SkinItemClass.Create;//(Self);
+////end;
+//
+//function TSkinColumnHeaderItems.GetItem(Index: Integer): TSkinColumnHeaderItem;
+//begin
+//  Result:=TSkinColumnHeaderItem(Inherited Items[Index]);
+//end;
+//
+//function TSkinColumnHeaderItems.GetSkinItemClass: TBaseSkinItemClass;
+//begin
+//  Result:=TSkinColumnHeaderItem;
+//end;
+
+{ TSkinColumnHeader }
+
+function TSkinColumnHeader.Material:TSkinColumnHeaderDefaultMaterial;
+begin
+  Result:=TSkinColumnHeaderDefaultMaterial(SelfOwnMaterial);
+end;
+
+function TSkinColumnHeader.SelfOwnMaterialToDefault:TSkinColumnHeaderDefaultMaterial;
+begin
+  Result:=TSkinColumnHeaderDefaultMaterial(SelfOwnMaterial);
+end;
+
+function TSkinColumnHeader.CurrentUseMaterialToDefault:TSkinColumnHeaderDefaultMaterial;
+begin
+  Result:=TSkinColumnHeaderDefaultMaterial(CurrentUseMaterial);
+end;
+
+function TSkinColumnHeader.GetPropertiesClassType: TPropertiesClassType;
+begin
+  Result:=TColumnHeaderProperties;
+end;
+
+function TSkinColumnHeader.GetColumnHeaderProperties: TColumnHeaderProperties;
+begin
+  Result:=TColumnHeaderProperties(Self.FProperties);
+end;
+
+procedure TSkinColumnHeader.SetColumnHeaderProperties(Value: TColumnHeaderProperties);
+begin
+  Self.FProperties.Assign(Value);
+end;
 
 
 
@@ -2038,12 +2536,15 @@ begin
 
 
 
-      //表格列列表
-      FColumns:=GetColumnsClass.Create(Self,GetColumnClass);
+      ////表格列列表
+      //FColumns:=GetColumnsClass.Create(Self,GetColumnClass);
+      ////表格列布局管理
+      //FColumnLayoutsManager:=GetColumnLayoutsManagerClass.Create(Self.FColumns);
 
+      FColumns:=FSkinVirtualGridIntf.GetColumnHeader.Prop.Items;
+      FColumns.FVirtualGridProperties:=Self;
+      FColumnLayoutsManager:=FSkinVirtualGridIntf.GetColumnHeader.Prop.ListLayoutsManager;
 
-      //表格列布局管理
-      FColumnLayoutsManager:=GetColumnLayoutsManagerClass.Create(Self.FColumns);
       FColumnLayoutsManager.StaticItemWidth:=Const_DefaultColumnWidth;
       FColumnLayoutsManager.StaticItemHeight:=Const_DefaultColumnHeaderHeight;
       //水平排列
@@ -2059,6 +2560,8 @@ begin
       FColumnLayoutsManager.OnGetControlHeight:=Self.DoGetListLayoutsManagerControlHeight;
 
       
+      //列表项的顶部偏移
+      //Self.FListLayoutsManager.ControlTopOffset:=Const_DefaultColumnHeaderHeight;
 
 
       FIsNeedClip:=True;
@@ -2092,10 +2595,10 @@ begin
   end;
 end;
 
-function TVirtualGridProperties.GetColumnClass: TSkinVirtualGridColumnClass;
-begin
-  Result:=TSkinVirtualGridColumn;
-end;
+//function TVirtualGridProperties.GetColumnClass: TSkinVirtualGridColumnClass;
+//begin
+//  Result:=TSkinVirtualGridColumn;
+//end;
 
 function TVirtualGridProperties.GetColumnLayoutsManagerClass: TSkinListLayoutsManagerClass;
 begin
@@ -2105,11 +2608,11 @@ end;
 destructor TVirtualGridProperties.Destroy;
 begin
 
-  //先释放这个
-  FreeAndNil(FColumnLayoutsManager);
-
-  //表格列
-  FreeAndNil(FColumns);
+  ////先释放这个
+  //FreeAndNil(FColumnLayoutsManager);
+  //
+  ////表格列
+  //FreeAndNil(FColumns);
 
   inherited;
 end;
@@ -2199,6 +2702,12 @@ begin
 
   Self.UpdateScrollBars;
   Invalidate;
+end;
+
+procedure TVirtualGridProperties.DoHorz_InnerPositionChange(Sender: TObject);
+begin
+  inherited;
+  Self.FSkinVirtualGridIntf.GetColumnHeader.Invalidate;
 end;
 
 //procedure TVirtualGridProperties.DoItemDelete(Sender, AItem: TObject; AIndex: Integer);
@@ -2321,10 +2830,10 @@ begin
   Result:=TSkinVirtualGridRowLayoutsManager;
 end;
 
-function TVirtualGridProperties.GetColumnsClass: TSkinVirtualGridColumnsClass;
-begin
-  Result:=TSkinVirtualGridColumns;
-end;
+//function TVirtualGridProperties.GetColumnsClass: TSkinVirtualGridColumnsClass;
+//begin
+//  Result:=TSkinVirtualGridColumns;
+//end;
 
 function TVirtualGridProperties.GetColumnsHeaderHeight: Double;
 begin
@@ -2521,6 +3030,13 @@ begin
     Self.FListLayoutsManager.ControlTopOffset:=Value;
 
     Self.FColumnLayoutsManager.ItemHeight:=Value;
+
+    if Self.FSkinVirtualGridIntf.GetColumnHeader<>nil then
+    begin
+      Self.FSkinVirtualGridIntf.GetColumnHeader.Visible:=True;
+      Self.FSkinVirtualGridIntf.GetColumnHeader.Height:=Ceil(Value);
+    end;
+
   end
   else
   begin
@@ -2528,6 +3044,11 @@ begin
     Self.FListLayoutsManager.ControlTopOffset:=0;
 
     Self.FColumnLayoutsManager.ItemHeight:=0;
+    if Self.FSkinVirtualGridIntf.GetColumnHeader<>nil then
+    begin
+      Self.FSkinVirtualGridIntf.GetColumnHeader.Visible:=False;
+    end;
+
   end;
 end;
 
@@ -6643,20 +7164,20 @@ end;
 
 { TSkinVirtualGridColumns }
 
-function TSkinVirtualGridColumns.Add: TSkinVirtualGridColumn;
-begin
-  Result:=TSkinVirtualGridColumn(Inherited Add);
-end;
+//function TSkinVirtualGridColumns.Add: TSkinVirtualGridColumn;
+//begin
+//  Result:=TSkinVirtualGridColumn(Inherited Add);
+//end;
 
-{$IFDEF DELPHI}
-procedure TSkinVirtualGridColumns.Added(var Item: TCollectionItem);
-begin
-  uBaseLog.OutputDebugString('TSkinVirtualGridColumns.Added');
-
-  TSkinVirtualGridColumn(Item).SetSkinListIntf(Self);
-  inherited;
-end;
-{$ENDIF}
+//{$IFDEF DELPHI}
+//procedure TSkinVirtualGridColumns.Added(var Item: TCollectionItem);
+//begin
+//  uBaseLog.OutputDebugString('TSkinVirtualGridColumns.Added');
+//
+//  TSkinVirtualGridColumn(Item).SetSkinListIntf(Self);
+//  inherited;
+//end;
+//{$ENDIF}
 
 //procedure TSkinVirtualGridColumns.AfterConstruction;
 //begin
@@ -6664,108 +7185,108 @@ end;
 //  if GetOwner <> nil then
 //    GetOwner.GetInterface(IInterface, FOwnerInterface);
 //end;
+//
+//procedure TSkinVirtualGridColumns.BeginUpdate;
+//begin
+//  uBaseLog.OutputDebugString('TSkinVirtualGridColumns.BeginUpdate FUpdateCount:'+IntToStr(FUpdateCount));
+//  Inc(FUpdateCount);
+//  inherited;
+//end;
+//
+//function TSkinVirtualGridColumns._AddRef: {$IFDEF LINUX}longint{$ELSE}Integer{$ENDIF}; {$IFNDEF WINDOWS}cdecl{$ELSE}stdcall{$ENDIF};
+//begin
+//  if FOwnerInterface <> nil then
+//    Result := FOwnerInterface._AddRef else
+//    Result := -1;
+//end;
+//
+//function TSkinVirtualGridColumns._Release: {$IFDEF LINUX}longint{$ELSE}Integer{$ENDIF}; {$IFNDEF WINDOWS}cdecl{$ELSE}stdcall{$ENDIF};
+//begin
+//  if FOwnerInterface <> nil then
+//    Result := FOwnerInterface._Release else
+//    Result := -1;
+//end;
+//
+//function TSkinVirtualGridColumns.QueryInterface({$IFDEF DELPHI}const{$ENDIF}{$IFDEF FPC}constref{$ENDIF} IID: TGUID; out Obj): {$IFDEF LINUX}longint{$ELSE}HResult{$ENDIF}; {$IFNDEF WINDOWS}cdecl{$ELSE}stdcall{$ENDIF};
+////const
+////  E_NOINTERFACE = HResult($80004002);
+//begin
+//  if GetInterface(IID, Obj) then Result := 0 else Result := E_NOINTERFACE;
+//end;
 
-procedure TSkinVirtualGridColumns.BeginUpdate;
-begin
-  uBaseLog.OutputDebugString('TSkinVirtualGridColumns.BeginUpdate FUpdateCount:'+IntToStr(FUpdateCount));
-  Inc(FUpdateCount);
-  inherited;
-end;
+//constructor TSkinVirtualGridColumns.Create(AProperties:TVirtualGridProperties;
+//                                          ItemClass: TCollectionItemClass);
+//begin
+//  Inherited Create(ItemClass);
+//  FVirtualGridProperties:=AProperties;
+//end;
 
-function TSkinVirtualGridColumns._AddRef: {$IFDEF LINUX}longint{$ELSE}Integer{$ENDIF}; {$IFNDEF WINDOWS}cdecl{$ELSE}stdcall{$ENDIF};
-begin
-  if FOwnerInterface <> nil then
-    Result := FOwnerInterface._AddRef else
-    Result := -1;
-end;
-
-function TSkinVirtualGridColumns._Release: {$IFDEF LINUX}longint{$ELSE}Integer{$ENDIF}; {$IFNDEF WINDOWS}cdecl{$ELSE}stdcall{$ENDIF};
-begin
-  if FOwnerInterface <> nil then
-    Result := FOwnerInterface._Release else
-    Result := -1;
-end;
-
-function TSkinVirtualGridColumns.QueryInterface({$IFDEF DELPHI}const{$ENDIF}{$IFDEF FPC}constref{$ENDIF} IID: TGUID; out Obj): {$IFDEF LINUX}longint{$ELSE}HResult{$ENDIF}; {$IFNDEF WINDOWS}cdecl{$ELSE}stdcall{$ENDIF};
-//const
-//  E_NOINTERFACE = HResult($80004002);
-begin
-  if GetInterface(IID, Obj) then Result := 0 else Result := E_NOINTERFACE;
-end;
-
-constructor TSkinVirtualGridColumns.Create(AProperties:TVirtualGridProperties;
-                                          ItemClass: TCollectionItemClass);
-begin
-  Inherited Create(ItemClass);
-  FVirtualGridProperties:=AProperties;
-end;
-
-{$IFDEF DELPHI}
-procedure TSkinVirtualGridColumns.Deleting(Item: TCollectionItem);
-begin
-  uBaseLog.OutputDebugString('TSkinVirtualGridColumns.Deleting');
-  TSkinVirtualGridColumn(Item).SetSkinListIntf(nil);
-  inherited;
-end;
-{$ENDIF}
+//{$IFDEF DELPHI}
+//procedure TSkinVirtualGridColumns.Deleting(Item: TCollectionItem);
+//begin
+//  uBaseLog.OutputDebugString('TSkinVirtualGridColumns.Deleting');
+//  TSkinVirtualGridColumn(Item).SetSkinListIntf(nil);
+//  inherited;
+//end;
+//{$ENDIF}
 
 destructor TSkinVirtualGridColumns.Destroy;
 begin
-  FIsDestroying:=True;
+  //FIsDestroying:=True;
 
   
   inherited;
 end;
 
-procedure TSkinVirtualGridColumns.DoChange;
-begin
-  //
-end;
-
-function TSkinVirtualGridColumns.GetCount: Integer;
-begin
-  Result:=Self.Count;
-end;
-
-function TSkinVirtualGridColumns.GetSkinItem(const Index: Integer): ISkinItem;
-begin
-  Result:=Items[Index] as ISkinItem;
-end;
-
-function TSkinVirtualGridColumns.GetSkinObject(const Index: Integer): TObject;
-begin
-  Result:=Items[Index];
-end;
-
-function TSkinVirtualGridColumns.GetListLayoutsManager: TSkinListLayoutsManager;
-begin
-  Result:=FListLayoutsManager;
-end;
-
-function TSkinVirtualGridColumns.GetObject: TObject;
-begin
-  Result:=Self;
-end;
-
-function TSkinVirtualGridColumns.GetOwnerProperties: TObject;
-begin
-  Result:=FVirtualGridProperties;
-end;
-
-function TSkinVirtualGridColumns.IndexOf(AObject: TObject): Integer;
-var
-  I: Integer;
-begin
-  Result:=-1;
-  for I := 0 to Count-1 do
-  begin
-    if Items[I]=AObject then
-    begin
-      Result:=I;
-      Break;
-    end;
-  end;
-end;
+//procedure TSkinVirtualGridColumns.DoChange;
+//begin
+//  //
+//end;
+//
+//function TSkinVirtualGridColumns.GetCount: Integer;
+//begin
+//  Result:=Self.Count;
+//end;
+//
+//function TSkinVirtualGridColumns.GetSkinItem(const Index: Integer): ISkinItem;
+//begin
+//  Result:=Items[Index] as ISkinItem;
+//end;
+//
+//function TSkinVirtualGridColumns.GetSkinObject(const Index: Integer): TObject;
+//begin
+//  Result:=Items[Index];
+//end;
+//
+//function TSkinVirtualGridColumns.GetListLayoutsManager: TSkinListLayoutsManager;
+//begin
+//  Result:=FListLayoutsManager;
+//end;
+//
+//function TSkinVirtualGridColumns.GetObject: TObject;
+//begin
+//  Result:=Self;
+//end;
+//
+//function TSkinVirtualGridColumns.GetOwnerProperties: TObject;
+//begin
+//  Result:=FVirtualGridProperties;
+//end;
+//
+//function TSkinVirtualGridColumns.IndexOf(AObject: TObject): Integer;
+//var
+//  I: Integer;
+//begin
+//  Result:=-1;
+//  for I := 0 to Count-1 do
+//  begin
+//    if Items[I]=AObject then
+//    begin
+//      Result:=I;
+//      Break;
+//    end;
+//  end;
+//end;
 
 function TSkinVirtualGridColumns.GetItem(Index: Integer): TSkinVirtualGridColumn;
 begin
@@ -6777,10 +7298,10 @@ begin
   Inherited Items[Index]:=Value;
 end;
 
-procedure TSkinVirtualGridColumns.SetListLayoutsManager(ALayoutsManager: TSkinListLayoutsManager);
-begin
-  FListLayoutsManager:=ALayoutsManager;
-end;
+//procedure TSkinVirtualGridColumns.SetListLayoutsManager(ALayoutsManager: TSkinListLayoutsManager);
+//begin
+//  FListLayoutsManager:=ALayoutsManager;
+//end;
 
 procedure TSkinVirtualGridColumns.Update(Item: TCollectionItem);
 begin
@@ -6820,62 +7341,67 @@ begin
 
 end;
 
-function TSkinVirtualGridColumns.GetUpdateCount: Integer;
+//function TSkinVirtualGridColumns.GetUpdateCount: Integer;
+//begin
+//  Result:=Self.FUpdateCount;
+//end;
+
+//procedure TSkinVirtualGridColumns.EndUpdate;
+////var
+////  ASkinItem:TSkinListBoxItem;
+////  I: Integer;
+////  AColumnHeader:TSkinListBox;
+//begin
+//  //uBaseLog.OutputDebugString('TSkinVirtualGridColumns.EndUpdate Begin FUpdateCount:'+IntToStr(FUpdateCount));
+//
+//
+//  //if FUpdateCount > 0 then
+//  //begin
+//  //  Dec(FUpdateCount);
+//  //end;
+//
+//
+//  inherited;
+//
+//
+////
+////
+////  //是不是在释放的过程中
+////  if not FIsDestroying then
+////  begin
+////
+//////      if FUpdateCount = 0 then
+//////      begin
+//////        Self.FVirtualGridProperties.FSkinVirtualGridIntf.SyncColumnHeader;
+//////      end;
+////
+////
+////
+////      //EndUpate会调用Update,
+////      //所以不需要再在这里调用DoItemVisibleChange
+////
+////
+////      //当表格列加载结束的时候,也需要调用,不然表格列画不出来
+////
+////      //判断列表项是否改变过大小再调用
+////      //万一有Item的Visible更改过了,也需要调用的
+////      if GetListLayoutsManager<>nil then
+////      begin
+////        Self.GetListLayoutsManager.DoItemVisibleChange(nil,True);
+////        Self.GetListLayoutsManager.DoItemPropChange(nil);
+////      end;
+////
+////
+////  end;
+////
+//  
+//  uBaseLog.OutputDebugString('TSkinVirtualGridColumns.EndUpdate UpdateCount '+IntToStr(GetUpdateCount));
+//
+//end;
+
+function TSkinVirtualGridColumns.GetSkinItemClass:TBaseSkinItemClass;
 begin
-  Result:=Self.FUpdateCount;
-end;
-
-procedure TSkinVirtualGridColumns.EndUpdate;
-//var
-//  ASkinItem:TSkinListBoxItem;
-//  I: Integer;
-//  AColumnHeader:TSkinListBox;
-begin
-  uBaseLog.OutputDebugString('TSkinVirtualGridColumns.EndUpdate Begin FUpdateCount:'+IntToStr(FUpdateCount));
-
-
-  if FUpdateCount > 0 then
-  begin
-    Dec(FUpdateCount);
-  end;
-
-
-  inherited;
-
-
-
-
-  //是不是在释放的过程中
-  if not FIsDestroying then
-  begin
-
-//      if FUpdateCount = 0 then
-//      begin
-//        Self.FVirtualGridProperties.FSkinVirtualGridIntf.SyncColumnHeader;
-//      end;
-
-
-
-      //EndUpate会调用Update,
-      //所以不需要再在这里调用DoItemVisibleChange
-
-
-      //当表格列加载结束的时候,也需要调用,不然表格列画不出来
-
-      //判断列表项是否改变过大小再调用
-      //万一有Item的Visible更改过了,也需要调用的
-      if GetListLayoutsManager<>nil then
-      begin
-        Self.GetListLayoutsManager.DoItemVisibleChange(nil,True);
-        Self.GetListLayoutsManager.DoItemPropChange(nil);
-      end;
-
-
-  end;
-
-  
-  uBaseLog.OutputDebugString('TSkinVirtualGridColumns.EndUpdate UpdateCount '+IntToStr(GetUpdateCount));
-
+  Result:=TSkinVirtualGridColumn;
 end;
 
 function TSkinVirtualGridColumns.FindByCaption(
@@ -6906,37 +7432,37 @@ end;
 //    GetOwner.GetInterface(IInterface, FOwnerInterface);
 //end;
 
-function TSkinVirtualGridColumn._AddRef: {$IFDEF LINUX}longint{$ELSE}Integer{$ENDIF};
-begin
-  if FOwnerInterface <> nil then
-    Result := FOwnerInterface._AddRef else
-    Result := -1;
-end;
-
-function TSkinVirtualGridColumn._Release: {$IFDEF LINUX}longint{$ELSE}Integer{$ENDIF};
-begin
-  if FOwnerInterface <> nil then
-    Result := FOwnerInterface._Release else
-    Result := -1;
-end;
-
-function TSkinVirtualGridColumn.QueryInterface({$IFDEF DELPHI}const{$ENDIF}{$IFDEF FPC}constref{$ENDIF} IID: TGUID;
-  out Obj): {$IFDEF LINUX}longint{$ELSE}HResult{$ENDIF};
-//const
-//  E_NOINTERFACE = HResult($80004002);
-begin
-  if GetInterface(IID, Obj) then Result := 0 else Result := E_NOINTERFACE;
-end;
-
-
-procedure TSkinVirtualGridColumn.ClearItemRect;
-begin
-  //所在的位置
-  FItemRect:=RectF(0,0,0,0);
-  //绘制矩形
-  FItemDrawRect:=RectF(0,0,0,0);
-end;
-
+//function TSkinVirtualGridColumn._AddRef: {$IFDEF LINUX}longint{$ELSE}Integer{$ENDIF};
+//begin
+//  if FOwnerInterface <> nil then
+//    Result := FOwnerInterface._AddRef else
+//    Result := -1;
+//end;
+//
+//function TSkinVirtualGridColumn._Release: {$IFDEF LINUX}longint{$ELSE}Integer{$ENDIF};
+//begin
+//  if FOwnerInterface <> nil then
+//    Result := FOwnerInterface._Release else
+//    Result := -1;
+//end;
+//
+//function TSkinVirtualGridColumn.QueryInterface({$IFDEF DELPHI}const{$ENDIF}{$IFDEF FPC}constref{$ENDIF} IID: TGUID;
+//  out Obj): {$IFDEF LINUX}longint{$ELSE}HResult{$ENDIF};
+////const
+////  E_NOINTERFACE = HResult($80004002);
+//begin
+//  if GetInterface(IID, Obj) then Result := 0 else Result := E_NOINTERFACE;
+//end;
+//
+//
+//procedure TSkinVirtualGridColumn.ClearItemRect;
+//begin
+//  //所在的位置
+//  FItemRect:=RectF(0,0,0,0);
+//  //绘制矩形
+//  FItemDrawRect:=RectF(0,0,0,0);
+//end;
+//
 constructor TSkinVirtualGridColumn.Create(Collection: TCollection);
 begin
   //必须放在前面,因为Add之后调用Update,
@@ -6994,10 +7520,10 @@ begin
   Result:='';
 end;
 
-function TSkinVirtualGridColumn.GetCaption: String;
-begin
-  Result:=FCaption;
-end;
+//function TSkinVirtualGridColumn.GetCaption: String;
+//begin
+//  Result:=FCaption;
+//end;
 
 function TSkinVirtualGridColumn.GetColumnMaterialClass: TSkinVirtualGridColumnMaterialClass;
 begin
@@ -7061,60 +7587,60 @@ function TSkinVirtualGridColumn.GetFooterValueFormat: String;
 begin
   Result:=FFooter.FValueFormat;
 end;
-
-//层级
-function TSkinVirtualGridColumn.GetLevel:Integer;
-begin
-  Result:=0;
-end;
-
-function TSkinVirtualGridColumn.GetHeight: Double;
-begin
-  if (Collection=nil) or (TSkinVirtualGridColumns(Collection).FListLayoutsManager=nil) then
-  begin
-    //默认列高
-    Result:=Const_DefaultColumnHeaderHeight;
-  end
-  else
-  begin
-    //列高
-    Result:=TSkinVirtualGridColumns(Collection).FListLayoutsManager.ItemHeight;
-  end;
-end;
-
-function TSkinVirtualGridColumn.GetItemRect: TRectF;
-begin
-  Result:=FItemRect;
-end;
-
-function TSkinVirtualGridColumn.GetItemDrawRect: TRectF;
-begin
-  Result:=FItemDrawRect;
-end;
-
-function TSkinVirtualGridColumn.GetListLayoutsManager:TSkinListLayoutsManager;
-begin
-  Result:=nil;
-  if FSkinListIntf<>nil then
-  begin
-    Result:=Self.FSkinListIntf.GetListLayoutsManager;
-  end;
-end;
-
-function TSkinVirtualGridColumn.GetSelected: Boolean;
-begin
-  Result:=FSelected;
-end;
-
-function TSkinVirtualGridColumn.GetThisRowItemCount: Integer;
-begin
-  Result:=0;
-end;
-
-function TSkinVirtualGridColumn.GetObject: TObject;
-begin
-  Result:=Self;
-end;
+//
+////层级
+//function TSkinVirtualGridColumn.GetLevel:Integer;
+//begin
+//  Result:=0;
+//end;
+//
+//function TSkinVirtualGridColumn.GetHeight: Double;
+//begin
+//  if (Collection=nil) or (TSkinVirtualGridColumns(Collection).FListLayoutsManager=nil) then
+//  begin
+//    //默认列高
+//    Result:=Const_DefaultColumnHeaderHeight;
+//  end
+//  else
+//  begin
+//    //列高
+//    Result:=TSkinVirtualGridColumns(Collection).FListLayoutsManager.ItemHeight;
+//  end;
+//end;
+//
+//function TSkinVirtualGridColumn.GetItemRect: TRectF;
+//begin
+//  Result:=FItemRect;
+//end;
+//
+//function TSkinVirtualGridColumn.GetItemDrawRect: TRectF;
+//begin
+//  Result:=FItemDrawRect;
+//end;
+//
+//function TSkinVirtualGridColumn.GetListLayoutsManager:TSkinListLayoutsManager;
+//begin
+//  Result:=nil;
+//  if FSkinListIntf<>nil then
+//  begin
+//    Result:=Self.FSkinListIntf.GetListLayoutsManager;
+//  end;
+//end;
+//
+//function TSkinVirtualGridColumn.GetSelected: Boolean;
+//begin
+//  Result:=FSelected;
+//end;
+//
+//function TSkinVirtualGridColumn.GetThisRowItemCount: Integer;
+//begin
+//  Result:=0;
+//end;
+//
+//function TSkinVirtualGridColumn.GetObject: TObject;
+//begin
+//  Result:=Self;
+//end;
 
 function TSkinVirtualGridColumn.GetPickList: TStrings;
 begin
@@ -7137,27 +7663,27 @@ function TSkinVirtualGridColumn.GetValueType1(ARow: TBaseSkinItem): TVarType;
 begin
   Result:=varEmpty;
 end;
-
-function TSkinVirtualGridColumn.GetVisible: Boolean;
-begin
-  Result:=FVisible;
-end;
-
-function TSkinVirtualGridColumn.GetWidth: Double;
-begin
-  Result:=FWidth;
-end;
+//
+//function TSkinVirtualGridColumn.GetVisible: Boolean;
+//begin
+//  Result:=FVisible;
+//end;
+//
+//function TSkinVirtualGridColumn.GetWidth: Double;
+//begin
+//  Result:=FWidth;
+//end;
 
 function TSkinVirtualGridColumn.Owner: TSkinVirtualGridColumns;
 begin
   Result:=TSkinVirtualGridColumns(Collection);
 end;
 
-function TSkinVirtualGridColumn.PtInItem(APoint: TPointF): Boolean;
-begin
-  Result:=PtInRectF(Self.FItemDrawRect,APoint);
-
-end;
+//function TSkinVirtualGridColumn.PtInItem(APoint: TPointF): Boolean;
+//begin
+//  Result:=PtInRectF(Self.FItemDrawRect,APoint);
+//
+//end;
 
 procedure TSkinVirtualGridColumn.SetDisplayName(const Value: string);
 begin
@@ -7179,10 +7705,10 @@ begin
   FFooter.ValueFormat:=Value;
 end;
 
-procedure TSkinVirtualGridColumn.SetItemRect(Value: TRectF);
-begin
-  FItemRect:=Value;
-end;
+//procedure TSkinVirtualGridColumn.SetItemRect(Value: TRectF);
+//begin
+//  FItemRect:=Value;
+//end;
 
 procedure TSkinVirtualGridColumn.SetPickList(Value: TStrings);
 begin
@@ -7324,25 +7850,25 @@ begin
   FDefaultItemStyleSetting.ItemDesignerPanel:=Value;
 end;
 
-function TSkinVirtualGridColumn.GetIsRowEnd: Boolean;
-begin
-  Result:=False;
-end;
+//function TSkinVirtualGridColumn.GetIsRowEnd: Boolean;
+//begin
+//  Result:=False;
+//end;
 
 function TSkinVirtualGridColumn.GetItemDesignerPanel: TSkinItemDesignerPanel;
 begin
   Result:=FDefaultItemStyleSetting.ItemDesignerPanel;
 end;
 
-procedure TSkinVirtualGridColumn.SetItemDrawRect(Value: TRectF);
-begin
-  FItemDrawRect:=Value;
-end;
-
-procedure TSkinVirtualGridColumn.SetSkinListIntf(ASkinListIntf: ISkinList);
-begin
-  FSkinListIntf:=ASkinListIntf;
-end;
+//procedure TSkinVirtualGridColumn.SetItemDrawRect(Value: TRectF);
+//begin
+//  FItemDrawRect:=Value;
+//end;
+//
+//procedure TSkinVirtualGridColumn.SetSkinListIntf(ASkinListIntf: ISkinList);
+//begin
+//  FSkinListIntf:=ASkinListIntf;
+//end;
 
 //procedure TSkinVirtualGridColumn.SetRefMaterial(const Value: TSkinVirtualGridColumnMaterial);
 //begin
@@ -7377,21 +7903,21 @@ begin
   DoPropChange;
 end;
 
-procedure TSkinVirtualGridColumn.DoSizeChange;
-begin
-  if Self.GetListLayoutsManager<>nil then
-  begin
-    Self.GetListLayoutsManager.DoItemSizeChange(Self);
-  end;
-end;
-
-procedure TSkinVirtualGridColumn.DoVisibleChange;
-begin
-  if Self.GetListLayoutsManager<>nil then
-  begin
-    Self.GetListLayoutsManager.DoItemVisibleChange(Self);
-  end;
-end;
+//procedure TSkinVirtualGridColumn.DoSizeChange;
+//begin
+//  if Self.GetListLayoutsManager<>nil then
+//  begin
+//    Self.GetListLayoutsManager.DoItemSizeChange(Self);
+//  end;
+//end;
+//
+//procedure TSkinVirtualGridColumn.DoVisibleChange;
+//begin
+//  if Self.GetListLayoutsManager<>nil then
+//  begin
+//    Self.GetListLayoutsManager.DoItemVisibleChange(Self);
+//  end;
+//end;
 
 procedure TSkinVirtualGridColumn.AssignTo(Dest: TPersistent);
 var
@@ -7449,13 +7975,13 @@ begin
 
 end;
 
-procedure TSkinVirtualGridColumn.DoPropChange(Sender:TObject);
-begin
-  if Self.GetListLayoutsManager<>nil then
-  begin
-    GetListLayoutsManager.DoItemPropChange(Self);
-  end;
-end;
+//procedure TSkinVirtualGridColumn.DoPropChange(Sender:TObject);
+//begin
+//  if Self.GetListLayoutsManager<>nil then
+//  begin
+//    GetListLayoutsManager.DoItemPropChange(Self);
+//  end;
+//end;
 
 procedure TSkinVirtualGridColumn.SetFooterValueType(const Value: TSkinGridFooterValueType);
 begin
@@ -7465,26 +7991,26 @@ begin
   end;
 end;
 
-procedure TSkinVirtualGridColumn.SetVisible(const Value: Boolean);
-begin
-  if FVisible<>Value then
-  begin
-    FVisible := Value;
-    DoVisibleChange;
-    DoSizeChange;
-    DoPropChange;
-  end;
-end;
-
-procedure TSkinVirtualGridColumn.SetWidth(const Value: Double);
-begin
-  if FWidth<>Value then
-  begin
-    FWidth := Value;
-    DoSizeChange;
-    DoPropChange;
-  end;
-end;
+//procedure TSkinVirtualGridColumn.SetVisible(const Value: Boolean);
+//begin
+//  if FVisible<>Value then
+//  begin
+//    FVisible := Value;
+//    DoVisibleChange;
+//    DoSizeChange;
+//    DoPropChange;
+//  end;
+//end;
+//
+//procedure TSkinVirtualGridColumn.SetWidth(const Value: Double);
+//begin
+//  if FWidth<>Value then
+//  begin
+//    FWidth := Value;
+//    DoSizeChange;
+//    DoPropChange;
+//  end;
+//end;
 
 //procedure TSkinVirtualGridColumn.UnUseCurrentUseMaterial;
 //begin
@@ -7504,14 +8030,14 @@ end;
 //  end;
 //end;
 
-procedure TSkinVirtualGridColumn.SetCaption(const Value: String);
-begin
-  if Value<>Caption then
-  begin
-    FCaption:=Value;
-    DoPropChange;
-  end;
-end;
+//procedure TSkinVirtualGridColumn.SetCaption(const Value: String);
+//begin
+//  if Value<>Caption then
+//  begin
+//    FCaption:=Value;
+//    DoPropChange;
+//  end;
+//end;
 
 { TSkinVirtualGridColumnMaterial }
 
@@ -8117,43 +8643,61 @@ end;
 
 constructor TSkinVirtualGrid.Create(AOwner: TComponent);
 begin
+  FColumnHeader:=TSkinColumnHeader.Create(Self);
+
+
   inherited;
 
 
 //  FSyncColumnHeaderTimer:=TTimer.Create(Self);
 //  FSyncColumnHeaderTimer.OnTimer:=DoSyncColumnHeaderTimer;
-//
-//
-//  FColumnHeader:=TSkinListBox.Create(Self);
-//  FColumnHeader.SetSubComponent(True);
-//  AddFreeNotification(FColumnHeader,Self);
-//  FColumnHeader.Name:='ColumnHeader';
-//
-//  FColumnHeader.Stored:=False;
-//
-//  FColumnHeader.Parent:=Self;
-//  FColumnHeader.Align:=TAlignLayout.Top;
-//  FColumnHeader.Height:=Self.Prop.ColumnsHeaderHeight;
-//  FColumnHeader.SkinControlType;
-//  FColumnHeader.SelfOwnMaterial;
-//
-//
-////  FColumnHeader.Material.IsTransparent:=False;
-////  FColumnHeader.Material.BackColor.FillColor.Color:=TAlphaColorRec.White;//Red;
-////  FColumnHeader.Material.BackColor.IsFill:=True;
-//
-//
+
+
+  FColumnHeader.SetSubComponent(True);
+  AddFreeNotification(FColumnHeader,Self);
+  FColumnHeader.Name:='ColumnHeader';
+
+  {$IFDEF FMX}
+  FColumnHeader.Stored:=False;
+  FColumnHeader.Align:=TAlignLayout.Top;
+  {$ELSE}
+  FColumnHeader.Align:=alTop;
+  {$ENDIF}
+
+  FColumnHeader.Parent:=Self;
+  FColumnHeader.Height:=Ceil(Self.Prop.ColumnsHeaderHeight);
+  //FColumnHeader.SkinControlType;
+  //FColumnHeader.SelfOwnMaterial;
+
+
+//  FColumnHeader.Material.IsTransparent:=False;
+//  FColumnHeader.Material.BackColor.FillColor.Color:=TAlphaColorRec.White;//Red;
+//  FColumnHeader.Material.BackColor.IsFill:=True;
+
+
+//  FColumnHeader.Prop.HorzScrollBarShowType:=sbstNone;
+  FColumnHeader.Prop.ItemLayoutType:=TItemLayoutType.iltHorizontal;
+  FColumnHeader.Prop.ItemHeight:=-1;//20;//
+  FColumnHeader.Prop.VertScrollBarShowType:=sbstNone;
 //  FColumnHeader.Prop.HorzScrollBarShowType:=sbstHide;
-//  FColumnHeader.Prop.ItemLayoutType:=TItemLayoutType.iltHorizontal;
-//  FColumnHeader.Prop.ItemHeight:=-1;//20;//
-//  FColumnHeader.Prop.VertScrollBarShowType:=sbstNone;
-//
-//
-//  FColumnHeader.HorzScrollBar.OnChange:=DoColumnHeader_HorzScrollBar_OnPositionChange;
+
+//  FreeAndNil(FColumnHeader.Prop.FVertControlGestureManager);
+//  FColumnHeader.Prop.FVertControlGestureManager:=Self.Prop.FVertControlGestureManager;
+
+  FreeAndNil(FColumnHeader.Prop.FHorzControlGestureManager);
+  FColumnHeader.Prop.FHorzControlGestureManager:=Self.Prop.FHorzControlGestureManager;
+  FColumnHeader.Prop.FIsRefHorzControlGestureManager:=True;
+
+  //
+  FColumnHeader.Prop.FEnableAutoDragDropItem:=True;
+  FColumnHeader.Prop.FEnableResizeItemWidth:=True;
+
+
+  //FColumnHeader.HorzScrollBar.OnChange:=DoColumnHeader_HorzScrollBar_OnPositionChange;
 //  Self.HorzScrollBar.OnChange:=Self.DoHorzScrollBar_OnPositionChange;
-//
-//
-//  FColumnHeader.Visible:=False;
+
+
+  //FColumnHeader.Visible:=False;
 end;
 
 function TSkinVirtualGrid.CurrentUseMaterialToDefault:TSkinVirtualGridDefaultMaterial;
@@ -8335,6 +8879,11 @@ begin
   uBaseLog.OutputDebugString('TSkinVirtualGrid.Loaded End');
 end;
 
+function TSkinVirtualGrid.GetColumnsClass:TSkinVirtualGridColumnsClass;
+begin
+  Result:=TSkinVirtualGridColumns;
+end;
+
 procedure TSkinVirtualGrid.ReadState(Reader: TReader);
 begin
   uBaseLog.OutputDebugString('TSkinVirtualGrid.ReadState Begin');
@@ -8377,7 +8926,7 @@ end;
 
 destructor TSkinVirtualGrid.Destroy;
 begin
-
+  FreeAndNil(FColumnHeader);
   inherited;
 end;
 
@@ -8455,11 +9004,11 @@ begin
   Result:=FOnCustomPaintCellEnd;
 end;
 
-//function TSkinVirtualGrid.GetColumnHeader:TSkinListBox;
-//begin
-//  Result:=FColumnHeader;
-//end;
-//
+function TSkinVirtualGrid.GetColumnHeader:TSkinColumnHeader;
+begin
+  Result:=FColumnHeader;
+end;
+
 //procedure TSkinVirtualGrid.SetColumnHeader(Value: TSkinListBox);
 //begin
 //  if FColumnHeader<>Value then
@@ -8698,6 +9247,17 @@ end;
 ////    end;
 //  end;
 //end;
+
+
+
+
+
+
+initialization
+  RegisterClasses([TSkinColumnHeader]);
+
+  RegisterSkinControlStyle('SkinColumnHeader',TSkinColumnHeaderDefaultType,TSkinColumnHeaderDefaultMaterial,Const_Default_ComponentType,True);
+
 
 end.
 

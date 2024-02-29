@@ -9,6 +9,8 @@ uses
 
   uConst,
   uManager,
+  //uWaitingForm,
+  FormWaiting,
   uOpenClientCommon,
   uRestInterfaceCall,
   uSkinSuperObject,
@@ -61,6 +63,7 @@ end;
 
 procedure TfrmLogin.btnLoginClick(Sender: TObject);
 begin
+  //set server url
   uOpenClientCommon.CommonSyncServerSetting(GlobalManager.ServerHost,GlobalManager.ServerPort);
 
 
@@ -99,7 +102,7 @@ end;
 
 procedure TfrmLogin.tteLoginBegin(ATimerTask: TTimerTask);
 begin
-
+  ShowWaitingFrame(nil,'µÇÂ¼ÖÐ...');
 end;
 
 procedure TfrmLogin.tteLoginExecute(ATimerTask: TTimerTask);
@@ -204,7 +207,7 @@ begin
       //                      ['È·¶¨'],nil);
     end;
   finally
-    //HideWaitingFrame;
+    HideWaitingFrame;
   end;
 
 

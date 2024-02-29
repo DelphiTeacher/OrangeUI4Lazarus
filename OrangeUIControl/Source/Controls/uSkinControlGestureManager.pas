@@ -267,7 +267,7 @@ type
     FInTimerProc: Boolean;
 
 
-    //触摸跟踪的类型
+    //触摸跟踪的类型,水平还是垂直的
     FTouchTracking: TTouchTracking;
     //跟踪的时间间隔
     FInterval: Integer;
@@ -734,8 +734,8 @@ type
 
 
 
-    //检测用户释放滑动检测计时器
-    FCheckUserStopMouseWheelTimer:TTimer;
+//    //检测用户释放滑动检测计时器
+//    FCheckUserStopMouseWheelTimer:TTimer;
 
 
 
@@ -804,9 +804,9 @@ type
     //用户是否正在拖动(隐藏显示滚动条)
     procedure SetIsDraging(const Value: Boolean);
 
-    //判断用户是否停止了滚动
-    procedure CreateCheckUserStopMouseWheelTimer;
-    procedure OnCheckUserStopMouseWheelTimer(Sender:TObject);
+//    //判断用户是否停止了滚动
+//    procedure CreateCheckUserStopMouseWheelTimer;
+//    procedure OnCheckUserStopMouseWheelTimer(Sender:TObject);
 
 
 
@@ -840,7 +840,7 @@ type
     //是否正在鼠标拖动
     FIsStartDrag:Boolean;
 
-
+    FIsEnableMouseDragScroll:Boolean;
 
 
 
@@ -1242,7 +1242,7 @@ begin
 
 
   //检测用户释放滑动检测计时器
-  FreeAndNil(FCheckUserStopMouseWheelTimer);
+//  FreeAndNil(FCheckUserStopMouseWheelTimer);
 
   //滑动滚回初始位置
   FreeAndNil(FScrollingToInitialAnimator);
@@ -1725,38 +1725,39 @@ begin
   FInertiaScrollAnimator.TweenType:=TTweenType.InertialScroll;
 
 
+  FIsEnableMouseDragScroll:=True;
 
 end;
 
-procedure TSkinControlGestureManager.CreateCheckUserStopMouseWheelTimer;
-begin
-  if FCheckUserStopMouseWheelTimer=nil then
-  begin
-    FCheckUserStopMouseWheelTimer:=TTimer.Create(nil);
-    FCheckUserStopMouseWheelTimer.Enabled:=False;
-    FCheckUserStopMouseWheelTimer.OnTimer:=Self.OnCheckUserStopMouseWheelTimer;
-    FCheckUserStopMouseWheelTimer.Interval:=100;
-  end;
-end;
-
-procedure TSkinControlGestureManager.OnCheckUserStopMouseWheelTimer(Sender: TObject);
-begin
-  if Not Self.FIsDraging then
-  begin
-    Self.FCheckUserStopMouseWheelTimer.Enabled:=False;
-
-//    if Self.FKind=gmkHorizontal then
-//      OutputDebugString(GetDebugLogID+'TSkinControlGestureManager.OnCheckUserStopMouseWheelTimer 启动惯性滚动');
-
-    //启动惯性滚动
-    Self.StartInertiaScroll;
-  end;
-  if Self.FIsDraging then
-  begin
-    Self.FIsDraging:=False;
-    Self.FIsStartDrag:=False;
-  end;
-end;
+//procedure TSkinControlGestureManager.CreateCheckUserStopMouseWheelTimer;
+//begin
+//  if FCheckUserStopMouseWheelTimer=nil then
+//  begin
+//    FCheckUserStopMouseWheelTimer:=TTimer.Create(nil);
+//    FCheckUserStopMouseWheelTimer.Enabled:=False;
+//    FCheckUserStopMouseWheelTimer.OnTimer:=Self.OnCheckUserStopMouseWheelTimer;
+//    FCheckUserStopMouseWheelTimer.Interval:=100;
+//  end;
+//end;
+//
+//procedure TSkinControlGestureManager.OnCheckUserStopMouseWheelTimer(Sender: TObject);
+//begin
+//  if Not Self.FIsDraging then
+//  begin
+//    Self.FCheckUserStopMouseWheelTimer.Enabled:=False;
+//
+////    if Self.FKind=gmkHorizontal then
+////      OutputDebugString(GetDebugLogID+'TSkinControlGestureManager.OnCheckUserStopMouseWheelTimer 启动惯性滚动');
+//
+//    //启动惯性滚动
+//    Self.StartInertiaScroll;
+//  end;
+//  if Self.FIsDraging then
+//  begin
+//    Self.FIsDraging:=False;
+//    Self.FIsStartDrag:=False;
+//  end;
+//end;
 
 //procedure TSkinControlGestureManager.CreateKeyPressAdjustSpeedTimer;
 //begin
@@ -2417,17 +2418,21 @@ begin
   //不要这句
 //  uBaseLog.OutputDebugString(GetDebugLogID+'MouseDown('+FloatToStr(X)+','+FloatToStr(Y)+')');
   if Not FEnabled then Exit;
+  if not FIsEnableMouseDragScroll then Exit;
+
   FirstMouseDown(Button,Shift,X,Y);
 end;
 
 procedure TSkinControlGestureManager.MouseEnter;
 begin
   if Not FEnabled then Exit;
+  if not FIsEnableMouseDragScroll then Exit;
 end;
 
 procedure TSkinControlGestureManager.MouseLeave;
 begin
   if Not FEnabled then Exit;
+  if not FIsEnableMouseDragScroll then Exit;
 
 //  if Self.FKind=gmkHorizontal then
 //    OutputDebugString(GetDebugLogID+'TSkinControlGestureManager.MouseLeave');
@@ -2448,6 +2453,7 @@ var
   AMouseMoveDirection:TGestureDirection;
 begin
   if Not FEnabled then Exit;
+  if not FIsEnableMouseDragScroll then Exit;
 
   if Self=ZoomingHorzGestureManager then Exit;
   if Self=ZoomingVertGestureManager then Exit;
@@ -3002,6 +3008,7 @@ begin
 //    uBaseLog.OutputDebugString(GetDebugLogID+'MouseDown('+FloatToStr(Self.FFirstMouseMovePt.X)+','+FloatToStr(Self.FFirstMouseMovePt.Y)+')');
 
     if Not FEnabled then Exit;
+  if not FIsEnableMouseDragScroll then Exit;
 
 
     //从激活手势列表去排除
@@ -3098,10 +3105,10 @@ begin
 
 
 
-        if Self.FCheckUserStopMouseWheelTimer<>nil then
-        begin
-          Self.FCheckUserStopMouseWheelTimer.Enabled:=False;
-        end;
+//        if Self.FCheckUserStopMouseWheelTimer<>nil then
+//        begin
+//          Self.FCheckUserStopMouseWheelTimer.Enabled:=False;
+//        end;
 
 
         if (FDecidedFirstGestureKind=FKind) then
@@ -3178,12 +3185,14 @@ begin
     gmkHorizontal: ;
     gmkVertical:
     begin
-  //      OutputDebugString('MouseWheel '+IntToStr(WheelDelta));
+        OutputDebugString('MouseWheel '+IntToStr(WheelDelta));
 
         Self.SetIsDraging(True);
-        //检查用户什么时候停止滚动
-        Self.CreateCheckUserStopMouseWheelTimer;
-        Self.FCheckUserStopMouseWheelTimer.Enabled:=True;
+
+        //不能用定时器来启动惯性滚动,而是要立即惯性滚动
+//        //检查用户什么时候停止滚动
+//        Self.CreateCheckUserStopMouseWheelTimer;
+//        Self.FCheckUserStopMouseWheelTimer.Enabled:=True;
 
 
 
@@ -3194,17 +3203,25 @@ begin
         end;
 
 
-        //停止惯性滚动定时器
-        if Self.FInertiaScrollAnimator.IsRuning then
-        begin
-          FInertiaScrollAnimator.Pause;
-        end;
+
+        //不能停止惯性滚动,而是要继续惯性滚动
+//        //停止惯性滚动定时器
+//        if Self.FInertiaScrollAnimator.IsRuning then
+//        begin
+//          FInertiaScrollAnimator.Pause;
+//        end;
 
 
 
         //更新位置(正常模式)
-        Self.Position:=Self.Position-WheelDelta/Self.LargeChange*3;
+//        Self.Position:=Self.Position-WheelDelta/Self.LargeChange*3;
         Self.FUpVelocity.Y:=-(WheelDelta*LargeChange);
+
+
+        //启动惯性滚动
+        Self.StartInertiaScroll;
+
+
     end;
   end;
 

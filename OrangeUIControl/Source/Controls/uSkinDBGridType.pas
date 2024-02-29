@@ -349,9 +349,9 @@ type
 //  protected
 //    function GetOwner: TPersistent; override;
 //    procedure Update(Item: TCollectionItem); override;
-  public
-    constructor Create(AProperties:TVirtualGridProperties;
-                        ItemClass: TCollectionItemClass);override;
+  //public
+  //  constructor Create(AProperties:TVirtualGridProperties;
+  //                      ItemClass: TCollectionItemClass);override;
   public
 
     /// <summary>
@@ -363,6 +363,9 @@ type
     ///   </para>
     /// </summary>
     function Add: TSkinDBGridColumn;
+  public
+    //创建列表项
+    function GetSkinItemClass:TBaseSkinItemClass;override;
 
     procedure RestoreDefaults;
 
@@ -851,8 +854,8 @@ type
     function GetCustomListLayoutsManagerClass:TSkinCustomListLayoutsManagerClass;override;
 
     //创建列管理
-    function GetColumnClass:TSkinVirtualGridColumnClass;override;
-    function GetColumnsClass:TSkinVirtualGridColumnsClass;override;
+    //function GetColumnClass:TSkinVirtualGridColumnClass;override;
+    //function GetColumnsClass:TSkinVirtualGridColumnsClass;override;
     //表格列
     function GetColumnLayoutsManagerClass:TSkinListLayoutsManagerClass;override;
   protected
@@ -1063,10 +1066,10 @@ begin
   end;
 end;
 
-function TDBGridProperties.GetColumnsClass: TSkinVirtualGridColumnsClass;
-begin
-  Result:=TSkinDBGridColumns;
-end;
+//function TDBGridProperties.GetColumnsClass: TSkinVirtualGridColumnsClass;
+//begin
+//  Result:=TSkinDBGridColumns;
+//end;
 
 function TDBGridProperties.GetItemsClass: TBaseSkinItemsClass;
 begin
@@ -1140,10 +1143,10 @@ begin
   Result:=nil;
 end;
 
-function TDBGridProperties.GetColumnClass: TSkinVirtualGridColumnClass;
-begin
-  Result:=TSkinDBGridColumn;
-end;
+//function TDBGridProperties.GetColumnClass: TSkinVirtualGridColumnClass;
+//begin
+//  Result:=TSkinDBGridColumn;
+//end;
 
 function TDBGridProperties.GetColumnLayoutsManagerClass: TSkinListLayoutsManagerClass;
 begin
@@ -5343,11 +5346,11 @@ end;
 
 { TSkinDBGridColumns }
 
-constructor TSkinDBGridColumns.Create(AProperties:TVirtualGridProperties;
-                                      ItemClass: TCollectionItemClass);
-begin
-  inherited Create(AProperties,ItemClass);
-end;
+//constructor TSkinDBGridColumns.Create(AProperties:TVirtualGridProperties;
+//                                      ItemClass: TCollectionItemClass);
+//begin
+//  inherited Create(AProperties,ItemClass);
+//end;
 
 function TSkinDBGridColumns.FindItemByFieldName(AFieldName: String): TSkinDBGridColumn;
 var
@@ -5362,6 +5365,12 @@ begin
       Break;
     end;
   end;
+end;
+
+//创建列表项
+function TSkinDBGridColumns.GetSkinItemClass:TBaseSkinItemClass;
+begin
+  Result:=TSkinDBGridColumn;
 end;
 
 function TSkinDBGridColumns.Add: TSkinDBGridColumn;

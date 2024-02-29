@@ -20,8 +20,8 @@ uses
 
   EasyServiceCommonMaterialDataMoudle_VCL_Lazarus, uBGRASVGSupport,
   uRestInterfaceCall, uDataSetToJson, uIdHttpControl, uOpenClientCommon,
-  ListItemStyle_Default, indylaz, MainForm, ButtonFrame, CheckBoxFrame,
-  DashBoard_AnalyseFrame, DashBoard_ProjectsFrame,
+  FormWaiting, ListItemStyle_Default, indylaz, MainForm,
+  ButtonFrame, CheckBoxFrame, DashBoard_AnalyseFrame, DashBoard_ProjectsFrame,
   DashBoard_Analyse_BarChart_MonthSummaryFrame,
   DashBoard_Projects_PieChart_ProjectStatusFrame,
   DashBoard_Analyse_ItemGrid_TwoCellTextFrame,

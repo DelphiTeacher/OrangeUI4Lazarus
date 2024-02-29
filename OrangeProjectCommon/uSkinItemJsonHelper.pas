@@ -21,19 +21,24 @@ uses
   uSkinListLayouts,
   uSkinVirtualListType,
   uSkinVirtualGridType,
+  uSkinItemGridType,
 //  uSkinListViewType,
 
-  {$IF CompilerVersion <= 21.0} // XE or older
-  SuperObject,
-  superobjecthelper,
-  {$ELSE}
-    {$IFDEF SKIN_SUPEROBJECT}
+  {$IFDEF FPC}
     uSkinSuperObject,
-    {$ELSE}
-    XSuperObject,
-    XSuperJson,
-    {$ENDIF}
-  {$IFEND}
+  {$ELSE}
+//    {$IF CompilerVersion <= 21.0} // XE or older
+//    SuperObject,
+//    superobjecthelper,
+//    {$ELSE}
+//      {$IFDEF SKIN_SUPEROBJECT}
+      uSkinSuperObject,
+//      {$ELSE}
+//      XSuperObject,
+//      XSuperJson,
+//      {$ENDIF}
+//    {$IFEND}
+  {$ENDIF}
 
   uSkinScrollControlType;
 
@@ -142,9 +147,19 @@ type
   end;
 
 
-
+  //
   //表格数据行
   TSkinJsonVirtualGridRow=class(TSkinVirtualGridRow)
+  private
+    FJson: ISuperObject;
+  public
+    //根据绑定的FieldName获取Item的值,然后赋给绑定的控件
+    function GetValueByBindItemField(AFieldName:String):Variant;override;
+  public
+    property Json:ISuperObject read FJson write FJson;
+  end;
+
+  TSkinJsonItemGridRow=class(TSkinItemGridRow)
   private
     FJson: ISuperObject;
   public
@@ -209,7 +224,7 @@ procedure LoadJsonArrayStrToSkinItems(AJsonArrayStr:String;
 var
   AJsonArray:ISuperArray;
 begin
-  AJsonArray:=TSuperArray.Create(AJsonArrayStr);
+  AJsonArray:=SA(AJsonArrayStr);
   LoadJsonArrayStrToSkinItems(AJsonArray,ASkinItems,AStartIndex,AIsNeedClear);
 end;
 
@@ -504,6 +519,34 @@ begin
   begin
     Result:=inherited GetValueByBindItemField(AFieldName);
   end;
+
+end;
+
+{ TSkinJsonItemGridRow }
+
+function TSkinJsonItemGridRow.GetValueByBindItemField(
+  AFieldName: String): Variant;
+begin
+  //if (FJson<>nil) and FJson.Contains(AFieldName) then
+  //begin
+    //在Lazarus下面Contains无效
+
+    //设计时不能直接返回值,要判断一下,不然IDE中要报错的,但速度应该会稍微变慢
+    Result:=FJson.V[AFieldName];
+
+  //end
+////  if FJson<>nil then
+////  begin
+////    try
+////      Result:=FJson.V[AFieldName];
+////    except
+////
+////    end;
+////  end;
+//  else
+//  begin
+//    Result:=inherited GetValueByBindItemField(AFieldName);
+//  end;
 
 end;
 

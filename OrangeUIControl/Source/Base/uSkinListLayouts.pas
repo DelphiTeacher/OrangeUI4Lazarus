@@ -391,7 +391,7 @@ type
   protected
     //所有的列表(如果切换这个列表,要清除VisibleItems)
     FSkinListIntf:ISkinList;
-  protected
+  public
     //显示的列表项
     FVisibleItems:TBaseList;
 //  public
