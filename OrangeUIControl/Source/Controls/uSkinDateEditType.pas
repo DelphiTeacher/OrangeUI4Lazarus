@@ -538,7 +538,7 @@ initialization
 
 
   //日期框
-  RegisterSkinControlStyle('SkinDateEdit',TSkinDateEditDefaultType,TSkinDateEditDefaultMaterial,Const_Default_ComponentType,True);
+  RegisterSkinControlStyle('SkinDateEdit',TSkinDateEditDefaultType,TSkinDateEditDefaultMaterial,TDateEditProperties,Const_Default_ComponentType,True);
 
 
 end.

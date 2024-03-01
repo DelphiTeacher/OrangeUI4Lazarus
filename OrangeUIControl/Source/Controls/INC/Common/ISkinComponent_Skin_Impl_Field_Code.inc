@@ -440,6 +440,71 @@ begin
   end;
 end;
 
+
+procedure {$I Source\Controls\INC\Common\ISkinComponent_Skin_Impl_ClassName.inc}.SetStaticRefMaterial(Value:TSkinControlMaterial);
+var
+  AMaterialClass:TMaterialClass;
+begin
+  if FRefMaterial<>Value then
+  begin
+
+    //if (Self.GetCurrentUseComponentTypeName<>'') and (Self.FProperties.GetComponentClassify<>'') then
+    //begin
+      ////获取素材类
+      //AMaterialClass:=GetMaterialClass;//GlobalControlTypeRegManager.FindMaterialClassByControlTypeName(Self.FProperties.GetComponentClassify,GetCurrentUseComponentTypeName);
+      //if (AMaterialClass<>nil) then
+      //begin
+
+        //相符,就不再使用当前的素材
+        if (Self.FCurrentUseSkinMaterial<>nil) then
+        begin
+            if FCurrentUseSkinMaterial=FRefMaterial then
+            begin
+              FRefMaterial:=nil;
+            end;
+
+
+            FCurrentUseSkinMaterial:=nil;
+        end;
+
+        //if (Value<>nil) then
+        //begin
+        //  //判断类是否符合
+        //  if (Value.ClassType=AMaterialClass) then
+        //  begin
+        //    //相符,就不再使用当前的素材
+        //    UnUseCurrentUseMaterial;
+        //  end
+        //  else
+        //  begin
+        //    //不相符
+        //    ShowException(Value.Name+'与此控件或此ComponentType匹配的Material类型不符');
+        //    Exit;
+        //  end;
+        //end;
+
+
+
+
+        FRefMaterial:=Value;
+
+
+
+        //如果是在设计时,那么直接设置MaterialUseKind
+        //if csDesigning in Self.ComponentState then
+        //begin
+          FMaterialUseKind := mukRef;
+
+          FCurrentUseSkinMaterial:=FRefMaterial;
+
+
+      //end;
+
+    //end;
+
+  end;
+end;
+
 //function {$I Source\Controls\INC\Common\ISkinComponent_Skin_Impl_ClassName.inc}.GetSkinComponentType:TSkinControlType;
 //begin
 //  if FSkinControlType=nil then

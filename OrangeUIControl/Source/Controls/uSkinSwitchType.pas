@@ -1133,7 +1133,7 @@ end;
 initialization
   RegisterClasses([TSkinSwitch]);
   //切换框
-  RegisterSkinControlStyle('SkinSwitch',TSkinSwitchDefaultType,TSkinSwitchDefaultMaterial,Const_Default_ComponentType,True);
+  RegisterSkinControlStyle('SkinSwitch',TSkinSwitchDefaultType,TSkinSwitchDefaultMaterial,TSwitchProperties,Const_Default_ComponentType,True);
 
 
 

@@ -1808,9 +1808,9 @@ initialization
 
 
   //复选框
-  RegisterSkinControlStyle('SkinCheckBox',TSkinCheckBoxDefaultType,TSkinCheckBoxDefaultMaterial,Const_Default_ComponentType,True);
-  RegisterSkinControlStyle('SkinCheckBox',TSkinCheckBoxDefaultType,TSkinCheckBoxColorMaterial,'ColorTest',False);
-  RegisterSkinControlStyle('SkinCheckBox',TSkinCheckBoxDefaultType,TSkinCheckBoxDefaultMaterial,'Color',False);
+  RegisterSkinControlStyle('SkinCheckBox',TSkinCheckBoxDefaultType,TSkinCheckBoxDefaultMaterial,TCheckBoxProperties,Const_Default_ComponentType,True);
+  RegisterSkinControlStyle('SkinCheckBox',TSkinCheckBoxDefaultType,TSkinCheckBoxColorMaterial,TCheckBoxProperties,'ColorTest',False);
+  RegisterSkinControlStyle('SkinCheckBox',TSkinCheckBoxDefaultType,TSkinCheckBoxDefaultMaterial,TCheckBoxProperties,'Color',False);
 
 
 

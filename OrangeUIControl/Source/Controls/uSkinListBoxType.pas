@@ -548,7 +548,7 @@ end;
 initialization
   RegisterClasses([TSkinListBox]);
 
-  RegisterSkinControlStyle('SkinListBox',TSkinListBoxDefaultType,TSkinListBoxDefaultMaterial,Const_Default_ComponentType,True);
+  RegisterSkinControlStyle('SkinListBox',TSkinListBoxDefaultType,TSkinListBoxDefaultMaterial,TListBoxProperties,Const_Default_ComponentType,True);
 
 
 

@@ -501,7 +501,7 @@ end;
 
 initialization
   RegisterClasses([TSkinRoundImage]);
-  RegisterSkinControlStyle('SkinRoundImage',TSkinRoundImageDefaultType,TSkinRoundImageDefaultMaterial,Const_Default_ComponentType,True);
+  RegisterSkinControlStyle('SkinRoundImage',TSkinRoundImageDefaultType,TSkinRoundImageDefaultMaterial,TRoundImageProperties,Const_Default_ComponentType,True);
 
 end.
 

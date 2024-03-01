@@ -3603,7 +3603,7 @@ end;
 
 initialization
   RegisterClasses([TSkinImageListViewer]);
-  RegisterSkinControlStyle('SkinImageListViewer',TSkinImageListViewerDefaultType,TSkinImageListViewerDefaultMaterial,Const_Default_ComponentType,True);
+  RegisterSkinControlStyle('SkinImageListViewer',TSkinImageListViewerDefaultType,TSkinImageListViewerDefaultMaterial,TImageListViewerProperties,Const_Default_ComponentType,True);
 
 
 end.

@@ -1200,7 +1200,7 @@ end;
 initialization
   RegisterClasses([TSkinTreeView]);
   //树型视图
-  RegisterSkinControlStyle('SkinTreeView',TSkinTreeViewDefaultType,TSkinTreeViewDefaultMaterial,Const_Default_ComponentType,True);
+  RegisterSkinControlStyle('SkinTreeView',TSkinTreeViewDefaultType,TSkinTreeViewDefaultMaterial,TTreeViewProperties,Const_Default_ComponentType,True);
 
 
 

@@ -1426,7 +1426,7 @@ end;
 initialization
   RegisterClasses([TSkinSwitchBar]);
   //开关条
-  RegisterSkinControlStyle('SkinSwitchBar',TSkinSwitchBarDefaultType,TSkinSwitchBarDefaultMaterial,Const_Default_ComponentType,True);
+  RegisterSkinControlStyle('SkinSwitchBar',TSkinSwitchBarDefaultType,TSkinSwitchBarDefaultMaterial,TSwitchBarProperties,Const_Default_ComponentType,True);
 
 
 end.

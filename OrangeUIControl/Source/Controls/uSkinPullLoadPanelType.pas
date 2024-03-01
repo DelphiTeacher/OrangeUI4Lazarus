@@ -2081,9 +2081,9 @@ initialization
   RegisterClasses([TSkinPullLoadPanel]);
 
   //滚动加载面板
-  RegisterSkinControlStyle('SkinPullLoadPanel',TSkinPullLoadPanelDefaultType,TSkinPullLoadPanelDefaultMaterial,Const_Default_ComponentType,True);//False);
-  RegisterSkinControlStyle('SkinPullLoadPanel',TSkinPullLoadPanelDefaultType,TSkinPullLoadPanelDefaultMaterial,'DefaultEx',False);
-  RegisterSkinControlStyle('SkinPullLoadPanel',TSkinPullLoadPanelDefaultProType,TSkinPullLoadPanelDefaultProMaterial,'DefaultPro',False);
+  RegisterSkinControlStyle('SkinPullLoadPanel',TSkinPullLoadPanelDefaultType,TSkinPullLoadPanelDefaultMaterial,TPullLoadPanelProperties,Const_Default_ComponentType,True);//False);
+  RegisterSkinControlStyle('SkinPullLoadPanel',TSkinPullLoadPanelDefaultType,TSkinPullLoadPanelDefaultMaterial,TPullLoadPanelProperties,'DefaultEx',False);
+  RegisterSkinControlStyle('SkinPullLoadPanel',TSkinPullLoadPanelDefaultProType,TSkinPullLoadPanelDefaultProMaterial,TPullLoadPanelProperties,'DefaultPro',False);
 
 
 end.

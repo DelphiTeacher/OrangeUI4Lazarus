@@ -9,6 +9,7 @@
     property DataObject:TObject read FDataObject write FDataObject;
 
 
+  public
   protected
 
     //控件类型名称
@@ -31,10 +32,10 @@
 
 
 
-
     //引用的素材
     //[Weak]
     FRefMaterial:TSkinControlMaterial;
+
     //保持自身的素材
     FKeepSelfOwnMaterial:Boolean;
     //属于自己的皮肤素材
@@ -78,6 +79,7 @@
     function GetSelfOwnMaterial:TSkinControlMaterial;
     //设置引用的皮肤素材
     procedure SetRefMaterial(Value:TSkinControlMaterial);
+    procedure SetStaticRefMaterial(Value:TSkinControlMaterial);
     //复制素材
     procedure AssignMaterial(ASrcControlIntf:ISkinControlMaterial);
     //保持自身的素材

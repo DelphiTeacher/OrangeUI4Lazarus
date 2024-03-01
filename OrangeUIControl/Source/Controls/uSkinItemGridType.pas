@@ -551,8 +551,7 @@ begin
   end;
 end;
 
-function TItemGridProperties.GetCellValue(ACol: TSkinVirtualGridColumn;
-  ARow: TBaseSkinItem): Variant;
+function TItemGridProperties.GetCellValue(ACol: TSkinVirtualGridColumn; ARow: TBaseSkinItem): Variant;
 var
   AItemRow:TSkinItemGridRow;
   AItemColumn:TSkinItemGridColumn;
@@ -1075,7 +1074,7 @@ end;
 
 function TSkinItemGridColumn.GetSelfOwnMaterial: TSkinItemGridColumnMaterial;
 begin
-  Result:=TSkinItemGridColumnMaterial(FMaterial);
+  Result:=TSkinItemGridColumnMaterial(FColumnMaterial);
 end;
 
 function TSkinItemGridColumn.GetValueType(ARow: TBaseSkinItem): TVarType;
@@ -1132,7 +1131,7 @@ end;
 
 procedure TSkinItemGridColumn.SetSelfOwnMaterial(const Value: TSkinItemGridColumnMaterial);
 begin
-  FMaterial.Assign(Value);
+  FColumnMaterial.Assign(Value);
 end;
 
 //procedure TSkinItemGridColumn.SetSubItemsIndex(const Value: Integer);
@@ -1230,7 +1229,7 @@ end;
 initialization
   RegisterClasses([TSkinItemGrid]);
 
-  RegisterSkinControlStyle('SkinItemGrid',TSkinItemGridDefaultType,TSkinItemGridDefaultMaterial,Const_Default_ComponentType,True);
+  RegisterSkinControlStyle('SkinItemGrid',TSkinItemGridDefaultType,TSkinItemGridDefaultMaterial,TItemGridProperties,Const_Default_ComponentType,True);
 
 
 end.

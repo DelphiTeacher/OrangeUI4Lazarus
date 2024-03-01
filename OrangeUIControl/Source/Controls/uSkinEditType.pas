@@ -740,7 +740,7 @@ initialization
 
 
   //文本框
-  RegisterSkinControlStyle('SkinEdit',TSkinEditDefaultType,TSkinEditDefaultMaterial,Const_Default_ComponentType,True);
+  RegisterSkinControlStyle('SkinEdit',TSkinEditDefaultType,TSkinEditDefaultMaterial,TEditProperties,Const_Default_ComponentType,True);
 
 
 end.

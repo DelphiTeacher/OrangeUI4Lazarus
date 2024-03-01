@@ -6355,6 +6355,7 @@ begin
     end;
 
 
+    //可拖动改变尺寸的时候，是不能拖拽Item的
     if (AResizingItem=nil) and (TProtectedControl(Self.FSkinCustomListIntf.Prop.FSkinControl).DragMode=dmManual) and (Self.FSkinCustomListIntf.Prop.FEnableAutoDragDropItem) then
     begin
       Self.FSkinCustomListIntf.Prop.StartDragItem;

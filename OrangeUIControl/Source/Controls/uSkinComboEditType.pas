@@ -754,7 +754,7 @@ end;
 initialization
 
   //组合编辑框
-  RegisterSkinControlStyle('SkinComboEdit',TSkinComboEditDefaultType,TSkinComboEditDefaultMaterial,Const_Default_ComponentType,True);
+  RegisterSkinControlStyle('SkinComboEdit',TSkinComboEditDefaultType,TSkinComboEditDefaultMaterial,TComboEditProperties,Const_Default_ComponentType,True);
 
 
 

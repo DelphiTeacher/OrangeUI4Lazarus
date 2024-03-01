@@ -1551,7 +1551,7 @@ initialization
   RegisterClasses([TSkinImageListPlayer]);
 
   //图片播放
-  RegisterSkinControlStyle('SkinImageListPlayer',TSkinImageListPlayerDefaultType,TSkinImageListPlayerDefaultMaterial,Const_Default_ComponentType,True);
+  RegisterSkinControlStyle('SkinImageListPlayer',TSkinImageListPlayerDefaultType,TSkinImageListPlayerDefaultMaterial,TImageListPlayerProperties,Const_Default_ComponentType,True);
 
 
 end.

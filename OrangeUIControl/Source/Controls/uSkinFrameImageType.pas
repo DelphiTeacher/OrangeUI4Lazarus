@@ -444,7 +444,7 @@ end;
 initialization
   RegisterClasses([TSkinFrameImage]);
 
-  RegisterSkinControlStyle('SkinFrameImage',TSkinFrameImageDefaultType,TSkinFrameImageDefaultMaterial,Const_Default_ComponentType,True);
+  RegisterSkinControlStyle('SkinFrameImage',TSkinFrameImageDefaultType,TSkinFrameImageDefaultMaterial,TFrameImageProperties,Const_Default_ComponentType,True);
 
 
 

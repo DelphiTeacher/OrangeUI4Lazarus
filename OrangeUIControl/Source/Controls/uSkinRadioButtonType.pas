@@ -1233,10 +1233,10 @@ end;
 initialization
   RegisterClasses([TSkinRadioButton]);
   //单选框
-  RegisterSkinControlStyle('SkinRadioButton',TSkinRadioButtonDefaultType,TSkinRadioButtonDefaultMaterial,Const_Default_ComponentType,True);
-//  RegisterSkinControlStyle('SkinRadioButton',TSkinRadioButtonColorType,TSkinRadioButtonColorMaterial,'Color',False);
-  RegisterSkinControlStyle('SkinRadioButton',TSkinRadioButtonDefaultType,TSkinRadioButtonColorMaterial,'ColorTest',False);
-  RegisterSkinControlStyle('SkinRadioButton',TSkinRadioButtonDefaultType,TSkinRadioButtonDefaultMaterial,'Color',False);
+  RegisterSkinControlStyle('SkinRadioButton',TSkinRadioButtonDefaultType,TSkinRadioButtonDefaultMaterial,TRadioButtonProperties,Const_Default_ComponentType,True);
+//  RegisterSkinControlStyle('SkinRadioButton',TSkinRadioButtonColorType,TSkinRadioButtonColorMaterial,TRadioButtonProperties,'Color',False);
+  RegisterSkinControlStyle('SkinRadioButton',TSkinRadioButtonDefaultType,TSkinRadioButtonColorMaterial,TRadioButtonProperties,'ColorTest',False);
+  RegisterSkinControlStyle('SkinRadioButton',TSkinRadioButtonDefaultType,TSkinRadioButtonDefaultMaterial,TRadioButtonProperties,'Color',False);
 
 
 

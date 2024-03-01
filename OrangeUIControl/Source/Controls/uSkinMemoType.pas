@@ -1065,7 +1065,7 @@ end;
 
 initialization
   //备注框
-  RegisterSkinControlStyle('SkinMemo',TSkinMemoDefaultType,TSkinMemoDefaultMaterial,Const_Default_ComponentType,True);
+  RegisterSkinControlStyle('SkinMemo',TSkinMemoDefaultType,TSkinMemoDefaultMaterial,TMemoProperties,Const_Default_ComponentType,True);
 
 end.
 

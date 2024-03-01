@@ -677,7 +677,7 @@ initialization
 
 
   //组合框
-  RegisterSkinControlStyle('SkinComboBox',TSkinComboBoxDefaultType,TSkinComboBoxDefaultMaterial,Const_Default_ComponentType,True);
+  RegisterSkinControlStyle('SkinComboBox',TSkinComboBoxDefaultType,TSkinComboBoxDefaultMaterial,TComboBoxProperties,Const_Default_ComponentType,True);
 
 
 end.

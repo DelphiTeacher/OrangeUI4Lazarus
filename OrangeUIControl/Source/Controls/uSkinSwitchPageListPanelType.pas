@@ -472,7 +472,7 @@ end;
 
 initialization
   //切换分页
-  RegisterSkinControlStyle('SkinSwitchPageListPanel',TSkinSwitchPageListPanelType,TSkinSwitchPageListPanelMaterial,Const_Default_ComponentType,True);
+  RegisterSkinControlStyle('SkinSwitchPageListPanel',TSkinSwitchPageListPanelType,TSkinSwitchPageListPanelMaterial,TSwitchPageListPanelProperties,Const_Default_ComponentType,True);
 
 end.
 

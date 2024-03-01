@@ -1150,7 +1150,7 @@ end;
 initialization
   RegisterClasses([TSkinMultiColorLabel]);
   //多彩标签
-  RegisterSkinControlStyle('SkinMultiColorLabel',TSkinMultiColorLabelDefaultType,TSkinMultiColorLabelDefaultMaterial,Const_Default_ComponentType,True);
+  RegisterSkinControlStyle('SkinMultiColorLabel',TSkinMultiColorLabelDefaultType,TSkinMultiColorLabelDefaultMaterial,TMultiColorLabelProperties,Const_Default_ComponentType,True);
 
 
 end.

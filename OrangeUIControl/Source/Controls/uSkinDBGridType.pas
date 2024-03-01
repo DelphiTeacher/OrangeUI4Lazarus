@@ -5953,7 +5953,7 @@ initialization
   RegisterClasses([TSkinDBGrid]);
 
 
-  RegisterSkinControlStyle('SkinDBGrid',TSkinDBGridDefaultType,TSkinDBGridDefaultMaterial,Const_Default_ComponentType,True);
+  RegisterSkinControlStyle('SkinDBGrid',TSkinDBGridDefaultType,TSkinDBGridDefaultMaterial,TDBGridProperties,Const_Default_ComponentType,True);
 
 end.
 

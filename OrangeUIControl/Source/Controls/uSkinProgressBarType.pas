@@ -2090,14 +2090,14 @@ end;
 initialization
   RegisterClasses([TSkinProgressBar]);
   //进度条
-  RegisterSkinControlStyle('SkinProgressBar',TSkinProgressBarDefaultType,TSkinProgressBarDefaultMaterial,Const_Default_ComponentType,True);
-//  RegisterSkinControlStyle('SkinProgressBar',TSkinProgressBarColorType,TSkinProgressBarColorMaterial,'Color',False);
-  RegisterSkinControlStyle('SkinProgressBar',TSkinProgressBarDefaultType,TSkinProgressBarColorMaterial,'ColorTest',False);
-  RegisterSkinControlStyle('SkinProgressBar',TSkinProgressBarDefaultType,TSkinProgressBarDefaultMaterial,'Color',False);
-//  RegisterSkinControlStyle('SkinProgressBar',TSkinProgressBarHalfCircleType,TSkinProgressBarHalfCircleMaterial,'HalfCircle',False);
-  RegisterSkinControlStyle('SkinProgressBar',TSkinProgressBarHalfCircleType,TSkinProgressBarHalfCircleMaterial,'HalfCircleTest',False);
-  RegisterSkinControlStyle('SkinProgressBar',TSkinProgressBarHalfCircleType,TSkinProgressBarDefaultMaterial,'HalfCircle',False);
-  RegisterSkinControlStyle('SkinProgressBar',TSkinProgressBarHalfCircleType,TSkinProgressBarDefaultMaterial,'Round',False);
+  RegisterSkinControlStyle('SkinProgressBar',TSkinProgressBarDefaultType,TSkinProgressBarDefaultMaterial,TProgressBarProperties,Const_Default_ComponentType,True);
+//  RegisterSkinControlStyle('SkinProgressBar',TSkinProgressBarColorType,TSkinProgressBarColorMaterial,TProgressBarProperties,'Color',False);
+  RegisterSkinControlStyle('SkinProgressBar',TSkinProgressBarDefaultType,TSkinProgressBarColorMaterial,TProgressBarProperties,'ColorTest',False);
+  RegisterSkinControlStyle('SkinProgressBar',TSkinProgressBarDefaultType,TSkinProgressBarDefaultMaterial,TProgressBarProperties,'Color',False);
+//  RegisterSkinControlStyle('SkinProgressBar',TSkinProgressBarHalfCircleType,TSkinProgressBarHalfCircleMaterial,TProgressBarProperties,'HalfCircle',False);
+  RegisterSkinControlStyle('SkinProgressBar',TSkinProgressBarHalfCircleType,TSkinProgressBarHalfCircleMaterial,TProgressBarProperties,'HalfCircleTest',False);
+  RegisterSkinControlStyle('SkinProgressBar',TSkinProgressBarHalfCircleType,TSkinProgressBarDefaultMaterial,TProgressBarProperties,'HalfCircle',False);
+  RegisterSkinControlStyle('SkinProgressBar',TSkinProgressBarHalfCircleType,TSkinProgressBarDefaultMaterial,TProgressBarProperties,'Round',False);
 
 
 end.

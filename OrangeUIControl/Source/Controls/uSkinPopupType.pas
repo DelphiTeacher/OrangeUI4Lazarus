@@ -355,7 +355,7 @@ end;
 
 initialization
   //弹出框
-  RegisterSkinControlStyle('SkinPopup',TSkinPopupDefaultType,TSkinPopupDefaultMaterial,Const_Default_ComponentType,True);
+  RegisterSkinControlStyle('SkinPopup',TSkinPopupDefaultType,TSkinPopupDefaultMaterial,TPopupProperties,Const_Default_ComponentType,True);
 
 
 end.

@@ -1489,10 +1489,10 @@ end;
 initialization
   RegisterClasses([TSkinNotifyNumberIcon]);
   //提醒数字图标
-  RegisterSkinControlStyle('SkinNotifyNumberIcon',TSkinNotifyNumberIconDefaultType,TSkinNotifyNumberIconDefaultMaterial,Const_Default_ComponentType,True);
-//  RegisterSkinControlStyle('SkinNotifyNumberIcon',TSkinNotifyNumberIconColorType,TSkinNotifyNumberIconColorMaterial,'Color',False);
-  RegisterSkinControlStyle('SkinNotifyNumberIcon',TSkinNotifyNumberIconColorType,TSkinNotifyNumberIconColorMaterial,'ColorTest',False);
-  RegisterSkinControlStyle('SkinNotifyNumberIcon',TSkinNotifyNumberIconColorType,TSkinNotifyNumberIconDefaultMaterial,'Color',False);
+  RegisterSkinControlStyle('SkinNotifyNumberIcon',TSkinNotifyNumberIconDefaultType,TSkinNotifyNumberIconDefaultMaterial,TNotifyNumberIconProperties,Const_Default_ComponentType,True);
+//  RegisterSkinControlStyle('SkinNotifyNumberIcon',TSkinNotifyNumberIconColorType,TSkinNotifyNumberIconColorMaterial,TNotifyNumberIconProperties,'Color',False);
+  RegisterSkinControlStyle('SkinNotifyNumberIcon',TSkinNotifyNumberIconColorType,TSkinNotifyNumberIconColorMaterial,TNotifyNumberIconProperties,'ColorTest',False);
+  RegisterSkinControlStyle('SkinNotifyNumberIcon',TSkinNotifyNumberIconColorType,TSkinNotifyNumberIconDefaultMaterial,TNotifyNumberIconProperties,'Color',False);
 
 
 end.

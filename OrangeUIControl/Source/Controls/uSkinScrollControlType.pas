@@ -3571,7 +3571,7 @@ end;
 initialization
   RegisterClasses([TSkinScrollControl]);
   //滚动控件
-  RegisterSkinControlStyle('SkinScrollControl',TSkinScrollControlDefaultType,TSkinScrollControlDefaultMaterial,Const_Default_ComponentType,True);
+  RegisterSkinControlStyle('SkinScrollControl',TSkinScrollControlDefaultType,TSkinScrollControlDefaultMaterial,TScrollControlProperties,Const_Default_ComponentType,True);
 
 
 end.

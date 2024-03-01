@@ -40,6 +40,7 @@ published
     property SelfOwnMaterial:TSkinControlMaterial read GetSelfOwnMaterial;
     //引用的皮肤素材
     property RefMaterial:TSkinControlMaterial read GetRefMaterial write SetRefMaterial;
+    property StaticRefMaterial:TSkinControlMaterial read GetRefMaterial write SetStaticRefMaterial;
 
 
 

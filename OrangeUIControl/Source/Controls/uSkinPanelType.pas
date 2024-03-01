@@ -503,7 +503,7 @@ end;
 initialization
   RegisterClasses([TSkinPanel]);
   //面板
-  RegisterSkinControlStyle('SkinPanel',TSkinPanelDefaultType,TSkinPanelDefaultMaterial,Const_Default_ComponentType,True);
+  RegisterSkinControlStyle('SkinPanel',TSkinPanelDefaultType,TSkinPanelDefaultMaterial,TPanelProperties,Const_Default_ComponentType,True);
 
 
 end.

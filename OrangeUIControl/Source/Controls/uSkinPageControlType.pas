@@ -3945,8 +3945,8 @@ initialization
   RegisterClasses([TSkinTabSheet]);
   RegisterClasses([TSkinPageControl]);
   //多页控件
-  RegisterSkinControlStyle('SkinTabSheet',TSkinTabSheetDefaultType,TSkinTabSheetDefaultMaterial,Const_Default_ComponentType,True);
-  RegisterSkinControlStyle('SkinPageControl',TSkinPageControlDefaultType,TSkinPageControlDefaultMaterial,Const_Default_ComponentType,True);
+  RegisterSkinControlStyle('SkinTabSheet',TSkinTabSheetDefaultType,TSkinTabSheetDefaultMaterial,TTabSheetProperties,Const_Default_ComponentType,True);
+  RegisterSkinControlStyle('SkinPageControl',TSkinPageControlDefaultType,TSkinPageControlDefaultMaterial,TPageControlProperties,Const_Default_ComponentType,True);
 
 
 end.

@@ -169,6 +169,8 @@ type
                       Y1:Double;
                       X2:Double;
                       Y2:Double):Boolean;override;
+    function DrawBezierLine(const ADrawLineParam:TDrawLineParam;
+                      APoints:Array of TPointF):Boolean;override;
 
 
     //»æÖÆÂ·¾¶//
@@ -595,7 +597,84 @@ begin
   FGraphics.Clear(TGPColor_CreateFromColorRef(AColor));
 end;
 
+function TGDIPlusDrawCanvas.DrawBezierLine(const ADrawLineParam: TDrawLineParam;
+  APoints: array of TPointF): Boolean;
+var
+  APt1, APt2: TPointF;
+  ARectF:TRectF;
+  I: Integer;
+var
+  AGPPen:IGPPen;
+  AGPColor:TGPColor;
+  AGPPoints: array of TGPPointF;
+  var pA:TPointF;var pb:TPointF;
+begin
+  Result:=False;
 
+  if (ADrawLineParam.PenWidth=0)
+  then
+  begin
+    Exit;
+  end;
+
+
+  Result:=True;
+
+  if IsSameDouble(ADrawLineParam.PenWidth,0)
+  then
+  begin
+    Exit;
+  end;
+
+
+
+
+//  ARectF:=RectF(X1,Y1,X2,Y2);
+//  ARectF:=ADrawLineParam.CalcDrawRect(ARectF);
+//  X1:=ARectF.Left;
+//  Y1:=ARectF.Top;
+//  X2:=ARectF.Right;
+//  Y2:=ARectF.Bottom;
+
+//  SetLength(AGPPoints,Length(APoints));
+//  for I := 0 to Length(APoints)-1 do
+//  begin
+//    AGPPoints[I]:=TGPPointF_Create(APoints[I].X,APoints[I].Y);
+//  end;
+
+
+  Self.FGraphics.SmoothingMode:=TGPSmoothingMode.SmoothingModeAntiAlias;
+
+  AGPColor:=TGPColor_CreateFromColorRef(ADrawLineParam.Color.Color);
+  TGPColor_SetAlpha(AGPColor.FArgb,ADrawLineParam.Color.Alpha);
+
+  AGPPen:=TGPPen.Create(AGPColor, ADrawLineParam.PenWidth);
+
+
+  SetLength(AGPPoints,Length(APoints));
+  for I := 0 to Length(APoints)-1 do
+  begin
+    AGPPoints[I]:=TGPPointF_Create(APoints[I].X,APoints[I].Y);
+  end;
+  FGraphics.DrawBeziers(AGPPen,AGPPoints);
+
+//  SetLength(AGPPoints,4);
+//  for I := 0 to Length(APoints)-2 do
+//  begin
+//    AGPPoints[0]:=TGPPointF_Create(APoints[I].X,APoints[I].Y);
+//    getCtrlPoint(APoints,I,pA,pB);
+//    AGPPoints[1]:=TGPPointF_Create(pA.X,pA.Y);
+//    AGPPoints[2]:=TGPPointF_Create(pB.X,pB.Y);
+//    AGPPoints[3]:=TGPPointF_Create(APoints[I+1].X,APoints[I+1].Y);
+//    FGraphics.DrawBeziers(AGPPen,AGPPoints);
+//  end;
+
+  Self.FGraphics.SmoothingMode:=TGPSmoothingMode.SmoothingModeDefault;
+
+  Result:=True;
+
+
+end;
 
 function TGDIPlusDrawCanvas.DrawDesigningRect(const ADrawRect:TRectF;
                                 const ABorderColor:TDelphiColor):Boolean;

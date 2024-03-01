@@ -1619,7 +1619,7 @@ end;
 initialization
   RegisterClasses([TSkinImage]);
   //图片
-  RegisterSkinControlStyle('SkinImage',TSkinImageDefaultType,TSkinImageDefaultMaterial,Const_Default_ComponentType,True);
+  RegisterSkinControlStyle('SkinImage',TSkinImageDefaultType,TSkinImageDefaultMaterial,TImageProperties,Const_Default_ComponentType,True);
 
 
 end.

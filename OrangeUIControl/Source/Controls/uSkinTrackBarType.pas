@@ -1777,8 +1777,8 @@ end;
 initialization
   RegisterClasses([TSkinTrackBar]);
   //移动条
-  RegisterSkinControlStyle('SkinTrackBar',TSkinTrackBarDefaultType,TSkinTrackBarDefaultMaterial,Const_Default_ComponentType,True);
-  RegisterSkinControlStyle('SkinTrackBar',TSkinTrackBarProgressBarType,TSkinTrackBarProgressBarMaterial,'ProgressBar',False);
+  RegisterSkinControlStyle('SkinTrackBar',TSkinTrackBarDefaultType,TSkinTrackBarDefaultMaterial,TTrackBarProperties,Const_Default_ComponentType,True);
+  RegisterSkinControlStyle('SkinTrackBar',TSkinTrackBarProgressBarType,TSkinTrackBarProgressBarMaterial,TTrackBarProperties,'ProgressBar',False);
 
 end.
 

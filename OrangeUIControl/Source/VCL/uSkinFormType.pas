@@ -1521,8 +1521,8 @@ end;
 initialization
   {$IFDEF VCL}
   //窗体
-  RegisterSkinControlStyle('SkinForm',TSkinFormDefaultType,TSkinFormDefaultMaterial,Const_Default_ComponentType,True);
-  RegisterSkinControlStyle('SkinForm',TSkinFormNormalType,TSkinFormNormalMaterial,'Normal',False);
+  RegisterSkinControlStyle('SkinForm',TSkinFormDefaultType,TSkinFormDefaultMaterial,TFormProperties,Const_Default_ComponentType,True);
+  RegisterSkinControlStyle('SkinForm',TSkinFormNormalType,TSkinFormNormalMaterial,TFormProperties,'Normal',False);
   {$ENDIF}
 
 

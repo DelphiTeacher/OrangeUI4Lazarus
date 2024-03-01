@@ -481,7 +481,7 @@ end;
 initialization
   RegisterClasses([TSkinScrollBoxContent]);
   //滚动框内容
-  RegisterSkinControlStyle('SkinScrollBoxContent',TSkinScrollBoxContentDefaultType,TSkinScrollBoxContentDefaultMaterial,Const_Default_ComponentType,True);
+  RegisterSkinControlStyle('SkinScrollBoxContent',TSkinScrollBoxContentDefaultType,TSkinScrollBoxContentDefaultMaterial,TScrollBoxContentProperties,Const_Default_ComponentType,True);
 
 
 end.

@@ -700,6 +700,8 @@ function GetParentItemDesignerPanel(AChild:TChildControl):TSkinItemDesignerPanel
 function GetParentByControlClass(AChild:TChildControl;AClass:TClass):TControl;
 
 
+function InitItemBindingControl(AChildControl:TControl):TItemBindingControlItem;
+
 
 
 implementation
@@ -2362,15 +2364,56 @@ begin
 end;
 
 
+function InitItemBindingControl(AChildControl:TControl):TItemBindingControlItem;
+var
+  AFieldName:String;
+  ASkinItemBindingControlIntf:ISkinItemBindingControl;
+
+  ABindSkinItemValueControlIntf:IBindSkinItemValueControl;
+  ABindSkinItemObjectControlIntf:IBindSkinItemObjectControl;
+  AItemBindingControl:TItemBindingControlItem;
+begin
+        Result:=nil;
+        if AChildControl.GetInterface(IID_ISkinItemBindingControl,ASkinItemBindingControlIntf)
+          and AChildControl.GetInterface(IID_IBindSkinItemValueControl,ABindSkinItemValueControlIntf) then
+        begin
+
+
+
+                AItemBindingControl:=TItemBindingControlItem.Create;
+//                AItemBindingControl.FFieldName:=AFieldName;
+
+                AItemBindingControl.FChildControl:=AChildControl;
+
+                AItemBindingControl.FSkinItemBindingControlIntf:=ASkinItemBindingControlIntf;
+                AItemBindingControl.FBindSkinItemValueControlIntf:=ABindSkinItemValueControlIntf;
+
+
+
+                //比如ItemIcon,ItemPic
+                //图片
+                if AChildControl.GetInterface(IID_IBindSkinItemObjectControl,ABindSkinItemObjectControlIntf) then
+                begin
+                  AItemBindingControl.FBindSkinItemObjectControlIntf:=ABindSkinItemObjectControlIntf;
+                end;
+
+                //设置颜色的接口
+                AChildControl.GetInterface(IID_IProcessItemColor,AItemBindingControl.FItemColorIntf);
+
+
+                Result:=AItemBindingControl;
+
+        end;
+
+
+end;
+
 procedure TItemDesignerPanelProperties.SyncSkinItemBindingControls(AParent:TControl);
 var
   I: Integer;
   AChildControl:TControl;
   AFieldName:String;
   ASkinItemBindingControlIntf:ISkinItemBindingControl;
-  ABindSkinItemValueControlIntf:IBindSkinItemValueControl;
-  ABindSkinItemObjectControlIntf:IBindSkinItemObjectControl;
-
   AItemBindingControl:TItemBindingControlItem;
 begin
   if AParent=Self.FSkinControl then
@@ -2393,10 +2436,8 @@ begin
         AChildControl:=GetParentChildControl(TParentControl(AParent),I);
 
         if not IsControlHasOldBindingType(AChildControl)
-          and AChildControl.GetInterface(IID_ISkinItemBindingControl,ASkinItemBindingControlIntf)
-          and AChildControl.GetInterface(IID_IBindSkinItemValueControl,ABindSkinItemValueControlIntf) then
+          and AChildControl.GetInterface(IID_ISkinItemBindingControl,ASkinItemBindingControlIntf) then
         begin
-
             AFieldName:=ASkinItemBindingControlIntf.GetBindItemFieldName;
 
             if AChildControl is TSkinMultiColorLabel then
@@ -2409,34 +2450,65 @@ begin
 
             if AFieldName<>'' then
             begin
-                AItemBindingControl:=TItemBindingControlItem.Create;
-//                AItemBindingControl.FFieldName:=AFieldName;
 
-                AItemBindingControl.FChildControl:=AChildControl;
-
-                AItemBindingControl.FSkinItemBindingControlIntf:=ASkinItemBindingControlIntf;
-                AItemBindingControl.FBindSkinItemValueControlIntf:=ABindSkinItemValueControlIntf;
-
-                Self.FItemBindingControlList.Add(AItemBindingControl);
-
-
-                //比如ItemIcon,ItemPic
-                //图片
-                if AChildControl.GetInterface(IID_IBindSkinItemObjectControl,ABindSkinItemObjectControlIntf) then
+                AItemBindingControl:=InitItemBindingControl(AChildControl);
+                if AItemBindingControl<>nil then
                 begin
-                  AItemBindingControl.FBindSkinItemObjectControlIntf:=ABindSkinItemObjectControlIntf;
+                  Self.FItemBindingControlList.Add(AItemBindingControl);
                 end;
 
-                //设置颜色的接口
-                AChildControl.GetInterface(IID_IProcessItemColor,AItemBindingControl.FItemColorIntf);
-
-
-            end
-            else
-            begin
-                //没有绑定字段
             end;
         end;
+
+
+//        if not IsControlHasOldBindingType(AChildControl)
+//          and AChildControl.GetInterface(IID_ISkinItemBindingControl,ASkinItemBindingControlIntf)
+//          and AChildControl.GetInterface(IID_IBindSkinItemValueControl,ABindSkinItemValueControlIntf) then
+//        begin
+//
+//            AFieldName:=ASkinItemBindingControlIntf.GetBindItemFieldName;
+//
+//            if AChildControl is TSkinMultiColorLabel then
+//            begin
+//              AFieldName:=TSkinMultiColorLabel(AChildControl).Prop.Name1;
+//              if AFieldName='' then AFieldName:=TSkinMultiColorLabel(AChildControl).Prop.Name2;
+//              if AFieldName='' then AFieldName:=TSkinMultiColorLabel(AChildControl).Prop.Name3;
+//              if AFieldName='' then AFieldName:=TSkinMultiColorLabel(AChildControl).Prop.Name4;
+//            end;
+//
+//            if AFieldName<>'' then
+//            begin
+//
+//
+//                AItemBindingControl:=TItemBindingControlItem.Create;
+////                AItemBindingControl.FFieldName:=AFieldName;
+//
+//                AItemBindingControl.FChildControl:=AChildControl;
+//
+//                AItemBindingControl.FSkinItemBindingControlIntf:=ASkinItemBindingControlIntf;
+//                AItemBindingControl.FBindSkinItemValueControlIntf:=ABindSkinItemValueControlIntf;
+//
+//                Self.FItemBindingControlList.Add(AItemBindingControl);
+//
+//
+//                //比如ItemIcon,ItemPic
+//                //图片
+//                if AChildControl.GetInterface(IID_IBindSkinItemObjectControl,ABindSkinItemObjectControlIntf) then
+//                begin
+//                  AItemBindingControl.FBindSkinItemObjectControlIntf:=ABindSkinItemObjectControlIntf;
+//                end;
+//
+//                //设置颜色的接口
+//                AChildControl.GetInterface(IID_IProcessItemColor,AItemBindingControl.FItemColorIntf);
+//
+//
+//            end
+//            else
+//            begin
+//                //没有绑定字段
+//            end;
+//
+//        end;
 
 
 
@@ -2847,7 +2919,7 @@ initialization
   RegisterClasses([TSkinItemDesignerPanel]);
 
   //项目设计面板
-  RegisterSkinControlStyle('SkinItemDesignerPanel',TSkinItemDesignerPanelDefaultType,TSkinItemDesignerPanelDefaultMaterial,Const_Default_ComponentType,True);
+  RegisterSkinControlStyle('SkinItemDesignerPanel',TSkinItemDesignerPanelDefaultType,TSkinItemDesignerPanelDefaultMaterial,TItemDesignerPanelProperties,Const_Default_ComponentType,True);
 
 
 end.

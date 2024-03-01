@@ -383,7 +383,7 @@ end;
 
 initialization
   //日期框
-  RegisterSkinControlStyle('SkinTimeEdit',TSkinTimeEditDefaultType,TSkinTimeEditDefaultMaterial,Const_Default_ComponentType,True);
+  RegisterSkinControlStyle('SkinTimeEdit',TSkinTimeEditDefaultType,TSkinTimeEditDefaultMaterial,TTimeEditProperties,Const_Default_ComponentType,True);
 
 end.
 

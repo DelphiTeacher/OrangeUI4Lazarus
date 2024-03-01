@@ -3331,9 +3331,9 @@ end;
 initialization
   RegisterClasses([TSkinScrollBar]);
   //滚动条
-  RegisterSkinControlStyle('SkinScrollBar',TSkinScrollBarDefaultType,TSkinScrollBarDefaultMaterial,Const_Default_ComponentType,True);
-  RegisterSkinControlStyle('SkinScrollBar',TSkinScrollBarMobileType,TSkinScrollBarMobileMaterial,'Mobile',False);
-  RegisterSkinControlStyle('SkinScrollBar',TSkinScrollBarDesktopType,TSkinScrollBarDesktopMaterial,'Desktop',False);
+  RegisterSkinControlStyle('SkinScrollBar',TSkinScrollBarDefaultType,TSkinScrollBarDefaultMaterial,TScrollBarProperties,Const_Default_ComponentType,True);
+  RegisterSkinControlStyle('SkinScrollBar',TSkinScrollBarMobileType,TSkinScrollBarMobileMaterial,TScrollBarProperties,'Mobile',False);
+  RegisterSkinControlStyle('SkinScrollBar',TSkinScrollBarDesktopType,TSkinScrollBarDesktopMaterial,TScrollBarProperties,'Desktop',False);
 
 
 end.

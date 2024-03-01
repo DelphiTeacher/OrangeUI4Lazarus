@@ -4674,15 +4674,15 @@ initialization
   RegisterClasses([TSkinSelectDateAreaButton]);
 
   //按钮
-  RegisterSkinControlStyle('SkinButton',TSkinButtonDefaultType,TSkinButtonDefaultMaterial,Const_Default_ComponentType,True);
-  RegisterSkinControlStyle('SkinButton',TSkinButtonDefaultType,TSkinButtonDefaultMaterial,'Normal',False);
-  RegisterSkinControlStyle('SkinButton',TSkinButtonDefaultType,TSkinButtonDefaultMaterial,'NormalPushed',False);
+  RegisterSkinControlStyle('SkinButton',TSkinButtonDefaultType,TSkinButtonDefaultMaterial,TButtonProperties,Const_Default_ComponentType,True);
+  RegisterSkinControlStyle('SkinButton',TSkinButtonDefaultType,TSkinButtonDefaultMaterial,TButtonProperties,'Normal',False);
+  RegisterSkinControlStyle('SkinButton',TSkinButtonDefaultType,TSkinButtonDefaultMaterial,TButtonProperties,'NormalPushed',False);
 
 
   //按钮分组
-  RegisterSkinControlStyle('SkinButtonGroup',TSkinButtonGroupDefaultType,TSkinButtonGroupDefaultMaterial,Const_Default_ComponentType,True);
-  RegisterSkinControlStyle('SkinButtonGroup',TSkinButtonGroupDefaultType,TSkinButtonGroupDefaultMaterial,'Normal',False);
-  RegisterSkinControlStyle('SkinButtonGroup',TSkinButtonGroupDefaultType,TSkinButtonGroupDefaultMaterial,'NormalPushed',False);
+  RegisterSkinControlStyle('SkinButtonGroup',TSkinButtonGroupDefaultType,TSkinButtonGroupDefaultMaterial,TButtonGroupProperties,Const_Default_ComponentType,True);
+  RegisterSkinControlStyle('SkinButtonGroup',TSkinButtonGroupDefaultType,TSkinButtonGroupDefaultMaterial,TButtonGroupProperties,'Normal',False);
+  RegisterSkinControlStyle('SkinButtonGroup',TSkinButtonGroupDefaultType,TSkinButtonGroupDefaultMaterial,TButtonGroupProperties,'NormalPushed',False);
 
 
 

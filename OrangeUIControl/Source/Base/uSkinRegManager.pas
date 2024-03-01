@@ -41,7 +41,7 @@ type
 
   //控件类型项
   TControlTypeReg=class
-  private
+  public
     //是否是默认
     FIsDefault:Boolean;
     //控件类型
@@ -52,6 +52,8 @@ type
     FControlTypeClass: TControlTypeClass;
     //素材类
     FMaterialClass: TMaterialClass;
+    //属性类型
+    FPropertiesClass:TSkinControlPropertiesClass;
   public
     //是否是默认
     property IsDefault:Boolean read FIsDefault write FIsDefault;
@@ -151,6 +153,7 @@ function RegisterSkinControlStyle(
             const AControlClassify:String;
             AControlTypeClass:TControlTypeClass;
             AMaterialClass:TMaterialClass;
+            APropertiesClass:TSkinControlPropertiesClass;
             Const AControlTypeName:String;
             const AIsDefault:Boolean;
             const ADescription:String=''):TControlTypeReg;
@@ -230,6 +233,7 @@ end;
 function RegisterSkinControlStyle(const AControlClassify:String;
                                   AControlTypeClass:TControlTypeClass;
                                   AMaterialClass:TMaterialClass;
+                                  APropertiesClass:TSkinControlPropertiesClass;
                                   Const AControlTypeName:String;
                                   const AIsDefault:Boolean;
                                   const ADescription:String):TControlTypeReg;
@@ -257,6 +261,7 @@ begin
   Result.FControlTypeClass:=AControlTypeClass;
   Result.FMaterialClass:=AMaterialClass;
   Result.FControlTypeName:=AControlTypeName;
+  Result.FPropertiesClass:=APropertiesClass;
   Result.FDescription:=ADescription;
   Result.FIsDefault:=AIsDefault;
 

@@ -518,6 +518,8 @@ type
                        Y1:Double;
                        X2:Double;
                        Y2:Double):Boolean;virtual;abstract;
+    function DrawBezierLine(const ADrawLineParam:TDrawLineParam;
+                      APoints:Array of TPointF):Boolean;virtual;abstract;
     function DrawRectLine(const ADrawLineParam:TDrawLineParam;
                           const ADrawRect:TRectF;
                           ALinePosition:TDRPLinePosition):Boolean;virtual;
@@ -766,6 +768,7 @@ var
 //计算出圆弧形上的某个角度上的点
 function CalcArcStopPoint(ACenter:TPointF;ARadius:Double;AAngle:Double):TPointF;
 
+procedure getCtrlPoint(ps:array of TPointF; i:Integer; var pA:TPointF;var pB:TPointF);
 
 
 implementation
@@ -795,6 +798,86 @@ var
   ScreenSrv: IFMXScreenService;
 {$ENDIF}
 
+
+///*
+//*根据已知点获取第i个控制点的坐标
+//*param ps	已知曲线将经过的坐标点
+//*param i	第i个坐标点
+//*param a,b	可以自定义的正数
+//*/
+//function getCtrlPoint(ps:TPointF; i:Integer; var pA:TPointF;var pb:TPointF);
+//var
+//  a:Double;
+//  b:Double;
+//begin
+////	if(!a||!b){
+//		a=0.25;
+//		b=0.25;
+////	}
+//	//处理两种极端情形
+//	if(length(ps)-3){
+//		var last=ps.length-1
+//		var pBx = ps[last].x - (ps[last].x-ps[last-1].x)*b;
+//		var pBy = ps[last].y - (ps[last].y-ps[last-1].y)*b;
+//	}else{
+//		var pBx = ps[i+1].x - (ps[i+2].x-ps[i].x)*b;
+//		var pBy = ps[i+1].y - (ps[i+2].y-ps[i].y)*b;
+//	}
+////	return {
+////		pA:{x:pAx,y:pAy},
+////		pB:{x:pBx,y:pBy}
+////	}
+//end;
+
+
+//procedure getCtrlPoint(ps:array of TPointF; i:Integer; var pA:TPointF;var pb:TPointF);
+//var
+//  ratio:Double;
+//  p1,p2:TPointF;
+//begin
+//    //计算控制点
+//    ratio := 0.3;
+//    p1 := ps[i];
+//    p2 := ps[i + 1];
+//
+//    pA.x := p1.x + ratio * (p2.x - p1.x);
+//    pA.y := p1.y;
+//    pb.x := p1.x + (1 - ratio) * (p2.x - p1.x);
+//    pb.y := p2.y;
+//end;
+
+
+
+
+
+//https://devallever.github.io/2017/07/30/custom-bezier-line/
+
+procedure getCtrlPoint(ps:array of TPointF; i:Integer; var pA:TPointF;var pB:TPointF);
+begin
+  if (i = 0) then
+  begin
+      //第一断1曲线 控制点
+      pA.X := ps[i].x + (ps[i+1].x-ps[i].x)/4;
+      pA.Y := ps[i].y + (ps[i+1].y-ps[i].y)/4;
+      pB.X := ps[i+1].x - (ps[i+2].x - ps[i].x)/4;
+      pB.Y := ps[i+1].y - (ps[i+2].y - ps[i].y)/4;
+  end
+  else if (i = Length(ps) - 2) then
+  begin
+      //最后一段曲线 控制点
+      pA.X := ps[i].x + (ps[i+1].x-ps[i-1].x)/4;
+      pA.Y := ps[i].y + (ps[i+1].y-ps[i-1].y)/4;
+      pB.X := ps[i+1].x - (ps[i+1].x - ps[i].x)/4;
+      pB.Y := ps[i+1].y - (ps[i+1].y - ps[i].y)/4;
+  end
+  else
+  begin
+      pA.X := ps[i].x + (ps[i+1].x-ps[i-1].x)/4;
+      pA.Y := ps[i].y + (ps[i+1].y-ps[i-1].y)/4;
+      pB.X := ps[i+1].x - (ps[i+2].x - ps[i].x)/4;
+      pB.Y := ps[i+1].y - (ps[i+2].y - ps[i].y)/4;
+  end;
+end;
 
 
 //创建画布

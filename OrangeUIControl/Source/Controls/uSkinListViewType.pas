@@ -2743,7 +2743,7 @@ end;
 initialization
   RegisterClasses([TSkinListView]);
   //列表视图
-  RegisterSkinControlStyle('SkinListView',TSkinListViewDefaultType,TSkinListViewDefaultMaterial,Const_Default_ComponentType,True);
+  RegisterSkinControlStyle('SkinListView',TSkinListViewDefaultType,TSkinListViewDefaultMaterial,TListViewProperties,Const_Default_ComponentType,True);
 
 
 end.

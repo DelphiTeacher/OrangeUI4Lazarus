@@ -60,7 +60,7 @@ type
   TLabelProperties=class;
   TRollLabelProperties=class;
   THintLabelProperties=class;
-
+  TSkinLabelDefaultMaterial=class;
 
 
 
@@ -77,6 +77,7 @@ type
     function GetCaption:String;
     procedure SetCaption(const Value:String);
     property Caption:String read GetCaption write SetCaption;
+    function Material:TSkinLabelDefaultMaterial;
 
     function GetLabelProperties:TLabelProperties;
     property Properties:TLabelProperties read GetLabelProperties;
@@ -311,6 +312,7 @@ type
                     IBindSkinItemValueControl,
                     IProcessItemColor)
   private
+    function GetSelfOwnMaterial:TSkinLabelDefaultMaterial;
     function GetLabelProperties:TLabelProperties;
     procedure SetLabelProperties(Value:TLabelProperties);
   protected
@@ -717,6 +719,11 @@ end;
 function TSkinLabel.GetPropertiesClassType: TPropertiesClassType;
 begin
   Result:=TLabelProperties;
+end;
+
+function TSkinLabel.GetSelfOwnMaterial: TSkinLabelDefaultMaterial;
+begin
+  Result:=TSkinLabelDefaultMaterial(Self.FMaterial);
 end;
 
 function TSkinLabel.GetLabelProperties: TLabelProperties;
@@ -1207,9 +1214,9 @@ initialization
   RegisterClasses([TSkinHintLabel]);
 
   //标签
-  RegisterSkinControlStyle('SkinLabel',TSkinLabelDefaultType,TSkinLabelDefaultMaterial,Const_Default_ComponentType,True);
-  RegisterSkinControlStyle('SkinRollLabel',TSkinRollLabelType,TSkinLabelDefaultMaterial,Const_Default_ComponentType,True);
-  RegisterSkinControlStyle('SkinHintLabel',TSkinHintLabelType,TSkinHintLabelMaterial,Const_Default_ComponentType,True);
+  RegisterSkinControlStyle('SkinLabel',TSkinLabelDefaultType,TSkinLabelDefaultMaterial,TLabelProperties,Const_Default_ComponentType,True);
+  RegisterSkinControlStyle('SkinRollLabel',TSkinRollLabelType,TSkinLabelDefaultMaterial,TLabelProperties,Const_Default_ComponentType,True);
+  RegisterSkinControlStyle('SkinHintLabel',TSkinHintLabelType,TSkinHintLabelMaterial,TLabelProperties,Const_Default_ComponentType,True);
 
 
 end.

@@ -393,7 +393,8 @@ type
     property Properties:TSkinControlProperties read GetProperties write SetProperties;
     property Prop:TSkinControlProperties read GetProperties write SetProperties;
 
-
+    function GetSelfOwnMaterial:TSkinControlMaterial;
+    property Material:TSkinControlMaterial read GetSelfOwnMaterial;
     /// <summary>
     ///   <para>
     ///     获取当前使用的皮肤素材
@@ -649,6 +650,7 @@ type
     procedure ISkinControl_CustomMouseEnter;
     procedure ISkinControl_CustomMouseLeave;
 
+    //好像暂时也用不到呀这些事件
     function GetOnCustomMouseDown:TMouseEvent;
     function GetOnCustomMouseUp:TMouseEvent;
     function GetOnCustomMouseMove:TMouseMoveEvent;
@@ -1101,6 +1103,7 @@ type
 
   {$REGION '控件的基本属性TSkinControlProperties'}
   TPropertiesClassType=class of TSkinControlProperties;
+  TSkinControlPropertiesClass=class of TSkinControlProperties;
 
 
 
@@ -2663,21 +2666,21 @@ begin
 
   if Not ASkinControl.GetInterface(IID_ISkinControl,Self.FSkinControlIntf) then
   begin
-    ShowException('This Component Do not Support ISkinComponent Interface');
+    ShowException('This Component Do not Support ISkinControl Interface');
   end
   else
   begin
     FSkinControl:=ASkinControl;
   end;
 
-  if Not ASkinControl.GetInterface(IID_ISkinControl,Self.FSkinControlIntf) then
-  begin
-    ShowException('This Component Do not Support ISkinControl Interface');
-  end
-  else
-  begin
+//  if Not ASkinControl.GetInterface(IID_ISkinControl,Self.FSkinControlIntf) then
+//  begin
+//    ShowException('This Component Do not Support ISkinControl Interface');
+//  end
+//  else
+//  begin
     FAutoSize:=False;
-  end;
+//  end;
 end;
 
 procedure TSkinControlProperties.Invalidate;

@@ -1010,7 +1010,7 @@ initialization
   RegisterClasses([TSkinDrawPanel]);
 
   //画板
-  RegisterSkinControlStyle('SkinDrawPanel',TSkinDrawPanelDefaultType,TSkinDrawPanelDefaultMaterial,Const_Default_ComponentType,True);
+  RegisterSkinControlStyle('SkinDrawPanel',TSkinDrawPanelDefaultType,TSkinDrawPanelDefaultMaterial,TDrawPanelProperties,Const_Default_ComponentType,True);
 
 
 

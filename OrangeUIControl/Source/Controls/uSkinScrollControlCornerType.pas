@@ -327,7 +327,7 @@ end;
 initialization
   RegisterClasses([TSkinScrollControlCorner]);
   //滚动角
-  RegisterSkinControlStyle('SkinScrollControlCorner',TSkinScrollControlCornerDefaultType,TSkinScrollControlCornerDefaultMaterial,Const_Default_ComponentType,True);
+  RegisterSkinControlStyle('SkinScrollControlCorner',TSkinScrollControlCornerDefaultType,TSkinScrollControlCornerDefaultMaterial,TScrollControlCornerProperties,Const_Default_ComponentType,True);
 
 
 end.
