@@ -6,7 +6,7 @@
 ## Website
 [www.orangeui.cn](https://www.orangeui.cn)
 
-English | [简体中文](./README.zh-CN.md)
+English | [简体中文](./README.zh_CN.md)
 
 
 
