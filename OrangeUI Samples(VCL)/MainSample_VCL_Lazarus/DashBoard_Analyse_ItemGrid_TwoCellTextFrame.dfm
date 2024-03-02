@@ -1,22 +1,17 @@
 object FrameItemGrid_TwoCellText: TFrameItemGrid_TwoCellText
   Left = 0
-  Height = 400
   Top = 0
   Width = 632
-  ClientHeight = 400
-  ClientWidth = 632
+  Height = 400
   ParentBackground = False
   TabOrder = 0
-  DesignLeft = 698
-  DesignTop = 377
   object pnlClient: TSkinWinPanel
     Left = 0
-    Height = 400
     Top = 0
     Width = 632
-    ParentMouseEvent = False
+    Height = 400
+    ParentMouseEvent = True
     DirectUIVisible = False
-    AlignWithMagins = False
     ComponentTypeUseKind = ctukDefault
     MaterialUseKind = mukSelfOwn
     KeepSelfOwnMaterial = True
@@ -43,8 +38,10 @@ object FrameItemGrid_TwoCellText: TFrameItemGrid_TwoCellText
     SelfOwnMaterial.IsTransparent = True
     SelfOwnMaterial.DrawCaptionParam.FontName = 'Tahoma'
     SelfOwnMaterial.DrawCaptionParam.FontSize = 8
+    SelfOwnMaterial.DrawCaptionParam.DrawFont.Charset = DEFAULT_CHARSET
     SelfOwnMaterial.DrawCaptionParam.DrawFont.Height = -11
     SelfOwnMaterial.DrawCaptionParam.DrawFont.Name = 'Tahoma'
+    SelfOwnMaterial.DrawCaptionParam.DrawFont.Style = []
     SelfOwnMaterial.DrawCaptionParam.DrawFont.FontColor.Alpha = 255
     SelfOwnMaterial.DrawCaptionParam.FontTrimming = fttNone
     SelfOwnMaterial.DrawCaptionParam.FontHorzAlign = fhaLeft
@@ -62,28 +59,36 @@ object FrameItemGrid_TwoCellText: TFrameItemGrid_TwoCellText
     HitTest = False
     MouseDownFocus = False
     Align = alClient
-    ParentBackground = True
+    ParentBackground = False
     TabOrder = 0
+    Caption = ''
+    Text = ''
+    DesignSize = (
+      632
+      400)
     object lblCaption: TLabel
       Left = 21
-      Height = 29
       Top = 8
-      Width = 76
-      Caption = '热卖商品'
+      Width = 107
+      Height = 23
+      Caption = 'hot sale item'
+      Color = clBtnFace
+      Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -19
       Font.Name = 'Tahoma'
+      Font.Style = []
       ParentColor = False
       ParentFont = False
+      Transparent = True
     end
     object gridData: TSkinWinItemGrid
       Left = 32
-      Height = 330
       Top = 49
       Width = 569
-      ParentMouseEvent = False
+      Height = 330
+      ParentMouseEvent = True
       DirectUIVisible = False
-      AlignWithMagins = False
       ComponentTypeUseKind = ctukDefault
       MaterialUseKind = mukSelfOwn
       KeepSelfOwnMaterial = True
@@ -132,8 +137,10 @@ object FrameItemGrid_TwoCellText: TFrameItemGrid_TwoCellText
       SelfOwnMaterial.PullDownRefreshPanelMaterial.LoadingPicture.FixedColor.Alpha = 255
       SelfOwnMaterial.PullDownRefreshPanelMaterial.DrawLoadingCaptionParam.FontName = 'Tahoma'
       SelfOwnMaterial.PullDownRefreshPanelMaterial.DrawLoadingCaptionParam.FontSize = 8
+      SelfOwnMaterial.PullDownRefreshPanelMaterial.DrawLoadingCaptionParam.DrawFont.Charset = DEFAULT_CHARSET
       SelfOwnMaterial.PullDownRefreshPanelMaterial.DrawLoadingCaptionParam.DrawFont.Height = -11
       SelfOwnMaterial.PullDownRefreshPanelMaterial.DrawLoadingCaptionParam.DrawFont.Name = 'Tahoma'
+      SelfOwnMaterial.PullDownRefreshPanelMaterial.DrawLoadingCaptionParam.DrawFont.Style = []
       SelfOwnMaterial.PullDownRefreshPanelMaterial.DrawLoadingCaptionParam.DrawFont.FontColor.Alpha = 255
       SelfOwnMaterial.PullDownRefreshPanelMaterial.DrawLoadingCaptionParam.FontTrimming = fttNone
       SelfOwnMaterial.PullDownRefreshPanelMaterial.DrawLoadingCaptionParam.FontHorzAlign = fhaLeft
@@ -151,9 +158,9 @@ object FrameItemGrid_TwoCellText: TFrameItemGrid_TwoCellText
       SelfOwnMaterial.PullDownRefreshPanelMaterial.EnableAutoCenterPosition = False
       SelfOwnMaterial.PullDownRefreshPanelMaterial.EnableLoadingImageBiggerEffect = False
       SelfOwnMaterial.PullDownRefreshPanelMaterial.EnableLoadingImageRotateEffect = True
-      SelfOwnMaterial.PullDownRefreshPanelMaterial.LoadingCaption = '正在刷新...'
-      SelfOwnMaterial.PullDownRefreshPanelMaterial.DecidedLoadCaption = '松开刷新'
-      SelfOwnMaterial.PullDownRefreshPanelMaterial.UnDecidedLoadCaption = '下拉刷新'
+      SelfOwnMaterial.PullDownRefreshPanelMaterial.LoadingCaption = #23157#57789#32336#32498#34249#65122#38991#22557#30982#38337#22446#57542#37907#8364'...'
+      SelfOwnMaterial.PullDownRefreshPanelMaterial.DecidedLoadCaption = #38337#21700#58928#37710#23815#27088#37812#65088#30982#38337#22446#57542#37907#8364
+      SelfOwnMaterial.PullDownRefreshPanelMaterial.UnDecidedLoadCaption = #28638#25118#25400#38993#21976#21002#23090#57412#30982#38337#22446#57542#37907#8364
       SelfOwnMaterial.PullUpLoadMorePanelMaterial.BackColor.Color = clWhite
       SelfOwnMaterial.PullUpLoadMorePanelMaterial.BackColor.IsFill = True
       SelfOwnMaterial.PullUpLoadMorePanelMaterial.BackColor.FillColor.Alpha = 255
@@ -179,8 +186,10 @@ object FrameItemGrid_TwoCellText: TFrameItemGrid_TwoCellText
       SelfOwnMaterial.PullUpLoadMorePanelMaterial.LoadingPicture.FixedColor.Alpha = 255
       SelfOwnMaterial.PullUpLoadMorePanelMaterial.DrawLoadingCaptionParam.FontName = 'Tahoma'
       SelfOwnMaterial.PullUpLoadMorePanelMaterial.DrawLoadingCaptionParam.FontSize = 8
+      SelfOwnMaterial.PullUpLoadMorePanelMaterial.DrawLoadingCaptionParam.DrawFont.Charset = DEFAULT_CHARSET
       SelfOwnMaterial.PullUpLoadMorePanelMaterial.DrawLoadingCaptionParam.DrawFont.Height = -11
       SelfOwnMaterial.PullUpLoadMorePanelMaterial.DrawLoadingCaptionParam.DrawFont.Name = 'Tahoma'
+      SelfOwnMaterial.PullUpLoadMorePanelMaterial.DrawLoadingCaptionParam.DrawFont.Style = []
       SelfOwnMaterial.PullUpLoadMorePanelMaterial.DrawLoadingCaptionParam.DrawFont.FontColor.Alpha = 255
       SelfOwnMaterial.PullUpLoadMorePanelMaterial.DrawLoadingCaptionParam.FontTrimming = fttNone
       SelfOwnMaterial.PullUpLoadMorePanelMaterial.DrawLoadingCaptionParam.FontHorzAlign = fhaLeft
@@ -198,13 +207,15 @@ object FrameItemGrid_TwoCellText: TFrameItemGrid_TwoCellText
       SelfOwnMaterial.PullUpLoadMorePanelMaterial.EnableAutoCenterPosition = False
       SelfOwnMaterial.PullUpLoadMorePanelMaterial.EnableLoadingImageBiggerEffect = False
       SelfOwnMaterial.PullUpLoadMorePanelMaterial.EnableLoadingImageRotateEffect = True
-      SelfOwnMaterial.PullUpLoadMorePanelMaterial.LoadingCaption = '正在加载...'
-      SelfOwnMaterial.PullUpLoadMorePanelMaterial.DecidedLoadCaption = '松开加载更多'
-      SelfOwnMaterial.PullUpLoadMorePanelMaterial.UnDecidedLoadCaption = '上拉加载更多'
+      SelfOwnMaterial.PullUpLoadMorePanelMaterial.LoadingCaption = #23157#57789#32336#32498#34249#65122#38991#22557#30985#38331#27196#20772#32449'?..'
+      SelfOwnMaterial.PullUpLoadMorePanelMaterial.DecidedLoadCaption = #38337#21700#58928#37710#23815#27088#37812#65088#30985#38331#27196#20772#32449#20276#26593#37733#12582#32145#26916'?'
+      SelfOwnMaterial.PullUpLoadMorePanelMaterial.UnDecidedLoadCaption = #28638#25118#25400#38165#12518#21002#23090#57412#30985#38331#27196#20772#32449#20276#26593#37733#12582#32145#26916'?'
       SelfOwnMaterial.DrawEmptyContentCaptionParam.FontName = 'Tahoma'
       SelfOwnMaterial.DrawEmptyContentCaptionParam.FontSize = 8
+      SelfOwnMaterial.DrawEmptyContentCaptionParam.DrawFont.Charset = DEFAULT_CHARSET
       SelfOwnMaterial.DrawEmptyContentCaptionParam.DrawFont.Height = -11
       SelfOwnMaterial.DrawEmptyContentCaptionParam.DrawFont.Name = 'Tahoma'
+      SelfOwnMaterial.DrawEmptyContentCaptionParam.DrawFont.Style = []
       SelfOwnMaterial.DrawEmptyContentCaptionParam.DrawFont.FontColor.Alpha = 255
       SelfOwnMaterial.DrawEmptyContentCaptionParam.FontTrimming = fttNone
       SelfOwnMaterial.DrawEmptyContentCaptionParam.FontHorzAlign = fhaLeft
@@ -221,8 +232,10 @@ object FrameItemGrid_TwoCellText: TFrameItemGrid_TwoCellText
       SelfOwnMaterial.DrawEmptyContentCaptionParam.DrawEffectSetting.FocusedEffect.FontSize = 12
       SelfOwnMaterial.DrawEmptyContentDescriptionParam.FontName = 'Tahoma'
       SelfOwnMaterial.DrawEmptyContentDescriptionParam.FontSize = 8
+      SelfOwnMaterial.DrawEmptyContentDescriptionParam.DrawFont.Charset = DEFAULT_CHARSET
       SelfOwnMaterial.DrawEmptyContentDescriptionParam.DrawFont.Height = -11
       SelfOwnMaterial.DrawEmptyContentDescriptionParam.DrawFont.Name = 'Tahoma'
+      SelfOwnMaterial.DrawEmptyContentDescriptionParam.DrawFont.Style = []
       SelfOwnMaterial.DrawEmptyContentDescriptionParam.DrawFont.FontColor.Alpha = 255
       SelfOwnMaterial.DrawEmptyContentDescriptionParam.FontTrimming = fttNone
       SelfOwnMaterial.DrawEmptyContentDescriptionParam.FontHorzAlign = fhaLeft
@@ -353,8 +366,10 @@ object FrameItemGrid_TwoCellText: TFrameItemGrid_TwoCellText
       SelfOwnMaterial.DrawCheckBoxColorMaterial.IsAutoPosition = False
       SelfOwnMaterial.DrawCheckBoxColorMaterial.DrawCaptionParam.FontName = 'Tahoma'
       SelfOwnMaterial.DrawCheckBoxColorMaterial.DrawCaptionParam.FontSize = 8
+      SelfOwnMaterial.DrawCheckBoxColorMaterial.DrawCaptionParam.DrawFont.Charset = DEFAULT_CHARSET
       SelfOwnMaterial.DrawCheckBoxColorMaterial.DrawCaptionParam.DrawFont.Height = -11
       SelfOwnMaterial.DrawCheckBoxColorMaterial.DrawCaptionParam.DrawFont.Name = 'Tahoma'
+      SelfOwnMaterial.DrawCheckBoxColorMaterial.DrawCaptionParam.DrawFont.Style = []
       SelfOwnMaterial.DrawCheckBoxColorMaterial.DrawCaptionParam.DrawFont.FontColor.Alpha = 255
       SelfOwnMaterial.DrawCheckBoxColorMaterial.DrawCaptionParam.FontTrimming = fttNone
       SelfOwnMaterial.DrawCheckBoxColorMaterial.DrawCaptionParam.FontHorzAlign = fhaLeft
@@ -387,7 +402,7 @@ object FrameItemGrid_TwoCellText: TFrameItemGrid_TwoCellText
       SelfOwnMaterial.DrawCheckBoxColorMaterial.DrawPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
       SelfOwnMaterial.DrawCheckBoxColorMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
       SelfOwnMaterial.DrawCheckBoxColorMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
-      SelfOwnMaterial.DrawCheckBoxColorMaterial.CheckChar = '✔'
+      SelfOwnMaterial.DrawCheckBoxColorMaterial.CheckChar = #38337'?'
       SelfOwnMaterial.DrawCheckBoxColorMaterial.DrawCheckStateParam.IsFill = False
       SelfOwnMaterial.DrawCheckBoxColorMaterial.DrawCheckStateParam.FillColor.Alpha = 255
       SelfOwnMaterial.DrawCheckBoxColorMaterial.DrawCheckStateParam.PenColor.Alpha = 255
@@ -428,8 +443,10 @@ object FrameItemGrid_TwoCellText: TFrameItemGrid_TwoCellText
       SelfOwnMaterial.DrawCheckBoxColorMaterial.IsSimpleDrawCheckChar = False
       SelfOwnMaterial.DrawCheckBoxColorMaterial.DrawCheckCharParam.FontName = 'Tahoma'
       SelfOwnMaterial.DrawCheckBoxColorMaterial.DrawCheckCharParam.FontSize = 8
+      SelfOwnMaterial.DrawCheckBoxColorMaterial.DrawCheckCharParam.DrawFont.Charset = DEFAULT_CHARSET
       SelfOwnMaterial.DrawCheckBoxColorMaterial.DrawCheckCharParam.DrawFont.Height = -11
       SelfOwnMaterial.DrawCheckBoxColorMaterial.DrawCheckCharParam.DrawFont.Name = 'Tahoma'
+      SelfOwnMaterial.DrawCheckBoxColorMaterial.DrawCheckCharParam.DrawFont.Style = []
       SelfOwnMaterial.DrawCheckBoxColorMaterial.DrawCheckCharParam.DrawFont.FontColor.Alpha = 255
       SelfOwnMaterial.DrawCheckBoxColorMaterial.DrawCheckCharParam.FontTrimming = fttNone
       SelfOwnMaterial.DrawCheckBoxColorMaterial.DrawCheckCharParam.FontHorzAlign = fhaLeft
@@ -538,8 +555,10 @@ object FrameItemGrid_TwoCellText: TFrameItemGrid_TwoCellText
       SelfOwnMaterial.IsDrawIndicatorNumber = True
       SelfOwnMaterial.DrawIndicatorNumberParam.FontName = 'Tahoma'
       SelfOwnMaterial.DrawIndicatorNumberParam.FontSize = 8
+      SelfOwnMaterial.DrawIndicatorNumberParam.DrawFont.Charset = DEFAULT_CHARSET
       SelfOwnMaterial.DrawIndicatorNumberParam.DrawFont.Height = -11
       SelfOwnMaterial.DrawIndicatorNumberParam.DrawFont.Name = 'Tahoma'
+      SelfOwnMaterial.DrawIndicatorNumberParam.DrawFont.Style = []
       SelfOwnMaterial.DrawIndicatorNumberParam.DrawFont.FontColor.Alpha = 255
       SelfOwnMaterial.DrawIndicatorNumberParam.FontTrimming = fttNone
       SelfOwnMaterial.DrawIndicatorNumberParam.FontHorzAlign = fhaLeft
@@ -620,10 +639,10 @@ object FrameItemGrid_TwoCellText: TFrameItemGrid_TwoCellText
       SelfOwnMaterial.DrawIndicatorDevideMaterial.IsDrawColEndLine = False
       SelfOwnMaterial.DrawIndicatorDevideMaterial.DrawRowLineParam.Color.Alpha = 255
       SelfOwnMaterial.DrawIndicatorDevideMaterial.DrawRowLineParam.Color.Color = -2830136
-      SelfOwnMaterial.DrawIndicatorDevideMaterial.DrawRowLineParam.PenWidth = 1
+      SelfOwnMaterial.DrawIndicatorDevideMaterial.DrawRowLineParam.PenWidth = 1.000000000000000000
       SelfOwnMaterial.DrawIndicatorDevideMaterial.DrawColLineParam.Color.Alpha = 255
       SelfOwnMaterial.DrawIndicatorDevideMaterial.DrawColLineParam.Color.Color = -2830136
-      SelfOwnMaterial.DrawIndicatorDevideMaterial.DrawColLineParam.PenWidth = 1
+      SelfOwnMaterial.DrawIndicatorDevideMaterial.DrawColLineParam.PenWidth = 1.000000000000000000
       SelfOwnMaterial.ColumnHeaderBackColor.Color = clWhite
       SelfOwnMaterial.ColumnHeaderBackColor.IsFill = False
       SelfOwnMaterial.ColumnHeaderBackColor.FillColor.Alpha = 255
@@ -685,8 +704,10 @@ object FrameItemGrid_TwoCellText: TFrameItemGrid_TwoCellText
       SelfOwnMaterial.DrawColumnMaterial.DrawCaptionParam.FontName = 'Tahoma'
       SelfOwnMaterial.DrawColumnMaterial.DrawCaptionParam.FontSize = 8
       SelfOwnMaterial.DrawColumnMaterial.DrawCaptionParam.FontColor = clBlack
+      SelfOwnMaterial.DrawColumnMaterial.DrawCaptionParam.DrawFont.Charset = DEFAULT_CHARSET
       SelfOwnMaterial.DrawColumnMaterial.DrawCaptionParam.DrawFont.Height = -11
       SelfOwnMaterial.DrawColumnMaterial.DrawCaptionParam.DrawFont.Name = 'Tahoma'
+      SelfOwnMaterial.DrawColumnMaterial.DrawCaptionParam.DrawFont.Style = []
       SelfOwnMaterial.DrawColumnMaterial.DrawCaptionParam.DrawFont.FontColor.Alpha = 255
       SelfOwnMaterial.DrawColumnMaterial.DrawCaptionParam.FontTrimming = fttNone
       SelfOwnMaterial.DrawColumnMaterial.DrawCaptionParam.FontHorzAlign = fhaLeft
@@ -704,14 +725,16 @@ object FrameItemGrid_TwoCellText: TFrameItemGrid_TwoCellText
       SelfOwnMaterial.DrawColumnMaterial.DrawCellTextParam.FontName = 'Tahoma'
       SelfOwnMaterial.DrawColumnMaterial.DrawCellTextParam.FontSize = 12
       SelfOwnMaterial.DrawColumnMaterial.DrawCellTextParam.FontColor = clBlack
+      SelfOwnMaterial.DrawColumnMaterial.DrawCellTextParam.DrawFont.Charset = DEFAULT_CHARSET
       SelfOwnMaterial.DrawColumnMaterial.DrawCellTextParam.DrawFont.Height = -16
       SelfOwnMaterial.DrawColumnMaterial.DrawCellTextParam.DrawFont.Name = 'Tahoma'
+      SelfOwnMaterial.DrawColumnMaterial.DrawCellTextParam.DrawFont.Style = []
       SelfOwnMaterial.DrawColumnMaterial.DrawCellTextParam.DrawFont.FontColor.Alpha = 255
       SelfOwnMaterial.DrawColumnMaterial.DrawCellTextParam.FontTrimming = fttNone
       SelfOwnMaterial.DrawColumnMaterial.DrawCellTextParam.FontHorzAlign = fhaLeft
       SelfOwnMaterial.DrawColumnMaterial.DrawCellTextParam.FontVertAlign = fvaTop
-      SelfOwnMaterial.DrawColumnMaterial.DrawCellTextParam.DrawRectSetting.Left = 10
-      SelfOwnMaterial.DrawColumnMaterial.DrawCellTextParam.DrawRectSetting.Top = 10
+      SelfOwnMaterial.DrawColumnMaterial.DrawCellTextParam.DrawRectSetting.Left = 10.000000000000000000
+      SelfOwnMaterial.DrawColumnMaterial.DrawCellTextParam.DrawRectSetting.Top = 10.000000000000000000
       SelfOwnMaterial.DrawColumnMaterial.DrawCellTextParam.DrawRectSetting.Enabled = True
       SelfOwnMaterial.DrawColumnMaterial.DrawCellTextParam.DrawRectSetting.SizeType = dpstPixel
       SelfOwnMaterial.DrawColumnMaterial.DrawCellTextParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
@@ -733,8 +756,10 @@ object FrameItemGrid_TwoCellText: TFrameItemGrid_TwoCellText
       SelfOwnMaterial.DrawColumnMaterial.DrawFooterCellTextParam.FontName = 'Tahoma'
       SelfOwnMaterial.DrawColumnMaterial.DrawFooterCellTextParam.FontSize = 8
       SelfOwnMaterial.DrawColumnMaterial.DrawFooterCellTextParam.FontColor = clBlack
+      SelfOwnMaterial.DrawColumnMaterial.DrawFooterCellTextParam.DrawFont.Charset = DEFAULT_CHARSET
       SelfOwnMaterial.DrawColumnMaterial.DrawFooterCellTextParam.DrawFont.Height = -11
       SelfOwnMaterial.DrawColumnMaterial.DrawFooterCellTextParam.DrawFont.Name = 'Tahoma'
+      SelfOwnMaterial.DrawColumnMaterial.DrawFooterCellTextParam.DrawFont.Style = []
       SelfOwnMaterial.DrawColumnMaterial.DrawFooterCellTextParam.DrawFont.FontColor.Alpha = 255
       SelfOwnMaterial.DrawColumnMaterial.DrawFooterCellTextParam.FontTrimming = fttNone
       SelfOwnMaterial.DrawColumnMaterial.DrawFooterCellTextParam.FontHorzAlign = fhaLeft
@@ -752,16 +777,18 @@ object FrameItemGrid_TwoCellText: TFrameItemGrid_TwoCellText
       SelfOwnMaterial.DrawColumnMaterial.DrawCellText1Param.FontName = 'Tahoma'
       SelfOwnMaterial.DrawColumnMaterial.DrawCellText1Param.FontSize = 11
       SelfOwnMaterial.DrawColumnMaterial.DrawCellText1Param.FontColor = clSilver
+      SelfOwnMaterial.DrawColumnMaterial.DrawCellText1Param.DrawFont.Charset = DEFAULT_CHARSET
       SelfOwnMaterial.DrawColumnMaterial.DrawCellText1Param.DrawFont.Color = clSilver
       SelfOwnMaterial.DrawColumnMaterial.DrawCellText1Param.DrawFont.Height = -15
       SelfOwnMaterial.DrawColumnMaterial.DrawCellText1Param.DrawFont.Name = 'Tahoma'
+      SelfOwnMaterial.DrawColumnMaterial.DrawCellText1Param.DrawFont.Style = []
       SelfOwnMaterial.DrawColumnMaterial.DrawCellText1Param.DrawFont.FontColor.Alpha = 255
       SelfOwnMaterial.DrawColumnMaterial.DrawCellText1Param.DrawFont.FontColor.Color = clSilver
       SelfOwnMaterial.DrawColumnMaterial.DrawCellText1Param.FontTrimming = fttNone
       SelfOwnMaterial.DrawColumnMaterial.DrawCellText1Param.FontHorzAlign = fhaLeft
       SelfOwnMaterial.DrawColumnMaterial.DrawCellText1Param.FontVertAlign = fvaTop
-      SelfOwnMaterial.DrawColumnMaterial.DrawCellText1Param.DrawRectSetting.Left = 10
-      SelfOwnMaterial.DrawColumnMaterial.DrawCellText1Param.DrawRectSetting.Top = 35
+      SelfOwnMaterial.DrawColumnMaterial.DrawCellText1Param.DrawRectSetting.Left = 10.000000000000000000
+      SelfOwnMaterial.DrawColumnMaterial.DrawCellText1Param.DrawRectSetting.Top = 35.000000000000000000
       SelfOwnMaterial.DrawColumnMaterial.DrawCellText1Param.DrawRectSetting.Enabled = True
       SelfOwnMaterial.DrawColumnMaterial.DrawCellText1Param.DrawRectSetting.SizeType = dpstPixel
       SelfOwnMaterial.DrawColumnMaterial.DrawCellText1Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
@@ -782,10 +809,10 @@ object FrameItemGrid_TwoCellText: TFrameItemGrid_TwoCellText
       SelfOwnMaterial.DrawColumnDevideMaterial.IsDrawColEndLine = False
       SelfOwnMaterial.DrawColumnDevideMaterial.DrawRowLineParam.Color.Alpha = 255
       SelfOwnMaterial.DrawColumnDevideMaterial.DrawRowLineParam.Color.Color = -2830136
-      SelfOwnMaterial.DrawColumnDevideMaterial.DrawRowLineParam.PenWidth = 1
+      SelfOwnMaterial.DrawColumnDevideMaterial.DrawRowLineParam.PenWidth = 1.000000000000000000
       SelfOwnMaterial.DrawColumnDevideMaterial.DrawColLineParam.Color.Alpha = 255
       SelfOwnMaterial.DrawColumnDevideMaterial.DrawColLineParam.Color.Color = -2830136
-      SelfOwnMaterial.DrawColumnDevideMaterial.DrawColLineParam.PenWidth = 1
+      SelfOwnMaterial.DrawColumnDevideMaterial.DrawColLineParam.PenWidth = 1.000000000000000000
       SelfOwnMaterial.DrawSelectedCellBackColorParam.Color = clWhite
       SelfOwnMaterial.DrawSelectedCellBackColorParam.IsFill = False
       SelfOwnMaterial.DrawSelectedCellBackColorParam.FillColor.Alpha = 255
@@ -932,10 +959,10 @@ object FrameItemGrid_TwoCellText: TFrameItemGrid_TwoCellText
       SelfOwnMaterial.DrawGridCellDevideMaterial.IsDrawColEndLine = False
       SelfOwnMaterial.DrawGridCellDevideMaterial.DrawRowLineParam.Color.Alpha = 255
       SelfOwnMaterial.DrawGridCellDevideMaterial.DrawRowLineParam.Color.Color = 15592941
-      SelfOwnMaterial.DrawGridCellDevideMaterial.DrawRowLineParam.PenWidth = 1
+      SelfOwnMaterial.DrawGridCellDevideMaterial.DrawRowLineParam.PenWidth = 1.000000000000000000
       SelfOwnMaterial.DrawGridCellDevideMaterial.DrawColLineParam.Color.Alpha = 255
       SelfOwnMaterial.DrawGridCellDevideMaterial.DrawColLineParam.Color.Color = -2830136
-      SelfOwnMaterial.DrawGridCellDevideMaterial.DrawColLineParam.PenWidth = 1
+      SelfOwnMaterial.DrawGridCellDevideMaterial.DrawColLineParam.PenWidth = 1.000000000000000000
       SelfOwnMaterial.FooterRowBackColorMaterial.BackColor.Color = clWhite
       SelfOwnMaterial.FooterRowBackColorMaterial.BackColor.IsFill = False
       SelfOwnMaterial.FooterRowBackColorMaterial.BackColor.FillColor.Alpha = 255
@@ -1054,17 +1081,16 @@ object FrameItemGrid_TwoCellText: TFrameItemGrid_TwoCellText
       SelfOwnMaterial.FooterRowBackColorMaterial.IsDiffFixedCols = False
       HitTest = False
       MouseDownFocus = False
-      Anchors = [akTop, akLeft, akRight, akBottom]
+      Anchors = [akLeft, akTop, akRight, akBottom]
       ParentBackground = False
       TabOrder = 0
       OnResize = gridDataResize
       VertScrollBar.Left = 557
-      VertScrollBar.Height = 330
       VertScrollBar.Top = 0
       VertScrollBar.Width = 12
-      VertScrollBar.ParentMouseEvent = False
+      VertScrollBar.Height = 330
+      VertScrollBar.ParentMouseEvent = True
       VertScrollBar.DirectUIVisible = False
-      VertScrollBar.AlignWithMagins = False
       VertScrollBar.ComponentTypeUseKind = ctukDefault
       VertScrollBar.MaterialUseKind = mukSelfOwn
       VertScrollBar.KeepSelfOwnMaterial = True
@@ -1120,12 +1146,11 @@ object FrameItemGrid_TwoCellText: TFrameItemGrid_TwoCellText
       VertScrollBar.Properties.LargeChange = 10
       VertScrollBar.Properties.CanOverRangeTypes = [cortMin, cortMax]
       HorzScrollBar.Left = 0
-      HorzScrollBar.Height = 12
       HorzScrollBar.Top = 318
       HorzScrollBar.Width = 569
-      HorzScrollBar.ParentMouseEvent = False
+      HorzScrollBar.Height = 12
+      HorzScrollBar.ParentMouseEvent = True
       HorzScrollBar.DirectUIVisible = False
-      HorzScrollBar.AlignWithMagins = False
       HorzScrollBar.ComponentTypeUseKind = ctukDefault
       HorzScrollBar.MaterialUseKind = mukSelfOwn
       HorzScrollBar.KeepSelfOwnMaterial = True
@@ -1181,12 +1206,11 @@ object FrameItemGrid_TwoCellText: TFrameItemGrid_TwoCellText
       HorzScrollBar.Properties.LargeChange = 10
       HorzScrollBar.Properties.CanOverRangeTypes = []
       ScrollControlCorner.Left = 557
-      ScrollControlCorner.Height = 12
       ScrollControlCorner.Top = 318
       ScrollControlCorner.Width = 12
-      ScrollControlCorner.ParentMouseEvent = False
+      ScrollControlCorner.Height = 12
+      ScrollControlCorner.ParentMouseEvent = True
       ScrollControlCorner.DirectUIVisible = False
-      ScrollControlCorner.AlignWithMagins = False
       ScrollControlCorner.ComponentTypeUseKind = ctukDefault
       ScrollControlCorner.MaterialUseKind = mukSelfOwn
       ScrollControlCorner.KeepSelfOwnMaterial = True
@@ -1213,8 +1237,8 @@ object FrameItemGrid_TwoCellText: TFrameItemGrid_TwoCellText
       ScrollControlCorner.HitTest = False
       ScrollControlCorner.MouseDownFocus = False
       ScrollControlCorner.ParentBackground = False
-      Properties.ContentWidth = -1
-      Properties.ContentHeight = -1
+      Properties.ContentWidth = -1.000000000000000000
+      Properties.ContentHeight = -1.000000000000000000
       Properties.EnableAutoPullDownRefreshPanel = False
       Properties.EnableAutoPullUpLoadMorePanel = False
       Properties.VertCanOverRangeTypes = [cortMin, cortMax]
@@ -1223,9 +1247,9 @@ object FrameItemGrid_TwoCellText: TFrameItemGrid_TwoCellText
       Properties.HorzScrollBarShowType = sbstNone
       Properties.MultiSelect = False
       Properties.IsAutoSelected = True
-      Properties.ItemHeight = 65
+      Properties.ItemHeight = 65.000000000000000000
       Properties.ItemSpaceType = sistDefault
-      Properties.SelectedItemHeight = -1
+      Properties.SelectedItemHeight = -1.000000000000000000
       Properties.ItemHeightCalcType = isctSeparate
       Properties.ItemPanDragGestureDirection = ipdgdtLeft
       Properties.IsEmptyContent = False
@@ -1233,11 +1257,300 @@ object FrameItemGrid_TwoCellText: TFrameItemGrid_TwoCellText
       Properties.EmptyContentPicture.FixedColor.Alpha = 255
       Properties.ReadOnly = True
       Properties.IsRowSelect = True
-      Properties.Columns = <      
+      Properties.Columns.Data = {
+        140000040000000400000000005C00000018160000001A000000000042006900
+        6E006100720079004F0062006A0065006300740000000E000000000E00080000
+        004800650069006700680074000000000000000000F0BF0E000000000C000800
+        00005700690064007400680000009A9999999999D93F15000000001000040000
+        00560069007300690062006C0065000000FFFFFFFF04000000000A0000000000
+        4E0061006D006500000007000000000800040000005400610067000000000000
+        0007000000000A00040000005400610067003100000000000000150000000010
+        000400000043006800650063006B006500640000000000000007000000001200
+        040000004900740065006D00540079007000650000000000000018120000000A
+        001A000000490063006F006E0000005400440072006100770050006900630074
+        007500720065000000040000000014000000000049006D006100670065004E00
+        61006D00650000001700000000180000000000470049004600460069006C0065
+        0044006100740061000000170000000018000000000053005600470046006900
+        6C0065004400610074006100000004000000000A060A0000004E0061006D0065
+        0000000D54F0790000490063006F006E00000004000000001006060000004300
+        61007000740069006F006E000000076898980000FE560768000004000000000C
+        0600000000470072006F007500700000000652C47E0000070000000012060400
+        000052006F00770043006F0075006E00740000004C8870650000010000000700
+        00000012060400000043006F006C0043006F0075006E00740000001752706500
+        0001000000070000000012080400000052006F00770049006E00640065007800
+        00004C880B4E07680000FFFFFFFF070000000012080400000043006F006C0049
+        006E00640065007800000017520B4E07680000FFFFFFFF0700000000200A0400
+        0000500069006300740075007200650044007200610077005400790070006500
+        0000D87E36527B7C8B570000000000000700000000160A0400000049006D0061
+        006700650049006E006400650078000000FE5647720B4E07680000FFFFFFFF04
+        00000000140A0000000049006D006100670065004E0061006D0065000000FE56
+        47720D54F07900000400000000120C00000000460069006C0065004E0061006D
+        0065000000FE5647728765F64E0D54000004000000001A0E0000000052006500
+        73006F0075007200630065004E0061006D0065000000FE564772448D906E0D54
+        F07900000400000000080A00000000550072006C000000FE564772FE94A56300
+        0015000000001810040000004900730043006C006900700052006F0075006E00
+        640000002F6626546A52C18810620657625F0000000000001900000000160A05
+        0000004600690078006500640043006F006C006F0072000000038C74659C9872
+        8200000000002065181200000008001A00000050006900630000005400440072
+        0061007700500069006300740075007200650000000400000000140000000000
+        49006D006100670065004E0061006D0065000000170000000018000000000047
+        0049004600460069006C00650044006100740061000000170000000018000000
+        0000530056004700460069006C0065004400610074006100000004000000000A
+        06080000004E0061006D00650000000D54F07900005000690063000000040000
+        0000100606000000430061007000740069006F006E000000076898980000FE56
+        4772000004000000000C0600000000470072006F007500700000000652C47E00
+        00070000000012060400000052006F00770043006F0075006E00740000004C88
+        7065000001000000070000000012060400000043006F006C0043006F0075006E
+        007400000017527065000001000000070000000012080400000052006F007700
+        49006E0064006500780000004C880B4E07680000FFFFFFFF0700000000120804
+        00000043006F006C0049006E00640065007800000017520B4E07680000FFFFFF
+        FF0700000000200A040000005000690063007400750072006500440072006100
+        770054007900700065000000D87E36527B7C8B57000000000000070000000016
+        0A0400000049006D0061006700650049006E006400650078000000FE5647720B
+        4E07680000FFFFFFFF0400000000140A0000000049006D006100670065004E00
+        61006D0065000000FE5647720D54F07900000400000000120C00000000460069
+        006C0065004E0061006D0065000000FE5647728765F64E0D5400000400000000
+        1A0E000000005200650073006F0075007200630065004E0061006D0065000000
+        FE564772448D906E0D54F07900000400000000080A00000000550072006C0000
+        00FE564772FE94A563000015000000001810040000004900730043006C006900
+        700052006F0075006E00640000002F6626546A52C18810620657625F00000000
+        00001900000000160A050000004600690078006500640043006F006C006F0072
+        000000038C74659C987282000000000020650700000000120004000000490074
+        0065006D00540079007000650000000000000015000000001C00040000004100
+        750074006F00530069007A006500570069006400740068000000000000001500
+        0000001E00040000004100750074006F00530069007A00650048006500690067
+        0068007400000000000000040000000010000000000043006100700074006900
+        6F006E00000004000000000E0000000000440065007400610069006C00000004
+        00000000100000000000440065007400610069006C0031000000040000000010
+        0000000000440065007400610069006C00320000000400000000100000000000
+        440065007400610069006C003300000004000000001000000000004400650074
+        00610069006C0034000000040000000010000000000044006500740061006900
+        6C00350000000400000000100000000000440065007400610069006C00360000
+        0007000000001400040000004100630063006500730073006F00720079000000
+        0000000018160000001A0000000000420069006E006100720079004F0062006A
+        0065006300740000000E000000000E0008000000480065006900670068007400
+        0000000000000000F0BF0E000000000C00080000005700690064007400680000
+        009A9999999999C93F1500000000100004000000560069007300690062006C00
+        65000000FFFFFFFF04000000000A00000000004E0061006D0065000000070000
+        000008000400000054006100670000000000000007000000000A000400000054
+        0061006700310000000000000015000000001000040000004300680065006300
+        6B006500640000000000000007000000001200040000004900740065006D0054
+        0079007000650000000000000018120000000A001A000000490063006F006E00
+        0000540044007200610077005000690063007400750072006500000004000000
+        0014000000000049006D006100670065004E0061006D00650000001700000000
+        180000000000470049004600460069006C006500440061007400610000001700
+        000000180000000000530056004700460069006C006500440061007400610000
+        0004000000000A060A0000004E0061006D00650000000D54F079000049006300
+        6F006E0000000400000000100606000000430061007000740069006F006E0000
+        00076898980000FE560768000004000000000C0600000000470072006F007500
+        700000000652C47E0000070000000012060400000052006F00770043006F0075
+        006E00740000004C887065000001000000070000000012060400000043006F00
+        6C0043006F0075006E0074000000175270650000010000000700000000120804
+        00000052006F00770049006E0064006500780000004C880B4E07680000FFFFFF
+        FF070000000012080400000043006F006C0049006E0064006500780000001752
+        0B4E07680000FFFFFFFF0700000000200A040000005000690063007400750072
+        006500440072006100770054007900700065000000D87E36527B7C8B57000000
+        0000000700000000160A0400000049006D0061006700650049006E0064006500
+        78000000FE5647720B4E07680000FFFFFFFF0400000000140A0000000049006D
+        006100670065004E0061006D0065000000FE5647720D54F07900000400000000
+        120C00000000460069006C0065004E0061006D0065000000FE5647728765F64E
+        0D54000004000000001A0E000000005200650073006F0075007200630065004E
+        0061006D0065000000FE564772448D906E0D54F07900000400000000080A0000
+        0000550072006C000000FE564772FE94A5630000150000000018100400000049
+        00730043006C006900700052006F0075006E00640000002F6626546A52C18810
+        620657625F0000000000001900000000160A0500000046006900780065006400
+        43006F006C006F0072000000038C74659C987282000000000020621812000000
+        08001A0000005000690063000000540044007200610077005000690063007400
+        7500720065000000040000000014000000000049006D006100670065004E0061
+        006D00650000001700000000180000000000470049004600460069006C006500
+        440061007400610000001700000000180000000000530056004700460069006C
+        0065004400610074006100000004000000000A06080000004E0061006D006500
+        00000D54F0790000500069006300000004000000001006060000004300610070
+        00740069006F006E000000076898980000FE564772000004000000000C060000
+        0000470072006F007500700000000652C47E0000070000000012060400000052
+        006F00770043006F0075006E00740000004C8870650000010000000700000000
+        12060400000043006F006C0043006F0075006E00740000001752706500000100
+        0000070000000012080400000052006F00770049006E0064006500780000004C
+        880B4E07680000FFFFFFFF070000000012080400000043006F006C0049006E00
+        640065007800000017520B4E07680000FFFFFFFF0700000000200A0400000050
+        00690063007400750072006500440072006100770054007900700065000000D8
+        7E36527B7C8B570000000000000700000000160A0400000049006D0061006700
+        650049006E006400650078000000FE5647720B4E07680000FFFFFFFF04000000
+        00140A0000000049006D006100670065004E0061006D0065000000FE5647720D
+        54F07900000400000000120C00000000460069006C0065004E0061006D006500
+        0000FE5647728765F64E0D54000004000000001A0E000000005200650073006F
+        0075007200630065004E0061006D0065000000FE564772448D906E0D54F07900
+        000400000000080A00000000550072006C000000FE564772FE94A56300001500
+        0000001810040000004900730043006C006900700052006F0075006E00640000
+        002F6626546A52C18810620657625F0000000000001900000000160A05000000
+        4600690078006500640043006F006C006F0072000000038C74659C9872820000
+        000000206707000000001200040000004900740065006D005400790070006500
+        00000000000015000000001C00040000004100750074006F00530069007A0065
+        005700690064007400680000000000000015000000001E000400000041007500
+        74006F00530069007A0065004800650069006700680074000000000000000400
+        000000100000000000430061007000740069006F006E00000004000000000E00
+        00000000440065007400610069006C0000000400000000100000000000440065
+        007400610069006C003100000004000000001000000000004400650074006100
+        69006C00320000000400000000100000000000440065007400610069006C0033
+        0000000400000000100000000000440065007400610069006C00340000000400
+        000000100000000000440065007400610069006C003500000004000000001000
+        00000000440065007400610069006C0036000000070000000014000400000041
+        00630063006500730073006F007200790000000000000018160000001A000000
+        0000420069006E006100720079004F0062006A0065006300740000000E000000
+        000E00080000004800650069006700680074000000000000000000F0BF0E0000
+        00000C00080000005700690064007400680000009A9999999999C93F15000000
+        00100004000000560069007300690062006C0065000000FFFFFFFF0400000000
+        0A00000000004E0061006D006500000007000000000800040000005400610067
+        0000000000000007000000000A00040000005400610067003100000000000000
+        150000000010000400000043006800650063006B006500640000000000000007
+        000000001200040000004900740065006D005400790070006500000000000000
+        18120000000A001A000000490063006F006E0000005400440072006100770050
+        006900630074007500720065000000040000000014000000000049006D006100
+        670065004E0061006D0065000000170000000018000000000047004900460046
+        0069006C00650044006100740061000000170000000018000000000053005600
+        4700460069006C0065004400610074006100000004000000000A060A0000004E
+        0061006D00650000000D54F0790000490063006F006E00000004000000001006
+        06000000430061007000740069006F006E000000076898980000FE5607680000
+        04000000000C0600000000470072006F007500700000000652C47E0000070000
+        000012060400000052006F00770043006F0075006E00740000004C8870650000
+        01000000070000000012060400000043006F006C0043006F0075006E00740000
+        0017527065000001000000070000000012080400000052006F00770049006E00
+        64006500780000004C880B4E07680000FFFFFFFF070000000012080400000043
+        006F006C0049006E00640065007800000017520B4E07680000FFFFFFFF070000
+        0000200A04000000500069006300740075007200650044007200610077005400
+        7900700065000000D87E36527B7C8B570000000000000700000000160A040000
+        0049006D0061006700650049006E006400650078000000FE5647720B4E076800
+        00FFFFFFFF0400000000140A0000000049006D006100670065004E0061006D00
+        65000000FE5647720D54F07900000400000000120C00000000460069006C0065
+        004E0061006D0065000000FE5647728765F64E0D54000004000000001A0E0000
+        00005200650073006F0075007200630065004E0061006D0065000000FE564772
+        448D906E0D54F07900000400000000080A00000000550072006C000000FE5647
+        72FE94A563000015000000001810040000004900730043006C00690070005200
+        6F0075006E00640000002F6626546A52C18810620657625F0000000000001900
+        000000160A050000004600690078006500640043006F006C006F007200000003
+        8C74659C98728200000000002063181200000008001A00000050006900630000
+        0054004400720061007700500069006300740075007200650000000400000000
+        14000000000049006D006100670065004E0061006D0065000000170000000018
+        0000000000470049004600460069006C00650044006100740061000000170000
+        0000180000000000530056004700460069006C00650044006100740061000000
+        04000000000A06080000004E0061006D00650000000D54F07900005000690063
+        0000000400000000100606000000430061007000740069006F006E0000000768
+        98980000FE564772000004000000000C0600000000470072006F007500700000
+        000652C47E0000070000000012060400000052006F00770043006F0075006E00
+        740000004C887065000001000000070000000012060400000043006F006C0043
+        006F0075006E0074000000175270650000010000000700000000120804000000
+        52006F00770049006E0064006500780000004C880B4E07680000FFFFFFFF0700
+        00000012080400000043006F006C0049006E00640065007800000017520B4E07
+        680000FFFFFFFF0700000000200A040000005000690063007400750072006500
+        440072006100770054007900700065000000D87E36527B7C8B57000000000000
+        0700000000160A0400000049006D0061006700650049006E0064006500780000
+        00FE5647720B4E07680000FFFFFFFF0400000000140A0000000049006D006100
+        670065004E0061006D0065000000FE5647720D54F07900000400000000120C00
+        000000460069006C0065004E0061006D0065000000FE5647728765F64E0D5400
+        0004000000001A0E000000005200650073006F0075007200630065004E006100
+        6D0065000000FE564772448D906E0D54F07900000400000000080A0000000055
+        0072006C000000FE564772FE94A5630000150000000018100400000049007300
+        43006C006900700052006F0075006E00640000002F6626546A52C18810620657
+        625F0000000000001900000000160A050000004600690078006500640043006F
+        006C006F0072000000038C74659C987282000000000020690700000000120004
+        0000004900740065006D00540079007000650000000000000015000000001C00
+        040000004100750074006F00530069007A006500570069006400740068000000
+        0000000015000000001E00040000004100750074006F00530069007A00650048
+        0065006900670068007400000000000000040000000010000000000043006100
+        7000740069006F006E00000004000000000E0000000000440065007400610069
+        006C0000000400000000100000000000440065007400610069006C0031000000
+        0400000000100000000000440065007400610069006C00320000000400000000
+        100000000000440065007400610069006C003300000004000000001000000000
+        00440065007400610069006C0034000000040000000010000000000044006500
+        7400610069006C00350000000400000000100000000000440065007400610069
+        006C003600000007000000001400040000004100630063006500730073006F00
+        7200790000000000000018160000001A0000000000420069006E006100720079
+        004F0062006A0065006300740000000E000000000E0008000000480065006900
+        6700680074000000000000000000F0BF0E000000000C00080000005700690064
+        007400680000009A9999999999C93F1500000000100004000000560069007300
+        690062006C0065000000FFFFFFFF04000000000A00000000004E0061006D0065
+        000000070000000008000400000054006100670000000000000007000000000A
+        0004000000540061006700310000000000000015000000001000040000004300
+        6800650063006B00650064000000000000000700000000120004000000490074
+        0065006D00540079007000650000000000000018120000000A001A0000004900
+        63006F006E000000540044007200610077005000690063007400750072006500
+        0000040000000014000000000049006D006100670065004E0061006D00650000
+        001700000000180000000000470049004600460069006C006500440061007400
+        610000001700000000180000000000530056004700460069006C006500440061
+        0074006100000004000000000A060A0000004E0061006D00650000000D54F079
+        0000490063006F006E0000000400000000100606000000430061007000740069
+        006F006E000000076898980000FE560768000004000000000C06000000004700
+        72006F007500700000000652C47E0000070000000012060400000052006F0077
+        0043006F0075006E00740000004C887065000001000000070000000012060400
+        000043006F006C0043006F0075006E0074000000175270650000010000000700
+        00000012080400000052006F00770049006E0064006500780000004C880B4E07
+        680000FFFFFFFF070000000012080400000043006F006C0049006E0064006500
+        7800000017520B4E07680000FFFFFFFF0700000000200A040000005000690063
+        007400750072006500440072006100770054007900700065000000D87E36527B
+        7C8B570000000000000700000000160A0400000049006D006100670065004900
+        6E006400650078000000FE5647720B4E07680000FFFFFFFF0400000000140A00
+        00000049006D006100670065004E0061006D0065000000FE5647720D54F07900
+        000400000000120C00000000460069006C0065004E0061006D0065000000FE56
+        47728765F64E0D54000004000000001A0E000000005200650073006F00750072
+        00630065004E0061006D0065000000FE564772448D906E0D54F0790000040000
+        0000080A00000000550072006C000000FE564772FE94A5630000150000000018
+        10040000004900730043006C006900700052006F0075006E00640000002F6626
+        546A52C18810620657625F0000000000001900000000160A0500000046006900
+        78006500640043006F006C006F0072000000038C74659C987282000000000020
+        2E181200000008001A0000005000690063000000540044007200610077005000
+        6900630074007500720065000000040000000014000000000049006D00610067
+        0065004E0061006D006500000017000000001800000000004700490046004600
+        69006C0065004400610074006100000017000000001800000000005300560047
+        00460069006C0065004400610074006100000004000000000A06080000004E00
+        61006D00650000000D54F0790000500069006300000004000000001006060000
+        00430061007000740069006F006E000000076898980000FE5647720000040000
+        00000C0600000000470072006F007500700000000652C47E0000070000000012
+        060400000052006F00770043006F0075006E00740000004C8870650000010000
+        00070000000012060400000043006F006C0043006F0075006E00740000001752
+        7065000001000000070000000012080400000052006F00770049006E00640065
+        00780000004C880B4E07680000FFFFFFFF070000000012080400000043006F00
+        6C0049006E00640065007800000017520B4E07680000FFFFFFFF070000000020
+        0A04000000500069006300740075007200650044007200610077005400790070
+        0065000000D87E36527B7C8B570000000000000700000000160A040000004900
+        6D0061006700650049006E006400650078000000FE5647720B4E07680000FFFF
+        FFFF0400000000140A0000000049006D006100670065004E0061006D00650000
+        00FE5647720D54F07900000400000000120C00000000460069006C0065004E00
+        61006D0065000000FE5647728765F64E0D54000004000000001A0E0000000052
+        00650073006F0075007200630065004E0061006D0065000000FE564772448D90
+        6E0D54F07900000400000000080A00000000550072006C000000FE564772FE94
+        A563000015000000001810040000004900730043006C006900700052006F0075
+        006E00640000002F6626546A52C18810620657625F0000000000001900000000
+        160A050000004600690078006500640043006F006C006F0072000000038C7465
+        9C9872820000000000207507000000001200040000004900740065006D005400
+        79007000650000000000000015000000001C00040000004100750074006F0053
+        0069007A0065005700690064007400680000000000000015000000001E000400
+        00004100750074006F00530069007A0065004800650069006700680074000000
+        000000000400000000100000000000430061007000740069006F006E00000004
+        000000000E0000000000440065007400610069006C0000000400000000100000
+        000000440065007400610069006C003100000004000000001000000000004400
+        65007400610069006C0032000000040000000010000000000044006500740061
+        0069006C00330000000400000000100000000000440065007400610069006C00
+        340000000400000000100000000000440065007400610069006C003500000004
+        00000000100000000000440065007400610069006C0036000000070000000014
+        00040000004100630063006500730073006F0072007900000000000000}
+      Properties.Columns = <
         item
-          Caption = '商品名称'
-          Width = 0.4
+          Selected = False
+          Checked = False
+          Height = -1.000000000000000000
           Visible = True
+          Color = clBlack
+          Width = 0.400000000000000000
+          Icon.IsClipRound = False
+          Icon.FixedColor.Alpha = 255
+          Pic.IsClipRound = False
+          Pic.FixedColor.Alpha = 255
+          Tag = 0
+          Tag1 = 0
+          ItemType = sitDefault
+          Accessory = satNone
+          AutoSizeWidth = False
+          AutoSizeHeight = False
           ReadOnly = False
           AutoSize = False
           AutoSizeMinWidth = 100
@@ -1245,13 +1558,135 @@ object FrameItemGrid_TwoCellText: TFrameItemGrid_TwoCellText
           FooterValueType = fvtNone
           IsUseDefaultGridColumnMaterial = True
           IsUseDefaultGridColumnCaptionParam = True
+          SelfOwnMaterial.BackColor.Color = clWhite
+          SelfOwnMaterial.BackColor.IsFill = True
+          SelfOwnMaterial.BackColor.FillColor.Alpha = 255
+          SelfOwnMaterial.BackColor.BorderColor.Alpha = 255
+          SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
+          SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
+          SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
+          SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.FillColor.Alpha = 255
+          SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.FillColorChangeType = cctNone
+          SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.BorderColor.Alpha = 255
+          SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
+          SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
+          SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
+          SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
+          SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
+          SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.BorderColor.Alpha = 255
+          SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
+          SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.FillColorChangeType = cctNone
+          SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
+          SelfOwnMaterial.IsTransparent = False
+          SelfOwnMaterial.DrawCaptionParam.FontName = 'Tahoma'
+          SelfOwnMaterial.DrawCaptionParam.FontSize = 8
+          SelfOwnMaterial.DrawCaptionParam.FontColor = clBlack
+          SelfOwnMaterial.DrawCaptionParam.DrawFont.Charset = DEFAULT_CHARSET
+          SelfOwnMaterial.DrawCaptionParam.DrawFont.Height = -11
+          SelfOwnMaterial.DrawCaptionParam.DrawFont.Name = 'Tahoma'
+          SelfOwnMaterial.DrawCaptionParam.DrawFont.Style = []
+          SelfOwnMaterial.DrawCaptionParam.DrawFont.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCaptionParam.FontTrimming = fttNone
+          SelfOwnMaterial.DrawCaptionParam.FontHorzAlign = fhaLeft
+          SelfOwnMaterial.DrawCaptionParam.FontVertAlign = fvaTop
+          SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+          SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+          SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.PushedEffect.FontSize = 12
+          SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+          SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+          SelfOwnMaterial.DrawCellTextParam.FontName = 'Tahoma'
+          SelfOwnMaterial.DrawCellTextParam.FontSize = 8
+          SelfOwnMaterial.DrawCellTextParam.FontColor = clBlack
+          SelfOwnMaterial.DrawCellTextParam.DrawFont.Charset = DEFAULT_CHARSET
+          SelfOwnMaterial.DrawCellTextParam.DrawFont.Height = -11
+          SelfOwnMaterial.DrawCellTextParam.DrawFont.Name = 'Tahoma'
+          SelfOwnMaterial.DrawCellTextParam.DrawFont.Style = []
+          SelfOwnMaterial.DrawCellTextParam.DrawFont.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCellTextParam.FontTrimming = fttNone
+          SelfOwnMaterial.DrawCellTextParam.FontHorzAlign = fhaLeft
+          SelfOwnMaterial.DrawCellTextParam.FontVertAlign = fvaTop
+          SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+          SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+          SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.PushedEffect.FontSize = 12
+          SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+          SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+          SelfOwnMaterial.DrawCellPictureParam.FixedColor.Alpha = 255
+          SelfOwnMaterial.DrawCellPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+          SelfOwnMaterial.DrawCellPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+          SelfOwnMaterial.DrawCellPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+          SelfOwnMaterial.DrawCellPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+          SelfOwnMaterial.DrawCellPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+          SelfOwnMaterial.DrawFooterCellTextParam.FontName = 'Tahoma'
+          SelfOwnMaterial.DrawFooterCellTextParam.FontSize = 8
+          SelfOwnMaterial.DrawFooterCellTextParam.FontColor = clBlack
+          SelfOwnMaterial.DrawFooterCellTextParam.DrawFont.Charset = DEFAULT_CHARSET
+          SelfOwnMaterial.DrawFooterCellTextParam.DrawFont.Height = -11
+          SelfOwnMaterial.DrawFooterCellTextParam.DrawFont.Name = 'Tahoma'
+          SelfOwnMaterial.DrawFooterCellTextParam.DrawFont.Style = []
+          SelfOwnMaterial.DrawFooterCellTextParam.DrawFont.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawFooterCellTextParam.FontTrimming = fttNone
+          SelfOwnMaterial.DrawFooterCellTextParam.FontHorzAlign = fhaLeft
+          SelfOwnMaterial.DrawFooterCellTextParam.FontVertAlign = fvaTop
+          SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+          SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+          SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.PushedEffect.FontSize = 12
+          SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+          SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+          SelfOwnMaterial.DrawCellText1Param.FontName = 'Tahoma'
+          SelfOwnMaterial.DrawCellText1Param.FontSize = 8
+          SelfOwnMaterial.DrawCellText1Param.DrawFont.Charset = DEFAULT_CHARSET
+          SelfOwnMaterial.DrawCellText1Param.DrawFont.Height = -11
+          SelfOwnMaterial.DrawCellText1Param.DrawFont.Name = 'Tahoma'
+          SelfOwnMaterial.DrawCellText1Param.DrawFont.Style = []
+          SelfOwnMaterial.DrawCellText1Param.DrawFont.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCellText1Param.FontTrimming = fttNone
+          SelfOwnMaterial.DrawCellText1Param.FontHorzAlign = fhaLeft
+          SelfOwnMaterial.DrawCellText1Param.FontVertAlign = fvaTop
+          SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+          SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+          SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.PushedEffect.FontSize = 12
+          SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+          SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.FocusedEffect.FontSize = 12
           BindItemFieldName = 'ItemCaption'
           BindItemFieldName1 = 'ItemDetail'
-        end      
+        end
         item
-          Caption = '价格'
-          Width = 0.2
+          Selected = False
+          Checked = False
+          Height = -1.000000000000000000
           Visible = True
+          Color = clBlack
+          Width = 0.200000000000000000
+          Icon.IsClipRound = False
+          Icon.FixedColor.Alpha = 255
+          Pic.IsClipRound = False
+          Pic.FixedColor.Alpha = 255
+          Tag = 0
+          Tag1 = 0
+          ItemType = sitDefault
+          Accessory = satNone
+          AutoSizeWidth = False
+          AutoSizeHeight = False
           ReadOnly = False
           AutoSize = False
           AutoSizeMinWidth = 100
@@ -1259,13 +1694,135 @@ object FrameItemGrid_TwoCellText: TFrameItemGrid_TwoCellText
           FooterValueType = fvtNone
           IsUseDefaultGridColumnMaterial = True
           IsUseDefaultGridColumnCaptionParam = True
+          SelfOwnMaterial.BackColor.Color = clWhite
+          SelfOwnMaterial.BackColor.IsFill = True
+          SelfOwnMaterial.BackColor.FillColor.Alpha = 255
+          SelfOwnMaterial.BackColor.BorderColor.Alpha = 255
+          SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
+          SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
+          SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
+          SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.FillColor.Alpha = 255
+          SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.FillColorChangeType = cctNone
+          SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.BorderColor.Alpha = 255
+          SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
+          SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
+          SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
+          SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
+          SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
+          SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.BorderColor.Alpha = 255
+          SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
+          SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.FillColorChangeType = cctNone
+          SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
+          SelfOwnMaterial.IsTransparent = False
+          SelfOwnMaterial.DrawCaptionParam.FontName = 'Tahoma'
+          SelfOwnMaterial.DrawCaptionParam.FontSize = 8
+          SelfOwnMaterial.DrawCaptionParam.FontColor = clBlack
+          SelfOwnMaterial.DrawCaptionParam.DrawFont.Charset = DEFAULT_CHARSET
+          SelfOwnMaterial.DrawCaptionParam.DrawFont.Height = -11
+          SelfOwnMaterial.DrawCaptionParam.DrawFont.Name = 'Tahoma'
+          SelfOwnMaterial.DrawCaptionParam.DrawFont.Style = []
+          SelfOwnMaterial.DrawCaptionParam.DrawFont.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCaptionParam.FontTrimming = fttNone
+          SelfOwnMaterial.DrawCaptionParam.FontHorzAlign = fhaLeft
+          SelfOwnMaterial.DrawCaptionParam.FontVertAlign = fvaTop
+          SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+          SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+          SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.PushedEffect.FontSize = 12
+          SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+          SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+          SelfOwnMaterial.DrawCellTextParam.FontName = 'Tahoma'
+          SelfOwnMaterial.DrawCellTextParam.FontSize = 8
+          SelfOwnMaterial.DrawCellTextParam.FontColor = clBlack
+          SelfOwnMaterial.DrawCellTextParam.DrawFont.Charset = DEFAULT_CHARSET
+          SelfOwnMaterial.DrawCellTextParam.DrawFont.Height = -11
+          SelfOwnMaterial.DrawCellTextParam.DrawFont.Name = 'Tahoma'
+          SelfOwnMaterial.DrawCellTextParam.DrawFont.Style = []
+          SelfOwnMaterial.DrawCellTextParam.DrawFont.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCellTextParam.FontTrimming = fttNone
+          SelfOwnMaterial.DrawCellTextParam.FontHorzAlign = fhaLeft
+          SelfOwnMaterial.DrawCellTextParam.FontVertAlign = fvaTop
+          SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+          SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+          SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.PushedEffect.FontSize = 12
+          SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+          SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+          SelfOwnMaterial.DrawCellPictureParam.FixedColor.Alpha = 255
+          SelfOwnMaterial.DrawCellPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+          SelfOwnMaterial.DrawCellPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+          SelfOwnMaterial.DrawCellPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+          SelfOwnMaterial.DrawCellPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+          SelfOwnMaterial.DrawCellPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+          SelfOwnMaterial.DrawFooterCellTextParam.FontName = 'Tahoma'
+          SelfOwnMaterial.DrawFooterCellTextParam.FontSize = 8
+          SelfOwnMaterial.DrawFooterCellTextParam.FontColor = clBlack
+          SelfOwnMaterial.DrawFooterCellTextParam.DrawFont.Charset = DEFAULT_CHARSET
+          SelfOwnMaterial.DrawFooterCellTextParam.DrawFont.Height = -11
+          SelfOwnMaterial.DrawFooterCellTextParam.DrawFont.Name = 'Tahoma'
+          SelfOwnMaterial.DrawFooterCellTextParam.DrawFont.Style = []
+          SelfOwnMaterial.DrawFooterCellTextParam.DrawFont.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawFooterCellTextParam.FontTrimming = fttNone
+          SelfOwnMaterial.DrawFooterCellTextParam.FontHorzAlign = fhaLeft
+          SelfOwnMaterial.DrawFooterCellTextParam.FontVertAlign = fvaTop
+          SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+          SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+          SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.PushedEffect.FontSize = 12
+          SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+          SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+          SelfOwnMaterial.DrawCellText1Param.FontName = 'Tahoma'
+          SelfOwnMaterial.DrawCellText1Param.FontSize = 8
+          SelfOwnMaterial.DrawCellText1Param.DrawFont.Charset = DEFAULT_CHARSET
+          SelfOwnMaterial.DrawCellText1Param.DrawFont.Height = -11
+          SelfOwnMaterial.DrawCellText1Param.DrawFont.Name = 'Tahoma'
+          SelfOwnMaterial.DrawCellText1Param.DrawFont.Style = []
+          SelfOwnMaterial.DrawCellText1Param.DrawFont.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCellText1Param.FontTrimming = fttNone
+          SelfOwnMaterial.DrawCellText1Param.FontHorzAlign = fhaLeft
+          SelfOwnMaterial.DrawCellText1Param.FontVertAlign = fvaTop
+          SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+          SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+          SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.PushedEffect.FontSize = 12
+          SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+          SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.FocusedEffect.FontSize = 12
           BindItemFieldName = 'ItemDetail1'
           BindItemFieldName1 = 'ItemDetail2'
-        end      
+        end
         item
-          Caption = '数量'
-          Width = 0.2
+          Selected = False
+          Checked = False
+          Height = -1.000000000000000000
           Visible = True
+          Color = clBlack
+          Width = 0.200000000000000000
+          Icon.IsClipRound = False
+          Icon.FixedColor.Alpha = 255
+          Pic.IsClipRound = False
+          Pic.FixedColor.Alpha = 255
+          Tag = 0
+          Tag1 = 0
+          ItemType = sitDefault
+          Accessory = satNone
+          AutoSizeWidth = False
+          AutoSizeHeight = False
           ReadOnly = False
           AutoSize = False
           AutoSizeMinWidth = 100
@@ -1273,13 +1830,135 @@ object FrameItemGrid_TwoCellText: TFrameItemGrid_TwoCellText
           FooterValueType = fvtNone
           IsUseDefaultGridColumnMaterial = True
           IsUseDefaultGridColumnCaptionParam = True
+          SelfOwnMaterial.BackColor.Color = clWhite
+          SelfOwnMaterial.BackColor.IsFill = True
+          SelfOwnMaterial.BackColor.FillColor.Alpha = 255
+          SelfOwnMaterial.BackColor.BorderColor.Alpha = 255
+          SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
+          SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
+          SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
+          SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.FillColor.Alpha = 255
+          SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.FillColorChangeType = cctNone
+          SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.BorderColor.Alpha = 255
+          SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
+          SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
+          SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
+          SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
+          SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
+          SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.BorderColor.Alpha = 255
+          SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
+          SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.FillColorChangeType = cctNone
+          SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
+          SelfOwnMaterial.IsTransparent = False
+          SelfOwnMaterial.DrawCaptionParam.FontName = 'Tahoma'
+          SelfOwnMaterial.DrawCaptionParam.FontSize = 8
+          SelfOwnMaterial.DrawCaptionParam.FontColor = clBlack
+          SelfOwnMaterial.DrawCaptionParam.DrawFont.Charset = DEFAULT_CHARSET
+          SelfOwnMaterial.DrawCaptionParam.DrawFont.Height = -11
+          SelfOwnMaterial.DrawCaptionParam.DrawFont.Name = 'Tahoma'
+          SelfOwnMaterial.DrawCaptionParam.DrawFont.Style = []
+          SelfOwnMaterial.DrawCaptionParam.DrawFont.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCaptionParam.FontTrimming = fttNone
+          SelfOwnMaterial.DrawCaptionParam.FontHorzAlign = fhaLeft
+          SelfOwnMaterial.DrawCaptionParam.FontVertAlign = fvaTop
+          SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+          SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+          SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.PushedEffect.FontSize = 12
+          SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+          SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+          SelfOwnMaterial.DrawCellTextParam.FontName = 'Tahoma'
+          SelfOwnMaterial.DrawCellTextParam.FontSize = 8
+          SelfOwnMaterial.DrawCellTextParam.FontColor = clBlack
+          SelfOwnMaterial.DrawCellTextParam.DrawFont.Charset = DEFAULT_CHARSET
+          SelfOwnMaterial.DrawCellTextParam.DrawFont.Height = -11
+          SelfOwnMaterial.DrawCellTextParam.DrawFont.Name = 'Tahoma'
+          SelfOwnMaterial.DrawCellTextParam.DrawFont.Style = []
+          SelfOwnMaterial.DrawCellTextParam.DrawFont.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCellTextParam.FontTrimming = fttNone
+          SelfOwnMaterial.DrawCellTextParam.FontHorzAlign = fhaLeft
+          SelfOwnMaterial.DrawCellTextParam.FontVertAlign = fvaTop
+          SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+          SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+          SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.PushedEffect.FontSize = 12
+          SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+          SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+          SelfOwnMaterial.DrawCellPictureParam.FixedColor.Alpha = 255
+          SelfOwnMaterial.DrawCellPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+          SelfOwnMaterial.DrawCellPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+          SelfOwnMaterial.DrawCellPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+          SelfOwnMaterial.DrawCellPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+          SelfOwnMaterial.DrawCellPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+          SelfOwnMaterial.DrawFooterCellTextParam.FontName = 'Tahoma'
+          SelfOwnMaterial.DrawFooterCellTextParam.FontSize = 8
+          SelfOwnMaterial.DrawFooterCellTextParam.FontColor = clBlack
+          SelfOwnMaterial.DrawFooterCellTextParam.DrawFont.Charset = DEFAULT_CHARSET
+          SelfOwnMaterial.DrawFooterCellTextParam.DrawFont.Height = -11
+          SelfOwnMaterial.DrawFooterCellTextParam.DrawFont.Name = 'Tahoma'
+          SelfOwnMaterial.DrawFooterCellTextParam.DrawFont.Style = []
+          SelfOwnMaterial.DrawFooterCellTextParam.DrawFont.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawFooterCellTextParam.FontTrimming = fttNone
+          SelfOwnMaterial.DrawFooterCellTextParam.FontHorzAlign = fhaLeft
+          SelfOwnMaterial.DrawFooterCellTextParam.FontVertAlign = fvaTop
+          SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+          SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+          SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.PushedEffect.FontSize = 12
+          SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+          SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+          SelfOwnMaterial.DrawCellText1Param.FontName = 'Tahoma'
+          SelfOwnMaterial.DrawCellText1Param.FontSize = 8
+          SelfOwnMaterial.DrawCellText1Param.DrawFont.Charset = DEFAULT_CHARSET
+          SelfOwnMaterial.DrawCellText1Param.DrawFont.Height = -11
+          SelfOwnMaterial.DrawCellText1Param.DrawFont.Name = 'Tahoma'
+          SelfOwnMaterial.DrawCellText1Param.DrawFont.Style = []
+          SelfOwnMaterial.DrawCellText1Param.DrawFont.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCellText1Param.FontTrimming = fttNone
+          SelfOwnMaterial.DrawCellText1Param.FontHorzAlign = fhaLeft
+          SelfOwnMaterial.DrawCellText1Param.FontVertAlign = fvaTop
+          SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+          SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+          SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.PushedEffect.FontSize = 12
+          SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+          SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.FocusedEffect.FontSize = 12
           BindItemFieldName = 'ItemDetail3'
           BindItemFieldName1 = 'ItemDetail4'
-        end      
+        end
         item
-          Caption = '总计'
-          Width = 0.2
+          Selected = False
+          Checked = False
+          Height = -1.000000000000000000
           Visible = True
+          Color = clBlack
+          Width = 0.200000000000000000
+          Icon.IsClipRound = False
+          Icon.FixedColor.Alpha = 255
+          Pic.IsClipRound = False
+          Pic.FixedColor.Alpha = 255
+          Tag = 0
+          Tag1 = 0
+          ItemType = sitDefault
+          Accessory = satNone
+          AutoSizeWidth = False
+          AutoSizeHeight = False
           ReadOnly = False
           AutoSize = False
           AutoSizeMinWidth = 100
@@ -1287,460 +1966,493 @@ object FrameItemGrid_TwoCellText: TFrameItemGrid_TwoCellText
           FooterValueType = fvtNone
           IsUseDefaultGridColumnMaterial = True
           IsUseDefaultGridColumnCaptionParam = True
+          SelfOwnMaterial.BackColor.Color = clWhite
+          SelfOwnMaterial.BackColor.IsFill = True
+          SelfOwnMaterial.BackColor.FillColor.Alpha = 255
+          SelfOwnMaterial.BackColor.BorderColor.Alpha = 255
+          SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
+          SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
+          SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
+          SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.FillColor.Alpha = 255
+          SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.FillColorChangeType = cctNone
+          SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.BorderColor.Alpha = 255
+          SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
+          SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
+          SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
+          SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
+          SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
+          SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.BorderColor.Alpha = 255
+          SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
+          SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.FillColorChangeType = cctNone
+          SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
+          SelfOwnMaterial.IsTransparent = False
+          SelfOwnMaterial.DrawCaptionParam.FontName = 'Tahoma'
+          SelfOwnMaterial.DrawCaptionParam.FontSize = 8
+          SelfOwnMaterial.DrawCaptionParam.FontColor = clBlack
+          SelfOwnMaterial.DrawCaptionParam.DrawFont.Charset = DEFAULT_CHARSET
+          SelfOwnMaterial.DrawCaptionParam.DrawFont.Height = -11
+          SelfOwnMaterial.DrawCaptionParam.DrawFont.Name = 'Tahoma'
+          SelfOwnMaterial.DrawCaptionParam.DrawFont.Style = []
+          SelfOwnMaterial.DrawCaptionParam.DrawFont.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCaptionParam.FontTrimming = fttNone
+          SelfOwnMaterial.DrawCaptionParam.FontHorzAlign = fhaLeft
+          SelfOwnMaterial.DrawCaptionParam.FontVertAlign = fvaTop
+          SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+          SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+          SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.PushedEffect.FontSize = 12
+          SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+          SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+          SelfOwnMaterial.DrawCellTextParam.FontName = 'Tahoma'
+          SelfOwnMaterial.DrawCellTextParam.FontSize = 8
+          SelfOwnMaterial.DrawCellTextParam.FontColor = clBlack
+          SelfOwnMaterial.DrawCellTextParam.DrawFont.Charset = DEFAULT_CHARSET
+          SelfOwnMaterial.DrawCellTextParam.DrawFont.Height = -11
+          SelfOwnMaterial.DrawCellTextParam.DrawFont.Name = 'Tahoma'
+          SelfOwnMaterial.DrawCellTextParam.DrawFont.Style = []
+          SelfOwnMaterial.DrawCellTextParam.DrawFont.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCellTextParam.FontTrimming = fttNone
+          SelfOwnMaterial.DrawCellTextParam.FontHorzAlign = fhaLeft
+          SelfOwnMaterial.DrawCellTextParam.FontVertAlign = fvaTop
+          SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+          SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+          SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.PushedEffect.FontSize = 12
+          SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+          SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+          SelfOwnMaterial.DrawCellPictureParam.FixedColor.Alpha = 255
+          SelfOwnMaterial.DrawCellPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+          SelfOwnMaterial.DrawCellPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+          SelfOwnMaterial.DrawCellPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+          SelfOwnMaterial.DrawCellPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+          SelfOwnMaterial.DrawCellPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+          SelfOwnMaterial.DrawFooterCellTextParam.FontName = 'Tahoma'
+          SelfOwnMaterial.DrawFooterCellTextParam.FontSize = 8
+          SelfOwnMaterial.DrawFooterCellTextParam.FontColor = clBlack
+          SelfOwnMaterial.DrawFooterCellTextParam.DrawFont.Charset = DEFAULT_CHARSET
+          SelfOwnMaterial.DrawFooterCellTextParam.DrawFont.Height = -11
+          SelfOwnMaterial.DrawFooterCellTextParam.DrawFont.Name = 'Tahoma'
+          SelfOwnMaterial.DrawFooterCellTextParam.DrawFont.Style = []
+          SelfOwnMaterial.DrawFooterCellTextParam.DrawFont.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawFooterCellTextParam.FontTrimming = fttNone
+          SelfOwnMaterial.DrawFooterCellTextParam.FontHorzAlign = fhaLeft
+          SelfOwnMaterial.DrawFooterCellTextParam.FontVertAlign = fvaTop
+          SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+          SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+          SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.PushedEffect.FontSize = 12
+          SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+          SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+          SelfOwnMaterial.DrawCellText1Param.FontName = 'Tahoma'
+          SelfOwnMaterial.DrawCellText1Param.FontSize = 8
+          SelfOwnMaterial.DrawCellText1Param.DrawFont.Charset = DEFAULT_CHARSET
+          SelfOwnMaterial.DrawCellText1Param.DrawFont.Height = -11
+          SelfOwnMaterial.DrawCellText1Param.DrawFont.Name = 'Tahoma'
+          SelfOwnMaterial.DrawCellText1Param.DrawFont.Style = []
+          SelfOwnMaterial.DrawCellText1Param.DrawFont.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCellText1Param.FontTrimming = fttNone
+          SelfOwnMaterial.DrawCellText1Param.FontHorzAlign = fhaLeft
+          SelfOwnMaterial.DrawCellText1Param.FontVertAlign = fvaTop
+          SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+          SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+          SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.PushedEffect.FontSize = 12
+          SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+          SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+          SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.FocusedEffect.FontSize = 12
           BindItemFieldName = 'ItemDetail5'
           BindItemFieldName1 = 'ItemDetail6'
         end>
       Properties.FixedCols = 0
-      Properties.ColumnsHeaderHeight = 0
-      Properties.RowHeight = 65
+      Properties.ColumnsHeaderHeight = 0.000000000000000000
+      Properties.RowHeight = 65.000000000000000000
       Properties.FooterRowCount = 0
-      Properties.FooterRowHeight = 30
+      Properties.FooterRowHeight = 30.000000000000000000
       Properties.Items.Data = {
-        140000050000000400000000005C00000018160000001A000000000042696E61
-        72794F626A65637400000000E9FD010000000000FFFF0E000000000E00080000
-        004865696768740000E9FD01000000000000000000F0BF0E000000000C000800
-        00005769647468000000E9FD01000000000000C8814015000000001000040000
-        0056697369626C6500E9FD010000000000FFFFFFFF04000000000A0000000000
-        4E616D6500000000E9FD07000000000800040000005461670000000000000000
-        0007000000000A00040000005461673100000000E9FD00000000150000000010
-        0004000000436865636B656400E9FD0100000000000000000007000000001200
-        040000004974656D547970650000000000000000E9FD0000000018120000000A
-        001A00000049636F6E00000000E9FD54447261775069637475726500000000E9
-        FD010000000000FFFF0400000000140000000000496D6167654E616D65000000
-        00000000E9FD0100170000000018000000000047494646696C65446174610000
-        000000E9FD010000000000170000000018000000000053564746696C65446174
-        610000000000E9FD01000000000004000000000A0E0A0000004E616D65000000
-        00E9FDE5908DE7A7B00000E9FD0100000049636F6E00000000E9FD0400000000
-        100E0E00000043617074696F6E00E9FD010000000000E6A087E9A2980000E9FD
-        01000000E59BBEE6A0870000E9FD0100000004000000000C0E0000000047726F
-        7570000000E9FD0100E58886E7BB840000E9FD010000000700000000120E0400
-        0000526F77436F756E740000000000000000E9FDE8A18CE695B00000E9FD0100
-        0000010000000700000000120E04000000436F6C436F756E7400000000000000
-        00E9FDE58897E695B00000E9FD01000000010000000700000000121404000000
-        526F77496E6465780000000000000000E9FDE8A18CE4B88BE6A0870000000000
-        0000E9FD0100FFFFFFFF0700000000121404000000436F6C496E646578000000
-        0000000000E9FDE58897E4B88BE6A08700000000000000E9FD0100FFFFFFFF07
-        00000000201A0400000050696374757265447261775479706500E9FD01000000
-        0000FFFFFFFFFFFFFFFFE7BB98E588B6E7B1BBE59E8B00000000E9FD01000000
-        0000FFFF000000000700000000161A04000000496D616765496E646578000000
-        000000E9FD01000000E59BBEE78987E4B88BE6A08700000000E9FD0100000000
-        00FFFFFFFFFFFF0400000000141A00000000496D6167654E616D650000000000
-        0000E9FD0100E59BBEE78987E5908DE7A7B000000000E9FD010000000000FFFF
-        040000000012200000000046696C654E616D650000000000000000E9FDE59BBE
-        E78987E69687E4BBB6E5908D00E9FD010000000000FFFFFFFFFFFFFFFF040000
-        00001A26000000005265736F757263654E616D6500000000E9FD010000000000
-        FFFFE59BBEE78987E8B584E6BA90E5908DE7A7B0000000000000E9FD01000000
-        0000FFFFFFFFFFFF0400000000081A0000000055726C0000000000E59BBEE789
-        87E993BEE68EA500000000E9FD010000000000FFFF1500000000182C04000000
-        4973436C6970526F756E640000000000E9FD010000000000E698AFE590A6E589
-        AAE8A381E68890E59C86E5BDA2000000E9FD010000000000FFFFFFFFFFFFFFFF
-        04000000000000001900000000161A050000004669786564436F6C6F72000000
-        000000000001000000E8B083E695B4E9A29CE889B200000000E9FD0100000000
-        00FFFF0000000000181200000008001A00000050696300000000005444726177
-        5069637475726500000000E9FD010000000000FFFF0400000000140000000000
-        496D6167654E616D6500000000000000E9FD0100170000000018000000000047
-        494646696C65446174610000000000E9FD010000000000170000000018000000
-        000053564746696C65446174610000000000E9FD01000000000004000000000A
-        0E080000004E616D6500000000E9FDE5908DE7A7B00000E9FD01000000506963
-        00000000000400000000100E0E00000043617074696F6E00E9FD010000000000
-        E6A087E9A2980000E9FD01000000E59BBEE789870000E9FD0100000004000000
-        000C0E0000000047726F7570000000E9FD0100E58886E7BB840000E9FD010000
-        000700000000120E04000000526F77436F756E740000000000000000E9FDE8A1
-        8CE695B00000E9FD01000000010000000700000000120E04000000436F6C436F
-        756E740000000000000000E9FDE58897E695B00000E9FD010000000100000007
-        00000000121404000000526F77496E6465780000000000000000E9FDE8A18CE4
-        B88BE6A08700000000000000E9FD0100FFFFFFFF070000000012140400000043
-        6F6C496E6465780000000000000000E9FDE58897E4B88BE6A087000000000000
-        00E9FD0100FFFFFFFF0700000000201A04000000506963747572654472617754
-        79706500E9FD010000000000FFFFFFFFFFFFFFFFE7BB98E588B6E7B1BBE59E8B
-        00000000E9FD010000000000FFFF000000000700000000161A04000000496D61
-        6765496E646578000000000000E9FD01000000E59BBEE78987E4B88BE6A08700
-        000000E9FD010000000000FFFFFFFFFFFF0400000000141A00000000496D6167
-        654E616D6500000000000000E9FD0100E59BBEE78987E5908DE7A7B000000000
-        E9FD010000000000FFFF040000000012200000000046696C654E616D65000000
-        0000000000E9FDE59BBEE78987E69687E4BBB6E5908D00E9FD010000000000FF
-        FFFFFFFFFFFFFF04000000001A26000000005265736F757263654E616D650000
-        0000E9FD010000000000FFFFE59BBEE78987E8B584E6BA90E5908DE7A7B00000
-        00000000E9FD010000000000FFFFFFFFFFFF0400000000081A0000000055726C
-        0000000000E59BBEE78987E993BEE68EA500000000E9FD010000000000FFFF15
-        00000000182C040000004973436C6970526F756E640000000000E9FD01000000
-        0000E698AFE590A6E589AAE8A381E68890E59C86E5BDA2000000E9FD01000000
-        0000FFFFFFFFFFFFFFFF04000000000000001900000000161A05000000466978
-        6564436F6C6F72000000000000000001000000E8B083E695B4E9A29CE889B200
-        000000E9FD010000000000FFFF00000000000700000000120004000000497465
-        6D547970650000000000000000E9FD0000000015000000001C00040000004175
-        746F53697A655769647468000000E9FD010000000000FFFFFFFF000000001500
-        0000001E00040000004175746F53697A65486569676874000000000100000000
-        00FFFFFFFFFFFF00000000040000000010002800000043617074696F6E00E9FD
-        010000000000E7BE8EE789B9E696AFE982A6E5A88154E681A40000000000FFFF
-        FFFFF2D7C7FF418057F20000000004000000000E001600000044657461696C00
-        00E9FD01000000323032322D30392D3038006C6F722E416C7068610000040000
-        000010001200000044657461696C3100E9FD010000000000EFBFA539392E3030
-        00740000756E6400416C040000000010000E00000044657461696C3200E9FD01
-        0000000000E4BBB7E6A0BC000000000000000004000000001000060000004465
-        7461696C3300E9FD01000000000039300061696C040000000010000E00000044
-        657461696C3400E9FD010000000000E695B0E9878F0000000000000000040000
-        000010001000000044657461696C3500E9FD010000000000EFBFA53831303000
-        0000000000000000040000000010000E00000044657461696C3600E9FD010000
-        000000E680BBE8AEA10000000000000000070000000014000400000041636365
-        73736F727900000000000000E9FD01000000000018160000001A000000000042
-        696E6172794F626A65637400000000E9FD010000000000FFFF0E000000000E00
-        080000004865696768740000E9FD01000000000000000000F0BF0E000000000C
-        00080000005769647468000000E9FD01000000000000C8814015000000001000
-        0400000056697369626C6500E9FD010000000000FFFFFFFF04000000000A0000
-        0000004E616D6500000000E9FD07000000000800040000005461670000000000
-        0000000007000000000A00040000005461673100000000E9FD00000000150000
-        0000100004000000436865636B656400E9FD0100000000000000000007000000
-        001200040000004974656D547970650000000000000000E9FD00000000181200
-        00000A001A00000049636F6E00000000E9FD5444726177506963747572650000
-        0000E9FD010000000000FFFF0400000000140000000000496D6167654E616D65
-        00000000000000E9FD0100170000000018000000000047494646696C65446174
-        610000000000E9FD010000000000170000000018000000000053564746696C65
-        446174610000000000E9FD01000000000004000000000A0E0A0000004E616D65
-        00000000E9FDE5908DE7A7B00000E9FD0100000049636F6E00000000E9FD0400
-        000000100E0E00000043617074696F6E00E9FD010000000000E6A087E9A29800
-        00E9FD01000000E59BBEE6A0870000E9FD0100000004000000000C0E00000000
-        47726F7570000000E9FD0100E58886E7BB840000E9FD01000000070000000012
-        0E04000000526F77436F756E740000000000000000E9FDE8A18CE695B00000E9
-        FD01000000010000000700000000120E04000000436F6C436F756E7400000000
-        00000000E9FDE58897E695B00000E9FD01000000010000000700000000121404
-        000000526F77496E6465780000000000000000E9FDE8A18CE4B88BE6A0870000
-        0000000000E9FD0100FFFFFFFF0700000000121404000000436F6C496E646578
-        0000000000000000E9FDE58897E4B88BE6A08700000000000000E9FD0100FFFF
-        FFFF0700000000201A0400000050696374757265447261775479706500E9FD01
-        0000000000FFFFFFFFFFFFFFFFE7BB98E588B6E7B1BBE59E8B00000000E9FD01
-        0000000000FFFF000000000700000000161A04000000496D616765496E646578
-        000000000000E9FD01000000E59BBEE78987E4B88BE6A08700000000E9FD0100
-        00000000FFFFFFFFFFFF0400000000141A00000000496D6167654E616D650000
-        0000000000E9FD0100E59BBEE78987E5908DE7A7B000000000E9FD0100000000
-        00FFFF040000000012200000000046696C654E616D650000000000000000E9FD
-        E59BBEE78987E69687E4BBB6E5908D00E9FD010000000000FFFFFFFFFFFFFFFF
-        04000000001A26000000005265736F757263654E616D6500000000E9FD010000
-        000000FFFFE59BBEE78987E8B584E6BA90E5908DE7A7B0000000000000E9FD01
-        0000000000FFFFFFFFFFFF0400000000081A0000000055726C0000000000E59B
-        BEE78987E993BEE68EA500000000E9FD010000000000FFFF1500000000182C04
-        0000004973436C6970526F756E640000000000E9FD010000000000E698AFE590
-        A6E589AAE8A381E68890E59C86E5BDA2000000E9FD010000000000FFFFFFFFFF
-        FFFFFF04000000000000001900000000161A050000004669786564436F6C6F72
-        000000000000000001000000E8B083E695B4E9A29CE889B200000000E9FD0100
-        00000000FFFF00000000BC181200000008001A00000050696300000000005444
-        7261775069637475726500000000E9FD010000000000FFFF0400000000140000
-        000000496D6167654E616D6500000000000000E9FD0100170000000018000000
-        000047494646696C65446174610000000000E9FD010000000000170000000018
-        000000000053564746696C65446174610000000000E9FD010000000000040000
-        00000A0E080000004E616D6500000000E9FDE5908DE7A7B00000E9FD01000000
-        50696300000000000400000000100E0E00000043617074696F6E00E9FD010000
-        000000E6A087E9A2980000E9FD01000000E59BBEE789870000E9FD0100000004
-        000000000C0E0000000047726F7570000000E9FD0100E58886E7BB840000E9FD
-        010000000700000000120E04000000526F77436F756E740000000000000000E9
-        FDE8A18CE695B00000E9FD01000000010000000700000000120E04000000436F
-        6C436F756E740000000000000000E9FDE58897E695B00000E9FD010000000100
-        00000700000000121404000000526F77496E6465780000000000000000E9FDE8
-        A18CE4B88BE6A08700000000000000E9FD0100FFFFFFFF070000000012140400
-        0000436F6C496E6465780000000000000000E9FDE58897E4B88BE6A087000000
-        00000000E9FD0100FFFFFFFF0700000000201A04000000506963747572654472
-        61775479706500E9FD010000000000FFFFFFFFFFFFFFFFE7BB98E588B6E7B1BB
-        E59E8B00000000E9FD010000000000FFFF000000000700000000161A04000000
-        496D616765496E646578000000000000E9FD01000000E59BBEE78987E4B88BE6
-        A08700000000E9FD010000000000FFFFFFFFFFFF0400000000141A0000000049
-        6D6167654E616D6500000000000000E9FD0100E59BBEE78987E5908DE7A7B000
-        000000E9FD010000000000FFFF040000000012200000000046696C654E616D65
-        0000000000000000E9FDE59BBEE78987E69687E4BBB6E5908D00E9FD01000000
-        0000FFFFFFFFFFFFFFFF04000000001A26000000005265736F757263654E616D
-        6500000000E9FD010000000000FFFFE59BBEE78987E8B584E6BA90E5908DE7A7
-        B0000000000000E9FD010000000000FFFFFFFFFFFF0400000000081A00000000
-        55726C0000000000E59BBEE78987E993BEE68EA500000000E9FD010000000000
-        FFFF1500000000182C040000004973436C6970526F756E640000000000E9FD01
-        0000000000E698AFE590A6E589AAE8A381E68890E59C86E5BDA2000000E9FD01
-        0000000000FFFFFFFFFFFFFFFF04000000000000001900000000161A05000000
-        4669786564436F6C6F72000000000000000001000000E8B083E695B4E9A29CE8
-        89B200000000E9FD010000000000FFFF000000000B0700000000120004000000
-        4974656D547970650000000000000000E9FD0000000015000000001C00040000
-        004175746F53697A655769647468000000E9FD010000000000FFFFFFFF000000
-        0015000000001E00040000004175746F53697A65486569676874000000000100
-        00000000FFFFFFFFFFFF00000000040000000010002000000043617074696F6E
-        00E9FD010000000000E88090E5858BE8BF90E58AA8E99E8B0000706861006F75
-        6E74007269616C000004000000000E001600000044657461696C0000E9FD0100
-        0000323032322D30392D3038006C6F722E416C70686100000400000000100014
-        00000044657461696C3100E9FD010000000000EFBFA53339392E303000000075
-        6E6400416C7068040000000010000E00000044657461696C3200E9FD01000000
-        0000E4BBB7E6A0BC000000000000000004000000001000060000004465746169
-        6C3300E9FD01000000000031300061696C040000000010000E00000044657461
-        696C3400E9FD010000000000E695B0E9878F0000A80000000000040000000010
-        001000000044657461696C3500E9FD010000000000EFBFA53339393000000000
-        0000000000040000000010000E00000044657461696C3600E9FD010000000000
-        E680BBE8AEA1000000000000000007000000001400040000004163636573736F
-        727900000000000000E9FD01000000000018160000001A000000000042696E61
-        72794F626A65637400000000E9FD010000000000FFFF0E000000000E00080000
-        004865696768740000E9FD01000000000000000000F0BF0E000000000C000800
-        00005769647468000000E9FD01000000000000C8814015000000001000040000
-        0056697369626C6500E9FD010000000000FFFFFFFF04000000000A0000000000
-        4E616D6500000000E9FD07000000000800040000005461670000000000000000
-        0007000000000A00040000005461673100000000E9FD00000000150000000010
-        0004000000436865636B656400E9FD0100000000000000000007000000001200
-        040000004974656D547970650000000000000000E9FD0000000018120000000A
-        001A00000049636F6E00000000E9FD54447261775069637475726500000000E9
-        FD010000000000FFFF0400000000140000000000496D6167654E616D65000000
-        00000000E9FD0100170000000018000000000047494646696C65446174610000
-        000000E9FD010000000000170000000018000000000053564746696C65446174
-        610000000000E9FD01000000000004000000000A0E0A0000004E616D65000000
-        00E9FDE5908DE7A7B00000E9FD0100000049636F6E00000000E9FD0400000000
-        100E0E00000043617074696F6E00E9FD010000000000E6A087E9A2980000E9FD
-        01000000E59BBEE6A0870000E9FD0100000004000000000C0E0000000047726F
-        7570000000E9FD0100E58886E7BB840000E9FD010000000700000000120E0400
-        0000526F77436F756E740000000000000000E9FDE8A18CE695B00000E9FD0100
-        0000010000000700000000120E04000000436F6C436F756E7400000000000000
-        00E9FDE58897E695B00000E9FD01000000010000000700000000121404000000
-        526F77496E6465780000000000000000E9FDE8A18CE4B88BE6A0870000000000
-        0000E9FD0100FFFFFFFF0700000000121404000000436F6C496E646578000000
-        0000000000E9FDE58897E4B88BE6A08700000000000000E9FD0100FFFFFFFF07
-        00000000201A0400000050696374757265447261775479706500E9FD01000000
-        0000FFFFFFFFFFFFFFFFE7BB98E588B6E7B1BBE59E8B00000000E9FD01000000
-        0000FFFF000000000700000000161A04000000496D616765496E646578000000
-        000000E9FD01000000E59BBEE78987E4B88BE6A08700000000E9FD0100000000
-        00FFFFFFFFFFFF0400000000141A00000000496D6167654E616D650000000000
-        0000E9FD0100E59BBEE78987E5908DE7A7B000000000E9FD010000000000FFFF
-        040000000012200000000046696C654E616D650000000000000000E9FDE59BBE
-        E78987E69687E4BBB6E5908D00E9FD010000000000FFFFFFFFFFFFFFFF040000
-        00001A26000000005265736F757263654E616D6500000000E9FD010000000000
-        FFFFE59BBEE78987E8B584E6BA90E5908DE7A7B0000000000000E9FD01000000
-        0000FFFFFFFFFFFF0400000000081A0000000055726C0000000000E59BBEE789
-        87E993BEE68EA500000000E9FD010000000000FFFF1500000000182C04000000
-        4973436C6970526F756E640000000000E9FD010000000000E698AFE590A6E589
-        AAE8A381E68890E59C86E5BDA2000000E9FD010000000000FFFFFFFFFFFFFFFF
-        04000000000000001900000000161A050000004669786564436F6C6F72000000
-        000000000001000000E8B083E695B4E9A29CE889B200000000E9FD0100000000
-        00FFFF0000000000181200000008001A00000050696300000000005444726177
-        5069637475726500000000E9FD010000000000FFFF0400000000140000000000
-        496D6167654E616D6500000000000000E9FD0100170000000018000000000047
-        494646696C65446174610000000000E9FD010000000000170000000018000000
-        000053564746696C65446174610000000000E9FD01000000000004000000000A
-        0E080000004E616D6500000000E9FDE5908DE7A7B00000E9FD01000000506963
-        00000000000400000000100E0E00000043617074696F6E00E9FD010000000000
-        E6A087E9A2980000E9FD01000000E59BBEE789870000E9FD0100000004000000
-        000C0E0000000047726F7570000000E9FD0100E58886E7BB840000E9FD010000
-        000700000000120E04000000526F77436F756E740000000000000000E9FDE8A1
-        8CE695B00000E9FD01000000010000000700000000120E04000000436F6C436F
-        756E740000000000000000E9FDE58897E695B00000E9FD010000000100000007
-        00000000121404000000526F77496E6465780000000000000000E9FDE8A18CE4
-        B88BE6A08700000000000000E9FD0100FFFFFFFF070000000012140400000043
-        6F6C496E6465780000000000000000E9FDE58897E4B88BE6A087000000000000
-        00E9FD0100FFFFFFFF0700000000201A04000000506963747572654472617754
-        79706500E9FD010000000000FFFFFFFFFFFFFFFFE7BB98E588B6E7B1BBE59E8B
-        00000000E9FD010000000000FFFF000000000700000000161A04000000496D61
-        6765496E646578000000000000E9FD01000000E59BBEE78987E4B88BE6A08700
-        000000E9FD010000000000FFFFFFFFFFFF0400000000141A00000000496D6167
-        654E616D6500000000000000E9FD0100E59BBEE78987E5908DE7A7B000000000
-        E9FD010000000000FFFF040000000012200000000046696C654E616D65000000
-        0000000000E9FDE59BBEE78987E69687E4BBB6E5908D00E9FD010000000000FF
-        FFFFFFFFFFFFFF04000000001A26000000005265736F757263654E616D650000
-        0000E9FD010000000000FFFFE59BBEE78987E8B584E6BA90E5908DE7A7B00000
-        00000000E9FD010000000000FFFFFFFFFFFF0400000000081A0000000055726C
-        0000000000E59BBEE78987E993BEE68EA500000000E9FD010000000000FFFF15
-        00000000182C040000004973436C6970526F756E640000000000E9FD01000000
-        0000E698AFE590A6E589AAE8A381E68890E59C86E5BDA2000000E9FD01000000
-        0000FFFFFFFFFFFFFFFF04000000000000001900000000161A05000000466978
-        6564436F6C6F72000000000000000001000000E8B083E695B4E9A29CE889B200
-        000000E9FD010000000000FFFF00000000000700000000120004000000497465
-        6D547970650000000000000000E9FD0000000015000000001C00040000004175
-        746F53697A655769647468000000E9FD010000000000FFFFFFFF000000001500
-        0000001E00040000004175746F53697A65486569676874000000000100000000
-        00FFFFFFFFFFFF00000000040000000010002C00000043617074696F6E00E9FD
-        010000000000E9B8BFE6989FE5B094E5858BE8BF90E58AA8E69C8D0000000000
-        0000000000004180A70200000000780AE00104000000000E0016000000446574
-        61696C0000E9FD01000000323032322D30392D3038006C6F722E416C70686100
-        00040000000010001400000044657461696C3100E9FD010000000000EFBFA531
-        39392E3030000000756E6400416C7068040000000010000E0000004465746169
-        6C3200E9FD010000000000E4BBB7E6A0BC000000000000000004000000001000
-        0600000044657461696C3300E9FD01000000000032300061696C040000000010
-        000E00000044657461696C3400E9FD010000000000E695B0E9878F0000000000
-        000000040000000010001000000044657461696C3500E9FD010000000000EFBF
-        A533393830000000000000000000040000000010000E00000044657461696C36
-        00E9FD010000000000E680BBE8AEA10000000000000000070000000014000400
-        00004163636573736F727900000000000000E9FD01000000000018160000001A
-        000000000042696E6172794F626A65637400000000E9FD010000000000FFFF0E
-        000000000E00080000004865696768740000E9FD01000000000000000000F0BF
-        0E000000000C00080000005769647468000000E9FD01000000000000C8814015
-        0000000010000400000056697369626C6500E9FD010000000000FFFFFFFF0400
-        0000000A00000000004E616D6500000000E9FD07000000000800040000005461
-        6700000000000000000007000000000A00040000005461673100000000E9FD00
-        0000001500000000100004000000436865636B656400E9FD0100000000000000
-        000007000000001200040000004974656D547970650000000000000000E9FD00
-        00000018120000000A001A00000049636F6E00000000E9FD5444726177506963
-        7475726500000000E9FD010000000000FFFF0400000000140000000000496D61
-        67654E616D6500000000000000E9FD0100170000000018000000000047494646
-        696C65446174610000000000E9FD010000000000170000000018000000000053
-        564746696C65446174610000000000E9FD01000000000004000000000A0E0A00
-        00004E616D6500000000E9FDE5908DE7A7B00000E9FD0100000049636F6E0000
-        0000E9FD0400000000100E0E00000043617074696F6E00E9FD010000000000E6
-        A087E9A2980000E9FD01000000E59BBEE6A0870000E9FD010000000400000000
-        0C0E0000000047726F7570000000E9FD0100E58886E7BB840000E9FD01000000
-        0700000000120E04000000526F77436F756E740000000000000000E9FDE8A18C
-        E695B00000E9FD01000000010000000700000000120E04000000436F6C436F75
-        6E740000000000000000E9FDE58897E695B00000E9FD01000000010000000700
-        000000121404000000526F77496E6465780000000000000000E9FDE8A18CE4B8
-        8BE6A08700000000000000E9FD0100FFFFFFFF0700000000121404000000436F
-        6C496E6465780000000000000000E9FDE58897E4B88BE6A08700000000000000
-        E9FD0100FFFFFFFF0700000000201A0400000050696374757265447261775479
-        706500E9FD010000000000FFFFFFFFFFFFFFFFE7BB98E588B6E7B1BBE59E8B00
-        000000E9FD010000000000FFFF000000000700000000161A04000000496D6167
-        65496E646578000000000000E9FD01000000E59BBEE78987E4B88BE6A0870000
-        0000E9FD010000000000FFFFFFFFFFFF0400000000141A00000000496D616765
-        4E616D6500000000000000E9FD0100E59BBEE78987E5908DE7A7B000000000E9
-        FD010000000000FFFF040000000012200000000046696C654E616D6500000000
-        00000000E9FDE59BBEE78987E69687E4BBB6E5908D00E9FD010000000000FFFF
-        FFFFFFFFFFFF04000000001A26000000005265736F757263654E616D65000000
-        00E9FD010000000000FFFFE59BBEE78987E8B584E6BA90E5908DE7A7B0000000
-        000000E9FD010000000000FFFFFFFFFFFF0400000000081A0000000055726C00
-        00000000E59BBEE78987E993BEE68EA500000000E9FD010000000000FFFF1500
-        000000182C040000004973436C6970526F756E640000000000E9FD0100000000
-        00E698AFE590A6E589AAE8A381E68890E59C86E5BDA2000000E9FD0100000000
-        00FFFFFFFFFFFFFFFF04000000000000001900000000161A0500000046697865
-        64436F6C6F72000000000000000001000000E8B083E695B4E9A29CE889B20000
-        0000E9FD010000000000FFFF000000009B181200000008001A00000050696300
-        0000000054447261775069637475726500000000E9FD010000000000FFFF0400
-        000000140000000000496D6167654E616D6500000000000000E9FD0100170000
-        000018000000000047494646696C65446174610000000000E9FD010000000000
-        170000000018000000000053564746696C65446174610000000000E9FD010000
-        00000004000000000A0E080000004E616D6500000000E9FDE5908DE7A7B00000
-        E9FD0100000050696300000000000400000000100E0E00000043617074696F6E
-        00E9FD010000000000E6A087E9A2980000E9FD01000000E59BBEE789870000E9
-        FD0100000004000000000C0E0000000047726F7570000000E9FD0100E58886E7
-        BB840000E9FD010000000700000000120E04000000526F77436F756E74000000
-        0000000000E9FDE8A18CE695B00000E9FD01000000010000000700000000120E
-        04000000436F6C436F756E740000000000000000E9FDE58897E695B00000E9FD
-        01000000010000000700000000121404000000526F77496E6465780000000000
-        000000E9FDE8A18CE4B88BE6A08700000000000000E9FD0100FFFFFFFF070000
-        0000121404000000436F6C496E6465780000000000000000E9FDE58897E4B88B
-        E6A08700000000000000E9FD0100FFFFFFFF0700000000201A04000000506963
-        74757265447261775479706500E9FD010000000000FFFFFFFFFFFFFFFFE7BB98
-        E588B6E7B1BBE59E8B00000000E9FD010000000000FFFF000000000700000000
-        161A04000000496D616765496E646578000000000000E9FD01000000E59BBEE7
-        8987E4B88BE6A08700000000E9FD010000000000FFFFFFFFFFFF040000000014
-        1A00000000496D6167654E616D6500000000000000E9FD0100E59BBEE78987E5
-        908DE7A7B000000000E9FD010000000000FFFF04000000001220000000004669
-        6C654E616D650000000000000000E9FDE59BBEE78987E69687E4BBB6E5908D00
-        E9FD010000000000FFFFFFFFFFFFFFFF04000000001A26000000005265736F75
-        7263654E616D6500000000E9FD010000000000FFFFE59BBEE78987E8B584E6BA
-        90E5908DE7A7B0000000000000E9FD010000000000FFFFFFFFFFFF0400000000
-        081A0000000055726C0000000000E59BBEE78987E993BEE68EA500000000E9FD
-        010000000000FFFF1500000000182C040000004973436C6970526F756E640000
-        000000E9FD010000000000E698AFE590A6E589AAE8A381E68890E59C86E5BDA2
-        000000E9FD010000000000FFFFFFFFFFFFFFFF04000000000000001900000000
-        161A050000004669786564436F6C6F72000000000000000001000000E8B083E6
-        95B4E9A29CE889B200000000E9FD010000000000FFFF00000000000700000000
-        1200040000004974656D547970650000000000000000E9FD0000000015000000
-        001C00040000004175746F53697A655769647468000000E9FD010000000000FF
-        FFFFFF0000000015000000001E00040000004175746F53697A65486569676874
-        00000000010000000000FFFFFFFFFFFF00000000040000000010002600000043
-        617074696F6E00E9FD010000000000E69D8EE5AE81E8BF90E58AA8E58DABE8A1
-        A300610000000000000000000000004180F703000004000000000E0016000000
-        44657461696C0000E9FD01000000323032322D30392D3038006C6F722E416C70
-        68610000040000000010001400000044657461696C3100E9FD010000000000EF
-        BFA53139392E3030000000756E6400416C7068040000000010000E0000004465
-        7461696C3200E9FD010000000000E4BBB7E6A0BC0000A5E6B5A1650004000000
-        0010000600000044657461696C3300E9FD01000000000035300061696C040000
-        000010000E00000044657461696C3400E9FD010000000000E695B0E9878F0000
-        000000000000040000000010001000000044657461696C3500E9FD0100000000
-        00EFBFA53939353000A9E491A5E791A161040000000010000E00000044657461
-        696C3600E9FD010000000000E680BBE8AEA10000000000000000070000000014
-        00040000004163636573736F727900000000000000E9FD010000000000181600
-        00001A000000000042696E6172794F626A65637400000000E9FD010000000000
-        FFFF0E000000000E00080000004865696768740000E9FD010000000000000000
-        00F0BF0E000000000C00080000005769647468000000E9FD01000000000000C8
-        8140150000000010000400000056697369626C6500E9FD010000000000FFFFFF
-        FF04000000000A00000000004E616D6500000000E9FD07000000000800040000
-        0054616700000000000000000007000000000A00040000005461673100000000
-        E9FD000000001500000000100004000000436865636B656400E9FD0100000000
-        000000000007000000001200040000004974656D547970650000000000000000
-        E9FD0000000018120000000A001A00000049636F6E00000000E9FD5444726177
-        5069637475726500000000E9FD010000000000FFFF0400000000140000000000
-        496D6167654E616D6500000000000000E9FD0100170000000018000000000047
-        494646696C65446174610000000000E9FD010000000000170000000018000000
-        000053564746696C65446174610000000000E9FD01000000000004000000000A
-        0E0A0000004E616D6500000000E9FDE5908DE7A7B00000E9FD0100000049636F
-        6E00000000E9FD0400000000100E0E00000043617074696F6E00E9FD01000000
-        0000E6A087E9A2980000E9FD01000000E59BBEE6A0870000E9FD010000000400
-        0000000C0E0000000047726F7570000000E9FD0100E58886E7BB840000E9FD01
-        0000000700000000120E04000000526F77436F756E740000000000000000E9FD
-        E8A18CE695B00000E9FD01000000010000000700000000120E04000000436F6C
-        436F756E740000000000000000E9FDE58897E695B00000E9FD01000000010000
-        000700000000121404000000526F77496E6465780000000000000000E9FDE8A1
-        8CE4B88BE6A08700000000000000E9FD0100FFFFFFFF07000000001214040000
-        00436F6C496E6465780000000000000000E9FDE58897E4B88BE6A08700000000
-        000000E9FD0100FFFFFFFF0700000000201A0400000050696374757265447261
-        775479706500E9FD010000000000FFFFFFFFFFFFFFFFE7BB98E588B6E7B1BBE5
-        9E8B00000000E9FD010000000000FFFF000000000700000000161A0400000049
-        6D616765496E646578000000000000E9FD01000000E59BBEE78987E4B88BE6A0
-        8700000000E9FD010000000000FFFFFFFFFFFF0400000000141A00000000496D
-        6167654E616D6500000000000000E9FD0100E59BBEE78987E5908DE7A7B00000
-        0000E9FD010000000000FFFF040000000012200000000046696C654E616D6500
-        00000000000000E9FDE59BBEE78987E69687E4BBB6E5908D00E9FD0100000000
-        00FFFFFFFFFFFFFFFF04000000001A26000000005265736F757263654E616D65
-        00000000E9FD010000000000FFFFE59BBEE78987E8B584E6BA90E5908DE7A7B0
-        000000000000E9FD010000000000FFFFFFFFFFFF0400000000081A0000000055
-        726C0000000000E59BBEE78987E993BEE68EA500000000E9FD010000000000FF
-        FF1500000000182C040000004973436C6970526F756E640000000000E9FD0100
-        00000000E698AFE590A6E589AAE8A381E68890E59C86E5BDA2000000E9FD0100
-        00000000FFFFFFFFFFFFFFFF04000000000000001900000000161A0500000046
-        69786564436F6C6F72000000000000000001000000E8B083E695B4E9A29CE889
-        B200000000E9FD010000000000FFFF0000000000181200000008001A00000050
-        6963000000000054447261775069637475726500000000E9FD010000000000FF
-        FF0400000000140000000000496D6167654E616D6500000000000000E9FD0100
-        170000000018000000000047494646696C65446174610000000000E9FD010000
-        000000170000000018000000000053564746696C65446174610000000000E9FD
-        01000000000004000000000A0E080000004E616D6500000000E9FDE5908DE7A7
-        B00000E9FD0100000050696300000000000400000000100E0E00000043617074
-        696F6E00E9FD010000000000E6A087E9A2980000E9FD01000000E59BBEE78987
-        0000E9FD0100000004000000000C0E0000000047726F7570000000E9FD0100E5
-        8886E7BB840000E9FD010000000700000000120E04000000526F77436F756E74
-        0000000000000000E9FDE8A18CE695B00000E9FD010000000100000007000000
-        00120E04000000436F6C436F756E740000000000000000E9FDE58897E695B000
-        00E9FD01000000010000000700000000121404000000526F77496E6465780000
-        000000000000E9FDE8A18CE4B88BE6A08700000000000000E9FD0100FFFFFFFF
-        0700000000121404000000436F6C496E6465780000000000000000E9FDE58897
-        E4B88BE6A08700000000000000E9FD0100FFFFFFFF0700000000201A04000000
-        50696374757265447261775479706500E9FD010000000000FFFFFFFFFFFFFFFF
-        E7BB98E588B6E7B1BBE59E8B00000000E9FD010000000000FFFF000000000700
-        000000161A04000000496D616765496E646578000000000000E9FD01000000E5
-        9BBEE78987E4B88BE6A08700000000E9FD010000000000FFFFFFFFFFFF040000
-        0000141A00000000496D6167654E616D6500000000000000E9FD0100E59BBEE7
-        8987E5908DE7A7B000000000E9FD010000000000FFFF04000000001220000000
-        0046696C654E616D650000000000000000E9FDE59BBEE78987E69687E4BBB6E5
-        908D00E9FD010000000000FFFFFFFFFFFFFFFF04000000001A26000000005265
-        736F757263654E616D6500000000E9FD010000000000FFFFE59BBEE78987E8B5
-        84E6BA90E5908DE7A7B0000000000000E9FD010000000000FFFFFFFFFFFF0400
-        000000081A0000000055726C0000000000E59BBEE78987E993BEE68EA5000000
-        00E9FD010000000000FFFF1500000000182C040000004973436C6970526F756E
-        640000000000E9FD010000000000E698AFE590A6E589AAE8A381E68890E59C86
-        E5BDA2000000E9FD010000000000FFFFFFFFFFFFFFFF04000000000000001900
-        000000161A050000004669786564436F6C6F72000000000000000001000000E8
-        B083E695B4E9A29CE889B200000000E9FD010000000000FFFF00000000000700
-        0000001200040000004974656D547970650000000000000000E9FD0000000015
-        000000001C00040000004175746F53697A655769647468000000E9FD01000000
-        0000FFFFFFFF0000000015000000001E00040000004175746F53697A65486569
-        67687400000000010000000000FFFFFFFFFFFF00000000040000000010001A00
-        000043617074696F6E00E9FD010000000000416469646173E5B8BDE5AD900070
-        68610070686100000000000004000000000E001600000044657461696C0000E9
-        FD01000000323032322D30392D3038006C6F722E416C70686100000400000000
-        10001200000044657461696C3100E9FD010000000000EFBFA534392E30300074
-        0000756E6400416C040000000010000E00000044657461696C3200E9FD010000
-        000000E4BBB7E6A0BC0000000000000000040000000010000600000044657461
-        696C3300E9FD01000000000031300061696C040000000010000E000000446574
-        61696C3400E9FD010000000000E695B0E9878F0000BB00000000000400000000
-        10000E00000044657461696C3500E9FD010000000000EFBFA534393000000000
-        00000000040000000010000E00000044657461696C3600E9FD010000000000E6
-        80BBE8AEA1000000000000000007000000001400040000004163636573736F72
-        7900000000000000E9FD010000000000
-      }
-      Properties.Items = <      
+        140000050000000400000000005C00000018160000001A000000000042006900
+        6E006100720079004F0062006A0065006300740000000E000000000E00080000
+        004800650069006700680074000000000000000000F0BF0E000000000C000800
+        00005700690064007400680000000000000000C8814015000000001000040000
+        00560069007300690062006C0065000000FFFFFFFF04000000000A0000000000
+        4E0061006D006500000007000000000800040000005400610067000000000000
+        0007000000000A00040000005400610067003100000000000000150000000010
+        000400000043006800650063006B006500640000000000000007000000001200
+        040000004900740065006D00540079007000650000000000000018120000000A
+        001A000000490063006F006E0000005400440072006100770050006900630074
+        007500720065000000040000000014000000000049006D006100670065004E00
+        61006D00650000001700000000180000000000470049004600460069006C0065
+        0044006100740061000000170000000018000000000053005600470046006900
+        6C0065004400610074006100000004000000000A060A0000004E0061006D0065
+        0000000D54F0790000490063006F006E00000004000000001006060000004300
+        61007000740069006F006E000000076898980000FE560768000004000000000C
+        0600000000470072006F007500700000000652C47E0000070000000012060400
+        000052006F00770043006F0075006E00740000004C8870650000010000000700
+        00000012060400000043006F006C0043006F0075006E00740000001752706500
+        0001000000070000000012080400000052006F00770049006E00640065007800
+        00004C880B4E07680000FFFFFFFF070000000012080400000043006F006C0049
+        006E00640065007800000017520B4E07680000FFFFFFFF0700000000200A0400
+        0000500069006300740075007200650044007200610077005400790070006500
+        0000D87E36527B7C8B570000000000000700000000160A0400000049006D0061
+        006700650049006E006400650078000000FE5647720B4E07680000FFFFFFFF04
+        00000000140A0000000049006D006100670065004E0061006D0065000000FE56
+        47720D54F07900000400000000120C00000000460069006C0065004E0061006D
+        0065000000FE5647728765F64E0D54000004000000001A0E0000000052006500
+        73006F0075007200630065004E0061006D0065000000FE564772448D906E0D54
+        F07900000400000000080A00000000550072006C000000FE564772FE94A56300
+        0015000000001810040000004900730043006C006900700052006F0075006E00
+        640000002F6626546A52C18810620657625F0000000000001900000000160A05
+        0000004600690078006500640043006F006C006F0072000000038C74659C9872
+        8200000000002000181200000008001A00000050006900630000005400440072
+        0061007700500069006300740075007200650000000400000000140000000000
+        49006D006100670065004E0061006D0065000000170000000018000000000047
+        0049004600460069006C00650044006100740061000000170000000018000000
+        0000530056004700460069006C0065004400610074006100000004000000000A
+        06080000004E0061006D00650000000D54F07900005000690063000000040000
+        0000100606000000430061007000740069006F006E000000076898980000FE56
+        4772000004000000000C0600000000470072006F007500700000000652C47E00
+        00070000000012060400000052006F00770043006F0075006E00740000004C88
+        7065000001000000070000000012060400000043006F006C0043006F0075006E
+        007400000017527065000001000000070000000012080400000052006F007700
+        49006E0064006500780000004C880B4E07680000FFFFFFFF0700000000120804
+        00000043006F006C0049006E00640065007800000017520B4E07680000FFFFFF
+        FF0700000000200A040000005000690063007400750072006500440072006100
+        770054007900700065000000D87E36527B7C8B57000000000000070000000016
+        0A0400000049006D0061006700650049006E006400650078000000FE5647720B
+        4E07680000FFFFFFFF0400000000140A0000000049006D006100670065004E00
+        61006D0065000000FE5647720D54F07900000400000000120C00000000460069
+        006C0065004E0061006D0065000000FE5647728765F64E0D5400000400000000
+        1A0E000000005200650073006F0075007200630065004E0061006D0065000000
+        FE564772448D906E0D54F07900000400000000080A00000000550072006C0000
+        00FE564772FE94A563000015000000001810040000004900730043006C006900
+        700052006F0075006E00640000002F6626546A52C18810620657625F00000000
+        00001900000000160A050000004600690078006500640043006F006C006F0072
+        000000038C74659C987282000000000020000700000000120004000000490074
+        0065006D00540079007000650000000000000015000000001C00040000004100
+        750074006F00530069007A006500570069006400740068000000000000001500
+        0000001E00040000004100750074006F00530069007A00650048006500690067
+        0068007400000000000000040000000010001200000043006100700074006900
+        6F006E0000004E0069006B0065002000680061007400000004000000000E0016
+        000000440065007400610069006C00000032003000320032002D00300039002D
+        00300038000000040000000010000C000000440065007400610069006C003100
+        0000240039002E00300030000000040000000010000C00000044006500740061
+        0069006C00320000007000720069006300650000000400000000100006000000
+        440065007400610069006C0033000000390030000000040000000010000C0000
+        00440065007400610069006C003400000063006F0075006E0074000000040000
+        000010000A000000440065007400610069006C00350000002400310030003000
+        0000040000000010000C000000440065007400610069006C003600000074006F
+        00740061006C0000000700000000140004000000410063006300650073007300
+        6F007200790000000000000018160000001A0000000000420069006E00610072
+        0079004F0062006A0065006300740000000E000000000E000800000048006500
+        69006700680074000000000000000000F0BF0E000000000C0008000000570069
+        0064007400680000000000000000C88140150000000010000400000056006900
+        7300690062006C0065000000FFFFFFFF04000000000A00000000004E0061006D
+        0065000000070000000008000400000054006100670000000000000007000000
+        000A000400000054006100670031000000000000001500000000100004000000
+        43006800650063006B0065006400000000000000070000000012000400000049
+        00740065006D00540079007000650000000000000018120000000A001A000000
+        490063006F006E00000054004400720061007700500069006300740075007200
+        65000000040000000014000000000049006D006100670065004E0061006D0065
+        0000001700000000180000000000470049004600460069006C00650044006100
+        7400610000001700000000180000000000530056004700460069006C00650044
+        00610074006100000004000000000A060A0000004E0061006D00650000000D54
+        F0790000490063006F006E000000040000000010060600000043006100700074
+        0069006F006E000000076898980000FE560768000004000000000C0600000000
+        470072006F007500700000000652C47E0000070000000012060400000052006F
+        00770043006F0075006E00740000004C88706500000100000007000000001206
+        0400000043006F006C0043006F0075006E007400000017527065000001000000
+        070000000012080400000052006F00770049006E0064006500780000004C880B
+        4E07680000FFFFFFFF070000000012080400000043006F006C0049006E006400
+        65007800000017520B4E07680000FFFFFFFF0700000000200A04000000500069
+        0063007400750072006500440072006100770054007900700065000000D87E36
+        527B7C8B570000000000000700000000160A0400000049006D00610067006500
+        49006E006400650078000000FE5647720B4E07680000FFFFFFFF040000000014
+        0A0000000049006D006100670065004E0061006D0065000000FE5647720D54F0
+        7900000400000000120C00000000460069006C0065004E0061006D0065000000
+        FE5647728765F64E0D54000004000000001A0E000000005200650073006F0075
+        007200630065004E0061006D0065000000FE564772448D906E0D54F079000004
+        00000000080A00000000550072006C000000FE564772FE94A563000015000000
+        001810040000004900730043006C006900700052006F0075006E00640000002F
+        6626546A52C18810620657625F0000000000001900000000160A050000004600
+        690078006500640043006F006C006F0072000000038C74659C98728200000000
+        002000181200000008001A000000500069006300000054004400720061007700
+        50006900630074007500720065000000040000000014000000000049006D0061
+        00670065004E0061006D00650000001700000000180000000000470049004600
+        460069006C006500440061007400610000001700000000180000000000530056
+        004700460069006C0065004400610074006100000004000000000A0608000000
+        4E0061006D00650000000D54F079000050006900630000000400000000100606
+        000000430061007000740069006F006E000000076898980000FE564772000004
+        000000000C0600000000470072006F007500700000000652C47E000007000000
+        0012060400000052006F00770043006F0075006E00740000004C887065000001
+        000000070000000012060400000043006F006C0043006F0075006E0074000000
+        17527065000001000000070000000012080400000052006F00770049006E0064
+        006500780000004C880B4E07680000FFFFFFFF07000000001208040000004300
+        6F006C0049006E00640065007800000017520B4E07680000FFFFFFFF07000000
+        00200A0400000050006900630074007500720065004400720061007700540079
+        00700065000000D87E36527B7C8B570000000000000700000000160A04000000
+        49006D0061006700650049006E006400650078000000FE5647720B4E07680000
+        FFFFFFFF0400000000140A0000000049006D006100670065004E0061006D0065
+        000000FE5647720D54F07900000400000000120C00000000460069006C006500
+        4E0061006D0065000000FE5647728765F64E0D54000004000000001A0E000000
+        005200650073006F0075007200630065004E0061006D0065000000FE56477244
+        8D906E0D54F07900000400000000080A00000000550072006C000000FE564772
+        FE94A563000015000000001810040000004900730043006C006900700052006F
+        0075006E00640000002F6626546A52C18810620657625F000000000000190000
+        0000160A050000004600690078006500640043006F006C006F0072000000038C
+        74659C9872820000000000200007000000001200040000004900740065006D00
+        540079007000650000000000000015000000001C00040000004100750074006F
+        00530069007A0065005700690064007400680000000000000015000000001E00
+        040000004100750074006F00530069007A006500480065006900670068007400
+        0000000000000400000000100016000000430061007000740069006F006E0000
+        004C0069004E0069006E0067002000680061007400000004000000000E001600
+        0000440065007400610069006C00000032003000320032002D00300039002D00
+        300038000000040000000010000E000000440065007400610069006C00310000
+        002400390039002E00300030000000040000000010000C000000440065007400
+        610069006C003200000070007200690063006500000004000000001000060000
+        00440065007400610069006C0033000000310030000000040000000010000C00
+        0000440065007400610069006C003400000063006F0075006E00740000000400
+        00000010000A000000440065007400610069006C003500000024003900390030
+        000000040000000010000C000000440065007400610069006C00360000007400
+        6F00740061006C00000007000000001400040000004100630063006500730073
+        006F007200790000000000000018160000001A0000000000420069006E006100
+        720079004F0062006A0065006300740000000E000000000E0008000000480065
+        0069006700680074000000000000000000F0BF0E000000000C00080000005700
+        690064007400680000000000000000C881401500000000100004000000560069
+        007300690062006C0065000000FFFFFFFF04000000000A00000000004E006100
+        6D00650000000700000000080004000000540061006700000000000000070000
+        00000A0004000000540061006700310000000000000015000000001000040000
+        0043006800650063006B00650064000000000000000700000000120004000000
+        4900740065006D00540079007000650000000000000018120000000A001A0000
+        00490063006F006E000000540044007200610077005000690063007400750072
+        0065000000040000000014000000000049006D006100670065004E0061006D00
+        650000001700000000180000000000470049004600460069006C006500440061
+        007400610000001700000000180000000000530056004700460069006C006500
+        4400610074006100000004000000000A060A0000004E0061006D00650000000D
+        54F0790000490063006F006E0000000400000000100606000000430061007000
+        740069006F006E000000076898980000FE560768000004000000000C06000000
+        00470072006F007500700000000652C47E000007000000001206040000005200
+        6F00770043006F0075006E00740000004C887065000001000000070000000012
+        060400000043006F006C0043006F0075006E0074000000175270650000010000
+        00070000000012080400000052006F00770049006E0064006500780000004C88
+        0B4E07680000FFFFFFFF070000000012080400000043006F006C0049006E0064
+        0065007800000017520B4E07680000FFFFFFFF0700000000200A040000005000
+        690063007400750072006500440072006100770054007900700065000000D87E
+        36527B7C8B570000000000000700000000160A0400000049006D006100670065
+        0049006E006400650078000000FE5647720B4E07680000FFFFFFFF0400000000
+        140A0000000049006D006100670065004E0061006D0065000000FE5647720D54
+        F07900000400000000120C00000000460069006C0065004E0061006D00650000
+        00FE5647728765F64E0D54000004000000001A0E000000005200650073006F00
+        75007200630065004E0061006D0065000000FE564772448D906E0D54F0790000
+        0400000000080A00000000550072006C000000FE564772FE94A5630000150000
+        00001810040000004900730043006C006900700052006F0075006E0064000000
+        2F6626546A52C18810620657625F0000000000001900000000160A0500000046
+        00690078006500640043006F006C006F0072000000038C74659C987282000000
+        0000206F181200000008001A0000005000690063000000540044007200610077
+        0050006900630074007500720065000000040000000014000000000049006D00
+        6100670065004E0061006D006500000017000000001800000000004700490046
+        00460069006C0065004400610074006100000017000000001800000000005300
+        56004700460069006C0065004400610074006100000004000000000A06080000
+        004E0061006D00650000000D54F0790000500069006300000004000000001006
+        06000000430061007000740069006F006E000000076898980000FE5647720000
+        04000000000C0600000000470072006F007500700000000652C47E0000070000
+        000012060400000052006F00770043006F0075006E00740000004C8870650000
+        01000000070000000012060400000043006F006C0043006F0075006E00740000
+        0017527065000001000000070000000012080400000052006F00770049006E00
+        64006500780000004C880B4E07680000FFFFFFFF070000000012080400000043
+        006F006C0049006E00640065007800000017520B4E07680000FFFFFFFF070000
+        0000200A04000000500069006300740075007200650044007200610077005400
+        7900700065000000D87E36527B7C8B570000000000000700000000160A040000
+        0049006D0061006700650049006E006400650078000000FE5647720B4E076800
+        00FFFFFFFF0400000000140A0000000049006D006100670065004E0061006D00
+        65000000FE5647720D54F07900000400000000120C00000000460069006C0065
+        004E0061006D0065000000FE5647728765F64E0D54000004000000001A0E0000
+        00005200650073006F0075007200630065004E0061006D0065000000FE564772
+        448D906E0D54F07900000400000000080A00000000550072006C000000FE5647
+        72FE94A563000015000000001810040000004900730043006C00690070005200
+        6F0075006E00640000002F6626546A52C18810620657625F0000000000001900
+        000000160A050000004600690078006500640043006F006C006F007200000003
+        8C74659C9872820000000000207707000000001200040000004900740065006D
+        00540079007000650000000000000015000000001C0004000000410075007400
+        6F00530069007A0065005700690064007400680000000000000015000000001E
+        00040000004100750074006F00530069007A0065004800650069006700680074
+        00000000000000040000000010001C000000430061007000740069006F006E00
+        000048006F006E006700200063006C006F007500740068006500730000000400
+        0000000E0016000000440065007400610069006C00000032003000320032002D
+        00300039002D00300038000000040000000010000E0000004400650074006100
+        69006C00310000002400390039002E00300030000000040000000010000C0000
+        00440065007400610069006C0032000000700072006900630065000000040000
+        0000100006000000440065007400610069006C00330000003200300000000400
+        00000010000C000000440065007400610069006C003400000063006F0075006E
+        0074000000040000000010000C000000440065007400610069006C0035000000
+        240033003900380030000000040000000010000C000000440065007400610069
+        006C003600000074006F00740061006C00000007000000001400040000004100
+        630063006500730073006F007200790000000000000018160000001A00000000
+        00420069006E006100720079004F0062006A0065006300740000000E00000000
+        0E00080000004800650069006700680074000000000000000000F0BF0E000000
+        000C00080000005700690064007400680000000000000000C881401500000000
+        100004000000560069007300690062006C0065000000FFFFFFFF04000000000A
+        00000000004E0061006D00650000000700000000080004000000540061006700
+        00000000000007000000000A0004000000540061006700310000000000000015
+        0000000010000400000043006800650063006B00650064000000000000000700
+        0000001200040000004900740065006D00540079007000650000000000000018
+        120000000A001A000000490063006F006E000000540044007200610077005000
+        6900630074007500720065000000040000000014000000000049006D00610067
+        0065004E0061006D006500000017000000001800000000004700490046004600
+        69006C0065004400610074006100000017000000001800000000005300560047
+        00460069006C0065004400610074006100000004000000000A060A0000004E00
+        61006D00650000000D54F0790000490063006F006E0000000400000000100606
+        000000430061007000740069006F006E000000076898980000FE560768000004
+        000000000C0600000000470072006F007500700000000652C47E000007000000
+        0012060400000052006F00770043006F0075006E00740000004C887065000001
+        000000070000000012060400000043006F006C0043006F0075006E0074000000
+        17527065000001000000070000000012080400000052006F00770049006E0064
+        006500780000004C880B4E07680000FFFFFFFF07000000001208040000004300
+        6F006C0049006E00640065007800000017520B4E07680000FFFFFFFF07000000
+        00200A0400000050006900630074007500720065004400720061007700540079
+        00700065000000D87E36527B7C8B570000000000000700000000160A04000000
+        49006D0061006700650049006E006400650078000000FE5647720B4E07680000
+        FFFFFFFF0400000000140A0000000049006D006100670065004E0061006D0065
+        000000FE5647720D54F07900000400000000120C00000000460069006C006500
+        4E0061006D0065000000FE5647728765F64E0D54000004000000001A0E000000
+        005200650073006F0075007200630065004E0061006D0065000000FE56477244
+        8D906E0D54F07900000400000000080A00000000550072006C000000FE564772
+        FE94A563000015000000001810040000004900730043006C006900700052006F
+        0075006E00640000002F6626546A52C18810620657625F000000000000190000
+        0000160A050000004600690078006500640043006F006C006F0072000000038C
+        74659C98728200000000002007181200000008001A0000005000690063000000
+        5400440072006100770050006900630074007500720065000000040000000014
+        000000000049006D006100670065004E0061006D006500000017000000001800
+        00000000470049004600460069006C0065004400610074006100000017000000
+        00180000000000530056004700460069006C0065004400610074006100000004
+        000000000A06080000004E0061006D00650000000D54F0790000500069006300
+        00000400000000100606000000430061007000740069006F006E000000076898
+        980000FE564772000004000000000C0600000000470072006F00750070000000
+        0652C47E0000070000000012060400000052006F00770043006F0075006E0074
+        0000004C887065000001000000070000000012060400000043006F006C004300
+        6F0075006E007400000017527065000001000000070000000012080400000052
+        006F00770049006E0064006500780000004C880B4E07680000FFFFFFFF070000
+        000012080400000043006F006C0049006E00640065007800000017520B4E0768
+        0000FFFFFFFF0700000000200A04000000500069006300740075007200650044
+        0072006100770054007900700065000000D87E36527B7C8B5700000000000007
+        00000000160A0400000049006D0061006700650049006E006400650078000000
+        FE5647720B4E07680000FFFFFFFF0400000000140A0000000049006D00610067
+        0065004E0061006D0065000000FE5647720D54F07900000400000000120C0000
+        0000460069006C0065004E0061006D0065000000FE5647728765F64E0D540000
+        04000000001A0E000000005200650073006F0075007200630065004E0061006D
+        0065000000FE564772448D906E0D54F07900000400000000080A000000005500
+        72006C000000FE564772FE94A563000015000000001810040000004900730043
+        006C006900700052006F0075006E00640000002F6626546A52C1881062065762
+        5F0000000000001900000000160A050000004600690078006500640043006F00
+        6C006F0072000000038C74659C98728200000000002061070000000012000400
+        00004900740065006D00540079007000650000000000000015000000001C0004
+        0000004100750074006F00530069007A00650057006900640074006800000000
+        00000015000000001E00040000004100750074006F00530069007A0065004800
+        6500690067006800740000000000000004000000001000160000004300610070
+        00740069006F006E0000004E0069006B0065002000730068006F006500730000
+        0004000000000E0016000000440065007400610069006C000000320030003200
+        32002D00300039002D0030003800000004000000001000100000004400650074
+        00610069006C003100000024003100390039002E003000300000000400000000
+        10000C000000440065007400610069006C003200000070007200690063006500
+        00000400000000100006000000440065007400610069006C0033000000350030
+        000000040000000010000C000000440065007400610069006C00340000006300
+        6F0075006E0074000000040000000010000C000000440065007400610069006C
+        0035000000240039003900350030000000040000000010000C00000044006500
+        7400610069006C003600000074006F00740061006C0000000700000000140004
+        0000004100630063006500730073006F00720079000000000000001816000000
+        1A0000000000420069006E006100720079004F0062006A006500630074000000
+        0E000000000E00080000004800650069006700680074000000000000000000F0
+        BF0E000000000C00080000005700690064007400680000000000000000C88140
+        1500000000100004000000560069007300690062006C0065000000FFFFFFFF04
+        000000000A00000000004E0061006D0065000000070000000008000400000054
+        006100670000000000000007000000000A000400000054006100670031000000
+        00000000150000000010000400000043006800650063006B0065006400000000
+        00000007000000001200040000004900740065006D0054007900700065000000
+        0000000018120000000A001A000000490063006F006E00000054004400720061
+        0077005000690063007400750072006500000004000000001400000000004900
+        6D006100670065004E0061006D00650000001700000000180000000000470049
+        004600460069006C006500440061007400610000001700000000180000000000
+        530056004700460069006C0065004400610074006100000004000000000A060A
+        0000004E0061006D00650000000D54F0790000490063006F006E000000040000
+        0000100606000000430061007000740069006F006E000000076898980000FE56
+        0768000004000000000C0600000000470072006F007500700000000652C47E00
+        00070000000012060400000052006F00770043006F0075006E00740000004C88
+        7065000001000000070000000012060400000043006F006C0043006F0075006E
+        007400000017527065000001000000070000000012080400000052006F007700
+        49006E0064006500780000004C880B4E07680000FFFFFFFF0700000000120804
+        00000043006F006C0049006E00640065007800000017520B4E07680000FFFFFF
+        FF0700000000200A040000005000690063007400750072006500440072006100
+        770054007900700065000000D87E36527B7C8B57000000000000070000000016
+        0A0400000049006D0061006700650049006E006400650078000000FE5647720B
+        4E07680000FFFFFFFF0400000000140A0000000049006D006100670065004E00
+        61006D0065000000FE5647720D54F07900000400000000120C00000000460069
+        006C0065004E0061006D0065000000FE5647728765F64E0D5400000400000000
+        1A0E000000005200650073006F0075007200630065004E0061006D0065000000
+        FE564772448D906E0D54F07900000400000000080A00000000550072006C0000
+        00FE564772FE94A563000015000000001810040000004900730043006C006900
+        700052006F0075006E00640000002F6626546A52C18810620657625F00000000
+        00001900000000160A050000004600690078006500640043006F006C006F0072
+        000000038C74659C98728200000000002074181200000008001A000000500069
+        0063000000540044007200610077005000690063007400750072006500000004
+        0000000014000000000049006D006100670065004E0061006D00650000001700
+        000000180000000000470049004600460069006C006500440061007400610000
+        001700000000180000000000530056004700460069006C006500440061007400
+        6100000004000000000A06080000004E0061006D00650000000D54F079000050
+        006900630000000400000000100606000000430061007000740069006F006E00
+        0000076898980000FE564772000004000000000C0600000000470072006F0075
+        00700000000652C47E0000070000000012060400000052006F00770043006F00
+        75006E00740000004C887065000001000000070000000012060400000043006F
+        006C0043006F0075006E00740000001752706500000100000007000000001208
+        0400000052006F00770049006E0064006500780000004C880B4E07680000FFFF
+        FFFF070000000012080400000043006F006C0049006E00640065007800000017
+        520B4E07680000FFFFFFFF0700000000200A0400000050006900630074007500
+        72006500440072006100770054007900700065000000D87E36527B7C8B570000
+        000000000700000000160A0400000049006D0061006700650049006E00640065
+        0078000000FE5647720B4E07680000FFFFFFFF0400000000140A000000004900
+        6D006100670065004E0061006D0065000000FE5647720D54F079000004000000
+        00120C00000000460069006C0065004E0061006D0065000000FE5647728765F6
+        4E0D54000004000000001A0E000000005200650073006F007500720063006500
+        4E0061006D0065000000FE564772448D906E0D54F07900000400000000080A00
+        000000550072006C000000FE564772FE94A56300001500000000181004000000
+        4900730043006C006900700052006F0075006E00640000002F6626546A52C188
+        10620657625F0000000000001900000000160A05000000460069007800650064
+        0043006F006C006F0072000000038C74659C9872820000000000207407000000
+        001200040000004900740065006D005400790070006500000000000000150000
+        00001C00040000004100750074006F00530069007A0065005700690064007400
+        680000000000000015000000001E00040000004100750074006F00530069007A
+        0065004800650069006700680074000000000000000400000000100016000000
+        430061007000740069006F006E00000041006400690064006100730020006800
+        61007400000004000000000E0016000000440065007400610069006C00000032
+        003000320032002D00300039002D00300038000000040000000010000E000000
+        440065007400610069006C00310000002400340039002E003000300000000400
+        00000010000C000000440065007400610069006C003200000070007200690063
+        00650000000400000000100006000000440065007400610069006C0033000000
+        310030000000040000000010000C000000440065007400610069006C00340000
+        0063006F0075006E0074000000040000000010000A0000004400650074006100
+        69006C003500000024003400390030000000040000000010000C000000440065
+        007400610069006C003600000074006F00740061006C00000007000000001400
+        040000004100630063006500730073006F0072007900000000000000}
+      Properties.Items = <
         item
           Selected = False
           Checked = False
-          Height = -1
+          Height = -1.000000000000000000
           Visible = True
           Color = clBlack
-          Width = 569
+          Width = 569.000000000000000000
           Icon.IsClipRound = False
           Icon.FixedColor.Alpha = 255
           Pic.IsClipRound = False
@@ -1748,25 +2460,25 @@ object FrameItemGrid_TwoCellText: TFrameItemGrid_TwoCellText
           Tag = 0
           Tag1 = 0
           ItemType = sitDefault
-          Caption = '美特斯邦威T恤'
+          Caption = 'Nike hat'
           Detail = '2022-09-08'
-          Detail1 = '￥99.00'
-          Detail2 = '价格'
+          Detail1 = '$9.00'
+          Detail2 = 'price'
           Detail3 = '90'
-          Detail4 = '数量'
-          Detail5 = '￥8100'
-          Detail6 = '总计'
+          Detail4 = 'count'
+          Detail5 = '$100'
+          Detail6 = 'total'
           Accessory = satNone
           AutoSizeWidth = False
           AutoSizeHeight = False
-        end      
+        end
         item
           Selected = False
           Checked = False
-          Height = -1
+          Height = -1.000000000000000000
           Visible = True
           Color = clBlack
-          Width = 569
+          Width = 569.000000000000000000
           Icon.IsClipRound = False
           Icon.FixedColor.Alpha = 255
           Pic.IsClipRound = False
@@ -1774,25 +2486,25 @@ object FrameItemGrid_TwoCellText: TFrameItemGrid_TwoCellText
           Tag = 0
           Tag1 = 0
           ItemType = sitDefault
-          Caption = '耐克运动鞋'
+          Caption = 'LiNing hat'
           Detail = '2022-09-08'
-          Detail1 = '￥399.00'
-          Detail2 = '价格'
+          Detail1 = '$99.00'
+          Detail2 = 'price'
           Detail3 = '10'
-          Detail4 = '数量'
-          Detail5 = '￥3990'
-          Detail6 = '总计'
+          Detail4 = 'count'
+          Detail5 = '$990'
+          Detail6 = 'total'
           Accessory = satNone
           AutoSizeWidth = False
           AutoSizeHeight = False
-        end      
+        end
         item
           Selected = False
           Checked = False
-          Height = -1
+          Height = -1.000000000000000000
           Visible = True
           Color = clBlack
-          Width = 569
+          Width = 569.000000000000000000
           Icon.IsClipRound = False
           Icon.FixedColor.Alpha = 255
           Pic.IsClipRound = False
@@ -1800,25 +2512,25 @@ object FrameItemGrid_TwoCellText: TFrameItemGrid_TwoCellText
           Tag = 0
           Tag1 = 0
           ItemType = sitDefault
-          Caption = '鸿星尔克运动服'
+          Caption = 'Hong clouthes'
           Detail = '2022-09-08'
-          Detail1 = '￥199.00'
-          Detail2 = '价格'
+          Detail1 = '$99.00'
+          Detail2 = 'price'
           Detail3 = '20'
-          Detail4 = '数量'
-          Detail5 = '￥3980'
-          Detail6 = '总计'
+          Detail4 = 'count'
+          Detail5 = '$3980'
+          Detail6 = 'total'
           Accessory = satNone
           AutoSizeWidth = False
           AutoSizeHeight = False
-        end      
+        end
         item
           Selected = False
           Checked = False
-          Height = -1
+          Height = -1.000000000000000000
           Visible = True
           Color = clBlack
-          Width = 569
+          Width = 569.000000000000000000
           Icon.IsClipRound = False
           Icon.FixedColor.Alpha = 255
           Pic.IsClipRound = False
@@ -1826,25 +2538,25 @@ object FrameItemGrid_TwoCellText: TFrameItemGrid_TwoCellText
           Tag = 0
           Tag1 = 0
           ItemType = sitDefault
-          Caption = '李宁运动卫衣'
+          Caption = 'Nike shoes'
           Detail = '2022-09-08'
-          Detail1 = '￥199.00'
-          Detail2 = '价格'
+          Detail1 = '$199.00'
+          Detail2 = 'price'
           Detail3 = '50'
-          Detail4 = '数量'
-          Detail5 = '￥9950'
-          Detail6 = '总计'
+          Detail4 = 'count'
+          Detail5 = '$9950'
+          Detail6 = 'total'
           Accessory = satNone
           AutoSizeWidth = False
           AutoSizeHeight = False
-        end      
+        end
         item
           Selected = False
           Checked = False
-          Height = -1
+          Height = -1.000000000000000000
           Visible = True
           Color = clBlack
-          Width = 569
+          Width = 569.000000000000000000
           Icon.IsClipRound = False
           Icon.FixedColor.Alpha = 255
           Pic.IsClipRound = False
@@ -1852,14 +2564,14 @@ object FrameItemGrid_TwoCellText: TFrameItemGrid_TwoCellText
           Tag = 0
           Tag1 = 0
           ItemType = sitDefault
-          Caption = 'Adidas帽子'
+          Caption = 'Adidas hat'
           Detail = '2022-09-08'
-          Detail1 = '￥49.00'
-          Detail2 = '价格'
+          Detail1 = '$49.00'
+          Detail2 = 'price'
           Detail3 = '10'
-          Detail4 = '数量'
-          Detail5 = '￥490'
-          Detail6 = '总计'
+          Detail4 = 'count'
+          Detail5 = '$490'
+          Detail6 = 'total'
           Accessory = satNone
           AutoSizeWidth = False
           AutoSizeHeight = False
@@ -1867,12 +2579,11 @@ object FrameItemGrid_TwoCellText: TFrameItemGrid_TwoCellText
     end
     object SkinWinButton1: TSkinWinButton
       Left = 512
-      Height = 40
       Top = 3
       Width = 89
-      ParentMouseEvent = False
+      Height = 40
+      ParentMouseEvent = True
       DirectUIVisible = False
-      AlignWithMagins = False
       ComponentTypeUseKind = ctukDefault
       MaterialUseKind = mukRef
       KeepSelfOwnMaterial = False
@@ -1908,7 +2619,10 @@ object FrameItemGrid_TwoCellText: TFrameItemGrid_TwoCellText
       SelfOwnMaterial.IsAutoCenterIconAndCaption = False
       SelfOwnMaterial.DrawDetailParam.FontName = 'default'
       SelfOwnMaterial.DrawDetailParam.FontSize = 12
+      SelfOwnMaterial.DrawDetailParam.DrawFont.Charset = DEFAULT_CHARSET
       SelfOwnMaterial.DrawDetailParam.DrawFont.Height = -16
+      SelfOwnMaterial.DrawDetailParam.DrawFont.Name = 'default'
+      SelfOwnMaterial.DrawDetailParam.DrawFont.Style = []
       SelfOwnMaterial.DrawDetailParam.DrawFont.FontColor.Alpha = 255
       SelfOwnMaterial.DrawDetailParam.FontTrimming = fttNone
       SelfOwnMaterial.DrawDetailParam.FontHorzAlign = fhaLeft
@@ -1925,7 +2639,10 @@ object FrameItemGrid_TwoCellText: TFrameItemGrid_TwoCellText
       SelfOwnMaterial.DrawDetailParam.DrawEffectSetting.FocusedEffect.FontSize = 12
       SelfOwnMaterial.DrawDetail1Param.FontName = 'default'
       SelfOwnMaterial.DrawDetail1Param.FontSize = 12
+      SelfOwnMaterial.DrawDetail1Param.DrawFont.Charset = DEFAULT_CHARSET
       SelfOwnMaterial.DrawDetail1Param.DrawFont.Height = -16
+      SelfOwnMaterial.DrawDetail1Param.DrawFont.Name = 'default'
+      SelfOwnMaterial.DrawDetail1Param.DrawFont.Style = []
       SelfOwnMaterial.DrawDetail1Param.DrawFont.FontColor.Alpha = 255
       SelfOwnMaterial.DrawDetail1Param.FontTrimming = fttNone
       SelfOwnMaterial.DrawDetail1Param.FontHorzAlign = fhaLeft
@@ -1943,8 +2660,11 @@ object FrameItemGrid_TwoCellText: TFrameItemGrid_TwoCellText
       SelfOwnMaterial.DrawHelpTextParam.FontName = 'default'
       SelfOwnMaterial.DrawHelpTextParam.FontSize = 12
       SelfOwnMaterial.DrawHelpTextParam.FontColor = clGray
+      SelfOwnMaterial.DrawHelpTextParam.DrawFont.Charset = DEFAULT_CHARSET
       SelfOwnMaterial.DrawHelpTextParam.DrawFont.Color = clGray
       SelfOwnMaterial.DrawHelpTextParam.DrawFont.Height = -16
+      SelfOwnMaterial.DrawHelpTextParam.DrawFont.Name = 'default'
+      SelfOwnMaterial.DrawHelpTextParam.DrawFont.Style = []
       SelfOwnMaterial.DrawHelpTextParam.DrawFont.FontColor.Alpha = 255
       SelfOwnMaterial.DrawHelpTextParam.DrawFont.FontColor.Color = clGray
       SelfOwnMaterial.DrawHelpTextParam.FontTrimming = fttNone
@@ -1968,7 +2688,10 @@ object FrameItemGrid_TwoCellText: TFrameItemGrid_TwoCellText
       SelfOwnMaterial.DrawIconParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
       SelfOwnMaterial.DrawCaptionParam.FontName = 'default'
       SelfOwnMaterial.DrawCaptionParam.FontSize = 12
+      SelfOwnMaterial.DrawCaptionParam.DrawFont.Charset = DEFAULT_CHARSET
       SelfOwnMaterial.DrawCaptionParam.DrawFont.Height = -16
+      SelfOwnMaterial.DrawCaptionParam.DrawFont.Name = 'default'
+      SelfOwnMaterial.DrawCaptionParam.DrawFont.Style = []
       SelfOwnMaterial.DrawCaptionParam.DrawFont.FontColor.Alpha = 255
       SelfOwnMaterial.DrawCaptionParam.FontTrimming = fttNone
       SelfOwnMaterial.DrawCaptionParam.FontHorzAlign = fhaLeft
@@ -2006,8 +2729,8 @@ object FrameItemGrid_TwoCellText: TFrameItemGrid_TwoCellText
       Anchors = [akTop, akRight]
       ParentBackground = False
       TabOrder = 1
-      Caption = '导出'
-      Text = '导出'
+      Caption = 'Export'
+      Text = 'Export'
       Properties.AutoSize = False
       Properties.IsAutoPush = False
       Properties.IsPushed = False

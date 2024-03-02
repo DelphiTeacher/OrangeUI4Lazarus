@@ -1247,7 +1247,7 @@ type
       ///     Replace picture file
       ///   </para>
       /// </summary>
-      //procedure ReplacePictureFile(const AIndex:Integer;const APictureFile:String);
+      procedure ReplacePictureFile(const AIndex:Integer;const APictureFile:String);
       /// <summary>
       ///   <para>
       ///     替换文件名
@@ -3746,18 +3746,18 @@ begin
   //Result:=Inherited Add(ADrawPicture);
 end;
 
-//procedure TDrawPictureCollection.ReplacePictureFile(const AIndex: Integer;const APictureFile: String);
-//var
-//  ADestDrawPicture:TDrawPictureItem;
-//  ASrcSkinPicture:TDrawPicture;
-//begin
-////  ADestDrawPicture:=CreateCurrentEngineDrawPicture('','');
-//  ADestDrawPicture:=TDrawPicture.Create('','');
-//  ADestDrawPicture.LoadFromFile(APictureFile);;
+procedure TDrawPictureCollection.ReplacePictureFile(const AIndex: Integer;const APictureFile: String);
+var
+  ADestDrawPicture:TDrawPictureItem;
+  ASrcSkinPicture:TDrawPicture;
+begin
+//  ADestDrawPicture:=CreateCurrentEngineDrawPicture('','');
+//  ADestDrawPicture:=TDrawPictureItem.Create();
+  Self.Items[AIndex].FDrawPicture.LoadFromFile(APictureFile);;
 //  ASrcSkinPicture:=Self.Items[AIndex];
 //  Self.Items[AIndex]:=ADestDrawPicture;
 //  FreeAndNil(ASrcSkinPicture);
-//end;
+end;
 
 procedure TDrawPictureCollection.ReplaceFileNameOnly(const AIndex: Integer;const AFileName: String);
 begin

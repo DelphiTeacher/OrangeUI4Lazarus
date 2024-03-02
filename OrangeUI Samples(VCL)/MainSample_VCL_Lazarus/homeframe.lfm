@@ -1,4 +1,4 @@
-object FrameHome: TFrameHome
+﻿object FrameHome: TFrameHome
   Left = 0
   Height = 558
   Top = 0
@@ -15,7 +15,7 @@ object FrameHome: TFrameHome
     Width = 584
     ParentMouseEvent = False
     DirectUIVisible = False
-    AlignWithMagins = False
+    AlignWithMargins = False
     ComponentTypeUseKind = ctukDefault
     MaterialUseKind = mukSelfOwn
     KeepSelfOwnMaterial = True
@@ -888,7 +888,7 @@ object FrameHome: TFrameHome
     VertScrollBar.Width = 12
     VertScrollBar.ParentMouseEvent = False
     VertScrollBar.DirectUIVisible = False
-    VertScrollBar.AlignWithMagins = False
+    VertScrollBar.AlignWithMargins = False
     VertScrollBar.ComponentTypeUseKind = ctukDefault
     VertScrollBar.MaterialUseKind = mukSelfOwn
     VertScrollBar.KeepSelfOwnMaterial = True
@@ -949,7 +949,7 @@ object FrameHome: TFrameHome
     HorzScrollBar.Width = 584
     HorzScrollBar.ParentMouseEvent = False
     HorzScrollBar.DirectUIVisible = False
-    HorzScrollBar.AlignWithMagins = False
+    HorzScrollBar.AlignWithMargins = False
     HorzScrollBar.ComponentTypeUseKind = ctukDefault
     HorzScrollBar.MaterialUseKind = mukSelfOwn
     HorzScrollBar.KeepSelfOwnMaterial = True
@@ -1010,7 +1010,7 @@ object FrameHome: TFrameHome
     ScrollControlCorner.Width = 12
     ScrollControlCorner.ParentMouseEvent = False
     ScrollControlCorner.DirectUIVisible = False
-    ScrollControlCorner.AlignWithMagins = False
+    ScrollControlCorner.AlignWithMargins = False
     ScrollControlCorner.ComponentTypeUseKind = ctukDefault
     ScrollControlCorner.MaterialUseKind = mukSelfOwn
     ScrollControlCorner.KeepSelfOwnMaterial = True

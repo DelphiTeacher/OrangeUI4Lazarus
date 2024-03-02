@@ -38,7 +38,8 @@ requires
   IndySystem,
   IndyProtocols,
   IndyCore,
-  xmlrtl;
+  xmlrtl,
+  DesignIde;
 
 contains
   uSkinScrollBarType in 'Source\Controls\uSkinScrollBarType.pas',
@@ -134,6 +135,11 @@ contains
   uskinsuperobject in '..\OrangeProjectCommon\SkinSuperObject\uskinsuperobject.pas',
   uGDIPlusDrawCanvas in 'Source\VCL\GDIPlusCanvas\uGDIPlusDrawCanvas.pas',
   uGDIPlusSkinPictureEngine in 'Source\VCL\GDIPlusCanvas\uGDIPlusSkinPictureEngine.pas',
-  uSkinGDIPlus in 'Source\VCL\GDIPlusCanvas\GDIPlus\uSkinGDIPlus.pas';
+  uSkinGDIPlus in 'Source\VCL\GDIPlusCanvas\GDIPlus\uSkinGDIPlus.pas',
+  uComponentTypeNameEditor in '..\OrangeUIDesign\Source\uComponentTypeNameEditor.pas',
+  uDrawPictureEditor in '..\OrangeUIDesign\Source\uDrawPictureEditor.pas',
+  VCL_SkinPictureListPropertyEditorForm in '..\OrangeUIDesign\Source\VCL_SkinPictureListPropertyEditorForm.pas' {frmSkinPictureListPropertyEditor},
+  VCL_DrawPicturePropertyEditorForm in '..\OrangeUIDesign\Source\VCL_DrawPicturePropertyEditorForm.pas' {frmDrawPicturePropertyEditor},
+  uCollectionEditor in '..\OrangeUIDesign\Source\uCollectionEditor.pas';
 
 end.

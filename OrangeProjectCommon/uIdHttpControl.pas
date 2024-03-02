@@ -80,7 +80,7 @@ begin
 
   FIdHttp:=TIdHttp.Create(nil);
 
-  FIdHttp.OnWork:=@DoWork;
+  FIdHttp.OnWork:=DoWork;
 
 
   if IsIdHttpNeedSSL then

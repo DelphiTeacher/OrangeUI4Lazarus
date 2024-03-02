@@ -31,7 +31,7 @@ object frmWaiting: TfrmWaiting
     Width = 123
     ParentMouseEvent = False
     DirectUIVisible = False
-    AlignWithMagins = False
+    AlignWithMargins = False
     ComponentTypeUseKind = ctukDefault
     MaterialUseKind = mukSelfOwn
     KeepSelfOwnMaterial = True

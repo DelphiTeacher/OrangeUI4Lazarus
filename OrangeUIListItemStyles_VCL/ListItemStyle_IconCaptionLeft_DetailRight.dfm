@@ -15,7 +15,7 @@ object FrameListItemStyle_IconCaptionLeft_DetailRight: TFrameListItemStyle_IconC
     Width = 309
     ParentMouseEvent = False
     DirectUIVisible = False
-    AlignWithMagins = False
+    AlignWithMargins = False
     ComponentTypeUseKind = ctukDefault
     MaterialUseKind = mukSelfOwn
     KeepSelfOwnMaterial = True
@@ -88,7 +88,7 @@ object FrameListItemStyle_IconCaptionLeft_DetailRight: TFrameListItemStyle_IconC
       Margins.Top = 5
       Margins.Right = 2
       Margins.Bottom = 5
-      AlignWithMagins = False
+      AlignWithMargins = False
       ComponentTypeUseKind = ctukDefault
       MaterialUseKind = mukSelfOwn
       KeepSelfOwnMaterial = True
@@ -164,7 +164,7 @@ object FrameListItemStyle_IconCaptionLeft_DetailRight: TFrameListItemStyle_IconC
       ParentMouseEvent = False
       BindItemFieldName = 'ItemCaption'
       DirectUIVisible = False
-      AlignWithMagins = False
+      AlignWithMargins = False
       ComponentTypeUseKind = ctukDefault
       MaterialUseKind = mukSelfOwn
       KeepSelfOwnMaterial = True
@@ -227,7 +227,7 @@ object FrameListItemStyle_IconCaptionLeft_DetailRight: TFrameListItemStyle_IconC
       Margins.Top = 5
       Margins.Right = 2
       Margins.Bottom = 5
-      AlignWithMagins = False
+      AlignWithMargins = False
       ComponentTypeUseKind = ctukDefault
       MaterialUseKind = mukSelfOwn
       KeepSelfOwnMaterial = True
@@ -307,7 +307,7 @@ object FrameListItemStyle_IconCaptionLeft_DetailRight: TFrameListItemStyle_IconC
       Width = 16
       ParentMouseEvent = False
       DirectUIVisible = False
-      AlignWithMagins = False
+      AlignWithMargins = False
       ComponentTypeUseKind = ctukDefault
       MaterialUseKind = mukSelfOwn
       KeepSelfOwnMaterial = True
@@ -468,7 +468,7 @@ object FrameListItemStyle_IconCaptionLeft_DetailRight: TFrameListItemStyle_IconC
       BindItemFieldName = 'ItemDetail'
       DirectUIVisible = False
       Margins.Right = 10
-      AlignWithMagins = False
+      AlignWithMargins = False
       ComponentTypeUseKind = ctukDefault
       MaterialUseKind = mukSelfOwn
       KeepSelfOwnMaterial = True
@@ -532,7 +532,7 @@ object FrameListItemStyle_IconCaptionLeft_DetailRight: TFrameListItemStyle_IconC
       BindItemFieldName = 'ItemSelected'
       DirectUIVisible = False
       Margins.Left = 10
-      AlignWithMagins = False
+      AlignWithMargins = False
       ComponentTypeUseKind = ctukName
       MaterialUseKind = mukRef
       KeepSelfOwnMaterial = True

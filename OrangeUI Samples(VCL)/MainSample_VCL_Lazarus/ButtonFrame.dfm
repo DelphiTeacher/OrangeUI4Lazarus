@@ -7,58 +7,58 @@ object FrameButton: TFrameButton
   object Label1: TLabel
     Left = 24
     Top = 24
-    Width = 48
+    Width = 67
     Height = 13
-    Caption = #26222#36890#25353#38062
+    Caption = 'normal button'
   end
   object Label2: TLabel
     Left = 28
     Top = 664
-    Width = 108
+    Width = 117
     Height = 13
-    Caption = #20844#20849#27169#22359#30340#25353#38062#32032#26448
+    Caption = 'common material module'
   end
   object Label3: TLabel
     Left = 24
     Top = 112
-    Width = 48
+    Width = 63
     Height = 13
-    Caption = #22278#35282#25353#38062
+    Caption = 'round button'
   end
   object Label4: TLabel
     Left = 27
     Top = 208
-    Width = 36
+    Width = 19
     Height = 13
-    Caption = #24102#22270#26631
+    Caption = 'icon'
   end
   object Label5: TLabel
     Left = 28
     Top = 301
-    Width = 36
+    Width = 62
     Height = 13
-    Caption = #24102#22270#26631
+    Caption = 'icon+caption'
   end
   object Label6: TLabel
     Left = 24
     Top = 392
-    Width = 48
+    Width = 25
     Height = 13
-    Caption = #36793#26694#25353#38062
+    Caption = 'no fill'
   end
   object Label7: TLabel
     Left = 28
     Top = 480
-    Width = 72
+    Width = 56
     Height = 13
-    Caption = #22278#35282#36793#26694#25353#38062
+    Caption = 'round no fill'
   end
   object Label8: TLabel
     Left = 28
     Top = 560
-    Width = 48
+    Width = 63
     Height = 13
-    Caption = #25353#38062#20998#32452
+    Caption = 'button group'
   end
   object btnDefaultTheme: TSkinWinButton
     Left = 24
@@ -70,6 +70,7 @@ object FrameButton: TFrameButton
     ComponentTypeUseKind = ctukDefault
     MaterialUseKind = mukRef
     KeepSelfOwnMaterial = True
+    MaterialName = 'btnThemeColorIconLeftCaptionRight'
     SelfOwnMaterial.BackColor.Color = clWhite
     SelfOwnMaterial.BackColor.IsFill = True
     SelfOwnMaterial.BackColor.FillColor.Alpha = 255
@@ -207,11 +208,13 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnThemeColorIconLeftCaptionRight
+    StaticRefMaterial = dmEasyServiceCommonMaterial.btnThemeColorIconLeftCaptionRight
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 0
-    Caption = #20027#39064#33394
-    Text = #20027#39064#33394
+    Caption = 'ThemeColor'
+    Text = 'ThemeColor'
     Properties.AutoSize = False
     Properties.IsAutoPush = True
     Properties.IsPushed = False
@@ -232,6 +235,7 @@ object FrameButton: TFrameButton
     ComponentTypeUseKind = ctukDefault
     MaterialUseKind = mukRef
     KeepSelfOwnMaterial = True
+    MaterialName = 'btnThemeColor1IconLeftCaptionRight'
     SelfOwnMaterial.BackColor.Color = clWhite
     SelfOwnMaterial.BackColor.IsFill = True
     SelfOwnMaterial.BackColor.FillColor.Alpha = 255
@@ -369,11 +373,13 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnThemeColor1IconLeftCaptionRight
+    StaticRefMaterial = dmEasyServiceCommonMaterial.btnThemeColor1IconLeftCaptionRight
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 1
-    Caption = #20027#39064#33394'1'
-    Text = #20027#39064#33394'1'
+    Caption = 'ThemeColor1'
+    Text = 'ThemeColor1'
     Properties.AutoSize = False
     Properties.IsAutoPush = True
     Properties.IsPushed = False
@@ -394,6 +400,7 @@ object FrameButton: TFrameButton
     ComponentTypeUseKind = ctukDefault
     MaterialUseKind = mukRef
     KeepSelfOwnMaterial = True
+    MaterialName = 'btnThemeColor2IconLeftCaptionRight'
     SelfOwnMaterial.BackColor.Color = clWhite
     SelfOwnMaterial.BackColor.IsFill = True
     SelfOwnMaterial.BackColor.FillColor.Alpha = 255
@@ -531,11 +538,13 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnThemeColor2IconLeftCaptionRight
+    StaticRefMaterial = dmEasyServiceCommonMaterial.btnThemeColor2IconLeftCaptionRight
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 2
-    Caption = #20027#39064#33394'2'
-    Text = #20027#39064#33394'2'
+    Caption = 'ThemeColor2'
+    Text = 'ThemeColor2'
     Properties.AutoSize = False
     Properties.IsAutoPush = True
     Properties.IsPushed = False
@@ -556,6 +565,7 @@ object FrameButton: TFrameButton
     ComponentTypeUseKind = ctukDefault
     MaterialUseKind = mukRef
     KeepSelfOwnMaterial = True
+    MaterialName = 'btnThemeColor3IconLeftCaptionRight'
     SelfOwnMaterial.BackColor.Color = clWhite
     SelfOwnMaterial.BackColor.IsFill = True
     SelfOwnMaterial.BackColor.FillColor.Alpha = 255
@@ -693,11 +703,13 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnThemeColor3IconLeftCaptionRight
+    StaticRefMaterial = dmEasyServiceCommonMaterial.btnThemeColor3IconLeftCaptionRight
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 3
-    Caption = #20027#39064#33394'3'
-    Text = #20027#39064#33394'3'
+    Caption = 'ThemeColor3'
+    Text = 'ThemeColor3'
     Properties.AutoSize = False
     Properties.IsAutoPush = True
     Properties.IsPushed = False
@@ -871,9 +883,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 4
-    Caption = #35686#21578
-    Text = #35686#21578
+    Caption = 'Warnning'
+    Text = 'Warnning'
     Properties.AutoSize = False
     Properties.IsAutoPush = True
     Properties.IsPushed = False
@@ -1047,9 +1060,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 5
-    Caption = #25552#31034
-    Text = #25552#31034
+    Caption = 'Hint'
+    Text = 'Hint'
     Properties.AutoSize = False
     Properties.IsAutoPush = True
     Properties.IsPushed = False
@@ -1220,9 +1234,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 6
-    Caption = #27973#33394
-    Text = #27973#33394
+    Caption = 'Light'
+    Text = 'Light'
     Properties.AutoSize = False
     Properties.IsAutoPush = True
     Properties.IsPushed = False
@@ -1396,9 +1411,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 7
-    Caption = #28145#33394
-    Text = #28145#33394
+    Caption = 'Dark'
+    Text = 'Dark'
     Properties.AutoSize = False
     Properties.IsAutoPush = True
     Properties.IsPushed = False
@@ -1419,6 +1435,7 @@ object FrameButton: TFrameButton
     ComponentTypeUseKind = ctukDefault
     MaterialUseKind = mukRef
     KeepSelfOwnMaterial = True
+    MaterialName = 'btnBlackTransHoverColorIconLeftCaptionRight'
     SelfOwnMaterial.BackColor.Color = 16249582
     SelfOwnMaterial.BackColor.IsFill = True
     SelfOwnMaterial.BackColor.FillColor.Alpha = 255
@@ -1568,8 +1585,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnBlackTransHoverColorIconLeftCaptionRight
+    StaticRefMaterial = dmEasyServiceCommonMaterial.btnBlackTransHoverColorIconLeftCaptionRight
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 8
     Caption = 'btnBlackTransHoverColorIconLeftCaptionRight'
     Text = 'btnBlackTransHoverColorIconLeftCaptionRight'
@@ -1593,6 +1612,7 @@ object FrameButton: TFrameButton
     ComponentTypeUseKind = ctukDefault
     MaterialUseKind = mukRef
     KeepSelfOwnMaterial = True
+    MaterialName = 'btnBlueColorButtonMaterial'
     SelfOwnMaterial.BackColor.Color = 16249582
     SelfOwnMaterial.BackColor.IsFill = True
     SelfOwnMaterial.BackColor.FillColor.Alpha = 255
@@ -1742,8 +1762,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnBlueColorButtonMaterial
+    StaticRefMaterial = dmEasyServiceCommonMaterial.btnBlueColorButtonMaterial
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 9
     Caption = 'btnBlueColorButtonMaterial'
     Text = 'btnBlueColorButtonMaterial'
@@ -1767,6 +1789,7 @@ object FrameButton: TFrameButton
     ComponentTypeUseKind = ctukDefault
     MaterialUseKind = mukRef
     KeepSelfOwnMaterial = True
+    MaterialName = 'btnButtonDefaultMaterial'
     SelfOwnMaterial.BackColor.Color = 16249582
     SelfOwnMaterial.BackColor.IsFill = True
     SelfOwnMaterial.BackColor.FillColor.Alpha = 255
@@ -1916,8 +1939,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnButtonDefaultMaterial
+    StaticRefMaterial = dmEasyServiceCommonMaterial.btnButtonDefaultMaterial
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 10
     Caption = 'btnButtonDefaultMaterial'
     Text = 'btnButtonDefaultMaterial'
@@ -1941,6 +1966,7 @@ object FrameButton: TFrameButton
     ComponentTypeUseKind = ctukDefault
     MaterialUseKind = mukRef
     KeepSelfOwnMaterial = True
+    MaterialName = 'btnDeleteButtonMaterial'
     SelfOwnMaterial.BackColor.Color = 16249582
     SelfOwnMaterial.BackColor.IsFill = True
     SelfOwnMaterial.BackColor.FillColor.Alpha = 255
@@ -2090,8 +2116,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnDeleteButtonMaterial
+    StaticRefMaterial = dmEasyServiceCommonMaterial.btnDeleteButtonMaterial
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 11
     Caption = 'btnDeleteButtonMaterial'
     Text = 'btnDeleteButtonMaterial'
@@ -2115,6 +2143,7 @@ object FrameButton: TFrameButton
     ComponentTypeUseKind = ctukDefault
     MaterialUseKind = mukRef
     KeepSelfOwnMaterial = True
+    MaterialName = 'btnDropDownButtonMaterial'
     SelfOwnMaterial.BackColor.Color = 16249582
     SelfOwnMaterial.BackColor.IsFill = True
     SelfOwnMaterial.BackColor.FillColor.Alpha = 255
@@ -2264,8 +2293,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnDropDownButtonMaterial
+    StaticRefMaterial = dmEasyServiceCommonMaterial.btnDropDownButtonMaterial
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 12
     Caption = 'btnDropDownButtonMaterial'
     Text = 'btnDropDownButtonMaterial'
@@ -2304,6 +2335,7 @@ object FrameButton: TFrameButton
     ComponentTypeUseKind = ctukDefault
     MaterialUseKind = mukRef
     KeepSelfOwnMaterial = True
+    MaterialName = 'btnGrayBorderButtonMaterial'
     SelfOwnMaterial.BackColor.Color = 16249582
     SelfOwnMaterial.BackColor.IsFill = True
     SelfOwnMaterial.BackColor.FillColor.Alpha = 255
@@ -2453,8 +2485,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnGrayBorderButtonMaterial
+    StaticRefMaterial = dmEasyServiceCommonMaterial.btnGrayBorderButtonMaterial
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 13
     Caption = 'btnGrayBorderButtonMaterial'
     Text = 'btnGrayBorderButtonMaterial'
@@ -2478,6 +2512,7 @@ object FrameButton: TFrameButton
     ComponentTypeUseKind = ctukDefault
     MaterialUseKind = mukRef
     KeepSelfOwnMaterial = True
+    MaterialName = 'btnGrayBorderSmallTextButtonMaterial'
     SelfOwnMaterial.BackColor.Color = 16249582
     SelfOwnMaterial.BackColor.IsFill = True
     SelfOwnMaterial.BackColor.FillColor.Alpha = 255
@@ -2627,8 +2662,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnGrayBorderSmallTextButtonMaterial
+    StaticRefMaterial = dmEasyServiceCommonMaterial.btnGrayBorderSmallTextButtonMaterial
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 14
     Caption = 'btnGrayBorderSmallTextButtonMaterial'
     Text = 'btnGrayBorderSmallTextButtonMaterial'
@@ -2652,6 +2689,7 @@ object FrameButton: TFrameButton
     ComponentTypeUseKind = ctukDefault
     MaterialUseKind = mukRef
     KeepSelfOwnMaterial = True
+    MaterialName = 'btnGraySearchIconButtonMaterial'
     SelfOwnMaterial.BackColor.Color = 16249582
     SelfOwnMaterial.BackColor.IsFill = True
     SelfOwnMaterial.BackColor.FillColor.Alpha = 255
@@ -2801,8 +2839,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnGraySearchIconButtonMaterial
+    StaticRefMaterial = dmEasyServiceCommonMaterial.btnGraySearchIconButtonMaterial
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 15
     Caption = 'btnGraySearchIconButtonMaterial'
     Text = 'btnGraySearchIconButtonMaterial'
@@ -2826,6 +2866,7 @@ object FrameButton: TFrameButton
     ComponentTypeUseKind = ctukDefault
     MaterialUseKind = mukRef
     KeepSelfOwnMaterial = True
+    MaterialName = 'btnIconButtonMaterial'
     SelfOwnMaterial.BackColor.Color = 16249582
     SelfOwnMaterial.BackColor.IsFill = True
     SelfOwnMaterial.BackColor.FillColor.Alpha = 255
@@ -2975,8 +3016,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnIconButtonMaterial
+    StaticRefMaterial = dmEasyServiceCommonMaterial.btnIconButtonMaterial
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 16
     Caption = 'btnIconButtonMaterial'
     Text = 'btnIconButtonMaterial'
@@ -3032,6 +3075,7 @@ object FrameButton: TFrameButton
     ComponentTypeUseKind = ctukDefault
     MaterialUseKind = mukRef
     KeepSelfOwnMaterial = True
+    MaterialName = 'btnIconTopCaptionBottomButtonMaterial'
     SelfOwnMaterial.BackColor.Color = 16249582
     SelfOwnMaterial.BackColor.IsFill = True
     SelfOwnMaterial.BackColor.FillColor.Alpha = 255
@@ -3181,8 +3225,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnIconTopCaptionBottomButtonMaterial
+    StaticRefMaterial = dmEasyServiceCommonMaterial.btnIconTopCaptionBottomButtonMaterial
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 17
     Caption = 'btnIconTopCaptionBottomButtonMaterial'
     Text = 'btnIconTopCaptionBottomButtonMaterial'
@@ -3238,6 +3284,7 @@ object FrameButton: TFrameButton
     ComponentTypeUseKind = ctukDefault
     MaterialUseKind = mukRef
     KeepSelfOwnMaterial = True
+    MaterialName = 'btnNumberAddButtonMaterial'
     SelfOwnMaterial.BackColor.Color = 16249582
     SelfOwnMaterial.BackColor.IsFill = True
     SelfOwnMaterial.BackColor.FillColor.Alpha = 255
@@ -3387,8 +3434,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnNumberAddButtonMaterial
+    StaticRefMaterial = dmEasyServiceCommonMaterial.btnNumberAddButtonMaterial
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 18
     Caption = 'btnNumberAddButtonMaterial'
     Text = 'btnNumberAddButtonMaterial'
@@ -3412,6 +3461,7 @@ object FrameButton: TFrameButton
     ComponentTypeUseKind = ctukDefault
     MaterialUseKind = mukRef
     KeepSelfOwnMaterial = True
+    MaterialName = 'btnNumberDecButtonMaterial'
     SelfOwnMaterial.BackColor.Color = 16249582
     SelfOwnMaterial.BackColor.IsFill = True
     SelfOwnMaterial.BackColor.FillColor.Alpha = 255
@@ -3561,8 +3611,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnNumberDecButtonMaterial
+    StaticRefMaterial = dmEasyServiceCommonMaterial.btnNumberDecButtonMaterial
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 19
     Caption = 'btnNumberDecButtonMaterial'
     Text = 'btnNumberDecButtonMaterial'
@@ -3586,6 +3638,7 @@ object FrameButton: TFrameButton
     ComponentTypeUseKind = ctukDefault
     MaterialUseKind = mukRef
     KeepSelfOwnMaterial = True
+    MaterialName = 'btnOrangeRedBorderWhiteBackButtonMaterial'
     SelfOwnMaterial.BackColor.Color = 16249582
     SelfOwnMaterial.BackColor.IsFill = True
     SelfOwnMaterial.BackColor.FillColor.Alpha = 255
@@ -3735,8 +3788,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnOrangeRedBorderWhiteBackButtonMaterial
+    StaticRefMaterial = dmEasyServiceCommonMaterial.btnOrangeRedBorderWhiteBackButtonMaterial
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 20
     Caption = 'btnOrangeRedBorderWhiteBackButtonMaterial'
     Text = 'btnOrangeRedBorderWhiteBackButtonMaterial'
@@ -3760,6 +3815,7 @@ object FrameButton: TFrameButton
     ComponentTypeUseKind = ctukDefault
     MaterialUseKind = mukRef
     KeepSelfOwnMaterial = True
+    MaterialName = 'btnRedBorderButtonMaterial'
     SelfOwnMaterial.BackColor.Color = 16249582
     SelfOwnMaterial.BackColor.IsFill = True
     SelfOwnMaterial.BackColor.FillColor.Alpha = 255
@@ -3909,8 +3965,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnRedBorderButtonMaterial
+    StaticRefMaterial = dmEasyServiceCommonMaterial.btnRedBorderButtonMaterial
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 21
     Caption = 'btnRedBorderButtonMaterial'
     Text = 'btnRedBorderButtonMaterial'
@@ -3934,6 +3992,7 @@ object FrameButton: TFrameButton
     ComponentTypeUseKind = ctukDefault
     MaterialUseKind = mukRef
     KeepSelfOwnMaterial = True
+    MaterialName = 'btnRedColorButtonMaterial'
     SelfOwnMaterial.BackColor.Color = 16249582
     SelfOwnMaterial.BackColor.IsFill = True
     SelfOwnMaterial.BackColor.FillColor.Alpha = 255
@@ -4083,8 +4142,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnRedColorButtonMaterial
+    StaticRefMaterial = dmEasyServiceCommonMaterial.btnRedColorButtonMaterial
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 22
     Caption = 'btnRedColorButtonMaterial'
     Text = 'btnRedColorButtonMaterial'
@@ -4108,6 +4169,7 @@ object FrameButton: TFrameButton
     ComponentTypeUseKind = ctukDefault
     MaterialUseKind = mukRef
     KeepSelfOwnMaterial = True
+    MaterialName = 'btnRedRectButtonMaterial'
     SelfOwnMaterial.BackColor.Color = 16249582
     SelfOwnMaterial.BackColor.IsFill = True
     SelfOwnMaterial.BackColor.FillColor.Alpha = 255
@@ -4257,8 +4319,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnRedRectButtonMaterial
+    StaticRefMaterial = dmEasyServiceCommonMaterial.btnRedRectButtonMaterial
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 23
     Caption = 'btnRedRectButtonMaterial'
     Text = 'btnRedRectButtonMaterial'
@@ -4282,6 +4346,7 @@ object FrameButton: TFrameButton
     ComponentTypeUseKind = ctukDefault
     MaterialUseKind = mukRef
     KeepSelfOwnMaterial = True
+    MaterialName = 'btnScanHandCode_Material'
     SelfOwnMaterial.BackColor.Color = 16249582
     SelfOwnMaterial.BackColor.IsFill = True
     SelfOwnMaterial.BackColor.FillColor.Alpha = 255
@@ -4431,8 +4496,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnScanHandCode_Material
+    StaticRefMaterial = dmEasyServiceCommonMaterial.btnScanHandCode_Material
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 24
     Caption = 'btnScanHandCode_Material'
     Text = 'btnScanHandCode_Material'
@@ -4456,6 +4523,7 @@ object FrameButton: TFrameButton
     ComponentTypeUseKind = ctukDefault
     MaterialUseKind = mukRef
     KeepSelfOwnMaterial = True
+    MaterialName = 'btnSearchButtonMaterial'
     SelfOwnMaterial.BackColor.Color = 16249582
     SelfOwnMaterial.BackColor.IsFill = True
     SelfOwnMaterial.BackColor.FillColor.Alpha = 255
@@ -4605,8 +4673,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnSearchButtonMaterial
+    StaticRefMaterial = dmEasyServiceCommonMaterial.btnSearchButtonMaterial
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 25
     Caption = 'btnSearchButtonMaterial'
     Text = 'btnSearchButtonMaterial'
@@ -4630,6 +4700,7 @@ object FrameButton: TFrameButton
     ComponentTypeUseKind = ctukDefault
     MaterialUseKind = mukRef
     KeepSelfOwnMaterial = True
+    MaterialName = 'btnSelectButtonMaterial'
     SelfOwnMaterial.BackColor.Color = 16249582
     SelfOwnMaterial.BackColor.IsFill = True
     SelfOwnMaterial.BackColor.FillColor.Alpha = 255
@@ -4779,8 +4850,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnSelectButtonMaterial
+    StaticRefMaterial = dmEasyServiceCommonMaterial.btnSelectButtonMaterial
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 26
     Caption = 'btnSelectButtonMaterial'
     Text = 'btnSelectButtonMaterial'
@@ -4804,6 +4877,7 @@ object FrameButton: TFrameButton
     ComponentTypeUseKind = ctukDefault
     MaterialUseKind = mukRef
     KeepSelfOwnMaterial = True
+    MaterialName = 'btnSelectButtonRightAlignMaterial'
     SelfOwnMaterial.BackColor.Color = 16249582
     SelfOwnMaterial.BackColor.IsFill = True
     SelfOwnMaterial.BackColor.FillColor.Alpha = 255
@@ -4953,8 +5027,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnSelectButtonRightAlignMaterial
+    StaticRefMaterial = dmEasyServiceCommonMaterial.btnSelectButtonRightAlignMaterial
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 27
     Caption = 'btnSelectButtonRightAlignMaterial'
     Text = 'btnSelectButtonRightAlignMaterial'
@@ -4978,6 +5054,7 @@ object FrameButton: TFrameButton
     ComponentTypeUseKind = ctukDefault
     MaterialUseKind = mukRef
     KeepSelfOwnMaterial = True
+    MaterialName = 'btnSelectWithHelpText_Material'
     SelfOwnMaterial.BackColor.Color = 16249582
     SelfOwnMaterial.BackColor.IsFill = True
     SelfOwnMaterial.BackColor.FillColor.Alpha = 255
@@ -5127,8 +5204,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnSelectWithHelpText_Material
+    StaticRefMaterial = dmEasyServiceCommonMaterial.btnSelectWithHelpText_Material
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 28
     Caption = 'btnSelectWithHelpText_Material'
     Text = 'btnSelectWithHelpText_Material'
@@ -5152,6 +5231,7 @@ object FrameButton: TFrameButton
     ComponentTypeUseKind = ctukDefault
     MaterialUseKind = mukRef
     KeepSelfOwnMaterial = True
+    MaterialName = 'btnSkinTheme1ColorMaterial'
     SelfOwnMaterial.BackColor.Color = 16249582
     SelfOwnMaterial.BackColor.IsFill = True
     SelfOwnMaterial.BackColor.FillColor.Alpha = 255
@@ -5301,8 +5381,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnSkinTheme1ColorMaterial
+    StaticRefMaterial = dmEasyServiceCommonMaterial.btnSkinTheme1ColorMaterial
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 29
     Caption = 'btnSkinTheme1ColorMaterial'
     Text = 'btnSkinTheme1ColorMaterial'
@@ -5326,6 +5408,7 @@ object FrameButton: TFrameButton
     ComponentTypeUseKind = ctukDefault
     MaterialUseKind = mukRef
     KeepSelfOwnMaterial = True
+    MaterialName = 'btnSkinThemeColorMaterial'
     SelfOwnMaterial.BackColor.Color = 16249582
     SelfOwnMaterial.BackColor.IsFill = True
     SelfOwnMaterial.BackColor.FillColor.Alpha = 255
@@ -5475,8 +5558,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnSkinThemeColorMaterial
+    StaticRefMaterial = dmEasyServiceCommonMaterial.btnSkinThemeColorMaterial
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 30
     Caption = 'btnSkinThemeColorMaterial'
     Text = 'btnSkinThemeColorMaterial'
@@ -5500,6 +5585,7 @@ object FrameButton: TFrameButton
     ComponentTypeUseKind = ctukDefault
     MaterialUseKind = mukRef
     KeepSelfOwnMaterial = True
+    MaterialName = 'btnSmallIconMaterial'
     SelfOwnMaterial.BackColor.Color = 16249582
     SelfOwnMaterial.BackColor.IsFill = True
     SelfOwnMaterial.BackColor.FillColor.Alpha = 255
@@ -5649,8 +5735,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnSmallIconMaterial
+    StaticRefMaterial = dmEasyServiceCommonMaterial.btnSmallIconMaterial
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 31
     Caption = 'btnSmallIconMaterial'
     Text = 'btnSmallIconMaterial'
@@ -5711,6 +5799,7 @@ object FrameButton: TFrameButton
     ComponentTypeUseKind = ctukDefault
     MaterialUseKind = mukRef
     KeepSelfOwnMaterial = True
+    MaterialName = 'btnThemeColor1IconLeftCaptionRight'
     SelfOwnMaterial.BackColor.Color = 16249582
     SelfOwnMaterial.BackColor.IsFill = True
     SelfOwnMaterial.BackColor.FillColor.Alpha = 255
@@ -5860,8 +5949,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnThemeColor1IconLeftCaptionRight
+    StaticRefMaterial = dmEasyServiceCommonMaterial.btnThemeColor1IconLeftCaptionRight
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 32
     Caption = 'btnThemeColor1IconLeftCaptionRight'
     Text = 'btnThemeColor1IconLeftCaptionRight'
@@ -5885,6 +5976,7 @@ object FrameButton: TFrameButton
     ComponentTypeUseKind = ctukDefault
     MaterialUseKind = mukRef
     KeepSelfOwnMaterial = True
+    MaterialName = 'btnThemeColor2IconLeftCaptionRight'
     SelfOwnMaterial.BackColor.Color = 16249582
     SelfOwnMaterial.BackColor.IsFill = True
     SelfOwnMaterial.BackColor.FillColor.Alpha = 255
@@ -6034,8 +6126,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnThemeColor2IconLeftCaptionRight
+    StaticRefMaterial = dmEasyServiceCommonMaterial.btnThemeColor2IconLeftCaptionRight
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 33
     Caption = 'btnThemeColor2IconLeftCaptionRight'
     Text = 'btnThemeColor2IconLeftCaptionRight'
@@ -6059,6 +6153,7 @@ object FrameButton: TFrameButton
     ComponentTypeUseKind = ctukDefault
     MaterialUseKind = mukRef
     KeepSelfOwnMaterial = True
+    MaterialName = 'btnThemeColor3IconLeftCaptionRight'
     SelfOwnMaterial.BackColor.Color = 16249582
     SelfOwnMaterial.BackColor.IsFill = True
     SelfOwnMaterial.BackColor.FillColor.Alpha = 255
@@ -6208,8 +6303,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnThemeColor3IconLeftCaptionRight
+    StaticRefMaterial = dmEasyServiceCommonMaterial.btnThemeColor3IconLeftCaptionRight
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 34
     Caption = 'btnThemeColor3IconLeftCaptionRight'
     Text = 'btnThemeColor3IconLeftCaptionRight'
@@ -6233,6 +6330,7 @@ object FrameButton: TFrameButton
     ComponentTypeUseKind = ctukDefault
     MaterialUseKind = mukRef
     KeepSelfOwnMaterial = True
+    MaterialName = 'btnThemeColorCaptionLeftIconRight'
     SelfOwnMaterial.BackColor.Color = 16249582
     SelfOwnMaterial.BackColor.IsFill = True
     SelfOwnMaterial.BackColor.FillColor.Alpha = 255
@@ -6382,8 +6480,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnThemeColorCaptionLeftIconRight
+    StaticRefMaterial = dmEasyServiceCommonMaterial.btnThemeColorCaptionLeftIconRight
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 35
     Caption = 'btnThemeColorCaptionLeftIconRight'
     Text = 'btnThemeColorCaptionLeftIconRight'
@@ -6407,6 +6507,7 @@ object FrameButton: TFrameButton
     ComponentTypeUseKind = ctukDefault
     MaterialUseKind = mukRef
     KeepSelfOwnMaterial = True
+    MaterialName = 'btnThemeColorIconLeftCaptionRight'
     SelfOwnMaterial.BackColor.Color = 16249582
     SelfOwnMaterial.BackColor.IsFill = True
     SelfOwnMaterial.BackColor.FillColor.Alpha = 255
@@ -6556,8 +6657,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnThemeColorIconLeftCaptionRight
+    StaticRefMaterial = dmEasyServiceCommonMaterial.btnThemeColorIconLeftCaptionRight
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 36
     Caption = 'btnThemeColorIconLeftCaptionRight'
     Text = 'btnThemeColorIconLeftCaptionRight'
@@ -6581,6 +6684,7 @@ object FrameButton: TFrameButton
     ComponentTypeUseKind = ctukDefault
     MaterialUseKind = mukRef
     KeepSelfOwnMaterial = True
+    MaterialName = 'btnThemeColorIconLeftCaptionRightGroupLeft'
     SelfOwnMaterial.BackColor.Color = 16249582
     SelfOwnMaterial.BackColor.IsFill = True
     SelfOwnMaterial.BackColor.FillColor.Alpha = 255
@@ -6730,8 +6834,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnThemeColorIconLeftCaptionRightGroupLeft
+    StaticRefMaterial = dmEasyServiceCommonMaterial.btnThemeColorIconLeftCaptionRightGroupLeft
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 37
     Caption = 'btnThemeColorIconLeftCaptionRightGroupLeft'
     Text = 'btnThemeColorIconLeftCaptionRightGroupLeft'
@@ -6755,6 +6861,7 @@ object FrameButton: TFrameButton
     ComponentTypeUseKind = ctukDefault
     MaterialUseKind = mukRef
     KeepSelfOwnMaterial = True
+    MaterialName = 'btnThemeColorIconLeftCaptionRightGroupMiddle'
     SelfOwnMaterial.BackColor.Color = 16249582
     SelfOwnMaterial.BackColor.IsFill = True
     SelfOwnMaterial.BackColor.FillColor.Alpha = 255
@@ -6904,8 +7011,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnThemeColorIconLeftCaptionRightGroupMiddle
+    StaticRefMaterial = dmEasyServiceCommonMaterial.btnThemeColorIconLeftCaptionRightGroupMiddle
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 38
     Caption = 'btnThemeColorIconLeftCaptionRightGroupMiddle'
     Text = 'btnThemeColorIconLeftCaptionRightGroupMiddle'
@@ -6929,6 +7038,7 @@ object FrameButton: TFrameButton
     ComponentTypeUseKind = ctukDefault
     MaterialUseKind = mukRef
     KeepSelfOwnMaterial = True
+    MaterialName = 'btnTransparenThemeCaptionButtonMaterial'
     SelfOwnMaterial.BackColor.Color = 16249582
     SelfOwnMaterial.BackColor.IsFill = True
     SelfOwnMaterial.BackColor.FillColor.Alpha = 255
@@ -7078,8 +7188,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnTransparenThemeCaptionButtonMaterial
+    StaticRefMaterial = dmEasyServiceCommonMaterial.btnTransparenThemeCaptionButtonMaterial
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 39
     Caption = 'btnTransparenThemeCaptionButtonMaterial'
     Text = 'btnTransparenThemeCaptionButtonMaterial'
@@ -7103,6 +7215,7 @@ object FrameButton: TFrameButton
     ComponentTypeUseKind = ctukDefault
     MaterialUseKind = mukRef
     KeepSelfOwnMaterial = True
+    MaterialName = 'btnTransparentIconButonMaterial'
     SelfOwnMaterial.BackColor.Color = 16249582
     SelfOwnMaterial.BackColor.IsFill = True
     SelfOwnMaterial.BackColor.FillColor.Alpha = 255
@@ -7252,8 +7365,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnTransparentIconButonMaterial
+    StaticRefMaterial = dmEasyServiceCommonMaterial.btnTransparentIconButonMaterial
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 40
     Caption = 'btnTransparentIconButonMaterial'
     Text = 'btnTransparentIconButonMaterial'
@@ -7277,6 +7392,7 @@ object FrameButton: TFrameButton
     ComponentTypeUseKind = ctukDefault
     MaterialUseKind = mukRef
     KeepSelfOwnMaterial = True
+    MaterialName = 'btnTransparentWhiteCaptionButtonMaterial'
     SelfOwnMaterial.BackColor.Color = 16249582
     SelfOwnMaterial.BackColor.IsFill = True
     SelfOwnMaterial.BackColor.FillColor.Alpha = 255
@@ -7426,8 +7542,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnTransparentWhiteCaptionButtonMaterial
+    StaticRefMaterial = dmEasyServiceCommonMaterial.btnTransparentWhiteCaptionButtonMaterial
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 41
     Caption = 'btnTransparentWhiteCaptionButtonMaterial'
     Text = 'btnTransparentWhiteCaptionButtonMaterial'
@@ -7451,6 +7569,7 @@ object FrameButton: TFrameButton
     ComponentTypeUseKind = ctukDefault
     MaterialUseKind = mukRef
     KeepSelfOwnMaterial = True
+    MaterialName = 'btnWhiteColorBorderMaterial'
     SelfOwnMaterial.BackColor.Color = 16249582
     SelfOwnMaterial.BackColor.IsFill = True
     SelfOwnMaterial.BackColor.FillColor.Alpha = 255
@@ -7600,8 +7719,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnWhiteColorBorderMaterial
+    StaticRefMaterial = dmEasyServiceCommonMaterial.btnWhiteColorBorderMaterial
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 42
     Caption = 'btnWhiteColorBorderMaterial'
     Text = 'btnWhiteColorBorderMaterial'
@@ -7625,6 +7746,7 @@ object FrameButton: TFrameButton
     ComponentTypeUseKind = ctukDefault
     MaterialUseKind = mukRef
     KeepSelfOwnMaterial = True
+    MaterialName = 'btnWhiteColorGrayBorderMaterial'
     SelfOwnMaterial.BackColor.Color = 16249582
     SelfOwnMaterial.BackColor.IsFill = True
     SelfOwnMaterial.BackColor.FillColor.Alpha = 255
@@ -7774,8 +7896,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnWhiteColorGrayBorderMaterial
+    StaticRefMaterial = dmEasyServiceCommonMaterial.btnWhiteColorGrayBorderMaterial
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 43
     Caption = 'btnWhiteColorGrayBorderMaterial'
     Text = 'btnWhiteColorGrayBorderMaterial'
@@ -7960,9 +8084,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 44
-    Caption = #20027#39064#33394
-    Text = #20027#39064#33394
+    Caption = 'ThemeColor'
+    Text = 'ThemeColor'
     Properties.AutoSize = False
     Properties.IsAutoPush = True
     Properties.IsPushed = False
@@ -8137,9 +8262,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 45
-    Caption = #20027#39064#33394'2'
-    Text = #20027#39064#33394'2'
+    Caption = 'ThemeColor2'
+    Text = 'ThemeColor2'
     Properties.AutoSize = False
     Properties.IsAutoPush = True
     Properties.IsPushed = False
@@ -8314,9 +8440,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 46
-    Caption = #20027#39064#33394'3'
-    Text = #20027#39064#33394'3'
+    Caption = 'ThemeColor3'
+    Text = 'ThemeColor3'
     Properties.AutoSize = False
     Properties.IsAutoPush = True
     Properties.IsPushed = False
@@ -8490,6 +8617,7 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 47
     Caption = #35686#21578
     Text = #35686#21578
@@ -8666,9 +8794,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 48
-    Caption = #25552#31034
-    Text = #25552#31034
+    Caption = 'Hint'
+    Text = 'Hint'
     Properties.AutoSize = False
     Properties.IsAutoPush = True
     Properties.IsPushed = False
@@ -8839,9 +8968,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 49
-    Caption = #27973#33394
-    Text = #27973#33394
+    Caption = 'Light'
+    Text = 'Light'
     Properties.AutoSize = False
     Properties.IsAutoPush = True
     Properties.IsPushed = False
@@ -9015,9 +9145,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 50
-    Caption = #28145#33394
-    Text = #28145#33394
+    Caption = 'Dark'
+    Text = 'Dark'
     Properties.AutoSize = False
     Properties.IsAutoPush = True
     Properties.IsPushed = False
@@ -9192,9 +9323,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 51
-    Caption = #20027#39064#33394'1'
-    Text = #20027#39064#33394'1'
+    Caption = 'ThemeColor1'
+    Text = 'ThemeColor1'
     Properties.AutoSize = False
     Properties.IsAutoPush = True
     Properties.IsPushed = False
@@ -9215,6 +9347,7 @@ object FrameButton: TFrameButton
     ComponentTypeUseKind = ctukDefault
     MaterialUseKind = mukRef
     KeepSelfOwnMaterial = True
+    MaterialName = 'btnThemeColorIconLeftCaptionRightGroupLeft'
     SelfOwnMaterial.BackColor.Color = clWhite
     SelfOwnMaterial.BackColor.IsFill = True
     SelfOwnMaterial.BackColor.FillColor.Alpha = 255
@@ -9352,11 +9485,13 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnThemeColorIconLeftCaptionRightGroupLeft
+    StaticRefMaterial = dmEasyServiceCommonMaterial.btnThemeColorIconLeftCaptionRightGroupLeft
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 52
-    Caption = #20840#37096
-    Text = #20840#37096
+    Caption = 'All'
+    Text = 'All'
     Properties.AutoSize = False
     Properties.IsAutoPush = True
     Properties.IsPushed = True
@@ -9377,6 +9512,7 @@ object FrameButton: TFrameButton
     ComponentTypeUseKind = ctukDefault
     MaterialUseKind = mukRef
     KeepSelfOwnMaterial = True
+    MaterialName = 'btnThemeColorIconLeftCaptionRightGroupLeft'
     SelfOwnMaterial.BackColor.Color = clWhite
     SelfOwnMaterial.BackColor.IsFill = True
     SelfOwnMaterial.BackColor.FillColor.Alpha = 255
@@ -9514,11 +9650,13 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnThemeColorIconLeftCaptionRightGroupLeft
+    StaticRefMaterial = dmEasyServiceCommonMaterial.btnThemeColorIconLeftCaptionRightGroupLeft
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 53
-    Caption = #24050#19978#32447
-    Text = #24050#19978#32447
+    Caption = 'Online'
+    Text = 'Online'
     Properties.AutoSize = False
     Properties.IsAutoPush = False
     Properties.IsPushed = False
@@ -9539,6 +9677,7 @@ object FrameButton: TFrameButton
     ComponentTypeUseKind = ctukDefault
     MaterialUseKind = mukRef
     KeepSelfOwnMaterial = True
+    MaterialName = 'btnThemeColorIconLeftCaptionRightGroupLeft'
     SelfOwnMaterial.BackColor.Color = clWhite
     SelfOwnMaterial.BackColor.IsFill = True
     SelfOwnMaterial.BackColor.FillColor.Alpha = 255
@@ -9676,11 +9815,13 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnThemeColorIconLeftCaptionRightGroupLeft
+    StaticRefMaterial = dmEasyServiceCommonMaterial.btnThemeColorIconLeftCaptionRightGroupLeft
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 54
-    Caption = #26410#19978#32447
-    Text = #26410#19978#32447
+    Caption = 'Offline'
+    Text = 'Offline'
     Properties.AutoSize = False
     Properties.IsAutoPush = False
     Properties.IsPushed = False
@@ -9701,6 +9842,7 @@ object FrameButton: TFrameButton
     ComponentTypeUseKind = ctukDefault
     MaterialUseKind = mukRef
     KeepSelfOwnMaterial = True
+    MaterialName = 'btnThemeColorIconLeftCaptionRight'
     SelfOwnMaterial.BackColor.Color = clWhite
     SelfOwnMaterial.BackColor.IsFill = True
     SelfOwnMaterial.BackColor.FillColor.Alpha = 255
@@ -9838,8 +9980,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnThemeColorIconLeftCaptionRight
+    StaticRefMaterial = dmEasyServiceCommonMaterial.btnThemeColorIconLeftCaptionRight
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 55
     Caption = ''
     Text = ''
@@ -9888,6 +10032,7 @@ object FrameButton: TFrameButton
     ComponentTypeUseKind = ctukDefault
     MaterialUseKind = mukRef
     KeepSelfOwnMaterial = True
+    MaterialName = 'btnThemeColor1IconLeftCaptionRight'
     SelfOwnMaterial.BackColor.Color = clWhite
     SelfOwnMaterial.BackColor.IsFill = True
     SelfOwnMaterial.BackColor.FillColor.Alpha = 255
@@ -10027,8 +10172,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnThemeColor1IconLeftCaptionRight
+    StaticRefMaterial = dmEasyServiceCommonMaterial.btnThemeColor1IconLeftCaptionRight
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 56
     Caption = ''
     Text = ''
@@ -10073,6 +10220,7 @@ object FrameButton: TFrameButton
     ComponentTypeUseKind = ctukDefault
     MaterialUseKind = mukRef
     KeepSelfOwnMaterial = True
+    MaterialName = 'btnThemeColor2IconLeftCaptionRight'
     SelfOwnMaterial.BackColor.Color = clWhite
     SelfOwnMaterial.BackColor.IsFill = True
     SelfOwnMaterial.BackColor.FillColor.Alpha = 255
@@ -10210,8 +10358,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnThemeColor2IconLeftCaptionRight
+    StaticRefMaterial = dmEasyServiceCommonMaterial.btnThemeColor2IconLeftCaptionRight
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 57
     Caption = ''
     Text = ''
@@ -10255,6 +10405,7 @@ object FrameButton: TFrameButton
     ComponentTypeUseKind = ctukDefault
     MaterialUseKind = mukRef
     KeepSelfOwnMaterial = True
+    MaterialName = 'btnThemeColor3IconLeftCaptionRight'
     SelfOwnMaterial.BackColor.Color = clWhite
     SelfOwnMaterial.BackColor.IsFill = True
     SelfOwnMaterial.BackColor.FillColor.Alpha = 255
@@ -10392,8 +10543,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnThemeColor3IconLeftCaptionRight
+    StaticRefMaterial = dmEasyServiceCommonMaterial.btnThemeColor3IconLeftCaptionRight
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 58
     Caption = ''
     Text = ''
@@ -10589,6 +10742,7 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 59
     Caption = ''
     Text = ''
@@ -10782,6 +10936,7 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 60
     Caption = ''
     Text = ''
@@ -10968,6 +11123,7 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 61
     Caption = ''
     Text = ''
@@ -11167,6 +11323,7 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 62
     Caption = ''
     Text = ''
@@ -11220,6 +11377,7 @@ object FrameButton: TFrameButton
     ComponentTypeUseKind = ctukDefault
     MaterialUseKind = mukRef
     KeepSelfOwnMaterial = True
+    MaterialName = 'btnThemeColorIconLeftCaptionRight'
     SelfOwnMaterial.BackColor.Color = clWhite
     SelfOwnMaterial.BackColor.IsFill = True
     SelfOwnMaterial.BackColor.FillColor.Alpha = 255
@@ -11357,11 +11515,13 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnThemeColorIconLeftCaptionRight
+    StaticRefMaterial = dmEasyServiceCommonMaterial.btnThemeColorIconLeftCaptionRight
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 63
-    Caption = #25910#34255' '
-    Text = #25910#34255' '
+    Caption = 'Favourite'
+    Text = 'Favourite'
     Properties.AutoSize = False
     Properties.IsAutoPush = True
     Properties.IsPushed = False
@@ -11407,6 +11567,7 @@ object FrameButton: TFrameButton
     ComponentTypeUseKind = ctukDefault
     MaterialUseKind = mukRef
     KeepSelfOwnMaterial = True
+    MaterialName = 'btnThemeColor1IconLeftCaptionRight'
     SelfOwnMaterial.BackColor.Color = clWhite
     SelfOwnMaterial.BackColor.IsFill = True
     SelfOwnMaterial.BackColor.FillColor.Alpha = 255
@@ -11546,11 +11707,13 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnThemeColor1IconLeftCaptionRight
+    StaticRefMaterial = dmEasyServiceCommonMaterial.btnThemeColor1IconLeftCaptionRight
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 64
-    Caption = #38899#20048
-    Text = #38899#20048
+    Caption = 'Music'
+    Text = 'Music'
     Properties.AutoSize = False
     Properties.IsAutoPush = True
     Properties.IsPushed = False
@@ -11592,6 +11755,7 @@ object FrameButton: TFrameButton
     ComponentTypeUseKind = ctukDefault
     MaterialUseKind = mukRef
     KeepSelfOwnMaterial = True
+    MaterialName = 'btnThemeColor2IconLeftCaptionRight'
     SelfOwnMaterial.BackColor.Color = clWhite
     SelfOwnMaterial.BackColor.IsFill = True
     SelfOwnMaterial.BackColor.FillColor.Alpha = 255
@@ -11729,11 +11893,13 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnThemeColor2IconLeftCaptionRight
+    StaticRefMaterial = dmEasyServiceCommonMaterial.btnThemeColor2IconLeftCaptionRight
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 65
-    Caption = #28857#36190
-    Text = #28857#36190
+    Caption = 'Like'
+    Text = 'Like'
     Properties.AutoSize = False
     Properties.IsAutoPush = True
     Properties.IsPushed = False
@@ -11774,6 +11940,7 @@ object FrameButton: TFrameButton
     ComponentTypeUseKind = ctukDefault
     MaterialUseKind = mukRef
     KeepSelfOwnMaterial = True
+    MaterialName = 'btnThemeColor3IconLeftCaptionRight'
     SelfOwnMaterial.BackColor.Color = clWhite
     SelfOwnMaterial.BackColor.IsFill = True
     SelfOwnMaterial.BackColor.FillColor.Alpha = 255
@@ -11911,11 +12078,13 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnThemeColor3IconLeftCaptionRight
+    StaticRefMaterial = dmEasyServiceCommonMaterial.btnThemeColor3IconLeftCaptionRight
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 66
-    Caption = #36864#20986
-    Text = #36864#20986
+    Caption = 'Exit'
+    Text = 'Exit'
     Properties.AutoSize = False
     Properties.IsAutoPush = True
     Properties.IsPushed = False
@@ -12108,9 +12277,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 67
-    Caption = #25163#26426
-    Text = #25163#26426
+    Caption = 'Phone'
+    Text = 'Phone'
     Properties.AutoSize = False
     Properties.IsAutoPush = True
     Properties.IsPushed = False
@@ -12301,9 +12471,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 68
-    Caption = #25552#31034
-    Text = #25552#31034
+    Caption = 'Hint'
+    Text = 'Hint'
     Properties.AutoSize = False
     Properties.IsAutoPush = True
     Properties.IsPushed = False
@@ -12487,9 +12658,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 69
-    Caption = #21916#27426' '
-    Text = #21916#27426' '
+    Caption = 'Like'
+    Text = 'Like'
     Properties.AutoSize = False
     Properties.IsAutoPush = True
     Properties.IsPushed = False
@@ -12686,9 +12858,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 70
-    Caption = #35774#32622
-    Text = #35774#32622
+    Caption = 'Setting'
+    Text = 'Setting'
     Properties.AutoSize = False
     Properties.IsAutoPush = True
     Properties.IsPushed = False
@@ -12909,9 +13082,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 71
-    Caption = #20027#39064#33394
-    Text = #20027#39064#33394
+    Caption = 'ThemeColor'
+    Text = 'ThemeColor'
     Properties.AutoSize = False
     Properties.IsAutoPush = True
     Properties.IsPushed = False
@@ -13096,9 +13270,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 72
-    Caption = #20027#39064#33394'1'
-    Text = #20027#39064#33394'1'
+    Caption = 'ThemeColor1'
+    Text = 'ThemeColor1'
     Properties.AutoSize = False
     Properties.IsAutoPush = True
     Properties.IsPushed = False
@@ -13283,9 +13458,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 73
-    Caption = #20027#39064#33394'2'
-    Text = #20027#39064#33394'2'
+    Caption = 'ThemeColor2'
+    Text = 'ThemeColor2'
     Properties.AutoSize = False
     Properties.IsAutoPush = True
     Properties.IsPushed = False
@@ -13471,9 +13647,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 74
-    Caption = #20027#39064#33394'3'
-    Text = #20027#39064#33394'3'
+    Caption = 'ThemeColor3'
+    Text = 'ThemeColor3'
     Properties.AutoSize = False
     Properties.IsAutoPush = True
     Properties.IsPushed = False
@@ -13657,9 +13834,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 75
-    Caption = #35686#21578
-    Text = #35686#21578
+    Caption = 'Warnning'
+    Text = 'Warnning'
     Properties.AutoSize = False
     Properties.IsAutoPush = True
     Properties.IsPushed = False
@@ -13843,9 +14021,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 76
-    Caption = #25552#31034
-    Text = #25552#31034
+    Caption = 'Hint'
+    Text = 'Hint'
     Properties.AutoSize = False
     Properties.IsAutoPush = True
     Properties.IsPushed = False
@@ -14021,9 +14200,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 77
-    Caption = #27973#33394
-    Text = #27973#33394
+    Caption = 'Light'
+    Text = 'Light'
     Properties.AutoSize = False
     Properties.IsAutoPush = True
     Properties.IsPushed = False
@@ -14207,9 +14387,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 78
-    Caption = #28145#33394
-    Text = #28145#33394
+    Caption = 'Dark'
+    Text = 'Dark'
     Properties.AutoSize = False
     Properties.IsAutoPush = True
     Properties.IsPushed = False
@@ -14400,9 +14581,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 79
-    Caption = #20027#39064#33394
-    Text = #20027#39064#33394
+    Caption = 'ThemeColor'
+    Text = 'ThemeColor'
     Properties.AutoSize = False
     Properties.IsAutoPush = True
     Properties.IsPushed = False
@@ -14587,9 +14769,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 80
-    Caption = #20027#39064#33394'1'
-    Text = #20027#39064#33394'1'
+    Caption = 'ThemeColor1'
+    Text = 'ThemeColor1'
     Properties.AutoSize = False
     Properties.IsAutoPush = True
     Properties.IsPushed = False
@@ -14774,9 +14957,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 81
-    Caption = #20027#39064#33394'2'
-    Text = #20027#39064#33394'2'
+    Caption = 'ThemeColor2'
+    Text = 'ThemeColor2'
     Properties.AutoSize = False
     Properties.IsAutoPush = True
     Properties.IsPushed = False
@@ -14962,9 +15146,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 82
-    Caption = #20027#39064#33394'3'
-    Text = #20027#39064#33394'3'
+    Caption = 'ThemeColor3'
+    Text = 'ThemeColor3'
     Properties.AutoSize = False
     Properties.IsAutoPush = True
     Properties.IsPushed = False
@@ -15148,9 +15333,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 83
-    Caption = #35686#21578
-    Text = #35686#21578
+    Caption = 'Warnning'
+    Text = 'Warnning'
     Properties.AutoSize = False
     Properties.IsAutoPush = True
     Properties.IsPushed = False
@@ -15334,9 +15520,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 84
-    Caption = #25552#31034
-    Text = #25552#31034
+    Caption = 'Hint'
+    Text = 'Hint'
     Properties.AutoSize = False
     Properties.IsAutoPush = True
     Properties.IsPushed = False
@@ -15512,9 +15699,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 85
-    Caption = #27973#33394
-    Text = #27973#33394
+    Caption = 'Light'
+    Text = 'Light'
     Properties.AutoSize = False
     Properties.IsAutoPush = True
     Properties.IsPushed = False
@@ -15698,9 +15886,10 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 86
-    Caption = #28145#33394
-    Text = #28145#33394
+    Caption = 'Dark'
+    Text = 'Dark'
     Properties.AutoSize = False
     Properties.IsAutoPush = True
     Properties.IsPushed = False
@@ -15873,6 +16062,7 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 87
     Caption = ''
     Text = ''

@@ -1,200 +1,185 @@
 object FrameEditGoods: TFrameEditGoods
   Left = 0
-  Height = 503
   Top = 0
   Width = 934
-  ClientHeight = 503
-  ClientWidth = 934
-  OnClick = FrameClick
-  OnResize = FrameResize
+  Height = 503
   TabOrder = 0
-  DesignLeft = 762
-  DesignTop = 321
+  OnResize = FrameResize
   object pnlClient: TPanel
     Left = 0
-    Height = 452
-    Top = 51
+    Top = 50
     Width = 934
+    Height = 453
     Align = alClient
-    ClientHeight = 452
-    ClientWidth = 934
     TabOrder = 0
-    OnResize = pnlClientResize
+    ExplicitTop = 51
+    ExplicitHeight = 452
     object lblName: TLabel
       Left = 16
-      Height = 17
       Top = 22
       Width = 38
+      Height = 17
       Alignment = taRightJustify
       AutoSize = False
       Caption = 'Name:'
+      Color = clBtnFace
       ParentColor = False
-      OnClick = lblNameClick
-    end
-    object edtName: TEdit
-      Left = 64
-      Height = 25
-      Top = 17
-      Width = 121
-      OnChange = edtNameChange
-      TabOrder = 0
     end
     object lblPrice: TLabel
       Left = 224
-      Height = 17
       Top = 22
       Width = 31
+      Height = 17
       Alignment = taRightJustify
       AutoSize = False
       Caption = 'Price:'
+      Color = clBtnFace
       ParentColor = False
-    end
-    object edtPrice: TEdit
-      Left = 264
-      Height = 25
-      Top = 17
-      Width = 121
-      TabOrder = 1
     end
     object lblCategory: TLabel
       Left = 424
-      Height = 17
       Top = 19
       Width = 56
+      Height = 17
       Alignment = taRightJustify
       AutoSize = False
       Caption = 'Category:'
+      Color = clBtnFace
       ParentColor = False
-    end
-    object cmbCategory: TComboBox
-      Left = 496
-      Height = 25
-      Top = 17
-      Width = 121
-      ItemHeight = 17
-      Items.Strings = (
-        'Food'
-        'Tool'
-      )
-      TabOrder = 2
     end
     object lblDate: TLabel
       Left = 648
-      Height = 17
       Top = 19
       Width = 30
+      Height = 17
       Alignment = taRightJustify
       AutoSize = False
       Caption = 'Date:'
+      Color = clBtnFace
       ParentColor = False
-    end
-    object dedtDate: TDateEdit
-      Left = 696
-      Height = 25
-      Top = 17
-      Width = 119
-      CalendarDisplaySettings = [dsShowHeadings, dsShowDayNames]
-      DateOrder = doNone
-      ButtonWidth = 23
-      NumGlyphs = 1
-      MaxLength = 0
-      TabOrder = 3
-      Text = 'dedtDate'
     end
     object lblMemo: TLabel
       Left = 16
-      Height = 17
       Top = 97
       Width = 41
+      Height = 17
       Alignment = taRightJustify
       AutoSize = False
       Caption = 'Memo:'
+      Color = clBtnFace
       ParentColor = False
-    end
-    object memMemo: TMemo
-      Left = 64
-      Height = 90
-      Top = 95
-      Width = 808
-      TabOrder = 4
     end
     object lblLength: TLabel
       Left = 16
-      Height = 17
       Top = 62
       Width = 42
+      Height = 17
       Alignment = taRightJustify
       AutoSize = False
       Caption = 'Length:'
+      Color = clBtnFace
       ParentColor = False
-    end
-    object edtLength: TEdit
-      Left = 64
-      Height = 25
-      Top = 57
-      Width = 121
-      TabOrder = 5
     end
     object lblWidth: TLabel
       Left = 216
-      Height = 17
       Top = 62
       Width = 37
+      Height = 17
       Alignment = taRightJustify
       AutoSize = False
       Caption = 'Width:'
+      Color = clBtnFace
       ParentColor = False
-    end
-    object edtWidth: TEdit
-      Left = 264
-      Height = 25
-      Top = 57
-      Width = 121
-      TabOrder = 6
     end
     object lblHeight: TLabel
       Left = 448
-      Height = 17
       Top = 62
       Width = 41
+      Height = 17
       Alignment = taRightJustify
       AutoSize = False
       Caption = 'Height:'
+      Color = clBtnFace
       ParentColor = False
-    end
-    object edtHeight: TEdit
-      Left = 496
-      Height = 25
-      Top = 57
-      Width = 121
-      TabOrder = 7
     end
     object lblWeight: TLabel
       Left = 648
-      Height = 17
       Top = 62
       Width = 44
+      Height = 17
       Alignment = taRightJustify
       AutoSize = False
       Caption = 'Weight:'
+      Color = clBtnFace
       ParentColor = False
+    end
+    object edtName: TEdit
+      Left = 64
+      Top = 17
+      Width = 121
+      Height = 25
+      TabOrder = 0
+    end
+    object edtPrice: TEdit
+      Left = 264
+      Top = 17
+      Width = 121
+      Height = 25
+      TabOrder = 1
+    end
+    object cmbCategory: TComboBox
+      Left = 496
+      Top = 17
+      Width = 121
+      Height = 21
+      TabOrder = 2
+      Items.Strings = (
+        'Food'
+        'Tool')
+    end
+    object memMemo: TMemo
+      Left = 64
+      Top = 95
+      Width = 808
+      Height = 90
+      TabOrder = 3
+    end
+    object edtLength: TEdit
+      Left = 64
+      Top = 57
+      Width = 121
+      Height = 25
+      TabOrder = 4
+    end
+    object edtWidth: TEdit
+      Left = 264
+      Top = 57
+      Width = 121
+      Height = 25
+      TabOrder = 5
+    end
+    object edtHeight: TEdit
+      Left = 496
+      Top = 57
+      Width = 121
+      Height = 25
+      TabOrder = 7
     end
     object edtWeight: TEdit
       Left = 696
-      Height = 25
       Top = 57
       Width = 121
-      TabOrder = 8
+      Height = 25
+      TabOrder = 6
     end
   end
   object pnlToolBar: TSkinPanel
-    Left = 1
+    Left = 0
+    Top = 0
+    Width = 934
     Height = 50
-    Top = 1
-    Width = 932
-    ParentMouseEvent = False
+    ParentMouseEvent = True
     DirectUIVisible = False
-    AlignWithMagins = False
     ComponentTypeUseKind = ctukDefault
     MaterialUseKind = mukSelfOwn
     KeepSelfOwnMaterial = True
@@ -221,7 +206,10 @@ object FrameEditGoods: TFrameEditGoods
     SelfOwnMaterial.IsTransparent = False
     SelfOwnMaterial.DrawCaptionParam.FontName = 'default'
     SelfOwnMaterial.DrawCaptionParam.FontSize = 12
+    SelfOwnMaterial.DrawCaptionParam.DrawFont.Charset = DEFAULT_CHARSET
     SelfOwnMaterial.DrawCaptionParam.DrawFont.Height = -16
+    SelfOwnMaterial.DrawCaptionParam.DrawFont.Name = 'default'
+    SelfOwnMaterial.DrawCaptionParam.DrawFont.Style = []
     SelfOwnMaterial.DrawCaptionParam.DrawFont.FontColor.Alpha = 255
     SelfOwnMaterial.DrawCaptionParam.FontTrimming = fttNone
     SelfOwnMaterial.DrawCaptionParam.FontHorzAlign = fhaLeft
@@ -240,18 +228,19 @@ object FrameEditGoods: TFrameEditGoods
     MouseDownFocus = False
     Align = alTop
     ParentBackground = False
-    BorderSpacing.Left = 1
-    BorderSpacing.Top = 1
-    BorderSpacing.Right = 1
     TabOrder = 1
+    Caption = ''
+    Text = ''
+    ExplicitLeft = 1
+    ExplicitTop = 1
+    ExplicitWidth = 932
     object btnCancel: TSkinButton
       Left = 722
-      Height = 40
       Top = 5
       Width = 100
-      ParentMouseEvent = False
+      Height = 40
+      ParentMouseEvent = True
       DirectUIVisible = False
-      AlignWithMagins = False
       ComponentTypeUseKind = ctukDefault
       MaterialUseKind = mukRef
       KeepSelfOwnMaterial = True
@@ -287,7 +276,10 @@ object FrameEditGoods: TFrameEditGoods
       SelfOwnMaterial.IsAutoCenterIconAndCaption = False
       SelfOwnMaterial.DrawDetailParam.FontName = 'default'
       SelfOwnMaterial.DrawDetailParam.FontSize = 12
+      SelfOwnMaterial.DrawDetailParam.DrawFont.Charset = DEFAULT_CHARSET
       SelfOwnMaterial.DrawDetailParam.DrawFont.Height = -16
+      SelfOwnMaterial.DrawDetailParam.DrawFont.Name = 'default'
+      SelfOwnMaterial.DrawDetailParam.DrawFont.Style = []
       SelfOwnMaterial.DrawDetailParam.DrawFont.FontColor.Alpha = 255
       SelfOwnMaterial.DrawDetailParam.FontTrimming = fttNone
       SelfOwnMaterial.DrawDetailParam.FontHorzAlign = fhaLeft
@@ -304,7 +296,10 @@ object FrameEditGoods: TFrameEditGoods
       SelfOwnMaterial.DrawDetailParam.DrawEffectSetting.FocusedEffect.FontSize = 12
       SelfOwnMaterial.DrawDetail1Param.FontName = 'default'
       SelfOwnMaterial.DrawDetail1Param.FontSize = 12
+      SelfOwnMaterial.DrawDetail1Param.DrawFont.Charset = DEFAULT_CHARSET
       SelfOwnMaterial.DrawDetail1Param.DrawFont.Height = -16
+      SelfOwnMaterial.DrawDetail1Param.DrawFont.Name = 'default'
+      SelfOwnMaterial.DrawDetail1Param.DrawFont.Style = []
       SelfOwnMaterial.DrawDetail1Param.DrawFont.FontColor.Alpha = 255
       SelfOwnMaterial.DrawDetail1Param.FontTrimming = fttNone
       SelfOwnMaterial.DrawDetail1Param.FontHorzAlign = fhaLeft
@@ -322,8 +317,11 @@ object FrameEditGoods: TFrameEditGoods
       SelfOwnMaterial.DrawHelpTextParam.FontName = 'default'
       SelfOwnMaterial.DrawHelpTextParam.FontSize = 12
       SelfOwnMaterial.DrawHelpTextParam.FontColor = clGray
+      SelfOwnMaterial.DrawHelpTextParam.DrawFont.Charset = DEFAULT_CHARSET
       SelfOwnMaterial.DrawHelpTextParam.DrawFont.Color = clGray
       SelfOwnMaterial.DrawHelpTextParam.DrawFont.Height = -16
+      SelfOwnMaterial.DrawHelpTextParam.DrawFont.Name = 'default'
+      SelfOwnMaterial.DrawHelpTextParam.DrawFont.Style = []
       SelfOwnMaterial.DrawHelpTextParam.DrawFont.FontColor.Alpha = 255
       SelfOwnMaterial.DrawHelpTextParam.DrawFont.FontColor.Color = clGray
       SelfOwnMaterial.DrawHelpTextParam.FontTrimming = fttNone
@@ -347,7 +345,10 @@ object FrameEditGoods: TFrameEditGoods
       SelfOwnMaterial.DrawIconParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
       SelfOwnMaterial.DrawCaptionParam.FontName = 'default'
       SelfOwnMaterial.DrawCaptionParam.FontSize = 12
+      SelfOwnMaterial.DrawCaptionParam.DrawFont.Charset = DEFAULT_CHARSET
       SelfOwnMaterial.DrawCaptionParam.DrawFont.Height = -16
+      SelfOwnMaterial.DrawCaptionParam.DrawFont.Name = 'default'
+      SelfOwnMaterial.DrawCaptionParam.DrawFont.Style = []
       SelfOwnMaterial.DrawCaptionParam.DrawFont.FontColor.Alpha = 255
       SelfOwnMaterial.DrawCaptionParam.FontTrimming = fttNone
       SelfOwnMaterial.DrawCaptionParam.FontHorzAlign = fhaLeft
@@ -381,16 +382,14 @@ object FrameEditGoods: TFrameEditGoods
       SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
       SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
       RefMaterial = dmEasyServiceCommonMaterial.btnSkinTheme1ColorMaterial
+      StaticRefMaterial = dmEasyServiceCommonMaterial.btnSkinTheme1ColorMaterial
       HitTest = False
       MouseDownFocus = False
       Align = alRight
       ParentBackground = False
-      BorderSpacing.Top = 5
-      BorderSpacing.Right = 5
-      BorderSpacing.Bottom = 5
       TabOrder = 0
-      Caption = '取消'
-      Text = '取消'
+      Caption = #37721#26664#31223
+      Text = #37721#26664#31223
       Properties.AutoSize = False
       Properties.IsAutoPush = False
       Properties.IsPushed = False
@@ -405,12 +404,11 @@ object FrameEditGoods: TFrameEditGoods
     end
     object btnSave: TSkinButton
       Left = 827
-      Height = 40
       Top = 5
       Width = 100
-      ParentMouseEvent = False
+      Height = 40
+      ParentMouseEvent = True
       DirectUIVisible = False
-      AlignWithMagins = False
       ComponentTypeUseKind = ctukDefault
       MaterialUseKind = mukRef
       KeepSelfOwnMaterial = True
@@ -446,7 +444,10 @@ object FrameEditGoods: TFrameEditGoods
       SelfOwnMaterial.IsAutoCenterIconAndCaption = False
       SelfOwnMaterial.DrawDetailParam.FontName = 'default'
       SelfOwnMaterial.DrawDetailParam.FontSize = 12
+      SelfOwnMaterial.DrawDetailParam.DrawFont.Charset = DEFAULT_CHARSET
       SelfOwnMaterial.DrawDetailParam.DrawFont.Height = -16
+      SelfOwnMaterial.DrawDetailParam.DrawFont.Name = 'default'
+      SelfOwnMaterial.DrawDetailParam.DrawFont.Style = []
       SelfOwnMaterial.DrawDetailParam.DrawFont.FontColor.Alpha = 255
       SelfOwnMaterial.DrawDetailParam.FontTrimming = fttNone
       SelfOwnMaterial.DrawDetailParam.FontHorzAlign = fhaLeft
@@ -463,7 +464,10 @@ object FrameEditGoods: TFrameEditGoods
       SelfOwnMaterial.DrawDetailParam.DrawEffectSetting.FocusedEffect.FontSize = 12
       SelfOwnMaterial.DrawDetail1Param.FontName = 'default'
       SelfOwnMaterial.DrawDetail1Param.FontSize = 12
+      SelfOwnMaterial.DrawDetail1Param.DrawFont.Charset = DEFAULT_CHARSET
       SelfOwnMaterial.DrawDetail1Param.DrawFont.Height = -16
+      SelfOwnMaterial.DrawDetail1Param.DrawFont.Name = 'default'
+      SelfOwnMaterial.DrawDetail1Param.DrawFont.Style = []
       SelfOwnMaterial.DrawDetail1Param.DrawFont.FontColor.Alpha = 255
       SelfOwnMaterial.DrawDetail1Param.FontTrimming = fttNone
       SelfOwnMaterial.DrawDetail1Param.FontHorzAlign = fhaLeft
@@ -481,8 +485,11 @@ object FrameEditGoods: TFrameEditGoods
       SelfOwnMaterial.DrawHelpTextParam.FontName = 'default'
       SelfOwnMaterial.DrawHelpTextParam.FontSize = 12
       SelfOwnMaterial.DrawHelpTextParam.FontColor = clGray
+      SelfOwnMaterial.DrawHelpTextParam.DrawFont.Charset = DEFAULT_CHARSET
       SelfOwnMaterial.DrawHelpTextParam.DrawFont.Color = clGray
       SelfOwnMaterial.DrawHelpTextParam.DrawFont.Height = -16
+      SelfOwnMaterial.DrawHelpTextParam.DrawFont.Name = 'default'
+      SelfOwnMaterial.DrawHelpTextParam.DrawFont.Style = []
       SelfOwnMaterial.DrawHelpTextParam.DrawFont.FontColor.Alpha = 255
       SelfOwnMaterial.DrawHelpTextParam.DrawFont.FontColor.Color = clGray
       SelfOwnMaterial.DrawHelpTextParam.FontTrimming = fttNone
@@ -506,7 +513,10 @@ object FrameEditGoods: TFrameEditGoods
       SelfOwnMaterial.DrawIconParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
       SelfOwnMaterial.DrawCaptionParam.FontName = 'default'
       SelfOwnMaterial.DrawCaptionParam.FontSize = 12
+      SelfOwnMaterial.DrawCaptionParam.DrawFont.Charset = DEFAULT_CHARSET
       SelfOwnMaterial.DrawCaptionParam.DrawFont.Height = -16
+      SelfOwnMaterial.DrawCaptionParam.DrawFont.Name = 'default'
+      SelfOwnMaterial.DrawCaptionParam.DrawFont.Style = []
       SelfOwnMaterial.DrawCaptionParam.DrawFont.FontColor.Alpha = 255
       SelfOwnMaterial.DrawCaptionParam.FontTrimming = fttNone
       SelfOwnMaterial.DrawCaptionParam.FontHorzAlign = fhaLeft
@@ -540,16 +550,14 @@ object FrameEditGoods: TFrameEditGoods
       SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
       SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
       RefMaterial = dmEasyServiceCommonMaterial.btnSkinThemeColorMaterial
+      StaticRefMaterial = dmEasyServiceCommonMaterial.btnSkinThemeColorMaterial
       HitTest = False
       MouseDownFocus = False
       Align = alRight
       ParentBackground = False
-      BorderSpacing.Top = 5
-      BorderSpacing.Right = 5
-      BorderSpacing.Bottom = 5
       TabOrder = 1
-      Caption = '保存'
-      Text = '保存'
+      Caption = #28103#28614#29928
+      Text = #28103#28614#29928
       Properties.AutoSize = False
       Properties.IsAutoPush = False
       Properties.IsPushed = False

@@ -14,12 +14,17 @@ uses
   Types,
 
   uGraphicCommon,
+  uDrawTextParam,
   uSkinItemDesignerPanelType,
   uDrawParam,
   uComponentType,
   ListItemStyle_ProgressBar,
   //公共素材模块
+  {$IFDEF FPC}
   EasyServiceCommonMaterialDataMoudle_VCL_Lazarus,
+  {$ELSE}
+  EasyServiceCommonMaterialDataMoudle_VCL,
+  {$ENDIF}
   uSkinProgressBarType,
 
   uSkinWindowsControl, uSkinScrollControlType, uSkinCustomListType,
@@ -58,6 +63,19 @@ constructor TFrameItemGrid_MultiColorProgressBarColumn.Create(
   AOwner: TComponent);
 begin
   inherited;
+
+  Self.gridData.ColumnHeader.Material.IsTransparent:=False;
+  Self.gridData.ColumnHeader.Material.BackColor.Color:=$00F7F2EE;
+  Self.gridData.ColumnHeader.Material.BackColor.IsFill:=True;
+
+  Self.gridData.ColumnHeader.Material.DrawItemCaptionParam.FontSize:=12;
+  Self.gridData.ColumnHeader.Material.DrawItemCaptionParam.FontVertAlign:=fvaCenter;
+  Self.gridData.ColumnHeader.Material.DrawItemCaptionParam.DrawRectSetting.Enabled:=True;
+  Self.gridData.ColumnHeader.Material.DrawItemCaptionParam.DrawRectSetting.SizeType:=TDPSizeType.dpstPixel;
+  Self.gridData.ColumnHeader.Material.DrawItemCaptionParam.DrawRectSetting.Left:=10;
+//  Self.gridData.ColumnHeader.Material.DrawItemCaptionParam.FontHorzAlign:=fhaCenter;
+
+
 end;
 
 procedure TFrameItemGrid_MultiColorProgressBarColumn.gridDataCustomPaintCellBegin(

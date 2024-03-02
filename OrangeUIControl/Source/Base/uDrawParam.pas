@@ -2460,7 +2460,7 @@ end;
 
 function TDrawRectSetting.IsSizeTypeStored: Boolean;
 begin
-  Result:=(Self.FSizeType<>dpstPercent);
+  Result:=(Self.FSizeType<>dpstPixel);//dpstPercent);
 end;
 
 function TDrawRectSetting.IsTopStored: Boolean;
@@ -2517,7 +2517,8 @@ begin
 
   FEnabled:=False;
 
-  FSizeType:=dpstPercent;
+//  FSizeType:=dpstPercent;
+  FSizeType:=dpstPixel;
 
 
   FPositionHorzType:=dpphtNone;

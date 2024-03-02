@@ -45,20 +45,18 @@ uses
   {$IFDEF FPC}
   uSkinSuperObject,
   uIdHttpControl,
-  {$ENDIF}
-
-  {$IFDEF DELPHI}
-  {$IF CompilerVersion <= 21.0} // Delphi 2010以前
-  SuperObject,
-  superobjecthelper,
   {$ELSE}
-    {$IFDEF SKIN_SUPEROBJECT}
-    uSkinSuperObject,
+    {$IF CompilerVersion <= 21.0} // Delphi 2010以前
+    SuperObject,
+    superobjecthelper,
     {$ELSE}
-    XSuperObject,
-    XSuperJson,
-    {$ENDIF}
-  {$IFEND}
+      {$IFDEF SKIN_SUPEROBJECT}
+      uSkinSuperObject,
+      {$ELSE}
+      XSuperObject,
+      XSuperJson,
+      {$ENDIF}
+    {$IFEND}
 
 
 //  {$IF CompilerVersion <= 21.0}
@@ -82,6 +80,9 @@ uses
 
   //  {$ENDIF}
   {$ENDIF}
+
+
+
 
   ZLib,
   uDatasetToJson,

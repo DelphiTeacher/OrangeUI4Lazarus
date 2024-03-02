@@ -1693,7 +1693,6 @@ type
   TBaseSkinTreeViewItems=class(TSkinListViewItems)//TSkinItems)
   private
     FParent:TBaseSkinTreeViewItem;
-    function GetRootOwner:TBaseSkinTreeViewItems;
     function GetItem(Index: Integer): TBaseSkinTreeViewItem;
     procedure SetItem(Index: Integer; const Value: TBaseSkinTreeViewItem);
   protected
@@ -1702,7 +1701,6 @@ type
     //procedure DoDelete(AObject:TObject;AIndex:Integer);override;
 
     function GetListLayoutsManager:TSkinListLayoutsManager;override;
-
   protected
     function CreateBinaryObject(const AClassName:String=''):TObject;override;//TInterfacedPersistent;override;
 //    procedure InitSkinItemClass;override;
@@ -1713,6 +1711,7 @@ type
                       AObjectOwnership:TObjectOwnership=ooOwned;
                       CreateObjectChange:Boolean=True);
   public
+    function GetRootOwner:TBaseSkinTreeViewItems;
     /// <summary>
     ///   <para>
     ///     添加节点
@@ -6341,7 +6340,7 @@ end;
 
 function TBaseSkinTreeViewItems.GetRootOwner: TBaseSkinTreeViewItems;
 begin
-  Result:=nil;
+  Result:=Self;
   //if (Self.FParent<>nil) then
   //begin
   //  Result:=TBaseSkinTreeViewItems(Self.FParent.FOwner);

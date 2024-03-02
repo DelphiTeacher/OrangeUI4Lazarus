@@ -19,10 +19,10 @@
         <ComponentName Value="frmMain"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
         <TopLine Value="431"/>
         <CursorPos X="89" Y="445"/>
         <UsageCount Value="166"/>
+        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="..\..\OrangeProjectCommon\EasyServiceCommonMaterialDataMoudle_VCL_Lazarus.pas"/>
@@ -41,10 +41,11 @@
         <ComponentName Value="FrameButton"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Frame"/>
-        <EditorIndex Value="-1"/>
+        <EditorIndex Value="1"/>
         <TopLine Value="70"/>
         <CursorPos X="18" Y="70"/>
         <UsageCount Value="150"/>
+        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="CheckBoxFrame.pas"/>
@@ -52,8 +53,10 @@
         <ComponentName Value="FrameCheckBox"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Frame"/>
-        <EditorIndex Value="-1"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="13"/>
         <UsageCount Value="149"/>
+        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="DashBoard_AnalyseFrame.pas"/>
@@ -61,10 +64,11 @@
         <ComponentName Value="FrameDashBoard_Analyse"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Frame"/>
-        <EditorIndex Value="-1"/>
+        <EditorIndex Value="12"/>
         <TopLine Value="73"/>
         <CursorPos X="27" Y="101"/>
         <UsageCount Value="145"/>
+        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="DashBoard_ProjectsFrame.pas"/>
@@ -72,10 +76,11 @@
         <ComponentName Value="FrameDashBoard_Projects"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Frame"/>
-        <EditorIndex Value="-1"/>
+        <EditorIndex Value="11"/>
         <TopLine Value="85"/>
         <CursorPos X="37" Y="93"/>
         <UsageCount Value="144"/>
+        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="DashBoard_Analyse_BarChart_MonthSummaryFrame.pas"/>
@@ -83,10 +88,11 @@
         <ComponentName Value="FrameBarChart_MonthSummary"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Frame"/>
-        <EditorIndex Value="-1"/>
+        <EditorIndex Value="10"/>
         <TopLine Value="123"/>
         <CursorPos X="26" Y="173"/>
         <UsageCount Value="144"/>
+        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="DashBoard_Projects_PieChart_ProjectStatusFrame.pas"/>
@@ -94,10 +100,11 @@
         <ComponentName Value="FramePieChart_ProjectStatus"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Frame"/>
-        <EditorIndex Value="-1"/>
+        <EditorIndex Value="9"/>
         <TopLine Value="93"/>
         <CursorPos X="108" Y="106"/>
         <UsageCount Value="144"/>
+        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="DashBoard_Analyse_ItemGrid_TwoCellTextFrame.pas"/>
@@ -105,9 +112,9 @@
         <ComponentName Value="FrameItemGrid_TwoCellText"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Frame"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="1"/>
-        <CursorPos X="164" Y="8"/>
+        <EditorIndex Value="8"/>
+        <TopLine Value="8"/>
+        <CursorPos X="49" Y="17"/>
         <UsageCount Value="144"/>
         <Loaded Value="True"/>
       </Unit>
@@ -117,10 +124,11 @@
         <ComponentName Value="FrameItemGrid_TwoCellTextHasBackColor"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Frame"/>
-        <EditorIndex Value="-1"/>
+        <EditorIndex Value="7"/>
         <TopLine Value="33"/>
         <CursorPos X="85" Y="125"/>
         <UsageCount Value="143"/>
+        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="LoginForm.pas"/>
@@ -128,11 +136,11 @@
         <ComponentName Value="frmLogin"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="6"/>
         <TopLine Value="148"/>
         <CursorPos X="63" Y="150"/>
         <UsageCount Value="106"/>
         <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="homeframe.pas"/>
@@ -141,9 +149,11 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Frame"/>
         <UnitName Value="HomeFrame"/>
-        <EditorIndex Value="-1"/>
+        <EditorIndex Value="5"/>
         <CursorPos X="19" Y="14"/>
         <UsageCount Value="87"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="..\..\OrangeUIControl\Source\VCL\NativeCanvas\uNativeSkinPictureEngine.pas"/>
@@ -198,9 +208,11 @@
         <ComponentName Value="FrameEdit"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Frame"/>
-        <EditorIndex Value="-1"/>
+        <EditorIndex Value="14"/>
         <CursorPos Y="17"/>
         <UsageCount Value="82"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="EditGoodsFrame.pas"/>
@@ -208,10 +220,12 @@
         <ComponentName Value="FrameEditGoods"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Frame"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="70"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="69"/>
         <CursorPos X="61" Y="90"/>
         <UsageCount Value="49"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="..\..\OrangeProjectCommon\uBGRASVGSupport.pas"/>
@@ -224,30 +238,27 @@
       <Unit>
         <Filename Value="..\..\OrangeProjectCommon\uRestInterfaceCall.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="12"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="202"/>
         <CursorPos X="33" Y="211"/>
         <UsageCount Value="40"/>
         <Bookmarks Count="1">
           <Item0 X="5" Y="1606" ID="3"/>
         </Bookmarks>
-        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="..\..\OrangeProjectCommon\uDataSetToJson.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="16"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="496"/>
         <CursorPos X="26" Y="525"/>
         <UsageCount Value="40"/>
-        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="..\..\OrangeProjectCommon\uIdHttpControl.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="13"/>
+        <EditorIndex Value="-1"/>
         <UsageCount Value="30"/>
-        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="uconst.pas"/>
@@ -260,7 +271,7 @@
       <Unit>
         <Filename Value="..\..\OrangeProjectCommon\uOpenClientCommon.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="10"/>
+        <EditorIndex Value="3"/>
         <TopLine Value="2357"/>
         <CursorPos X="34" Y="2370"/>
         <UsageCount Value="27"/>
@@ -280,12 +291,11 @@
         <ComponentName Value="frmWaiting"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="3"/>
+        <EditorIndex Value="2"/>
         <TopLine Value="183"/>
         <CursorPos X="35" Y="208"/>
         <UsageCount Value="25"/>
         <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="..\..\OrangeProjectCommon\uLCLSVGSupport.pas"/>
@@ -1150,14 +1160,13 @@
       </Unit>
       <Unit>
         <Filename Value="..\..\OrangeProjectCommon\SkinSuperObject\uskinsuperobject.pas"/>
-        <EditorIndex Value="19"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="876"/>
         <CursorPos X="10" Y="904"/>
         <UsageCount Value="19"/>
         <Bookmarks Count="1">
           <Item0 X="21" Y="5010" ID="4"/>
         </Bookmarks>
-        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="..\..\OrangeUIDesignNew\Source\uComponentTypeNameEditor.pas"/>
@@ -1400,11 +1409,10 @@
       </Unit>
       <Unit>
         <Filename Value="..\..\OrangeUIControl\Source\VCL\uSkinWindowsControl.pas"/>
-        <EditorIndex Value="11"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="32"/>
         <CursorPos X="9" Y="59"/>
         <UsageCount Value="14"/>
-        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="..\..\OrangeUIControl\Source\Base\uSkinBufferBitmap.pas"/>
@@ -1518,19 +1526,17 @@
       </Unit>
       <Unit>
         <Filename Value="D:\Lazarus\fpc\3.2.2\source\rtl\inc\varianth.inc"/>
-        <EditorIndex Value="18"/>
+        <EditorIndex Value="-1"/>
         <CursorPos X="4" Y="62"/>
         <UsageCount Value="19"/>
-        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="D:\Lazarus\fpc\3.2.2\source\packages\fcl-db\src\base\db.pas"/>
         <UnitName Value="DB"/>
-        <EditorIndex Value="17"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="83"/>
         <CursorPos X="26" Y="112"/>
         <UsageCount Value="19"/>
-        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="D:\三方控件\Indy10\Lib\Core\IdThreadComponent.pas"/>
@@ -1542,20 +1548,18 @@
       </Unit>
       <Unit>
         <Filename Value="D:\三方控件\Indy10\Lib\Core\IdTCPConnection.pas"/>
-        <EditorIndex Value="14"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="421"/>
         <CursorPos X="14" Y="450"/>
         <UsageCount Value="15"/>
-        <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
         <Filename Value="D:\三方控件\Indy10\Lib\System\IdComponent.pas"/>
-        <EditorIndex Value="15"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="69"/>
         <CursorPos X="3" Y="98"/>
         <UsageCount Value="15"/>
-        <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
@@ -1574,26 +1578,23 @@
       </Unit>
       <Unit>
         <Filename Value="..\..\OrangeProjectCommon\uGPSUtils.pas"/>
-        <EditorIndex Value="2"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="57"/>
         <CursorPos X="5" Y="137"/>
         <UsageCount Value="13"/>
-        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="..\..\OrangeProjectCommon\uOpenUISetting.pas"/>
-        <EditorIndex Value="9"/>
+        <EditorIndex Value="-1"/>
         <CursorPos X="15" Y="19"/>
         <UsageCount Value="13"/>
-        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="D:\MyFiles\OrangeUIAppFramework\uManager.pas"/>
-        <EditorIndex Value="8"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="941"/>
         <CursorPos X="27" Y="975"/>
         <UsageCount Value="13"/>
-        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="D:\三方控件\Indy10\Lib\Protocols\IdURI.pas"/>
@@ -1612,148 +1613,35 @@
       </Unit>
       <Unit>
         <Filename Value="..\..\OrangeProjectCommon\VCLFrames\WaitingForm_VCL\uWaiting.pas"/>
-        <EditorIndex Value="6"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="37"/>
         <CursorPos X="41" Y="74"/>
         <UsageCount Value="25"/>
-        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="..\..\OrangeProjectCommon\VCLFrames\WaitingForm_VCL\uWaitingForm.pas"/>
-        <EditorIndex Value="7"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="325"/>
         <CursorPos Y="356"/>
         <UsageCount Value="25"/>
-        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="D:\Lazarus\components\opengl\glgtk3glxcontext.pas"/>
         <UnitName Value="GLGtk3GlxContext"/>
-        <EditorIndex Value="4"/>
+        <EditorIndex Value="-1"/>
         <CursorPos X="29" Y="27"/>
         <UsageCount Value="12"/>
-        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="D:\Lazarus\lcl\lcltype.pp"/>
         <UnitName Value="LCLType"/>
-        <EditorIndex Value="5"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="2638"/>
         <CursorPos X="3" Y="2667"/>
         <UsageCount Value="12"/>
-        <Loaded Value="True"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="26">
-      <Position>
-        <Filename Value="..\..\OrangeProjectCommon\VCLFrames\WaitingForm_VCL\uWaitingForm.pas"/>
-        <Caret Line="15" Column="18"/>
-      </Position>
-      <Position>
-        <Filename Value="..\..\OrangeProjectCommon\VCLFrames\WaitingForm_VCL\uWaitingForm.pas"/>
-        <Caret Line="412" Column="3" TopLine="145"/>
-      </Position>
-      <Position>
-        <Filename Value="..\..\OrangeProjectCommon\VCLFrames\WaitingForm_VCL\uWaitingForm.pas"/>
-        <Caret Line="88" Column="3" TopLine="59"/>
-      </Position>
-      <Position>
-        <Filename Value="..\..\OrangeProjectCommon\VCLFrames\WaitingForm_VCL\uWaitingForm.pas"/>
-        <Caret Line="214" Column="37" TopLine="118"/>
-      </Position>
-      <Position>
-        <Filename Value="..\..\OrangeProjectCommon\VCLFrames\WaitingForm_VCL\FormWaiting.pas"/>
-        <Caret Line="119" Column="25" TopLine="101"/>
-      </Position>
-      <Position>
-        <Filename Value="..\..\OrangeProjectCommon\VCLFrames\WaitingForm_VCL\FormWaiting.pas"/>
-        <Caret Line="340" Column="31" TopLine="247"/>
-      </Position>
-      <Position>
-        <Filename Value="..\..\OrangeProjectCommon\VCLFrames\WaitingForm_VCL\FormWaiting.pas"/>
-        <Caret Line="71" TopLine="42"/>
-      </Position>
-      <Position>
-        <Filename Value="..\..\OrangeProjectCommon\VCLFrames\WaitingForm_VCL\FormWaiting.pas"/>
-        <Caret Line="62" Column="9" TopLine="42"/>
-      </Position>
-      <Position>
-        <Filename Value="..\..\OrangeProjectCommon\VCLFrames\WaitingForm_VCL\FormWaiting.pas"/>
-        <Caret Line="104" Column="28" TopLine="75"/>
-      </Position>
-      <Position>
-        <Filename Value="..\..\OrangeProjectCommon\VCLFrames\WaitingForm_VCL\FormWaiting.pas"/>
-        <Caret Line="124" Column="33" TopLine="95"/>
-      </Position>
-      <Position>
-        <Filename Value="..\..\OrangeProjectCommon\VCLFrames\WaitingForm_VCL\uWaiting.pas"/>
-        <Caret Line="82" Column="36" TopLine="37"/>
-      </Position>
-      <Position>
-        <Filename Value="..\..\OrangeProjectCommon\VCLFrames\WaitingForm_VCL\uWaitingForm.pas"/>
-        <Caret Line="45" Column="22" TopLine="16"/>
-      </Position>
-      <Position>
-        <Filename Value="..\..\OrangeProjectCommon\VCLFrames\WaitingForm_VCL\uWaitingForm.pas"/>
-        <Caret Line="364" Column="75" TopLine="335"/>
-      </Position>
-      <Position>
-        <Filename Value="..\..\OrangeProjectCommon\VCLFrames\WaitingForm_VCL\uWaitingForm.pas"/>
-        <Caret Line="199" Column="67" TopLine="171"/>
-      </Position>
-      <Position>
-        <Filename Value="..\..\OrangeProjectCommon\VCLFrames\WaitingForm_VCL\FormWaiting.pas"/>
-        <Caret Line="159" TopLine="114"/>
-      </Position>
-      <Position>
-        <Filename Value="..\..\OrangeProjectCommon\VCLFrames\WaitingForm_VCL\FormWaiting.pas"/>
-        <Caret Line="50" TopLine="8"/>
-      </Position>
-      <Position>
-        <Filename Value="..\..\OrangeProjectCommon\VCLFrames\WaitingForm_VCL\FormWaiting.pas"/>
-        <Caret Line="53" TopLine="25"/>
-      </Position>
-      <Position>
-        <Filename Value="..\..\OrangeProjectCommon\VCLFrames\WaitingForm_VCL\FormWaiting.pas"/>
-        <Caret Line="162" Column="38" TopLine="115"/>
-      </Position>
-      <Position>
-        <Filename Value="..\..\OrangeProjectCommon\VCLFrames\WaitingForm_VCL\uWaiting.pas"/>
-        <Caret Line="72" Column="24" TopLine="37"/>
-      </Position>
-      <Position>
-        <Filename Value="..\..\OrangeProjectCommon\VCLFrames\WaitingForm_VCL\uWaiting.pas"/>
-        <Caret Line="31" Column="15" TopLine="2"/>
-      </Position>
-      <Position>
-        <Filename Value="..\..\OrangeProjectCommon\VCLFrames\WaitingForm_VCL\uWaitingForm.pas"/>
-        <Caret Line="193" Column="34" TopLine="165"/>
-      </Position>
-      <Position>
-        <Filename Value="..\..\OrangeProjectCommon\VCLFrames\WaitingForm_VCL\uWaiting.pas"/>
-        <Caret Line="31" Column="15" TopLine="2"/>
-      </Position>
-      <Position>
-        <Filename Value="..\..\OrangeProjectCommon\VCLFrames\WaitingForm_VCL\FormWaiting.pas"/>
-        <Caret Line="162" Column="31" TopLine="121"/>
-      </Position>
-      <Position>
-        <Filename Value="..\..\OrangeProjectCommon\VCLFrames\WaitingForm_VCL\FormWaiting.pas"/>
-        <Caret Line="181" Column="18" TopLine="152"/>
-      </Position>
-      <Position>
-        <Filename Value="..\..\OrangeProjectCommon\VCLFrames\WaitingForm_VCL\uWaitingForm.pas"/>
-        <Caret Line="52" Column="15" TopLine="22"/>
-      </Position>
-      <Position>
-        <Filename Value="..\..\OrangeProjectCommon\VCLFrames\WaitingForm_VCL\uWaitingForm.pas"/>
-        <Caret Line="212" Column="25" TopLine="184"/>
-      </Position>
-      <Position>
-        <Filename Value="..\..\OrangeProjectCommon\VCLFrames\WaitingForm_VCL\FormWaiting.pas"/>
-        <Caret Line="183" Column="7" TopLine="152"/>
-      </Position>
-    </JumpHistory>
+    <JumpHistory HistoryIndex="-1"/>
     <RunParams>
       <FormatVersion Value="2"/>
       <Modes ActiveMode=""/>

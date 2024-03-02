@@ -70,7 +70,7 @@
         <Base>true</Base>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base)'!=''">
-        <DCC_UnitSearchPath>..\..\OrangeUIDesignNew\DCU\VCL\D10_3\$(Platform)\$(Config);$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+        <DCC_UnitSearchPath>..\..\OrangeUIDesign\DCU\VCL\D10_3\$(Platform)\$(Config);D:\OrangeUI4Lazarus\OrangeProjectCommon\SVGIconImageList\Svg;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
         <DCC_DependencyCheckOutputName>SCRM.exe</DCC_DependencyCheckOutputName>
         <DCC_ImageBase>00400000</DCC_ImageBase>
         <DCC_Platform>x86</DCC_Platform>
@@ -148,26 +148,9 @@
         </DCCReference>
         <DCCReference Include="..\..\OrangeProjectCommon\OrangeUIStyles_VCL\ListItemStyle_IconButton.pas"/>
         <DCCReference Include="..\..\OrangeProjectCommon\OrangeUIStyles_VCL\ListItemStyle_TreeMainMenu_LabelAndArrow.pas"/>
-        <DCCReference Include="..\..\OrangeProjectCommon\uIdHttpControl.pas"/>
         <DCCReference Include="..\..\OrangeProjectCommon\OrangeUIStyles_VCL\ListItemStyle_CaptionDetailItem.pas"/>
         <DCCReference Include="..\..\OrangeProjectCommon\OrangeUIStyles_VCL\ListItemStyle_MailList.pas"/>
-        <DCCReference Include="..\..\OrangeProjectCommon\uSkinItemJsonHelper.pas"/>
-        <DCCReference Include="..\..\OrangeProjectCommon\uDataSetToJson.pas"/>
-        <DCCReference Include="..\..\OrangeProjectCommon\uOpenCommon.pas"/>
-        <DCCReference Include="..\..\OrangeProjectCommon\uDataInterface.pas"/>
-        <DCCReference Include="..\..\OrangeProjectCommon\uRestInterfaceCall.pas"/>
-        <DCCReference Include="..\..\OrangeProjectCommon\uSelectMediaDialog.pas"/>
-        <DCCReference Include="..\..\OrangeProjectCommon\OrangeUI_Copy\uFuncCommon_Copy.pas"/>
-        <DCCReference Include="..\..\OrangeProjectCommon\OrangeUI_Copy\uBaseList_Copy.pas"/>
-        <DCCReference Include="..\..\OrangeProjectCommon\OrangeUI_Copy\uFileCommon_Copy.pas"/>
-        <DCCReference Include="..\..\OrangeProjectCommon\OrangeUI_Copy\uBaseLog_Copy.pas"/>
-        <DCCReference Include="..\..\OrangeProjectCommon\uSelectMediaUI_OpenDialog.pas"/>
         <DCCReference Include="..\..\OrangeProjectCommon\OrangeUIStyles_VCL\ListItemStyle_IconLeft_CaptionRight_CloseBtnRight.pas"/>
-        <DCCReference Include="..\..\OrangeProjectCommon\uOpenClientCommon.pas"/>
-        <DCCReference Include="..\..\OrangeProjectCommon\uGPSUtils.pas"/>
-        <DCCReference Include="..\..\OrangeProjectCommon\VCLFrames\ViewPictureListFrame_VCL.pas"/>
-        <DCCReference Include="..\..\OrangeProjectCommon\uViewPictureListFrame.pas"/>
-        <DCCReference Include="..\..\OrangeProjectCommon\VCLFrames\ClipHeadFrame_VCL.pas"/>
         <DCCReference Include="ButtonFrame.pas">
             <Form>FrameButton</Form>
             <DesignClass>TFrame</DesignClass>
@@ -178,16 +161,10 @@
         </DCCReference>
         <DCCReference Include="..\..\OrangeProjectCommon\XSuperObject\XSuperJSON.pas"/>
         <DCCReference Include="..\..\OrangeProjectCommon\XSuperObject\XSuperObject.pas"/>
-        <DCCReference Include="..\..\OrangeProjectCommon\uMultiSelectFrame.pas"/>
-        <DCCReference Include="..\..\OrangeProjectCommon\VCLFrames\MultiSelectFrame_VCL.pas"/>
-        <DCCReference Include="..\..\OrangeProjectCommon\VCLFrames\MessageBoxFrame_VCL.pas"/>
-        <DCCReference Include="..\..\OrangeProjectCommon\uVirtualListDataController.pas"/>
         <DCCReference Include="CheckBoxFrame.pas">
             <Form>FrameCheckBox</Form>
             <DesignClass>TFrame</DesignClass>
         </DCCReference>
-        <DCCReference Include="..\..\OrangeProjectCommon\VCLFrames\HintFrame_VCL.pas"/>
-        <DCCReference Include="..\..\OrangeProjectCommon\VCLFrames\FrameParentForm_VCL.pas"/>
         <DCCReference Include="..\..\OrangeProjectCommon\OrangeUIStyles_VCL\ListItemStyle_Default.pas"/>
         <DCCReference Include="..\..\OrangeProjectCommon\OrangeUIStyles_VCL\ListItemStyle_IconCaptionLeft_NotifyNumberRight.pas">
             <Form>FrameListItemStyle_IconCaptionLeft_NotifyNumberRight</Form>
@@ -231,19 +208,12 @@
             <Form>FrameItemGrid_TwoCellTextHasBackColor</Form>
         </DCCReference>
         <DCCReference Include="..\..\OrangeProjectCommon\OrangeUIStyles_VCL\ListItemStyle_TwoIconButton.pas"/>
-        <DCCReference Include="ItemGridFrame.pas"/>
         <DCCReference Include="..\..\OrangeProjectCommon\OrangeUIStyles_VCL\ListItemStyle_IconLeft_CaptionLeft.pas"/>
         <DCCReference Include="..\..\OrangeProjectCommon\OrangeUIStyles_VCL\ListItemStyle_CheckBoxIconLeft_CaptionRight.pas"/>
-        <DCCReference Include="..\..\OrangeProjectCommon\RestIntfMemTable\uRestIntfMemTable.pas"/>
-        <DCCReference Include="..\..\OrangeProjectCommon\uJsonToDataset.pas"/>
         <DCCReference Include="MainForm.pas">
             <Form>frmMain</Form>
         </DCCReference>
-        <DCCReference Include="..\..\OrangeProjectCommon\VCLFrames\GridSwitchPage2Frame.pas"/>
-        <DCCReference Include="..\..\OrangeProjectCommon\VCLFrames\GridSwitchPageFrame.pas"/>
-        <DCCReference Include="..\..\OrangeProjectCommon\VCLFrames\uWaitingForm.pas"/>
-        <DCCReference Include="..\..\OrangeProjectCommon\VCLFrames\uWaiting.pas"/>
-        <DCCReference Include="..\..\OrangeProjectCommon\VCLFrames\FormWaiting.pas"/>
+        <DCCReference Include="..\..\OrangeProjectCommon\uVCLSVGSupport.pas"/>
         <BuildConfiguration Include="Debug">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

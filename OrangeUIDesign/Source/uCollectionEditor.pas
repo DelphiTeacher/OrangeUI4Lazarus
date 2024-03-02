@@ -406,11 +406,21 @@ end;
 
 procedure TSkinItemsProperty.Edit;
 begin
-  ShowCollectionEditor(Designer,
-                        TComponent(TSkinControlProperties(TBaseSkinItems(GetOrdValue).OwnerProperties).SkinControl),
-                        TSkinItems(GetOrdValue),
-                        GetName);
-
+  if TBaseSkinItems(GetOrdValue) is TBaseSkinTreeViewItems then
+  begin
+    ShowCollectionEditor(Designer,
+                          TComponent(TSkinControlProperties(TBaseSkinTreeViewItems(GetOrdValue).GetRootOwner.FOwnerProperties).SkinControl),
+                          TSkinItems(GetOrdValue),
+                          GetName);
+  end
+  else
+  if TBaseSkinItems(GetOrdValue).FOwnerProperties<>nil then
+  begin
+    ShowCollectionEditor(Designer,
+                          TComponent(TSkinControlProperties(TBaseSkinItems(GetOrdValue).FOwnerProperties).SkinControl),
+                          TSkinItems(GetOrdValue),
+                          GetName);
+  end;
 end;
 
 function TSkinItemsProperty.GetAttributes: TPropertyAttributes;

@@ -23,12 +23,12 @@ uses
 //  {$IFEND}
 
   {$IFDEF VCL}
-  {$IFDEF MSWINDOWS}
-    Windows,
-  {$ENDIF}
-  {$IFDEF LINUX}
-    LCLType,
-  {$ENDIF}
+    {$IFDEF MSWINDOWS}
+      Windows,
+    {$ENDIF}
+    {$IFDEF LINUX}
+      LCLType,
+    {$ENDIF}
   Messages,
   Controls,
   Graphics,
@@ -774,7 +774,7 @@ procedure getCtrlPoint(ps:array of TPointF; i:Integer; var pA:TPointF;var pB:TPo
 implementation
 
 
-  {$IFDEF VCL}
+{$IFDEF VCL}
   {$IFDEF MSWINDOWS}
 uses
   uGDIPlusSkinPictureEngine,
@@ -784,7 +784,7 @@ uses
   uNativeSkinPictureEngine,
   uNativeDrawCanvas;
   {$ENDIF}
-  {$ENDIF}
+{$ENDIF}
 
   {$IFDEF FMX}
 uses

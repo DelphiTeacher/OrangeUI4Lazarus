@@ -1,4 +1,4 @@
-object Form1: TForm1
+﻿object Form1: TForm1
   Left = 1100
   Height = 536
   Top = 436
@@ -16,7 +16,7 @@ object Form1: TForm1
     Width = 193
     ParentMouseEvent = False
     DirectUIVisible = False
-    AlignWithMagins = False
+    AlignWithMargins = False
     ComponentTypeUseKind = ctukName
     MaterialUseKind = mukRef
     KeepSelfOwnMaterial = True

@@ -36,7 +36,11 @@ uses
   ListItemStyle_IconCaptionLeft_NotifyNumberRight,
   ListItemStyle_IconCaptionLeft_NotifyIconRight,
   ListItemStyle_IconCaptionLeft_ArrowRight,
+  {$IFDEF FPC}
   EasyServiceCommonMaterialDataMoudle_VCL_Lazarus,
+  {$ELSE}
+  EasyServiceCommonMaterialDataMoudle_VCL,
+  {$ENDIF}
   //uGDIPlusDrawCanvas,
   //uUrlPicture,
   //uIdHttpControl,
@@ -615,7 +619,7 @@ begin
   if AChild.Name='btnChat' then
   begin
 
-    ShowMessage('聊天');
+    ShowMessage('Chat');
 //    TSkinWinButton(AChild).Properties.IsPushed:=False;
 //    AItem.IsBufferNeedChange:=True;
 

@@ -384,7 +384,7 @@ begin
 
   {$IFDEF FMX}
   RegisterSelectionEditor(TSkinMessageBox,TMessageBoxSelectionEditor);
-  {$ENDIF FMX}
+  {$ENDIF}
 
 end;
 

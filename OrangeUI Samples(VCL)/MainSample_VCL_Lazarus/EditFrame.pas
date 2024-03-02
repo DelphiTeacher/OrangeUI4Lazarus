@@ -6,7 +6,11 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes,
 
+  {$IFDEF FPC}
   EasyServiceCommonMaterialDataMoudle_VCL_Lazarus,
+  {$ELSE}
+  EasyServiceCommonMaterialDataMoudle_VCL,
+  {$ENDIF}
 
   Graphics, Controls, Forms, Dialogs,
   StdCtrls;

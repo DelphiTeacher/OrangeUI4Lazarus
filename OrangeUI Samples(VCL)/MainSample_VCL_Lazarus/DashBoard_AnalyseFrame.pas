@@ -1,4 +1,4 @@
-unit DashBoard_AnalyseFrame;
+﻿unit DashBoard_AnalyseFrame;
 
 interface
 
@@ -51,6 +51,7 @@ constructor TFrameDashBoard_Analyse.Create(AOwner: TComponent);
 begin
   inherited;
 
+  //热卖商品
   FItemGrid_TwoCellTextFrame:=TFrameItemGrid_TwoCellText.Create(Self);
   FItemGrid_TwoCellTextFrame.Parent:=Self;
   FItemGrid_TwoCellTextFrame.pnlClient.Material.BackColor.ShadowSize:=5;
@@ -61,19 +62,23 @@ begin
   FItemGrid_TwoCellTextFrame.pnlClient.BorderSpacing.Top:=10;//(0,10,0,-5);
   FItemGrid_TwoCellTextFrame.pnlClient.BorderSpacing.Bottom:=-10;//(0,10,0,-5);
   {$ENDIF}
+//  FItemGrid_TwoCellTextFrame.gridData.Prop.ColumnsHeaderHeight:=0;
 
 
+  //渠道
   FItemGrid_MultiColorProgressBarColumnFrame:=TFrameItemGrid_MultiColorProgressBarColumn.Create(Self);
   FItemGrid_MultiColorProgressBarColumnFrame.Name:='FItemGrid_MultiColorProgressBarColumnFrame';
   FItemGrid_MultiColorProgressBarColumnFrame.Parent:=Self;
   FItemGrid_MultiColorProgressBarColumnFrame.pnlClient.Material.BackColor.ShadowSize:=5;
+//  FItemGrid_MultiColorProgressBarColumnFrame.gridData.Prop.ColumnsHeaderHeight:=0;
 
 
+  //社交媒体流量
   FItemGrid_MultiColorProgressBarColumnFrame2:=TFrameItemGrid_MultiColorProgressBarColumn.Create(Self);
   FItemGrid_MultiColorProgressBarColumnFrame.Name:='FItemGrid_MultiColorProgressBarColumnFrame2';
   FItemGrid_MultiColorProgressBarColumnFrame2.Parent:=Self;
   FItemGrid_MultiColorProgressBarColumnFrame2.pnlClient.Material.BackColor.ShadowSize:=5;
-  FItemGrid_MultiColorProgressBarColumnFrame2.lblCaption.Caption:='社交媒体流量';
+  FItemGrid_MultiColorProgressBarColumnFrame2.lblCaption.Caption:='social media traffic';
   FItemGrid_MultiColorProgressBarColumnFrame2.gridData.Prop.Items[0].Caption:='Facebook';
   FItemGrid_MultiColorProgressBarColumnFrame2.gridData.Prop.Items[0].Detail:='2,250';
   FItemGrid_MultiColorProgressBarColumnFrame2.gridData.Prop.Items[0].Detail1:='30';
@@ -89,6 +94,7 @@ begin
   FItemGrid_MultiColorProgressBarColumnFrame2.gridData.Prop.Items[3].Caption:='LinkedIn';
   FItemGrid_MultiColorProgressBarColumnFrame2.gridData.Prop.Items[3].Detail:='250';
   FItemGrid_MultiColorProgressBarColumnFrame2.gridData.Prop.Items[3].Detail1:='5';
+//  FItemGrid_MultiColorProgressBarColumnFrame2.gridData.Prop.ColumnsHeaderHeight:=0;
 
 
 
@@ -99,12 +105,15 @@ begin
   FControlLayoutItems:=TControlLayoutItems.Create;
   //添加两个需要排列的控件，两个控件的设计时高度要保持一致
   FControlLayoutItems.Add(SkinWinListView1,-1,SkinWinListView1.Height);
+  //热卖商品
   FControlLayoutItems.Add(FItemGrid_TwoCellTextFrame,-1,FItemGrid_TwoCellTextFrame.Height);
 
   //一整排报表
   FControlLayoutItems.Add(FBarChart_MonthSummaryFrame,-2,FBarChart_MonthSummaryFrame.Height);
 
+  //渠道
   FControlLayoutItems.Add(FItemGrid_MultiColorProgressBarColumnFrame,-1,FItemGrid_MultiColorProgressBarColumnFrame.Height);
+  //社交媒体流量
   FControlLayoutItems.Add(FItemGrid_MultiColorProgressBarColumnFrame2,-1,FItemGrid_MultiColorProgressBarColumnFrame2.Height);
 
 

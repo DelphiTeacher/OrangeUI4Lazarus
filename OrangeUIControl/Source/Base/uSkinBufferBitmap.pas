@@ -702,6 +702,8 @@ begin
     DeleteObject(FBitmap);
 
   end;
+
+  FreeAndNil(FBitmapCanvas);
 //  SysUtils.FreeAndNil(FDrawCanvas);
 
   Clear;

@@ -6,11 +6,16 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes,
 
+  {$IFDEF FPC}
   EasyServiceCommonMaterialDataMoudle_VCL_Lazarus,
+  {$ELSE}
+  EasyServiceCommonMaterialDataMoudle_VCL,
+  {$ENDIF}
   uSkinListViewType,
 
   Graphics, Controls, Forms, Dialogs,
-  StdCtrls, EditBtn, ExtCtrls, uSkinPanelType, uSkinButtonType;
+  StdCtrls, ExtCtrls, uSkinPanelType, uSkinButtonType,
+  uSkinWindowsControl;
 
 type
 
@@ -20,7 +25,6 @@ type
     btnCancel: TSkinButton;
     btnSave: TSkinButton;
     cmbCategory: TComboBox;
-    dedtDate: TDateEdit;
     edtHeight: TEdit;
     edtLength: TEdit;
     edtName: TEdit;
@@ -39,11 +43,7 @@ type
     memMemo: TMemo;
     pnlClient: TPanel;
     pnlToolBar: TSkinPanel;
-    procedure edtNameChange(Sender: TObject);
-    procedure FrameClick(Sender: TObject);
     procedure FrameResize(Sender: TObject);
-    procedure lblNameClick(Sender: TObject);
-    procedure pnlClientResize(Sender: TObject);
   private
     { Private declarations }
   public
@@ -59,16 +59,6 @@ implementation
 
 { TFrameEditGoods }
 
-procedure TFrameEditGoods.FrameClick(Sender: TObject);
-begin
-
-end;
-
-procedure TFrameEditGoods.edtNameChange(Sender: TObject);
-begin
-
-end;
-
 procedure TFrameEditGoods.FrameResize(Sender: TObject);
 begin
   if FControlLayoutItems<>nil then
@@ -79,16 +69,6 @@ begin
     FControlLayoutItems.AlignControls;
     //Height:=Ceil(FControlLayoutItems.FListLayoutsManager.CalcContentHeight);
   end;
-
-end;
-
-procedure TFrameEditGoods.lblNameClick(Sender: TObject);
-begin
-
-end;
-
-procedure TFrameEditGoods.pnlClientResize(Sender: TObject);
-begin
 
 end;
 
@@ -114,7 +94,7 @@ begin
 
   FControlLayoutItems.Add(lblCategory,cmbCategory);
 
-  FControlLayoutItems.Add(lblDate,dedtDate);
+//  FControlLayoutItems.Add(lblDate,dedtDate);
 
   FControlLayoutItems.Add(lblLength,edtLength);
 

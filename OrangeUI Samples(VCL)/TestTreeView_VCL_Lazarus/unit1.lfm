@@ -1,4 +1,4 @@
-object Form1: TForm1
+﻿object Form1: TForm1
   Left = 471
   Height = 678
   Top = 513
@@ -14,7 +14,7 @@ object Form1: TForm1
     Width = 200
     ParentMouseEvent = False
     DirectUIVisible = False
-    AlignWithMagins = False
+    AlignWithMargins = False
     ComponentTypeUseKind = ctukDefault
     MaterialUseKind = mukSelfOwn
     KeepSelfOwnMaterial = True
@@ -1117,7 +1117,7 @@ object Form1: TForm1
     VertScrollBar.Width = 7
     VertScrollBar.ParentMouseEvent = False
     VertScrollBar.DirectUIVisible = False
-    VertScrollBar.AlignWithMagins = False
+    VertScrollBar.AlignWithMargins = False
     VertScrollBar.ComponentTypeUseKind = ctukDefault
     VertScrollBar.MaterialUseKind = mukSelfOwn
     VertScrollBar.KeepSelfOwnMaterial = True
@@ -1179,7 +1179,7 @@ object Form1: TForm1
     HorzScrollBar.Width = 200
     HorzScrollBar.ParentMouseEvent = False
     HorzScrollBar.DirectUIVisible = False
-    HorzScrollBar.AlignWithMagins = False
+    HorzScrollBar.AlignWithMargins = False
     HorzScrollBar.ComponentTypeUseKind = ctukDefault
     HorzScrollBar.MaterialUseKind = mukSelfOwn
     HorzScrollBar.KeepSelfOwnMaterial = True
@@ -1240,7 +1240,7 @@ object Form1: TForm1
     ScrollControlCorner.Width = 7
     ScrollControlCorner.ParentMouseEvent = False
     ScrollControlCorner.DirectUIVisible = False
-    ScrollControlCorner.AlignWithMagins = False
+    ScrollControlCorner.AlignWithMargins = False
     ScrollControlCorner.ComponentTypeUseKind = ctukDefault
     ScrollControlCorner.MaterialUseKind = mukSelfOwn
     ScrollControlCorner.KeepSelfOwnMaterial = True
@@ -4865,7 +4865,7 @@ object Form1: TForm1
       Margins.Top = 5
       Margins.Right = 2
       Margins.Bottom = 5
-      AlignWithMagins = False
+      AlignWithMargins = False
       ComponentTypeUseKind = ctukDefault
       MaterialUseKind = mukSelfOwn
       KeepSelfOwnMaterial = True

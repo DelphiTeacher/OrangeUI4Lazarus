@@ -22,7 +22,7 @@ object frmLogin: TfrmLogin
     Width = 457
     ParentMouseEvent = False
     DirectUIVisible = False
-    AlignWithMagins = False
+    AlignWithMargins = False
     ComponentTypeUseKind = ctukDefault
     MaterialUseKind = mukSelfOwn
     KeepSelfOwnMaterial = True
@@ -77,7 +77,7 @@ object frmLogin: TfrmLogin
       Width = 200
       ParentMouseEvent = False
       DirectUIVisible = False
-      AlignWithMagins = False
+      AlignWithMargins = False
       ComponentTypeUseKind = ctukDefault
       MaterialUseKind = mukSelfOwn
       KeepSelfOwnMaterial = True
@@ -147,7 +147,7 @@ object frmLogin: TfrmLogin
       Width = 200
       ParentMouseEvent = False
       DirectUIVisible = False
-      AlignWithMagins = False
+      AlignWithMargins = False
       ComponentTypeUseKind = ctukDefault
       MaterialUseKind = mukSelfOwn
       KeepSelfOwnMaterial = True
@@ -226,7 +226,7 @@ object frmLogin: TfrmLogin
       Width = 94
       ParentMouseEvent = False
       DirectUIVisible = False
-      AlignWithMagins = False
+      AlignWithMargins = False
       ComponentTypeUseKind = ctukDefault
       MaterialUseKind = mukSelfOwn
       KeepSelfOwnMaterial = True
@@ -286,7 +286,7 @@ object frmLogin: TfrmLogin
       Width = 194
       ParentMouseEvent = False
       DirectUIVisible = False
-      AlignWithMagins = False
+      AlignWithMargins = False
       ComponentTypeUseKind = ctukDefault
       MaterialUseKind = mukSelfOwn
       KeepSelfOwnMaterial = True
@@ -447,7 +447,7 @@ object frmLogin: TfrmLogin
     Width = 457
     ParentMouseEvent = False
     DirectUIVisible = False
-    AlignWithMagins = False
+    AlignWithMargins = False
     ComponentTypeUseKind = ctukDefault
     MaterialUseKind = mukSelfOwn
     KeepSelfOwnMaterial = True

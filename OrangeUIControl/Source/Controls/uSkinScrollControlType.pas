@@ -3001,21 +3001,21 @@ begin
   FAutoDragScrollVertDirection:=TGestureDirection.isdNone;
   FAutoDragScrollHorzDirection:=TGestureDirection.isdNone;
   //确定垂直自动滚动的方向
-  if PtInRect(ATopRect,Point) then
+  if PtInRectF(ATopRect,Point) then
   begin
     FAutoDragScrollVertDirection:=TGestureDirection.isdScrollToMin;
   end
-  else if PtInRect(ABottomRect,Point) then
+  else if PtInRectF(ABottomRect,Point) then
   begin
     FAutoDragScrollVertDirection:=TGestureDirection.isdScrollToMax;
   end;
 
   //确定水平自动滚动的方向
-  if PtInRect(ALeftRect,Point) then
+  if PtInRectF(ALeftRect,Point) then
   begin
     FAutoDragScrollHorzDirection:=TGestureDirection.isdScrollToMin;
   end
-  else if PtInRect(ARightRect,Point) then
+  else if PtInRectF(ARightRect,Point) then
   begin
     FAutoDragScrollHorzDirection:=TGestureDirection.isdScrollToMax;
   end;

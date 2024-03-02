@@ -12,5 +12,4 @@ object FrameEdit: TFrameEdit
     TabOrder = 0
     Text = 'Edit1'
   end
-
 end

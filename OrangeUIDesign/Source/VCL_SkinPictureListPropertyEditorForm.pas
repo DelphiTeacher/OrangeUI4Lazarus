@@ -71,12 +71,12 @@ type
     procedure ListView1Click(Sender: TObject);
     procedure SaveSelectedClick(Sender: TObject);
   private
-    FPictureList: TSkinPictureList;
-    procedure SetSkinPictureList(const Value: TSkinPictureList);
+    FPictureList: TDrawPictureCollection;
+    procedure SetSkinPictureList(const Value: TDrawPictureCollection);
   public
     FDesigner:IDesigner;
     FComponent:TComponent;
-    property PictureList: TSkinPictureList read FPictureList write SetSkinPictureList;
+    property PictureList: TDrawPictureCollection read FPictureList write SetSkinPictureList;
   end;
 
 
@@ -91,7 +91,7 @@ implementation
 
 procedure TfrmSkinPictureListPropertyEditor.FormCreate(Sender: TObject);
 begin
-  FPictureList := TSkinPictureList.Create;
+  FPictureList := TDrawPictureCollection.Create(TDrawPictureItem);
 end;
 
 procedure TfrmSkinPictureListPropertyEditor.FormDestroy(Sender: TObject);
@@ -146,7 +146,7 @@ begin
       //把文件名当做ImageName
       AFileName:=ExtractFileName(OpenDialog.Files[I]);
       AFileName:=Copy(AFileName,1,Length(AFileName)-Length(ExtractFileExt(AFileName)));
-      FPictureList[FPictureList.Count-1].ImageName:=AFileName;
+      FPictureList[FPictureList.Count-1].FDrawPicture.ImageName:=AFileName;
 
 
       ListView1Click(nil);
@@ -163,7 +163,7 @@ begin
   begin
     SelectedIndex:=Self.ListView1.Selected.Index;
     Self.ListView1.DeleteSelected;
-    Self.FPictureList.Delete(SelectedIndex,True);
+    Self.FPictureList.Delete(SelectedIndex);
     Self.ListView1.Invalidate;
   end;
 end;
@@ -176,7 +176,7 @@ begin
   if Self.ListView1.Selected<>nil then
   begin
     SelectedIndex:=Self.ListView1.Selected.Index;
-    ASkinPicture:=Self.FPictureList[SelectedIndex];
+    ASkinPicture:=Self.FPictureList[SelectedIndex].FDrawPicture;
     if ASkinPicture.Graphic <> nil then
     begin
       SaveDialog.Title := '导出图片';
@@ -212,7 +212,7 @@ begin
       Rectangle(ItemDrawRect);
     end;
   end;
-  ASkinPicture:=Self.FPictureList[Item.Index];
+  ASkinPicture:=Self.FPictureList[Item.Index].FDrawPicture;
   with DestDrawRect do
   begin
     if (Right - Left>ASkinPicture.Width) and (Bottom - Top>ASkinPicture.Height) then
@@ -249,11 +249,11 @@ begin
 
   //点击图片
   Self.edtImageIndex.Text:=IntToStr(Self.ListView1.Selected.Index);
-  Self.edtImageName.Text:=FPictureList[Self.ListView1.Selected.Index].ImageName;
-  Self.edtFileName.Text:=FPictureList[Self.ListView1.Selected.Index].FileName;
-  Self.edtResourceName.Text:=FPictureList[Self.ListView1.Selected.Index].ResourceName;
-  Self.edtUrl.Text:=FPictureList[Self.ListView1.Selected.Index].Url;
-  Self.chkIsClipRound.Checked:=FPictureList[Self.ListView1.Selected.Index].IsClipRound;
+  Self.edtImageName.Text:=FPictureList[Self.ListView1.Selected.Index].FDrawPicture.ImageName;
+  Self.edtFileName.Text:=FPictureList[Self.ListView1.Selected.Index].FDrawPicture.FileName;
+  Self.edtResourceName.Text:=FPictureList[Self.ListView1.Selected.Index].FDrawPicture.ResourceName;
+  Self.edtUrl.Text:=FPictureList[Self.ListView1.Selected.Index].FDrawPicture.Url;
+  Self.chkIsClipRound.Checked:=FPictureList[Self.ListView1.Selected.Index].FDrawPicture.IsClipRound;
 
 end;
 
@@ -271,17 +271,17 @@ begin
 
   //点击图片
 //  Self.ListView1.Selected.Index:=StrToInt(Self.edtImageIndex.Text);
-  FPictureList[Self.ListView1.Selected.Index].ImageName:=Self.edtImageName.Text;
-  FPictureList[Self.ListView1.Selected.Index].FileName:=Self.edtFileName.Text;
-  FPictureList[Self.ListView1.Selected.Index].ResourceName:=Self.edtResourceName.Text;
-  FPictureList[Self.ListView1.Selected.Index].Url:=Self.edtUrl.Text;
-  FPictureList[Self.ListView1.Selected.Index].IsClipRound:=Self.chkIsClipRound.Checked;
+  FPictureList[Self.ListView1.Selected.Index].FDrawPicture.ImageName:=Self.edtImageName.Text;
+  FPictureList[Self.ListView1.Selected.Index].FDrawPicture.FileName:=Self.edtFileName.Text;
+  FPictureList[Self.ListView1.Selected.Index].FDrawPicture.ResourceName:=Self.edtResourceName.Text;
+  FPictureList[Self.ListView1.Selected.Index].FDrawPicture.Url:=Self.edtUrl.Text;
+  FPictureList[Self.ListView1.Selected.Index].FDrawPicture.IsClipRound:=Self.chkIsClipRound.Checked;
 
 
 end;
 
 procedure TfrmSkinPictureListPropertyEditor.SetSkinPictureList(
-  const Value: TSkinPictureList);
+  const Value: TDrawPictureCollection);
 var
   ListItem:TListItem;
   I: Integer;

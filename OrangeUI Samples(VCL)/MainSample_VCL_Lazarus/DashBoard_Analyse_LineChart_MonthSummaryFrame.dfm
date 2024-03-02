@@ -18,7 +18,7 @@ object FrameLineChart_MonthSummary: TFrameLineChart_MonthSummary
     Width = 632
     ParentMouseEvent = False
     DirectUIVisible = False
-    AlignWithMagins = False
+    AlignWithMargins = False
     ComponentTypeUseKind = ctukDefault
     MaterialUseKind = mukSelfOwn
     KeepSelfOwnMaterial = True
@@ -85,7 +85,7 @@ object FrameLineChart_MonthSummary: TFrameLineChart_MonthSummary
       Width = 89
       ParentMouseEvent = False
       DirectUIVisible = False
-      AlignWithMagins = False
+      AlignWithMargins = False
       ComponentTypeUseKind = ctukDefault
       MaterialUseKind = mukRef
       KeepSelfOwnMaterial = False

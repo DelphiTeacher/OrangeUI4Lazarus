@@ -14,12 +14,12 @@ interface
 {$I FrameWork.inc}
 
 uses
-  Classes,
   SysUtils,
   Types,
   DateUtils,
   Math,
   StrUtils,
+  Classes,
 
   {$IFDEF VCL}
   Windows,
@@ -4629,11 +4629,14 @@ begin
 //    procedure BeginDrag(Immediate: Boolean; Threshold: Integer = -1);
   FSkinControl.BeginDrag(False);
 
+  {$IFDEF DELPHI}
   // OnStartDrag is called during the above call so FDragImages is
   // assigned now.
   // The below is the only difference with a normal drag image implementation.
   ImageList_SetDragCursorImage(
       (FListItemDragObject as TMyListItemDragObject).GetDragImages.Handle, 0, 0, 0);
+  {$ENDIF}
+
 end;
 
 procedure TCustomListProperties.SyncEditControlBounds;
@@ -7771,11 +7774,7 @@ begin
 //                          Ceil(Self.FCustomListProperties.CalcItemHeight(AItem))
 //                          );
 
-      AItemDrawRect:=Rect(0,
-                          0,
-                          Ceil(AItemDrawRectF.Width),
-                          Ceil(AItemDrawRectF.Height)
-                          );
+      AItemDrawRect:=Classes.Rect(0,0,Ceil(AItemDrawRectF.Width),Ceil(AItemDrawRectF.Height));
       //设置尺寸,因为有些控件需要拉抻
       AItemDesignerPanel.Height:=ControlSize(RectHeight(AItemDrawRect));
       AItemDesignerPanel.Width:=ControlSize(RectWidth(AItemDrawRect));
@@ -8405,7 +8404,11 @@ end;
 constructor TMyListItemDragObject.Create(AListControl: TSkinCustomList;
   AListItem: TBaseSkinItem);
 begin
-  Inherited Create;
+  {$IFDEF FPC}
+  Inherited Create(AListControl);
+  {$ELSE}
+  Inherited Create();
+  {$ENDIF}
   FListControl:=AListControl;
   FItem:=AListItem;
 
@@ -8469,7 +8472,9 @@ begin
       FreeAndNil(ADrawCanvas);
 
       FDragImages := TDragImageList.Create(nil);
+      {$IFDEF DELPHI}
       FDragImages.ColorDepth:=TColorDepth.cd32Bit;//如果是32位的话，黑色会变成透明的了
+      {$ENDIF}
       FDragImages.Width := Bmp.Width;
       FDragImages.Height := Bmp.Height;
       Pt := Mouse.CursorPos;

@@ -21,7 +21,11 @@ uses
   ListItemStyle_TwoIconButton,
 
   //公共素材模块
+  {$IFDEF FPC}
   EasyServiceCommonMaterialDataMoudle_VCL_Lazarus,
+  {$ELSE}
+  EasyServiceCommonMaterialDataMoudle_VCL,
+  {$ENDIF}
 
   uSkinWindowsControl, uSkinScrollControlType, uSkinCustomListType,
   uSkinVirtualGridType, uSkinItemGridType, uSkinPanelType, StdCtrls,
