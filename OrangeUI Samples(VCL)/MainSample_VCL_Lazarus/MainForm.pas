@@ -45,7 +45,7 @@ uses
   //uUrlPicture,
   //uIdHttpControl,
 
-
+  HomeFrame,
 
   //数据看板
   DashBoard_AnalyseFrame,
@@ -242,7 +242,7 @@ begin
   ///     Whetehr use default font
   ///   </para>
   /// </summary>
-  GlobalIsUseDefaultFontFamily:=True;
+//  GlobalIsUseDefaultFontFamily:=True;
 
   /// <summary>
   ///   <para>
@@ -253,7 +253,7 @@ begin
   ///   </para>
   /// </summary>
   //GlobalDefaultFontFamily:='微软雅黑';//中文会乱码？
-  GlobalDefaultFontFamily:='Tahoma';
+//  GlobalDefaultFontFamily:='Tahoma';
 
 
 
@@ -362,6 +362,12 @@ begin
 
   FreeAndNil(FCurrentFrame);
 
+
+  //分析
+  if (AItem.Name='home') then
+  begin
+    FCurrentFrame:=TFrameHome.Create(Self);
+  end;
 
   //数据看板
 
@@ -478,7 +484,9 @@ begin
   end;
 
   Self.FCurrentFrame.Parent:=Self.sbClient;
+//  Self.FCurrentFrame.Parent:=Self;
   Self.FCurrentFrame.Align:=alTop;
+//  Self.FCurrentFrame.Align:=alClient;
 
   if FCurrentFrame.Height<Self.sbClient.Height then
   begin
@@ -572,8 +580,14 @@ procedure TfrmMain.Load;
 begin
 //  Self.FCustomerInfoFrame.Load;
 
-  Self.lbSubMenu.Prop.Items.FindItemByName('dashboard_analyse').Selected:=True;
-  Self.lbSubMenuClickItem(Self.lbSubMenu.Prop.Items.FindItemByName('dashboard_analyse'));
+//  Self.lbSubMenu.Prop.Items.FindItemByName('dashboard_analyse').Selected:=True;
+//  Self.lbSubMenuClickItem(Self.lbSubMenu.Prop.Items.FindItemByName('dashboard_analyse'));
+
+  if Self.lbSubMenu.Prop.Items.FindItemByName('home')<>nil then
+  begin
+    Self.lbSubMenu.Prop.Items.FindItemByName('home').Selected:=True;
+    Self.lbSubMenuClickItem(Self.lbSubMenu.Prop.Items.FindItemByName('home'));
+  end;
 
 
 //  ATestChartFrame:=TFrameTestChart.Create(Self);

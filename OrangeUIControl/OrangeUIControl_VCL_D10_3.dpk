@@ -133,13 +133,14 @@ contains
   uNativeSkinPictureEngine in 'Source\VCL\NativeCanvas\uNativeSkinPictureEngine.pas',
   uSkinWindowsControl in 'Source\VCL\uSkinWindowsControl.pas',
   uskinsuperobject in '..\OrangeProjectCommon\SkinSuperObject\uskinsuperobject.pas',
-  uGDIPlusDrawCanvas in 'Source\VCL\GDIPlusCanvas\uGDIPlusDrawCanvas.pas',
-  uGDIPlusSkinPictureEngine in 'Source\VCL\GDIPlusCanvas\uGDIPlusSkinPictureEngine.pas',
-  uSkinGDIPlus in 'Source\VCL\GDIPlusCanvas\GDIPlus\uSkinGDIPlus.pas',
   uComponentTypeNameEditor in '..\OrangeUIDesign\Source\uComponentTypeNameEditor.pas',
   uDrawPictureEditor in '..\OrangeUIDesign\Source\uDrawPictureEditor.pas',
   VCL_SkinPictureListPropertyEditorForm in '..\OrangeUIDesign\Source\VCL_SkinPictureListPropertyEditorForm.pas' {frmSkinPictureListPropertyEditor},
   VCL_DrawPicturePropertyEditorForm in '..\OrangeUIDesign\Source\VCL_DrawPicturePropertyEditorForm.pas' {frmDrawPicturePropertyEditor},
-  uCollectionEditor in '..\OrangeUIDesign\Source\uCollectionEditor.pas';
+  uCollectionEditor in '..\OrangeUIDesign\Source\uCollectionEditor.pas',
+  uGDIPlusDrawCanvas in 'Source\VCL\GDIPlusCanvas\uGDIPlusDrawCanvas.pas',
+  uGDIPlusSkinPictureEngine in 'Source\VCL\GDIPlusCanvas\uGDIPlusSkinPictureEngine.pas',
+  uSkinGDIPlus in 'Source\VCL\GDIPlusCanvas\GDIPlus\uSkinGDIPlus.pas',
+  uVCLSVGSupport in '..\OrangeProjectCommon\uVCLSVGSupport.pas';
 
 end.

@@ -214,6 +214,12 @@
             <Form>frmMain</Form>
         </DCCReference>
         <DCCReference Include="..\..\OrangeProjectCommon\uVCLSVGSupport.pas"/>
+        <DCCReference Include="HomeFrame.pas">
+            <Form>FrameHome</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\..\OrangeProjectCommon\OrangeUIStyles_VCL\ListItemStyle_IconLeft_CaptionDetailRight.pas"/>
         <BuildConfiguration Include="Debug">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

@@ -41,7 +41,9 @@ uses
   ListItemStyle_IconLeft_CaptionLeft in '..\..\OrangeProjectCommon\OrangeUIStyles_VCL\ListItemStyle_IconLeft_CaptionLeft.pas',
   ListItemStyle_CheckBoxIconLeft_CaptionRight in '..\..\OrangeProjectCommon\OrangeUIStyles_VCL\ListItemStyle_CheckBoxIconLeft_CaptionRight.pas',
   MainForm in 'MainForm.pas' {frmMain},
-  uVCLSVGSupport in '..\..\OrangeProjectCommon\uVCLSVGSupport.pas';
+  uVCLSVGSupport in '..\..\OrangeProjectCommon\uVCLSVGSupport.pas',
+  HomeFrame in 'HomeFrame.pas' {FrameHome: TFrame},
+  ListItemStyle_IconLeft_CaptionDetailRight in '..\..\OrangeProjectCommon\OrangeUIStyles_VCL\ListItemStyle_IconLeft_CaptionDetailRight.pas';
 
 {$R *.res}
 var

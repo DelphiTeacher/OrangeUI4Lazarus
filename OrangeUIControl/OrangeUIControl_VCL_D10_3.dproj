@@ -84,6 +84,7 @@
         <DCC_DcpOutput>..\OrangeUIDesign\DCU\VCL\D10_3\$(Platform)\$(Config)</DCC_DcpOutput>
         <DCC_BplOutput>..\OrangeUIDesign\DCU\VCL\D10_3\$(Platform)\$(Config)</DCC_BplOutput>
         <DCC_Define>SKIN_SUPEROBJECT;NEED_SystemHttpControl;$(DCC_Define)</DCC_Define>
+        <DCC_UnitSearchPath>D:\OrangeUI4Lazarus\OrangeProjectCommon\SVGIconImageList\Svg;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Android)'!=''">
         <EnabledSysJars>android-support-v4.dex.jar;cloud-messaging.dex.jar;fmx.dex.jar;google-analytics-v2.dex.jar;google-play-billing.dex.jar;google-play-licensing.dex.jar;google-play-services-ads-7.0.0.dex.jar;google-play-services-analytics-7.0.0.dex.jar;google-play-services-base-7.0.0.dex.jar;google-play-services-identity-7.0.0.dex.jar;google-play-services-maps-7.0.0.dex.jar;google-play-services-panorama-7.0.0.dex.jar;google-play-services-plus-7.0.0.dex.jar;google-play-services-wallet-7.0.0.dex.jar</EnabledSysJars>
@@ -236,9 +237,6 @@
         <DCCReference Include="Source\VCL\NativeCanvas\uNativeSkinPictureEngine.pas"/>
         <DCCReference Include="Source\VCL\uSkinWindowsControl.pas"/>
         <DCCReference Include="..\OrangeProjectCommon\SkinSuperObject\uskinsuperobject.pas"/>
-        <DCCReference Include="Source\VCL\GDIPlusCanvas\uGDIPlusDrawCanvas.pas"/>
-        <DCCReference Include="Source\VCL\GDIPlusCanvas\uGDIPlusSkinPictureEngine.pas"/>
-        <DCCReference Include="Source\VCL\GDIPlusCanvas\GDIPlus\uSkinGDIPlus.pas"/>
         <DCCReference Include="..\OrangeUIDesign\Source\uComponentTypeNameEditor.pas"/>
         <DCCReference Include="..\OrangeUIDesign\Source\uDrawPictureEditor.pas"/>
         <DCCReference Include="..\OrangeUIDesign\Source\VCL_SkinPictureListPropertyEditorForm.pas">
@@ -250,6 +248,10 @@
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="..\OrangeUIDesign\Source\uCollectionEditor.pas"/>
+        <DCCReference Include="Source\VCL\GDIPlusCanvas\uGDIPlusDrawCanvas.pas"/>
+        <DCCReference Include="Source\VCL\GDIPlusCanvas\uGDIPlusSkinPictureEngine.pas"/>
+        <DCCReference Include="Source\VCL\GDIPlusCanvas\GDIPlus\uSkinGDIPlus.pas"/>
+        <DCCReference Include="..\OrangeProjectCommon\uVCLSVGSupport.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

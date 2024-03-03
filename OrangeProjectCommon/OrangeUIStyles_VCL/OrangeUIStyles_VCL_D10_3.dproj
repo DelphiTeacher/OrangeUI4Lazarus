@@ -74,7 +74,7 @@
         <DCC_K>false</DCC_K>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Android)'!=''">
-        <DCC_UsePackage>rtl;dbrtl;$(DCC_UsePackage)</DCC_UsePackage>
+        <DCC_UsePackage>rtl;dbrtl;xmlrtl;$(DCC_UsePackage)</DCC_UsePackage>
         <DCC_CBuilderOutput>None</DCC_CBuilderOutput>
         <EnabledSysJars>android-support-v4.dex.jar;cloud-messaging.dex.jar;fmx.dex.jar;google-analytics-v2.dex.jar;google-play-billing.dex.jar;google-play-licensing.dex.jar;google-play-services.dex.jar</EnabledSysJars>
     </PropertyGroup>
@@ -84,25 +84,25 @@
         <Base_Android>true</Base_Android>
         <CfgParent>Base</CfgParent>
         <Base>true</Base>
-        <DCC_UsePackage>rtl;dbrtl;$(DCC_UsePackage);$(DCC_UsePackage)</DCC_UsePackage>
+        <DCC_UsePackage>rtl;dbrtl;$(DCC_UsePackage);xmlrtl;$(DCC_UsePackage)</DCC_UsePackage>
         <DCC_CBuilderOutput>None</DCC_CBuilderOutput>
         <EnabledSysJars>android-support-v4.dex.jar;cloud-messaging.dex.jar;fmx.dex.jar;google-analytics-v2.dex.jar;google-play-billing.dex.jar;google-play-licensing.dex.jar;google-play-services.dex.jar</EnabledSysJars>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_iOSDevice32)'!=''">
-        <DCC_UsePackage>rtl;dbrtl;$(DCC_UsePackage)</DCC_UsePackage>
+        <DCC_UsePackage>rtl;dbrtl;xmlrtl;$(DCC_UsePackage)</DCC_UsePackage>
         <DCC_CBuilderOutput>None</DCC_CBuilderOutput>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_iOSDevice64)'!=''">
-        <DCC_UsePackage>rtl;dbrtl;$(DCC_UsePackage)</DCC_UsePackage>
+        <DCC_UsePackage>rtl;dbrtl;xmlrtl;$(DCC_UsePackage)</DCC_UsePackage>
         <DCC_CBuilderOutput>None</DCC_CBuilderOutput>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_iOSSimulator)'!=''">
-        <DCC_UsePackage>rtl;dbrtl;$(DCC_UsePackage)</DCC_UsePackage>
+        <DCC_UsePackage>rtl;dbrtl;xmlrtl;$(DCC_UsePackage)</DCC_UsePackage>
         <DCC_CBuilderOutput>None</DCC_CBuilderOutput>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
         <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
-        <DCC_UsePackage>rtl;vcl;vclimg;dbrtl;OrangeUIDesign_VCL_D10_1;OrangeUIDesign_VCL_D10_2;OrangeUIDesign_VCL_D10_3;$(DCC_UsePackage)</DCC_UsePackage>
+        <DCC_UsePackage>rtl;vcl;vclimg;dbrtl;OrangeUIDesign_VCL_D10_1;OrangeUIDesign_VCL_D10_2;OrangeUIDesign_VCL_D10_3;xmlrtl;OrangeUIControl_VCL_D10_3;$(DCC_UsePackage)</DCC_UsePackage>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
         <VerInfo_Locale>1033</VerInfo_Locale>
@@ -133,7 +133,8 @@
         <DCCReference Include="vcl.dcp"/>
         <DCCReference Include="vclimg.dcp"/>
         <DCCReference Include="dbrtl.dcp"/>
-        <DCCReference Include="OrangeUIDesign_VCL_D10_3.dcp"/>
+        <DCCReference Include="xmlrtl.dcp"/>
+        <DCCReference Include="OrangeUIControl_VCL_D10_3.dcp"/>
         <DCCReference Include="ListItemStyle_IconTop_CaptionBottom.pas">
             <Form>FrameListItemStyle_IconTop_CaptionBottom</Form>
             <FormType>dfm</FormType>
@@ -165,9 +166,6 @@
         <DCCReference Include="ListItemStyle_ClassifyHasSelectedEffect.pas"/>
         <DCCReference Include="ListItemStyle_HospitalDoctorForRegisterNumber.pas"/>
         <DCCReference Include="ListItemStyle_VertSelectedSignLeft_CaptionRight.pas">
-            <FormType>dfm</FormType>
-        </DCCReference>
-        <DCCReference Include="ListItemStyle_Edit.pas">
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="ListItemStyle_TwoButton.pas"/>
@@ -251,6 +249,9 @@
         <DCCReference Include="ListItemStyle_MessageHintCard2.pas"/>
         <DCCReference Include="ListItemStyle_CaptionSelectedMark.pas"/>
         <DCCReference Include="ListItemStyle_VertSelectedSignIconLeft_CaptionRight.pas"/>
+        <DCCReference Include="ListItemStyle_IconLeft_CaptionDetailRight.pas">
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

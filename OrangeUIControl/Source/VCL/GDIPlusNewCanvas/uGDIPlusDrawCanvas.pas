@@ -560,12 +560,12 @@ begin
   //创建字体
   if Not GlobalIsUseDefaultFontFamily or (GlobalDefaultFontFamily='') then
   begin
-    {$IFDEF FPC}
+//    {$IFDEF FPC}
     if AFontFamily='default' then
     begin
       AFontFamily:='Tahoma';
     end;
-    {$ENDIF}
+//    {$ENDIF}
 
     AGPFontFamily:=TGPFontFamily.Create(AFontFamily,nil);
   end

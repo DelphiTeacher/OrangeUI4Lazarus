@@ -1519,7 +1519,7 @@ var
   ACalcDrawRect:TRectF;
   AImageSrcRect:TRectF;
   AImageDestDrawRect:TRectF;
-  ACurrentPicture:TSkinPicture;
+  ACurrentSkinPicture:TSkinPicture;
   APictureWidth:Integer;
   APictureHeight:Integer;
   APictureDrawWidth:Integer;
@@ -1541,16 +1541,16 @@ begin
   //Exit;
 
   //这里会报错在Lazarus下面
-  ACurrentPicture:=ADrawPicture.CurrentPicture;
+  ACurrentSkinPicture:=ADrawPicture.CurrentPicture;
 
 //  if ADrawPicture.CurrentPictureIsEmpty then Exit;
-  if (ACurrentPicture=nil) or (ACurrentPicture.IsEmpty) then
+  if (ACurrentSkinPicture=nil) or (ACurrentSkinPicture.IsEmpty) then
   begin
     Exit;
   end;
 
 
-  if (ACurrentPicture.FSVGObject<>nil) then
+  if (ACurrentSkinPicture.FSVGObject<>nil) then
   begin
       APictureDrawWidth:=Ceil(ACalcDrawRect.Width);
       APictureDrawHeight:=Ceil(ACalcDrawRect.Height);
@@ -1584,8 +1584,8 @@ begin
       APictureDrawWidth:=ADrawPicture.CurrentPictureDrawWidth;
       APictureDrawHeight:=ADrawPicture.CurrentPictureDrawHeight;
 
-      APictureWidth:=ACurrentPicture.Width;
-      APictureHeight:=ACurrentPicture.Height;
+      APictureWidth:=ACurrentSkinPicture.Width;
+      APictureHeight:=ACurrentSkinPicture.Height;
 
   end;
 
@@ -1625,18 +1625,43 @@ begin
 
 
 
-  if ACurrentPicture.FSVGObject<>nil then
+  if ACurrentSkinPicture.FSVGObject<>nil then
   begin
     if Assigned(GlobalOnDrawSVGImage) then
     begin
-      GlobalOnDrawSVGImage(Self,ACurrentPicture,ADrawPictureParam,ACurrentPicture.FSVGObject,ADrawPictureParam.CalcDrawRect(ADrawRect),True,AImageSrcRect,AImageDestDrawRect,ADrawPicture);
+      if ADrawPicture.StaticRefDrawPicture<>nil then
+      begin
+        //把Item.Icon.FixedColor传给它，而不是Image.Prop.Picture
+        GlobalOnDrawSVGImage(Self,
+                            ACurrentSkinPicture,
+                            ADrawPictureParam,
+                            ACurrentSkinPicture.FSVGObject,
+                            ADrawPictureParam.CalcDrawRect(ADrawRect),
+                            True,
+                            AImageSrcRect,
+                            AImageDestDrawRect,
+                            ADrawPicture.StaticRefDrawPicture);
+      end
+      else
+      begin
+        GlobalOnDrawSVGImage(Self,
+                            ACurrentSkinPicture,
+                            ADrawPictureParam,
+                            ACurrentSkinPicture.FSVGObject,
+                            ADrawPictureParam.CalcDrawRect(ADrawRect),
+                            True,
+                            AImageSrcRect,
+                            AImageDestDrawRect,
+                            ADrawPicture);
+      end;
+      
     end;
     Exit;
   end;
 
 
   DrawSkinPicture(ADrawPictureParam,
-                  ACurrentPicture,//ADrawPicture.CurrentPicture,
+                  ACurrentSkinPicture,//ADrawPicture.CurrentPicture,
                   ADrawRect,
                   True,
                   AImageSrcRect,

@@ -12,7 +12,7 @@ uses
 
   Graphics, Controls, Forms, Dialogs, uSkinLabelType,
   uSkinImageType, uSkinWindowsControl, uSkinItemDesignerPanelType,
-  ImgList, uDrawPicture, uSkinImageList, Vcl.StdCtrls, uSkinWindowsEdit,
+  ImgList, uDrawPicture, uSkinImageList, Vcl.StdCtrls,
   uSkinButtonType;
 
 type

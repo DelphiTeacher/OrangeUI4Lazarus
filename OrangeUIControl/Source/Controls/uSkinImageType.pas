@@ -1052,7 +1052,10 @@ begin
       end
       else if AFieldValue is TBaseDrawPicture then
       begin
-        Self.Prop.Picture.StaticRefPicture:=TDrawPicture(AFieldValue).CurrentPicture;
+//        Self.Prop.Picture.StaticRefPicture:=TDrawPicture(AFieldValue).CurrentPicture;
+        //要把DrawPicture.FixedColor传给SVGSupport
+        Self.Prop.Picture.StaticPictureDrawType:=pdtRefDrawPicture;
+        Self.Prop.Picture.StaticRefDrawPicture:=TDrawPicture(AFieldValue);
       end
       else
       begin

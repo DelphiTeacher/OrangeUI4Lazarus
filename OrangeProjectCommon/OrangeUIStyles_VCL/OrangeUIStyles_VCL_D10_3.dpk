@@ -32,7 +32,8 @@ requires
   vcl,
   vclimg,
   dbrtl,
-  OrangeUIDesign_VCL_D10_3;
+  xmlrtl,
+  OrangeUIControl_VCL_D10_3;
 
 contains
   ListItemStyle_IconTop_CaptionBottom in 'ListItemStyle_IconTop_CaptionBottom.pas' {FrameListItemStyle_IconTop_CaptionBottom: TFrame},
@@ -46,7 +47,6 @@ contains
   ListItemStyle_ClassifyHasSelectedEffect in 'ListItemStyle_ClassifyHasSelectedEffect.pas',
   ListItemStyle_HospitalDoctorForRegisterNumber in 'ListItemStyle_HospitalDoctorForRegisterNumber.pas',
   ListItemStyle_VertSelectedSignLeft_CaptionRight in 'ListItemStyle_VertSelectedSignLeft_CaptionRight.pas',
-  ListItemStyle_Edit in 'ListItemStyle_Edit.pas',
   ListItemStyle_TwoButton in 'ListItemStyle_TwoButton.pas',
   EasyServiceCommonMaterialDataMoudle_VCL in '..\EasyServiceCommonMaterialDataMoudle_VCL.pas' {dmEasyServiceCommonMaterial: TDataModule},
   ListItemStyle_CustomerTag in 'ListItemStyle_CustomerTag.pas',
@@ -81,6 +81,7 @@ contains
   ListItemStyle_MessageHintCard in 'ListItemStyle_MessageHintCard.pas',
   ListItemStyle_MessageHintCard2 in 'ListItemStyle_MessageHintCard2.pas',
   ListItemStyle_CaptionSelectedMark in 'ListItemStyle_CaptionSelectedMark.pas',
-  ListItemStyle_VertSelectedSignIconLeft_CaptionRight in 'ListItemStyle_VertSelectedSignIconLeft_CaptionRight.pas';
+  ListItemStyle_VertSelectedSignIconLeft_CaptionRight in 'ListItemStyle_VertSelectedSignIconLeft_CaptionRight.pas',
+  ListItemStyle_IconLeft_CaptionDetailRight in 'ListItemStyle_IconLeft_CaptionDetailRight.pas';
 
 end.

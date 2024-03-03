@@ -23,7 +23,6 @@ object FrameListItemStyle_TwoButton: TFrameListItemStyle_TwoButton
     SelfOwnMaterial.BackColor.DrawRectSetting.Right = 5.000000000000000000
     SelfOwnMaterial.BackColor.DrawRectSetting.Bottom = 5.000000000000000000
     SelfOwnMaterial.BackColor.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.BackColor.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
     SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
     SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
@@ -64,6 +63,7 @@ object FrameListItemStyle_TwoButton: TFrameListItemStyle_TwoButton
     Properties.PreviewItem.IsParent = False
     Properties.PreviewItem.Expanded = True
     Properties.PreviewItem.Childs.Data = {140000000000000400000000005C000000}
+    Properties.PreviewItem.Childs = <>
     Properties.PreviewItem.Accessory = satNone
     Properties.ItemStringsBindingControlCollection = <>
     object btnButton1: TSkinWinButton
@@ -82,6 +82,7 @@ object FrameListItemStyle_TwoButton: TFrameListItemStyle_TwoButton
       ComponentTypeUseKind = ctukDefault
       MaterialUseKind = mukRef
       KeepSelfOwnMaterial = True
+      MaterialName = 'btnThemeColorIconLeftCaptionRight'
       SelfOwnMaterial.BackColor.Color = clWhite
       SelfOwnMaterial.BackColor.IsFill = True
       SelfOwnMaterial.BackColor.FillColor.Alpha = 255
@@ -219,6 +220,7 @@ object FrameListItemStyle_TwoButton: TFrameListItemStyle_TwoButton
       SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
       SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
       RefMaterial = dmEasyServiceCommonMaterial.btnThemeColorIconLeftCaptionRight
+      StaticRefMaterial = dmEasyServiceCommonMaterial.btnThemeColorIconLeftCaptionRight
       HitTest = True
       MouseDownFocus = False
       Align = alLeft
@@ -253,6 +255,7 @@ object FrameListItemStyle_TwoButton: TFrameListItemStyle_TwoButton
       ComponentTypeUseKind = ctukDefault
       MaterialUseKind = mukRef
       KeepSelfOwnMaterial = True
+      MaterialName = 'btnWhiteColorBorderMaterial'
       SelfOwnMaterial.BackColor.Color = clWhite
       SelfOwnMaterial.BackColor.IsFill = True
       SelfOwnMaterial.BackColor.FillColor.Alpha = 255
@@ -390,6 +393,7 @@ object FrameListItemStyle_TwoButton: TFrameListItemStyle_TwoButton
       SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
       SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
       RefMaterial = dmEasyServiceCommonMaterial.btnWhiteColorBorderMaterial
+      StaticRefMaterial = dmEasyServiceCommonMaterial.btnWhiteColorBorderMaterial
       HitTest = True
       MouseDownFocus = False
       Align = alLeft
