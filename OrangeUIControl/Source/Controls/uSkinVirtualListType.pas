@@ -695,7 +695,7 @@ type
 
   {$I ComponentPlatformsAttribute.inc}
   TSkinListItemMaterial=class(TBaseSkinListItemMaterial)
-  private
+  protected
     //标题绘制参数
     FDrawItemCaptionParam:TDrawTextParam;
     //图标绘制参数
@@ -1938,7 +1938,7 @@ begin
   begin
     Self.FSkinVirtualListIntf.OnAdvancedDrawItem(Self,
                   ACanvas,
-                  TItemDesignerPanel(TSkinItem(AItem).FDrawItemDesignerPanel),
+                  TSkinItemDesignerPanel(TSkinItem(AItem).FDrawItemDesignerPanel),
                   TSkinItem(AItem),
                   RectF2Rect(AItemDrawRect));
   end;
@@ -2067,7 +2067,7 @@ begin
                   //手动绑定值
                   Self.FSkinVirtualListIntf.OnPrepareDrawItem(Self,
                           ACanvas,
-                          TItemDesignerPanel(AItemDesignerPanel),
+                          TSkinItemDesignerPanel(AItemDesignerPanel),
                           TSkinItem(AItem),
                           RectF2Rect(AItemDrawRect));
                 end;
@@ -3486,7 +3486,7 @@ begin
                 Self.FSkinCustomListIntf.OnClickItemDesignerPanelChild(
                     Self.FSkinControl,
                     ASkinMouseDownItem,
-                    TItemDesignerPanel(AMouseOverItemDrawItemDesignerPanel),
+                    TSkinItemDesignerPanel(AMouseOverItemDrawItemDesignerPanel),
                     AMouseOverItemDrawItemDesignerPanel.SkinControlType.CurrentHitTestChildControl
                     );
               end;

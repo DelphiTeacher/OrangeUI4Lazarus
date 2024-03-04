@@ -142,6 +142,7 @@ type
   public
     //根据绑定的FieldName获取Item的值,然后赋给绑定的控件
     function GetValueByBindItemField(AFieldName:String):Variant;override;
+    procedure SetValueByBindItemField(AFieldName:String;AValue:Variant;APageDataDir:String='';AImageServerUrl:String='');override;
   public
     property Json:ISuperObject read FJson write FJson;
   end;
@@ -155,6 +156,7 @@ type
   public
     //根据绑定的FieldName获取Item的值,然后赋给绑定的控件
     function GetValueByBindItemField(AFieldName:String):Variant;override;
+    procedure SetValueByBindItemField(AFieldName:String;AValue:Variant;APageDataDir:String='';AImageServerUrl:String='');override;
   public
     property Json:ISuperObject read FJson write FJson;
   end;
@@ -165,6 +167,7 @@ type
   public
     //根据绑定的FieldName获取Item的值,然后赋给绑定的控件
     function GetValueByBindItemField(AFieldName:String):Variant;override;
+    procedure SetValueByBindItemField(AFieldName:String;AValue:Variant;APageDataDir:String='';AImageServerUrl:String='');override;
   public
     property Json:ISuperObject read FJson write FJson;
   end;
@@ -497,6 +500,21 @@ end;
 
 
 
+procedure TSkinJsonTreeViewItem.SetValueByBindItemField(AFieldName: String;
+  AValue: Variant; APageDataDir, AImageServerUrl: String);
+begin
+  inherited;
+  if (FJson<>nil) and Json.Contains(AFieldName) then
+  begin
+    FJson.V[AFieldName]:=AValue;
+  end
+  else
+  begin
+    inherited SetValueByBindItemField(AFieldName,AValue,APageDataDir,AImageServerUrl);
+  end;
+
+end;
+
 { TSkinJsonVirtualGridRow }
 
 function TSkinJsonVirtualGridRow.GetValueByBindItemField(
@@ -518,6 +536,21 @@ begin
   else
   begin
     Result:=inherited GetValueByBindItemField(AFieldName);
+  end;
+
+end;
+
+procedure TSkinJsonVirtualGridRow.SetValueByBindItemField(AFieldName: String;
+  AValue: Variant; APageDataDir, AImageServerUrl: String);
+begin
+  inherited;
+  if (FJson<>nil) and Json.Contains(AFieldName) then
+  begin
+    FJson.V[AFieldName]:=AValue;
+  end
+  else
+  begin
+    inherited SetValueByBindItemField(AFieldName,AValue,APageDataDir,AImageServerUrl);
   end;
 
 end;
@@ -547,6 +580,21 @@ begin
 //  begin
 //    Result:=inherited GetValueByBindItemField(AFieldName);
 //  end;
+
+end;
+
+procedure TSkinJsonItemGridRow.SetValueByBindItemField(AFieldName: String;
+  AValue: Variant; APageDataDir, AImageServerUrl: String);
+begin
+  inherited;
+  if (FJson<>nil) and Json.Contains(AFieldName) then
+  begin
+    FJson.V[AFieldName]:=AValue;
+  end
+  else
+  begin
+    inherited SetValueByBindItemField(AFieldName,AValue,APageDataDir,AImageServerUrl);
+  end;
 
 end;
 

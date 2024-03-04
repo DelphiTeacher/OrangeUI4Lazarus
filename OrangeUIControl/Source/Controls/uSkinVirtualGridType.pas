@@ -29,6 +29,7 @@ uses
   Controls,
   StdCtrls,
   Dialogs,
+  Forms,
   //{$IFDEF MSWINDOWS}
   //uSkinWindowsEdit,
   //{$ENDIF}
@@ -175,11 +176,17 @@ type
 
 //  TVirtualGridPrepareDrawCellEvent=procedure(Sender:TObject;
 //                                      ACanvas:TDrawCanvas;
-//                                      AItemDesignerPanel:TItemDesignerPanel;
+//                                      AItemDesignerPanel:TSkinItemDesignerPanel;
 //                                      AItem:TSkinItem;
 //                                      ACol:TSkinVirtualGridColumn;
 //                                      AItemDrawRect:TRect;
 //                                      ACellDrawRect:TRect) of object;
+  //点击设计面板上面子控件的事件
+  TVirtualGridClickCellItemDesignerPanelChildEvent=procedure(Sender:TObject;
+                                        ARow:TBaseSkinItem;//这里应该用TBaseSkinItem
+                                        AColumn:TSkinVirtualGridColumn;
+                                        AItemDesignerPanel:TSkinItemDesignerPanel;
+                                        AChild:TChildControl) of object;
 
 
 
@@ -197,6 +204,7 @@ type
     function GetOnGetFooterCellDisplayText:TGetGridFooterCellDisplayTextEvent;
     function GetOnCustomPaintCellBegin:TGridCustomPaintCellBeginEvent;
     function GetOnCustomPaintCellEnd:TGridCustomPaintCellBeginEvent;
+    function GetOnClickCellItemDesignerPanelChild:TVirtualGridClickCellItemDesignerPanelChildEvent;
 
 
     function GetColumnHeader:TSkinColumnHeader;
@@ -213,6 +221,7 @@ type
     //准备绘制单元格
     property OnCustomPaintCellBegin:TGridCustomPaintCellBeginEvent read GetOnCustomPaintCellBegin;
     property OnCustomPaintCellEnd:TGridCustomPaintCellBeginEvent read GetOnCustomPaintCellEnd;
+    property OnClickCellItemDesignerPanelChild:TVirtualGridClickCellItemDesignerPanelChildEvent read GetOnClickCellItemDesignerPanelChild;
 
 
 
@@ -314,6 +323,7 @@ type
   TSkinVirtualGridColumn=class(TRealSkinItem)
   private
     procedure SetControlType(const Value: String);
+    function GetMaterial: TSkinVirtualGridColumnMaterial;
 //    //IInterface接口
 //    FOwnerInterface: IInterface;
 ////    function GetContentTypes: TSkinGridColumnContentTypes;
@@ -401,7 +411,7 @@ type
     //引用素材
 //    FRefMaterial: TSkinVirtualGridColumnMaterial;
 //    FMaterialUseKind: TMaterialUseKind;
-    FColumnMaterial: TSkinVirtualGridColumnMaterial;
+//    FColumnMaterial: TSkinVirtualGridColumnMaterial;
     FCurrentUseSkinMaterial: TSkinVirtualGridColumnMaterial;
     FIsUseDefaultGridColumnMaterial:Boolean;
     FIsUseDefaultGridColumnCaptionParam:Boolean;
@@ -466,13 +476,14 @@ type
     FSkinControlIntf:ISkinControl;
     FItemDesignerPanel:TSkinItemDesignerPanel;
 //    FItemBindingControl:TItemBindingControlItem;
+    function GetDrawItemDesignerPanel(ASkinItem:TBaseSkinItem):TSkinItemDesignerPanel;
   public
 
     //所属列表
     function Owner:TSkinVirtualGridColumns;
     //当前使用的素材
 //    property CurrentUseMaterial:TSkinVirtualGridColumnMaterial read GetCurrentUseMaterial;
-    property Material:TSkinVirtualGridColumnMaterial read FColumnMaterial;
+    property Material:TSkinVirtualGridColumnMaterial read GetMaterial;
   published
     //控件类型
     property ControlType:String read FControlType write SetControlType;
@@ -522,7 +533,7 @@ type
 //    //素材使用类型
 //    property MaterialUseKind:TMaterialUseKind read FMaterialUseKind write SetMaterialUseKind;
     //自带素材
-    property SelfOwnMaterial:TSkinVirtualGridColumnMaterial read FColumnMaterial write SetSelfOwnMaterial;
+    property SelfOwnMaterial:TSkinVirtualGridColumnMaterial read GetMaterial write SetSelfOwnMaterial;
 
     //准备绘制单元格
     property OnCustomPaintCellBegin:TGridCustomPaintCellBeginEvent read FOnCustomPaintCellBegin;
@@ -659,6 +670,7 @@ type
     /// </summary>
     TColumnHeaderProperties=class(TVirtualListProperties)
     protected
+//      FSkinVirutalGridIntf:ISkinVirtualGrid;
       FSkinColumnHeaderIntf:ISkinColumnHeader;
       function GetItems: TSkinVirtualGridColumns;
       procedure SetItems(const Value: TSkinVirtualGridColumns);
@@ -843,6 +855,8 @@ type
       function CustomBind(ASkinControl:TControl):Boolean;override;
       //解除绑定
       procedure CustomUnBind;override;
+      //决定列表项所使用的素材
+      function DecideItemMaterial(AItem:TBaseSkinItem;ASkinMaterial:TSkinCustomListDefaultMaterial): TBaseSkinListItemMaterial;override;
     protected
       function GetSkinMaterial:TSkinColumnHeaderDefaultMaterial;
     end;
@@ -1268,12 +1282,12 @@ type
 
   //表格列的绘制参数
   {$I ComponentPlatformsAttribute.inc}
-  TSkinVirtualGridColumnMaterial=class(TSkinControlMaterial)
+  //TSkinListItemMaterial
+//  TSkinVirtualGridColumnMaterial=class(TSkinControlMaterial)
+  TSkinVirtualGridColumnMaterial=class(TSkinListItemMaterial)
   private
     //表格列标题绘制参数
-    FDrawCaptionParam:TDrawTextParam;
-
-
+//    FDrawCaptionParam:TDrawTextParam;
 
 
     //单元格文本绘制参数
@@ -1284,17 +1298,32 @@ type
     FDrawCellPictureParam: TDrawPictureParam;
 
     FDrawCellText1Param:TDrawTextParam;
+    FIsTransparent: Boolean;
     procedure SetDrawCellText1Param(const Value: TDrawTextParam);
     procedure SetDrawCaptionParam(const Value: TDrawTextParam);
     procedure SetDrawCellTextParam(const Value: TDrawTextParam);
     procedure SetDrawFooterCellTextParam(const Value: TDrawTextParam);
     procedure SetDrawCellPictureParam(const Value: TDrawPictureParam);
+    function GetDrawCaptionParam: TDrawTextParam;
+    function GetBackColor: TDrawRectParam;
+    procedure SetBackColor(const Value: TDrawRectParam);
   public
     constructor Create(AOwner:TComponent);override;
     destructor Destroy;override;
   published
+    /// <summary>
+    ///   <para>
+    ///     是否透明
+    ///   </para>
+    ///   <para>
+    ///     Whether transparent
+    ///   </para>
+    /// </summary>
+    property IsTransparent:Boolean read FIsTransparent write FIsTransparent;
     //表格列标题绘制参数
-    property DrawCaptionParam:TDrawTextParam read FDrawCaptionParam write SetDrawCaptionParam;
+    property BackColor:TDrawRectParam read GetBackColor write SetBackColor;
+    //表格列标题绘制参数
+    property DrawCaptionParam:TDrawTextParam read GetDrawCaptionParam write SetDrawCaptionParam;
     //单元格文本绘制参数
     property DrawCellTextParam:TDrawTextParam read FDrawCellTextParam write SetDrawCellTextParam;
     //单元格图片绘制参数
@@ -1885,6 +1914,7 @@ type
     FOnGetFooterCellDisplayText:TGetGridFooterCellDisplayTextEvent;
     FOnCustomPaintCellBegin:TGridCustomPaintCellBeginEvent;
     FOnCustomPaintCellEnd:TGridCustomPaintCellBeginEvent;
+    FOnClickCellItemDesignerPanelChild:TVirtualGridClickCellItemDesignerPanelChildEvent;
 
     function GetOnClickCell:TGridClickCellEvent;
     function GetOnGetCellDisplayText: TGetGridCellDisplayTextEvent;
@@ -1892,6 +1922,7 @@ type
     function GetOnGetFooterCellDisplayText: TGetGridFooterCellDisplayTextEvent;
     function GetOnCustomPaintCellBegin:TGridCustomPaintCellBeginEvent;
     function GetOnCustomPaintCellEnd:TGridCustomPaintCellBeginEvent;
+    function GetOnClickCellItemDesignerPanelChild:TVirtualGridClickCellItemDesignerPanelChildEvent;
 
     function GetVirtualGridProperties:TVirtualGridProperties;
     procedure SetVirtualGridProperties(Value:TVirtualGridProperties);
@@ -1938,6 +1969,7 @@ type
     property OnGetFooterCellDisplayText:TGetGridFooterCellDisplayTextEvent read GetOnGetFooterCellDisplayText write FOnGetFooterCellDisplayText;
     property OnCustomPaintCellBegin:TGridCustomPaintCellBeginEvent read GetOnCustomPaintCellBegin write FOnCustomPaintCellBegin;
     property OnCustomPaintCellEnd:TGridCustomPaintCellBeginEvent read GetOnCustomPaintCellEnd write FOnCustomPaintCellEnd;
+    property OnClickCellItemDesignerPanelChild:TVirtualGridClickCellItemDesignerPanelChildEvent read GetOnClickCellItemDesignerPanelChild write FOnClickCellItemDesignerPanelChild;
 
 
   end;
@@ -1968,6 +2000,13 @@ begin
   else
   begin
   end;
+//  if Not ASkinControl.GetInterface(IID_ISkinColumnHeader,Self.FSkinColumnHeaderIntf) then
+//  begin
+//    ShowException('This Component Do not Support ISkinColumnHeader Interface');
+//  end
+//  else
+//  begin
+//  end;
 end;
 
 function TColumnHeaderProperties.GetComponentClassify: String;
@@ -2067,6 +2106,28 @@ procedure TSkinColumnHeaderDefaultType.CustomUnBind;
 begin
   Inherited CustomUnBind;
   Self.FSkinColumnHeaderIntf:=nil;
+end;
+
+function TSkinColumnHeaderDefaultType.DecideItemMaterial(AItem: TBaseSkinItem;ASkinMaterial: TSkinCustomListDefaultMaterial): TBaseSkinListItemMaterial;
+var
+  AColumn:TSkinVirtualGridColumn;
+begin
+  if AItem is TSkinVirtualGridColumn then
+  begin
+    AColumn:=TSkinVirtualGridColumn(AItem);
+    if AColumn.FIsUseDefaultGridColumnMaterial then
+    begin
+      //使用表格素材中的DrawColumnMaterial
+      Result:=TSkinVirtualGridDefaultMaterial(TSkinVirtualGrid(Self.FSkinControl.Owner).GetCurrentUseMaterial).FDrawColumnMaterial;
+    end
+    else
+    begin
+      //使用Column自己的FMaterial
+      Result:=AColumn.SelfOwnMaterial;
+    end;
+
+  end;
+
 end;
 
 function TSkinColumnHeaderDefaultType.GetSkinMaterial: TSkinColumnHeaderDefaultMaterial;
@@ -2219,7 +2280,7 @@ begin
             end
             else
             begin
-              ADrawTextParam:=AColumn.FColumnMaterial.FDrawCellTextParam;
+              ADrawTextParam:=AColumn.SelfOwnMaterial.FDrawCellTextParam;
             end;
 
             if AColumn.AutoSize then
@@ -2449,7 +2510,7 @@ end;
 //                //手动绑定值
 //                Self.FSkinVirtualGridIntf.OnPrepareDrawItem(Self,
 //                        ACanvas,
-//                        TItemDesignerPanel(AItemDesignerPanel),
+//                        TSkinItemDesignerPanel(AItemDesignerPanel),
 //                        TSkinItem(AItem),
 //                        RectF2Rect(AItemDrawRect));
 //              end;
@@ -2604,10 +2665,12 @@ begin
       TSkinFMXEdit(Result).KeyboardType:=ACol.KeyboardType;
       TSkinFMXEdit(Result).SkinControlType;
       TSkinFMXEdit(Result).SelfOwnMaterial;
+      //背景不透明
       TSkinFMXEdit(Result).SelfOwnMaterial.IsTransparent:=False;
       TSkinFMXEdit(Result).SelfOwnMaterial.BackColor.IsFill:=True;
       {$ELSE}
       Result:=TEdit.Create(nil);
+      TEdit(Result).BorderStyle:=bsNone;
       {$ENDIF}
 
   end;
@@ -3228,6 +3291,14 @@ begin
   begin
     //重复调用相同的编辑,那么直接退出
     Exit;
+  end;
+
+  //停止编辑上次的列表项
+  if (FEditingItem<>nil) then
+  begin
+    //为啥要DoPropChange?
+    FEditingItem.DoPropChange;
+    StopEditingItem;
   end;
 
 
@@ -3932,7 +4003,7 @@ var
   ACustomListItemPaintOtherData:TVirtualListItemPaintOtherData;
 begin
   //AColumn.FDefaultItemStyleSetting.FCustomListProperties:=Self.FSkinVirtualGridIntf.Prop;
-  AColItemDesignerPanel:=AColumn.FDefaultItemStyleSetting.GetInnerItemDesignerPanel(ARow);
+  AColItemDesignerPanel:=AColumn.GetDrawItemDesignerPanel(ARow);
   if AColItemDesignerPanel=nil then
   begin
     AColItemDesignerPanel:=AColumn.FItemDesignerPanel;
@@ -4317,7 +4388,7 @@ begin
       ADrawColumnMaterial:=ASkinVirtualGridMaterial.FDrawColumnMaterial;
       if Not AColumn.FIsUseDefaultGridColumnMaterial then
       begin
-        ADrawColumnMaterial:=AColumn.FColumnMaterial;
+        ADrawColumnMaterial:=AColumn.SelfOwnMaterial;
       end;
 
       if ADrawColumnMaterial<>nil then
@@ -4548,7 +4619,7 @@ begin
               //自定的绘制参数
               if Not AColumn.FIsUseDefaultGridColumnMaterial then
               begin
-                ADrawColumnMaterial:=AColumn.FColumnMaterial;
+                ADrawColumnMaterial:=AColumn.SelfOwnMaterial;
               end;
             
               CustomPaintCell(ACanvas,
@@ -4666,7 +4737,7 @@ begin
               //自定的绘制参数
               if Not AColumn.FIsUseDefaultGridColumnMaterial then
               begin
-                ADrawColumnMaterial:=AColumn.FColumnMaterial;
+                ADrawColumnMaterial:=AColumn.SelfOwnMaterial;
               end;
 
               CustomPaintCell(ACanvas,
@@ -5116,7 +5187,7 @@ begin
 //              if Not AColumn.FIsUseDefaultGridColumnMaterial then
               if Not AColumn.FIsUseDefaultGridColumnCaptionParam then
               begin
-                ADrawColumnMaterial:=AColumn.FColumnMaterial;
+                ADrawColumnMaterial:=AColumn.SelfOwnMaterial;
               end;
 
 
@@ -5191,7 +5262,7 @@ begin
               //自定的绘制参数
               if Not AColumn.FIsUseDefaultGridColumnMaterial then
               begin
-                ADrawColumnMaterial:=AColumn.FColumnMaterial;
+                ADrawColumnMaterial:=AColumn.SelfOwnMaterial;
               end;
 
               CustomPaintColumn(ACanvas,
@@ -5721,7 +5792,7 @@ begin
     if AMoveOverCol<>nil then
     begin
       ACellDrawRect:=Self.FSkinVirtualGridIntf.Prop.GetCellDrawRect(AMoveOverCol,AMouseOverItem);
-      AMouseOverItemDrawItemDesignerPanel:=AMoveOverCol.FDefaultItemStyleSetting.GetInnerItemDesignerPanel(AMouseOverItem);
+      AMouseOverItemDrawItemDesignerPanel:=AMoveOverCol.GetDrawItemDesignerPanel(AMouseOverItem);
     end;
   end;
 
@@ -5818,7 +5889,7 @@ begin
     if AMoveOverCol<>nil then
     begin
       ACellDrawRect:=Self.FSkinVirtualGridIntf.Prop.GetCellDrawRect(AMoveOverCol,AMouseOverItem);
-      AMouseOverItemDrawItemDesignerPanel:=AMoveOverCol.FDefaultItemStyleSetting.GetInnerItemDesignerPanel(AMouseOverItem);
+      AMouseOverItemDrawItemDesignerPanel:=AMoveOverCol.GetDrawItemDesignerPanel(AMouseOverItem);
     end;
   end;
 
@@ -5886,7 +5957,7 @@ begin
     if AMoveOverCol<>nil then
     begin
       ACellDrawRect:=Self.FSkinVirtualGridIntf.Prop.GetCellDrawRect(AMoveOverCol,AMouseDownItem);
-      AMouseOverItemDrawItemDesignerPanel:=AMoveOverCol.FDefaultItemStyleSetting.GetInnerItemDesignerPanel(AMouseDownItem);
+      AMouseOverItemDrawItemDesignerPanel:=AMoveOverCol.GetDrawItemDesignerPanel(AMouseDownItem);
     end;
   end;
 
@@ -5956,7 +6027,22 @@ begin
                 Self.FSkinCustomListIntf.OnClickItemDesignerPanelChild(
                     Self.FSkinControl,
                     AMouseDownItem,
-                    TItemDesignerPanel(AMouseOverItemDrawItemDesignerPanel),
+                    TSkinItemDesignerPanel(AMouseOverItemDrawItemDesignerPanel),
+                    AMouseOverItemDrawItemDesignerPanel.SkinControlType.CurrentHitTestChildControl
+                    );
+              end;
+
+
+              //可以点击
+              //用于一个设计面板共享给多个ListBox使用的时候,
+              //可以在ListBox中的此事件分别处理对应的操作
+              if Assigned(Self.FSkinVirtualGridIntf.OnClickCellItemDesignerPanelChild) then
+              begin
+                Self.FSkinVirtualGridIntf.OnClickCellItemDesignerPanelChild(
+                    Self.FSkinControl,
+                    AMouseDownItem,
+                    AMoveOverCol,
+                    TSkinItemDesignerPanel(AMouseOverItemDrawItemDesignerPanel),
                     AMouseOverItemDrawItemDesignerPanel.SkinControlType.CurrentHitTestChildControl
                     );
               end;
@@ -6000,13 +6086,13 @@ begin
                 then
               begin
                 Self.FSkinVirtualGridIntf.Prop.StartEditingCell(
-                              AMouseDownItem,
-                              AMoveOverCol,
-                              0,0,
-                              //TSkinEdit(AMouseOverItemDrawItemDesignerPanel.SkinControlType.CurrentHitTestChildControl).SkinControlType.FMouseUpPt.X,
-                              //TSkinEdit(AMouseOverItemDrawItemDesignerPanel.SkinControlType.CurrentHitTestChildControl).SkinControlType.FMouseUpPt.Y,
-                              TControl(AMouseOverItemDrawItemDesignerPanel.SkinControlType.CurrentHitTestChildControl)
-                              );
+                                                              AMouseDownItem,
+                                                              AMoveOverCol,
+                                                              0,0,
+                                                              //TSkinEdit(AMouseOverItemDrawItemDesignerPanel.SkinControlType.CurrentHitTestChildControl).SkinControlType.FMouseUpPt.X,
+                                                              //TSkinEdit(AMouseOverItemDrawItemDesignerPanel.SkinControlType.CurrentHitTestChildControl).SkinControlType.FMouseUpPt.Y,
+                                                              TControl(AMouseOverItemDrawItemDesignerPanel.SkinControlType.CurrentHitTestChildControl)
+                                                              );
               end;
               {$ENDIF}
 
@@ -7565,6 +7651,7 @@ begin
 
   inherited Create(Collection);
 
+  FWidth:=Const_DefaultColumnWidth;
 
 //  Self.FMaterialUseKind:=mukSelfOwn;
 
@@ -7575,9 +7662,9 @@ begin
 
   FFooter:=GetFooterClass.Create(Self);
 
-  FColumnMaterial:=GetColumnMaterialClass.Create(TSkinVirtualGridColumns(Collection).FVirtualGridProperties.FSkinControl);
+  FMaterial:=GetColumnMaterialClass.Create(TSkinVirtualGridColumns(Collection).FVirtualGridProperties.FSkinControl);
   //FColumnMaterial:=GetColumnMaterialClass.Create(nil);//TSkinVirtualGridColumns(Collection).FVirtualGridProperties.FSkinControl);
-  FColumnMaterial.SetSubComponent(True);
+  TComponent(FMaterial).SetSubComponent(True);
 
 
   FDefaultItemStyleSetting:=TListItemTypeStyleSetting.Create(nil,sitDefault);
@@ -7596,7 +7683,7 @@ begin
   FreeAndNil(FPickList);
 
   FreeAndNil(FFooter);
-  FreeAndNil(FColumnMaterial);
+  FreeAndNil(FMaterial);
 
   FreeAndNil(FDefaultItemStyleSetting);
 
@@ -7664,6 +7751,19 @@ end;
 function TSkinVirtualGridColumn.GetDisplayName: string;
 begin
   Result:=Self.GetBindItemFieldName+' '+FCaption;
+end;
+
+function TSkinVirtualGridColumn.GetDrawItemDesignerPanel(ASkinItem:TBaseSkinItem): TSkinItemDesignerPanel;
+begin
+  Result:=nil;
+  if FItemDesignerPanel<>nil then
+  begin
+    Result:=FItemDesignerPanel;
+  end
+  else
+  begin
+    Result:=FDefaultItemStyleSetting.GetInnerItemDesignerPanel(ASkinItem);
+  end;
 end;
 
 function TSkinVirtualGridColumn.GetFooterClass: TSkinVirtualGridFooterClass;
@@ -7994,6 +8094,11 @@ begin
   Result:=FDefaultItemStyleSetting.ItemDesignerPanel;
 end;
 
+function TSkinVirtualGridColumn.GetMaterial: TSkinVirtualGridColumnMaterial;
+begin
+  Result:=TSkinVirtualGridColumnMaterial(FMaterial);
+end;
+
 //procedure TSkinVirtualGridColumn.SetItemDrawRect(Value: TRectF);
 //begin
 //  FItemDrawRect:=Value;
@@ -8033,7 +8138,7 @@ end;
 
 procedure TSkinVirtualGridColumn.SetSelfOwnMaterial(const Value: TSkinVirtualGridColumnMaterial);
 begin
-  FColumnMaterial.AssignTo(Value);
+  FMaterial.Assign(Value);
   DoPropChange;
 end;
 
@@ -8074,7 +8179,7 @@ begin
 //      DestObject.FIsUseDefaultGridColumnCellTextParam:=Self.FIsUseDefaultGridColumnCellTextParam;
 //      DestObject.FIsUseDefaultGridColumnCellText1Param:=Self.FIsUseDefaultGridColumnCellText1Param;
 //      DestObject.FMaterialUseKind:=Self.FMaterialUseKind;
-      DestObject.FColumnMaterial.Assign(FColumnMaterial);
+      DestObject.FMaterial.Assign(FMaterial);
 
       DestObject.FFooter.Assign(Self.FFooter);
 
@@ -8183,8 +8288,8 @@ begin
   //默认不填充
 //  Self.FDrawBackColorParam.IsFill:=False;
 
-  FDrawCaptionParam:=CreateDrawTextParam('DrawCaptionParam','表格列标题绘制参数');
-  FDrawCaptionParam.FIsMustStoreFontColor:=True;
+//  FDrawCaptionParam:=CreateDrawTextParam('DrawCaptionParam','表格列标题绘制参数');
+//  FDrawCaptionParam.FIsMustStoreFontColor:=True;
 
   FDrawCellTextParam:=CreateDrawTextParam('DrawCellTextParam','单元格文本绘制参数');
   FDrawCellTextParam.FIsMustStoreFontColor:=True;
@@ -8200,11 +8305,21 @@ end;
 destructor TSkinVirtualGridColumnMaterial.Destroy;
 begin
   FreeAndNil(FDrawCellText1Param);
-  FreeAndNil(FDrawCaptionParam);
+//  FreeAndNil(FDrawCaptionParam);
   FreeAndNil(FDrawCellTextParam);
   FreeAndNil(FDrawCellPictureParam);
   FreeAndNil(FDrawFooterCellTextParam);
   inherited;
+end;
+
+function TSkinVirtualGridColumnMaterial.GetBackColor: TDrawRectParam;
+begin
+  Result:=FDrawItemBackColorParam;
+end;
+
+function TSkinVirtualGridColumnMaterial.GetDrawCaptionParam: TDrawTextParam;
+begin
+  Result:=FDrawItemCaptionParam;
 end;
 
 procedure TSkinVirtualGridColumnMaterial.SetDrawCellText1Param(const Value: TDrawTextParam);
@@ -8212,9 +8327,14 @@ begin
   FDrawCellText1Param.Assign(Value);
 end;
 
+procedure TSkinVirtualGridColumnMaterial.SetBackColor(const Value: TDrawRectParam);
+begin
+  FDrawItemBackColorParam.Assign(Value);
+end;
+
 procedure TSkinVirtualGridColumnMaterial.SetDrawCaptionParam(const Value: TDrawTextParam);
 begin
-  FDrawCaptionParam.Assign(Value);
+  FDrawItemCaptionParam.Assign(Value);
 end;
 
 procedure TSkinVirtualGridColumnMaterial.SetDrawCellPictureParam(const Value: TDrawPictureParam);
@@ -9136,6 +9256,11 @@ end;
 function TSkinVirtualGrid.GetOnCustomPaintCellEnd: TGridCustomPaintCellBeginEvent;
 begin
   Result:=FOnCustomPaintCellEnd;
+end;
+
+function TSkinVirtualGrid.GetOnClickCellItemDesignerPanelChild: TVirtualGridClickCellItemDesignerPanelChildEvent;
+begin
+  Result:=FOnClickCellItemDesignerPanelChild;
 end;
 
 function TSkinVirtualGrid.GetColumnHeader:TSkinColumnHeader;

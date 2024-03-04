@@ -244,7 +244,7 @@ begin
   FMouseDownFocus:=False;
 
 //  FDirectUIVisible:=False;
-
+  FNeedHitTest:=True;
 
 
 //  {$IFDEF VCL}

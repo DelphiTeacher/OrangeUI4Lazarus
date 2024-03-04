@@ -663,13 +663,13 @@ type
   TSkinWinItemDesignerPanel=class(TSkinItemDesignerPanel)
   end;
 
-  TItemDesignerPanel=TSkinItemDesignerPanel;//{$IFDEF VCL}TSkinWinItemDesignerPanel{$ENDIF}{$IFDEF FMX}TSkinFMXItemDesignerPanel{$ENDIF};
+//  TItemDesignerPanel=TSkinItemDesignerPanel;//{$IFDEF VCL}TSkinWinItemDesignerPanel{$ENDIF}{$IFDEF FMX}TSkinFMXItemDesignerPanel{$ENDIF};
 //  TItemDesignerPanel=TSkinItemDesignerPanel;//{$IFDEF VCL}TSkinWinItemDesignerPanel{$ENDIF}{$IFDEF FMX}TSkinFMXItemDesignerPanel{$ENDIF};
 
 
   TVirtualListDrawItemEvent=procedure(Sender:TObject;
                                       ACanvas:TDrawCanvas;
-                                      AItemDesignerPanel:TItemDesignerPanel;
+                                      AItemDesignerPanel:TSkinItemDesignerPanel;
                                       AItem:TSkinItem;
                                       AItemDrawRect:TRect) of object;
   {$ENDIF VCL}

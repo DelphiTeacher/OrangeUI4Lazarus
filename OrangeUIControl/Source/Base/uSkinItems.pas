@@ -36,6 +36,7 @@ uses
 
   DB,
   uLang,
+  uSkinMaterial,
 
 
 //  {$IFDEF SKIN_SUPEROBJECT}
@@ -216,6 +217,7 @@ type
 
 
 
+    FMaterial:TSkinMaterial;
 
     FOnChange:TNotifyEvent;
   protected

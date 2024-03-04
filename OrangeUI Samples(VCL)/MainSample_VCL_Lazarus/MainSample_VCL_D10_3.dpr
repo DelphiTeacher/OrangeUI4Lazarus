@@ -46,7 +46,8 @@ uses
   ListItemStyle_IconLeft_CaptionDetailRight in '..\..\OrangeProjectCommon\OrangeUIStyles_VCL\ListItemStyle_IconLeft_CaptionDetailRight.pas',
   DashBoard_LineChart_WeekSummaryFrame in 'DashBoard_LineChart_WeekSummaryFrame.pas' {FrameLineChart_WeekSummary: TFrame},
   OrderGridFrame in 'OrderGridFrame.pas' {FrameOrderGrid: TFrame},
-  uSkinItemJsonHelper in '..\..\OrangeProjectCommon\uSkinItemJsonHelper.pas';
+  uSkinItemJsonHelper in '..\..\OrangeProjectCommon\uSkinItemJsonHelper.pas',
+  EditGridFrame in 'EditGridFrame.pas' {FrameEditGrid: TFrame};
 
 {$R *.res}
 var

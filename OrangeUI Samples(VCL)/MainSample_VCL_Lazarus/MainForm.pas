@@ -128,7 +128,7 @@ type
     procedure FormShow(Sender: TObject);
     procedure btnSelectCountryClick(Sender: TObject);
     procedure lbSubMenuPrepareDrawItem(Sender: TObject; ACanvas: TDrawCanvas;
-      AItemDesignerPanel: TItemDesignerPanel; AItem: TSkinItem;
+      AItemDesignerPanel: TSkinItemDesignerPanel; AItem: TSkinItem;
       AItemDrawRect: TRect);
     procedure sbClientClick(Sender: TObject);
     procedure edtSearchChange(Sender: TObject);
@@ -368,6 +368,7 @@ begin
 
   if AItem.Name='' then Exit;
   
+  AItem.Selected:=True;
 
   FreeAndNil(FCurrentFrame);
 
@@ -558,7 +559,7 @@ begin
 end;
 
 procedure TfrmMain.lbSubMenuPrepareDrawItem(Sender: TObject;
-  ACanvas: TDrawCanvas; AItemDesignerPanel: TItemDesignerPanel;
+  ACanvas: TDrawCanvas; AItemDesignerPanel: TSkinItemDesignerPanel;
   AItem: TSkinItem; AItemDrawRect: TRect);
 begin
   //

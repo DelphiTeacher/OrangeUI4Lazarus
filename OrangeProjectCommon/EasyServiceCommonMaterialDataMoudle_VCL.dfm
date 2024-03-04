@@ -117,7 +117,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawCaptionParam.FontVertAlign = fvaCenter
     DrawCaptionParam.DrawRectSetting.Left = 36.000000000000000000
     DrawCaptionParam.DrawRectSetting.Enabled = True
-    DrawCaptionParam.DrawRectSetting.SizeType = dpstPixel
     DrawCaptionParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange, dpcetAlphaChange]
     DrawCaptionParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
     DrawCaptionParam.DrawEffectSetting.MouseDownEffect.FontColor.Color = clGray
@@ -149,7 +148,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawPictureParam.DrawRectSetting.Left = 16.000000000000000000
     DrawPictureParam.DrawRectSetting.Height = 22.000000000000000000
     DrawPictureParam.DrawRectSetting.Enabled = True
-    DrawPictureParam.DrawRectSetting.SizeType = dpstPixel
     DrawPictureParam.DrawRectSetting.PositionVertType = dppvtCenter
     DrawPictureParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange, dpcetAlphaChange]
     DrawPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
@@ -161,16 +159,15 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     Top = 8
   end
   object pnlToolBarMaterial: TSkinPanelDefaultMaterial
-    BackColor.Color = 10796800
+    BackColor.Color = clBlack
     BackColor.IsFill = True
     BackColor.FillColor.UseThemeColor = ctNavigationBarColor
     BackColor.FillColor.Alpha = 255
-    BackColor.FillColor.Color = 10796800
+    BackColor.FillColor.Color = clBlack
     BackColor.BorderColor.Alpha = 255
     BackColor.BorderColor.Color = 15592941
     BackColor.DrawRectSetting.Left = -10.000000000000000000
     BackColor.DrawRectSetting.Right = -10.000000000000000000
-    BackColor.DrawRectSetting.SizeType = dpstPixel
     BackColor.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
     BackColor.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
     BackColor.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
@@ -203,7 +200,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawCaptionParam.FontVertAlign = fvaCenter
     DrawCaptionParam.DrawRectSetting.Left = 50.000000000000000000
     DrawCaptionParam.DrawRectSetting.Enabled = True
-    DrawCaptionParam.DrawRectSetting.SizeType = dpstPixel
     DrawCaptionParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
     DrawCaptionParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
     DrawCaptionParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
@@ -338,7 +334,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawCaptionParam.FontVertAlign = fvaCenter
     DrawCaptionParam.DrawRectSetting.Left = 40.000000000000000000
     DrawCaptionParam.DrawRectSetting.Enabled = True
-    DrawCaptionParam.DrawRectSetting.SizeType = dpstPixel
     DrawCaptionParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
     DrawCaptionParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
     DrawCaptionParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
@@ -856,7 +851,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawCaptionParam.FontVertAlign = fvaCenter
     DrawCaptionParam.DrawRectSetting.Left = 10.000000000000000000
     DrawCaptionParam.DrawRectSetting.Enabled = True
-    DrawCaptionParam.DrawRectSetting.SizeType = dpstPixel
     DrawCaptionParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
     DrawCaptionParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
     DrawCaptionParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
@@ -871,11 +865,11 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     Top = 168
   end
   object btnOrangeRedBorderWhiteBackButtonMaterial: TSkinButtonDefaultMaterial
-    BackColor.Color = 16085628
+    BackColor.Color = 10796800
     BackColor.IsFill = True
     BackColor.FillColor.UseThemeColor = ctThemeColor
     BackColor.FillColor.Alpha = 255
-    BackColor.FillColor.Color = 16085628
+    BackColor.FillColor.Color = 10796800
     BackColor.IsRound = True
     BackColor.RoundWidth = 3
     BackColor.RoundHeight = 3
@@ -1214,7 +1208,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawCheckStateParam.DrawRectSetting.Width = 24.000000000000000000
     DrawCheckStateParam.DrawRectSetting.Height = 24.000000000000000000
     DrawCheckStateParam.DrawRectSetting.Enabled = True
-    DrawCheckStateParam.DrawRectSetting.SizeType = dpstPixel
     DrawCheckStateParam.DrawRectSetting.PositionVertType = dppvtCenter
     DrawCheckStateParam.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
     DrawCheckStateParam.DrawEffectSetting.MouseDownEffect.PenColor.Alpha = 255
@@ -1224,7 +1217,7 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawCheckStateParam.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
     DrawCheckStateParam.DrawEffectSetting.PushedEffect.PenColor.UseThemeColor = ctThemeColor
     DrawCheckStateParam.DrawEffectSetting.PushedEffect.PenColor.Alpha = 255
-    DrawCheckStateParam.DrawEffectSetting.PushedEffect.PenColor.Color = 16085628
+    DrawCheckStateParam.DrawEffectSetting.PushedEffect.PenColor.Color = 10796800
     DrawCheckStateParam.DrawEffectSetting.PushedEffect.EffectTypes = [dppetPenWidthChange, dppetPenColorChange]
     DrawCheckStateParam.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
     DrawCheckStateParam.DrawEffectSetting.DisabledEffect.PenColor.Alpha = 255
@@ -1241,7 +1234,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawCheckRectParam.DrawRectSetting.Width = 24.000000000000000000
     DrawCheckRectParam.DrawRectSetting.Height = 24.000000000000000000
     DrawCheckRectParam.DrawRectSetting.Enabled = True
-    DrawCheckRectParam.DrawRectSetting.SizeType = dpstPixel
     DrawCheckRectParam.DrawRectSetting.PositionVertType = dppvtCenter
     DrawCheckRectParam.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
     DrawCheckRectParam.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
@@ -1251,11 +1243,11 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawCheckRectParam.DrawEffectSetting.MouseOverEffect.BorderColor.Alpha = 255
     DrawCheckRectParam.DrawEffectSetting.PushedEffect.FillColor.UseThemeColor = ctThemeColor
     DrawCheckRectParam.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
-    DrawCheckRectParam.DrawEffectSetting.PushedEffect.FillColor.Color = 16085628
+    DrawCheckRectParam.DrawEffectSetting.PushedEffect.FillColor.Color = 10796800
     DrawCheckRectParam.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
     DrawCheckRectParam.DrawEffectSetting.PushedEffect.BorderColor.UseThemeColor = ctThemeColor
     DrawCheckRectParam.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
-    DrawCheckRectParam.DrawEffectSetting.PushedEffect.BorderColor.Color = 16085628
+    DrawCheckRectParam.DrawEffectSetting.PushedEffect.BorderColor.Color = 10796800
     DrawCheckRectParam.DrawEffectSetting.PushedEffect.EffectTypes = [drpetBorderColorChange]
     DrawCheckRectParam.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
     DrawCheckRectParam.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
@@ -1267,15 +1259,15 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     IsSimpleDrawCheckChar = False
     DrawCheckCharParam.FontName = #24494#36719#38597#40657
     DrawCheckCharParam.FontSize = 12
-    DrawCheckCharParam.FontColor = 16085628
+    DrawCheckCharParam.FontColor = 10796800
     DrawCheckCharParam.DrawFont.Charset = DEFAULT_CHARSET
-    DrawCheckCharParam.DrawFont.Color = 16085628
+    DrawCheckCharParam.DrawFont.Color = 10796800
     DrawCheckCharParam.DrawFont.Height = -16
     DrawCheckCharParam.DrawFont.Name = #24494#36719#38597#40657
     DrawCheckCharParam.DrawFont.Style = []
     DrawCheckCharParam.DrawFont.FontColor.UseThemeColor = ctThemeColor
     DrawCheckCharParam.DrawFont.FontColor.Alpha = 255
-    DrawCheckCharParam.DrawFont.FontColor.Color = 16085628
+    DrawCheckCharParam.DrawFont.FontColor.Color = 10796800
     DrawCheckCharParam.FontTrimming = fttNone
     DrawCheckCharParam.FontHorzAlign = fhaCenter
     DrawCheckCharParam.FontVertAlign = fvaCenter
@@ -1941,7 +1933,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawHelpTextParam.FontVertAlign = fvaCenter
     DrawHelpTextParam.DrawRectSetting.Right = 30.000000000000000000
     DrawHelpTextParam.DrawRectSetting.Enabled = True
-    DrawHelpTextParam.DrawRectSetting.SizeType = dpstPixel
     DrawHelpTextParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
     DrawHelpTextParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
     DrawHelpTextParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
@@ -2007,7 +1998,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawPictureParam.DrawRectSetting.Right = 10.000000000000000000
     DrawPictureParam.DrawRectSetting.Height = 16.000000000000000000
     DrawPictureParam.DrawRectSetting.Enabled = True
-    DrawPictureParam.DrawRectSetting.SizeType = dpstPixel
     DrawPictureParam.DrawRectSetting.PositionVertType = dppvtCenter
     DrawPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     DrawPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -2053,7 +2043,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawCaptionParam.DrawRectSetting.Left = 10.000000000000000000
     DrawCaptionParam.DrawRectSetting.Top = 10.000000000000000000
     DrawCaptionParam.DrawRectSetting.Enabled = True
-    DrawCaptionParam.DrawRectSetting.SizeType = dpstPixel
     DrawCaptionParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
     DrawCaptionParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
     DrawCaptionParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
@@ -2117,7 +2106,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawHelpTextParam.FontVertAlign = fvaCenter
     DrawHelpTextParam.DrawRectSetting.Left = 40.000000000000000000
     DrawHelpTextParam.DrawRectSetting.Enabled = True
-    DrawHelpTextParam.DrawRectSetting.SizeType = dpstPixel
     DrawHelpTextParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
     DrawHelpTextParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
     DrawHelpTextParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
@@ -2154,7 +2142,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawHelpIconParam.DrawRectSetting.Top = 6.000000000000000000
     DrawHelpIconParam.DrawRectSetting.Bottom = 6.000000000000000000
     DrawHelpIconParam.DrawRectSetting.Enabled = True
-    DrawHelpIconParam.DrawRectSetting.SizeType = dpstPixel
     DrawHelpIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     DrawHelpIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
     DrawHelpIconParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
@@ -2969,7 +2956,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawPictureParam.DrawRectSetting.Top = 5.000000000000000000
     DrawPictureParam.DrawRectSetting.Bottom = 5.000000000000000000
     DrawPictureParam.DrawRectSetting.Enabled = True
-    DrawPictureParam.DrawRectSetting.SizeType = dpstPixel
     DrawPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     DrawPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
     DrawPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
@@ -3092,7 +3078,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawCaptionParam.DrawRectSetting.Width = 24.000000000000000000
     DrawCaptionParam.DrawRectSetting.Height = 24.000000000000000000
     DrawCaptionParam.DrawRectSetting.Enabled = True
-    DrawCaptionParam.DrawRectSetting.SizeType = dpstPixel
     DrawCaptionParam.DrawRectSetting.PositionHorzType = dpphtCenter
     DrawCaptionParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
     DrawCaptionParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
@@ -3122,7 +3107,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawNumberParam.DrawRectSetting.Width = 24.000000000000000000
     DrawNumberParam.DrawRectSetting.Height = 24.000000000000000000
     DrawNumberParam.DrawRectSetting.Enabled = True
-    DrawNumberParam.DrawRectSetting.SizeType = dpstPixel
     DrawNumberParam.DrawRectSetting.PositionHorzType = dpphtCenter
     DrawNumberParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
     DrawNumberParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
@@ -3205,7 +3189,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawNotifyRectParam.DrawRectSetting.Width = 24.000000000000000000
     DrawNotifyRectParam.DrawRectSetting.Height = 24.000000000000000000
     DrawNotifyRectParam.DrawRectSetting.Enabled = True
-    DrawNotifyRectParam.DrawRectSetting.SizeType = dpstPixel
     DrawNotifyRectParam.DrawRectSetting.PositionHorzType = dpphtCenter
     DrawNotifyRectParam.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
     DrawNotifyRectParam.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
@@ -3335,7 +3318,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawCaptionParam.FontHorzAlign = fhaCenter
     DrawCaptionParam.FontVertAlign = fvaCenter
     DrawCaptionParam.DrawRectSetting.Right = 5.000000000000000000
-    DrawCaptionParam.DrawRectSetting.SizeType = dpstPixel
     DrawCaptionParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
     DrawCaptionParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
     DrawCaptionParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
@@ -3360,7 +3342,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawNumberParam.FontHorzAlign = fhaCenter
     DrawNumberParam.FontVertAlign = fvaCenter
     DrawNumberParam.DrawRectSetting.Right = 5.000000000000000000
-    DrawNumberParam.DrawRectSetting.SizeType = dpstPixel
     DrawNumberParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
     DrawNumberParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
     DrawNumberParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
@@ -3718,7 +3699,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawItemBackColorParam.DrawRectSetting.Right = 10.000000000000000000
     DrawItemBackColorParam.DrawRectSetting.Height = 3.000000000000000000
     DrawItemBackColorParam.DrawRectSetting.Enabled = True
-    DrawItemBackColorParam.DrawRectSetting.SizeType = dpstPixel
     DrawItemBackColorParam.DrawRectSetting.PositionVertType = dppvtBottom
     DrawItemBackColorParam.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
     DrawItemBackColorParam.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
@@ -3988,7 +3968,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DefaultTypeItemMaterial.DrawItemBackColorParam.DrawRectSetting.Right = 10.000000000000000000
     DefaultTypeItemMaterial.DrawItemBackColorParam.DrawRectSetting.Height = 3.000000000000000000
     DefaultTypeItemMaterial.DrawItemBackColorParam.DrawRectSetting.Enabled = True
-    DefaultTypeItemMaterial.DrawItemBackColorParam.DrawRectSetting.SizeType = dpstPixel
     DefaultTypeItemMaterial.DrawItemBackColorParam.DrawRectSetting.PositionVertType = dppvtBottom
     DefaultTypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
     DefaultTypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
@@ -4446,7 +4425,7 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
       0000001810040000004900730043006C006900700052006F0075006E00640000
       002F6626546A52C18810620657625F0000000000001900000000160A05000000
       4600690078006500640043006F006C006F0072000000038C74659C9872820000
-      0000002020}
+      0000002000}
     PictureList = <
       item
         DrawPicture.IsClipRound = False
@@ -4919,7 +4898,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     MiddleButtonMaterial.BackColor.DrawRectSetting.Left = 2.000000000000000000
     MiddleButtonMaterial.BackColor.DrawRectSetting.Top = 2.000000000000000000
     MiddleButtonMaterial.BackColor.DrawRectSetting.Enabled = True
-    MiddleButtonMaterial.BackColor.DrawRectSetting.SizeType = dpstPixel
     MiddleButtonMaterial.BackColor.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
     MiddleButtonMaterial.BackColor.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
     MiddleButtonMaterial.BackColor.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
@@ -4928,7 +4906,7 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     MiddleButtonMaterial.BackColor.DrawEffectSetting.MouseOverEffect.BorderColor.Alpha = 255
     MiddleButtonMaterial.BackColor.DrawEffectSetting.PushedEffect.FillColor.UseThemeColor = ctThemeColor
     MiddleButtonMaterial.BackColor.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
-    MiddleButtonMaterial.BackColor.DrawEffectSetting.PushedEffect.FillColor.Color = 16085628
+    MiddleButtonMaterial.BackColor.DrawEffectSetting.PushedEffect.FillColor.Color = 10796800
     MiddleButtonMaterial.BackColor.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
     MiddleButtonMaterial.BackColor.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
     MiddleButtonMaterial.BackColor.DrawEffectSetting.PushedEffect.EffectTypes = [drpetFillColorChange]
@@ -5088,7 +5066,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawTabIconParam.DrawRectSetting.Top = 6.000000000000000000
     DrawTabIconParam.DrawRectSetting.Height = 30.000000000000000000
     DrawTabIconParam.DrawRectSetting.Enabled = True
-    DrawTabIconParam.DrawRectSetting.SizeType = dpstPixel
     DrawTabIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     DrawTabIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
     DrawTabIconParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
@@ -5302,7 +5279,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawHelpTextParam.FontVertAlign = fvaCenter
     DrawHelpTextParam.DrawRectSetting.Left = 2.000000000000000000
     DrawHelpTextParam.DrawRectSetting.Enabled = True
-    DrawHelpTextParam.DrawRectSetting.SizeType = dpstPixel
     DrawHelpTextParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
     DrawHelpTextParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
     DrawHelpTextParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
@@ -5430,7 +5406,7 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
       0000001810040000004900730043006C006900700052006F0075006E00640000
       002F6626546A52C18810620657625F0000000000001900000000160A05000000
       4600690078006500640043006F006C006F0072000000038C74659C9872820000
-      000000204818140000001A001A000000420069006E006100720079004F006200
+      000000204518140000001A001A000000420069006E006100720079004F006200
       6A00650063007400000054004400720061007700500069006300740075007200
       65000000040000000014000000000049006D006100670065004E0061006D0065
       0000000400000000180008000000470072006100700068006900630054007900
@@ -5505,7 +5481,7 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
       00FE564772FE94A563000015000000001810040000004900730043006C006900
       700052006F0075006E00640000002F6626546A52C18810620657625F00000000
       00001900000000160A050000004600690078006500640043006F006C006F0072
-      000000038C74659C9872820000000000206518140000001A001A000000420069
+      000000038C74659C9872820000000000204418140000001A001A000000420069
       006E006100720079004F0062006A006500630074000000540044007200610077
       0050006900630074007500720065000000040000000014000000000049006D00
       6100670065004E0061006D006500000004000000001800080000004700720061
@@ -5683,7 +5659,7 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
       000000001810040000004900730043006C006900700052006F0075006E006400
       00002F6626546A52C18810620657625F0000000000001900000000160A050000
       004600690078006500640043006F006C006F0072000000038C74659C98728200
-      00000000207318140000001A001A000000420069006E006100720079004F0062
+      00000000206E18140000001A001A000000420069006E006100720079004F0062
       006A006500630074000000540044007200610077005000690063007400750072
       0065000000040000000014000000000049006D006100670065004E0061006D00
       6500000004000000001800080000004700720061007000680069006300540079
@@ -5774,7 +5750,7 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
       0000550072006C000000FE564772FE94A5630000150000000018100400000049
       00730043006C006900700052006F0075006E00640000002F6626546A52C18810
       620657625F0000000000001900000000160A0500000046006900780065006400
-      43006F006C006F0072000000038C74659C9872820000000000206F1814000000
+      43006F006C006F0072000000038C74659C987282000000000020721814000000
       1A001A000000420069006E006100720079004F0062006A006500630074000000
       5400440072006100770050006900630074007500720065000000040000000014
       000000000049006D006100670065004E0061006D006500000004000000001800
@@ -5846,7 +5822,7 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
       15000000001810040000004900730043006C006900700052006F0075006E0064
       0000002F6626546A52C18810620657625F0000000000001900000000160A0500
       00004600690078006500640043006F006C006F0072000000038C74659C987282
-      0000000000206118140000001A001A000000420069006E006100720079004F00
+      0000000000206518140000001A001A000000420069006E006100720079004F00
       62006A0065006300740000005400440072006100770050006900630074007500
       720065000000040000000014000000000049006D006100670065004E0061006D
       0065000000040000000018000800000047007200610070006800690063005400
@@ -5919,7 +5895,7 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
       006C000000FE564772FE94A56300001500000000181004000000490073004300
       6C006900700052006F0075006E00640000002F6626546A52C18810620657625F
       0000000000001900000000160A050000004600690078006500640043006F006C
-      006F0072000000038C74659C9872820000000000206C18140000001A001A0000
+      006F0072000000038C74659C9872820000000000206818140000001A001A0000
       00420069006E006100720079004F0062006A0065006300740000005400440072
       0061007700500069006300740075007200650000000400000000140000000000
       49006D006100670065004E0061006D0065000000040000000018000800000047
@@ -6038,7 +6014,7 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
       000000001810040000004900730043006C006900700052006F0075006E006400
       00002F6626546A52C18810620657625F0000000000001900000000160A050000
       004600690078006500640043006F006C006F0072000000038C74659C98728200
-      00000000206F18140000001A001A000000420069006E006100720079004F0062
+      00000000207018140000001A001A000000420069006E006100720079004F0062
       006A006500630074000000540044007200610077005000690063007400750072
       0065000000040000000014000000000049006D006100670065004E0061006D00
       6500000004000000001800080000004700720061007000680069006300540079
@@ -6084,7 +6060,7 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
       10040000004900730043006C006900700052006F0075006E00640000002F6626
       546A52C18810620657625F0000000000001900000000160A0500000046006900
       78006500640043006F006C006F0072000000038C74659C987282000000000020
-      6F18140000001A001A000000420069006E006100720079004F0062006A006500
+      4E18140000001A001A000000420069006E006100720079004F0062006A006500
       6300740000005400440072006100770050006900630074007500720065000000
       040000000014000000000049006D006100670065004E0061006D006500000004
       0000000018000800000047007200610070006800690063005400790070006500
@@ -6230,7 +6206,7 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
       0000550072006C000000FE564772FE94A5630000150000000018100400000049
       00730043006C006900700052006F0075006E00640000002F6626546A52C18810
       620657625F0000000000001900000000160A0500000046006900780065006400
-      43006F006C006F0072000000038C74659C987282000000000020631814000000
+      43006F006C006F0072000000038C74659C987282000000000020741814000000
       1A001A000000420069006E006100720079004F0062006A006500630074000000
       5400440072006100770050006900630074007500720065000000040000000014
       000000000049006D006100670065004E0061006D006500000004000000001800
@@ -6295,7 +6271,7 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
       A563000015000000001810040000004900730043006C006900700052006F0075
       006E00640000002F6626546A52C18810620657625F0000000000001900000000
       160A050000004600690078006500640043006F006C006F0072000000038C7465
-      9C9872820000000000206E}
+      9C9872820000000000206F}
     PictureList = <
       item
         DrawPicture.IsClipRound = False
@@ -7161,7 +7137,7 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
       0000001810040000004900730043006C006900700052006F0075006E00640000
       002F6626546A52C18810620657625F0000000000001900000000160A05000000
       4600690078006500640043006F006C006F0072000000038C74659C9872820000
-      000000206518140000001A001A000000420069006E006100720079004F006200
+      000000208A18140000001A001A000000420069006E006100720079004F006200
       6A00650063007400000054004400720061007700500069006300740075007200
       65000000040000000014000000000049006D006100670065004E0061006D0065
       0000000400000000180008000000470072006100700068006900630054007900
@@ -7414,7 +7390,7 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
       A563000015000000001810040000004900730043006C006900700052006F0075
       006E00640000002F6626546A52C18810620657625F0000000000001900000000
       160A050000004600690078006500640043006F006C006F0072000000038C7465
-      9C9872820000000000200018140000001A001A000000420069006E0061007200
+      9C9872820000000000205418140000001A001A000000420069006E0061007200
       79004F0062006A00650063007400000054004400720061007700500069006300
       74007500720065000000040000000014000000000049006D006100670065004E
       0061006D00650000000400000000180008000000470072006100700068006900
@@ -7800,7 +7776,7 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
       550072006C000000FE564772FE94A56300001500000000181004000000490073
       0043006C006900700052006F0075006E00640000002F6626546A52C188106206
       57625F0000000000001900000000160A05000000460069007800650064004300
-      6F006C006F0072000000038C74659C98728200000000002059}
+      6F006C006F0072000000038C74659C98728200000000002065}
     PictureList = <
       item
         DrawPicture.IsClipRound = False
@@ -8534,7 +8510,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     BackColor.DrawRectSetting.Left = 5.000000000000000000
     BackColor.DrawRectSetting.Right = 5.000000000000000000
     BackColor.DrawRectSetting.Enabled = True
-    BackColor.DrawRectSetting.SizeType = dpstPixel
     BackColor.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
     BackColor.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
     BackColor.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
@@ -8918,7 +8893,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawPictureParam.DrawRectSetting.Right = 10.000000000000000000
     DrawPictureParam.DrawRectSetting.Height = 16.000000000000000000
     DrawPictureParam.DrawRectSetting.Enabled = True
-    DrawPictureParam.DrawRectSetting.SizeType = dpstPixel
     DrawPictureParam.DrawRectSetting.PositionVertType = dppvtCenter
     DrawPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     DrawPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -8957,7 +8931,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawTabIconParam.DrawRectSetting.Top = 10.000000000000000000
     DrawTabIconParam.DrawRectSetting.Bottom = 14.000000000000000000
     DrawTabIconParam.DrawRectSetting.Enabled = True
-    DrawTabIconParam.DrawRectSetting.SizeType = dpstPixel
     DrawTabIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     DrawTabIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
     DrawTabIconParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
@@ -8979,7 +8952,7 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawTabCaptionParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
     DrawTabCaptionParam.DrawEffectSetting.PushedEffect.FontColor.UseThemeColor = ctThemeColor
     DrawTabCaptionParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
-    DrawTabCaptionParam.DrawEffectSetting.PushedEffect.FontColor.Color = 16085628
+    DrawTabCaptionParam.DrawEffectSetting.PushedEffect.FontColor.Color = 10796800
     DrawTabCaptionParam.DrawEffectSetting.PushedEffect.FontSize = 12
     DrawTabCaptionParam.DrawEffectSetting.PushedEffect.EffectTypes = [dtpetFontColorChange]
     DrawTabCaptionParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
@@ -9021,7 +8994,7 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     TabBackColor.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
     TabBackColor.DrawEffectSetting.PushedEffect.BorderColor.UseThemeColor = ctThemeColor
     TabBackColor.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
-    TabBackColor.DrawEffectSetting.PushedEffect.BorderColor.Color = 16085628
+    TabBackColor.DrawEffectSetting.PushedEffect.BorderColor.Color = 10796800
     TabBackColor.DrawEffectSetting.PushedEffect.EffectTypes = [drpetBorderWidthChange, drpetBorderColorChange]
     TabBackColor.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
     TabBackColor.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
@@ -9044,7 +9017,7 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawTabBackColorParam.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
     DrawTabBackColorParam.DrawEffectSetting.PushedEffect.BorderColor.UseThemeColor = ctThemeColor
     DrawTabBackColorParam.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
-    DrawTabBackColorParam.DrawEffectSetting.PushedEffect.BorderColor.Color = 16085628
+    DrawTabBackColorParam.DrawEffectSetting.PushedEffect.BorderColor.Color = 10796800
     DrawTabBackColorParam.DrawEffectSetting.PushedEffect.EffectTypes = [drpetBorderWidthChange, drpetBorderColorChange]
     DrawTabBackColorParam.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
     DrawTabBackColorParam.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
@@ -9251,7 +9224,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawEmptyContentCaptionParam.FontVertAlign = fvaTop
     DrawEmptyContentCaptionParam.DrawRectSetting.Top = 220.000000000000000000
     DrawEmptyContentCaptionParam.DrawRectSetting.Enabled = True
-    DrawEmptyContentCaptionParam.DrawRectSetting.SizeType = dpstPixel
     DrawEmptyContentCaptionParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
     DrawEmptyContentCaptionParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
     DrawEmptyContentCaptionParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
@@ -9277,7 +9249,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawEmptyContentDescriptionParam.FontVertAlign = fvaTop
     DrawEmptyContentDescriptionParam.DrawRectSetting.Top = 250.000000000000000000
     DrawEmptyContentDescriptionParam.DrawRectSetting.Enabled = True
-    DrawEmptyContentDescriptionParam.DrawRectSetting.SizeType = dpstPixel
     DrawEmptyContentDescriptionParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
     DrawEmptyContentDescriptionParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
     DrawEmptyContentDescriptionParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
@@ -9294,7 +9265,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawEmptyContentPictureParam.DrawRectSetting.Top = 100.000000000000000000
     DrawEmptyContentPictureParam.DrawRectSetting.Width = 100.000000000000000000
     DrawEmptyContentPictureParam.DrawRectSetting.Enabled = True
-    DrawEmptyContentPictureParam.DrawRectSetting.SizeType = dpstPixel
     DrawEmptyContentPictureParam.DrawRectSetting.PositionHorzType = dpphtCenter
     DrawEmptyContentPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     DrawEmptyContentPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -10121,7 +10091,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawHelpTextParam.FontVertAlign = fvaCenter
     DrawHelpTextParam.DrawRectSetting.Left = 24.000000000000000000
     DrawHelpTextParam.DrawRectSetting.Enabled = True
-    DrawHelpTextParam.DrawRectSetting.SizeType = dpstPixel
     DrawHelpTextParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
     DrawHelpTextParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
     DrawHelpTextParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
@@ -10159,7 +10128,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawHelpIconParam.DrawRectSetting.Top = 4.000000000000000000
     DrawHelpIconParam.DrawRectSetting.Bottom = 4.000000000000000000
     DrawHelpIconParam.DrawRectSetting.Enabled = True
-    DrawHelpIconParam.DrawRectSetting.SizeType = dpstPixel
     DrawHelpIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     DrawHelpIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
     DrawHelpIconParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
@@ -10201,7 +10169,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawArrowPictureParam.FixedColor.Alpha = 255
     DrawArrowPictureParam.DrawRectSetting.Height = 36.000000000000000000
     DrawArrowPictureParam.DrawRectSetting.Enabled = True
-    DrawArrowPictureParam.DrawRectSetting.SizeType = dpstPixel
     DrawArrowPictureParam.DrawRectSetting.PositionVertType = dppvtCenter
     DrawArrowPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     DrawArrowPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -10221,7 +10188,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawPictureParam.FixedColor.Alpha = 255
     DrawPictureParam.DrawRectSetting.Height = 2.000000000000000000
     DrawPictureParam.DrawRectSetting.Enabled = True
-    DrawPictureParam.DrawRectSetting.SizeType = dpstPixel
     DrawPictureParam.DrawRectSetting.PositionVertType = dppvtBottom
     DrawPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     DrawPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -10243,7 +10209,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawHelpTextParam.FontVertAlign = fvaCenter
     DrawHelpTextParam.DrawRectSetting.Left = 10.000000000000000000
     DrawHelpTextParam.DrawRectSetting.Enabled = True
-    DrawHelpTextParam.DrawRectSetting.SizeType = dpstPixel
     DrawHelpTextParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
     DrawHelpTextParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
     DrawHelpTextParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
@@ -10269,7 +10234,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawTextParam.FontVertAlign = fvaCenter
     DrawTextParam.DrawRectSetting.Left = 10.000000000000000000
     DrawTextParam.DrawRectSetting.Enabled = True
-    DrawTextParam.DrawRectSetting.SizeType = dpstPixel
     DrawTextParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
     DrawTextParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
     DrawTextParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
@@ -10320,7 +10284,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawCaptionParam.DrawRectSetting.Left = 10.000000000000000000
     DrawCaptionParam.DrawRectSetting.Top = 10.000000000000000000
     DrawCaptionParam.DrawRectSetting.Enabled = True
-    DrawCaptionParam.DrawRectSetting.SizeType = dpstPixel
     DrawCaptionParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
     DrawCaptionParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
     DrawCaptionParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
@@ -10577,7 +10540,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawIconParam.FixedColor.Alpha = 255
     DrawIconParam.DrawRectSetting.Height = 30.000000000000000000
     DrawIconParam.DrawRectSetting.Enabled = True
-    DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     DrawIconParam.DrawRectSetting.PositionVertType = dppvtCenter
     DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange, dpcetAlphaChange]
     DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
@@ -10622,7 +10584,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawPictureParam.FixedColor.Alpha = 255
     DrawPictureParam.DrawRectSetting.Height = 30.000000000000000000
     DrawPictureParam.DrawRectSetting.Enabled = True
-    DrawPictureParam.DrawRectSetting.SizeType = dpstPixel
     DrawPictureParam.DrawRectSetting.PositionVertType = dppvtCenter
     DrawPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     DrawPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -10698,7 +10659,7 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawCheckStateParam.FillColor.Alpha = 255
     DrawCheckStateParam.PenColor.UseThemeColor = ctThemeColor
     DrawCheckStateParam.PenColor.Alpha = 255
-    DrawCheckStateParam.PenColor.Color = 16085628
+    DrawCheckStateParam.PenColor.Color = 10796800
     DrawCheckStateParam.PathActions = <
       item
         X = 15.000000000000000000
@@ -10753,7 +10714,7 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawCheckRectParam.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
     DrawCheckRectParam.DrawEffectSetting.PushedEffect.BorderColor.UseThemeColor = ctThemeColor
     DrawCheckRectParam.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
-    DrawCheckRectParam.DrawEffectSetting.PushedEffect.BorderColor.Color = 16085628
+    DrawCheckRectParam.DrawEffectSetting.PushedEffect.BorderColor.Color = 10796800
     DrawCheckRectParam.DrawEffectSetting.PushedEffect.EffectTypes = [drpetBorderColorChange]
     DrawCheckRectParam.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
     DrawCheckRectParam.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
@@ -10765,15 +10726,15 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     IsSimpleDrawCheckChar = False
     DrawCheckCharParam.FontName = #24494#36719#38597#40657
     DrawCheckCharParam.FontSize = 12
-    DrawCheckCharParam.FontColor = 16085628
+    DrawCheckCharParam.FontColor = 10796800
     DrawCheckCharParam.DrawFont.Charset = DEFAULT_CHARSET
-    DrawCheckCharParam.DrawFont.Color = 16085628
+    DrawCheckCharParam.DrawFont.Color = 10796800
     DrawCheckCharParam.DrawFont.Height = -16
     DrawCheckCharParam.DrawFont.Name = #24494#36719#38597#40657
     DrawCheckCharParam.DrawFont.Style = []
     DrawCheckCharParam.DrawFont.FontColor.UseThemeColor = ctThemeColor
     DrawCheckCharParam.DrawFont.FontColor.Alpha = 255
-    DrawCheckCharParam.DrawFont.FontColor.Color = 16085628
+    DrawCheckCharParam.DrawFont.FontColor.Color = 10796800
     DrawCheckCharParam.FontTrimming = fttNone
     DrawCheckCharParam.FontHorzAlign = fhaCenter
     DrawCheckCharParam.FontVertAlign = fvaCenter
@@ -10901,7 +10862,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawCaptionParam.FontVertAlign = fvaCenter
     DrawCaptionParam.DrawRectSetting.Right = 20.000000000000000000
     DrawCaptionParam.DrawRectSetting.Enabled = True
-    DrawCaptionParam.DrawRectSetting.SizeType = dpstPixel
     DrawCaptionParam.DrawRectSetting.PositionVertType = dppvtCenter
     DrawCaptionParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
     DrawCaptionParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
@@ -10932,7 +10892,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawPictureParam.DrawRectSetting.Right = 10.000000000000000000
     DrawPictureParam.DrawRectSetting.Height = 10.000000000000000000
     DrawPictureParam.DrawRectSetting.Enabled = True
-    DrawPictureParam.DrawRectSetting.SizeType = dpstPixel
     DrawPictureParam.DrawRectSetting.PositionVertType = dppvtCenter
     DrawPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     DrawPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -11053,7 +11012,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawCaptionParam.FontVertAlign = fvaCenter
     DrawCaptionParam.DrawRectSetting.Right = 20.000000000000000000
     DrawCaptionParam.DrawRectSetting.Enabled = True
-    DrawCaptionParam.DrawRectSetting.SizeType = dpstPixel
     DrawCaptionParam.DrawRectSetting.PositionVertType = dppvtCenter
     DrawCaptionParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
     DrawCaptionParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
@@ -11084,7 +11042,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawPictureParam.DrawRectSetting.Top = 2.000000000000000000
     DrawPictureParam.DrawRectSetting.Bottom = 2.000000000000000000
     DrawPictureParam.DrawRectSetting.Enabled = True
-    DrawPictureParam.DrawRectSetting.SizeType = dpstPixel
     DrawPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     DrawPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
     DrawPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
@@ -11204,7 +11161,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawCaptionParam.FontVertAlign = fvaCenter
     DrawCaptionParam.DrawRectSetting.Right = 20.000000000000000000
     DrawCaptionParam.DrawRectSetting.Enabled = True
-    DrawCaptionParam.DrawRectSetting.SizeType = dpstPixel
     DrawCaptionParam.DrawRectSetting.PositionVertType = dppvtCenter
     DrawCaptionParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
     DrawCaptionParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
@@ -11235,7 +11191,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawPictureParam.DrawRectSetting.Top = 2.000000000000000000
     DrawPictureParam.DrawRectSetting.Bottom = 2.000000000000000000
     DrawPictureParam.DrawRectSetting.Enabled = True
-    DrawPictureParam.DrawRectSetting.SizeType = dpstPixel
     DrawPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     DrawPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
     DrawPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
@@ -11271,7 +11226,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawTabIconParam.DrawRectSetting.Top = 6.000000000000000000
     DrawTabIconParam.DrawRectSetting.Height = 30.000000000000000000
     DrawTabIconParam.DrawRectSetting.Enabled = True
-    DrawTabIconParam.DrawRectSetting.SizeType = dpstPixel
     DrawTabIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     DrawTabIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
     DrawTabIconParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
@@ -11296,7 +11250,7 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawTabCaptionParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
     DrawTabCaptionParam.DrawEffectSetting.PushedEffect.FontColor.UseThemeColor = ctThemeColor
     DrawTabCaptionParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
-    DrawTabCaptionParam.DrawEffectSetting.PushedEffect.FontColor.Color = 16085628
+    DrawTabCaptionParam.DrawEffectSetting.PushedEffect.FontColor.Color = 10796800
     DrawTabCaptionParam.DrawEffectSetting.PushedEffect.FontSize = 12
     DrawTabCaptionParam.DrawEffectSetting.PushedEffect.EffectTypes = [dtpetFontColorChange]
     DrawTabCaptionParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
@@ -11497,7 +11451,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawPictureParam.DrawRectSetting.Right = 9.000000000000000000
     DrawPictureParam.DrawRectSetting.Bottom = 9.000000000000000000
     DrawPictureParam.DrawRectSetting.Enabled = True
-    DrawPictureParam.DrawRectSetting.SizeType = dpstPixel
     DrawPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     DrawPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
     DrawPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
@@ -11610,7 +11563,7 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawCheckStateParam.FillColor.Alpha = 255
     DrawCheckStateParam.PenColor.UseThemeColor = ctThemeColor
     DrawCheckStateParam.PenColor.Alpha = 255
-    DrawCheckStateParam.PenColor.Color = 16085628
+    DrawCheckStateParam.PenColor.Color = 10796800
     DrawCheckStateParam.PathActions = <
       item
         X = 15.000000000000000000
@@ -11641,7 +11594,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawCheckStateParam.DrawRectSetting.Width = 20.000000000000000000
     DrawCheckStateParam.DrawRectSetting.Height = 20.000000000000000000
     DrawCheckStateParam.DrawRectSetting.Enabled = True
-    DrawCheckStateParam.DrawRectSetting.SizeType = dpstPixel
     DrawCheckStateParam.DrawRectSetting.PositionVertType = dppvtCenter
     DrawCheckStateParam.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
     DrawCheckStateParam.DrawEffectSetting.MouseDownEffect.PenColor.Alpha = 255
@@ -11651,7 +11603,7 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawCheckStateParam.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
     DrawCheckStateParam.DrawEffectSetting.PushedEffect.PenColor.UseThemeColor = ctThemeColor
     DrawCheckStateParam.DrawEffectSetting.PushedEffect.PenColor.Alpha = 255
-    DrawCheckStateParam.DrawEffectSetting.PushedEffect.PenColor.Color = 16085628
+    DrawCheckStateParam.DrawEffectSetting.PushedEffect.PenColor.Color = 10796800
     DrawCheckStateParam.DrawEffectSetting.PushedEffect.EffectTypes = [dppetPenWidthChange, dppetPenColorChange]
     DrawCheckStateParam.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
     DrawCheckStateParam.DrawEffectSetting.DisabledEffect.PenColor.Alpha = 255
@@ -11677,7 +11629,7 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawCheckRectParam.DrawEffectSetting.PushedEffect.IsFill = True
     DrawCheckRectParam.DrawEffectSetting.PushedEffect.FillColor.UseThemeColor = ctThemeColor
     DrawCheckRectParam.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
-    DrawCheckRectParam.DrawEffectSetting.PushedEffect.FillColor.Color = 16085628
+    DrawCheckRectParam.DrawEffectSetting.PushedEffect.FillColor.Color = 10796800
     DrawCheckRectParam.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
     DrawCheckRectParam.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
     DrawCheckRectParam.DrawEffectSetting.PushedEffect.BorderColor.Color = 16092483
@@ -11745,7 +11697,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawArrowPictureParam.FixedColor.Alpha = 255
     DrawArrowPictureParam.DrawRectSetting.Height = 36.000000000000000000
     DrawArrowPictureParam.DrawRectSetting.Enabled = True
-    DrawArrowPictureParam.DrawRectSetting.SizeType = dpstPixel
     DrawArrowPictureParam.DrawRectSetting.PositionVertType = dppvtCenter
     DrawArrowPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     DrawArrowPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -11765,7 +11716,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawPictureParam.FixedColor.Alpha = 255
     DrawPictureParam.DrawRectSetting.Height = 2.000000000000000000
     DrawPictureParam.DrawRectSetting.Enabled = True
-    DrawPictureParam.DrawRectSetting.SizeType = dpstPixel
     DrawPictureParam.DrawRectSetting.PositionVertType = dppvtBottom
     DrawPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     DrawPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -11787,7 +11737,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawHelpTextParam.FontVertAlign = fvaCenter
     DrawHelpTextParam.DrawRectSetting.Left = 10.000000000000000000
     DrawHelpTextParam.DrawRectSetting.Enabled = True
-    DrawHelpTextParam.DrawRectSetting.SizeType = dpstPixel
     DrawHelpTextParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
     DrawHelpTextParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
     DrawHelpTextParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
@@ -11809,7 +11758,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawTextParam.FontHorzAlign = fhaLeft
     DrawTextParam.FontVertAlign = fvaCenter
     DrawTextParam.DrawRectSetting.Left = 10.000000000000000000
-    DrawTextParam.DrawRectSetting.SizeType = dpstPixel
     DrawTextParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
     DrawTextParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
     DrawTextParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
@@ -11866,7 +11814,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawCaptionParam.DrawRectSetting.Left = 10.000000000000000000
     DrawCaptionParam.DrawRectSetting.Top = 10.000000000000000000
     DrawCaptionParam.DrawRectSetting.Enabled = True
-    DrawCaptionParam.DrawRectSetting.SizeType = dpstPixel
     DrawCaptionParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
     DrawCaptionParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
     DrawCaptionParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
@@ -11881,16 +11828,15 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     Top = 130
   end
   object pnlToolWindowBarMaterial: TSkinPanelDefaultMaterial
-    BackColor.Color = 16085628
+    BackColor.Color = 10796800
     BackColor.IsFill = True
     BackColor.FillColor.UseThemeColor = ctThemeColor
     BackColor.FillColor.Alpha = 255
-    BackColor.FillColor.Color = 16085628
+    BackColor.FillColor.Color = 10796800
     BackColor.BorderColor.Alpha = 255
     BackColor.BorderColor.Color = 15592941
     BackColor.DrawRectSetting.Left = -10.000000000000000000
     BackColor.DrawRectSetting.Right = -10.000000000000000000
-    BackColor.DrawRectSetting.SizeType = dpstPixel
     BackColor.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
     BackColor.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
     BackColor.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
@@ -11922,7 +11868,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawCaptionParam.FontVertAlign = fvaCenter
     DrawCaptionParam.DrawRectSetting.Left = 50.000000000000000000
     DrawCaptionParam.DrawRectSetting.Enabled = True
-    DrawCaptionParam.DrawRectSetting.SizeType = dpstPixel
     DrawCaptionParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
     DrawCaptionParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
     DrawCaptionParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
@@ -12295,7 +12240,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawCheckStateParam.DrawRectSetting.Width = 24.000000000000000000
     DrawCheckStateParam.DrawRectSetting.Height = 24.000000000000000000
     DrawCheckStateParam.DrawRectSetting.Enabled = True
-    DrawCheckStateParam.DrawRectSetting.SizeType = dpstPixel
     DrawCheckStateParam.DrawRectSetting.PositionVertType = dppvtCenter
     DrawCheckStateParam.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
     DrawCheckStateParam.DrawEffectSetting.MouseDownEffect.PenColor.Alpha = 255
@@ -12322,7 +12266,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawCheckRectParam.DrawRectSetting.Width = 24.000000000000000000
     DrawCheckRectParam.DrawRectSetting.Height = 24.000000000000000000
     DrawCheckRectParam.DrawRectSetting.Enabled = True
-    DrawCheckRectParam.DrawRectSetting.SizeType = dpstPixel
     DrawCheckRectParam.DrawRectSetting.PositionVertType = dppvtCenter
     DrawCheckRectParam.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
     DrawCheckRectParam.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
@@ -12333,7 +12276,7 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawCheckRectParam.DrawEffectSetting.PushedEffect.IsFill = True
     DrawCheckRectParam.DrawEffectSetting.PushedEffect.FillColor.UseThemeColor = ctThemeColor
     DrawCheckRectParam.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
-    DrawCheckRectParam.DrawEffectSetting.PushedEffect.FillColor.Color = 16085628
+    DrawCheckRectParam.DrawEffectSetting.PushedEffect.FillColor.Color = 10796800
     DrawCheckRectParam.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
     DrawCheckRectParam.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
     DrawCheckRectParam.DrawEffectSetting.PushedEffect.BorderColor.Color = 16092483
@@ -13534,11 +13477,11 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
   object btnSkinThemeColorMaterial: TSkinButtonDefaultMaterial
     StyleNameAliases.Strings = (
       'save_record')
-    BackColor.Color = 16085628
+    BackColor.Color = 10796800
     BackColor.IsFill = True
     BackColor.FillColor.UseThemeColor = ctThemeColor
     BackColor.FillColor.Alpha = 255
-    BackColor.FillColor.Color = 16085628
+    BackColor.FillColor.Color = 10796800
     BackColor.IsRound = True
     BackColor.BorderColor.Alpha = 255
     BackColor.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetAlphaChange]
@@ -13640,11 +13583,11 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawIconParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     DrawIconParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     DrawCaptionParam.FontName = 'Tahoma'
-    DrawCaptionParam.FontSize = 15
+    DrawCaptionParam.FontSize = 12
     DrawCaptionParam.FontColor = clWhite
     DrawCaptionParam.DrawFont.Charset = DEFAULT_CHARSET
     DrawCaptionParam.DrawFont.Color = clWhite
-    DrawCaptionParam.DrawFont.Height = -20
+    DrawCaptionParam.DrawFont.Height = -16
     DrawCaptionParam.DrawFont.Name = 'Tahoma'
     DrawCaptionParam.DrawFont.Style = []
     DrawCaptionParam.DrawFont.FontColor.Alpha = 255
@@ -13686,11 +13629,11 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
   object btnSkinTheme1ColorMaterial: TSkinButtonDefaultMaterial
     StyleNameAliases.Strings = (
       'save_record')
-    BackColor.Color = 8222060
+    BackColor.Color = 10983950
     BackColor.IsFill = True
     BackColor.FillColor.UseThemeColor = ctThemeColor1
     BackColor.FillColor.Alpha = 255
-    BackColor.FillColor.Color = 8222060
+    BackColor.FillColor.Color = 10983950
     BackColor.IsRound = True
     BackColor.RoundWidth = 3
     BackColor.RoundHeight = 3
@@ -13938,15 +13881,15 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawIconParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     DrawCaptionParam.FontName = 'Tahoma'
     DrawCaptionParam.FontSize = 16
-    DrawCaptionParam.FontColor = 16085628
+    DrawCaptionParam.FontColor = 10796800
     DrawCaptionParam.DrawFont.Charset = DEFAULT_CHARSET
-    DrawCaptionParam.DrawFont.Color = 16085628
+    DrawCaptionParam.DrawFont.Color = 10796800
     DrawCaptionParam.DrawFont.Height = -21
     DrawCaptionParam.DrawFont.Name = 'Tahoma'
     DrawCaptionParam.DrawFont.Style = []
     DrawCaptionParam.DrawFont.FontColor.UseThemeColor = ctThemeColor
     DrawCaptionParam.DrawFont.FontColor.Alpha = 255
-    DrawCaptionParam.DrawFont.FontColor.Color = 16085628
+    DrawCaptionParam.DrawFont.FontColor.Color = 10796800
     DrawCaptionParam.FontTrimming = fttNone
     DrawCaptionParam.FontHorzAlign = fhaCenter
     DrawCaptionParam.FontVertAlign = fvaCenter
@@ -14015,7 +13958,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawArrowPictureParam.FixedColor.Alpha = 255
     DrawArrowPictureParam.DrawRectSetting.Height = 24.000000000000000000
     DrawArrowPictureParam.DrawRectSetting.Enabled = True
-    DrawArrowPictureParam.DrawRectSetting.SizeType = dpstPixel
     DrawArrowPictureParam.DrawRectSetting.PositionVertType = dppvtCenter
     DrawArrowPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     DrawArrowPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -14035,7 +13977,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawPictureParam.FixedColor.Alpha = 255
     DrawPictureParam.DrawRectSetting.Height = 2.000000000000000000
     DrawPictureParam.DrawRectSetting.Enabled = True
-    DrawPictureParam.DrawRectSetting.SizeType = dpstPixel
     DrawPictureParam.DrawRectSetting.PositionVertType = dppvtBottom
     DrawPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     DrawPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -14057,7 +13998,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawHelpTextParam.FontVertAlign = fvaCenter
     DrawHelpTextParam.DrawRectSetting.Left = 10.000000000000000000
     DrawHelpTextParam.DrawRectSetting.Enabled = True
-    DrawHelpTextParam.DrawRectSetting.SizeType = dpstPixel
     DrawHelpTextParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
     DrawHelpTextParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
     DrawHelpTextParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
@@ -14079,7 +14019,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawTextParam.FontHorzAlign = fhaLeft
     DrawTextParam.FontVertAlign = fvaCenter
     DrawTextParam.DrawRectSetting.Left = 10.000000000000000000
-    DrawTextParam.DrawRectSetting.SizeType = dpstPixel
     DrawTextParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
     DrawTextParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
     DrawTextParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
@@ -14241,7 +14180,7 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
       000015000000001810040000004900730043006C006900700052006F0075006E
       00640000002F6626546A52C18810620657625F0000000000001900000000160A
       050000004600690078006500640043006F006C006F0072000000038C74659C98
-      728200000000002000}
+      728200000000002065}
     PictureList = <
       item
         DrawPicture.IsClipRound = False
@@ -14522,7 +14461,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawIconParam.DrawRectSetting.Right = 5.000000000000000000
     DrawIconParam.DrawRectSetting.Bottom = 5.000000000000000000
     DrawIconParam.DrawRectSetting.Enabled = True
-    DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -14544,7 +14482,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawCaptionParam.FontVertAlign = fvaCenter
     DrawCaptionParam.DrawRectSetting.Left = 6.000000000000000000
     DrawCaptionParam.DrawRectSetting.Enabled = True
-    DrawCaptionParam.DrawRectSetting.SizeType = dpstPixel
     DrawCaptionParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     DrawCaptionParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
     DrawCaptionParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
@@ -14675,7 +14612,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawIconParam.FixedColor.Alpha = 255
     DrawIconParam.DrawRectSetting.Bottom = 20.000000000000000000
     DrawIconParam.DrawRectSetting.Enabled = True
-    DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     DrawIconParam.DrawRectSetting.PositionHorzType = dpphtCenter
     DrawIconParam.DrawRectSetting.PositionVertType = dppvtCenter
     DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
@@ -14725,7 +14661,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawPictureParam.FixedColor.Alpha = 255
     DrawPictureParam.DrawRectSetting.Bottom = 20.000000000000000000
     DrawPictureParam.DrawRectSetting.Enabled = True
-    DrawPictureParam.DrawRectSetting.SizeType = dpstPixel
     DrawPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     DrawPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
     DrawPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
@@ -14737,11 +14672,11 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     StyleName = 'Default'
     StyleNameAliases.Strings = (
       'save_record')
-    BackColor.Color = 16085628
+    BackColor.Color = 10796800
     BackColor.IsFill = True
     BackColor.FillColor.UseThemeColor = ctThemeColor
     BackColor.FillColor.Alpha = 255
-    BackColor.FillColor.Color = 16085628
+    BackColor.FillColor.Color = 10796800
     BackColor.IsRound = True
     BackColor.RoundWidth = 3
     BackColor.RoundHeight = 3
@@ -14844,7 +14779,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawIconParam.DrawRectSetting.Top = 5.000000000000000000
     DrawIconParam.DrawRectSetting.Bottom = 5.000000000000000000
     DrawIconParam.DrawRectSetting.Enabled = True
-    DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -14904,11 +14838,11 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     StyleName = 'Default1'
     StyleNameAliases.Strings = (
       'save_record')
-    BackColor.Color = 8222060
+    BackColor.Color = 10983950
     BackColor.IsFill = True
     BackColor.FillColor.UseThemeColor = ctThemeColor1
     BackColor.FillColor.Alpha = 255
-    BackColor.FillColor.Color = 8222060
+    BackColor.FillColor.Color = 10983950
     BackColor.IsRound = True
     BackColor.RoundWidth = 3
     BackColor.RoundHeight = 3
@@ -15010,7 +14944,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawIconParam.DrawRectSetting.Top = 5.000000000000000000
     DrawIconParam.DrawRectSetting.Bottom = 5.000000000000000000
     DrawIconParam.DrawRectSetting.Enabled = True
-    DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -15107,14 +15040,13 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawTabCaptionParam.FontVertAlign = fvaCenter
     DrawTabCaptionParam.DrawRectSetting.Top = 1.000000000000000000
     DrawTabCaptionParam.DrawRectSetting.Enabled = True
-    DrawTabCaptionParam.DrawRectSetting.SizeType = dpstPixel
     DrawTabCaptionParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
     DrawTabCaptionParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
     DrawTabCaptionParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
     DrawTabCaptionParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
     DrawTabCaptionParam.DrawEffectSetting.PushedEffect.FontColor.UseThemeColor = ctThemeColor
     DrawTabCaptionParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
-    DrawTabCaptionParam.DrawEffectSetting.PushedEffect.FontColor.Color = 16085628
+    DrawTabCaptionParam.DrawEffectSetting.PushedEffect.FontColor.Color = 10796800
     DrawTabCaptionParam.DrawEffectSetting.PushedEffect.FontSize = 12
     DrawTabCaptionParam.DrawEffectSetting.PushedEffect.EffectTypes = [dtpetFontColorChange]
     DrawTabCaptionParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
@@ -15150,7 +15082,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     TabBackColor.DrawRectSetting.Left = 2.000000000000000000
     TabBackColor.DrawRectSetting.Top = 2.000000000000000000
     TabBackColor.DrawRectSetting.Enabled = True
-    TabBackColor.DrawRectSetting.SizeType = dpstPixel
     TabBackColor.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
     TabBackColor.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
     TabBackColor.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
@@ -15162,7 +15093,7 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     TabBackColor.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
     TabBackColor.DrawEffectSetting.PushedEffect.BorderColor.UseThemeColor = ctThemeColor
     TabBackColor.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
-    TabBackColor.DrawEffectSetting.PushedEffect.BorderColor.Color = 16085628
+    TabBackColor.DrawEffectSetting.PushedEffect.BorderColor.Color = 10796800
     TabBackColor.DrawEffectSetting.PushedEffect.EffectTypes = [drpetBorderColorChange]
     TabBackColor.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
     TabBackColor.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
@@ -15179,7 +15110,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawTabBackColorParam.DrawRectSetting.Left = 2.000000000000000000
     DrawTabBackColorParam.DrawRectSetting.Top = 2.000000000000000000
     DrawTabBackColorParam.DrawRectSetting.Enabled = True
-    DrawTabBackColorParam.DrawRectSetting.SizeType = dpstPixel
     DrawTabBackColorParam.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
     DrawTabBackColorParam.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
     DrawTabBackColorParam.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
@@ -15191,7 +15121,7 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawTabBackColorParam.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
     DrawTabBackColorParam.DrawEffectSetting.PushedEffect.BorderColor.UseThemeColor = ctThemeColor
     DrawTabBackColorParam.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
-    DrawTabBackColorParam.DrawEffectSetting.PushedEffect.BorderColor.Color = 16085628
+    DrawTabBackColorParam.DrawEffectSetting.PushedEffect.BorderColor.Color = 10796800
     DrawTabBackColorParam.DrawEffectSetting.PushedEffect.EffectTypes = [drpetBorderColorChange]
     DrawTabBackColorParam.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
     DrawTabBackColorParam.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
@@ -15207,7 +15137,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawTabBackColor2Param.DrawRectSetting.Top = 2.000000000000000000
     DrawTabBackColor2Param.DrawRectSetting.Height = 3.000000000000000000
     DrawTabBackColor2Param.DrawRectSetting.Enabled = True
-    DrawTabBackColor2Param.DrawRectSetting.SizeType = dpstPixel
     DrawTabBackColor2Param.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
     DrawTabBackColor2Param.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
     DrawTabBackColor2Param.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
@@ -15277,11 +15206,11 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     StyleName = 'Default2'
     StyleNameAliases.Strings = (
       'save_record')
-    BackColor.Color = 9948938
+    BackColor.Color = 5088255
     BackColor.IsFill = True
     BackColor.FillColor.UseThemeColor = ctThemeColor2
     BackColor.FillColor.Alpha = 255
-    BackColor.FillColor.Color = 9948938
+    BackColor.FillColor.Color = 5088255
     BackColor.IsRound = True
     BackColor.RoundWidth = 3
     BackColor.RoundHeight = 3
@@ -15382,7 +15311,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     DrawIconParam.DrawRectSetting.Enabled = True
-    DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -15440,11 +15368,11 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     StyleName = 'Default3'
     StyleNameAliases.Strings = (
       'save_record')
-    BackColor.Color = 8150266
+    BackColor.Color = 7697910
     BackColor.IsFill = True
     BackColor.FillColor.UseThemeColor = ctThemeColor3
     BackColor.FillColor.Alpha = 255
-    BackColor.FillColor.Color = 8150266
+    BackColor.FillColor.Color = 7697910
     BackColor.IsRound = True
     BackColor.RoundWidth = 3
     BackColor.RoundHeight = 3
@@ -15545,7 +15473,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     DrawIconParam.DrawRectSetting.Enabled = True
-    DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -15754,11 +15681,11 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
   object btnThemeColorCaptionLeftIconRight: TSkinButtonDefaultMaterial
     StyleNameAliases.Strings = (
       'save_record')
-    BackColor.Color = 16085628
+    BackColor.Color = 10796800
     BackColor.IsFill = True
     BackColor.FillColor.UseThemeColor = ctThemeColor
     BackColor.FillColor.Alpha = 255
-    BackColor.FillColor.Color = 16085628
+    BackColor.FillColor.Color = 10796800
     BackColor.IsRound = True
     BackColor.RoundWidth = 3
     BackColor.RoundHeight = 3
@@ -15862,7 +15789,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     DrawIconParam.DrawRectSetting.Enabled = True
-    DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
     DrawIconParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
@@ -15924,7 +15850,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     BackColor.BorderWidth = 1
     BackColor.DrawRectSetting.Right = 1.000000000000000000
     BackColor.DrawRectSetting.Bottom = 1.000000000000000000
-    BackColor.DrawRectSetting.SizeType = dpstPixel
     BackColor.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
     BackColor.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
     BackColor.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
@@ -16117,7 +16042,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawIconParam.DrawRectSetting.Top = 5.000000000000000000
     DrawIconParam.DrawRectSetting.Bottom = 5.000000000000000000
     DrawIconParam.DrawRectSetting.Enabled = True
-    DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -16171,11 +16095,11 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     Top = 592
   end
   object frmDefaultNormalMaterial: TSkinFormNormalMaterial
-    BackColor.Color = 16085628
+    BackColor.Color = 10796800
     BackColor.IsFill = True
     BackColor.FillColor.UseThemeColor = ctThemeColor
     BackColor.FillColor.Alpha = 255
-    BackColor.FillColor.Color = 16085628
+    BackColor.FillColor.Color = 10796800
     BackColor.BorderColor.Alpha = 255
     BackColor.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
     BackColor.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
@@ -16225,11 +16149,11 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawClientRectParam.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
     DrawClientRectParam.DrawEffectSetting.FocusedEffect.FillColorChangeType = cctNone
     DrawClientRectParam.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
-    DrawBorderRectParam.Color = 16085628
+    DrawBorderRectParam.Color = 10796800
     DrawBorderRectParam.IsFill = True
     DrawBorderRectParam.FillColor.UseThemeColor = ctThemeColor
     DrawBorderRectParam.FillColor.Alpha = 255
-    DrawBorderRectParam.FillColor.Color = 16085628
+    DrawBorderRectParam.FillColor.Color = 10796800
     DrawBorderRectParam.BorderColor.Alpha = 255
     DrawBorderRectParam.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
     DrawBorderRectParam.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
@@ -16246,11 +16170,11 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawBorderRectParam.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
     DrawBorderRectParam.DrawEffectSetting.FocusedEffect.FillColorChangeType = cctNone
     DrawBorderRectParam.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
-    DrawCaptionBarRectParam.Color = 16085628
+    DrawCaptionBarRectParam.Color = 10796800
     DrawCaptionBarRectParam.IsFill = True
     DrawCaptionBarRectParam.FillColor.UseThemeColor = ctThemeColor
     DrawCaptionBarRectParam.FillColor.Alpha = 255
-    DrawCaptionBarRectParam.FillColor.Color = 16085628
+    DrawCaptionBarRectParam.FillColor.Color = 10796800
     DrawCaptionBarRectParam.BorderColor.Alpha = 255
     DrawCaptionBarRectParam.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
     DrawCaptionBarRectParam.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
@@ -16320,7 +16244,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     BackGndDrawPictureParam.StretchMargins.Bottom = 40
     BackGndDrawPictureParam.FixedColor.Alpha = 255
     BackGndDrawPictureParam.DrawRectSetting.Height = 50.000000000000000000
-    BackGndDrawPictureParam.DrawRectSetting.SizeType = dpstPixel
     BackGndDrawPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     BackGndDrawPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
     BackGndDrawPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
@@ -16438,7 +16361,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     DrawIconParam.DrawRectSetting.Enabled = True
-    DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -16533,14 +16455,13 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawTabCaptionParam.FontVertAlign = fvaCenter
     DrawTabCaptionParam.DrawRectSetting.Top = 1.000000000000000000
     DrawTabCaptionParam.DrawRectSetting.Enabled = True
-    DrawTabCaptionParam.DrawRectSetting.SizeType = dpstPixel
     DrawTabCaptionParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
     DrawTabCaptionParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
     DrawTabCaptionParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
     DrawTabCaptionParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
     DrawTabCaptionParam.DrawEffectSetting.PushedEffect.FontColor.UseThemeColor = ctThemeColor
     DrawTabCaptionParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
-    DrawTabCaptionParam.DrawEffectSetting.PushedEffect.FontColor.Color = 16085628
+    DrawTabCaptionParam.DrawEffectSetting.PushedEffect.FontColor.Color = 10796800
     DrawTabCaptionParam.DrawEffectSetting.PushedEffect.FontSize = 12
     DrawTabCaptionParam.DrawEffectSetting.PushedEffect.EffectTypes = [dtpetFontColorChange]
     DrawTabCaptionParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
@@ -16576,7 +16497,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     TabBackColor.BorderWidth = 1
     TabBackColor.DrawRectSetting.Top = 2.000000000000000000
     TabBackColor.DrawRectSetting.Enabled = True
-    TabBackColor.DrawRectSetting.SizeType = dpstPixel
     TabBackColor.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
     TabBackColor.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
     TabBackColor.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
@@ -16588,7 +16508,7 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     TabBackColor.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
     TabBackColor.DrawEffectSetting.PushedEffect.BorderColor.UseThemeColor = ctThemeColor
     TabBackColor.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
-    TabBackColor.DrawEffectSetting.PushedEffect.BorderColor.Color = 16085628
+    TabBackColor.DrawEffectSetting.PushedEffect.BorderColor.Color = 10796800
     TabBackColor.DrawEffectSetting.PushedEffect.EffectTypes = [drpetBorderColorChange]
     TabBackColor.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
     TabBackColor.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
@@ -16605,7 +16525,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawTabBackColorParam.BorderWidth = 1
     DrawTabBackColorParam.DrawRectSetting.Top = 2.000000000000000000
     DrawTabBackColorParam.DrawRectSetting.Enabled = True
-    DrawTabBackColorParam.DrawRectSetting.SizeType = dpstPixel
     DrawTabBackColorParam.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
     DrawTabBackColorParam.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
     DrawTabBackColorParam.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
@@ -16617,7 +16536,7 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawTabBackColorParam.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
     DrawTabBackColorParam.DrawEffectSetting.PushedEffect.BorderColor.UseThemeColor = ctThemeColor
     DrawTabBackColorParam.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
-    DrawTabBackColorParam.DrawEffectSetting.PushedEffect.BorderColor.Color = 16085628
+    DrawTabBackColorParam.DrawEffectSetting.PushedEffect.BorderColor.Color = 10796800
     DrawTabBackColorParam.DrawEffectSetting.PushedEffect.EffectTypes = [drpetBorderColorChange]
     DrawTabBackColorParam.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
     DrawTabBackColorParam.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
@@ -16632,7 +16551,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawTabBackColor2Param.BorderColor.Alpha = 255
     DrawTabBackColor2Param.DrawRectSetting.Height = 3.000000000000000000
     DrawTabBackColor2Param.DrawRectSetting.Enabled = True
-    DrawTabBackColor2Param.DrawRectSetting.SizeType = dpstPixel
     DrawTabBackColor2Param.DrawRectSetting.PositionVertType = dppvtBottom
     DrawTabBackColor2Param.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
     DrawTabBackColor2Param.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
@@ -16809,7 +16727,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     DrawIconParam.DrawRectSetting.Enabled = True
-    DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -16818,15 +16735,15 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawIconParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     DrawCaptionParam.FontName = #24494#36719#38597#40657
     DrawCaptionParam.FontSize = 12
-    DrawCaptionParam.FontColor = 16085628
+    DrawCaptionParam.FontColor = 10796800
     DrawCaptionParam.DrawFont.Charset = DEFAULT_CHARSET
-    DrawCaptionParam.DrawFont.Color = 16085628
+    DrawCaptionParam.DrawFont.Color = 10796800
     DrawCaptionParam.DrawFont.Height = -16
     DrawCaptionParam.DrawFont.Name = #24494#36719#38597#40657
     DrawCaptionParam.DrawFont.Style = []
     DrawCaptionParam.DrawFont.FontColor.UseThemeColor = ctThemeColor
     DrawCaptionParam.DrawFont.FontColor.Alpha = 255
-    DrawCaptionParam.DrawFont.FontColor.Color = 16085628
+    DrawCaptionParam.DrawFont.FontColor.Color = 10796800
     DrawCaptionParam.FontTrimming = fttNone
     DrawCaptionParam.FontHorzAlign = fhaLeft
     DrawCaptionParam.FontVertAlign = fvaCenter
@@ -16974,7 +16891,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     DrawIconParam.DrawRectSetting.Enabled = True
-    DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -17129,7 +17045,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawIconParam.DrawRectSetting.Right = 5.000000000000000000
     DrawIconParam.DrawRectSetting.Bottom = 5.000000000000000000
     DrawIconParam.DrawRectSetting.Enabled = True
-    DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -17138,21 +17053,20 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawIconParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     DrawCaptionParam.FontName = #24494#36719#38597#40657
     DrawCaptionParam.FontSize = 12
-    DrawCaptionParam.FontColor = 16085628
+    DrawCaptionParam.FontColor = 10796800
     DrawCaptionParam.DrawFont.Charset = DEFAULT_CHARSET
-    DrawCaptionParam.DrawFont.Color = 16085628
+    DrawCaptionParam.DrawFont.Color = 10796800
     DrawCaptionParam.DrawFont.Height = -16
     DrawCaptionParam.DrawFont.Name = #24494#36719#38597#40657
     DrawCaptionParam.DrawFont.Style = []
     DrawCaptionParam.DrawFont.FontColor.UseThemeColor = ctThemeColor
     DrawCaptionParam.DrawFont.FontColor.Alpha = 255
-    DrawCaptionParam.DrawFont.FontColor.Color = 16085628
+    DrawCaptionParam.DrawFont.FontColor.Color = 10796800
     DrawCaptionParam.FontTrimming = fttNone
     DrawCaptionParam.FontHorzAlign = fhaLeft
     DrawCaptionParam.FontVertAlign = fvaCenter
     DrawCaptionParam.DrawRectSetting.Left = 6.000000000000000000
     DrawCaptionParam.DrawRectSetting.Enabled = True
-    DrawCaptionParam.DrawRectSetting.SizeType = dpstPixel
     DrawCaptionParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     DrawCaptionParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
     DrawCaptionParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
@@ -17457,7 +17371,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawItemBackColorParam.DrawRectSetting.Width = 20.000000000000000000
     DrawItemBackColorParam.DrawRectSetting.Height = 4.000000000000000000
     DrawItemBackColorParam.DrawRectSetting.Enabled = True
-    DrawItemBackColorParam.DrawRectSetting.SizeType = dpstPixel
     DrawItemBackColorParam.DrawRectSetting.PositionHorzType = dpphtCenter
     DrawItemBackColorParam.DrawRectSetting.PositionVertType = dppvtBottom
     DrawItemBackColorParam.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
@@ -17469,7 +17382,7 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawItemBackColorParam.DrawEffectSetting.PushedEffect.IsFill = True
     DrawItemBackColorParam.DrawEffectSetting.PushedEffect.FillColor.UseThemeColor = ctThemeColor
     DrawItemBackColorParam.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
-    DrawItemBackColorParam.DrawEffectSetting.PushedEffect.FillColor.Color = 16085628
+    DrawItemBackColorParam.DrawEffectSetting.PushedEffect.FillColor.Color = 10796800
     DrawItemBackColorParam.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
     DrawItemBackColorParam.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
     DrawItemBackColorParam.DrawEffectSetting.PushedEffect.EffectTypes = [drpetFillColorChange, drpetIsFillChange]
@@ -17545,7 +17458,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawItemCaptionParam.FontVertAlign = fvaCenter
     DrawItemCaptionParam.DrawRectSetting.Bottom = 10.000000000000000000
     DrawItemCaptionParam.DrawRectSetting.Enabled = True
-    DrawItemCaptionParam.DrawRectSetting.SizeType = dpstPixel
     DrawItemCaptionParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
     DrawItemCaptionParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
     DrawItemCaptionParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
@@ -17738,7 +17650,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DefaultTypeItemMaterial.DrawItemBackColorParam.DrawRectSetting.Width = 20.000000000000000000
     DefaultTypeItemMaterial.DrawItemBackColorParam.DrawRectSetting.Height = 4.000000000000000000
     DefaultTypeItemMaterial.DrawItemBackColorParam.DrawRectSetting.Enabled = True
-    DefaultTypeItemMaterial.DrawItemBackColorParam.DrawRectSetting.SizeType = dpstPixel
     DefaultTypeItemMaterial.DrawItemBackColorParam.DrawRectSetting.PositionHorzType = dpphtCenter
     DefaultTypeItemMaterial.DrawItemBackColorParam.DrawRectSetting.PositionVertType = dppvtBottom
     DefaultTypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
@@ -17750,7 +17661,7 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DefaultTypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.PushedEffect.IsFill = True
     DefaultTypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.PushedEffect.FillColor.UseThemeColor = ctThemeColor
     DefaultTypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
-    DefaultTypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.PushedEffect.FillColor.Color = 16085628
+    DefaultTypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.PushedEffect.FillColor.Color = 10796800
     DefaultTypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
     DefaultTypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
     DefaultTypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.PushedEffect.EffectTypes = [drpetFillColorChange, drpetIsFillChange]
@@ -17778,7 +17689,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DefaultTypeItemMaterial.DrawItemCaptionParam.FontVertAlign = fvaCenter
     DefaultTypeItemMaterial.DrawItemCaptionParam.DrawRectSetting.Bottom = 10.000000000000000000
     DefaultTypeItemMaterial.DrawItemCaptionParam.DrawRectSetting.Enabled = True
-    DefaultTypeItemMaterial.DrawItemCaptionParam.DrawRectSetting.SizeType = dpstPixel
     DefaultTypeItemMaterial.DrawItemCaptionParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
     DefaultTypeItemMaterial.DrawItemCaptionParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
     DefaultTypeItemMaterial.DrawItemCaptionParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
@@ -18275,15 +18185,15 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawIconParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     DrawCaptionParam.FontName = 'Tahoma'
     DrawCaptionParam.FontSize = 12
-    DrawCaptionParam.FontColor = 16085628
+    DrawCaptionParam.FontColor = 10796800
     DrawCaptionParam.DrawFont.Charset = DEFAULT_CHARSET
-    DrawCaptionParam.DrawFont.Color = 16085628
+    DrawCaptionParam.DrawFont.Color = 10796800
     DrawCaptionParam.DrawFont.Height = -16
     DrawCaptionParam.DrawFont.Name = 'Tahoma'
     DrawCaptionParam.DrawFont.Style = []
     DrawCaptionParam.DrawFont.FontColor.UseThemeColor = ctThemeColor
     DrawCaptionParam.DrawFont.FontColor.Alpha = 255
-    DrawCaptionParam.DrawFont.FontColor.Color = 16085628
+    DrawCaptionParam.DrawFont.FontColor.Color = 10796800
     DrawCaptionParam.FontTrimming = fttNone
     DrawCaptionParam.FontHorzAlign = fhaCenter
     DrawCaptionParam.FontVertAlign = fvaCenter
@@ -18424,7 +18334,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawIconParam.DrawRectSetting.Right = 5.000000000000000000
     DrawIconParam.DrawRectSetting.Bottom = 5.000000000000000000
     DrawIconParam.DrawRectSetting.Enabled = True
-    DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -18443,7 +18352,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawCaptionParam.FontVertAlign = fvaCenter
     DrawCaptionParam.DrawRectSetting.Left = 6.000000000000000000
     DrawCaptionParam.DrawRectSetting.Enabled = True
-    DrawCaptionParam.DrawRectSetting.SizeType = dpstPixel
     DrawCaptionParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     DrawCaptionParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
     DrawCaptionParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
@@ -18474,7 +18382,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawPictureParam.FixedColor.Alpha = 255
     DrawPictureParam.DrawRectSetting.Width = 20.000000000000000000
     DrawPictureParam.DrawRectSetting.Enabled = True
-    DrawPictureParam.DrawRectSetting.SizeType = dpstPixel
     DrawPictureParam.DrawRectSetting.PositionHorzType = dpphtRight
     DrawPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     DrawPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -18495,7 +18402,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     BackColor.BorderWidth = 1
     BackColor.DrawRectSetting.Right = 1.000000000000000000
     BackColor.DrawRectSetting.Bottom = 1.000000000000000000
-    BackColor.DrawRectSetting.SizeType = dpstPixel
     BackColor.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
     BackColor.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
     BackColor.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
@@ -18616,7 +18522,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawArrowPictureParam.DrawRectSetting.Right = 4.000000000000000000
     DrawArrowPictureParam.DrawRectSetting.Width = 12.000000000000000000
     DrawArrowPictureParam.DrawRectSetting.Enabled = True
-    DrawArrowPictureParam.DrawRectSetting.SizeType = dpstPixel
     DrawArrowPictureParam.DrawRectSetting.PositionHorzType = dpphtRight
     DrawArrowPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     DrawArrowPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -18717,7 +18622,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawArrowPictureParam.DrawRectSetting.Right = 4.000000000000000000
     DrawArrowPictureParam.DrawRectSetting.Width = 12.000000000000000000
     DrawArrowPictureParam.DrawRectSetting.Enabled = True
-    DrawArrowPictureParam.DrawRectSetting.SizeType = dpstPixel
     DrawArrowPictureParam.DrawRectSetting.PositionHorzType = dpphtRight
     DrawArrowPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     DrawArrowPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -18893,7 +18797,6 @@ object dmEasyServiceCommonMaterial: TdmEasyServiceCommonMaterial
     DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     DrawIconParam.DrawRectSetting.Enabled = True
-    DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255

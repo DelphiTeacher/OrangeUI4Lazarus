@@ -1074,7 +1074,7 @@ end;
 
 function TSkinItemGridColumn.GetSelfOwnMaterial: TSkinItemGridColumnMaterial;
 begin
-  Result:=TSkinItemGridColumnMaterial(FColumnMaterial);
+  Result:=TSkinItemGridColumnMaterial(FMaterial);
 end;
 
 function TSkinItemGridColumn.GetValueType(ARow: TBaseSkinItem): TVarType;
@@ -1131,7 +1131,7 @@ end;
 
 procedure TSkinItemGridColumn.SetSelfOwnMaterial(const Value: TSkinItemGridColumnMaterial);
 begin
-  FColumnMaterial.Assign(Value);
+  FMaterial.Assign(Value);
 end;
 
 //procedure TSkinItemGridColumn.SetSubItemsIndex(const Value: Integer);

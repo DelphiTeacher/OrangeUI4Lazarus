@@ -120,6 +120,7 @@ type
 
 
 
+  TStopEditingItemMode=(seimAuto,seimManual);
 
 
   //ListBox.Prop.ItemHeight,
@@ -159,7 +160,7 @@ type
   //点击设计面板上面子控件的事件
   TCustomListClickItemDesignerPanelChildEvent=procedure(Sender:TObject;
                                         AItem:TBaseSkinItem;//这里应该用TBaseSkinItem
-                                        AItemDesignerPanel:TItemDesignerPanel;
+                                        AItemDesignerPanel:TSkinItemDesignerPanel;
                                         AChild:TChildControl) of object;
 //  //设计面板上面的子控件是否可以启动编辑
 //  TCustomListItemDesignerPanelChildCanStartEditEvent=procedure(Sender:TObject;
@@ -601,6 +602,8 @@ type
 
     //更新编辑控件的位置(在绘制的时候)
     procedure SyncEditControlBounds;
+
+    procedure DoEditingItem_EditControlExit(Sender:TObject);
   public
     //自己调整大小，当鼠标移动到分隔线的时候，鼠标变为可以调整宽度
     FEnableResizeItemWidth:Boolean;
@@ -614,7 +617,7 @@ type
     FCanResizeItemMaxWidth:Double;
     FCanResizeItemMaxHeight:Double;
 
-
+    FStopEditingItemMode:TStopEditingItemMode;
 
     /// <summary>
     ///   <para>
@@ -1321,6 +1324,8 @@ type
     property EmptyContentPicture:TDrawPicture read FEmptyContentPicture write SetEmptyContentPicture;
     property EmptyContentCaption:String read FEmptyContentCaption write SetEmptyContentCaption;
     property EmptyContentDescription:String read FEmptyContentDescription write SetEmptyContentDescription;
+
+    property StopEditingItemMode:TStopEditingItemMode read FStopEditingItemMode write FStopEditingItemMode;
   end;
 
 
@@ -3564,6 +3569,14 @@ begin
 
 end;
 
+procedure TCustomListProperties.DoEditingItem_EditControlExit(Sender: TObject);
+begin
+  if (FSkinCustomListIntf.Prop.FStopEditingItemMode=seimAuto) then
+  begin
+    Self.StopEditingItem;
+  end;
+end;
+
 function TCustomListProperties.DoGetListLayoutsManagerControlHeight(Sender: TObject): Double;
 begin
   Result:=Self.FSkinControlIntf.Height;
@@ -4681,8 +4694,9 @@ begin
 
 
     //停止编辑上次的列表项
-    if FEditingItem<>nil then
+    if (FEditingItem<>nil) then
     begin
+      //为啥要DoPropChange?
       FEditingItem.DoPropChange;
       StopEditingItem;
     end;
@@ -4788,6 +4802,11 @@ begin
         end;
         {$ENDIF}
 
+    end;
+
+    if (FEditingItem_EditControl is TEdit) and not Assigned(TEdit(FEditingItem_EditControl).OnExit) then
+    begin
+      TEdit(FEditingItem_EditControl).OnExit:=DoEditingItem_EditControlExit;
     end;
 
 
@@ -5988,7 +6007,14 @@ end;
 
 function TSkinCustomListDefaultType.DecideItemMaterial(AItem:TBaseSkinItem;ASkinMaterial:TSkinCustomListDefaultMaterial): TBaseSkinListItemMaterial;
 begin
-  Result:=ASkinMaterial.FDefaultTypeItemMaterial;
+  if AItem.FMaterial<>nil then
+  begin
+    Result:=TBaseSkinListItemMaterial(AItem.FMaterial);
+  end
+  else
+  begin
+    Result:=ASkinMaterial.FDefaultTypeItemMaterial;
+  end;
 end;
 
 function TSkinCustomListDefaultType.DoProcessItemCustomMouseDown(AMouseOverItem:TBaseSkinItem;AItemDrawRect:TRectF;Button: TMouseButton; Shift: TShiftState; X, Y: Double): Boolean;
@@ -6019,7 +6045,7 @@ var
 begin
   Result:=False;
 
-  if FSkinCustomListIntf.Prop.FEditingItem<>nil then
+  if (FSkinCustomListIntf.Prop.FEditingItem<>nil) and (FSkinCustomListIntf.Prop.FStopEditingItemMode=seimAuto) then
   begin
         //如果正在编辑列表项属性,然后点击其他地方,就取消编辑
         if (Self.FMouseDownAbsolutePt.X<>0)
@@ -6034,7 +6060,7 @@ begin
             end
             else
             begin
-
+                //列表项没有切换过
                 AItemDrawRect:=AMouseDownItem.ItemDrawRect;
 
                 //是否点击了编辑控件的外面
@@ -6198,12 +6224,14 @@ begin
               Self.FSkinCustomListIntf.Prop.InnerMouseDownItem;
 
 
-        if Self.FSkinCustomListIntf.Prop.FInnerMouseDownItem<>
-          Self.FSkinCustomListIntf.Prop.FEditingItem then
+        if (Self.FSkinCustomListIntf.Prop.FEditingItem<>nil)
+          and (Self.FSkinCustomListIntf.Prop.FInnerMouseDownItem<>Self.FSkinCustomListIntf.Prop.FEditingItem)
+          and (FSkinCustomListIntf.Prop.FStopEditingItemMode=seimAuto) then
         begin
           //点击的列表项切换过了,结束编辑
           Self.FSkinCustomListIntf.Prop.StopEditingItem;
-        end
+        end;
+
     end;
 
 
@@ -7794,7 +7822,7 @@ begin
         AItemDesignerPanel.OnPrepareDrawItem(
                                             nil,
                                             nil,
-                                            TItemDesignerPanel(AItemDesignerPanel),
+                                            TSkinItemDesignerPanel(AItemDesignerPanel),
                                             TSkinItem(AItem),
                                             AItemDrawRectF
                                             );
@@ -7807,7 +7835,7 @@ begin
         TSkinVirtualList(Self.FCustomListProperties.FSkinControl).OnPrepareDrawItem(
               nil,
               nil,
-              TItemDesignerPanel(AItemDesignerPanel),
+              TSkinItemDesignerPanel(AItemDesignerPanel),
               TSkinItem(AItem),
               AItemDrawRect
               );
