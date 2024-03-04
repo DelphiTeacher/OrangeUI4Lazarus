@@ -1,4 +1,5 @@
-﻿unit DashBoard_AnalyseFrame;
+﻿//convert pas to utf8 by ¥
+unit DashBoard_AnalyseFrame;
 
 interface
 

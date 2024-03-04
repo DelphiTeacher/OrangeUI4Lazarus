@@ -84,9 +84,11 @@ type
 
   TfrmMain = class(TForm)
     lbSubMenu: TSkinWinTreeView;
-    imgUserHead: TImage;
-    SkinTheme1: TSkinTheme;
     DrawCanvasSetting1: TDrawCanvasSetting;
+    sbClient: TScrollBox;
+    SkinPanel1: TSkinPanel;
+    SkinTheme1: TSkinTheme;
+    pnlToolBar: TSkinPanel;
     btnShowHideMainMenu: TSkinWinButton;
     pnlSearch: TSkinWinPanel;
     imgSearchIcon: TSkinWinImage;
@@ -97,9 +99,7 @@ type
     btnMore: TSkinWinButton;
     btnSetting: TSkinWinButton;
     btnMy: TSkinWinButton;
-    sbClient: TScrollBox;
-    ComboBox1: TComboBox;
-    Image1: TImage;
+    imgUserHead: TImage;
     procedure btnMinClick(Sender: TObject);
     procedure btnNormalClick(Sender: TObject);
     procedure btnCloseClick(Sender: TObject);
@@ -131,6 +131,7 @@ type
       AItemDesignerPanel: TItemDesignerPanel; AItem: TSkinItem;
       AItemDrawRect: TRect);
     procedure sbClientClick(Sender: TObject);
+    procedure edtSearchChange(Sender: TObject);
 //    procedure lbSubMenuPrepareDrawItem(Sender: TObject; ACanvas: TDrawCanvas;
 //      AItemDesignerPanel: TSkinItemDesignerPanel; AItem: TSkinItem;
 //      AItemDrawRect: TRect);
@@ -216,6 +217,11 @@ end;
 procedure TfrmMain.btnSelectCountryClick(Sender: TObject);
 begin
   //
+end;
+
+procedure TfrmMain.edtSearchChange(Sender: TObject);
+begin
+
 end;
 
 //procedure TfrmMain.CreateParams(var Params: TCreateParams);

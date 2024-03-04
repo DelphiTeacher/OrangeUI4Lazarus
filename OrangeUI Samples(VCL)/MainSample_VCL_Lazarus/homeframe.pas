@@ -1,4 +1,5 @@
-﻿unit HomeFrame;
+﻿//convert pas to utf8 by ¥
+unit HomeFrame;
 
 interface
 
@@ -11,14 +12,21 @@ uses
 
 
   Math,
+  uSkinVirtualChartType,
+  OrderGridFrame,
   ListItemStyle_IconLeft_CaptionDetailRight,
   ListItemStyle_DashBoardSummaryItem,
+  DashBoard_LineChart_WeekSummaryFrame,
 //  Home_ItemGrid_TwoCellTextFrame,
-//  Home_ItemGrid_MutliColorProgressBarColumnFrame,
+  DashBoard_Analyse_ItemGrid_MutliColorProgressBarColumnFrame,
 //  Home_BarChart_MonthSummaryFrame,
+  DashBoard_Projects_PieChart_ProjectStatusFrame,
+  DashBoard_Analyse_BarChart_MonthSummaryFrame,
 
   uSkinWindowsControl, uSkinScrollControlType, uSkinCustomListType,
   uSkinVirtualListType, uSkinListViewType, uDrawCanvas, uSkinItems, Controls;
+
+
 
 type
   TFrameHome=class(TFrame)
@@ -34,7 +42,12 @@ type
 //    FItemGrid_TwoCellTextFrame:TFrameItemGrid_TwoCellText;
 //    FItemGrid_MultiColorProgressBarColumnFrame:TFrameItemGrid_MultiColorProgressBarColumn;
 //    FItemGrid_MultiColorProgressBarColumnFrame2:TFrameItemGrid_MultiColorProgressBarColumn;
-//    FBarChart_MonthSummaryFrame:TFrameBarChart_MonthSummary;
+    FPieChart_ProjectStatusFrame:TFramePieChart_ProjectStatus;
+    FBarChart_MonthSummaryFrame:TFrameBarChart_MonthSummary;
+    FItemGrid_MultiColorProgressBarColumnFrame:TFrameItemGrid_MultiColorProgressBarColumn;
+
+    FLineChart_WeekSummaryFrame:TFrameLineChart_WeekSummary;
+    FOrderGridFrame:TFrameOrderGrid;
 
     FControlLayoutItems:TControlLayoutItems;
     constructor Create(AOwner:TComponent);override;
@@ -42,7 +55,11 @@ type
     { Public declarations }
   end;
 
+
+
 implementation
+
+
 
 {$R *.dfm}
 
@@ -51,6 +68,35 @@ implementation
 constructor TFrameHome.Create(AOwner: TComponent);
 begin
   inherited;
+
+  FLineChart_WeekSummaryFrame:=TFrameLineChart_WeekSummary.Create(Self);
+  FLineChart_WeekSummaryFrame.Parent:=Self;
+
+  FPieChart_ProjectStatusFrame:=TFramePieChart_ProjectStatus.Create(Self);
+  FPieChart_ProjectStatusFrame.Parent:=Self;
+  FPieChart_ProjectStatusFrame.lvData.AlignWithMargins:=True;
+  FPieChart_ProjectStatusFrame.lvData.Margins.Bottom:=20;
+
+
+  FBarChart_MonthSummaryFrame:=TFrameBarChart_MonthSummary.Create(Self);
+  FBarChart_MonthSummaryFrame.Parent:=Self;
+//  FBarChart_MonthSummaryFrame.FSkinVirtualChart.Prop.SeriesList[0].ChartType:=sctLine;
+//  //X轴坐标
+//  FBarChart_MonthSummaryFrame.FSkinVirtualChart.Properties.AxisItems.BeginUpdate;
+//  try
+//    FBarChart_MonthSummaryFrame.FSkinVirtualChart.Properties.AxisItems.Clear;
+//    FBarChart_MonthSummaryFrame.FSkinVirtualChart.Properties.AxisItems.Add.Caption:='Jan';
+//    FBarChart_MonthSummaryFrame.FSkinVirtualChart.Properties.AxisItems.Add.Caption:='Feb';
+//    FBarChart_MonthSummaryFrame.FSkinVirtualChart.Properties.AxisItems.Add.Caption:='Mar';
+//    FBarChart_MonthSummaryFrame.FSkinVirtualChart.Properties.AxisItems.Add.Caption:='Apr';
+//    FBarChart_MonthSummaryFrame.FSkinVirtualChart.Properties.AxisItems.Add.Caption:='May';
+//  finally
+//    FBarChart_MonthSummaryFrame.FSkinVirtualChart.Properties.AxisItems.EndUpdate;
+//  end;
+
+  //
+  FOrderGridFrame:=TFrameOrderGrid.Create(Self);;
+  FOrderGridFrame.Parent:=Self;
 
 //  //热卖商品
 //  FItemGrid_TwoCellTextFrame:=TFrameItemGrid_TwoCellText.Create(Self);
@@ -64,15 +110,15 @@ begin
 //  FItemGrid_TwoCellTextFrame.pnlClient.BorderSpacing.Bottom:=-10;//(0,10,0,-5);
 //  {$ENDIF}
 ////  FItemGrid_TwoCellTextFrame.gridData.Prop.ColumnsHeaderHeight:=0;
-//
-//
-//  //渠道
-//  FItemGrid_MultiColorProgressBarColumnFrame:=TFrameItemGrid_MultiColorProgressBarColumn.Create(Self);
-//  FItemGrid_MultiColorProgressBarColumnFrame.Name:='FItemGrid_MultiColorProgressBarColumnFrame';
-//  FItemGrid_MultiColorProgressBarColumnFrame.Parent:=Self;
-//  FItemGrid_MultiColorProgressBarColumnFrame.pnlClient.Material.BackColor.ShadowSize:=5;
-////  FItemGrid_MultiColorProgressBarColumnFrame.gridData.Prop.ColumnsHeaderHeight:=0;
-//
+
+
+  //渠道
+  FItemGrid_MultiColorProgressBarColumnFrame:=TFrameItemGrid_MultiColorProgressBarColumn.Create(Self);
+  FItemGrid_MultiColorProgressBarColumnFrame.Name:='FItemGrid_MultiColorProgressBarColumnFrame';
+  FItemGrid_MultiColorProgressBarColumnFrame.Parent:=Self;
+  FItemGrid_MultiColorProgressBarColumnFrame.pnlClient.Material.BackColor.ShadowSize:=5;
+//  FItemGrid_MultiColorProgressBarColumnFrame.gridData.Prop.ColumnsHeaderHeight:=0;
+
 //
 //  //社交媒体流量
 //  FItemGrid_MultiColorProgressBarColumnFrame2:=TFrameItemGrid_MultiColorProgressBarColumn.Create(Self);
@@ -101,28 +147,42 @@ begin
 //
 //  FBarChart_MonthSummaryFrame:=TFrameBarChart_MonthSummary.Create(Self);
 //  FBarChart_MonthSummaryFrame.Parent:=Self;
-//
-//
-//  FControlLayoutItems:=TControlLayoutItems.Create;
-//  //添加两个需要排列的控件，两个控件的设计时高度要保持一致
-//  FControlLayoutItems.Add(SkinWinListView1,-1,SkinWinListView1.Height);
-//  //热卖商品
-//  FControlLayoutItems.Add(FItemGrid_TwoCellTextFrame,-1,FItemGrid_TwoCellTextFrame.Height);
-//
+
+
+  FControlLayoutItems:=TControlLayoutItems.Create;
+
+
+  //添加两个需要排列的控件,两个控件的设计时高度要保持一致
+  FControlLayoutItems.Add(SkinListView1,-2,SkinListView1.Height);
+  //热卖商品
+  FControlLayoutItems.Add(FLineChart_WeekSummaryFrame,-2,FLineChart_WeekSummaryFrame.Height);
+
+  FControlLayoutItems.Add(FPieChart_ProjectStatusFrame,0.3333,FPieChart_ProjectStatusFrame.Height).FThisRowItemCount:=2;
+  FControlLayoutItems.Add(FBarChart_MonthSummaryFrame,0.6666,FPieChart_ProjectStatusFrame.Height).FThisRowItemCount:=2;
+
+//  FControlLayoutItems.Add(FPieChart_ProjectStatusFrame,-1,FPieChart_ProjectStatusFrame.Height);
+//  FControlLayoutItems.Add(FBarChart_MonthSummaryFrame,-1,FPieChart_ProjectStatusFrame.Height);
+
+//  FControlLayoutItems.Add(FPieChart_ProjectStatusFrame,-1,FPieChart_ProjectStatusFrame.Height);
+//  FControlLayoutItems.Add(FBarChart_MonthSummaryFrame,-1,FPieChart_ProjectStatusFrame.Height);
+
+  FControlLayoutItems.Add(FOrderGridFrame,0.6,300).FThisRowItemCount:=2;;
+  //渠道
+  FControlLayoutItems.Add(FItemGrid_MultiColorProgressBarColumnFrame,0.4,300).FThisRowItemCount:=2;;
+
 //  //一整排报表
 //  FControlLayoutItems.Add(FBarChart_MonthSummaryFrame,-2,FBarChart_MonthSummaryFrame.Height);
 //
-//  //渠道
-//  FControlLayoutItems.Add(FItemGrid_MultiColorProgressBarColumnFrame,-1,FItemGrid_MultiColorProgressBarColumnFrame.Height);
 //  //社交媒体流量
 //  FControlLayoutItems.Add(FItemGrid_MultiColorProgressBarColumnFrame2,-1,FItemGrid_MultiColorProgressBarColumnFrame2.Height);
-//
-//
-//
-//  //那个间隔
-//  FControlLayoutItems.FListLayoutsManager.ItemSpace:=10;
-//  FControlLayoutItems.FListLayoutsManager.ItemCountPerLine:=2;
-//
+
+
+
+  //那个间隔
+  FControlLayoutItems.FListLayoutsManager.ItemSpace:=10;
+  //默认一行三个item
+  FControlLayoutItems.FListLayoutsManager.ItemCountPerLine:=2;
+
 
 end;
 

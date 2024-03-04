@@ -2092,7 +2092,11 @@ begin
       if Self.FViewType<>lvtList then
       begin
         case Self.FItemSpaceType of
-          sistDefault: Result:=Result-2*FItemSpace;
+          sistDefault:
+          begin
+            //去掉两边的间隔
+            Result:=Result-2*FItemSpace;
+          end;
           sistMiddle: ;
         end;
       end;

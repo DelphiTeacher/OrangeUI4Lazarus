@@ -1,24 +1,19 @@
 object FrameLineChart_MonthSummary: TFrameLineChart_MonthSummary
   Left = 0
-  Height = 320
   Top = 0
   Width = 632
-  ClientHeight = 320
-  ClientWidth = 632
+  Height = 320
   Color = 16644857
   ParentBackground = False
   ParentColor = False
   TabOrder = 0
-  DesignLeft = 618
-  DesignTop = 302
   object pnlClient: TSkinWinPanel
     Left = 0
-    Height = 320
     Top = 0
     Width = 632
-    ParentMouseEvent = False
+    Height = 320
+    ParentMouseEvent = True
     DirectUIVisible = False
-    AlignWithMargins = False
     ComponentTypeUseKind = ctukDefault
     MaterialUseKind = mukSelfOwn
     KeepSelfOwnMaterial = True
@@ -45,8 +40,10 @@ object FrameLineChart_MonthSummary: TFrameLineChart_MonthSummary
     SelfOwnMaterial.IsTransparent = True
     SelfOwnMaterial.DrawCaptionParam.FontName = 'Tahoma'
     SelfOwnMaterial.DrawCaptionParam.FontSize = 8
+    SelfOwnMaterial.DrawCaptionParam.DrawFont.Charset = DEFAULT_CHARSET
     SelfOwnMaterial.DrawCaptionParam.DrawFont.Height = -11
     SelfOwnMaterial.DrawCaptionParam.DrawFont.Name = 'Tahoma'
+    SelfOwnMaterial.DrawCaptionParam.DrawFont.Style = []
     SelfOwnMaterial.DrawCaptionParam.DrawFont.FontColor.Alpha = 255
     SelfOwnMaterial.DrawCaptionParam.FontTrimming = fttNone
     SelfOwnMaterial.DrawCaptionParam.FontHorzAlign = fhaLeft
@@ -66,26 +63,33 @@ object FrameLineChart_MonthSummary: TFrameLineChart_MonthSummary
     Align = alClient
     ParentBackground = False
     TabOrder = 0
+    Caption = ''
+    Text = ''
+    DesignSize = (
+      632
+      320)
     object lblCaption: TLabel
       Left = 21
-      Height = 23
       Top = 10
-      Width = 114
-      Caption = '每月销量统计'
+      Width = 171
+      Height = 23
+      Caption = #23011#24532#28224#38335#8364#38322#24533#31930#29825'?'
+      Color = 16644857
+      Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -19
       Font.Name = 'Tahoma'
+      Font.Style = []
       ParentColor = False
       ParentFont = False
     end
     object SkinWinButton1: TSkinWinButton
       Left = 512
-      Height = 40
       Top = 3
       Width = 89
-      ParentMouseEvent = False
+      Height = 40
+      ParentMouseEvent = True
       DirectUIVisible = False
-      AlignWithMargins = False
       ComponentTypeUseKind = ctukDefault
       MaterialUseKind = mukRef
       KeepSelfOwnMaterial = False
@@ -121,7 +125,10 @@ object FrameLineChart_MonthSummary: TFrameLineChart_MonthSummary
       SelfOwnMaterial.IsAutoCenterIconAndCaption = False
       SelfOwnMaterial.DrawDetailParam.FontName = 'default'
       SelfOwnMaterial.DrawDetailParam.FontSize = 12
+      SelfOwnMaterial.DrawDetailParam.DrawFont.Charset = DEFAULT_CHARSET
       SelfOwnMaterial.DrawDetailParam.DrawFont.Height = -16
+      SelfOwnMaterial.DrawDetailParam.DrawFont.Name = 'default'
+      SelfOwnMaterial.DrawDetailParam.DrawFont.Style = []
       SelfOwnMaterial.DrawDetailParam.DrawFont.FontColor.Alpha = 255
       SelfOwnMaterial.DrawDetailParam.FontTrimming = fttNone
       SelfOwnMaterial.DrawDetailParam.FontHorzAlign = fhaLeft
@@ -138,7 +145,10 @@ object FrameLineChart_MonthSummary: TFrameLineChart_MonthSummary
       SelfOwnMaterial.DrawDetailParam.DrawEffectSetting.FocusedEffect.FontSize = 12
       SelfOwnMaterial.DrawDetail1Param.FontName = 'default'
       SelfOwnMaterial.DrawDetail1Param.FontSize = 12
+      SelfOwnMaterial.DrawDetail1Param.DrawFont.Charset = DEFAULT_CHARSET
       SelfOwnMaterial.DrawDetail1Param.DrawFont.Height = -16
+      SelfOwnMaterial.DrawDetail1Param.DrawFont.Name = 'default'
+      SelfOwnMaterial.DrawDetail1Param.DrawFont.Style = []
       SelfOwnMaterial.DrawDetail1Param.DrawFont.FontColor.Alpha = 255
       SelfOwnMaterial.DrawDetail1Param.FontTrimming = fttNone
       SelfOwnMaterial.DrawDetail1Param.FontHorzAlign = fhaLeft
@@ -156,8 +166,11 @@ object FrameLineChart_MonthSummary: TFrameLineChart_MonthSummary
       SelfOwnMaterial.DrawHelpTextParam.FontName = 'default'
       SelfOwnMaterial.DrawHelpTextParam.FontSize = 12
       SelfOwnMaterial.DrawHelpTextParam.FontColor = clGray
+      SelfOwnMaterial.DrawHelpTextParam.DrawFont.Charset = DEFAULT_CHARSET
       SelfOwnMaterial.DrawHelpTextParam.DrawFont.Color = clGray
       SelfOwnMaterial.DrawHelpTextParam.DrawFont.Height = -16
+      SelfOwnMaterial.DrawHelpTextParam.DrawFont.Name = 'default'
+      SelfOwnMaterial.DrawHelpTextParam.DrawFont.Style = []
       SelfOwnMaterial.DrawHelpTextParam.DrawFont.FontColor.Alpha = 255
       SelfOwnMaterial.DrawHelpTextParam.DrawFont.FontColor.Color = clGray
       SelfOwnMaterial.DrawHelpTextParam.FontTrimming = fttNone
@@ -181,7 +194,10 @@ object FrameLineChart_MonthSummary: TFrameLineChart_MonthSummary
       SelfOwnMaterial.DrawIconParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
       SelfOwnMaterial.DrawCaptionParam.FontName = 'default'
       SelfOwnMaterial.DrawCaptionParam.FontSize = 12
+      SelfOwnMaterial.DrawCaptionParam.DrawFont.Charset = DEFAULT_CHARSET
       SelfOwnMaterial.DrawCaptionParam.DrawFont.Height = -16
+      SelfOwnMaterial.DrawCaptionParam.DrawFont.Name = 'default'
+      SelfOwnMaterial.DrawCaptionParam.DrawFont.Style = []
       SelfOwnMaterial.DrawCaptionParam.DrawFont.FontColor.Alpha = 255
       SelfOwnMaterial.DrawCaptionParam.FontTrimming = fttNone
       SelfOwnMaterial.DrawCaptionParam.FontHorzAlign = fhaLeft
@@ -215,14 +231,15 @@ object FrameLineChart_MonthSummary: TFrameLineChart_MonthSummary
       SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
       SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
       RefMaterial = dmEasyServiceCommonMaterial.btnTransparentDropDownButtonMaterial
+      StaticRefMaterial = dmEasyServiceCommonMaterial.btnTransparentDropDownButtonMaterial
       HitTest = False
       MouseDownFocus = False
       Anchors = [akTop, akRight]
       Visible = False
       ParentBackground = False
       TabOrder = 0
-      Caption = '导出'
-      Text = '导出'
+      Caption = #28725#29006#22189
+      Text = #28725#29006#22189
       Properties.AutoSize = False
       Properties.IsAutoPush = False
       Properties.IsPushed = False
