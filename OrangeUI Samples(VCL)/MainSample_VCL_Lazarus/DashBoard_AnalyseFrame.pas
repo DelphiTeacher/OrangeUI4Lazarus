@@ -79,7 +79,7 @@ begin
   FItemGrid_MultiColorProgressBarColumnFrame.Name:='FItemGrid_MultiColorProgressBarColumnFrame2';
   FItemGrid_MultiColorProgressBarColumnFrame2.Parent:=Self;
   FItemGrid_MultiColorProgressBarColumnFrame2.pnlClient.Material.BackColor.ShadowSize:=5;
-  FItemGrid_MultiColorProgressBarColumnFrame2.lblCaption.Caption:='social media traffic';
+  FItemGrid_MultiColorProgressBarColumnFrame2.lblCaption.Caption:='Social media traffic';
   FItemGrid_MultiColorProgressBarColumnFrame2.gridData.Prop.Items[0].Caption:='Facebook';
   FItemGrid_MultiColorProgressBarColumnFrame2.gridData.Prop.Items[0].Detail:='2,250';
   FItemGrid_MultiColorProgressBarColumnFrame2.gridData.Prop.Items[0].Detail1:='30';

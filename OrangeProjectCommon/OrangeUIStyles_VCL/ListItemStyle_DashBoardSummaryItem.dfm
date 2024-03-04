@@ -37,6 +37,7 @@ object FrameListItemStyle_DashBoardSummaryItem: TFrameListItemStyle_DashBoardSum
     SelfOwnMaterial.IsTransparent = True
     HitTest = False
     MouseDownFocus = False
+    ParentBackground = False
     TabOrder = 0
     Properties.IsPreview = False
     Properties.PreviewItem.Selected = False
@@ -46,13 +47,16 @@ object FrameListItemStyle_DashBoardSummaryItem: TFrameListItemStyle_DashBoardSum
     Properties.PreviewItem.Color = clBlack
     Properties.PreviewItem.Width = -1.000000000000000000
     Properties.PreviewItem.Icon.IsClipRound = False
+    Properties.PreviewItem.Icon.FixedColor.Alpha = 255
     Properties.PreviewItem.Pic.IsClipRound = False
+    Properties.PreviewItem.Pic.FixedColor.Alpha = 255
     Properties.PreviewItem.Tag = 0
     Properties.PreviewItem.Tag1 = 0
     Properties.PreviewItem.ItemType = sitDefault
     Properties.PreviewItem.IsParent = False
     Properties.PreviewItem.Expanded = True
     Properties.PreviewItem.Childs.Data = {140000000000000400000000005C000000}
+    Properties.PreviewItem.Childs = <>
     Properties.PreviewItem.Accessory = satNone
     Properties.ItemStringsBindingControlCollection = <>
     DesignSize = (
@@ -61,7 +65,7 @@ object FrameListItemStyle_DashBoardSummaryItem: TFrameListItemStyle_DashBoardSum
     object imgItemCaption: TSkinWinLabel
       Left = 16
       Top = 24
-      Width = 104
+      Width = 249
       Height = 32
       ParentMouseEvent = True
       BindItemFieldName = 'ItemCaption'
@@ -115,6 +119,8 @@ object FrameListItemStyle_DashBoardSummaryItem: TFrameListItemStyle_DashBoardSum
       SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.FocusedEffect.FontSize = 12
       HitTest = False
       MouseDownFocus = False
+      Anchors = [akLeft, akTop, akRight]
+      ParentBackground = False
       TabOrder = 0
       Caption = #23458#25143#25968
       Text = #23458#25143#25968
@@ -123,7 +129,7 @@ object FrameListItemStyle_DashBoardSummaryItem: TFrameListItemStyle_DashBoardSum
     object SkinWinLabel1: TSkinWinLabel
       Left = 16
       Top = 70
-      Width = 113
+      Width = 249
       Height = 51
       ParentMouseEvent = True
       BindItemFieldName = 'ItemDetail'
@@ -174,6 +180,7 @@ object FrameListItemStyle_DashBoardSummaryItem: TFrameListItemStyle_DashBoardSum
       SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.FocusedEffect.FontSize = 12
       HitTest = False
       MouseDownFocus = False
+      ParentBackground = False
       TabOrder = 1
       Caption = '1,234'
       Text = '1,234'
@@ -215,12 +222,17 @@ object FrameListItemStyle_DashBoardSummaryItem: TFrameListItemStyle_DashBoardSum
       SelfOwnMaterial.DrawPictureParam.IsAutoFit = True
       SelfOwnMaterial.DrawPictureParam.PictureHorzAlign = phaCenter
       SelfOwnMaterial.DrawPictureParam.PictureVertAlign = pvaCenter
+      SelfOwnMaterial.DrawPictureParam.FixedColor.Alpha = 255
       SelfOwnMaterial.DrawPictureParam.DrawRectSetting.Height = 16.000000000000000000
       SelfOwnMaterial.DrawPictureParam.DrawRectSetting.Enabled = True
-      SelfOwnMaterial.DrawPictureParam.DrawRectSetting.SizeType = dpstPixel
       SelfOwnMaterial.DrawPictureParam.DrawRectSetting.PositionHorzType = dpphtCenter
       SelfOwnMaterial.DrawPictureParam.DrawRectSetting.PositionVertType = dppvtCenter
       SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
+      SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+      SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+      SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+      SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+      SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
       SelfOwnMaterial.DrawCaptionParam.FontName = 'Tahoma'
       SelfOwnMaterial.DrawCaptionParam.FontSize = 8
       SelfOwnMaterial.DrawCaptionParam.DrawFont.Charset = DEFAULT_CHARSET
@@ -244,10 +256,12 @@ object FrameListItemStyle_DashBoardSummaryItem: TFrameListItemStyle_DashBoardSum
       HitTest = False
       MouseDownFocus = False
       Anchors = [akTop, akRight]
+      ParentBackground = False
       TabOrder = 2
       Caption = ''
       Properties.AutoSize = False
       Properties.Picture.IsClipRound = False
+      Properties.Picture.FixedColor.Alpha = 255
       Properties.Picture.Data = {
         0954506E67496D61676589504E470D0A1A0A0000000D49484452000000400000
         00400806000000AA6971DE000000017352474200AECE1CE9000004DD49444154
@@ -356,6 +370,7 @@ object FrameListItemStyle_DashBoardSummaryItem: TFrameListItemStyle_DashBoardSum
       SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.FocusedEffect.FontSize = 12
       HitTest = False
       MouseDownFocus = False
+      ParentBackground = False
       TabOrder = 3
       Caption = #8593'10%'
       Text = #8593'10%'
@@ -364,7 +379,7 @@ object FrameListItemStyle_DashBoardSummaryItem: TFrameListItemStyle_DashBoardSum
     object SkinWinLabel3: TSkinWinLabel
       Left = 135
       Top = 136
-      Width = 104
+      Width = 211
       Height = 32
       ParentMouseEvent = True
       BindItemFieldName = 'ItemDetail2'
@@ -418,6 +433,8 @@ object FrameListItemStyle_DashBoardSummaryItem: TFrameListItemStyle_DashBoardSum
       SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.FocusedEffect.FontSize = 12
       HitTest = False
       MouseDownFocus = False
+      Anchors = [akLeft, akTop, akRight]
+      ParentBackground = False
       TabOrder = 4
       Caption = #27604#19978#20010#26376
       Text = #27604#19978#20010#26376

@@ -8,10 +8,12 @@
       <Unit>
         <Filename Value="project1.lpr"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="5"/>
-        <CursorPos X="28" Y="52"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="15"/>
+        <CursorPos X="23" Y="53"/>
         <UsageCount Value="167"/>
+        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="MainForm.pas"/>
@@ -21,7 +23,7 @@
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="3"/>
         <TopLine Value="431"/>
-        <CursorPos X="67" Y="453"/>
+        <CursorPos X="75" Y="441"/>
         <UsageCount Value="167"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -183,9 +185,8 @@
       <Unit>
         <Filename Value="..\..\OrangeUIControl\Source\VCL\BGRACanvas\uBGRADrawCanvas.pas"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
         <TopLine Value="1865"/>
-        <CursorPos X="3" Y="1901"/>
+        <CursorPos X="22" Y="1878"/>
         <FoldState Value=" T3_W0-P"/>
         <UsageCount Value="51"/>
         <Loaded Value="True"/>
@@ -1357,7 +1358,7 @@
       </Unit>
       <Unit>
         <Filename Value="..\..\OrangeUIControl\Source\Base\uDrawCanvas.pas"/>
-        <EditorIndex Value="5"/>
+        <EditorIndex Value="6"/>
         <TopLine Value="496"/>
         <CursorPos X="14" Y="521"/>
         <UsageCount Value="10"/>
@@ -1635,7 +1636,7 @@
         <Filename Value="OrderGridFrame.pas"/>
         <IsPartOfProject Value="True"/>
         <HasResources Value="True"/>
-        <EditorIndex Value="4"/>
+        <EditorIndex Value="5"/>
         <TopLine Value="156"/>
         <CursorPos X="46" Y="184"/>
         <UsageCount Value="20"/>
@@ -1662,7 +1663,7 @@
         <UsageCount Value="10"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="26">
+    <JumpHistory HistoryIndex="27">
       <Position>
         <Filename Value="..\..\OrangeUIControl\Source\VCL\BGRACanvas\uBGRADrawCanvas.pas"/>
         <Caret Line="3359" Column="50" TopLine="3334"/>
@@ -1770,6 +1771,10 @@
       <Position>
         <Filename Value="..\..\OrangeUIControl\Source\VCL\BGRACanvas\uBGRADrawCanvas.pas"/>
         <Caret Line="183" Column="22" TopLine="157"/>
+      </Position>
+      <Position>
+        <Filename Value="MainForm.pas"/>
+        <Caret Line="441" Column="75" TopLine="431"/>
       </Position>
     </JumpHistory>
     <RunParams>

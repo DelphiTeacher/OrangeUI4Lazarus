@@ -366,6 +366,9 @@ begin
   //ShowMessage(AItem.Caption);
   //ShowMessage(AItem.Name);
 
+  if AItem.Name='' then Exit;
+  
+
   FreeAndNil(FCurrentFrame);
 
 

@@ -85,15 +85,15 @@ begin
 //  FSkinVirtualChart.SelfOwnMaterialToDefault.FPieColorArray[0]:=$97CF0A;
 //  FSkinVirtualChart.SelfOwnMaterialToDefault.FPieColorArray[1]:=$F57C72;
 //  FSkinVirtualChart.SelfOwnMaterialToDefault.FPieColorArray[2]:=$7C5CFA;
-    if AStatus='进行中' then
+    if AStatus='going' then
     begin
       ADrawColumnMaterial.DrawCellText1Param.DrawFont.FontColor.FColor:=$97CF0A;//OrangeColor;
     end;
-    if AStatus='已完成' then
+    if AStatus='finished' then
     begin
       ADrawColumnMaterial.DrawCellText1Param.DrawFont.FontColor.FColor:=$97CF0A;
     end;
-    if AStatus='已超期' then
+    if AStatus='timeout' then
     begin
       ADrawColumnMaterial.DrawCellText1Param.DrawFont.FontColor.FColor:=$7C5CFA;
     end;
