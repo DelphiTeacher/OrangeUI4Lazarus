@@ -775,14 +775,14 @@ implementation
 
 
 {$IFDEF VCL}
-  {$IFDEF MSWINDOWS}
-uses
-  uGDIPlusSkinPictureEngine,
-  uGDIPlusDrawCanvas;
-  {$ELSE}
+  {$IFDEF FPC}
 uses
   uNativeSkinPictureEngine,
   uNativeDrawCanvas;
+  {$ELSE}
+  uses
+    uGDIPlusSkinPictureEngine,
+    uGDIPlusDrawCanvas;
   {$ENDIF}
 {$ENDIF}
 
@@ -1864,18 +1864,18 @@ initialization
 
   {$IFDEF VCL}
 
-  {$IFDEF MSWINDOWS}
-  GlobalDrawCanvasClass:=TGDIPlusDrawCanvas;
-  GlobalSkinPictureClass:=TSkinPicture;
-  GlobalSkinPictureEngineClass:=TGDIPlusSkinPictureEngine;
-  GlobalSkinGIFPictureEngineClass:=TGDIPlusSkinGIFPictureEngine;
-  GlobalDrawPathDataClass:=TGDIPlusDrawPathData;
-  {$ELSE}
+  {$IFDEF FPC}
   GlobalDrawCanvasClass:=TNativeDrawCanvas;
   GlobalSkinPictureClass:=TSkinPicture;
   GlobalSkinPictureEngineClass:=TSkinPictureEngine;
   GlobalSkinGIFPictureEngineClass:=TNativeSkinGIFPictureEngine;
   GlobalDrawPathDataClass:=TNativeDrawPathData;
+  {$ELSE}
+  GlobalDrawCanvasClass:=TGDIPlusDrawCanvas;
+  GlobalSkinPictureClass:=TSkinPicture;
+  GlobalSkinPictureEngineClass:=TGDIPlusSkinPictureEngine;
+  GlobalSkinGIFPictureEngineClass:=TGDIPlusSkinGIFPictureEngine;
+  GlobalDrawPathDataClass:=TGDIPlusDrawPathData;
   {$ENDIF}
 
 

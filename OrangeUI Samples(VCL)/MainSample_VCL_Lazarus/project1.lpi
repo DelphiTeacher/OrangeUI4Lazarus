@@ -124,12 +124,11 @@
         <ResourceBaseClass Value="Form"/>
       </Unit>
       <Unit>
-        <Filename Value="homeframe.pas"/>
+        <Filename Value="HomeFrame.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FrameHome"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Frame"/>
-        <UnitName Value="HomeFrame"/>
       </Unit>
       <Unit>
         <Filename Value="..\..\OrangeUIControl\Source\VCL\NativeCanvas\uNativeSkinPictureEngine.pas"/>
@@ -205,6 +204,11 @@
         <ComponentName Value="frmWaiting"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+      </Unit>
+      <Unit>
+        <Filename Value="OrderGridFrame.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
       </Unit>
     </Units>
   </ProjectOptions>

@@ -180,6 +180,8 @@ type
                        Y1:Double;
                        X2:Double;
                        Y2:Double):Boolean;override;
+    function DrawBezierLine(const ADrawLineParam:TDrawLineParam;
+                      APoints:Array of TPointF):Boolean;override;
 
     //绘制路径,用于DrawPanel
     function DrawPathData(ADrawPathData:TBaseDrawPathData):Boolean;override;
@@ -1804,7 +1806,7 @@ begin
 
   if IsSameDouble(ADrawLineParam.PenWidth,0)
   then
-  begin 
+  begin
     Exit;
   end;
 
@@ -1828,6 +1830,75 @@ begin
   Self.FBGRACanvas.MoveTo(Ceil(X1),Ceil(Y1));
   Self.FBGRACanvas.LineTo(Ceil(X2),Ceil(Y2));
 
+
+//  Self.FBGRACanvas.Stroke.Thickness:=ADrawLineParam.PenWidth;
+//  Self.FBGRACanvas.Stroke.Kind := TBrushKind.Solid;
+//  Self.FBGRACanvas.Stroke.Color := ADrawLineParam.PenDrawColor.Color;
+
+
+//  //校正成0.5
+//  if IsSameDouble(ADrawLineParam.PenWidth,1) and IsSameDouble(X1,X2) then
+//  begin
+//    APt1:=TPointF.Create(AdjustDrawLinePos(X1),Y1);
+//    APt2:=TPointF.Create(AdjustDrawLinePos(X2),Y2);
+//  end
+//  else
+//  if IsSameDouble(ADrawLineParam.PenWidth,1) and IsSameDouble(Y1,Y2) then
+//  begin
+//    APt1:=TPointF.Create(X1,AdjustDrawLinePos(Y1));
+//    APt2:=TPointF.Create(X2,AdjustDrawLinePos(Y2));
+//  end
+//  else
+//  begin
+//    APt1:=TPointF.Create(X1,Y1);
+//    APt2:=TPointF.Create(X2,Y2);
+//  end;
+//
+//  FBGRACanvas.DrawLine(APt1,APt2,ADrawLineParam.DrawAlpha/255);
+end;
+
+function TBGRADrawCanvas.DrawBezierLine(const ADrawLineParam: TDrawLineParam;APoints:Array of TPointF): Boolean;
+//var
+//  APt1, APt2: TPointF;
+//  ARectF:TRectF;
+var
+  I:Integer;
+  tempPoints:Array of TPoint;
+begin
+  Result:=True;
+
+  if IsSameDouble(ADrawLineParam.PenWidth,0)
+  then
+  begin
+    Exit;
+  end;
+
+
+
+
+  //ARectF:=RectF(X1,Y1,X2,Y2);
+  //ARectF:=ADrawLineParam.CalcDrawRect(ARectF);
+  //X1:=ARectF.Left;
+  //Y1:=ARectF.Top;
+  //X2:=ARectF.Right;
+  //Y2:=ARectF.Bottom;
+
+
+  Self.FBGRACanvas.Pen.Width:=Ceil(ADrawLineParam.PenWidth);
+  Self.FBGRACanvas.Pen.Style := TPenStyle.psSolid;
+  Self.FBGRACanvas.Pen.Color := ADrawLineParam.PenDrawColor.Color;
+
+
+
+  //Self.FBGRACanvas.MoveTo(Ceil(X1),Ceil(Y1));
+  //Self.FBGRACanvas.LineTo(Ceil(X2),Ceil(Y2));
+  SetLength(tempPoints,Length(APoints));
+  for I:=0 to Length(APoints)-1 do
+  begin
+    tempPoints[I].X:=Ceil(APoints[I].X);
+    tempPoints[I].Y:=Ceil(APoints[I].Y);
+  end;
+  FBGRACanvas.PolyBezier(tempPoints);
 
 //  Self.FBGRACanvas.Stroke.Thickness:=ADrawLineParam.PenWidth;
 //  Self.FBGRACanvas.Stroke.Kind := TBrushKind.Solid;
@@ -3355,7 +3426,7 @@ begin
 //    end;
 //  end;
 
-
+  //-2125987840
   FBGRACanvas.Font.Height:=Floor(-MulDiv(ADrawFont.Size, Screen.PixelsPerInch, 72));
 //  //一定要加Ceil,如果不加Ceil,在Windows上会出现字体异常
 //  ADrawTextParam.FTextLayout.Font.Size:=Floor(ADrawTextParam.CurrentEffectFontSize);
