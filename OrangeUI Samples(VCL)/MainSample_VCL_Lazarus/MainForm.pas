@@ -21,6 +21,7 @@ uses
   uGraphicCommon,
   uFileCommon,
   uDrawTextParam,
+  uDrawRectParam,
   ListItemStyle_Default,
   //ListItemStyle_IconLeft_CaptionRight,
   //ListItemStyle_MailList,
@@ -36,6 +37,7 @@ uses
   ListItemStyle_IconCaptionLeft_NotifyNumberRight,
   ListItemStyle_IconCaptionLeft_NotifyIconRight,
   ListItemStyle_IconCaptionLeft_ArrowRight,
+  ListItemStyle_IconLeft_CaptionRight_CloseBtnRight,
   {$IFDEF FPC}
   EasyServiceCommonMaterialDataMoudle_VCL_Lazarus,
   {$ELSE}
@@ -64,6 +66,9 @@ uses
   //TestChartFrame,
   //ItemGridFrame,
 
+  EditJsonItemGridFrame,
+  DashBoard_Analyse_ItemGrid_TwoCellTextFrame,
+
 //  BaseQueryFrame,
 //  BaseQueryFrame2,
 
@@ -75,7 +80,7 @@ uses
   uSkinCustomListType, uSkinVirtualListType, uSkinListBoxType, uSkinButtonType,
   uSkinMaterial, uSkinPageControlType, uSkinImageType, uSkinLabelType, StdCtrls,
   uSkinEditType, Menus, uSkinListViewType,
-  uSkinTreeViewType, ExtDlgs, uSkinNotifyNumberIconType;
+  uSkinTreeViewType, ExtDlgs, uSkinNotifyNumberIconType, Vcl.ComCtrls;
 
 
 type
@@ -85,8 +90,7 @@ type
   TfrmMain = class(TForm)
     lbSubMenu: TSkinWinTreeView;
     DrawCanvasSetting1: TDrawCanvasSetting;
-    sbClient: TScrollBox;
-    SkinPanel1: TSkinPanel;
+    pnlClient: TSkinPanel;
     SkinTheme1: TSkinTheme;
     pnlToolBar: TSkinPanel;
     btnShowHideMainMenu: TSkinWinButton;
@@ -100,6 +104,8 @@ type
     btnSetting: TSkinWinButton;
     btnMy: TSkinWinButton;
     imgUserHead: TImage;
+    lbOpenedFrames: TSkinListBox;
+    PageControl1: TSkinPageControl;
     procedure btnMinClick(Sender: TObject);
     procedure btnNormalClick(Sender: TObject);
     procedure btnCloseClick(Sender: TObject);
@@ -132,6 +138,15 @@ type
       AItemDrawRect: TRect);
     procedure sbClientClick(Sender: TObject);
     procedure edtSearchChange(Sender: TObject);
+    procedure btnShowHideMainMenuClick(Sender: TObject);
+    procedure lbOpenedFramesClickItem(AItem: TSkinItem);
+    procedure lbOpenedFramesNewListItemStyleFrameCacheInit(Sender: TObject;
+      AListItemTypeStyleSetting: TListItemTypeStyleSetting;
+      ANewListItemStyleFrameCache: TListItemStyleFrameCache);
+    procedure lbOpenedFramesClickItemDesignerPanelChild(Sender: TObject;
+      AItem: TBaseSkinItem; AItemDesignerPanel: TSkinItemDesignerPanel;
+      AChild: TControl);
+    procedure PageControl1Change(Sender: TObject);
 //    procedure lbSubMenuPrepareDrawItem(Sender: TObject; ACanvas: TDrawCanvas;
 //      AItemDesignerPanel: TSkinItemDesignerPanel; AItem: TSkinItem;
 //      AItemDrawRect: TRect);
@@ -217,6 +232,11 @@ end;
 procedure TfrmMain.btnSelectCountryClick(Sender: TObject);
 begin
   //
+end;
+
+procedure TfrmMain.btnShowHideMainMenuClick(Sender: TObject);
+begin
+  Self.lbSubMenu.Visible:=not Self.lbSubMenu.Visible;
 end;
 
 procedure TfrmMain.edtSearchChange(Sender: TObject);
@@ -324,6 +344,7 @@ begin
 //    Self.lbContact.Prop.Items.EndUpdate();
 //  end;
 
+  Self.lbOpenedFrames.Prop.Items.Clear;
 
 
   Self.lbSubMenu.Prop.FDefaultItemStyleSetting.IsUseCache:=False;
@@ -361,22 +382,113 @@ begin
   ShowMessage(AItem.Caption);
 end;
 
+procedure TfrmMain.lbOpenedFramesClickItem(AItem: TSkinItem);
+begin
+  //先判断是不是已经打开
+  AItem.Selected:=True;
+  Self.PageControl1.ActivePage:=TSkinTabSheet(AItem.DataObject);
+
+end;
+
+procedure TfrmMain.lbOpenedFramesClickItemDesignerPanelChild(Sender: TObject;
+  AItem: TBaseSkinItem; AItemDesignerPanel: TSkinItemDesignerPanel;
+  AChild: TControl);
+begin
+  if AChild.Name='btnDelete' then
+  begin
+    //先判断是不是已经打开
+    TSkinItem(AItem).DataObject.Free;
+    FreeAndNil(AItem);
+    Self.lbOpenedFrames.Prop.Items.BeginUpdate;
+    try
+    finally
+      Self.lbOpenedFrames.Prop.Items.EndUpdate;
+    end;
+  end;
+end;
+
+procedure TfrmMain.lbOpenedFramesNewListItemStyleFrameCacheInit(Sender: TObject;
+  AListItemTypeStyleSetting: TListItemTypeStyleSetting;
+  ANewListItemStyleFrameCache: TListItemStyleFrameCache);
+var
+  AFrame:TFrameListItemStyle_IconLeft_CaptionRight_CloseBtnRight;
+begin
+  //
+  if ANewListItemStyleFrameCache.FItemStyleFrame is TFrameListItemStyle_IconLeft_CaptionRight_CloseBtnRight then
+  begin
+    AFrame:=TFrameListItemStyle_IconLeft_CaptionRight_CloseBtnRight(ANewListItemStyleFrameCache.FItemStyleFrame);
+    AFrame.imgItemIcon.Visible:=False;
+
+    AFrame.btnDelete.AlignWithMargins:=True;
+    AFrame.btnDelete.Margins.Right:=10;
+//    AFrame.btnDelete.Margins.Top:=5;
+//    AFrame.btnDelete.Margins.Bottom:=5;
+    AFrame.btnDelete.Width:=16;
+
+    AFrame.ItemDesignerPanel.Material.IsTransparent:=False;
+
+    AFrame.ItemDesignerPanel.Material.DrawBackColorParam.DrawRectSetting.Enabled:=True;
+    AFrame.ItemDesignerPanel.Material.DrawBackColorParam.DrawRectSetting.SetBounds(0,3,0,0);
+    AFrame.ItemDesignerPanel.Material.DrawBackColorParam.BorderWidth:=1;
+    AFrame.ItemDesignerPanel.Material.DrawBackColorParam.BorderColor.Color:=clSilver;
+    AFrame.ItemDesignerPanel.Material.DrawBackColorParam.DrawEffectSetting.PushedEffect.EffectTypes:=[drpetIsFillChange,drpetFillColorChange];
+    AFrame.ItemDesignerPanel.Material.DrawBackColorParam.DrawEffectSetting.PushedEffect.IsFill:=True;
+    AFrame.ItemDesignerPanel.Material.DrawBackColorParam.DrawEffectSetting.PushedEffect.FillColor.UseThemeColor:=TUseThemeColorType.ctThemeColor;
+
+    AFrame.imgItemCaption.Material.DrawCaptionParam.DrawEffectSetting.PushedEffect.EffectTypes:=[dtpetFontColorChange];
+    AFrame.imgItemCaption.Material.DrawCaptionParam.DrawEffectSetting.PushedEffect.FontColor.Color:=clWhite;
+
+  end;
+
+
+end;
+
 procedure TfrmMain.lbSubMenuClickItem(AItem: TSkinItem);
+var
+  AOpenedItem:TSkinItem;
+  ATabSheet:TSkinTabSheet;
 begin
   //ShowMessage(AItem.Caption);
   //ShowMessage(AItem.Name);
 
   if AItem.Name='' then Exit;
-  
+
   AItem.Selected:=True;
 
-  FreeAndNil(FCurrentFrame);
+//  FreeAndNil(FCurrentFrame);
+
+
+  //先判断是不是已经打开
+  AOpenedItem:=lbOpenedFrames.Prop.Items.FindItemByName(AItem.Name);
+  if AOpenedItem<>nil then
+  begin
+    AOpenedItem.Selected:=True;
+    Self.PageControl1.ActivePage:=TSkinTabSheet(AOpenedItem.DataObject);
+    Exit;
+  end;
+
+  ATabSheet:=TSkinTabSheet.Create(Self.PageControl1);
+  ATabSheet.Caption:=AItem.Caption;
+  ATabSheet.PageControl:=Self.PageControl1;
+  PageControl1.ActivePage:=ATabSheet;
+
+  Self.lbOpenedFrames.Prop.Items.BeginUpdate;
+  try
+    AOpenedItem:=Self.lbOpenedFrames.Prop.Items.Add;
+    AOpenedItem.DataObject:=ATabSheet;
+    AOpenedItem.Selected:=True;
+    AOpenedItem.Caption:=AItem.Caption;
+    AOpenedItem.Name:=AItem.Name;
+    AOpenedItem.Width:=uSkinBufferBitmap.GetStringWidth(AOpenedItem.Caption,10)+40;
+  finally
+    Self.lbOpenedFrames.Prop.Items.EndUpdate;
+  end;
 
 
   //分析
   if (AItem.Name='home') then
   begin
-    FCurrentFrame:=TFrameHome.Create(Self);
+    FCurrentFrame:=TFrameHome.Create(ATabSheet);
   end;
 
   //数据看板
@@ -385,12 +497,12 @@ begin
   //分析
   if (AItem.Name='dashboard_analyse') then
   begin
-    FCurrentFrame:=TFrameDashBoard_Analyse.Create(Self);
+    FCurrentFrame:=TFrameDashBoard_Analyse.Create(ATabSheet);
   end;
   //项目
   if (AItem.Name='dashboard_projects') then
   begin
-    FCurrentFrame:=TFrameDashBoard_Projects.Create(Self);
+    FCurrentFrame:=TFrameDashBoard_Projects.Create(ATabSheet);
   end;
 
 
@@ -401,53 +513,61 @@ begin
   //按钮
   if AItem.Name='button' then
   begin
-    FCurrentFrame:=TFrameButton.Create(Self);
+    FCurrentFrame:=TFrameButton.Create(ATabSheet);
   end;
   ////图片
   //if AItem.Name='image' then
   //begin
-  //  FCurrentFrame:=TFrameImage.Create(Self);
+  //  FCurrentFrame:=TFrameImage.Create(ATabSheet);
   //end;
   ////文本框
   //if AItem.Name='edit' then
   //begin
-  //  FCurrentFrame:=TFrameEdit.Create(Self);
+  //  FCurrentFrame:=TFrameEdit.Create(ATabSheet);
   //end;
   ////备注框
   //if AItem.Name='memo' then
   //begin
-  //  FCurrentFrame:=TFrameMemo.Create(Self);
+  //  FCurrentFrame:=TFrameMemo.Create(ATabSheet);
   //end;
   //复选框
   if AItem.Name='checkbox' then
   begin
-    FCurrentFrame:=TFrameCheckBox.Create(Self);
+    FCurrentFrame:=TFrameCheckBox.Create(ATabSheet);
   end;
 //  //分页控件
 //  if AItem.Name='pagecontrol' then
 //  begin
-//    FCurrentFrame:=TFramePageControl.Create(Self);
+//    FCurrentFrame:=TFramePageControl.Create(ATabSheet);
 //  end;
 //  //表格控件
 //  if AItem.Name='itemgrid' then
 //  begin
-//    FCurrentFrame:=TFrameItemGrid.Create(Self);
+//    FCurrentFrame:=TFrameItemGrid.Create(ATabSheet);
 //  end;
 ////  //Dev表格控件
 ////  if AItem.Name='cxgrid' then
 ////  begin
-////    FCurrentFrame:=TFrameBaseQuery2.Create(Self);
+////    FCurrentFrame:=TFrameBaseQuery2.Create(ATabSheet);
 ////  end;
 //
-//
-//
-//
-//
-//
+
+  if AItem.Name='item_grid_two_cell_text' then
+  begin
+    FCurrentFrame:=TFrameItemGrid_TwoCellText.Create(ATabSheet);
+  end;
+  if AItem.Name='item_grid_edit' then
+  begin
+    FCurrentFrame:=TFrameEditJsonItemGrid.Create(ATabSheet);
+  end;
+
+
+
+
 //  //图片多选框
 //  if AItem.Name='add_picture_list_sub_frame' then
 //  begin
-////      Self.FCurrentFrame:=TFrameAddPictureListSub.Create(Self);
+////      ATabSheet.FCurrentFrame:=TFrameAddPictureListSub.Create(ATabSheet);
 ////
 ////      TFrameAddPictureListSub(FCurrentFrame).pnlToolBar.Visible:=False;
 ////      TFrameAddPictureListSub(FCurrentFrame).lvPictures.Align:=alClient;
@@ -469,12 +589,12 @@ begin
 //  ////多选页面
 //  //if AItem.Name='multi_select_frame' then
 //  //begin
-//  //  FCurrentFrame:=TFrameMultiSelect.Create(Self);
+//  //  FCurrentFrame:=TFrameMultiSelect.Create(ATabSheet);
 //  //  TFrameMultiSelect(FCurrentFrame).lbList.Prop.ItemDesignerPanel:=nil;
 //  //  TFrameMultiSelect(FCurrentFrame).lbList.Prop.DefaultItemStyle:='IconCaptionLeft_DetailRight';
 //  //  TFrameMultiSelect(FCurrentFrame).Init('点菜','鱼香肉丝,红烧肉,番茄炒蛋','红烧肉');
-//  //  Self.FCurrentFrame.Parent:=Self.sbClient;
-//  //  FCurrentFrame.Left:=Self.lbSubMenu.Width;
+//  //  ATabSheet.FCurrentFrame.Parent:=ATabSheet.sbClient;
+//  //  FCurrentFrame.Left:=ATabSheet.lbSubMenu.Width;
 //  //  FCurrentFrame.Top:=0;
 //  //  Exit;
 //  //end;
@@ -484,7 +604,7 @@ begin
   //编辑表单页面
   if AItem.Name='edit_goods_frame' then
   begin
-    FCurrentFrame:=TFrameEditGoods.Create(Self);
+    FCurrentFrame:=TFrameEditGoods.Create(ATabSheet);
   end;
 
 
@@ -493,15 +613,19 @@ begin
     Exit;
   end;
 
-  Self.FCurrentFrame.Parent:=Self.sbClient;
-//  Self.FCurrentFrame.Parent:=Self;
-  Self.FCurrentFrame.Align:=alTop;
-//  Self.FCurrentFrame.Align:=alClient;
 
-  if FCurrentFrame.Height<Self.sbClient.Height then
-  begin
-    FCurrentFrame.Height:=Self.sbClient.Height;
-  end;
+
+  Self.FCurrentFrame.Parent:=ATabSheet;
+//  Self.FCurrentFrame.Parent:=Self;
+//  Self.FCurrentFrame.Align:=alTop;
+  FCurrentFrame.AlignWithMargins:=True;
+//  FCurrentFrame.Margins.SetBounds(5,5,5,5);
+  Self.FCurrentFrame.Align:=alClient;
+
+//  if FCurrentFrame.Height<Self.sbClient.Height then
+//  begin
+//    FCurrentFrame.Height:=Self.sbClient.Height;
+//  end;
   
 
 end;
@@ -631,6 +755,18 @@ end;
 procedure TfrmMain.N5Click(Sender: TObject);
 begin
   ShowMessage('客户详情');
+end;
+
+procedure TfrmMain.PageControl1Change(Sender: TObject);
+var
+  AOpenedItem:TSkinItem;
+begin
+  //
+  AOpenedItem:=Self.lbOpenedFrames.Prop.Items.FindItemByDataObject(Self.PageControl1.Prop.ActivePage);
+  if AOpenedItem<>nil then
+  begin
+    AOpenedItem.Selected:=True;
+  end;
 end;
 
 procedure TfrmMain.lbContactClickItemDesignerPanelChild(Sender: TObject;

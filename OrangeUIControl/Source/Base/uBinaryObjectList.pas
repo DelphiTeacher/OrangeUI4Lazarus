@@ -1111,9 +1111,9 @@ var
   ABinaryObjectIntf:ISupportClassDocNode;
 //  APersistentClass:TPersistentClass;
 begin
-  Self.BeginUpdate;
-//  IsLoading:=True;
-  try
+//  Self.BeginUpdate;
+////  IsLoading:=True;
+//  try
     for I := 0 to ADocNode.ChildNodes.Count - 1 do
     begin
 
@@ -1148,11 +1148,11 @@ begin
         end;
 
     end;
-  finally
-    //不能更换位置
-//    IsLoading:=False;
-    Self.EndUpdate();
-  end;
+//  finally
+//    //不能更换位置
+////    IsLoading:=False;
+//    Self.EndUpdate();
+//  end;
 end;
 
 procedure TBinaryCollection.LoadFromFile(const AFilePath: String;const AIsNeedClear:Boolean);

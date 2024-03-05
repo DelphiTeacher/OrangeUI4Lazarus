@@ -1856,6 +1856,10 @@ type
     procedure SetJsonStr(const Value: String);
     property JsonStr:String read FJsonStr write SetJsonStr;
   protected
+    //设置CollectionItem设计时显示的名称
+    function GetDisplayName: string; override;
+    procedure SetDisplayName(const Value: string); override;
+  protected
     /// <summary>
     ///   <para>
     ///     复制
@@ -6534,6 +6538,11 @@ begin
   Result:=FDetail6;
 end;
 
+function TRealSkinTreeViewItem.GetDisplayName: string;
+begin
+  Result:=Caption;
+end;
+
 function TRealSkinTreeViewItem.GetSubItems: TStringList;
 begin
   if FSubItems=nil then
@@ -7013,6 +7022,12 @@ begin
 
     DoPropChange;
   end;
+end;
+
+procedure TRealSkinTreeViewItem.SetDisplayName(const Value: string);
+begin
+  Caption:=Value;
+
 end;
 
 procedure TRealSkinTreeViewItem.SetJsonStr(const Value: String);

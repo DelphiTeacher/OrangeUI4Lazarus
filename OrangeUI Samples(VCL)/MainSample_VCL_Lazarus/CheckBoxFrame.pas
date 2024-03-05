@@ -23,6 +23,9 @@ type
     SkinWinCheckBox3: TSkinWinCheckBox;
     SkinWinCheckBox5: TSkinWinCheckBox;
     SkinWinCheckBox6: TSkinWinCheckBox;
+    chkRightFillRectCheckBoxMaterial: TSkinCheckBoxDefaultMaterial;
+    SkinWinCheckBox1: TSkinWinCheckBox;
+    SkinWinCheckBox4: TSkinWinCheckBox;
   private
     { Private declarations }
   public

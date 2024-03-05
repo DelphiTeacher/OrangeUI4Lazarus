@@ -200,7 +200,7 @@ begin
     FControlLayoutItems.FListLayoutsManager.ControlHeight:=Self.Height;
     FControlLayoutItems.FListLayoutsManager.DoItemSizeChange(nil);
     FControlLayoutItems.AlignControls;
-    Self.Height:=Ceil(FControlLayoutItems.FListLayoutsManager.CalcContentHeight);
+//    Self.Height:=Ceil(FControlLayoutItems.FListLayoutsManager.CalcContentHeight);
   end;
 end;
 

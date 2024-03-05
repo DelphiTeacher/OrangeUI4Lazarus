@@ -1442,9 +1442,9 @@ type
     procedure SetVirtualListProperties(Value:TVirtualListProperties);
 
   protected
-    procedure ReadState(Reader: TReader); override;
+//    procedure ReadState(Reader: TReader); override;
 
-    procedure Loaded;override;
+//    procedure Loaded;override;
     //通知
     procedure Notification(AComponent:TComponent;Operation:TOperation);override;
     //获取控件属性类
@@ -4841,38 +4841,38 @@ begin
   Result:=Self.Properties.Items;
 end;
 
-procedure TSkinVirtualList.Loaded;
-var
-  I: Integer;
-begin
-  Inherited;
-//  Self.Properties.Items.EndUpdate(True);
+//procedure TSkinVirtualList.Loaded;
+//var
+//  I: Integer;
+//begin
+//  Inherited;
+////  Self.Properties.Items.EndUpdate(True);
+//
+////  {$IFDEF VCL}
+////  //在VCL下绘制ListBox，窗体打开的时候会有一段时间空白，可能是创建Frame导致的延时
+//////  if Self.Properties. then
+////  for I := 0 to Prop.FListItemTypeStyleSettingList.Count-1 do
+////  begin
+////    if Prop.FListItemTypeStyleSettingList[I].Style<>'' then
+////    begin
+////      Prop.FListItemTypeStyleSettingList[I].GetItemStyleFrameCache(nil);
+////    end;
+////  end;
+////  {$ENDIF}
+//
+//
+////  //默认选中居中显示项
+////  if Properties.IsEnabledCenterItemSelectMode then
+////  begin
+////    Properties.DoAdjustCenterItemPositionAnimateEnd(Self);
+////  end;
+//end;
 
-//  {$IFDEF VCL}
-//  //在VCL下绘制ListBox，窗体打开的时候会有一段时间空白，可能是创建Frame导致的延时
-////  if Self.Properties. then
-//  for I := 0 to Prop.FListItemTypeStyleSettingList.Count-1 do
-//  begin
-//    if Prop.FListItemTypeStyleSettingList[I].Style<>'' then
-//    begin
-//      Prop.FListItemTypeStyleSettingList[I].GetItemStyleFrameCache(nil);
-//    end;
-//  end;
-//  {$ENDIF}
-
-
-//  //默认选中居中显示项
-//  if Properties.IsEnabledCenterItemSelectMode then
-//  begin
-//    Properties.DoAdjustCenterItemPositionAnimateEnd(Self);
-//  end;
-end;
-
-procedure TSkinVirtualList.ReadState(Reader: TReader);
-begin
-  Self.Properties.Items.BeginUpdate;
-  inherited ReadState(Reader);
-end;
+//procedure TSkinVirtualList.ReadState(Reader: TReader);
+//begin
+////  Self.Properties.Items.BeginUpdate;
+//  inherited ReadState(Reader);
+//end;
 
 procedure TSkinVirtualList.RecordControlLangIndex(APrefix: String; ALang: TLang;
   ACurLang: String);
