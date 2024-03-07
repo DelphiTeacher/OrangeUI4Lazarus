@@ -231,7 +231,6 @@ object FrameBarChart_MonthSummary: TFrameBarChart_MonthSummary
       SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
       SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
       RefMaterial = dmEasyServiceCommonMaterial.btnTransparentDropDownButtonMaterial
-      StaticRefMaterial = dmEasyServiceCommonMaterial.btnTransparentDropDownButtonMaterial
       HitTest = False
       MouseDownFocus = False
       Anchors = [akTop, akRight]

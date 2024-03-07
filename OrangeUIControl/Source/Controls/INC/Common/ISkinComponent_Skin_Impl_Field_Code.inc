@@ -440,6 +440,13 @@ begin
   end;
 end;
 
+procedure {$I Source\Controls\INC\Common\ISkinComponent_Skin_Impl_ClassName.inc}.SetSelfOwnMaterial(Value:TSkinControlMaterial);
+begin
+
+  FMaterial.Assign(Value);
+
+end;
+
 
 procedure {$I Source\Controls\INC\Common\ISkinComponent_Skin_Impl_ClassName.inc}.SetStaticRefMaterial(Value:TSkinControlMaterial);
 var

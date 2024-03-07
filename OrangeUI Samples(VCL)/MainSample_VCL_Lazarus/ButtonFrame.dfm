@@ -208,7 +208,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnThemeColorIconLeftCaptionRight
-    StaticRefMaterial = dmEasyServiceCommonMaterial.btnThemeColorIconLeftCaptionRight
     HitTest = False
     MouseDownFocus = False
     ParentBackground = False
@@ -373,7 +372,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnThemeColor1IconLeftCaptionRight
-    StaticRefMaterial = dmEasyServiceCommonMaterial.btnThemeColor1IconLeftCaptionRight
     HitTest = False
     MouseDownFocus = False
     ParentBackground = False
@@ -538,7 +536,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnThemeColor2IconLeftCaptionRight
-    StaticRefMaterial = dmEasyServiceCommonMaterial.btnThemeColor2IconLeftCaptionRight
     HitTest = False
     MouseDownFocus = False
     ParentBackground = False
@@ -703,7 +700,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnThemeColor3IconLeftCaptionRight
-    StaticRefMaterial = dmEasyServiceCommonMaterial.btnThemeColor3IconLeftCaptionRight
     HitTest = False
     MouseDownFocus = False
     ParentBackground = False
@@ -832,7 +828,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -1009,7 +1004,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -1186,7 +1180,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -1360,7 +1353,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -1538,7 +1530,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -1585,7 +1576,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnBlackTransHoverColorIconLeftCaptionRight
-    StaticRefMaterial = dmEasyServiceCommonMaterial.btnBlackTransHoverColorIconLeftCaptionRight
     HitTest = False
     MouseDownFocus = False
     ParentBackground = False
@@ -1715,7 +1705,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -1762,7 +1751,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnBlueColorButtonMaterial
-    StaticRefMaterial = dmEasyServiceCommonMaterial.btnBlueColorButtonMaterial
     HitTest = False
     MouseDownFocus = False
     ParentBackground = False
@@ -1892,7 +1880,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -1939,7 +1926,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnButtonDefaultMaterial
-    StaticRefMaterial = dmEasyServiceCommonMaterial.btnButtonDefaultMaterial
     HitTest = False
     MouseDownFocus = False
     ParentBackground = False
@@ -2069,7 +2055,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -2116,7 +2101,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnDeleteButtonMaterial
-    StaticRefMaterial = dmEasyServiceCommonMaterial.btnDeleteButtonMaterial
     HitTest = False
     MouseDownFocus = False
     ParentBackground = False
@@ -2246,7 +2230,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -2293,7 +2276,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnDropDownButtonMaterial
-    StaticRefMaterial = dmEasyServiceCommonMaterial.btnDropDownButtonMaterial
     HitTest = False
     MouseDownFocus = False
     ParentBackground = False
@@ -2438,7 +2420,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -2485,7 +2466,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnGrayBorderButtonMaterial
-    StaticRefMaterial = dmEasyServiceCommonMaterial.btnGrayBorderButtonMaterial
     HitTest = False
     MouseDownFocus = False
     ParentBackground = False
@@ -2615,7 +2595,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -2662,7 +2641,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnGrayBorderSmallTextButtonMaterial
-    StaticRefMaterial = dmEasyServiceCommonMaterial.btnGrayBorderSmallTextButtonMaterial
     HitTest = False
     MouseDownFocus = False
     ParentBackground = False
@@ -2792,7 +2770,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -2839,7 +2816,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnGraySearchIconButtonMaterial
-    StaticRefMaterial = dmEasyServiceCommonMaterial.btnGraySearchIconButtonMaterial
     HitTest = False
     MouseDownFocus = False
     ParentBackground = False
@@ -2969,7 +2945,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -3016,7 +2991,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnIconButtonMaterial
-    StaticRefMaterial = dmEasyServiceCommonMaterial.btnIconButtonMaterial
     HitTest = False
     MouseDownFocus = False
     ParentBackground = False
@@ -3178,7 +3152,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -3225,7 +3198,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnIconTopCaptionBottomButtonMaterial
-    StaticRefMaterial = dmEasyServiceCommonMaterial.btnIconTopCaptionBottomButtonMaterial
     HitTest = False
     MouseDownFocus = False
     ParentBackground = False
@@ -3387,7 +3359,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -3434,7 +3405,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnNumberAddButtonMaterial
-    StaticRefMaterial = dmEasyServiceCommonMaterial.btnNumberAddButtonMaterial
     HitTest = False
     MouseDownFocus = False
     ParentBackground = False
@@ -3564,7 +3534,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -3611,7 +3580,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnNumberDecButtonMaterial
-    StaticRefMaterial = dmEasyServiceCommonMaterial.btnNumberDecButtonMaterial
     HitTest = False
     MouseDownFocus = False
     ParentBackground = False
@@ -3741,7 +3709,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -3788,7 +3755,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnOrangeRedBorderWhiteBackButtonMaterial
-    StaticRefMaterial = dmEasyServiceCommonMaterial.btnOrangeRedBorderWhiteBackButtonMaterial
     HitTest = False
     MouseDownFocus = False
     ParentBackground = False
@@ -3918,7 +3884,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -3965,7 +3930,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnRedBorderButtonMaterial
-    StaticRefMaterial = dmEasyServiceCommonMaterial.btnRedBorderButtonMaterial
     HitTest = False
     MouseDownFocus = False
     ParentBackground = False
@@ -4095,7 +4059,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -4142,7 +4105,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnRedColorButtonMaterial
-    StaticRefMaterial = dmEasyServiceCommonMaterial.btnRedColorButtonMaterial
     HitTest = False
     MouseDownFocus = False
     ParentBackground = False
@@ -4272,7 +4234,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -4319,7 +4280,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnRedRectButtonMaterial
-    StaticRefMaterial = dmEasyServiceCommonMaterial.btnRedRectButtonMaterial
     HitTest = False
     MouseDownFocus = False
     ParentBackground = False
@@ -4449,7 +4409,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -4496,7 +4455,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnScanHandCode_Material
-    StaticRefMaterial = dmEasyServiceCommonMaterial.btnScanHandCode_Material
     HitTest = False
     MouseDownFocus = False
     ParentBackground = False
@@ -4626,7 +4584,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -4673,7 +4630,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnSearchButtonMaterial
-    StaticRefMaterial = dmEasyServiceCommonMaterial.btnSearchButtonMaterial
     HitTest = False
     MouseDownFocus = False
     ParentBackground = False
@@ -4803,7 +4759,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -4850,7 +4805,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnSelectButtonMaterial
-    StaticRefMaterial = dmEasyServiceCommonMaterial.btnSelectButtonMaterial
     HitTest = False
     MouseDownFocus = False
     ParentBackground = False
@@ -4980,7 +4934,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -5027,7 +4980,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnSelectButtonRightAlignMaterial
-    StaticRefMaterial = dmEasyServiceCommonMaterial.btnSelectButtonRightAlignMaterial
     HitTest = False
     MouseDownFocus = False
     ParentBackground = False
@@ -5157,7 +5109,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -5204,7 +5155,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnSelectWithHelpText_Material
-    StaticRefMaterial = dmEasyServiceCommonMaterial.btnSelectWithHelpText_Material
     HitTest = False
     MouseDownFocus = False
     ParentBackground = False
@@ -5334,7 +5284,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -5381,7 +5330,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnSkinTheme1ColorMaterial
-    StaticRefMaterial = dmEasyServiceCommonMaterial.btnSkinTheme1ColorMaterial
     HitTest = False
     MouseDownFocus = False
     ParentBackground = False
@@ -5511,7 +5459,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -5558,7 +5505,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnSkinThemeColorMaterial
-    StaticRefMaterial = dmEasyServiceCommonMaterial.btnSkinThemeColorMaterial
     HitTest = False
     MouseDownFocus = False
     ParentBackground = False
@@ -5688,7 +5634,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -5735,7 +5680,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnSmallIconMaterial
-    StaticRefMaterial = dmEasyServiceCommonMaterial.btnSmallIconMaterial
     HitTest = False
     MouseDownFocus = False
     ParentBackground = False
@@ -5902,7 +5846,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -5949,7 +5892,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnThemeColor1IconLeftCaptionRight
-    StaticRefMaterial = dmEasyServiceCommonMaterial.btnThemeColor1IconLeftCaptionRight
     HitTest = False
     MouseDownFocus = False
     ParentBackground = False
@@ -6079,7 +6021,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -6126,7 +6067,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnThemeColor2IconLeftCaptionRight
-    StaticRefMaterial = dmEasyServiceCommonMaterial.btnThemeColor2IconLeftCaptionRight
     HitTest = False
     MouseDownFocus = False
     ParentBackground = False
@@ -6256,7 +6196,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -6303,7 +6242,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnThemeColor3IconLeftCaptionRight
-    StaticRefMaterial = dmEasyServiceCommonMaterial.btnThemeColor3IconLeftCaptionRight
     HitTest = False
     MouseDownFocus = False
     ParentBackground = False
@@ -6433,7 +6371,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -6480,7 +6417,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnThemeColorCaptionLeftIconRight
-    StaticRefMaterial = dmEasyServiceCommonMaterial.btnThemeColorCaptionLeftIconRight
     HitTest = False
     MouseDownFocus = False
     ParentBackground = False
@@ -6610,7 +6546,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -6657,7 +6592,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnThemeColorIconLeftCaptionRight
-    StaticRefMaterial = dmEasyServiceCommonMaterial.btnThemeColorIconLeftCaptionRight
     HitTest = False
     MouseDownFocus = False
     ParentBackground = False
@@ -6787,7 +6721,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -6834,7 +6767,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnThemeColorIconLeftCaptionRightGroupLeft
-    StaticRefMaterial = dmEasyServiceCommonMaterial.btnThemeColorIconLeftCaptionRightGroupLeft
     HitTest = False
     MouseDownFocus = False
     ParentBackground = False
@@ -6964,7 +6896,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -7011,7 +6942,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnThemeColorIconLeftCaptionRightGroupMiddle
-    StaticRefMaterial = dmEasyServiceCommonMaterial.btnThemeColorIconLeftCaptionRightGroupMiddle
     HitTest = False
     MouseDownFocus = False
     ParentBackground = False
@@ -7141,7 +7071,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -7188,7 +7117,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnTransparenThemeCaptionButtonMaterial
-    StaticRefMaterial = dmEasyServiceCommonMaterial.btnTransparenThemeCaptionButtonMaterial
     HitTest = False
     MouseDownFocus = False
     ParentBackground = False
@@ -7318,7 +7246,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -7365,7 +7292,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnTransparentIconButonMaterial
-    StaticRefMaterial = dmEasyServiceCommonMaterial.btnTransparentIconButonMaterial
     HitTest = False
     MouseDownFocus = False
     ParentBackground = False
@@ -7495,7 +7421,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -7542,7 +7467,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnTransparentWhiteCaptionButtonMaterial
-    StaticRefMaterial = dmEasyServiceCommonMaterial.btnTransparentWhiteCaptionButtonMaterial
     HitTest = False
     MouseDownFocus = False
     ParentBackground = False
@@ -7672,7 +7596,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -7719,7 +7642,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnWhiteColorBorderMaterial
-    StaticRefMaterial = dmEasyServiceCommonMaterial.btnWhiteColorBorderMaterial
     HitTest = False
     MouseDownFocus = False
     ParentBackground = False
@@ -7849,7 +7771,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -7896,7 +7817,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnWhiteColorGrayBorderMaterial
-    StaticRefMaterial = dmEasyServiceCommonMaterial.btnWhiteColorGrayBorderMaterial
     HitTest = False
     MouseDownFocus = False
     ParentBackground = False
@@ -8031,7 +7951,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -8211,7 +8130,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -8389,7 +8307,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -8566,7 +8483,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -8743,7 +8659,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -8920,7 +8835,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -9094,7 +9008,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -9272,7 +9185,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -9485,7 +9397,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnThemeColorIconLeftCaptionRightGroupLeft
-    StaticRefMaterial = dmEasyServiceCommonMaterial.btnThemeColorIconLeftCaptionRightGroupLeft
     HitTest = False
     MouseDownFocus = False
     ParentBackground = False
@@ -9650,7 +9561,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnThemeColorIconLeftCaptionRightGroupLeft
-    StaticRefMaterial = dmEasyServiceCommonMaterial.btnThemeColorIconLeftCaptionRightGroupLeft
     HitTest = False
     MouseDownFocus = False
     ParentBackground = False
@@ -9815,7 +9725,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnThemeColorIconLeftCaptionRightGroupLeft
-    StaticRefMaterial = dmEasyServiceCommonMaterial.btnThemeColorIconLeftCaptionRightGroupLeft
     HitTest = False
     MouseDownFocus = False
     ParentBackground = False
@@ -9980,7 +9889,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnThemeColorIconLeftCaptionRight
-    StaticRefMaterial = dmEasyServiceCommonMaterial.btnThemeColorIconLeftCaptionRight
     HitTest = False
     MouseDownFocus = False
     ParentBackground = False
@@ -10172,7 +10080,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnThemeColor1IconLeftCaptionRight
-    StaticRefMaterial = dmEasyServiceCommonMaterial.btnThemeColor1IconLeftCaptionRight
     HitTest = False
     MouseDownFocus = False
     ParentBackground = False
@@ -10358,7 +10265,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnThemeColor2IconLeftCaptionRight
-    StaticRefMaterial = dmEasyServiceCommonMaterial.btnThemeColor2IconLeftCaptionRight
     HitTest = False
     MouseDownFocus = False
     ParentBackground = False
@@ -10543,7 +10449,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnThemeColor3IconLeftCaptionRight
-    StaticRefMaterial = dmEasyServiceCommonMaterial.btnThemeColor3IconLeftCaptionRight
     HitTest = False
     MouseDownFocus = False
     ParentBackground = False
@@ -10691,7 +10596,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -10885,7 +10789,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -11075,7 +10978,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -11272,7 +11174,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -11515,7 +11416,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnThemeColorIconLeftCaptionRight
-    StaticRefMaterial = dmEasyServiceCommonMaterial.btnThemeColorIconLeftCaptionRight
     HitTest = False
     MouseDownFocus = False
     ParentBackground = False
@@ -11707,7 +11607,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnThemeColor1IconLeftCaptionRight
-    StaticRefMaterial = dmEasyServiceCommonMaterial.btnThemeColor1IconLeftCaptionRight
     HitTest = False
     MouseDownFocus = False
     ParentBackground = False
@@ -11893,7 +11792,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnThemeColor2IconLeftCaptionRight
-    StaticRefMaterial = dmEasyServiceCommonMaterial.btnThemeColor2IconLeftCaptionRight
     HitTest = False
     MouseDownFocus = False
     ParentBackground = False
@@ -12078,7 +11976,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
     RefMaterial = dmEasyServiceCommonMaterial.btnThemeColor3IconLeftCaptionRight
-    StaticRefMaterial = dmEasyServiceCommonMaterial.btnThemeColor3IconLeftCaptionRight
     HitTest = False
     MouseDownFocus = False
     ParentBackground = False
@@ -12226,7 +12123,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -12420,7 +12316,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -12610,7 +12505,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -12807,7 +12701,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -13024,7 +12917,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -13214,7 +13106,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -13402,7 +13293,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -13591,7 +13481,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -13779,7 +13668,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -13966,7 +13854,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -14152,7 +14039,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -14332,7 +14218,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -14523,7 +14408,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -14713,7 +14597,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -14901,7 +14784,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -15090,7 +14972,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -15278,7 +15159,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -15465,7 +15345,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -15651,7 +15530,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -15831,7 +15709,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
@@ -16011,7 +15888,6 @@ object FrameButton: TFrameButton
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Top = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Bottom = 3.000000000000000000
     SelfOwnMaterial.DrawIconParam.DrawRectSetting.Enabled = True
-    SelfOwnMaterial.DrawIconParam.DrawRectSetting.SizeType = dpstPixel
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.CommonEffectTypes = [dpcetOffsetChange]
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255

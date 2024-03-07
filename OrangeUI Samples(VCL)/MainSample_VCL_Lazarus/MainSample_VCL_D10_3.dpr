@@ -47,7 +47,8 @@ uses
   DashBoard_LineChart_WeekSummaryFrame in 'DashBoard_LineChart_WeekSummaryFrame.pas' {FrameLineChart_WeekSummary: TFrame},
   OrderGridFrame in 'OrderGridFrame.pas' {FrameOrderGrid: TFrame},
   uSkinItemJsonHelper in '..\..\OrangeProjectCommon\uSkinItemJsonHelper.pas',
-  EditJsonItemGridFrame in 'EditJsonItemGridFrame.pas' {FrameEditJsonItemGrid: TFrame};
+  EditJsonItemGridFrame in 'EditJsonItemGridFrame.pas' {FrameEditJsonItemGrid: TFrame},
+  ItemGrid_ColumnControlTypeFrame in 'ItemGrid_ColumnControlTypeFrame.pas' {FrameItemGrid_ColumnControlType: TFrame};
 
 {$R *.res}
 var

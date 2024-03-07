@@ -123,6 +123,7 @@ type
     constructor Create(ASkinControl:TControl);override;
     destructor Destroy;override;
   public
+    FDrawChecked:Boolean;
     //获取分类名称
     function GetComponentClassify:String;override;
   public
@@ -273,8 +274,8 @@ type
     procedure TextChanged;override;
   public
     //获取当前的状态
-    function GetCurrentEffectStates: TDPEffectStates;override;
-    function CalcCurrentEffectStates:TDPEffectStates;override;
+    function GetCurrentEffectStates(APaintData:TPaintData): TDPEffectStates;override;
+    function CalcCurrentEffectStates(APaintData:TPaintData):TDPEffectStates;override;
   end;
 
 
@@ -542,6 +543,7 @@ type
   {$I ComponentPlatformsAttribute.inc}
   TSkinCheckBox=class(TBaseSkinControl,
                           ISkinCheckBox,
+                          ICustomListItemEditor,
                           IBindSkinItemBoolControl,
                           IBindSkinItemValueControl)
   private
@@ -565,6 +567,13 @@ type
     procedure SetControlValue(ASetting:TFieldControlSetting;APageDataDir:String;AImageServerUrl:String;AValue:Variant;AValueCaption:String;
                             //要设置多个值,整个字段的记录
                             AGetDataIntfResultFieldValueIntf:IGetDataIntfResultFieldValue);override;
+  protected
+    //在ListBox中启动编辑时所调用的ICustomListItemEditor
+    procedure EditSetValue(const AValue:Variant);
+    function EditGetValue:Variant;
+    procedure EditMouseDown(Button: TMouseButton; Shift: TShiftState;X, Y: Double);
+    procedure EditMouseUp(Button: TMouseButton; Shift: TShiftState;X, Y: Double);
+    procedure EditMouseMove(Shift: TShiftState; X, Y: Double);
   public
     //在点击事件中设置是否勾选属性
     procedure StayClick;override;
@@ -651,11 +660,21 @@ begin
 
 end;
 
-function TSkinCheckBoxType.CalcCurrentEffectStates: TDPEffectStates;
+function TSkinCheckBoxType.CalcCurrentEffectStates(APaintData:TPaintData): TDPEffectStates;
+var
+  AChecked:Boolean;
 begin
-  Result:=Inherited CalcCurrentEffectStates;
+  Result:=Inherited;// CalcCurrentEffectStates;
+  if APaintData.IsInDrawDirectUI then
+  begin
+    AChecked:=Self.FSkinCheckBoxIntf.Prop.FDrawChecked;
+  end
+  else
+  begin
+    AChecked:=Self.FSkinCheckBoxIntf.Prop.FChecked;
+  end;
 
-  if Self.FSkinCheckBoxIntf.Prop.FChecked then
+  if AChecked then
   begin
     Result:=Result+[dpstPushed];
   end;
@@ -683,17 +702,28 @@ begin
   Self.FSkinCheckBoxIntf:=nil;
 end;
 
-function TSkinCheckBoxType.GetCurrentEffectStates: TDPEffectStates;
+function TSkinCheckBoxType.GetCurrentEffectStates(APaintData:TPaintData): TDPEffectStates;
+var
+  AChecked:Boolean;
 begin
   if Self.FIsUseCurrentEffectStates then
   begin
     Result:=FCurrentEffectStates;
 
 
+    if APaintData.IsInDrawDirectUI then
+    begin
+      AChecked:=Self.FSkinCheckBoxIntf.Prop.FDrawChecked;
+    end
+    else
+    begin
+      AChecked:=Self.FSkinCheckBoxIntf.Prop.FChecked;
+    end;
+
     //因为Color类型的素材类型用的是PushedEffect,
     //当Item.Selected为True时,EffectStates会自动加入dpstPushed
     //而不是根据自身的Checked
-    if Not Self.FSkinCheckBoxIntf.Prop.FChecked then
+    if Not AChecked then
     begin
       Result:=Result-[dpstPushed];
     end
@@ -705,7 +735,7 @@ begin
   end
   else
   begin
-    Result := Self.CalcCurrentEffectStates;
+    Result := Self.CalcCurrentEffectStates(APaintData);
   end;
 
 end;
@@ -735,32 +765,43 @@ end;
 
 function TSkinCheckBoxDefaultType.CustomPaint(ACanvas: TDrawCanvas;ASkinMaterial:TSkinControlMaterial;const ADrawRect: TRectF;APaintData:TPaintData): Boolean;
 var
+  AChecked:Boolean;
   APicture:TDrawPicture;
   ACaptionDrawRect:TRectF;
   APictureDrawRect:TRectF;
   AMaterial: TSkinCheckBoxDefaultMaterial;
 begin
   AMaterial:=TSkinCheckBoxDefaultMaterial(ASkinMaterial);
+
+    if APaintData.IsInDrawDirectUI then
+    begin
+      AChecked:=Self.FSkinCheckBoxIntf.Properties.FDrawChecked;
+    end
+    else
+    begin
+      AChecked:=Self.FSkinCheckBoxIntf.Properties.FChecked;
+    end;
+
   //if GetSkinMaterial<>nil then
   //begin
     APicture:=nil;
     if Not Self.FSkinControlIntf.Enabled then
     begin
-      if Self.FSkinCheckBoxIntf.Prop.Checked then
+      if AChecked then
         APicture:=AMaterial.FDisabledCheckedPicture
       else
         APicture:=AMaterial.FDisabledUnCheckedPicture;
     end
     else if Self.FSkinControlIntf.IsMouseOver and APaintData.IsDrawInteractiveState then
     begin
-      if Self.FSkinCheckBoxIntf.Prop.Checked then
+      if AChecked then
         APicture:=AMaterial.FHoverCheckedPicture
       else
         APicture:=AMaterial.FHoverUnCheckedPicture;
     end
     else
     begin
-      if Self.FSkinCheckBoxIntf.Prop.Checked then
+      if AChecked then
         APicture:=AMaterial.FNormalCheckedPicture
       else
         APicture:=AMaterial.FNormalUnCheckedPicture;
@@ -769,7 +810,7 @@ begin
 
     if APicture.CurrentPictureIsEmpty then
     begin
-      if Self.FSkinCheckBoxIntf.Prop.Checked then
+      if AChecked then
         APicture:=AMaterial.FNormalCheckedPicture
       else
         APicture:=AMaterial.FNormalUnCheckedPicture;
@@ -813,7 +854,7 @@ begin
     AMaterial.DrawTo(ACanvas,
                            Self.FSkinControlIntf.Caption,
                            ADrawRect,
-                           Self.FSkinCheckBoxIntf.Properties.Checked);
+                           AChecked);
   //end;
 
     end;
@@ -1004,7 +1045,7 @@ begin
       end
       else
       begin
-        ACanvas.DrawPath(Self.FDrawCheckStateParam,ACheckDrawRect,FDrawCheckStateParam.PathActions);
+          ACanvas.DrawPath(Self.FDrawCheckStateParam,ACheckDrawRect,FDrawCheckStateParam.PathActions);
       end;
 
 
@@ -1029,7 +1070,7 @@ begin
       end
       else
       begin
-        ACanvas.DrawPath(Self.FDrawCheckStateParam,ADrawRect,FDrawCheckStateParam.PathActions);
+          ACanvas.DrawPath(Self.FDrawCheckStateParam,ADrawRect,FDrawCheckStateParam.PathActions);
       end;
 
 
@@ -1679,14 +1720,25 @@ begin
 end;
 
 function TSkinCheckBoxColorType.CustomPaint(ACanvas: TDrawCanvas;ASkinMaterial:TSkinControlMaterial;const ADrawRect: TRectF;APaintData:TPaintData): Boolean;
+var
+  AChecked:Boolean;
 begin
-  if GetSkinMaterial<>nil then
+  if ASkinMaterial<>nil then
   begin
+    if APaintData.IsInDrawDirectUI then
+    begin
+      AChecked:=Self.FSkinCheckBoxIntf.Properties.FDrawChecked;
+    end
+    else
+    begin
+      AChecked:=Self.FSkinCheckBoxIntf.Properties.FChecked;
+    end;
 
     GetSkinMaterial.DrawTo(ACanvas,
                            Self.FSkinControlIntf.Caption,
                            ADrawRect,
-                           Self.FSkinCheckBoxIntf.Properties.Checked);
+                           AChecked);
+
   end;
 end;
 
@@ -1769,14 +1821,14 @@ var
 begin
   if VarType(AFieldValue)=varBoolean then
   begin
-      Self.GetCheckBoxProperties.Checked:=AFieldValue;
+      Self.GetCheckBoxProperties.FDrawChecked:=AFieldValue;
   end
   else
   begin
       if Self.FBindItemFieldTrueValue<>'' then
       begin
         AAFieldValueStr:=AFieldValue;
-        Self.GetCheckBoxProperties.Checked:=(Self.FBindItemFieldTrueValue=AAFieldValueStr);
+        Self.GetCheckBoxProperties.FDrawChecked:=(Self.FBindItemFieldTrueValue=AAFieldValueStr);
       end;
 
   end;
@@ -1792,9 +1844,36 @@ begin
   Inherited;
 end;
 
+function TSkinCheckBox.EditGetValue: Variant;
+begin
+  Result:=Self.Prop.Checked;
+end;
+
+procedure TSkinCheckBox.EditMouseDown(Button: TMouseButton; Shift: TShiftState;
+  X, Y: Double);
+begin
+
+end;
+
+procedure TSkinCheckBox.EditMouseMove(Shift: TShiftState; X, Y: Double);
+begin
+
+end;
+
+procedure TSkinCheckBox.EditMouseUp(Button: TMouseButton; Shift: TShiftState; X,
+  Y: Double);
+begin
+
+end;
+
+procedure TSkinCheckBox.EditSetValue(const AValue: Variant);
+begin
+  Self.Prop.Checked:=AValue;
+end;
+
 procedure TSkinCheckBox.BindingItemBool(ABool:Boolean;AIsDrawItemInteractiveState:Boolean);
 begin
-  Self.GetCheckBoxProperties.Checked:=ABool;
+  Self.GetCheckBoxProperties.FDrawChecked:=ABool;
 end;
 
 

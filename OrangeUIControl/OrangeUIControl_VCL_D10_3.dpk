@@ -141,6 +141,8 @@ contains
   uGDIPlusDrawCanvas in 'Source\VCL\GDIPlusCanvas\uGDIPlusDrawCanvas.pas',
   uGDIPlusSkinPictureEngine in 'Source\VCL\GDIPlusCanvas\uGDIPlusSkinPictureEngine.pas',
   uSkinGDIPlus in 'Source\VCL\GDIPlusCanvas\GDIPlus\uSkinGDIPlus.pas',
-  uVCLSVGSupport in '..\OrangeProjectCommon\uVCLSVGSupport.pas';
+  uVCLSVGSupport in '..\OrangeProjectCommon\uVCLSVGSupport.pas',
+  uSkinSelectPopupForm in 'Source\VCL\uSkinSelectPopupForm.pas',
+  uSkinWindowsForm in 'Source\VCL\uSkinWindowsForm.pas';
 
 end.

@@ -79,6 +79,7 @@
     function GetSelfOwnMaterial:TSkinControlMaterial;
     //设置引用的皮肤素材
     procedure SetRefMaterial(Value:TSkinControlMaterial);
+    procedure SetSelfOwnMaterial(Value:TSkinControlMaterial);
     procedure SetStaticRefMaterial(Value:TSkinControlMaterial);
     //复制素材
     procedure AssignMaterial(ASrcControlIntf:ISkinControlMaterial);

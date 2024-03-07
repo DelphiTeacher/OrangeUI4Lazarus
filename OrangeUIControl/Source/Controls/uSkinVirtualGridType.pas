@@ -323,7 +323,13 @@ type
   TSkinVirtualGridColumn=class(TRealSkinItem)
   private
     procedure SetControlType(const Value: String);
-    function GetMaterial: TSkinVirtualGridColumnMaterial;
+    function GetSelfOwnMaterial: TSkinVirtualGridColumnMaterial;
+//    function GetControlRefMaterial: TSkinControlMaterial;
+//    procedure SetControlRefMaterial(const Value: TSkinControlMaterial);
+//    function GetControlProperties: TSkinControlProperties;
+//    procedure SetControlProperties(const Value: TSkinControlProperties);
+//    function GetControlMaterial: TSkinControlMaterial;
+//    procedure SetControlMaterial(const Value: TSkinControlMaterial);
 //    //IInterface接口
 //    FOwnerInterface: IInterface;
 ////    function GetContentTypes: TSkinGridColumnContentTypes;
@@ -466,15 +472,20 @@ type
     function GetValueType(ARow:TBaseSkinItem):TVarType;virtual;
     function GetValueType1(ARow:TBaseSkinItem):TVarType;virtual;
 
+  public
+//    FBindItemFieldName:String;
+//    FBindItemFieldName1:String;
     function GetBindItemFieldName: String;virtual;
     function GetBindItemFieldName1: String;virtual;
 
+//    procedure SetBindItemFieldName(const Value: String);virtual;
+//    procedure SetBindItemFieldName1(const Value: String);virtual;
   public
     //控件类型,比如CheckBox,Label,Button,ProgressBar等·
     FControlType:String;
     FSkinControl:TControl;
     FSkinControlIntf:ISkinControl;
-    FItemDesignerPanel:TSkinItemDesignerPanel;
+    FSkinControlItemDesignerPanel:TSkinItemDesignerPanel;
 //    FItemBindingControl:TItemBindingControlItem;
     function GetDrawItemDesignerPanel(ASkinItem:TBaseSkinItem):TSkinItemDesignerPanel;
   public
@@ -483,10 +494,17 @@ type
     function Owner:TSkinVirtualGridColumns;
     //当前使用的素材
 //    property CurrentUseMaterial:TSkinVirtualGridColumnMaterial read GetCurrentUseMaterial;
-    property Material:TSkinVirtualGridColumnMaterial read GetMaterial;
+    property Material:TSkinVirtualGridColumnMaterial read GetSelfOwnMaterial;
+//    property ControlProperties:TSkinControlProperties read GetControlProperties;// write SetControlProperties;
+//    //控件的引用素材
+//    property ControlRefMaterial:TSkinControlMaterial read GetControlRefMaterial write SetControlRefMaterial;
+//    //控件的引用素材
+//    property ControlMaterial:TSkinControlMaterial read GetControlMaterial;// write SetControlMaterial;
+//    //绑定的字段
+//    property BindItemFieldName:String read GetBindItemFieldName write SetBindItemFieldName;//SetBindItemFieldName;
+//    //绑定的字段1
+//    property BindItemFieldName1:String read GetBindItemFieldName1 write SetBindItemFieldName1;//SetBindItemFieldName1;
   published
-    //控件类型
-    property ControlType:String read FControlType write SetControlType;
     {$IFDEF FMX}
     property KeyboardType : TVirtualkeyboardType read FKeyboardType write FKeyboardType;
     {$ENDIF}
@@ -533,11 +551,15 @@ type
 //    //素材使用类型
 //    property MaterialUseKind:TMaterialUseKind read FMaterialUseKind write SetMaterialUseKind;
     //自带素材
-    property SelfOwnMaterial:TSkinVirtualGridColumnMaterial read GetMaterial write SetSelfOwnMaterial;
+    property SelfOwnMaterial:TSkinVirtualGridColumnMaterial read GetSelfOwnMaterial write SetSelfOwnMaterial;
 
     //准备绘制单元格
     property OnCustomPaintCellBegin:TGridCustomPaintCellBeginEvent read FOnCustomPaintCellBegin;
     property OnCustomPaintCellEnd:TGridCustomPaintCellBeginEvent read FOnCustomPaintCellEnd;
+  published
+    //控件类型
+    property ControlType:String read FControlType write SetControlType;
+    property Control:TControl read FSkinControl;
   end;
 
 
@@ -1106,7 +1128,7 @@ type
     //点击表格行,实现点击单元格的效果,或者单元格编辑
     procedure DoClickItem(ARow:TBaseSkinItem;X:Double;Y:Double);override;
     //点击单元格
-    procedure DoClickCell(ARow:TBaseSkinItem;ACol:TSkinVirtualGridColumn);virtual;
+    procedure DoClickCell(ARow:TBaseSkinItem;ACol:TSkinVirtualGridColumn;X:Double;Y:Double);virtual;
 
     //根据表格列自动创建对应的编辑控件,是下拉框还是编辑框
     function AutoCreateEditControl(ACol:TSkinVirtualGridColumn):TControl;virtual;
@@ -1125,7 +1147,8 @@ type
     procedure StartEditingCell(AItem:TBaseSkinItem;
                                 ACol:TSkinVirtualGridColumn;
                                 X:Double;Y:Double;
-                                AItemDesignerPanelEditControl:TControl=nil);
+                                AItemDesignerPanelEditControl:TControl=nil;
+                                AItemDesignerPanel:TSkinItemDesignerPanel=nil);
   protected
     //获取表格数据行的列表类
     function GetItemsClass:TBaseSkinItemsClass;override;
@@ -2698,69 +2721,134 @@ begin
   inherited;
 end;
 
-procedure TVirtualGridProperties.DoClickCell(ARow: TBaseSkinItem; ACol: TSkinVirtualGridColumn);
+procedure TVirtualGridProperties.DoClickCell(ARow: TBaseSkinItem; ACol: TSkinVirtualGridColumn;X:Double;Y:Double);
 begin
-  if Assigned(Self.FSkinVirtualGridIntf.OnClickCell) then
-  begin
-    Self.FSkinVirtualGridIntf.OnClickCell(
-                          Self,
-                          ACol,
-                          ARow
-                          );
-  end;
+
+    if (Self.FSelectedItem=ARow)
+      and (FClickedCellCol=ACol)
+      and (FClickedCellCol<>nil)
+      and not FClickedCellCol.ReadOnly
+      and not Self.ReadOnly
+       then
+    begin
+        //那么两次点击同一单元格,就启动编辑
+
+        //那么两次点击同一单元格,就启动编辑
+        //编辑单元格
+        if (ACol.ControlType='CheckBox')
+          or (ACol.ControlType='ComboBox')
+          then
+        begin
+          Self.StartEditingCell(ARow,ACol,X,Y,ACol.FSkinControl,ACol.FSkinControlItemDesignerPanel);
+        end
+        else if (ACol.ControlType='Button')
+          or (ACol.ControlType='Image')
+          or (ACol.ControlType='ProgressBar')
+          then
+        begin
+          //Button不编辑
+        end
+        else
+        begin
+          //用默认的Edit、Combox来编辑
+          Self.StartEditingCell(ARow,ACol,X,Y,nil,nil);
+        end;
+
+    end
+    else
+    begin
+
+//        if (ACol<>nil)
+//            and (ACol.GetValueType(ARow)=varBoolean)
+//            and not ACol.ReadOnly
+//            and not Self.ReadOnly then
+//        begin
+//            //复选框直接启动编辑
+//            Self.StartEditingCell(ARow,ACol,X,Y);
+//
+//        end
+//        else
+//        begin
+//
+//            //行选择,并且点击行
+//            inherited;
+
+            FClickedCellCol:=ACol;
+
+            //点击单元格事件
+            //点击单元格事件
+            if Assigned(Self.FSkinVirtualGridIntf.OnClickCell) then
+            begin
+              Self.FSkinVirtualGridIntf.OnClickCell(
+                                                    Self,
+                                                    ACol,
+                                                    ARow
+                                                    );
+            end;
+
+//        end;
+
+    end;
+
+
+
+
 end;
 
 procedure TVirtualGridProperties.DoClickItem(ARow: TBaseSkinItem; X,Y: Double);
 var
   AClickedCellCol:TSkinVirtualGridColumn;
 begin
+    //行选择,并且点击行
+    inherited;
 
     //没有在编辑单元格,
 
     //选中单元格,并且点击单元格
     AClickedCellCol:=Self.ColumnAt(X);
 
-    if (Self.FSelectedItem=ARow)
-      and (FClickedCellCol=AClickedCellCol)
-      and (FClickedCellCol<>nil)
-      and not FClickedCellCol.ReadOnly
-      and not Self.ReadOnly then
-    begin
-        //那么两次点击同一单元格,就启动编辑
-
-        //那么两次点击同一单元格,就启动编辑
-        //编辑单元格
-        Self.StartEditingCell(ARow,AClickedCellCol,X,Y);
-
-    end
-    else
-    begin
-
-        if (AClickedCellCol<>nil)
-            and (AClickedCellCol.GetValueType(ARow)=varBoolean)
-            and not AClickedCellCol.ReadOnly
-            and not Self.ReadOnly then
-        begin
-            //复选框直接启动编辑
-            Self.StartEditingCell(ARow,AClickedCellCol,X,Y);
-
-        end
-        else
-        begin
-
-            //行选择,并且点击行
-            inherited;
-
-            FClickedCellCol:=AClickedCellCol;
+//    if (Self.FSelectedItem=ARow)
+//      and (FClickedCellCol=AClickedCellCol)
+//      and (FClickedCellCol<>nil)
+//      and not FClickedCellCol.ReadOnly
+//      and not Self.ReadOnly then
+//    begin
+//        //那么两次点击同一单元格,就启动编辑
+//
+//        //那么两次点击同一单元格,就启动编辑
+//        //编辑单元格
+//        Self.StartEditingCell(ARow,AClickedCellCol,X,Y);
+//
+//    end
+//    else
+//    begin
+//
+//        if (AClickedCellCol<>nil)
+//            and (AClickedCellCol.GetValueType(ARow)=varBoolean)
+//            and not AClickedCellCol.ReadOnly
+//            and not Self.ReadOnly then
+//        begin
+//            //复选框直接启动编辑
+//            Self.StartEditingCell(ARow,AClickedCellCol,X,Y);
+//
+//        end
+//        else
+//        begin
+//
+//            //行选择,并且点击行
+//            inherited;
+//
+//            FClickedCellCol:=AClickedCellCol;
 
             //点击单元格事件
-            if FClickedCellCol<>nil then
+            if AClickedCellCol<>nil then
             begin
-              DoClickCell(ARow,FClickedCellCol);
+              DoClickCell(ARow,AClickedCellCol,X,Y);
             end;
-        end;
 
-    end;
+//        end;
+//
+//    end;
 
 
 end;
@@ -3271,7 +3359,8 @@ end;
 procedure TVirtualGridProperties.StartEditingCell(AItem: TBaseSkinItem;
     ACol: TSkinVirtualGridColumn;
     X:Double;Y:Double;
-    AItemDesignerPanelEditControl:TControl);
+    AItemDesignerPanelEditControl:TControl;
+    AItemDesignerPanel:TSkinItemDesignerPanel);
 var
   ACellDrawRect:TRectF;
   AEditControlPutRect:TRectF;
@@ -3303,19 +3392,21 @@ begin
 
 
 //  if cctCheckBox in ACol.GetContentTypes then
-  if ACol.GetValueType(AItem)=varBoolean then
-  begin
 
-      //勾选框,自动点击勾选/取消勾选
-      SetGridCellValue(ACol,
-                       AItem,
-//                       Not GetGridCellChecked(ACol,AItem)
-                       Not GetCellValue(ACol,AItem)
-                       );
 
-  end
-  else
-  begin
+//  if ACol.GetValueType(AItem)=varBoolean then
+//  begin
+//
+//      //勾选框,自动点击勾选/取消勾选
+//      SetGridCellValue(ACol,
+//                       AItem,
+////                       Not GetGridCellChecked(ACol,AItem)
+//                       Not GetCellValue(ACol,AItem)
+//                       );
+//
+//  end
+//  else
+//  begin
 
       AEditControl:=AItemDesignerPanelEditControl;
 
@@ -3404,14 +3495,16 @@ begin
                              AEditControlPutRect,
                              AEditValue,
                              X-ACellDrawRect.Left,
-                             Y-ACellDrawRect.Top
+                             Y-ACellDrawRect.Top,
+                             AItemDesignerPanel,
+                             ACellDrawRect
                              ) then
           begin
             FEditingCellCol:=ACol;
           end;
 
       end;
-  end;
+//  end;
 
 
 //  Self.FSkinVirtualGridIntf.GetColumnHeader.BringToFront;
@@ -4006,7 +4099,7 @@ begin
   AColItemDesignerPanel:=AColumn.GetDrawItemDesignerPanel(ARow);
   if AColItemDesignerPanel=nil then
   begin
-    AColItemDesignerPanel:=AColumn.FItemDesignerPanel;
+    AColItemDesignerPanel:=AColumn.FSkinControlItemDesignerPanel;
   end;
 
 
@@ -4169,7 +4262,7 @@ begin
 
 
               AColItemDesignerPanel.SkinControlType.IsUseCurrentEffectStates:=True;
-              AColItemDesignerPanel.SkinControlType.CurrentEffectStates:=ARowEffectStates;
+              AColItemDesignerPanel.SkinControlType.FCurrentEffectStates:=ARowEffectStates;
 
               //绘制ItemDesignerPanel的背景,背景色
               ACellItemPaintData:=GlobalNullPaintData;
@@ -7677,8 +7770,9 @@ end;
 destructor TSkinVirtualGridColumn.Destroy;
 begin
   FreeAndNil(FSkinControl);
+
 //  FreeAndNil(FItemBindingControl);
-  FreeAndNil(FItemDesignerPanel);
+  FreeAndNil(FSkinControlItemDesignerPanel);
 
   FreeAndNil(FPickList);
 
@@ -7690,15 +7784,43 @@ begin
   inherited;
 end;
 
+//procedure TSkinVirtualGridColumn.SetBindItemFieldName(const Value: String);
+//begin
+//  if FBindItemFieldName<>Value then
+//  begin
+//    FBindItemFieldName := Value;
+//    DoPropChange;
+//  end;
+//end;
+//
+//procedure TSkinVirtualGridColumn.SetBindItemFieldName1(const Value: String);
+//begin
+//  if FBindItemFieldName1<>Value then
+//  begin
+//    FBindItemFieldName1 := Value;
+//    DoPropChange;
+//  end;
+//end;
+
 function TSkinVirtualGridColumn.GetBindItemFieldName: String;
 begin
-  Result:='';
+  Result := '';
 end;
 
 function TSkinVirtualGridColumn.GetBindItemFieldName1: String;
 begin
-  Result:='';
+  Result := '';
 end;
+
+//function TSkinVirtualGridColumn.GetBindItemFieldName: String;
+//begin
+//  Result:='';
+//end;
+//
+//function TSkinVirtualGridColumn.GetBindItemFieldName1: String;
+//begin
+//  Result:='';
+//end;
 
 //function TSkinVirtualGridColumn.GetCaption: String;
 //begin
@@ -7709,6 +7831,35 @@ function TSkinVirtualGridColumn.GetColumnMaterialClass: TSkinVirtualGridColumnMa
 begin
   Result:=TSkinVirtualGridColumnMaterial;
 end;
+
+//function TSkinVirtualGridColumn.GetControlMaterial: TSkinControlMaterial;
+//begin
+//  Result:=nil;
+//  if Self.FSkinControlIntf<>nil then
+//  begin
+//    Result:=FSkinControlIntf.Material;
+//  end;
+//
+//end;
+//
+//function TSkinVirtualGridColumn.GetControlProperties: TSkinControlProperties;
+//begin
+//  Result:=nil;
+//  if Self.FSkinControlIntf<>nil then
+//  begin
+//    Result:=FSkinControlIntf.Properties;
+//  end;
+//
+//end;
+//
+//function TSkinVirtualGridColumn.GetControlRefMaterial: TSkinControlMaterial;
+//begin
+//  Result:=nil;
+//  if Self.FSkinControlIntf<>nil then
+//  begin
+//    Result:=FSkinControlIntf.RefMaterial;
+//  end;
+//end;
 
 //function TSkinVirtualGridColumn.GetContentTypes: TSkinGridColumnContentTypes;
 //begin
@@ -7756,9 +7907,9 @@ end;
 function TSkinVirtualGridColumn.GetDrawItemDesignerPanel(ASkinItem:TBaseSkinItem): TSkinItemDesignerPanel;
 begin
   Result:=nil;
-  if FItemDesignerPanel<>nil then
+  if FSkinControlItemDesignerPanel<>nil then
   begin
-    Result:=FItemDesignerPanel;
+    Result:=FSkinControlItemDesignerPanel;
   end
   else
   begin
@@ -8033,6 +8184,37 @@ begin
   Result:=FDefaultItemStyleSetting.Style;
 end;
 
+//procedure TSkinVirtualGridColumn.SetControlMaterial(
+//  const Value: TSkinControlMaterial);
+//begin
+//  if Self.FSkinControlIntf<>nil then
+//  begin
+//    FSkinControlIntf.Material:=Value;
+//  end;
+//
+//
+//end;
+//
+//procedure TSkinVirtualGridColumn.SetControlProperties(
+//  const Value: TSkinControlProperties);
+//begin
+//  if Self.FSkinControlIntf<>nil then
+//  begin
+//    FSkinControlIntf.Properties:=Value;
+//  end;
+//
+//end;
+//
+//procedure TSkinVirtualGridColumn.SetControlRefMaterial(
+//  const Value: TSkinControlMaterial);
+//begin
+//  if Self.FSkinControlIntf<>nil then
+//  begin
+//    FSkinControlIntf.RefMaterial:=Value;
+//  end;
+//
+//end;
+
 procedure TSkinVirtualGridColumn.SetControlType(const Value: String);
 var
   AControlTypeReg:TControlTypeReg;
@@ -8042,33 +8224,47 @@ begin
   begin
     FControlType := Value;
 
+    FSkinControlIntf:=nil;
     FreeAndNil(Self.FSkinControl);
 
 //    FreeAndNil(FItemBindingControl);
-    FreeAndNil(FItemDesignerPanel);
+    FreeAndNil(FSkinControlItemDesignerPanel);
 
-    AControlClass:=TControlClass(FindClass('TSkin'+Value));
-    if AControlClass<>nil then
+
+    if Value<>'' then
     begin
-      FSkinControl:=AControlClass.Create(nil);
-      FSkinControlIntf:=FSkinControl as ISkinControl;
-      (FSkinControl as ISkinItemBindingControl).SetBindItemFieldName(Self.GetBindItemFieldName);
-      //transparent
-      FSkinControlIntf.GetCurrentUseMaterial.IsTransparent:=True;
-      FSkinControlIntf.GetCurrentUseMaterial.BackColor.IsFill:=False;
+        AControlClass:=TControlClass(FindClass('TSkin'+Value));
+        if AControlClass<>nil then
+        begin
+
+    //      FItemBindingControl:=InitItemBindingControl(FSkinControl);
+          FSkinControlItemDesignerPanel:=TSkinItemDesignerPanel.Create(nil);
+          FSkinControlItemDesignerPanel.Material.IsTransparent:=True;
+          FSkinControlItemDesignerPanel.Material.BackColor.IsFill:=False;
+          //有Parent，SetBounds才会有效，不然无效
+          FSkinControlItemDesignerPanel.Left:=-1000;
+          FSkinControlItemDesignerPanel.Parent:=TParentControl((Self.Owner).FVirtualGridProperties.FSkinControl);
 
 
-//      FItemBindingControl:=InitItemBindingControl(FSkinControl);
-      FItemDesignerPanel:=TSkinItemDesignerPanel.Create(nil);
-      FItemDesignerPanel.Material.IsTransparent:=True;
-      FItemDesignerPanel.Material.BackColor.IsFill:=False;
-      //有Parent，SetBounds才会有效，不然无效
-      FItemDesignerPanel.Left:=-1000;
-      FItemDesignerPanel.Parent:=TParentControl((Self.Owner).FVirtualGridProperties.FSkinControl);
+
+          //必须得有Owner,不然设计时点不开属性
+          FSkinControl:=AControlClass.Create((Self.Owner).FVirtualGridProperties.FSkinControl);
+          FSkinControl.SetSubComponent(True);
+          FSkinControl.AlignWithMargins:=True;
+          FSkinControl.Margins.SetBounds(5,5,5,5);
+
+          FSkinControlIntf:=FSkinControl as ISkinControl;
+          (FSkinControl as ISkinItemBindingControl).SetBindItemFieldName(Self.GetBindItemFieldName);
+          (FSkinControl as IDirectUIControl).SetNeedHitTest(False);
+          //transparent
+          FSkinControlIntf.GetCurrentUseMaterial.IsTransparent:=True;
+          FSkinControlIntf.GetCurrentUseMaterial.BackColor.IsFill:=False;
 
 
-      FSkinControl.Parent:=FItemDesignerPanel;
-      FSkinControl.Align:=alClient;
+
+          FSkinControl.Parent:=FSkinControlItemDesignerPanel;
+          FSkinControl.Align:=alClient;
+        end;
     end;
 
   end;
@@ -8094,7 +8290,7 @@ begin
   Result:=FDefaultItemStyleSetting.ItemDesignerPanel;
 end;
 
-function TSkinVirtualGridColumn.GetMaterial: TSkinVirtualGridColumnMaterial;
+function TSkinVirtualGridColumn.GetSelfOwnMaterial: TSkinVirtualGridColumnMaterial;
 begin
   Result:=TSkinVirtualGridColumnMaterial(FMaterial);
 end;

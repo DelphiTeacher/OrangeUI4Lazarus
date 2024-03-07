@@ -23,6 +23,7 @@
     function GetAutoSizeWidth:Double;
     function GetAutoSizeHeight:Double;
     function GetNeedHitTest:Boolean;
+    procedure SetNeedHitTest(const Value:Boolean);
     function GetHitTestValue:Integer;
     function AutoSizeBoundsRect:TRectF;
 

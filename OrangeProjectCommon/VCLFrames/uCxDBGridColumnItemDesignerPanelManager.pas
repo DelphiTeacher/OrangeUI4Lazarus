@@ -173,7 +173,7 @@ begin
               end;
 
               FItemDesignerPanel.SkinControlType.IsUseCurrentEffectStates:=True;
-              FItemDesignerPanel.SkinControlType.CurrentEffectStates:=AItemEffectStates;
+              FItemDesignerPanel.SkinControlType.FCurrentEffectStates:=AItemEffectStates;
 
 
               //»æÖÆItemDesignerPanelµÄ±³¾°,±³¾°É«

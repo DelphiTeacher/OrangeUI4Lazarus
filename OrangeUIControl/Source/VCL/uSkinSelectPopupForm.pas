@@ -13,6 +13,8 @@ uses
 
   {$IFDEF FPC}
   LCLType,
+  {$ELSE}
+  uSkinWindowsForm,
   {$ENDIF}
 
 //  GdiElement,
@@ -23,9 +25,9 @@ uses
   Dialogs,
   StdCtrls,
   ExtCtrls,
-  uSkinListViewType,
+//  uSkinListViewType,
 //  uManager,
-  Buttons, uSkinWindowsForm;
+  Buttons;
 
 type
   //选中一条记录的事件
@@ -35,12 +37,12 @@ type
   TfrmSkinSelectPopupClass=class of TfrmSkinSelectPopup;
 
   TfrmSkinSelectPopup = class(TForm)
-    fsdForm: TSkinWinForm;
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
     procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure FormKeyPress(Sender: TObject; var Key: Char);
     procedure FormKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
+    procedure FormDeactivate(Sender: TObject);
   protected
     //用于过滤
     procedure DoFilter(AKeyword:String);virtual;
@@ -48,6 +50,7 @@ type
     procedure DoClear;virtual;
     procedure CustomPopup;virtual;
   protected
+    FWinForm:TSkinWinForm;
     procedure CreateParams(var Params:TCreateParams);override;
 
   public
@@ -98,47 +101,47 @@ implementation
 {$R *.dfm}
 
 var
-  MouseHook: HHOOK;
+//  MouseHook: HHOOK;
   CurrentPopupSkinSelectPopupForm:TfrmSkinSelectPopup;
 
-function HookMouseProc(code: Integer; wparam: wparam; lparam: lparam): LRESULT;stdcall;
-var
-  Rect: TRect;
-begin
-  if (code = HC_ACTION) then
-  begin
-    case wparam of
-      WM_LBUTTONDOWN, WM_MBUTTONDOWN, WM_RBUTTONDOWN, WM_NCLBUTTONDOWN,
-        WM_NCMBUTTONDOWN, WM_NCRBUTTONDOWN:
-        begin
-          with PMouseHookStruct(lparam)^ do
-          begin
-            if (CurrentPopupSkinSelectPopupForm<>nil)
-              and GetWindowRect(CurrentPopupSkinSelectPopupForm.Handle, Rect) then
-            begin
-              if Not PtInRect(Rect, pt) then
-              begin
-                CurrentPopupSkinSelectPopupForm.HidePopup;
-              end;
-            end;
-          end;
-        end;
-    end;
-  end;
-  Result:=CallNextHookEx(MouseHook, code, wparam, lparam);
-end;
-
-procedure HookMouse(AState: Boolean);
-begin
-  if AState then
-  begin
-    MouseHook:=SetWindowsHookEx(WH_MOUSE, @HookMouseProc, HInstance,Windows.GetCurrentThreadId);
-  end
-  else
-  begin
-    UnhookWindowsHookEx(MouseHook);
-  end;
-end;
+//function HookMouseProc(code: Integer; wparam: wparam; lparam: lparam): LRESULT;stdcall;
+//var
+//  Rect: TRect;
+//begin
+//  if (code = HC_ACTION) then
+//  begin
+//    case wparam of
+//      WM_LBUTTONDOWN, WM_MBUTTONDOWN, WM_RBUTTONDOWN, WM_NCLBUTTONDOWN,
+//        WM_NCMBUTTONDOWN, WM_NCRBUTTONDOWN:
+//        begin
+//          with PMouseHookStruct(lparam)^ do
+//          begin
+//            if (CurrentPopupSkinSelectPopupForm<>nil)
+//              and GetWindowRect(CurrentPopupSkinSelectPopupForm.Handle, Rect) then
+//            begin
+//              if Not PtInRect(Rect, pt) then
+//              begin
+//                CurrentPopupSkinSelectPopupForm.HidePopup;
+//              end;
+//            end;
+//          end;
+//        end;
+//    end;
+//  end;
+//  Result:=CallNextHookEx(MouseHook, code, wparam, lparam);
+//end;
+//
+//procedure HookMouse(AState: Boolean);
+//begin
+//  if AState then
+//  begin
+//    MouseHook:=SetWindowsHookEx(WH_MOUSE, @HookMouseProc, HInstance,Windows.GetCurrentThreadId);
+//  end
+//  else
+//  begin
+//    UnhookWindowsHookEx(MouseHook);
+//  end;
+//end;
 
 function CreateSkinSelectPopupForm(AOwnerForm:TForm;AfrmSkinSelectPopupClass:TfrmSkinSelectPopupClass):TfrmSkinSelectPopup;//(WndParent:TForm);
 begin
@@ -147,15 +150,15 @@ begin
 end;
 
 procedure InitSkinSelectPopupForm(ASkinSelectPopupForm:TfrmSkinSelectPopup);
-var
-  OldWidth,OldHeight:Integer;
+//var
+//  OldWidth,OldHeight:Integer;
 begin
-  OldWidth:=ASkinSelectPopupForm.Width;
-  OldHeight:=ASkinSelectPopupForm.Height;
-  ASkinSelectPopupForm.SetBounds(0,0,0,0);
-  ASkinSelectPopupForm.Show;
-  ASkinSelectPopupForm.HidePopup;
-  ASkinSelectPopupForm.SetBounds(0,0,OldWidth,0);
+//  OldWidth:=ASkinSelectPopupForm.Width;
+//  OldHeight:=ASkinSelectPopupForm.Height;
+//  ASkinSelectPopupForm.SetBounds(0,0,0,0);
+//  ASkinSelectPopupForm.Show;
+//  ASkinSelectPopupForm.HidePopup;
+//  ASkinSelectPopupForm.SetBounds(0,0,OldWidth,0);
 end;
 
 procedure HideSkinSelectPopupForm(frmSkinSelectPopup:TfrmSkinSelectPopup);
@@ -169,16 +172,17 @@ end;
 procedure TfrmSkinSelectPopup.CreateParams(var Params: TCreateParams);
 begin
   inherited;
-  with Params do
-  begin
-//    if (Owner<>nil) and (Owner is TForm) then
-//    begin
-//      Params.WndParent:=TForm(Owner).Handle;
-//    end;
-
-//    Style:=WS_POPUP;
-    ExStyle:=ExStyle or WS_EX_TOOLWINDOW;
-  end;
+//  with Params do
+//  begin
+////    if (Owner<>nil) and (Owner is TForm) then
+////    begin
+////      Params.WndParent:=TForm(Owner).Handle;
+////    end;
+//
+//    Style:=Style or CS_DROPSHADOW;
+//
+//    ExStyle:=ExStyle or WS_EX_TOOLWINDOW;
+//  end;
 end;
 
 procedure TfrmSkinSelectPopup.DoFilter(AKeyword: String);
@@ -197,23 +201,37 @@ begin
 end;
 
 procedure TfrmSkinSelectPopup.FormCreate(Sender: TObject);
-var
-  OldWidth,OldHeight:Integer;
+//var
+//  OldWidth,OldHeight:Integer;
 begin
   FKeyWord:='';
 
-  {$IFDEF DELPHI}
+//  BorderStyle:=bsNone;
+
+  {$IFDEF FPC}
+  {$ELSE}
   Self.ImeMode:=imClose;
+  //Shadow Form
+  FWinForm:=TSkinWinForm.Create(Self);
   {$ENDIF}
 
-  OldWidth:=Self.Width;
-  OldHeight:=Self.Height;
-  Self.SetBounds(0,0,0,0);
-  //不Show的话,里面的控件显示不出来
-  Self.Show;
-  Self.HidePopup;
-  Self.SetBounds(0,0,OldWidth,0);
 
+
+
+//  OldWidth:=Self.Width;
+//  OldHeight:=Self.Height;
+//  Self.SetBounds(0,0,0,0);
+//  //不Show的话,里面的控件显示不出来
+//  Self.Show;
+//  Self.HidePopup;
+//  Self.SetBounds(0,0,OldWidth,0);
+
+end;
+
+procedure TfrmSkinSelectPopup.FormDeactivate(Sender: TObject);
+begin
+  uBaseLog.OutputDebugString('TfrmSkinSelectPopup.FormDeactivate');
+  Hide;
 end;
 
 procedure TfrmSkinSelectPopup.FormDestroy(Sender: TObject);
@@ -221,7 +239,7 @@ begin
   if CurrentPopupSkinSelectPopupForm=Self then
   begin
     CurrentPopupSkinSelectPopupForm:=nil;
-    HookMouse(False);
+//    HookMouse(False);
   end;
 end;
 
@@ -246,21 +264,23 @@ procedure TfrmSkinSelectPopup.HidePopup;
 begin
   FKeyWord:='';
 
-  //隐藏窗体
-  ShowWindow(Self.Handle,SW_HIDE);
+  Hide;
+
+//  //隐藏窗体
+//  ShowWindow(Self.Handle,SW_HIDE);
 
   IsPopuped:=False;
 
   if CurrentPopupSkinSelectPopupForm=Self then
   begin
     CurrentPopupSkinSelectPopupForm:=nil;
-    HookMouse(False);
+//    HookMouse(False);
   end;
 
   //清空数据,避免下次显示窗体的时候还保留着上次的数据
   DoClear;
 
-  DoHide;
+//  DoHide;
 
 
 
@@ -283,17 +303,20 @@ begin
   end;
 
   //弹出窗体
-  SetWindowPos(Self.Handle,
-                //HWND_TOPMOST,这个会把输入法挡住的
-                ////AParentForm.Handle,//0,
-                AParentFormHandle,
-                APopupPoint.X,APopupPoint.Y,
-                APopupFormWidth,APopupFormHeight,
-                AShowFlag//SWP_NOACTIVATE or SWP_SHOWWINDOW// or SWP_NOZORDER
-                );
+//  SetWindowPos(Self.Handle,
+//                //HWND_TOPMOST,这个会把输入法挡住的
+//                ////AParentForm.Handle,//0,
+//                AParentFormHandle,
+//                APopupPoint.X,APopupPoint.Y,
+//                APopupFormWidth,APopupFormHeight,
+//                AShowFlag//SWP_NOACTIVATE or SWP_SHOWWINDOW// or SWP_NOZORDER
+//                );
+  SetBounds(APopupPoint.X,APopupPoint.Y,APopupFormWidth,APopupFormHeight);
+  Show;
+
   CurrentPopupSkinSelectPopupForm:=Self;
 
-  HookMouse(True);
+//  HookMouse(True);
 
 
   CustomPopup;

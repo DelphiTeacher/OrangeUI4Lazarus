@@ -570,6 +570,7 @@ type
   protected
     //当前编辑的列表项
     FEditingItem:TBaseSkinItem;
+    FEditingItem_ItemDesignerPanel:TSkinItemDesignerPanel;
 
     //用来编辑的控件(一般是Edit,但也可以是ComboBox,ComboEdit,DateEdit等)
     FEditingItem_EditControl:TControl;
@@ -637,7 +638,10 @@ type
                                 //初始值
                                 AEditValue:String;
                                 //鼠标点击的相对坐标,用来确定输入光标的位置
-                                X, Y: Double):Boolean;
+                                X, Y: Double;
+                                AItemDesignerPanel:TSkinItemDesignerPanel;
+                                AItemDesignerPanelPutRect:TRectF
+                                ):Boolean;
 
     /// <summary>
     ///   <para>
@@ -3949,15 +3953,31 @@ begin
     if FEditingItem<>nil then
     begin
 
-        //赋回原Parent,设置原位置,原Align
-        FEditingItem_EditControl.Parent:=TParentControl(FEditingItem_EditControlOldParent);
-  //      FEditingItem_EditControlIntf.SetBounds(FEditingItem_EditControlOldRect);
-        FEditingItem_EditControl.SetBounds(ControlSize(FEditingItem_EditControlOldRect.Left),
-                                           ControlSize(FEditingItem_EditControlOldRect.Top),
-                                           ControlSize(FEditingItem_EditControlOldRect.Width),
-                                           ControlSize(FEditingItem_EditControlOldRect.Height)
-                                           );
-        FEditingItem_EditControl.Align:=FEditingItem_EditControlOldAlign;
+        if Self.FEditingItem_ItemDesignerPanel=nil then
+        begin
+
+          //赋回原Parent,设置原位置,原Align
+          FEditingItem_EditControl.Parent:=TParentControl(FEditingItem_EditControlOldParent);
+    //      FEditingItem_EditControlIntf.SetBounds(FEditingItem_EditControlOldRect);
+          FEditingItem_EditControl.SetBounds(ControlSize(FEditingItem_EditControlOldRect.Left),
+                                             ControlSize(FEditingItem_EditControlOldRect.Top),
+                                             ControlSize(FEditingItem_EditControlOldRect.Width),
+                                             ControlSize(FEditingItem_EditControlOldRect.Height)
+                                             );
+          FEditingItem_EditControl.Align:=FEditingItem_EditControlOldAlign;
+        end
+        else
+        begin
+          FEditingItem_ItemDesignerPanel.Parent:=TParentControl(FEditingItem_EditControlOldParent);
+          FEditingItem_ItemDesignerPanel.SetBounds(
+                                            ControlSize(FEditingItem_EditControlOldRect.Left),
+                                            ControlSize(FEditingItem_EditControlOldRect.Top),
+                                            ControlSize(FEditingItem_EditControlOldRect.Width),
+                                            ControlSize(FEditingItem_EditControlOldRect.Height)
+                                            );
+          FEditingItem_ItemDesignerPanel.Align:=FEditingItem_EditControlOldAlign;
+        end;
+
 
 
         FEditingItem:=nil;
@@ -4660,8 +4680,21 @@ begin
   if Self.FEditingItem<>nil then
   begin
     AItemDrawRect:=Self.VisibleItemDrawRect(FEditingItem);
+    if FEditingItem_ItemDesignerPanel<>nil then
+    begin
 
-    Self.FEditingItem_EditControl.SetBounds(
+      Self.FEditingItem_ItemDesignerPanel.SetBounds(
+                //得加上层级偏移
+                ControlSize(AItemDrawRect.Left
+                              +FEditingItem_EditControlPutRect.Left),
+                ControlSize(AItemDrawRect.Top),
+                ControlSize(Self.FEditingItem_EditControlPutRect.Width),
+                ControlSize(Self.FEditingItem_EditControlPutRect.Height)
+                );
+    end
+    else
+    begin
+      Self.FEditingItem_EditControl.SetBounds(
                 //得加上层级偏移
                 ControlSize(AItemDrawRect.Left
                               +FEditingItem_EditControlPutRect.Left),
@@ -4670,6 +4703,8 @@ begin
                 ControlSize(Self.FEditingItem_EditControlPutRect.Width),
                 ControlSize(Self.FEditingItem_EditControlPutRect.Height)
                 );
+      end;
+
 
   end;
 
@@ -4680,7 +4715,9 @@ function TCustomListProperties.StartEditingItem(
                                                 AEditControl: TControl;
                                                 AEditControlPutRect: TRectF;
                                                 AEditValue:String;
-                                                X, Y: Double):Boolean;
+                                                X, Y: Double;
+                                                AItemDesignerPanel:TSkinItemDesignerPanel;
+                                                AItemDesignerPanelPutRect:TRectF):Boolean;
 begin
 
     Result:=False;
@@ -4730,43 +4767,76 @@ begin
     Invalidate;
 
 
-    //编辑框相对于ItemRect的位置
-    FEditingItem_EditControlPutRect:=AEditControlPutRect;
-
-
-
-    //保存原信息,以结束编辑时用于恢复//
-    //原Parent
-    FEditingItem_EditControlOldParent:=FEditingItem_EditControl.Parent;
-    //原位置和尺寸
-    FEditingItem_EditControlOldRect.Left:=GetControlLeft(FEditingItem_EditControl);
-    FEditingItem_EditControlOldRect.Top:=GetControlTop(FEditingItem_EditControl);
-    FEditingItem_EditControlOldRect.Width:=FEditingItem_EditControl.Width;
-    FEditingItem_EditControlOldRect.Height:=FEditingItem_EditControl.Height;
-    //原Align
-    FEditingItem_EditControlOldAlign:=FEditingItem_EditControl.Align;
-
-
-
-    //设置新位置
-    FEditingItem_EditControl.Align:={$IFDEF FMX}TAlignLayout.None{$ENDIF}{$IFDEF VCL}TAlignLayout.alNone{$ENDIF};
-    if FEditingItem_EditControlIntf<>nil then
+    if AItemDesignerPanel=nil then
     begin
-      //滑动的时候传递消息给ListBox
-//      FEditingItem_EditControlIntf.ParentMouseEvent:=True;
-      FEditingItem_EditControlIntf.ParentMouseEvent:=False;
-      FEditingItem_EditControlIntf.MouseEventTransToParentType:=mettptNotTrans;
-      //  edtCount.ParentMouseEvent:=False;
-      //  edtCount.MouseEventTransToParentType:=mettptNotTrans;
+        //编辑框相对于ItemRect的位置
+        FEditingItem_EditControlPutRect:=AEditControlPutRect;
+
+
+
+        //保存原信息,以结束编辑时用于恢复//
+        //原Parent
+        FEditingItem_EditControlOldParent:=FEditingItem_EditControl.Parent;
+        //原位置和尺寸
+        FEditingItem_EditControlOldRect.Left:=GetControlLeft(FEditingItem_EditControl);
+        FEditingItem_EditControlOldRect.Top:=GetControlTop(FEditingItem_EditControl);
+        FEditingItem_EditControlOldRect.Width:=FEditingItem_EditControl.Width;
+        FEditingItem_EditControlOldRect.Height:=FEditingItem_EditControl.Height;
+        //原Align
+        FEditingItem_EditControlOldAlign:=FEditingItem_EditControl.Align;
+
+
+
+        //设置新位置
+        FEditingItem_EditControl.Align:={$IFDEF FMX}TAlignLayout.None{$ENDIF}{$IFDEF VCL}TAlignLayout.alNone{$ENDIF};
+        if FEditingItem_EditControlIntf<>nil then
+        begin
+          //滑动的时候传递消息给ListBox
+    //      FEditingItem_EditControlIntf.ParentMouseEvent:=True;
+          FEditingItem_EditControlIntf.ParentMouseEvent:=False;
+          FEditingItem_EditControlIntf.MouseEventTransToParentType:=mettptNotTrans;
+          //  edtCount.ParentMouseEvent:=False;
+          //  edtCount.MouseEventTransToParentType:=mettptNotTrans;
+        end;
+        //设置新的位置
+        Self.SyncEditControlBounds;
+
+        //设置编辑控件的Parent为ListBox
+        FEditingItem_EditControl.Parent:=TParentControl(Self.FSkinControl);
+        //显示
+        FEditingItem_EditControl.Visible:=True;
+
+    end
+    else
+    begin
+        FEditingItem_ItemDesignerPanel:=AItemDesignerPanel;
+        FEditingItem_EditControlPutRect:=AItemDesignerPanelPutRect;
+
+
+
+        //保存原信息,以结束编辑时用于恢复//
+        //原Parent
+        FEditingItem_EditControlOldParent:=FEditingItem_ItemDesignerPanel.Parent;
+        //原位置和尺寸
+        FEditingItem_EditControlOldRect.Left:=GetControlLeft(FEditingItem_ItemDesignerPanel);
+        FEditingItem_EditControlOldRect.Top:=GetControlTop(FEditingItem_ItemDesignerPanel);
+        FEditingItem_EditControlOldRect.Width:=FEditingItem_ItemDesignerPanel.Width;
+        FEditingItem_EditControlOldRect.Height:=FEditingItem_ItemDesignerPanel.Height;
+        //原Align
+        FEditingItem_EditControlOldAlign:=FEditingItem_ItemDesignerPanel.Align;
+
+
+
+
+        //设置新的位置
+        Self.SyncEditControlBounds;
+
+        //设置编辑控件的Parent为ListBox
+        FEditingItem_ItemDesignerPanel.Parent:=TParentControl(Self.FSkinControl);
+        //显示
+        FEditingItem_ItemDesignerPanel.Visible:=True;
+
     end;
-    //设置新的位置
-    Self.SyncEditControlBounds;
-
-    //设置编辑控件的Parent为ListBox
-    FEditingItem_EditControl.Parent:=TParentControl(Self.FSkinControl);
-    //显示
-    FEditingItem_EditControl.Visible:=True;
-
 
 
     //把鼠标点击消息传递给Edit,以便可以定位到是编辑哪个字符
@@ -4804,6 +4874,7 @@ begin
 
     end;
 
+    //焦点离开Edit时自动完成编辑
     if (FEditingItem_EditControl is TEdit) and not Assigned(TEdit(FEditingItem_EditControl).OnExit) then
     begin
       TEdit(FEditingItem_EditControl).OnExit:=DoEditingItem_EditControlExit;
@@ -4891,16 +4962,30 @@ begin
         CallOnStopEditingItemEvent(Self,FEditingItem,FEditingItem_EditControl);
 
 
+        if Self.FEditingItem_ItemDesignerPanel=nil then
+        begin
 
-        //赋回原Parent,设置原位置,原Align
-        FEditingItem_EditControl.Parent:=TParentControl(FEditingItem_EditControlOldParent);
-        FEditingItem_EditControl.SetBounds(
-                                          ControlSize(FEditingItem_EditControlOldRect.Left),
-                                          ControlSize(FEditingItem_EditControlOldRect.Top),
-                                          ControlSize(FEditingItem_EditControlOldRect.Width),
-                                          ControlSize(FEditingItem_EditControlOldRect.Height)
-                                          );
-        FEditingItem_EditControl.Align:=FEditingItem_EditControlOldAlign;
+          //赋回原Parent,设置原位置,原Align
+          FEditingItem_EditControl.Parent:=TParentControl(FEditingItem_EditControlOldParent);
+          FEditingItem_EditControl.SetBounds(
+                                            ControlSize(FEditingItem_EditControlOldRect.Left),
+                                            ControlSize(FEditingItem_EditControlOldRect.Top),
+                                            ControlSize(FEditingItem_EditControlOldRect.Width),
+                                            ControlSize(FEditingItem_EditControlOldRect.Height)
+                                            );
+          FEditingItem_EditControl.Align:=FEditingItem_EditControlOldAlign;
+        end
+        else
+        begin
+          FEditingItem_ItemDesignerPanel.Parent:=TParentControl(FEditingItem_EditControlOldParent);
+          FEditingItem_ItemDesignerPanel.SetBounds(
+                                            ControlSize(FEditingItem_EditControlOldRect.Left),
+                                            ControlSize(FEditingItem_EditControlOldRect.Top),
+                                            ControlSize(FEditingItem_EditControlOldRect.Width),
+                                            ControlSize(FEditingItem_EditControlOldRect.Height)
+                                            );
+          FEditingItem_ItemDesignerPanel.Align:=FEditingItem_EditControlOldAlign;
+        end;
 
 
 
@@ -4912,7 +4997,7 @@ begin
         FEditingItem_EditControlIntf:=nil;
         FEditingItem_EditControlOldParent:=nil;
         FEditingItem_EditControl_ItemEditorIntf:=nil;
-
+        FEditingItem_ItemDesignerPanel:=nil;
 
     end;
   except
@@ -5369,7 +5454,7 @@ begin
 
         //剪裁显示
         AItemDesignerPanel.SkinControlType.IsUseCurrentEffectStates:=True;
-        AItemDesignerPanel.SkinControlType.CurrentEffectStates:=AItemEffectStates;
+        AItemDesignerPanel.SkinControlType.FCurrentEffectStates:=AItemEffectStates;
         //绘制ItemDesignerPanel的背景
         AItemPaintData:=GlobalNullPaintData;
         AItemPaintData.IsDrawInteractiveState:=True;

@@ -1072,7 +1072,7 @@ type
     FSkinTabSheetIntf:ISkinTabSheet;
     function GetSkinMaterial:TSkinTabSheetMaterial;
   protected
-    function CalcCurrentEffectStates:TDPEffectStates;override;
+    function CalcCurrentEffectStates(APaintData:TPaintData):TDPEffectStates;override;
 
     //自定义绘制方法
     function CustomPaint(ACanvas:TDrawCanvas;ASkinMaterial:TSkinControlMaterial;const ADrawRect:TRectF;APaintData:TPaintData):Boolean;override;
@@ -1517,7 +1517,7 @@ begin
                 begin
                   //绘制
                   ANotifyNumberIconControlIntf.GetSkinControlType.IsUseCurrentEffectStates:=True;
-                  ANotifyNumberIconControlIntf.GetSkinControlType.CurrentEffectStates:=AItemEffectStates;
+                  ANotifyNumberIconControlIntf.GetSkinControlType.FCurrentEffectStates:=AItemEffectStates;
                   //绘制
                   AItemPaintData:=GlobalNullPaintData;
                   AItemPaintData.IsDrawInteractiveState:=True;
@@ -2937,9 +2937,9 @@ begin
   Self.FSkinTabSheetIntf:=nil;
 end;
 
-function TSkinTabSheetType.CalcCurrentEffectStates: TDPEffectStates;
+function TSkinTabSheetType.CalcCurrentEffectStates(APaintData:TPaintData): TDPEffectStates;
 begin
-  Result:=Inherited CalcCurrentEffectStates;
+  Result:=Inherited;// CalcCurrentEffectStates;
   if Self.FSkinTabSheetIntf.Prop.FSkinPageControlIntf<>nil then
   begin
     if Self.FSkinTabSheetIntf.Prop.FSkinPageControlIntf.PageControlProperties.FMouseDownPage=Self.FSkinControl then

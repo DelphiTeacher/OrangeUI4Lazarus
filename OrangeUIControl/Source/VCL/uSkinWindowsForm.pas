@@ -1518,12 +1518,12 @@ procedure TSkinWinForm.WMPrintClientAfter(var Message: TWMPrintClient);
 begin
   if (FBufferBitmap<>nil) and (GetSkinFormType<>nil) then
   begin
-    Message.Result:=1;
+//    Message.Result:=1;
     Bitblt(Message.DC,
           0,0,
           Self.GetWidth,
           Self.GetHeight,
-          Self.GetBufferBitmap.Handle,
+          Self.GetBufferBitmap.SelfBitmap.Handle,
           GetSkinFormType.GetCustomBorderLeftWidth,
           GetSkinFormType.GetCustomCaptionBarNCHeight,
           SRCCOPY
@@ -2081,7 +2081,7 @@ begin
                   Ceil(AUpdateClientRect.Top+ATopMagin),
                   Ceil(AUpdateClientRect.Right),
                   Ceil(AUpdateClientRect.Bottom),
-                  Self.GetBufferBitmap.Handle,
+                  Self.GetBufferBitmap.SelfBitmap.Handle,
                   Ceil(AUpdateWindowRect.Left+ALeftMagin),
                   Ceil(AUpdateWindowRect.Top+ATopMagin),
                   SRCCOPY);
@@ -2092,7 +2092,7 @@ begin
             Bitblt(AWindowClientCanvas.Handle,0,0,
                    Self.GetBufferBitmap.Width-Self.GetSkinFormType.GetCustomBorderLeftWidth-Self.GetSkinFormType.GetCustomBorderRightWidth,
                    Self.GetBufferBitmap.Height-Self.GetSkinFormType.GetCustomCaptionBarNCHeight-Self.GetSkinFormType.GetCustomBorderBottomHeight,
-                   Self.GetBufferBitmap.Handle,
+                   Self.GetBufferBitmap.SelfBitmap.Handle,
                    Self.GetSkinFormType.GetCustomBorderLeftWidth,Self.GetSkinFormType.GetCustomCaptionBarNCHeight,
                    SRCCOPY);
           end;
@@ -2195,7 +2195,7 @@ begin
                   0,0,
                   Self.GetBufferBitmap.Width,
                   Self.GetBufferBitmap.Height,
-                  Self.GetBufferBitmap.Handle,
+                  Self.GetBufferBitmap.SelfBitmap.Handle,
                   0,0,
                   SRCCOPY);
             //分块绘制

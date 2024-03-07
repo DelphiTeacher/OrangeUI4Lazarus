@@ -393,8 +393,12 @@ type
     property Properties:TSkinControlProperties read GetProperties write SetProperties;
     property Prop:TSkinControlProperties read GetProperties write SetProperties;
 
+    procedure SetSelfOwnMaterial(Value:TSkinControlMaterial);
+    procedure SetRefMaterial(Value:TSkinControlMaterial);
     function GetSelfOwnMaterial:TSkinControlMaterial;
-    property Material:TSkinControlMaterial read GetSelfOwnMaterial;
+    function GetRefMaterial:TSkinControlMaterial;
+    property Material:TSkinControlMaterial read GetSelfOwnMaterial write SetSelfOwnMaterial;
+    property RefMaterial:TSkinControlMaterial read GetRefMaterial write SetRefMaterial;
     /// <summary>
     ///   <para>
     ///     获取当前使用的皮肤素材
@@ -1044,6 +1048,7 @@ type
 
     //是否支持点击
     function GetNeedHitTest:Boolean;
+    procedure SetNeedHitTest(const Value:Boolean);
     //点击值
     function GetHitTestValue:Integer;
 
@@ -1087,9 +1092,9 @@ type
   ICustomListItemEditor=interface
     ['{128F7007-0E06-4730-A7E5-D22EE848FA7D}']
     //设置值
-    procedure EditSetValue(const AValue:String);
+    procedure EditSetValue(const AValue:Variant);
     //获取值
-    function EditGetValue:String;
+    function EditGetValue:Variant;
     //鼠标按下(用于使用Edit编辑时确定定位下标)
     procedure EditMouseDown(Button: TMouseButton; Shift: TShiftState;X, Y: Double);
     //鼠标弹起(用于使用Edit编辑时确定定位下标)
@@ -1267,11 +1272,9 @@ type
   protected
     //是否使用FCurrentEffectStates
     FIsUseCurrentEffectStates:Boolean;
-    //当前控件的状态
-    FCurrentEffectStates:TDPEffectStates;
 
     //获取当前的状态
-    function GetCurrentEffectStates: TDPEffectStates;virtual;
+    function GetCurrentEffectStates(APaintData:TPaintData): TDPEffectStates;virtual;
   private
     //设置皮肤控件
     procedure SetSkinControl(const Value: TControl);
@@ -1315,6 +1318,8 @@ type
     property SkinControl:TControl read FSkinControl;// write SetSkinControl;
 
   public
+    //当前控件的状态
+    FCurrentEffectStates:TDPEffectStates;
     /// <summary>
     ///   <para>
     ///     是否使用当前效果的状态(用于DirectUI)
@@ -1332,7 +1337,7 @@ type
     ///     State of current effect(used for DirectUI)
     ///   </para>
     /// </summary>
-    property CurrentEffectStates:TDPEffectStates read GetCurrentEffectStates write FCurrentEffectStates;
+//    property CurrentEffectStates:TDPEffectStates read GetCurrentEffectStates write FCurrentEffectStates;
 
 
   protected
@@ -1396,7 +1401,7 @@ type
     ///     Calculate current effect state
     ///   </para>
     /// </summary>
-    function CalcCurrentEffectStates:TDPEffectStates;virtual;
+    function CalcCurrentEffectStates(APaintData:TPaintData):TDPEffectStates;virtual;
     /// <summary>
     ///   <para>
     ///     计算自动尺寸的宽度
@@ -2841,7 +2846,7 @@ begin
 end;
 
 
-function TSkinControlType.GetCurrentEffectStates: TDPEffectStates;
+function TSkinControlType.GetCurrentEffectStates(APaintData:TPaintData): TDPEffectStates;
 begin
   if Self.FIsUseCurrentEffectStates then
   begin
@@ -2849,7 +2854,7 @@ begin
   end
   else
   begin
-    Result := Self.CalcCurrentEffectStates;
+    Result := Self.CalcCurrentEffectStates(APaintData);
   end;
 end;
 
@@ -2887,7 +2892,7 @@ begin
 
     ProcessMaterialEffectStates(ASkinMaterial,
                                 AControlDrawOpacity,
-                                CurrentEffectStates,
+                                GetCurrentEffectStates(APaintData),
                                 APaintData
                                 );
 
@@ -3169,7 +3174,7 @@ begin
   Result:=-1;
 end;
 
-function TSkinControlType.CalcCurrentEffectStates: TDPEffectStates;
+function TSkinControlType.CalcCurrentEffectStates(APaintData:TPaintData): TDPEffectStates;
 begin
   Result:=[];
 
@@ -3709,7 +3714,7 @@ begin
 
 
                     ASubDirectUIControlIntfGetSkinControlType.IsUseCurrentEffectStates:=True;
-                    ASubDirectUIControlIntfGetSkinControlType.CurrentEffectStates:=Self.CurrentEffectStates;
+                    ASubDirectUIControlIntfGetSkinControlType.FCurrentEffectStates:=Self.GetCurrentEffectStates(APaintData);
                     //绘制当前控件
                     AChildPaintData:=GlobalNullPaintData;
                     AChildPaintData.IsDrawInteractiveState:=True;
@@ -3720,7 +3725,7 @@ begin
                     ASubDirectUIControlIntfGetSkinControlType.DrawChildControls(ACanvas,AControlWindowRect,APaintData,ADrawRect);
 
                     ASubDirectUIControlIntfGetSkinControlType.IsUseCurrentEffectStates:=False;
-                    ASubDirectUIControlIntfGetSkinControlType.CurrentEffectStates:=[];
+                    ASubDirectUIControlIntfGetSkinControlType.FCurrentEffectStates:=[];
 
 
                 end;

@@ -8,6 +8,7 @@
     property SkinControlType:TSkinControlType read GetSkinControlType;
     //当前使用的素材
     property CurrentUseMaterial:TSkinControlMaterial read GetCurrentUseMaterial;
+    property StaticRefMaterial:TSkinControlMaterial read GetRefMaterial write SetStaticRefMaterial;
   published
     //保持这个读取顺序
 
@@ -40,7 +41,6 @@ published
     property SelfOwnMaterial:TSkinControlMaterial read GetSelfOwnMaterial;
     //引用的皮肤素材
     property RefMaterial:TSkinControlMaterial read GetRefMaterial write SetRefMaterial;
-    property StaticRefMaterial:TSkinControlMaterial read GetRefMaterial write SetStaticRefMaterial;
 
 
 

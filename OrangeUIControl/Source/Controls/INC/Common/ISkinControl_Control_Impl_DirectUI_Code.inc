@@ -17,6 +17,22 @@ begin
 
 end;
 
+procedure {$I Source\Controls\INC\Common\ISkinControl_Control_Impl_ClassName.inc}.SetNeedHitTest(const Value:Boolean);
+begin
+
+  {$IFDEF FMX}
+  //FMX自带的属性
+  HitTest:=Value;// and Assigned(OnClick);
+  {$ENDIF}
+
+
+  {$IFDEF VCL}
+  FNeedHitTest:=Value;
+  {$ENDIF}
+
+
+end;
+
 function {$I Source\Controls\INC\Common\ISkinControl_Control_Impl_ClassName.inc}.GetHitTestValue:Integer;
 begin
   Result:=FHitTestValue;

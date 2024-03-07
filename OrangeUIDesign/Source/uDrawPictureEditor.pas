@@ -96,6 +96,12 @@ type
     procedure SetValue(const Value: string); override;
   end;
 
+//  TColumnControlMaterialPropertyEditor = class(TClassProperty)
+//  public
+//    procedure Edit; override;
+//    function GetAttributes: TPropertyAttributes; override;
+//  end;
+
 
 
   //编辑TDrawPicture组件

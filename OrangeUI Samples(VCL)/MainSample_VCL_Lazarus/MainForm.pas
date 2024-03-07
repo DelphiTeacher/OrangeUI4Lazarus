@@ -68,6 +68,7 @@ uses
 
   EditJsonItemGridFrame,
   DashBoard_Analyse_ItemGrid_TwoCellTextFrame,
+  ItemGrid_ColumnControlTypeFrame,
 
 //  BaseQueryFrame,
 //  BaseQueryFrame2,
@@ -559,6 +560,10 @@ begin
   if AItem.Name='item_grid_edit' then
   begin
     FCurrentFrame:=TFrameEditJsonItemGrid.Create(ATabSheet);
+  end;
+  if AItem.Name='item_grid_multi_column_control_type' then
+  begin
+    FCurrentFrame:=TFrameItemGrid_ColumnControlType.Create(ATabSheet);
   end;
 
 

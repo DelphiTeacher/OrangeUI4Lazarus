@@ -180,7 +180,7 @@ type
     //解除绑定
     procedure CustomUnBind;override;
   public
-    function CalcCurrentEffectStates:TDPEffectStates;override;
+    function CalcCurrentEffectStates(APaintData:TPaintData):TDPEffectStates;override;
   end;
 
 
@@ -349,9 +349,9 @@ implementation
 
 { TSkinSwitchBarType }
 
-function TSkinSwitchBarType.CalcCurrentEffectStates: TDPEffectStates;
+function TSkinSwitchBarType.CalcCurrentEffectStates(APaintData:TPaintData): TDPEffectStates;
 begin
-  Result:=Inherited CalcCurrentEffectStates;
+  Result:=Inherited;// CalcCurrentEffectStates;
   if Self.FSkinSwitchBarIntf.Prop.Checked then
   begin
     Result:=Result+[dpstPushed];

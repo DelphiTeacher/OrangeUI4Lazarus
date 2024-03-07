@@ -162,9 +162,9 @@ type
 
   published
     //绑定的字段
-    property BindItemFieldName:String read GetBindItemFieldName write FBindItemFieldName;//SetBindItemFieldName;
+    property BindItemFieldName:String read GetBindItemFieldName write SetBindItemFieldName;//SetBindItemFieldName;
     //绑定的字段1
-    property BindItemFieldName1:String read GetBindItemFieldName1 write FBindItemFieldName1;//SetBindItemFieldName1;
+    property BindItemFieldName1:String read GetBindItemFieldName1 write SetBindItemFieldName1;//SetBindItemFieldName1;
 
     //自带素材
     property SelfOwnMaterial:TSkinItemGridColumnMaterial read GetSelfOwnMaterial write SetSelfOwnMaterial;
@@ -1092,6 +1092,12 @@ begin
   if FBindItemFieldName<>Value then
   begin
     FBindItemFieldName := Value;
+
+    if FSkinControl<>nil then
+    begin
+      (FSkinControl as ISkinItemBindingControl).SetBindItemFieldName(Self.FBindItemFieldName);
+    end;
+
     DoPropChange;
   end;
 end;

@@ -210,8 +210,8 @@ type
     procedure TextChanged;override;
   public
     //获取当前的状态
-    function GetCurrentEffectStates: TDPEffectStates;override;
-    function CalcCurrentEffectStates:TDPEffectStates;override;
+    function GetCurrentEffectStates(APaintData:TPaintData): TDPEffectStates;override;
+    function CalcCurrentEffectStates(APaintData:TPaintData):TDPEffectStates;override;
   end;
 
 
@@ -504,9 +504,9 @@ begin
   end;
 end;
 
-function TSkinRadioButtonType.CalcCurrentEffectStates: TDPEffectStates;
+function TSkinRadioButtonType.CalcCurrentEffectStates(APaintData:TPaintData): TDPEffectStates;
 begin
-  Result:=Inherited CalcCurrentEffectStates;
+  Result:=Inherited;// CalcCurrentEffectStates;
 
   if Self.FSkinRadioButtonIntf.Prop.FChecked then
   begin
@@ -536,7 +536,7 @@ begin
   Self.FSkinRadioButtonIntf:=nil;
 end;
 
-function TSkinRadioButtonType.GetCurrentEffectStates: TDPEffectStates;
+function TSkinRadioButtonType.GetCurrentEffectStates(APaintData:TPaintData): TDPEffectStates;
 begin
   if Self.FIsUseCurrentEffectStates then
   begin
@@ -557,7 +557,7 @@ begin
   end
   else
   begin
-    Result := Self.CalcCurrentEffectStates;
+    Result := Self.CalcCurrentEffectStates(APaintData);
   end;
 end;
 

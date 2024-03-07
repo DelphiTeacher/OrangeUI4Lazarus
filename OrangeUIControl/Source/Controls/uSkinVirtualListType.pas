@@ -2904,7 +2904,9 @@ begin
                              AEditControl,
                              AEditControlPutRect,
                              AEditValue,
-                             X,Y
+                             X,Y,
+                             nil,
+                             RectF(0,0,0,0)
                              );
 end;
 
@@ -4019,7 +4021,7 @@ begin
 
 
               AItemDesignerPanel.SkinControlType.IsUseCurrentEffectStates:=True;
-              AItemDesignerPanel.SkinControlType.CurrentEffectStates:=AItemEffectStates;
+              AItemDesignerPanel.SkinControlType.FCurrentEffectStates:=AItemEffectStates;
 
               //绘制ItemDesignerPanel的背景,背景色
               AItemPaintData:=GlobalNullPaintData;

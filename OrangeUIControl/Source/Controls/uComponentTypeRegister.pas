@@ -328,7 +328,7 @@ begin
 
 //  {$IFDEF MSWINDOWS}
 //  RegisterComponents('OrangeUIConrol',[TSkinEdit]);
-//  RegisterComponents('OrangeUIConrol',[TSkinComboBox]);
+  RegisterComponents('OrangeUIConrol',[TSkinComboBox]);
 //  //RegisterComponents('OrangeUIConrol',[TSkinDateEdit]);
 ////  RegisterComponents('OrangeUIConrol',[TSkinTimeEdit]);
 ////  RegisterComponents('OrangeUIConrol',[TSkinPopup]);

@@ -162,7 +162,7 @@ type
 //    //Caption更改事件
 //    procedure TextChanged;override;
   public
-    function CalcCurrentEffectStates:TDPEffectStates;override;
+    function CalcCurrentEffectStates(APaintData:TPaintData):TDPEffectStates;override;
   end;
 
 
@@ -280,9 +280,9 @@ implementation
 //
 //end;
 
-function TSkinSwitchType.CalcCurrentEffectStates: TDPEffectStates;
+function TSkinSwitchType.CalcCurrentEffectStates(APaintData:TPaintData): TDPEffectStates;
 begin
-  Result:=Inherited CalcCurrentEffectStates;
+  Result:=Inherited;// CalcCurrentEffectStates;
   if Self.FSkinSwitchIntf.Prop.FChecked then
   begin
     Result:=Result+[dpstPushed];

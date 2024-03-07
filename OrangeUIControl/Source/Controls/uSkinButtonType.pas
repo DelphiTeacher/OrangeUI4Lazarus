@@ -695,7 +695,7 @@ type
     function GetSkinMaterial:TSkinButtonMaterial;
     function GetButtonGroupSkinMaterial:TSkinButtonMaterial;
     //获取当前的状态
-    function GetCurrentEffectStates: TDPEffectStates;override;
+    function GetCurrentEffectStates(APaintData:TPaintData): TDPEffectStates;override;
   protected
     procedure CustomMouseDown(Button: TMouseButton; Shift: TShiftState;X, Y: Double);override;
     procedure TextChanged;override;
@@ -714,7 +714,7 @@ type
     //计算
     function CalcAutoSize(var AWidth,AHeight:TControlSize):Boolean;override;
   public
-    function CalcCurrentEffectStates:TDPEffectStates;override;
+    function CalcCurrentEffectStates(APaintData:TPaintData):TDPEffectStates;override;
   end;
 
 
@@ -2092,9 +2092,9 @@ begin
 
 end;
 
-function TSkinButtonType.CalcCurrentEffectStates: TDPEffectStates;
+function TSkinButtonType.CalcCurrentEffectStates(APaintData:TPaintData): TDPEffectStates;
 begin
-  Result:=Inherited CalcCurrentEffectStates;
+  Result:=Inherited;// CalcCurrentEffectStates;
   if Self.FSkinButtonIntf.Prop.FIsPushed then
   begin
     Result:=Result+[dpstPushed];
@@ -2138,9 +2138,9 @@ begin
   end;
 end;
 
-function TSkinButtonType.GetCurrentEffectStates: TDPEffectStates;
+function TSkinButtonType.GetCurrentEffectStates(APaintData:TPaintData): TDPEffectStates;
 begin
-  Result:=Inherited GetCurrentEffectStates;
+  Result:=Inherited;// GetCurrentEffectStates(APaintData:TPaintData);
   if Self.FSkinButtonIntf.Prop.FIsPushed then
   begin
     Result:=Result+[dpstPushed];

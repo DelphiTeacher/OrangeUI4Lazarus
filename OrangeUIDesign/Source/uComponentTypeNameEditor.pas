@@ -100,7 +100,7 @@ uses
 
 //  Windows,
   uBaseLog,
-  {$IFDEF DELPHI}
+  {$IFNDEF FPC}
 //  CommCtrl,
   DesignIntf,
   DesignMenus,
@@ -177,26 +177,26 @@ type
 
   //皮肤控件组件编辑器,
   //使用RefMaterial模式、保存RefMaterial到SelfOwnMaterial、绑定列表项
-  TSkinControlComponentEditor=class({$IFDEF DELPHI}TDefaultEditor{$ENDIF}{$IFDEF FPC}TDefaultComponentEditor{$ENDIF})
+  TSkinControlComponentEditor=class({$IFNDEF FPC}TDefaultEditor{$ENDIF}{$IFDEF FPC}TDefaultComponentEditor{$ENDIF})
   public
     function GetVerbCount: Integer; override;
     function GetVerb(Index: Integer): string; override;
     procedure ExecuteVerb(Index: Integer); override;
-    procedure PrepareItem(Index: Integer; const AItem: {$IFDEF DELPHI}IMenuItem{$ENDIF}{$IFDEF FPC}TMenuItem{$ENDIF}); override;
+    procedure PrepareItem(Index: Integer; const AItem: {$IFNDEF FPC}IMenuItem{$ENDIF}{$IFDEF FPC}TMenuItem{$ENDIF}); override;
     procedure DoBindItemAs(Sender:TObject);
   end;
 
 
   TMessageBoxSelectionEditor = class(TSelectionEditor)
   public
-    {$IFDEF DELPHI}
+    {$IFNDEF FPC}
     procedure RequiresUnits(Proc: TGetStrProc); override;
     {$ENDIF}
   end;
 
   TTimerTaskEventSelectionEditor = class(TSelectionEditor)
   public
-    {$IFDEF DELPHI}
+    {$IFNDEF FPC}
     procedure RequiresUnits(Proc: TGetStrProc); override;
     {$ENDIF}
   end;
@@ -207,10 +207,10 @@ procedure Register;
 
 
 //共享素材,将素材独立成组件,供其他控件共同使用
-procedure UseRefMaterialMode(Component:TComponent;Designer:{$IFDEF DELPHI}IDesigner{$ENDIF}{$IFDEF FPC}TIDesigner{$ENDIF});
+procedure UseRefMaterialMode(Component:TComponent;Designer:{$IFNDEF FPC}IDesigner{$ENDIF}{$IFDEF FPC}TIDesigner{$ENDIF});
 //保存RefMaterial到SelfOwnMateirl
 procedure SaveRefMaterialToSelfOwnMaterial(Component:TComponent;
-                                            Designer:{$IFDEF DELPHI}IDesigner{$ENDIF}{$IFDEF FPC}TIDesigner{$ENDIF});
+                                            Designer:{$IFNDEF FPC}IDesigner{$ENDIF}{$IFDEF FPC}TIDesigner{$ENDIF});
 
 ////编辑皮肤包中的素材(不保存SelfOwnMaterial)
 //procedure OpenSkinPackageMaterialEditor(ASkinPackage:TSkinPackage;
@@ -257,7 +257,7 @@ begin
   begin
     if ComponentClasses[I]<>nil then
     begin
-      {$IFDEF DELPHI}
+      {$IFNDEF FPC}
       RegisterPropertyEditorProc(PropertyType, ComponentClasses[I], PropertyName,EditorClass);
       {$ENDIF}
       {$IFDEF FPC}
@@ -287,6 +287,9 @@ end;
 procedure Register;
 var
   ComponentClasses: Array of TComponentClass;
+  AComponentClass: TComponentClass;
+  I: Integer;
+  AControlClassifyReg:TControlClassifyReg;
 begin
 
   {$IFDEF FMX}
@@ -298,9 +301,11 @@ begin
                      TSkinFMXDateEdit,
                      TSkinFMXPopup,
                      nil];
+  RegisterComponentEditors([TSkinFireMonkeyControl],TSkinControlComponentEditor);
   {$ENDIF}
 
   {$IFDEF VCL}
+  RegisterComponentEditors([TSkinWindowsControl],TSkinControlComponentEditor);
   {$IFDEF MSWINDOWS}
     //{$IFDEF DELPHIXE8}
     //ComponentClasses:=[TSkinWindowsControl,
@@ -326,11 +331,11 @@ begin
 
 
 
-  //ComponentTypeName属性编辑器
-  RegisterPropertyEditors(TypeInfo(String),
-                          ComponentClasses,
-                          'ComponentTypeName',
-                          TComponentTypeNameProperty);
+//  //ComponentTypeName属性编辑器
+//  RegisterPropertyEditors(TypeInfo(String),
+//                          ComponentClasses,
+//                          'ComponentTypeName',
+//                          TComponentTypeNameProperty);
 
 
 
@@ -378,8 +383,33 @@ begin
 
 
   //组件编辑器
-  RegisterComponentEditors(ComponentClasses,
-                          TSkinControlComponentEditor);
+  RegisterComponentEditors(ComponentClasses,TSkinControlComponentEditor);
+
+
+//  //注释素材组件
+//  for I := 0 to GlobalControlTypeRegManager.ControlClassifyRegList.Count-1 do
+//  begin
+//    //GlobalControlTypeRegManager.ControlClassifyRegList[I].ControlTypeRegList
+//    AControlClassifyReg:=GlobalControlTypeRegManager.ControlClassifyRegList[I];
+//    AComponentClass:=TComponentClass(FindClass('T'+AControlClassifyReg.ControlClassify));
+//    if AComponentClass<>nil then
+//    begin
+//      RegisterComponentEditors([AComponentClass],TSkinControlComponentEditor);
+//    end;
+//
+////    for J := 0 to AControlClassifyReg.ControlTypeRegList.Count-1 do
+////    begin
+////      //不能重复注册
+////      if GlobalRegisteredClassList.IndexOf(AControlClassifyReg.ControlTypeRegList[J].MaterialClass.ClassName)=-1 then
+////      begin
+////           GlobalRegisteredClassList.Add(AControlClassifyReg.ControlTypeRegList[J].MaterialClass.ClassName);
+////           //RegisterClasses([AMaterialClass]);
+////           RegisterComponents('OrangeUIMaterial',[AControlClassifyReg.ControlTypeRegList[J].MaterialClass]);
+////
+////      end;
+////
+////    end;
+//  end;
 
 
   {$IFDEF FMX}
@@ -807,7 +837,7 @@ end;
 //end;
 
 procedure SaveRefMaterialToSelfOwnMaterial(Component:TComponent;
-                                            Designer:{$IFDEF DELPHI}IDesigner{$ENDIF}{$IFDEF FPC}TIDesigner{$ENDIF});
+                                            Designer:{$IFNDEF FPC}IDesigner{$ENDIF}{$IFDEF FPC}TIDesigner{$ENDIF});
 var
   ASkinControlIntf:ISkinControl;
   ASkinControlMaterialIntf:ISkinControlMaterial;
@@ -902,7 +932,7 @@ end;
 //  end;
 //end;
 
-procedure UseRefMaterialMode(Component:TComponent;Designer:{$IFDEF DELPHI}IDesigner{$ENDIF}{$IFDEF FPC}TIDesigner{$ENDIF});
+procedure UseRefMaterialMode(Component:TComponent;Designer:{$IFNDEF FPC}IDesigner{$ENDIF}{$IFDEF FPC}TIDesigner{$ENDIF});
 var
   ASkinControlIntf:ISkinControl;
   ASkinControlMaterialIntf:ISkinControlMaterial;
@@ -929,7 +959,7 @@ begin
 
 
           { #todo : 需要处理 }
-          {$IFDEF DELPHI}
+          {$IFNDEF FPC}
           if Designer.Root<>nil then
           begin
             uBaseLog.HandleException(nil,'UseRefMaterialMode 3');
@@ -1010,14 +1040,14 @@ var
   ASkinComponentIntf:ISkinControl;
   AControlClassifyRegIndex:Integer;
   AControlClassifyReg:TControlClassifyReg;
-  {$IFDEF DELPHI}
+  {$IFNDEF FPC}
   List: IDesignerSelections;
   {$ENDIF}
 begin
   //把每个控件类型的可以ComponentType列出来
   //皮肤组件接口
   { #todo : 需要处理 }
-  {$IFDEF DELPHI}
+  {$IFNDEF FPC}
 
   List := CreateSelectionList;
   if Designer<>nil then
@@ -1142,14 +1172,14 @@ var
   ASkinControlIntf:ISkinControl;
   ASkinControlMaterialIntf:ISkinControlMaterial;
   AMaterialClass:TMaterialClass;
-  {$IFDEF DELPHI}
+  {$IFNDEF FPC}
   List: IDesignerSelections;
   {$ENDIF}
 var
   LComponent: TComponent;
   S: string;
 begin
-  {$IFDEF DELPHI}
+  {$IFNDEF FPC}
 
   //获取选中的控件列表
   List := CreateSelectionList;
@@ -1303,10 +1333,10 @@ begin
 end;
 
 procedure TSkinControlComponentEditor.PrepareItem(Index: Integer;
-  const AItem: {$IFDEF DELPHI}IMenuItem{$ENDIF}{$IFDEF FPC}TMenuItem{$ENDIF});
+  const AItem: {$IFNDEF FPC}IMenuItem{$ENDIF}{$IFDEF FPC}TMenuItem{$ENDIF});
 var
   I: Integer;
-  {$IFDEF DELPHI}
+  {$IFNDEF FPC}
   MenuItem: IMenuItem;
   {$ENDIF}
 
@@ -1318,7 +1348,7 @@ begin
   inherited PrepareItem(Index, AItem);
 
   { #todo : 需要处理 }
-  {$IFDEF DELPHI}
+  {$IFNDEF FPC}
   //绑定为列表项的
   //添加子菜单
   if Index = 2 then
@@ -1490,7 +1520,7 @@ end;
 procedure TBindItemFieldNameProperty.GetValues(Proc: TGetStrProc);
 var
   AItemDesignerPanel:TSkinItemDesignerPanel;
-  {$IFDEF DELPHI}
+  {$IFNDEF FPC}
   List: IDesignerSelections;
   {$ENDIF}
 {$IFDEF MY_PROGRAM_DESIGNER}
@@ -1502,7 +1532,7 @@ begin
 
 
   { #todo : 需要处理 }
-  {$IFDEF DELPHI}
+  {$IFNDEF FPC}
   //绑定为列表项的
   List := CreateSelectionList;
   if Designer<>nil then
@@ -1588,11 +1618,11 @@ end;
 procedure TMultiColorLabelNameProperty.GetValues(Proc: TGetStrProc);
 var
   AItemDesignerPanel:TSkinItemDesignerPanel;
-  {$IFDEF DELPHI}
+  {$IFNDEF FPC}
   List: IDesignerSelections;
   {$ENDIF}
 begin
-  {$IFDEF DELPHI}
+  {$IFNDEF FPC}
   //绑定为列表项的
   List := CreateSelectionList;
   if Designer<>nil then
@@ -1648,7 +1678,7 @@ begin
   GetParentItemDesignerPanelKeys(nil,Proc);
 end;
 
-{$IFDEF DELPHI}
+{$IFNDEF FPC}
 
 { TMessageBoxSelectionEditor }
 
@@ -1659,7 +1689,7 @@ begin
 end;
 {$ENDIF}
 
-{$IFDEF DELPHI}
+{$IFNDEF FPC}
 
 { TTimerTaskEventSelectionEditor }
 

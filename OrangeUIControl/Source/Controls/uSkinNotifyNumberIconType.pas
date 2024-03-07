@@ -412,7 +412,7 @@ type
   protected
     procedure TextChanged;override;
   public
-    function CalcCurrentEffectStates:TDPEffectStates;override;
+//    function CalcCurrentEffectStates(APaintData:TPaintData):TDPEffectStates;override;
   end;
 
 
@@ -999,10 +999,10 @@ begin
 
 end;
 
-function TSkinNotifyNumberIconType.CalcCurrentEffectStates: TDPEffectStates;
-begin
-  Result:=Inherited CalcCurrentEffectStates;
-end;
+//function TSkinNotifyNumberIconType.CalcCurrentEffectStates(APaintData:TPaintData): TDPEffectStates;
+//begin
+//  Result:=Inherited CalcCurrentEffectStates;
+//end;
 
 function TSkinNotifyNumberIconType.GetSkinMaterial: TSkinNotifyNumberIconMaterial;
 begin

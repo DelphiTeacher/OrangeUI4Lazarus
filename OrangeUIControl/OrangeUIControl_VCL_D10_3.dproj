@@ -252,6 +252,10 @@
         <DCCReference Include="Source\VCL\GDIPlusCanvas\uGDIPlusSkinPictureEngine.pas"/>
         <DCCReference Include="Source\VCL\GDIPlusCanvas\GDIPlus\uSkinGDIPlus.pas"/>
         <DCCReference Include="..\OrangeProjectCommon\uVCLSVGSupport.pas"/>
+        <DCCReference Include="Source\VCL\uSkinSelectPopupForm.pas">
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Source\VCL\uSkinWindowsForm.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

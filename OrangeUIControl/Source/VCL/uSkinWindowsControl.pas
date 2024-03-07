@@ -134,7 +134,7 @@ Type
     //非客户区点击测试值
     property HitTestValue:Integer read GetHitTestValue write FHitTestValue;
   published
-    property HitTest:Boolean read GetNeedHitTest write FNeedHitTest;
+    property HitTest:Boolean read GetNeedHitTest write SetNeedHitTest;
   public
     constructor Create(AOwner:TComponent);override;
     destructor Destroy;override;
@@ -628,6 +628,7 @@ begin
   if Caption<>Value then
   begin
     Inherited Caption:=Value;
+
     if GetSkinControlType<>nil then
     begin
       TSkinControlType(GetSkinControlType).TextChanged;

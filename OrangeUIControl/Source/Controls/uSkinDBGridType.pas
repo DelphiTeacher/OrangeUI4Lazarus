@@ -5076,6 +5076,11 @@ begin
     {$ENDIF}
   end;
 
+  if FSkinControl<>nil then
+  begin
+    (FSkinControl as ISkinItemBindingControl).SetBindItemFieldName(Self.FFieldName);
+  end;
+
   if not IsStored then
   begin
     if Value = nil then
