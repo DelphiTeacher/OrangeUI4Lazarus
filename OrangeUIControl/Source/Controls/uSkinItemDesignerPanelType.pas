@@ -133,7 +133,7 @@ type
     constructor Create(Collection: TCollection); override;
     destructor Destroy;override;
   public
-    property Intf: IBindSkinItemTextControl read FIntf;
+//    property Intf: IBindSkinItemTextControl read FIntf;
     function BindItemFieldName:String;
   published
     /// <summary>
@@ -231,7 +231,7 @@ type
     FItemDetail5Intf: IBindSkinItemTextControl;
     FItemDetail6Intf: IBindSkinItemTextControl;
     FItemCaptionIntf: IBindSkinItemTextControl;
-    FItemAccessoryMoreIntf: ISkinControl;
+    FItemAccessoryMoreIntf: IBindSkinItemTextControl;
 
     FItemIconIntf: IBindSkinItemIconControl;
     FItemPicIntf: IBindSkinItemIconControl;
@@ -354,6 +354,7 @@ type
 //    LastCol:TOB;
     LastItemBufferCacheTag:Integer;
 
+
     procedure Clear;
 
 //    //绑定控件,用于页面框架
@@ -361,33 +362,35 @@ type
 //                          ASubItemsIndex:Integer;
 //                          ABindingControl:TControl);
 
-    //绑定标题的控件
-    property ItemCaptionIntf:IBindSkinItemTextControl read FItemCaptionIntf;
-    property ItemAccessoryMoreIntf:ISkinControl read FItemAccessoryMoreIntf;
 
-
-    //绑定明细的控件
-    property ItemDetailIntf:IBindSkinItemTextControl read FItemDetailIntf;
-    property ItemDetail1Intf:IBindSkinItemTextControl read FItemDetail1Intf;
-    property ItemDetail2Intf:IBindSkinItemTextControl read FItemDetail2Intf;
-    property ItemDetail3Intf:IBindSkinItemTextControl read FItemDetail3Intf;
-    property ItemDetail4Intf:IBindSkinItemTextControl read FItemDetail4Intf;
-    property ItemDetail5Intf:IBindSkinItemTextControl read FItemDetail5Intf;
-    property ItemDetail6Intf:IBindSkinItemTextControl read FItemDetail6Intf;
-
-    //绑定图标的控件
-    property ItemIconIntf:IBindSkinItemIconControl read FItemIconIntf;
-    //绑定图片的控件
-    property ItemPicIntf:IBindSkinItemIconControl read FItemPicIntf;
-
-
-    //绑定勾选的控件
-    property ItemCheckedIntf:IBindSkinItemBoolControl read FItemCheckedIntf;
-    //绑定选中的控件
-    property ItemSelectedIntf:IBindSkinItemBoolControl read FItemSelectedIntf;
-    //绑定是否展开的控件
-    property ItemExpandedIntf:IBindSkinItemBoolControl read FItemExpandedIntf;
-
+//    //绑定标题的控件
+//    property ItemCaptionIntf:IBindSkinItemTextControl read FItemCaptionIntf;
+//    property ItemAccessoryMoreIntf:ISkinControl read FItemAccessoryMoreIntf;
+//
+//
+//    //绑定明细的控件
+//    property ItemDetailIntf:IBindSkinItemTextControl read FItemDetailIntf;
+//    property ItemDetail1Intf:IBindSkinItemTextControl read FItemDetail1Intf;
+//    property ItemDetail2Intf:IBindSkinItemTextControl read FItemDetail2Intf;
+//    property ItemDetail3Intf:IBindSkinItemTextControl read FItemDetail3Intf;
+//    property ItemDetail4Intf:IBindSkinItemTextControl read FItemDetail4Intf;
+//    property ItemDetail5Intf:IBindSkinItemTextControl read FItemDetail5Intf;
+//    property ItemDetail6Intf:IBindSkinItemTextControl read FItemDetail6Intf;
+//
+//    //绑定图标的控件
+//    property ItemIconIntf:IBindSkinItemIconControl read FItemIconIntf;
+//    //绑定图片的控件
+//    property ItemPicIntf:IBindSkinItemIconControl read FItemPicIntf;
+//
+//
+//    //绑定勾选的控件
+//    property ItemCheckedIntf:IBindSkinItemBoolControl read FItemCheckedIntf;
+//    //绑定选中的控件
+//    property ItemSelectedIntf:IBindSkinItemBoolControl read FItemSelectedIntf;
+//    //绑定是否展开的控件
+//    property ItemExpandedIntf:IBindSkinItemBoolControl read FItemExpandedIntf;
+//
+  public
     //将字符串属性与控件绑定
     procedure SetBindSkinItemTextControl(const ANewBindingControl: TChildControl;
                                         var AOldItemBindingControl: TChildControl;
@@ -1539,42 +1542,42 @@ begin
   if Self.ItemCaptionBindingControl<>nil then
   begin
     AValue:=AItem.GetValueByBindItemField('ItemCaption');
-    Self.ItemCaptionIntf.BindingItemText('ItemCaption',AValue,AItem,AIsDrawItemInteractiveState);
+    Self.FItemCaptionIntf.BindingItemText('ItemCaption',AValue,AItem,AIsDrawItemInteractiveState);
   end;
   if Self.ItemDetailBindingControl<>nil then
   begin
     AValue:=AItem.GetValueByBindItemField('ItemDetail');
-    Self.ItemDetailIntf.BindingItemText('ItemDetail',AValue,AItem,AIsDrawItemInteractiveState);
+    Self.FItemDetailIntf.BindingItemText('ItemDetail',AValue,AItem,AIsDrawItemInteractiveState);
   end;
   if Self.ItemDetail1BindingControl<>nil then
   begin
     AValue:=AItem.GetValueByBindItemField('ItemDetail1');
-    Self.ItemDetail1Intf.BindingItemText('ItemDetail1',AValue,AItem,AIsDrawItemInteractiveState);
+    Self.FItemDetail1Intf.BindingItemText('ItemDetail1',AValue,AItem,AIsDrawItemInteractiveState);
   end;
   if Self.ItemDetail2BindingControl<>nil then
   begin
     AValue:=AItem.GetValueByBindItemField('ItemDetail2');
-    Self.ItemDetail2Intf.BindingItemText('ItemDetail2',AValue,AItem,AIsDrawItemInteractiveState);
+    Self.FItemDetail2Intf.BindingItemText('ItemDetail2',AValue,AItem,AIsDrawItemInteractiveState);
   end;
   if Self.ItemDetail3BindingControl<>nil then
   begin
     AValue:=AItem.GetValueByBindItemField('ItemDetail3');
-    Self.ItemDetail3Intf.BindingItemText('ItemDetail3',AValue,AItem,AIsDrawItemInteractiveState);
+    Self.FItemDetail3Intf.BindingItemText('ItemDetail3',AValue,AItem,AIsDrawItemInteractiveState);
   end;
   if Self.ItemDetail4BindingControl<>nil then
   begin
     AValue:=AItem.GetValueByBindItemField('ItemDetail4');
-    Self.ItemDetail4Intf.BindingItemText('ItemDetail4',AValue,AItem,AIsDrawItemInteractiveState);
+    Self.FItemDetail4Intf.BindingItemText('ItemDetail4',AValue,AItem,AIsDrawItemInteractiveState);
   end;
   if Self.ItemDetail5BindingControl<>nil then
   begin
     AValue:=AItem.GetValueByBindItemField('ItemDetail5');
-    Self.ItemDetail5Intf.BindingItemText('ItemDetail5',AValue,AItem,AIsDrawItemInteractiveState);
+    Self.FItemDetail5Intf.BindingItemText('ItemDetail5',AValue,AItem,AIsDrawItemInteractiveState);
   end;
   if Self.ItemDetail6BindingControl<>nil then
   begin
     AValue:=AItem.GetValueByBindItemField('ItemDetail6');
-    Self.ItemDetail6Intf.BindingItemText('ItemDetail6',AValue,AItem,AIsDrawItemInteractiveState);
+    Self.FItemDetail6Intf.BindingItemText('ItemDetail6',AValue,AItem,AIsDrawItemInteractiveState);
   end;
 
 
@@ -1582,7 +1585,7 @@ begin
   //设置控件是否隐藏或显示
   if Self.ItemAccessoryMoreBindingControl<>nil then
   begin
-    Self.ItemAccessoryMoreIntf.Visible:=(AItem.Accessory<>satNone);
+    Self.ItemAccessoryMoreBindingControl.Visible:=(AItem.Accessory<>satNone);
   end;
 
 
@@ -1596,13 +1599,13 @@ begin
 //    end;
 
     //必须用
-    Self.ItemIconIntf.BindingItemIcon(
-                  AItem.StaticIcon,
-                  ASkinImageList,
-                  AItem.IconImageIndex,
-                  AItem.IconRefPicture,
-                  AIsDrawItemInteractiveState
-                  );
+    Self.FItemIconIntf.BindingItemIcon(
+                                        AItem.StaticIcon,
+                                        ASkinImageList,
+                                        AItem.IconImageIndex,
+                                        AItem.IconRefPicture,
+                                        AIsDrawItemInteractiveState
+                                        );
   end;
 
 
@@ -1610,7 +1613,7 @@ begin
   if Self.ItemPicBindingControl<>nil then
   begin
     //必须用
-    Self.ItemPicIntf.BindingItemIcon(
+    Self.FItemPicIntf.BindingItemIcon(
                   AItem.StaticPic,
                   nil,
                   AItem.PicImageIndex,
@@ -1622,17 +1625,17 @@ begin
 
   if Self.ItemCheckedBindingControl<>nil then
   begin
-    Self.ItemCheckedIntf.BindingItemBool(AItem.Checked,AIsDrawItemInteractiveState);
+    Self.FItemCheckedIntf.BindingItemBool(AItem.Checked,AIsDrawItemInteractiveState);
   end;
 
   if Self.ItemSelectedBindingControl<>nil then
   begin
-    Self.ItemSelectedIntf.BindingItemBool(AItem.Selected,AIsDrawItemInteractiveState);
+    Self.FItemSelectedIntf.BindingItemBool(AItem.Selected,AIsDrawItemInteractiveState);
   end;
 
   if (Self.ItemExpandedBindingControl<>nil) and (AItem is TBaseSkinTreeViewItem) then
   begin
-    Self.ItemExpandedIntf.BindingItemBool(TBaseSkinTreeViewItem(AItem).Expanded,AIsDrawItemInteractiveState);
+    Self.FItemExpandedIntf.BindingItemBool(TBaseSkinTreeViewItem(AItem).Expanded,AIsDrawItemInteractiveState);
   end;
 
 
@@ -1641,7 +1644,7 @@ begin
   begin
     if Self.ItemExpandedBindingControl<>nil then
     begin
-      Self.ItemExpandedIntf.BindingItemBool(TDesignTimeRealSkinTreeViewItem(AItem).Expanded,AIsDrawItemInteractiveState);
+      Self.FItemExpandedIntf.BindingItemBool(TDesignTimeRealSkinTreeViewItem(AItem).Expanded,AIsDrawItemInteractiveState);
     end;
   end;
 
@@ -1651,7 +1654,7 @@ begin
   for I := 0 to Self.ItemStringsBindingControlCollection.Count-1 do
   begin
       AControlItem:=Self.ItemStringsBindingControlCollection[I];
-      if (AControlItem.Intf<>nil) and (AControlItem.BindItemFieldName<>'') then
+      if (AControlItem.FIntf<>nil) and (AControlItem.BindItemFieldName<>'') then
       begin
 
           AValue:=AItem.GetValueByBindItemField(AControlItem.BindItemFieldName);
@@ -1659,7 +1662,7 @@ begin
   //      if (AControlItem.StringsIndex>-1)
   //        and (AControlItem.StringsIndex<AItem.SubItems.Count) then
   //      begin
-          AControlItem.Intf.BindingItemText(
+          AControlItem.FIntf.BindingItemText(
                                             AControlItem.BindItemFieldName,//'ItemSubItems'+IntToStr(AControlItem.StringsIndex),
                                             AValue,//AItem.SubItems[AControlItem.StringsIndex],
                                             AItem,
@@ -2088,7 +2091,18 @@ begin
 end;
 
 procedure TItemDesignerPanelProperties.SetItemAccessoryMoreControl(const Value: TChildControl);
+//var
+//  AItemColorIntf: IProcessItemColor;
 begin
+//  SetBindSkinItemTextControl(Value,
+//                            FItemAccessoryMoreControl,
+//                            FItemAccessoryMoreIntf,
+//                            AItemColorIntf,
+//                            FItemAccessoryMoreControl,
+//                            FBindControlInvalidateChange,
+//                            'ItemAccessory');
+
+
   if FItemAccessoryMoreControl<>Value then
   begin
     if Value<>nil then
@@ -2113,6 +2127,7 @@ begin
     FBindControlInvalidateChange.DoChange(FSkinControl);
 
   end;
+
 end;
 
 procedure TItemDesignerPanelProperties.SetItemCheckedControl(const Value: TChildControl);

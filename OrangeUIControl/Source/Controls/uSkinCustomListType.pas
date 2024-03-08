@@ -2117,8 +2117,7 @@ type
     property OnStartEditingItem:TCustomListEditingItemEvent read GetOnStartEditingItem write FOnStartEditingItem;
     property OnStopEditingItem:TCustomListEditingItemEvent read GetOnStopEditingItem write FOnStopEditingItem;
 
-    property OnClickItemDesignerPanelChild:TCustomListClickItemDesignerPanelChildEvent
-                read GetOnClickItemDesignerPanelChild write FOnClickItemDesignerPanelChild;
+    property OnClickItemDesignerPanelChild:TCustomListClickItemDesignerPanelChildEvent read GetOnClickItemDesignerPanelChild write FOnClickItemDesignerPanelChild;
 
   end;
 
@@ -7461,6 +7460,7 @@ end;
 //
 //
 //end;
+
 procedure TSkinCustomList.DoCustomDragDrop(ADragObject:TObject; const Point: TPointF);
 var
   ANewIndex:Integer;

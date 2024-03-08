@@ -305,7 +305,7 @@ type
     //procedure DoInsert(AObject:TObject;AIndex:Integer);virtual;abstract;
 //    procedure BeginUpdate;virtual;abstract;overload;
     //procedure EndUpdate(AIsForce:Boolean=False);virtual;abstract;
-    procedure Sort(Compare: TListSortCompare);virtual;abstract;
+//    procedure Sort(Compare: TListSortCompare);virtual;abstract;
 
     function GetCount:Integer;
     function IndexOf(AObject:TObject):Integer;
@@ -373,6 +373,16 @@ type
     ///   </para>
     /// </summary>
 //    function Insert(Index:Integer):TObject;overload;//TInterfacedPersistent;overload;
+  public
+    /// <summary>
+    ///   <para>
+    ///     列表项排序
+    ///   </para>
+    ///   <para>
+    ///     Sort
+    ///   </para>
+    /// </summary>
+    procedure Sort(Compare: TListSortCompare);//override;
   public
 
     /// <summary>
@@ -1094,6 +1104,44 @@ function TBinaryCollection.Insert(AIndex: Integer; AObject: TObject): Integer;
 begin
   TCollectionItem(AObject).Collection:=Self;
   TCollectionItem(AObject).Index:=AIndex;
+end;
+
+procedure TBinaryCollection.Sort(Compare: TListSortCompare);
+var
+  AList:TList;
+  I: Integer;
+begin
+  { TODO : 这里要处理1 }
+  AList:=TList.Create;
+  BeginUpdate;
+  try
+    for I := 0 to Count-1 do
+    begin
+      AList.Add(Items[I])
+    end;
+
+    AList.Sort(Compare);
+
+    for I := 0 to AList.Count-1 do
+    begin
+      TCollectionItem(AList[I]).Index:=I;
+    end;
+  finally
+    FreeAndNil(AList);
+    EndUpdate;
+  end;
+//  BeginUpdate;
+//  try
+//    Self.FItems.Sort(Compare);
+//  finally
+//    //需要重新计算可视的列表
+//    if GetListLayoutsManager<>nil then
+//    begin
+//      Self.GetListLayoutsManager.DoItemVisibleChange(nil,False);
+//    end;
+//    //刷新
+//    EndUpdate(True);
+//  end;
 end;
 
 //function TBinaryCollection.GetItem(Index: Integer): TObject;//TInterfacedPersistent;

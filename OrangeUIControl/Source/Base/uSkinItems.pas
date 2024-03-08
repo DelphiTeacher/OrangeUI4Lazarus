@@ -99,6 +99,8 @@ type
   end;
 
 
+  //表格列的排序状态,未排序,升序,降序
+  TSkinItemSortState=(sissUnSort,sissAsc,sissDesc);
 
 
 
@@ -478,7 +480,8 @@ type
     ///     Sort
     ///   </para>
     /// </summary>
-    procedure Sort(Compare: TListSortCompare);override;
+//    procedure Sort(Compare: TListSortCompare);override;
+    procedure Sort(ABindItemFieldName:String;ASortState:TSkinItemSortState);overload;
   end;
   {$ENDREGION 'TBaseSkinItems 列表项列表基类'}
 
@@ -540,7 +543,13 @@ type
 
   //绑定控件是否隐藏还是显示
   TSkinAccessoryType = (satNone,
-                        satMore);
+                        satMore,
+                        //未排序
+                        //satUnSort,
+                        //升序
+                        satAsc,
+                        //降序
+                        satDesc);
                         //, satCheckmark, satDetail);
 
 
@@ -2179,18 +2188,71 @@ type
 var
   GlobalSkinItemClasses:TBaseList;
 //  GlobalDrawPictureRecrod:TDrawPictureRecrod;
-
+  //当前使用SortSkinItemByFieldName_Compare所排序的字段
+  CurrrentSortBindItemFieldName:String;
+  CurrrentSortBindItemSortState:TSkinItemSortState;
 
 procedure RegisterSkinItemClass(ASkinItemClass:TBaseSkinItemClass);
 function FindSkinItemClass(ASkinItemClassName:String):TBaseSkinItemClass;
 function GetGlobalSkinItemClasses:TBaseList;
 
+//CurrrentSortBindItemFieldName:String;
+//CurrrentSortBindItemSortState:TSkinItemSortState;
+function SortSkinItemByFieldName_Compare(Item1, Item2: Pointer): Integer;
 
 implementation
 
 
 uses
   uComponentType;
+
+
+
+function SortSkinItemByFieldName_Compare(Item1, Item2: Pointer): Integer;
+var
+  AItem1,AItem2:TBaseSkinItem;
+begin
+  AItem1:=TBaseSkinItem(Item1);
+  AItem2:=TBaseSkinItem(Item2);
+
+  case CurrrentSortBindItemSortState of
+    sissUnSort:
+    begin
+
+    end;
+    sissAsc:
+    begin
+      if AItem1.GetValueByBindItemField(CurrrentSortBindItemFieldName)>AItem2.GetValueByBindItemField(CurrrentSortBindItemFieldName) then
+      begin
+        Result:=1;
+      end
+      else if AItem1.GetValueByBindItemField(CurrrentSortBindItemFieldName)<AItem2.GetValueByBindItemField(CurrrentSortBindItemFieldName) then
+      begin
+        Result:=-1;
+      end
+      else
+      begin
+        Result:=0;
+      end;
+    end;
+    sissDesc:
+    begin
+      if AItem1.GetValueByBindItemField(CurrrentSortBindItemFieldName)<AItem2.GetValueByBindItemField(CurrrentSortBindItemFieldName) then
+      begin
+        Result:=1;
+      end
+      else if AItem1.GetValueByBindItemField(CurrrentSortBindItemFieldName)>AItem2.GetValueByBindItemField(CurrrentSortBindItemFieldName) then
+      begin
+        Result:=-1;
+      end
+      else
+      begin
+        Result:=0;
+      end;
+    end;
+  end;
+end;
+
 
 //uses
 //  uSkinImageType;
@@ -2805,21 +2867,13 @@ begin
   FListLayoutsManager:=ALayoutsManager;
 end;
 
-procedure TBaseSkinItems.Sort(Compare: TListSortCompare);
+procedure TBaseSkinItems.Sort(ABindItemFieldName: String;
+  ASortState: TSkinItemSortState);
 begin
-  { TODO : 这里要处理1 }
-//  BeginUpdate;
-//  try
-//    Self.FItems.Sort(Compare);
-//  finally
-//    //需要重新计算可视的列表
-//    if GetListLayoutsManager<>nil then
-//    begin
-//      Self.GetListLayoutsManager.DoItemVisibleChange(nil,False);
-//    end;
-//    //刷新
-//    EndUpdate(True);
-//  end;
+  CurrrentSortBindItemFieldName:=ABindItemFieldName;
+  CurrrentSortBindItemSortState:=ASortState;
+  Self.Sort(SortSkinItemByFieldName_Compare);
+
 end;
 
 function TBaseSkinItems.GetUpdateCount: Integer;
