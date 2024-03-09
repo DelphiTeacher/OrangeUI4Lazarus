@@ -67,6 +67,7 @@ const
 type
   TComboBoxProperties=class;
 
+  TSkinComboBoxViewType=(scbvtText,scbvtListView);
 
 
 
@@ -90,6 +91,7 @@ type
     /// </summary>
     function GetText:String;
     property Text:String read GetText;
+    function GetViewType: TSkinComboBoxViewType;
 
     function GetComboBoxProperties:TComboBoxProperties;
     property Properties:TComboBoxProperties read GetComboBoxProperties;
@@ -115,7 +117,6 @@ type
     FDrawText:String;
     //提示文本
     FHelpText:String;
-    FIsMultiSelect: Boolean;
 
     //下拉框接口
     FSkinComboBoxIntf:ISkinComboBox;
@@ -151,7 +152,6 @@ type
     ///   </para>
     /// </summary>
     property HelpText:String read FHelpText write SetHelpText;
-    property MultiSelect:Boolean read FIsMultiSelect write FIsMultiSelect;
   end;
 
 
@@ -337,7 +337,6 @@ type
   end;
 
 
-  TSkinComboBoxViewType=(scbvtText,scbvtListView);
   {$I ComponentPlatformsAttribute.inc}
   TSkinComboBox=class(TBaseSkinControl,
                         ISkinComboBox,
@@ -353,6 +352,7 @@ type
     FOnChange: TNotifyEvent;
     FAutoDropDown: Boolean;
     FViewType: TSkinComboBoxViewType;
+    FMultiSelect: Boolean;
 //    FDetail:String;
 //    FDetail1:String;
 //    procedure SetDetail(const Value:String);
@@ -373,6 +373,7 @@ type
                                                                 AItemDesignerPanel:TSkinItemDesignerPanel;
                                                                 AChild:TChildControl);
     procedure SetViewType(const Value: TSkinComboBoxViewType);
+    function GetViewType: TSkinComboBoxViewType;
   protected
 //    procedure lvMultiSelectedItemsNewListItemStyleFrameCacheInit(Sender: TObject;
 //      AListItemTypeStyleSetting: TListItemTypeStyleSetting;
@@ -440,12 +441,13 @@ type
     //function GetSelectedIndexArray:ISuperArray;
 
   published
-    property ViewType:TSkinComboBoxViewType read FViewType write SetViewType;
+    property MultiSelect:Boolean read FMultiSelect write FMultiSelect;
+    property ViewType:TSkinComboBoxViewType read GetViewType write SetViewType;
     //动态
     property AutoDropDown:Boolean read FAutoDropDown write FAutoDropDown;
 //    property Action;
-    property ItemIndex:Integer read FItemIndex write SetItemIndex;
     property Items:TStringList read FItems write SetItems;
+    property ItemIndex:Integer read FItemIndex write SetItemIndex;
     //标题
 //    property Caption;
 //    property Detail:String read FDetail write SetDetail;
@@ -534,21 +536,26 @@ begin
 
 
     //绘制文本
-    if APaintData.IsInDrawDirectUI then
-    begin
-      ACanvas.DrawText(Self.GetSkinMaterial.FDrawTextParam,
-                      Self.FSkinComboBoxIntf.Prop.DrawText,
-                      ADrawRect);
-    end
-    else
+    if Self.FSkinComboBoxIntf.GetViewType=scbvtText then
     begin
 
-      //绘制文本
-      if (Self.FSkinComboBoxIntf.Text<>'') then
+      if APaintData.IsInDrawDirectUI then
       begin
         ACanvas.DrawText(Self.GetSkinMaterial.FDrawTextParam,
-                        Self.FSkinComboBoxIntf.Text,
+                        Self.FSkinComboBoxIntf.Prop.DrawText,
                         ADrawRect);
+      end
+      else
+      begin
+
+        //绘制文本
+        if (Self.FSkinComboBoxIntf.Text<>'') then
+        begin
+          ACanvas.DrawText(Self.GetSkinMaterial.FDrawTextParam,
+                          Self.FSkinComboBoxIntf.Text,
+                          ADrawRect);
+        end;
+
       end;
 
     end;
@@ -953,6 +960,11 @@ begin
   Result:=Self.Caption;//edtValue.Text;
 end;
 
+function TSkinComboBox.GetViewType: TSkinComboBoxViewType;
+begin
+  Result:=FViewType;
+end;
+
 function TSkinComboBox.IsItemCanAddToText(AItem: TSkinItem): Boolean;
 begin
   Result:=True;
@@ -1062,7 +1074,10 @@ begin
   if Self.Caption<>Value then
   begin
     Self.Caption:=Value;
-    Self.SyncMultiSelectedItems;
+    if (FViewType=scbvtListView) then
+    begin
+      Self.SyncMultiSelectedItems;
+    end;
     if Assigned(FOnChange) then FOnChange(Self);
   end;
 end;
@@ -1075,6 +1090,10 @@ begin
     if Self.lvMultiSelectedItems<>nil then
     begin
       lvMultiSelectedItems.Visible:=(FViewType=scbvtListView);
+      if (FViewType=scbvtListView) then
+      begin
+        SyncMultiSelectedItems;
+      end;
     end;
   end;
 end;
@@ -1086,9 +1105,11 @@ var
   ASkinItem:TSkinItem;
   ASelectedList:TStringList;
 begin
-    //多选才需要使用ListView来显示已经选中的
-    if Self.Prop.FIsMultiSelect then
-    begin
+  if (FViewType=scbvtListView) then
+  begin
+//    //多选才需要使用ListView来显示已经选中的
+//    if Self.Prop.FMultiSelect then
+//    begin
   //      lvMultiSelectedItems.Prop.Items.BeginUpdate;
   //      try
   //        lvMultiSelectedItems.Prop.Items.Clear;
@@ -1134,7 +1155,8 @@ begin
 
 //        lvMultiSelectedItems.Width:=Ceil(lvMultiSelectedItems.Prop.CalcContentWidth);
 
-    end;
+//    end;
+  end;
 
 end;
 
@@ -1339,9 +1361,10 @@ begin
   lvMultiSelectedItems.OnClickItemDesignerPanelChild := DolvMultiSelectedItemsClickItemDesignerPanelChild;
 //  lvMultiSelectedItems.Material.IsTransparent:=False;
 //  lvMultiSelectedItems.Material.BackColor.IsFill:=True;
-  lvMultiSelectedItems.Material.IsTransparent:=False;
-  lvMultiSelectedItems.Material.BackColor.IsFill:=True;
-  lvMultiSelectedItems.Material.BackColor.FillColor.Color:=clRed;
+  lvMultiSelectedItems.Material.IsTransparent:=True;
+//  lvMultiSelectedItems.Material.BackColor.IsFill:=False;
+//  lvMultiSelectedItems.Material.BackColor.IsFill:=True;
+//  lvMultiSelectedItems.Material.BackColor.FillColor.Color:=clRed;
 //  lvMultiSelectedItems.Material.DrawItemBackColorParam.DrawEffectSetting.MouseOverEffect.Eff
   lvMultiSelectedItems.Prop.ItemHeight:=36;
   lvMultiSelectedItems.Prop.ItemWidth:=50;
@@ -1350,11 +1373,12 @@ begin
   lvMultiSelectedItems.Prop.ViewType:=lvtList;
   lvMultiSelectedItems.Align:=alClient;
   lvMultiSelectedItems.AlignWithMargins:=True;
+  //右边要为按钮空出一点
   lvMultiSelectedItems.Margins.SetBounds(2,2,24,2);
   lvMultiSelectedItems.Prop.HorzScrollBarShowType:=TScrollBarShowType.sbstHide;
   lvMultiSelectedItems.Prop.VertScrollBarShowType:=TScrollBarShowType.sbstNone;
   lvMultiSelectedItems.Visible:=False;
-  lvMultiSelectedItems.Width:=0;
+//  lvMultiSelectedItems.Width:=0;
 //  lvMultiSelectedItems.Top:=100;
 
 
@@ -1403,6 +1427,9 @@ begin
   FItemIndex:=-1;
 
   FAutoDropDown:=True;
+
+  Self.TabStop:=True;
+  Self.FMouseDownFocus:=True;
 
 end;
 
@@ -1540,7 +1567,7 @@ begin
   lvPopupItems.Parent:=FfrmSelectPopup;
   lvPopupItems.Align:=alClient;
   lvPopupItems.VertScrollBar.Prop.Position:=0;
-  lvPopupItems.Prop.MultiSelect:=Self.Prop.MultiSelect;
+  lvPopupItems.Prop.MultiSelect:=Self.MultiSelect;
 
 
   lvPopupItems.Prop.Items.BeginUpdate;

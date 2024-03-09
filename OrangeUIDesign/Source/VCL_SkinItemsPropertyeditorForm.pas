@@ -25,14 +25,14 @@ type
    // Not every item can accept similar item
    // For Example: TListBoxItem doesn't accept TListBox Item
    //              TMenuItem can accept TMenuItem
-   TItemClassDesc = record
-     ItemClass: TBaseSkinItemClass;
-     CanContainSimilarItem: Boolean; // Can accept ItemClass Items
-     ShowOnlyInMenu: Boolean;
-     constructor Create(const AItemClass: TBaseSkinItemClass;
-       const ACanContaineSimilarItem: Boolean = False;
-       const AShowOnlyInMenu: Boolean = False);
-   end;
+//   TItemClassDesc = record
+//     ItemClass: TBaseSkinItemClass;
+//     CanContainSimilarItem: Boolean; // Can accept ItemClass Items
+//     ShowOnlyInMenu: Boolean;
+//     constructor Create(const AItemClass: TBaseSkinItemClass;
+//       const ACanContaineSimilarItem: Boolean = False;
+//       const AShowOnlyInMenu: Boolean = False);
+//   end;
 
 
   TfrmSkinItemsPropertyEditor = class(TForm)

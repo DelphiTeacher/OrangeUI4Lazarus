@@ -62,13 +62,17 @@ uses
   //MemoFrame,
   //EditFrame,
   CheckBoxFrame,
+  ComboBoxFrame,
   //PageControlFrame,
   //TestChartFrame,
   //ItemGridFrame,
 
-  EditJsonItemGridFrame,
+  ItemGrid_DefaultFrame,
+  ItemGrid_JsonItemEditFrame,
   DashBoard_Analyse_ItemGrid_TwoCellTextFrame,
   ItemGrid_ColumnControlTypeFrame,
+  ItemGrid_FixedColsFrame,
+  ItemGrid_ContentFrame,
 
 //  BaseQueryFrame,
 //  BaseQueryFrame2,
@@ -536,6 +540,11 @@ begin
   begin
     FCurrentFrame:=TFrameCheckBox.Create(ATabSheet);
   end;
+  //下拉选择框
+  if AItem.Name='combobox' then
+  begin
+    FCurrentFrame:=TFrameComboBox.Create(ATabSheet);
+  end;
 //  //分页控件
 //  if AItem.Name='pagecontrol' then
 //  begin
@@ -553,6 +562,12 @@ begin
 ////  end;
 //
 
+
+  //Item Grid
+  if AItem.Name='item_grid_default' then
+  begin
+    FCurrentFrame:=TFrameDefaultItemGrid.Create(ATabSheet);
+  end;
   if AItem.Name='item_grid_two_cell_text' then
   begin
     FCurrentFrame:=TFrameItemGrid_TwoCellText.Create(ATabSheet);
@@ -564,6 +579,14 @@ begin
   if AItem.Name='item_grid_multi_column_control_type' then
   begin
     FCurrentFrame:=TFrameItemGrid_ColumnControlType.Create(ATabSheet);
+  end;
+  if AItem.Name='item_grid_fixed_cols' then
+  begin
+    FCurrentFrame:=TFrameFixedColsItemGrid.Create(ATabSheet);
+  end;
+  if AItem.Name='item_grid_complex' then
+  begin
+    FCurrentFrame:=TFrameContentItemGrid.Create(ATabSheet);
   end;
 
 

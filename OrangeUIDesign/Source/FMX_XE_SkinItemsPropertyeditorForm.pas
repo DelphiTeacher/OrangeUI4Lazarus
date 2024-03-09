@@ -39,16 +39,6 @@ uses
 
 
 type
-  TItemClassDesc = record
-    //所添加的列表项类
-    // Can accept ItemClass Items
-    ItemClass: TBaseSkinItemClass;
-    //
-    ShowOnlyInMenu: Boolean;
-    constructor Create(const AItemClass: TBaseSkinItemClass;
-                      const AShowOnlyInMenu: Boolean = False);
-  end;
-
 
   TfrmSkinItemsPropertyEditor = class(TFmxDesignWindow,
                                        IFreeNotification)

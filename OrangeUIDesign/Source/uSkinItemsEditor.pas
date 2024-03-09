@@ -16,21 +16,21 @@ uses
 //  VCL_SkinItemsPropertyeditorForm,
 //  {$ENDIF}
 
-  {$IF CompilerVersion >= 30.0}
-//    {$IFDEF FMX}
-        FMX.Forms,
-        FMX.Dialogs,
-        FMX_XE_SkinItemsPropertyeditorForm,
-        FMX.Types,
-        uSkinItemJsonHelper,
-//    {$ELSE}
+//  {$IF CompilerVersion >= 30.0}
+////    {$IFDEF FMX}
+//        FMX.Forms,
+//        FMX.Dialogs,
+//        FMX_XE_SkinItemsPropertyeditorForm,
+//        FMX.Types,
+//        uSkinItemJsonHelper,
+////    {$ELSE}
+////    Dialogs,
+////    VCL_SkinItemsPropertyeditorForm,
+////    {$ENDIF}
+//  {$ELSE}
 //    Dialogs,
 //    VCL_SkinItemsPropertyeditorForm,
-//    {$ENDIF}
-  {$ELSE}
-    Dialogs,
-    VCL_SkinItemsPropertyeditorForm,
-  {$IFEND}
+//  {$IFEND}
 
   ColnEdit,
   DesignEditors,
@@ -62,6 +62,17 @@ const
 
 
 type
+  TItemClassDesc = record
+    //所添加的列表项类
+    // Can accept ItemClass Items
+    ItemClass: TBaseSkinItemClass;
+    //
+    ShowOnlyInMenu: Boolean;
+    constructor Create(const AItemClass: TBaseSkinItemClass;
+                      const AShowOnlyInMenu: Boolean = False);
+  end;
+
+
   TItemsEditor = class(TSkinControlComponentEditor)
   protected
     FAllowChild: Boolean;
@@ -151,26 +162,26 @@ type
 
 
 
-
-  //列表项编译器
-  TSkinItemsProperty = class(TPropertyEditor)
-  protected
-    FAllowChild: Boolean;
-    FItemsClasses: array of TItemClassDesc;
-  public
-    procedure Edit; override;
-    function GetAttributes: TPropertyAttributes; override;
-    function GetValue: string; override;
-    procedure SetValue(const Value: string); override;
-  end;
-
-
-
-
-  TVirtualChartSeriesDataItemsProperty = class(TSkinItemsProperty)
-  public
-    constructor Create(const ADesigner: IDesigner; APropCount: Integer); override;
-  end;
+  //改成TCollection继承,不再需要它
+//  //列表项编译器
+//  TSkinItemsProperty = class(TPropertyEditor)
+//  protected
+//    FAllowChild: Boolean;
+//    FItemsClasses: array of TItemClassDesc;
+//  public
+//    procedure Edit; override;
+//    function GetAttributes: TPropertyAttributes; override;
+//    function GetValue: string; override;
+//    procedure SetValue(const Value: string); override;
+//  end;
+//
+//
+//
+//
+//  TVirtualChartSeriesDataItemsProperty = class(TSkinItemsProperty)
+//  public
+//    constructor Create(const ADesigner: IDesigner; APropCount: Integer); override;
+//  end;
 
 
 
@@ -227,12 +238,12 @@ uses
 
 procedure Register;
 begin
-  RegisterPropertyEditor(TypeInfo(TVirtualChartSeriesDataItems),
-                          //父属性
-                          TVirtualChartSeries,
-                          //属性名称
-                          'DataItems',
-                          TVirtualChartSeriesDataItemsProperty);
+//  RegisterPropertyEditor(TypeInfo(TVirtualChartSeriesDataItems),
+//                          //父属性
+//                          TVirtualChartSeries,
+//                          //属性名称
+//                          'DataItems',
+//                          TVirtualChartSeriesDataItemsProperty);
   RegisterComponentEditor(TSkinVirtualChart,TVirtualChartEditor);
 
 
@@ -371,27 +382,31 @@ begin
 
   if (Index-(Inherited GetVerbCount)) = EDITOR_OPEN_DESIGNER then
   begin
+    ShowCollectionEditor(Designer,
+                          Self.Component,
+                          TSkinVirtualGrid(Component).Prop.Items,
+                          'Items');
 
-      if Assigned(frmSkinItemsPropertyEditor) then
-      begin
-        FreeAndNil(frmSkinItemsPropertyEditor);
-      end;
-
-
-      frmSkinItemsPropertyEditor := TfrmSkinItemsPropertyEditor.Create(nil);
-      if Supports(Component, ISkinItems, SkinItemsIntf) then
-      begin
-
-        frmSkinItemsPropertyEditor.btnAddChild.Visible := FAllowChild;
-        frmSkinItemsPropertyEditor.Designer := Designer;
-        frmSkinItemsPropertyEditor.SetItemClasses(SkinItemsIntf.Items, FItemsClasses);
-        frmSkinItemsPropertyEditor.Show;
-
-      end
-      else
-      begin
-        ShowMessage('Not Support ISkinItems interface');
-      end;
+//      if Assigned(frmSkinItemsPropertyEditor) then
+//      begin
+//        FreeAndNil(frmSkinItemsPropertyEditor);
+//      end;
+//
+//
+//      frmSkinItemsPropertyEditor := TfrmSkinItemsPropertyEditor.Create(nil);
+//      if Supports(Component, ISkinItems, SkinItemsIntf) then
+//      begin
+//
+//        frmSkinItemsPropertyEditor.btnAddChild.Visible := FAllowChild;
+//        frmSkinItemsPropertyEditor.Designer := Designer;
+//        frmSkinItemsPropertyEditor.SetItemClasses(SkinItemsIntf.Items, FItemsClasses);
+//        frmSkinItemsPropertyEditor.Show;
+//
+//      end
+//      else
+//      begin
+//        ShowMessage('Not Support ISkinItems interface');
+//      end;
 
   end;
 
@@ -526,19 +541,24 @@ begin
   begin
 
       //打开坐标刻度列表项编辑器
-      if Assigned(frmSkinItemsPropertyEditor) then
-      begin
-        FreeAndNil(frmSkinItemsPropertyEditor);
-      end;
+//      if Assigned(frmSkinItemsPropertyEditor) then
+//      begin
+//        FreeAndNil(frmSkinItemsPropertyEditor);
+//      end;
+//
+//
+//      frmSkinItemsPropertyEditor := TfrmSkinItemsPropertyEditor.Create(nil);
+//      frmSkinItemsPropertyEditor.Caption := Langs_ChartAxisItemsEditor[LangKind];
+//
+//      frmSkinItemsPropertyEditor.btnAddChild.Visible := FAllowChild;
+//      frmSkinItemsPropertyEditor.Designer := Designer;
+//      frmSkinItemsPropertyEditor.SetItemClasses(TSkinVirtualChart(Component).Prop.AxisItems, FItemsClasses);
+//      frmSkinItemsPropertyEditor.Show;
 
-
-      frmSkinItemsPropertyEditor := TfrmSkinItemsPropertyEditor.Create(nil);
-      frmSkinItemsPropertyEditor.Caption := Langs_ChartAxisItemsEditor[LangKind];
-
-      frmSkinItemsPropertyEditor.btnAddChild.Visible := FAllowChild;
-      frmSkinItemsPropertyEditor.Designer := Designer;
-      frmSkinItemsPropertyEditor.SetItemClasses(TSkinVirtualChart(Component).Prop.AxisItems, FItemsClasses);
-      frmSkinItemsPropertyEditor.Show;
+    ShowCollectionEditor(Designer,
+                          Self.Component,
+                          TSkinVirtualChart(Component).Prop.AxisItems,
+                          'AxisItems');
 
   end;
 
@@ -556,24 +576,28 @@ begin
   if (Index-(Inherited GetVerbCount)) = EDITOR_OPEN_CHART_FIRST_SERIES_DATAITEM_DESIGNER then
   begin
 
-      if Assigned(frmSkinItemsPropertyEditor) then
-      begin
-        FreeAndNil(frmSkinItemsPropertyEditor);
-      end;
+//      if Assigned(frmSkinItemsPropertyEditor) then
+//      begin
+//        FreeAndNil(frmSkinItemsPropertyEditor);
+//      end;
 
       if TSkinVirtualChart(Component).Prop.SeriesList.Count>0 then
       begin
-        SetLength(AItemsClasses, 1);
-        AItemsClasses[0] := TItemClassDesc.Create(TVirtualChartSeriesDataItem);
+//        SetLength(AItemsClasses, 1);
+//        AItemsClasses[0] := TItemClassDesc.Create(TVirtualChartSeriesDataItem);
+//
+//        frmSkinItemsPropertyEditor := TfrmSkinItemsPropertyEditor.Create(nil);
+//        frmSkinItemsPropertyEditor.Caption := Langs_ChartFirstSeriesDataItemsEditor[LangKind];
+//
+//        frmSkinItemsPropertyEditor.btnAddChild.Visible := FAllowChild;
+//        frmSkinItemsPropertyEditor.Designer := Designer;
+//        frmSkinItemsPropertyEditor.SetItemClasses(TSkinVirtualChart(Component).Prop.SeriesList[0].DataItems, AItemsClasses);
+//        frmSkinItemsPropertyEditor.Show;
 
-        frmSkinItemsPropertyEditor := TfrmSkinItemsPropertyEditor.Create(nil);
-        frmSkinItemsPropertyEditor.Caption := Langs_ChartFirstSeriesDataItemsEditor[LangKind];
-
-        frmSkinItemsPropertyEditor.btnAddChild.Visible := FAllowChild;
-        frmSkinItemsPropertyEditor.Designer := Designer;
-        frmSkinItemsPropertyEditor.SetItemClasses(TSkinVirtualChart(Component).Prop.SeriesList[0].DataItems, AItemsClasses);
-        frmSkinItemsPropertyEditor.Show;
-
+        ShowCollectionEditor(Designer,
+                              Self.Component,
+                              TSkinVirtualChart(Component).Prop.SeriesList[0].DataItems,
+                              'First Series DataItems');
       end;
 
   end;
@@ -689,7 +713,7 @@ begin
   FAllowChild := False;
   SetLength(FItemsClasses, 2);
   FItemsClasses[0] := TItemClassDesc.Create(TSkinListBoxItem);
-  FItemsClasses[1] := TItemClassDesc.Create({$IF CompilerVersion >= 30.0}TJsonSkinItem{$ELSE}TSkinListBoxItem{$IFEND});
+  FItemsClasses[1] := TItemClassDesc.Create(TSkinListBoxItem);
 end;
 
 { TListViewEditor }
@@ -704,7 +728,7 @@ begin
   //开源版没有ListView,TreeView,Grid
   {$ELSE}
   FItemsClasses[0] := TItemClassDesc.Create(TRealSkinItem);
-  FItemsClasses[1] := TItemClassDesc.Create({$IF CompilerVersion >= 30.0}TJsonSkinItem{$ELSE}TRealSkinItem{$IFEND});
+  FItemsClasses[1] := TItemClassDesc.Create(TRealSkinItem);
   {$ENDIF}
 end;
 
@@ -767,7 +791,7 @@ begin
     ShowCollectionEditor(Designer,
                           Self.Component,
                           TSkinVirtualGrid(Component).Prop.Columns,
-                          '表格列');
+                          'Columns');
     {$ENDIF}
   end;
 end;
@@ -841,74 +865,85 @@ begin
 
 end;
 
-{ TSkinItemsProperty }
-
-
-procedure TSkinItemsProperty.Edit;
+//{ TSkinItemsProperty }
+//
+//
+//procedure TSkinItemsProperty.Edit;
+////var
+////  ASkinPictureList:TSkinPictureList;
+////  PictureEditor: TSkinPictureListEditorPopupForm;
+//begin
+//
+////      frmSkinItemsPropertyEditor := TfrmSkinItemsPropertyEditor.Create(nil);
+//////      if Supports(Component, ISkinItems, SkinItemsIntf) then
+//////      begin
+////
+////        frmSkinItemsPropertyEditor.btnAddChild.Visible := FAllowChild;
+////        frmSkinItemsPropertyEditor.Designer := Designer;
+////        frmSkinItemsPropertyEditor.SetItemClasses(TSkinItems(Pointer(GetOrdValue)), FItemsClasses);
+////        frmSkinItemsPropertyEditor.Show;
+//
+////  PictureEditor := TSkinPictureListEditorPopupForm.Create(nil);
+////  try
+////    ASkinPictureList:=TSkinPictureList(Pointer(GetOrdValue));
+////    PictureEditor.FPicDlg.PictureList:=ASkinPictureList;
+////    if PictureEditor.Execute then
+////    begin
+////      SetOrdValue(Longint(PictureEditor.FPicDlg.PictureList));
+////    end;
+////  finally
+////    PictureEditor.Free;
+////  end;
+//end;
+//
+//function TSkinItemsProperty.GetAttributes: TPropertyAttributes;
+//begin
+//  Result := [paDialog, paReadOnly];
+//end;
+//
+//function TSkinItemsProperty.GetValue: string;
 //var
-//  ASkinPictureList:TSkinPictureList;
-//  PictureEditor: TSkinPictureListEditorPopupForm;
-begin
-
-      frmSkinItemsPropertyEditor := TfrmSkinItemsPropertyEditor.Create(nil);
-//      if Supports(Component, ISkinItems, SkinItemsIntf) then
-//      begin
-
-        frmSkinItemsPropertyEditor.btnAddChild.Visible := FAllowChild;
-        frmSkinItemsPropertyEditor.Designer := Designer;
-        frmSkinItemsPropertyEditor.SetItemClasses(TSkinItems(Pointer(GetOrdValue)), FItemsClasses);
-        frmSkinItemsPropertyEditor.Show;
-
-//  PictureEditor := TSkinPictureListEditorPopupForm.Create(nil);
-//  try
-//    ASkinPictureList:=TSkinPictureList(Pointer(GetOrdValue));
-//    PictureEditor.FPicDlg.PictureList:=ASkinPictureList;
-//    if PictureEditor.Execute then
-//    begin
-//      SetOrdValue(Longint(PictureEditor.FPicDlg.PictureList));
-//    end;
-//  finally
-//    PictureEditor.Free;
+//  ASkinItems: TSkinItems;
+//begin
+//  ASkinItems := TSkinItems(GetOrdValue);
+//  Result:=Format(Langs_SkinItemsCount[LangKind],[ASkinItems.Count]);
+//end;
+//
+//procedure TSkinItemsProperty.SetValue(const Value: string);
+//begin
+//  if Value = '' then
+//  begin
+//    SetOrdValue(0);
 //  end;
-end;
+//end;
+//
+//
+//
+//{ TVirtualChartSeriesDataItemsProperty }
+//
+//{ TVirtualChartSeriesDataItemsProperty }
+//
+//constructor TVirtualChartSeriesDataItemsProperty.Create(
+//  const ADesigner: IDesigner; APropCount: Integer);
+//begin
+//  inherited;
+//
+//  FAllowChild := False;
+//  SetLength(FItemsClasses, 1);
+//  FItemsClasses[0] := TItemClassDesc.Create(TVirtualChartSeriesDataItem);
+//
+//
+//end;
 
-function TSkinItemsProperty.GetAttributes: TPropertyAttributes;
+{ TItemClassDesc }
+
+constructor TItemClassDesc.Create(
+                  const AItemClass: TBaseSkinItemClass;
+                  const AShowOnlyInMenu: Boolean);
 begin
-  Result := [paDialog, paReadOnly];
+  Self.ItemClass := AItemClass;
+  Self.ShowOnlyInMenu := AShowOnlyInMenu;
 end;
 
-function TSkinItemsProperty.GetValue: string;
-var
-  ASkinItems: TSkinItems;
-begin
-  ASkinItems := TSkinItems(GetOrdValue);
-  Result:=Format(Langs_SkinItemsCount[LangKind],[ASkinItems.Count]);
-end;
-
-procedure TSkinItemsProperty.SetValue(const Value: string);
-begin
-  if Value = '' then
-  begin
-    SetOrdValue(0);
-  end;
-end;
-
-
-
-{ TVirtualChartSeriesDataItemsProperty }
-
-{ TVirtualChartSeriesDataItemsProperty }
-
-constructor TVirtualChartSeriesDataItemsProperty.Create(
-  const ADesigner: IDesigner; APropCount: Integer);
-begin
-  inherited;
-
-  FAllowChild := False;
-  SetLength(FItemsClasses, 1);
-  FItemsClasses[0] := TItemClassDesc.Create(TVirtualChartSeriesDataItem);
-
-
-end;
 
 end.

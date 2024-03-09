@@ -123,11 +123,11 @@ uses
 type
   //控件类型属性编辑器,取出该控件所支持的所有类型,
   //比如Default,Color等
-  TComponentTypeNameProperty = class(TStringProperty)
-  public
-    function GetAttributes: TPropertyAttributes; override;
-    procedure GetValues(Proc: TGetStrProc); override;
-  end;
+//  TComponentTypeNameProperty = class(TStringProperty)
+//  public
+//    function GetAttributes: TPropertyAttributes; override;
+//    procedure GetValues(Proc: TGetStrProc); override;
+//  end;
 
 
 
@@ -625,9 +625,9 @@ begin
   Proc('ItemTag1');
   Proc('ItemExpanded');
 
-  //表格才能使用
-  Proc('GridCellValue');
-  Proc('GridCellValue1');
+//  //表格才能使用
+//  Proc('GridCellValue');
+//  Proc('GridCellValue1');
 
 end;
 
@@ -1026,71 +1026,71 @@ begin
   end;
 end;
 
-{ TComponentTypeNameProperty }
-
-function TComponentTypeNameProperty.GetAttributes: TPropertyAttributes;
-begin
-  //值列表
-  Result := [paValueList];
-end;
-
-procedure TComponentTypeNameProperty.GetValues(Proc: TGetStrProc);
-var
-  I: Integer;
-  ASkinComponentIntf:ISkinControl;
-  AControlClassifyRegIndex:Integer;
-  AControlClassifyReg:TControlClassifyReg;
-  {$IFNDEF FPC}
-  List: IDesignerSelections;
-  {$ENDIF}
-begin
-  //把每个控件类型的可以ComponentType列出来
-  //皮肤组件接口
-  { #todo : 需要处理 }
-  {$IFNDEF FPC}
-
-  List := CreateSelectionList;
-  if Designer<>nil then
-  begin
-    Designer.GetSelections(List);
-  end;
-  if (List.Count = 0) then
-  begin
-    inherited GetValues(Proc);
-    Exit;
-  end;
-  if (List.Count > 1) then
-  begin
-    inherited GetValues(Proc);
-    Exit;
-  end;
-
-
-
-  if List[0].GetInterface(IID_ISkinControl,ASkinComponentIntf) then
-  begin
-    AControlClassifyRegIndex:=GlobalControlTypeRegManager.FindControlClassifyRegIndex(
-                                ASkinComponentIntf.Properties.GetComponentClassify
-                                );
-    if AControlClassifyRegIndex<>-1 then
-    begin
-      AControlClassifyReg:=GlobalControlTypeRegManager.ControlClassifyRegList[AControlClassifyRegIndex];
-      for I := 0 to AControlClassifyReg.ControlTypeRegList.Count-1 do
-      begin
-        Proc(AControlClassifyReg.ControlTypeRegList[I].ControlTypeName);
-      end;
-    end;
-  end
-  else
-  begin
-    inherited GetValues(Proc);
-  end;
-  {$ENDIF}
-
-  {$IFDEF FPC}
-  inherited GetValues(Proc);
-  {$ENDIF}
-end;
+//{ TComponentTypeNameProperty }
+//
+//function TComponentTypeNameProperty.GetAttributes: TPropertyAttributes;
+//begin
+//  //值列表
+//  Result := [paValueList];
+//end;
+//
+//procedure TComponentTypeNameProperty.GetValues(Proc: TGetStrProc);
+//var
+//  I: Integer;
+//  ASkinComponentIntf:ISkinControl;
+//  AControlClassifyRegIndex:Integer;
+//  AControlClassifyReg:TControlClassifyReg;
+//  {$IFNDEF FPC}
+//  List: IDesignerSelections;
+//  {$ENDIF}
+//begin
+//  //把每个控件类型的可以ComponentType列出来
+//  //皮肤组件接口
+//  { #todo : 需要处理 }
+//  {$IFNDEF FPC}
+//
+//  List := CreateSelectionList;
+//  if Designer<>nil then
+//  begin
+//    Designer.GetSelections(List);
+//  end;
+//  if (List.Count = 0) then
+//  begin
+//    inherited GetValues(Proc);
+//    Exit;
+//  end;
+//  if (List.Count > 1) then
+//  begin
+//    inherited GetValues(Proc);
+//    Exit;
+//  end;
+//
+//
+//
+//  if List[0].GetInterface(IID_ISkinControl,ASkinComponentIntf) then
+//  begin
+//    AControlClassifyRegIndex:=GlobalControlTypeRegManager.FindControlClassifyRegIndex(
+//                                ASkinComponentIntf.Properties.GetComponentClassify
+//                                );
+//    if AControlClassifyRegIndex<>-1 then
+//    begin
+//      AControlClassifyReg:=GlobalControlTypeRegManager.ControlClassifyRegList[AControlClassifyRegIndex];
+//      for I := 0 to AControlClassifyReg.ControlTypeRegList.Count-1 do
+//      begin
+//        Proc(AControlClassifyReg.ControlTypeRegList[I].ControlTypeName);
+//      end;
+//    end;
+//  end
+//  else
+//  begin
+//    inherited GetValues(Proc);
+//  end;
+//  {$ENDIF}
+//
+//  {$IFDEF FPC}
+//  inherited GetValues(Proc);
+//  {$ENDIF}
+//end;
 
 //{ TMaterialNameProperty }
 //
@@ -1562,35 +1562,35 @@ begin
       end;
 
 
-      {$IFDEF MY_PROGRAM_DESIGNER}
-      //如果是在页面设计器中
-      APageDesignPanel:=TPageDesignPanel(GetParentByControlClass(TChildControl(List[0]),TPageDesignPanel));
-      if APageDesignPanel<>nil then
-      begin
-        //加入接口1的字段,默认的字段,不用加前缀
-        for I := 0 to APageDesignPanel.DataInterface.FieldNameList.Count-1 do
-        begin
-          Proc(APageDesignPanel.DataInterface.FieldNameList[I]);
-        end;
-
-        //接口1,加前缀
-        for I := 0 to APageDesignPanel.DataInterface.FieldNameList.Count-1 do
-        begin
-          Proc('$data_intf.'+APageDesignPanel.DataInterface.FieldNameList[I]);
-        end;
-
-        //接口2,加前缀
-        for I := 0 to APageDesignPanel.DataInterface2.FieldNameList.Count-1 do
-        begin
-          Proc('$data_intf2.'+APageDesignPanel.DataInterface2.FieldNameList[I]);
-        end;
-
-
-        //本地数据源的
-        //$local_data_source
-
-      end;
-      {$ENDIF MY_PROGRAM_DESIGNER}
+//      {$IFDEF MY_PROGRAM_DESIGNER}
+//      //如果是在页面设计器中
+//      APageDesignPanel:=TPageDesignPanel(GetParentByControlClass(TChildControl(List[0]),TPageDesignPanel));
+//      if APageDesignPanel<>nil then
+//      begin
+//        //加入接口1的字段,默认的字段,不用加前缀
+//        for I := 0 to APageDesignPanel.DataInterface.FieldNameList.Count-1 do
+//        begin
+//          Proc(APageDesignPanel.DataInterface.FieldNameList[I]);
+//        end;
+//
+//        //接口1,加前缀
+//        for I := 0 to APageDesignPanel.DataInterface.FieldNameList.Count-1 do
+//        begin
+//          Proc('$data_intf.'+APageDesignPanel.DataInterface.FieldNameList[I]);
+//        end;
+//
+//        //接口2,加前缀
+//        for I := 0 to APageDesignPanel.DataInterface2.FieldNameList.Count-1 do
+//        begin
+//          Proc('$data_intf2.'+APageDesignPanel.DataInterface2.FieldNameList[I]);
+//        end;
+//
+//
+//        //本地数据源的
+//        //$local_data_source
+//
+//      end;
+//      {$ENDIF MY_PROGRAM_DESIGNER}
 
 
   end;
@@ -1599,10 +1599,10 @@ begin
 
 
 
-    { #todo : 需要处理 }
-    {$IFDEF FPC}
-    inherited GetValues(Proc);
-    {$ENDIF}
+  { #todo : 需要处理 }
+  {$IFDEF FPC}
+  inherited GetValues(Proc);
+  {$ENDIF}
 
 
 end;

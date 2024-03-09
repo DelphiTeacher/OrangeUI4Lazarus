@@ -538,6 +538,8 @@ type
     FItemDesignerPanelInvalidateLink: TSkinObjectChangeLink;
 
 
+    //固定的列表项个数
+    FFixedItems:Integer;
 
     //居中项位置调整滚动器
     FAdjustCenterItemPositionAnimator:TSkinAnimator;
@@ -1329,7 +1331,11 @@ type
     property EmptyContentCaption:String read FEmptyContentCaption write SetEmptyContentCaption;
     property EmptyContentDescription:String read FEmptyContentDescription write SetEmptyContentDescription;
 
+
+    //停止编辑的模式,自动还是手动
     property StopEditingItemMode:TStopEditingItemMode read FStopEditingItemMode write FStopEditingItemMode;
+
+    property FixedItems:Integer read FFixedItems write FFixedItems;
   end;
 
 
@@ -5569,6 +5575,7 @@ begin
 
 
 
+  //用来干嘛？
   CustomPaintContentBegin(ACanvas,ASkinMaterial,ADrawRect,APaintData);
 
 
@@ -5634,35 +5641,35 @@ begin
       if Self.FSkinCustomListIntf.Prop.FListLayoutsManager.GetVisibleItemsCount>0 then
       begin
 
-        if Self.FSkinCustomListIntf.Prop.FEmptyContentControl<>nil then
-        begin
-          if Self.FSkinCustomListIntf.Prop.FEmptyContentControl.Visible then
+          if Self.FSkinCustomListIntf.Prop.FEmptyContentControl<>nil then
           begin
-            Self.FSkinCustomListIntf.Prop.FEmptyContentControl.Visible:=False;
+            if Self.FSkinCustomListIntf.Prop.FEmptyContentControl.Visible then
+            begin
+              Self.FSkinCustomListIntf.Prop.FEmptyContentControl.Visible:=False;
+            end;
           end;
-        end;
 
 
 
-        //绘制列表
-        PaintItems(ACanvas,
-                    ASkinMaterial,
-                    ADrawRect,
-                    AControlClientRect,
+          //绘制列表
+          PaintItems(ACanvas,
+                      ASkinMaterial,
+                      ADrawRect,
+                      AControlClientRect,
 
-                    FDrawRectCenterItemSelectModeTopOffset,
-                    FDrawRectCenterItemSelectModeLeftOffset,
+                      FDrawRectCenterItemSelectModeTopOffset,
+                      FDrawRectCenterItemSelectModeLeftOffset,
 
-                    FDrawRectTopOffset,
-                    FDrawRectLeftOffset,
-                    FDrawRectRightOffset,
-                    FDrawRectBottomOffset,
+                      FDrawRectTopOffset,
+                      FDrawRectLeftOffset,
+                      FDrawRectRightOffset,
+                      FDrawRectBottomOffset,
 
-                    FDrawStartIndex,
-                    FDrawEndIndex,
+                      FDrawStartIndex,
+                      FDrawEndIndex,
 
-                    APaintData
-                    );
+                      APaintData
+                      );
 
 
       end
@@ -5791,6 +5798,30 @@ begin
       MarkAllListItemTypeStyleSettingCacheUnUsed(ADrawStartIndex,ADrawEndIndex);
 
 
+      //绘制固定项
+      for I := 0 to Self.FSkinCustomListIntf.Prop.FFixedItems-1 do
+      begin
+          AItem:=Self.FSkinCustomListIntf.Prop.FListLayoutsManager.GetVisibleItems(I);
+          //ItemRect是已经计算好的
+          AItemDrawRect:=AItem.ItemRect;
+          AItem.ItemDrawRect:=AItemDrawRect;
+
+
+          //算上绘制矩形偏移
+          OffsetRectF(AItemDrawRect,ADrawRect.Left,ADrawRect.Top);
+
+
+          //绘制列表项
+          PaintItem(ACanvas,
+                    I,
+                    AItem,
+                    AItemDrawRect,
+                    ASkinCustomListMaterial,
+                    ADrawRect,
+                    APaintData);
+
+
+      end;
 
 
       //开始绘制每个Item
@@ -5802,7 +5833,8 @@ begin
 //
 //          BeginTickCount:=UIGetTickCount;
 
-
+          if I<Self.FSkinCustomListIntf.Prop.FFixedItems then Continue;
+          
           AItem:=Self.FSkinCustomListIntf.Prop.FListLayoutsManager.GetVisibleItems(I);
 
 
@@ -6469,13 +6501,6 @@ begin
 
     end;
 
-
-    //可拖动改变尺寸的时候，是不能拖拽Item的
-    if (AResizingItem=nil) and (TProtectedControl(Self.FSkinCustomListIntf.Prop.FSkinControl).DragMode=dmManual) and (Self.FSkinCustomListIntf.Prop.FEnableAutoDragDropItem) then
-    begin
-      Self.FSkinCustomListIntf.Prop.StartDragItem;
-    end;
-
 end;
 
 procedure TSkinCustomListDefaultType.CustomMouseEnter;
@@ -6690,6 +6715,17 @@ begin
 
       end;
 
+  end;
+
+
+  //可拖动改变尺寸的时候，是不能拖拽Item的
+  if (not Self.FSkinCustomListIntf.Prop.FIsInResizeArea)
+    and (Self.FSkinCustomListIntf.Prop.MouseDownItem<>nil)
+    and (TProtectedControl(Self.FSkinCustomListIntf.Prop.FSkinControl).DragMode=dmManual)
+    and (GetDis(PointF(X,Y),FMouseDownPt)>5)
+    and (Self.FSkinCustomListIntf.Prop.FEnableAutoDragDropItem) then
+  begin
+    Self.FSkinCustomListIntf.Prop.StartDragItem;
   end;
 
 

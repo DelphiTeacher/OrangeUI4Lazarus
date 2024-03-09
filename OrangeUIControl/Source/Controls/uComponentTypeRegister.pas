@@ -60,6 +60,7 @@ uses
 //  uSkinDirectUIParentType,
   uSkinImageType,
   uSkinFrameImageType,
+  uSkinRepeatImageType,
   uSkinRoundImageType,
   uSkinImageListPlayerType,
   uSkinImageListViewerType,
@@ -337,6 +338,7 @@ begin
 //  {$ENDIF}
 
   RegisterComponents('OrangeUIConrol',[TSkinImage]);
+  RegisterComponents('OrangeUIConrol',[TSkinRepeatImage]);
   RegisterComponents('OrangeUIConrol',[TSkinFrameImage]);
   RegisterComponents('OrangeUIConrol',[TSkinRoundImage]);
   //RegisterComponents('OrangeUIConrol',[TSkinRoundRect]);

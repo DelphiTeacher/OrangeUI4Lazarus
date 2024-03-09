@@ -47,8 +47,13 @@ uses
   DashBoard_LineChart_WeekSummaryFrame in 'DashBoard_LineChart_WeekSummaryFrame.pas' {FrameLineChart_WeekSummary: TFrame},
   OrderGridFrame in 'OrderGridFrame.pas' {FrameOrderGrid: TFrame},
   uSkinItemJsonHelper in '..\..\OrangeProjectCommon\uSkinItemJsonHelper.pas',
-  EditJsonItemGridFrame in 'EditJsonItemGridFrame.pas' {FrameEditJsonItemGrid: TFrame},
-  ItemGrid_ColumnControlTypeFrame in 'ItemGrid_ColumnControlTypeFrame.pas' {FrameItemGrid_ColumnControlType: TFrame};
+  ItemGrid_JsonItemEditFrame in 'ItemGrid_JsonItemEditFrame.pas' {FrameEditJsonItemGrid: TFrame},
+  ItemGrid_ColumnControlTypeFrame in 'ItemGrid_ColumnControlTypeFrame.pas' {FrameItemGrid_ColumnControlType: TFrame},
+  ItemGrid_DefaultFrame in 'ItemGrid_DefaultFrame.pas' {FrameDefaultItemGrid: TFrame},
+  ItemGrid_FixedColsFrame in 'ItemGrid_FixedColsFrame.pas' {FrameFixedColsItemGrid: TFrame},
+  ComboBoxFrame in 'ComboBoxFrame.pas' {FrameComboBox: TFrame},
+  ItemGrid_ContentFrame in 'ItemGrid_ContentFrame.pas' {FrameContentItemGrid: TFrame},
+  ListItemStyle_Caption_CheckBoxRight_Selected in '..\..\OrangeProjectCommon\OrangeUIStyles_VCL\ListItemStyle_Caption_CheckBoxRight_Selected.pas';
 
 {$R *.res}
 var

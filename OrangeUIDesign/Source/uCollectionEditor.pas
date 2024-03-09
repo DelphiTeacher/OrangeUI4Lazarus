@@ -54,6 +54,7 @@ type
   //TCollectionProperty=TCollectionPropertyEditor;
   //{$ENDIF}
 
+
   //表格列编辑器
   TSkinVirtualGridColumnsProperty = class(TCollectionProperty)
   public
@@ -64,8 +65,10 @@ type
 
 
 
+
+
   //双击DBGrid可以编辑列
-  TSkinDBGridEditor = class(TDefaultEditor)
+  TSkinDBGridEditor = class(TSkinControlComponentEditor)
   public
     procedure Edit; override;
   end;
@@ -438,5 +441,22 @@ begin
                       'Items');
 
 end;
+
+//{ TSkinVirtualGridEditor }
+//
+//function TSkinVirtualGridEditor.GetVerb(Index: Integer): string;
+//begin
+//  Result:=Inherited GetVerb(Index);
+//  if Index=(Inherited GetVerbCount)+0 then
+//  begin
+//    Result := Langs_GridColumnsEditor[LangKind];
+//  end;
+//end;
+//
+//function TSkinVirtualGridEditor.GetVerbCount: Integer;
+//begin
+//  Result := (Inherited GetVerbCount)+1;
+//
+//end;
 
 end.

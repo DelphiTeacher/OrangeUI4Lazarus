@@ -355,13 +355,18 @@ type
     FItemFieldValue:Variant;
     //多少Item启动了动画
     ItemAnimateRefCount:Integer;
+    //指定图片的链接或者下标
     procedure BindingItemText(const AName:String;const AText:String;ASkinItem:TObject;AIsDrawItemInteractiveState:Boolean);
+    //指定图片的下标
     procedure BindingItemBool(ABool:Boolean;AIsDrawItemInteractiveState:Boolean);
+    //绑定图片
     procedure BindingItemIcon(AIcon:TBaseDrawPicture;AImageList:TObject;AImageIndex:Integer;ARefPicture:TSkinPicture;AIsDrawItemInteractiveState:Boolean);
+    //指定图片的链接或者下标
     procedure SetControlValueByBindItemField(const AFieldName:String;
                                               const AFieldValue:Variant;
                                               ASkinItem:TObject;
                                               AIsDrawItemInteractiveState:Boolean);
+    //绑定图片
     procedure SetControlObjectByBindItemField(const AFieldName:String;
                                               const AFieldValue:TObject;
                                               ASkinItem:TObject;

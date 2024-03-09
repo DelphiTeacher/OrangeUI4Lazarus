@@ -32,22 +32,22 @@ uses
 type
   TfrmDrawPicturePropertyEditor = class(TForm)
     ScrollBox1: TScrollBox;
-    Button1: TButton;
+    btnOpen: TButton;
     btnSave: TButton;
     btnOk: TButton;
-    Button2: TButton;
-    Button4: TButton;
+    btnCancel: TButton;
+    btnClear: TButton;
     SaveDialog1: TSavePictureDialog;
     PaintBox1: TPaintBox;
-    procedure Button1Click(Sender: TObject);
+    procedure btnOpenClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
     procedure btnOkClick(Sender: TObject);
-    procedure Button2Click(Sender: TObject);
+    procedure btnCancelClick(Sender: TObject);
     procedure btnSaveClick(Sender: TObject);
     procedure sbRowCountChange(Sender: TObject);
     procedure sbColCountChange(Sender: TObject);
-    procedure Button4Click(Sender: TObject);
+    procedure btnClearClick(Sender: TObject);
     procedure PaintBox1Paint(Sender: TObject);
   private
     { Private declarations }
@@ -125,7 +125,7 @@ begin
 
 end;
 
-procedure TfrmDrawPicturePropertyEditor.Button1Click(Sender: TObject);
+procedure TfrmDrawPicturePropertyEditor.btnOpenClick(Sender: TObject);
 var
   D: TOpenDialog;
 begin
@@ -205,12 +205,12 @@ begin
   ModalResult := mrOk;
 end;
 
-procedure TfrmDrawPicturePropertyEditor.Button2Click(Sender: TObject);
+procedure TfrmDrawPicturePropertyEditor.btnCancelClick(Sender: TObject);
 begin
   ModalResult:=mrCancel;
 end;
 
-procedure TfrmDrawPicturePropertyEditor.Button4Click(Sender: TObject);
+procedure TfrmDrawPicturePropertyEditor.btnClearClick(Sender: TObject);
 begin
   Self.FDrawPicture.Clear;
   //ModalResult := mrOk;

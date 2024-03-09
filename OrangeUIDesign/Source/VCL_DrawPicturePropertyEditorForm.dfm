@@ -1,7 +1,7 @@
 object frmDrawPicturePropertyEditor: TfrmDrawPicturePropertyEditor
   Left = 0
   Top = 0
-  Caption = #37733#21095#22678#32514#26668#32235#37731'?'
+  Caption = 'Draw Picture Editor'
   ClientHeight = 513
   ClientWidth = 933
   Color = clBtnFace
@@ -33,15 +33,15 @@ object frmDrawPicturePropertyEditor: TfrmDrawPicturePropertyEditor
       OnPaint = PaintBox1Paint
     end
   end
-  object Button1: TButton
+  object btnOpen: TButton
     Left = 833
     Top = 23
     Width = 100
     Height = 25
     Anchors = [akTop, akRight]
-    Caption = #37813#25779#32017'...'
+    Caption = 'Open...'
     TabOrder = 1
-    OnClick = Button1Click
+    OnClick = btnOpenClick
   end
   object btnSave: TButton
     Left = 833
@@ -49,7 +49,7 @@ object frmDrawPicturePropertyEditor: TfrmDrawPicturePropertyEditor
     Width = 100
     Height = 25
     Anchors = [akTop, akRight]
-    Caption = #37721#65088#29928#28051'?..'
+    Caption = 'Save as...'
     TabOrder = 2
     OnClick = btnSaveClick
   end
@@ -59,29 +59,29 @@ object frmDrawPicturePropertyEditor: TfrmDrawPicturePropertyEditor
     Width = 100
     Height = 25
     Anchors = [akTop, akRight]
-    Caption = #32429#57788#30078
+    Caption = 'OK'
     TabOrder = 3
     OnClick = btnOkClick
   end
-  object Button2: TButton
+  object btnCancel: TButton
     Left = 833
     Top = 128
     Width = 100
     Height = 25
     Anchors = [akTop, akRight]
-    Caption = #37721#26664#31223
+    Caption = 'Cancel'
     TabOrder = 4
-    OnClick = Button2Click
+    OnClick = btnCancelClick
   end
-  object Button4: TButton
+  object btnClear: TButton
     Left = 833
     Top = 192
     Width = 100
     Height = 25
     Anchors = [akTop, akRight]
-    Caption = #23059#21620#27342
+    Caption = 'Clear'
     TabOrder = 5
-    OnClick = Button4Click
+    OnClick = btnClearClick
   end
   object SaveDialog1: TSavePictureDialog
     Left = 317

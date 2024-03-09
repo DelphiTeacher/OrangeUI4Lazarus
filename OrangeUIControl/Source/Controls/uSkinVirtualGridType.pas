@@ -330,7 +330,6 @@ type
   //TSkinVirtualGridColumn=class(TCollectionItem,ISkinItem,IInterface)
   TSkinVirtualGridColumn=class(TRealSkinItem)
   private
-    FSortState: TSkinItemSortState;
 //    FSortMode: TSkinGridColumnSortMode;
     procedure SetControlType(const Value: String);
     function GetSelfOwnMaterial: TSkinVirtualGridColumnMaterial;
@@ -500,6 +499,7 @@ type
 //    FItemBindingControl:TItemBindingControlItem;
     function GetDrawItemDesignerPanel(ASkinItem:TBaseSkinItem):TSkinItemDesignerPanel;
   public
+    FSortState: TSkinItemSortState;
 
     //所属列表
     function Owner:TSkinVirtualGridColumns;
@@ -1068,7 +1068,7 @@ protected
   protected
 
     //固定列数
-    FFixedCols: Integer;
+//    FFixedCols: Integer;
     //指示列的宽度
     FIndicatorWidth:Double;
 
@@ -1226,6 +1226,8 @@ protected
     procedure DoColumnVisibleChange(Sender:TObject);
 
     procedure DoHorz_InnerPositionChange(Sender:TObject);override;
+  private
+    function GetFixedCols: Integer;
 
   protected
     //赋值
@@ -1302,6 +1304,8 @@ protected
 //    function GetGridCellChecked(ACol:TSkinVirtualGridColumn;
 //                                ARow:TBaseSkinItem
 //                                ):Boolean;virtual;
+
+    procedure ClearColumnsSortState;
   public
     //测试属性
     FIsNeedClip:Boolean;
@@ -1332,7 +1336,7 @@ protected
     property Columns:TSkinVirtualGridColumns read FColumns write SetColumns;
 
     //固定列个数
-    property FixedCols:Integer read FFixedCols write SetFixedCols;
+    property FixedCols:Integer read GetFixedCols write SetFixedCols;
 
     //表格表头高度
     property ColumnsHeaderHeight:Double read GetColumnsHeaderHeight write SetColumnsHeaderHeight stored True nodefault;
@@ -2043,13 +2047,14 @@ protected
     constructor Create(AOwner:TComponent);override;
     destructor Destroy;override;
   public
-    //表头
-    property ColumnHeader:TSkinColumnHeader read FColumnHeader;// write SetColumnHeader;
 //    procedure StayClick;override;
     property Prop:TVirtualGridProperties read GetVirtualGridProperties write SetVirtualGridProperties;
   published
     //属性(必须在VertScrollBar和HorzScrollBar之前)
     property Properties:TVirtualGridProperties read GetVirtualGridProperties write SetVirtualGridProperties;
+
+    //表头
+    property ColumnHeader:TSkinColumnHeader read FColumnHeader;// write SetColumnHeader;
 
     //垂直滚动条
     property VertScrollBar;
@@ -2593,6 +2598,18 @@ begin
 //            +ControlSize(Self.GetClientRect_ColumnHeader.Left);
 end;
 
+procedure TVirtualGridProperties.ClearColumnsSortState;
+var
+  I:Integer;
+begin
+  //其他表格列的状态都清空
+  for I := 0 to Self.Columns.Count-1 do
+  begin
+    Self.Columns[I].FSortState:=sissUnSort;
+  end;
+
+end;
+
 //procedure TVirtualGridProperties.CallOnPrepareDrawItemEvent(Sender: TObject;
 //  ACanvas: TDrawCanvas; AItem: TBaseSkinItem; AItemDrawRect: TRectF;
 //  AIsDrawItemInteractiveState: Boolean);
@@ -2759,7 +2776,7 @@ begin
       //指示列宽度
       FIndicatorWidth:=0;
       //固定列个数
-      FFixedCols:=0;
+//      FFixedCols:=0;
 
 
 
@@ -3165,7 +3182,7 @@ end;
 
 function TVirtualGridProperties.GetRealFixedColCount: Integer;
 begin
-  Result:=Self.FSkinVirtualGridIntf.Prop.FFixedCols;
+  Result:=Self.FSkinVirtualGridIntf.Prop.FixedCols;
 
   //固定列个数,不能超过总列数
   if Result>Self.FSkinVirtualGridIntf.Prop.FColumnLayoutsManager.GetVisibleItemsCount then
@@ -3215,6 +3232,11 @@ end;
 function TVirtualGridProperties.GetCustomListLayoutsManagerClass: TSkinCustomListLayoutsManagerClass;
 begin
   Result:=TSkinVirtualGridRowLayoutsManager;
+end;
+
+function TVirtualGridProperties.GetFixedCols: Integer;
+begin
+  Result:=Self.FSkinVirtualGridIntf.GetColumnHeader.Prop.FixedItems;
 end;
 
 //function TVirtualGridProperties.GetColumnsClass: TSkinVirtualGridColumnsClass;
@@ -3441,9 +3463,10 @@ end;
 
 procedure TVirtualGridProperties.SetFixedCols(const Value: Integer);
 begin
-  if FFixedCols<>Value then
+  if FixedCols<>Value then
   begin
-    FFixedCols:=Value;
+    //FFixedCols:=Value;
+    Self.FSkinVirtualGridIntf.GetColumnHeader.Prop.FixedItems:=Value;
     Self.Invalidate;
   end;
 end;
@@ -3840,7 +3863,7 @@ begin
 
   //不是固定的列,要加上水平偏移
   //只有水平滚动
-  if AVisibleColumnIndex>=Self.FFixedCols then
+  if AVisibleColumnIndex>=Self.FixedCols then
   begin
     Result.Left:=Result.Left-Self.GetLeftDrawOffset;
     Result.Right:=Result.Right-Self.GetRightDrawOffset;
@@ -5668,9 +5691,9 @@ begin
                             Self.FSkinVirtualGridIntf.Prop.ColumnLayoutsManager.GetControlHeight,
                             FDrawFixedColumnStartIndex,
                             FDrawFixedColumnEndIndex);
-  if FDrawFixedColumnEndIndex>Self.FSkinVirtualGridIntf.Prop.FFixedCols-1 then
+  if FDrawFixedColumnEndIndex>Self.FSkinVirtualGridIntf.Prop.FixedCols-1 then
   begin
-    FDrawFixedColumnEndIndex:=Self.FSkinVirtualGridIntf.Prop.FFixedCols-1;
+    FDrawFixedColumnEndIndex:=Self.FSkinVirtualGridIntf.Prop.FixedCols-1;
   end;
 //  uBaseLog.OutputDebugString(Self.FSkinControl.Name
 //                            +' FDrawFixedColumnStartIndex:'+IntToStr(FDrawFixedColumnStartIndex)
@@ -8635,11 +8658,7 @@ begin
   if FSortState<>Value then
   begin
 
-    //其他表格列的状态都清空
-    for I := 0 to Self.Owner.Count-1 do
-    begin
-      Self.Owner.Items[I].FSortState:=sissUnSort;
-    end;
+    Self.Owner.FVirtualGridProperties.ClearColumnsSortState;
 
     FSortState := Value;
 
