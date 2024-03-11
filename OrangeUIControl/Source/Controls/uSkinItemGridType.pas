@@ -182,8 +182,8 @@ type
     property Items[Index:Integer]:TSkinItemGridColumn read GetItem;default;
   end;
 
-  //表格列布局类型
-  TSkinItemGridColumnLayoutsManager=TSkinVirtualGridColumnLayoutsManager;
+//  //表格列布局类型
+//  TSkinItemGridColumnLayoutsManager=TSkinVirtualGridColumnLayoutsManager;
 
 
 
@@ -246,8 +246,8 @@ type
     //function GetColumnClass:TSkinVirtualGridColumnClass;override;
     //function GetColumnsClass:TSkinVirtualGridColumnsClass;override;
 
-    //获取表格列排列管理类
-    function GetColumnLayoutsManagerClass:TSkinListLayoutsManagerClass;override;
+//    //获取表格列排列管理类
+//    function GetColumnLayoutsManagerClass:TSkinListLayoutsManagerClass;override;
   public
     //更新统计汇总
     procedure UpdateFooter;
@@ -623,10 +623,10 @@ end;
 //  Result:=TSkinItemGridColumn;
 //end;
 
-function TItemGridProperties.GetColumnLayoutsManagerClass: TSkinListLayoutsManagerClass;
-begin
-  Result:=TSkinItemGridColumnLayoutsManager;
-end;
+//function TItemGridProperties.GetColumnLayoutsManagerClass: TSkinListLayoutsManagerClass;
+//begin
+//  Result:=TSkinItemGridColumnLayoutsManager;
+//end;
 
 //function TItemGridProperties.GetGridCellChecked(ACol: TSkinVirtualGridColumn;
 //  ARow: TBaseSkinItem): Boolean;

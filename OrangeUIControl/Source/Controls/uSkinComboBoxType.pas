@@ -39,11 +39,13 @@ uses
   uBaseSkinControl,
   uSkinPublic,
   uSkinItems,
+  uDrawParam,
   uSkinCustomListType,
   uSkinItemDesignerPanelType,
   uSkinScrollControlType,
   uGraphicCommon,
   uBaseLog,
+//  uComponentType,
   uSkinListViewType,
   uSkinSelectPopupForm,
 
@@ -91,6 +93,8 @@ type
     /// </summary>
     function GetText:String;
     property Text:String read GetText;
+    //是否下拉框弹出了
+    function GetIsDropedDown:Boolean;
     function GetViewType: TSkinComboBoxViewType;
 
     function GetComboBoxProperties:TComboBoxProperties;
@@ -334,6 +338,11 @@ type
   public
     //自定义绘制方法
     function CustomPaintHelpText(ACanvas:TDrawCanvas;ASkinMaterial:TSkinControlMaterial;const ADrawRect:TRectF;APaintData:TPaintData):Boolean;virtual;
+  public
+    //下拉框弹出时,ComboEdit会失去焦点,也就是失去当前获取焦点的状态,
+    //获取当前的状态
+//    function GetCurrentEffectStates(APaintData:TPaintData): TDPEffectStates;override;
+    function CalcCurrentEffectStates(APaintData:TPaintData):TDPEffectStates;override;
   end;
 
 
@@ -373,7 +382,10 @@ type
                                                                 AItemDesignerPanel:TSkinItemDesignerPanel;
                                                                 AChild:TChildControl);
     procedure SetViewType(const Value: TSkinComboBoxViewType);
+    //ISkinComboBox
     function GetViewType: TSkinComboBoxViewType;
+    //是否下拉框弹出了
+    function GetIsDropedDown:Boolean;
   protected
 //    procedure lvMultiSelectedItemsNewListItemStyleFrameCacheInit(Sender: TObject;
 //      AListItemTypeStyleSetting: TListItemTypeStyleSetting;
@@ -478,6 +490,17 @@ implementation
 { TSkinComboBoxDefaultType }
 
 
+//function TSkinComboBoxDefaultType.GetCurrentEffectStates(
+//  APaintData: TPaintData): TDPEffectStates;
+//begin
+//  Result:=Inherited;// CalcCurrentEffectStates;
+//  if AChecked then
+//  begin
+//    Result:=Result+[dpstPushed];
+//  end;
+//
+//end;
+
 function TSkinComboBoxDefaultType.GetSkinMaterial: TSkinComboBoxDefaultMaterial;
 begin
   if Self.FSkinControlIntf.GetCurrentUseMaterial<>nil then
@@ -573,6 +596,18 @@ begin
 
 
   end;
+end;
+
+function TSkinComboBoxDefaultType.CalcCurrentEffectStates(
+  APaintData: TPaintData): TDPEffectStates;
+begin
+  Result:=Inherited;// CalcCurrentEffectStates;
+
+  if Self.FSkinComboBoxIntf.GetIsDropedDown then
+  begin
+    Result:=Result+[dpstFocused];
+  end;
+
 end;
 
 function TSkinComboBoxDefaultType.CustomBind(ASkinControl:TControl): Boolean;
@@ -1659,6 +1694,16 @@ end;
 function TSkinComboBox.GetComboBoxProperties: TComboBoxProperties;
 begin
   Result:=TComboBoxProperties(Self.FProperties);
+end;
+
+function TSkinComboBox.GetIsDropedDown: Boolean;
+begin
+  Result:=False;
+  if (FfrmSelectPopup<>nil) and FfrmSelectPopup.Visible then
+  begin
+    Result:=True;
+  end;
+
 end;
 
 function TSkinComboBox.GetlvMultiSelectedItemsOnNewListItemStyleFrameCacheInit: TNewListItemStyleFrameCacheInitEvent;

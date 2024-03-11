@@ -173,6 +173,8 @@ type
     /// </summary>
     procedure SetItemRect(Value:TRectF);
 
+//    //自适应控件尺寸
+//    function GetIsAutoFitControlWidth:Boolean;
 
 
     /// <summary>
@@ -1864,10 +1866,13 @@ begin
   //加载的时候不处理,不然太耗时
   if Not AIsNeedCheck or AIsNeedCheck and FIsNeedReCalcItemRect then
   begin
-    if (FSkinListIntf<>nil) and (FSkinListIntf.GetUpdateCount>0) then
-    begin
-      Exit;
-    end;
+      if (FSkinListIntf<>nil) and (FSkinListIntf.GetUpdateCount>0) then
+      begin
+        Exit;
+      end;
+
+
+
 
       //计算所有列表项的矩形
       Self.CalcAllSkinListItemRect;

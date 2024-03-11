@@ -353,7 +353,7 @@ type
     FOnCustomPaintCellBegin:TGridCustomPaintCellBeginEvent;
     FOnCustomPaintCellEnd:TGridCustomPaintCellBeginEvent;
     //自动计算时的内容宽度
-    FCalcedAutoSizeWidth:TControlSize;
+    FCalcedAutoSizeWidth:Double;
 
     //是否只读
     FReadonly: Boolean;
@@ -377,7 +377,16 @@ type
 
     //自适应尺寸
     FAutoSize:Boolean;
-    FAutoSizeMinWidth:TControlSize;
+    FAutoSizeMinWidth:Double;
+
+    //拉宽的时候自动增加宽度
+    FIsAutoFitControlWidth:Boolean;
+    FAutoFitWidth:Double;
+//    function GetWidth: Double;override;
+//    //自适应控件尺寸
+//    function GetIsAutoFitControlWidth:Boolean;override;
+  protected
+
 
 //    FSkinListIntf:ISkinList;
 //
@@ -546,7 +555,7 @@ type
 
     //自适应宽度
     property AutoSize: Boolean read FAutoSize write FAutoSize;
-    property AutoSizeMinWidth: TControlSize read FAutoSizeMinWidth write FAutoSizeMinWidth;
+    property AutoSizeMinWidth: Double read FAutoSizeMinWidth write FAutoSizeMinWidth;
 
     //统计
     property Footer:TSkinVirtualGridFooter read FFooter write SetFooter;
@@ -578,6 +587,7 @@ type
     //控件类型
     property ControlType:String read FControlType write SetControlType;
     property Control:TControl read FSkinControl;
+    property IsAutoFitControlWidth:Boolean read FIsAutoFitControlWidth write FIsAutoFitControlWidth;
   end;
 
 
@@ -698,6 +708,19 @@ type
 
 
 
+  /// <summary>
+  ///   <para>
+  ///     列表项逻辑
+  ///   </para>
+  ///   <para>
+  ///     ListItem Logic
+  ///   </para>
+  /// </summary>
+  TSkinColumnHeaderLayoutsManager=class(TSkinVirtualListLayoutsManager)
+  private
+    FIsAddAutoFitWidth:Boolean;
+    function CalcItemWidth(AItem: ISkinItem): Double;override;
+  end;
 
 
   /// <summary>
@@ -729,8 +752,8 @@ type
     //function GetListLayoutsManager: TSkinColumnHeaderLayoutsManager;
     //获取列表项列表的类
     function GetItemsClass:TBaseSkinItemsClass;override;
-    ////获取列表逻辑类
-    //function GetCustomListLayoutsManagerClass:TSkinCustomListLayoutsManagerClass;override;
+    //获取列表逻辑类
+    function GetCustomListLayoutsManagerClass:TSkinCustomListLayoutsManagerClass;override;
 
 protected
   //点击列表项,TreeView需要扩展它来实现自动展开
@@ -865,16 +888,6 @@ protected
 
 
 
-  /// <summary>
-  ///   <para>
-  ///     列表项逻辑
-  ///   </para>
-  ///   <para>
-  ///     ListItem Logic
-  ///   </para>
-  /// </summary>
-  //TSkinColumnHeaderLayoutsManager=class(TSkinVirtualListLayoutsManager)
-  //end;
 
 
 
@@ -930,6 +943,8 @@ protected
                                     AItemEffectStates:TDPEffectStates;
                                     AIsDrawItemInteractiveState:Boolean
                                     ): Boolean;override;
+
+    procedure SizeChanged;override;
   protected
     function GetSkinMaterial:TSkinColumnHeaderDefaultMaterial;
   end;
@@ -982,20 +997,20 @@ protected
 
 
   
-  //表格列布局类型
-  TSkinVirtualGridColumnLayoutsManager=class(TSkinListLayoutsManager)
-  protected
-//    //处理不绘制超出的列
-//    procedure CalcDrawStartAndEndIndex(
-//                                      //滚动条位置
-//                                      ADrawLeftOffset,
-//                                      ADrawTopOffset:TControlSize;
-//                                      //控件的尺寸,可以自定义
-//                                      AControlWidth,AControlHeight:TControlSize;
-//                                      var ADrawStartIndex:Integer;
-//                                      var ADrawEndIndex:Integer);override;
-
-  end;
+//  //表格列布局类型
+//  TSkinVirtualGridColumnLayoutsManager=class(TSkinListLayoutsManager)
+//  protected
+////    //处理不绘制超出的列
+////    procedure CalcDrawStartAndEndIndex(
+////                                      //滚动条位置
+////                                      ADrawLeftOffset,
+////                                      ADrawTopOffset:TControlSize;
+////                                      //控件的尺寸,可以自定义
+////                                      AControlWidth,AControlHeight:TControlSize;
+////                                      var ADrawStartIndex:Integer;
+////                                      var ADrawEndIndex:Integer);override;
+//
+//  end;
 
 
 
@@ -1210,8 +1225,8 @@ protected
     //创建列管理
     //function GetColumnClass:TSkinVirtualGridColumnClass;virtual;
     //function GetColumnsClass:TSkinVirtualGridColumnsClass;virtual;
-    //获取表格列排列管理类
-    function GetColumnLayoutsManagerClass:TSkinListLayoutsManagerClass;virtual;
+//    //获取表格列排列管理类
+//    function GetColumnLayoutsManagerClass:TSkinListLayoutsManagerClass;virtual;
   protected
 
 //    //列表更改事件
@@ -1262,8 +1277,12 @@ protected
     //获取单元格绘制矩形
     function GetCellDrawRect(ACol:TSkinVirtualGridColumn;ARow:TBaseSkinItem):TRectF;
 
+
   public
     procedure CalcAutoSizeColumnWidth;
+
+    //让所有表格列能填满控件
+    procedure SetColumnsAutoFitControlWidth;
 
     //获取指定单元格的文本
     function GetGridCellText(ACol:TSkinVirtualGridColumn;
@@ -2153,11 +2172,11 @@ end;
 //begin
 //  Result:=TSkinColumnHeaderLayoutsManager(Self.FListLayoutsManager);
 //end;
-//
-//function TColumnHeaderProperties.GetCustomListLayoutsManagerClass: TSkinCustomListLayoutsManagerClass;
-//begin
-//  Result:=TSkinColumnHeaderLayoutsManager;
-//end;
+
+function TColumnHeaderProperties.GetCustomListLayoutsManagerClass: TSkinCustomListLayoutsManagerClass;
+begin
+  Result:=TSkinColumnHeaderLayoutsManager;
+end;
 
 procedure TColumnHeaderProperties.SetItems(const Value: TSkinVirtualGridColumns);
 begin
@@ -2312,6 +2331,12 @@ begin
     Result:=nil;
   end;
 end;
+procedure TSkinColumnHeaderDefaultType.SizeChanged;
+begin
+  inherited;
+  Self.GetGrid.Prop.SetColumnsAutoFitControlWidth;
+end;
+
 //
 //{ TSkinColumnHeaderItems }
 //
@@ -2388,6 +2413,80 @@ end;
 
 { TVirtualGridProperties }
 
+procedure TVirtualGridProperties.SetColumnsAutoFitControlWidth;
+var
+  I: Integer;
+  AColumn:TSkinVirtualGridColumn;
+  AColumnsWidth:Double;
+  AAutoFitColumnsCount:Integer;
+  ASpaceWidth:Double;
+begin
+  //如果有自适应尺寸的列
+  uBaseLog.HandleException(nil,'TVirtualListProperties.CalcAutoSizeColumnWidth Begin');
+
+  AColumnsWidth:=0;
+  AAutoFitColumnsCount:=0;
+
+  //计算空余的时候需要关闭AddAutoFitWidth
+  TSkinColumnHeaderLayoutsManager(Self.FColumns.FListLayoutsManager).FIsAddAutoFitWidth:=False;
+  try
+    for I := 0 to Self.FColumns.FListLayoutsManager.GetVisibleItemsCount-1 do
+    begin
+      AColumn:=TSkinVirtualGridColumn(Self.FColumns.FListLayoutsManager.GetVisibleItemObject(I));
+
+      AColumnsWidth:=AColumnsWidth+Self.FColumns.FListLayoutsManager.CalcItemWidth(AColumn);
+
+
+      if AColumn.FIsAutoFitControlWidth then
+      begin
+        Inc(AAutoFitColumnsCount);
+      end;
+    end;
+  finally
+    TSkinColumnHeaderLayoutsManager(Self.FColumns.FListLayoutsManager).FIsAddAutoFitWidth:=True;
+  end;
+
+
+
+  if AAutoFitColumnsCount>0 then
+  begin
+      //有自适应的列才需要更新
+      ASpaceWidth:=(Self.FColumns.FListLayoutsManager.GetControlWidth-AColumnsWidth);
+
+
+      Self.Columns.BeginUpdate;
+      try
+
+
+          //需要计算该列的宽度,然后自动调整列宽
+          for I := 0 to Self.FColumns.FListLayoutsManager.GetVisibleItemsCount-1 do
+          begin
+            AColumn:=TSkinVirtualGridColumn(Self.FColumns.FListLayoutsManager.GetVisibleItemObject(I));
+
+            if AColumn.FIsAutoFitControlWidth then
+            begin
+              if ASpaceWidth>0 then
+              begin
+                AColumn.FAutoFitWidth:=Ceil(ASpaceWidth/AAutoFitColumnsCount);
+              end
+              else
+              begin
+                AColumn.FAutoFitWidth:=0;
+              end;
+
+            end;
+
+          end;
+
+      finally
+        Self.Columns.EndUpdate;
+      end;
+
+
+  end;
+
+
+end;
 
 procedure TVirtualGridProperties.CalcAutoSizeColumnWidth;
 var
@@ -2864,10 +2963,10 @@ end;
 //  Result:=TSkinVirtualGridColumn;
 //end;
 
-function TVirtualGridProperties.GetColumnLayoutsManagerClass: TSkinListLayoutsManagerClass;
-begin
-  Result:=TSkinVirtualGridColumnLayoutsManager;
-end;
+//function TVirtualGridProperties.GetColumnLayoutsManagerClass: TSkinListLayoutsManagerClass;
+//begin
+//  Result:=TSkinVirtualGridColumnLayoutsManager;
+//end;
 
 destructor TVirtualGridProperties.Destroy;
 begin
@@ -8366,6 +8465,17 @@ end;
 //begin
 //  FItemRect:=Value;
 //end;
+//function TSkinVirtualGridColumn.GetWidth: Double;
+//begin
+//  Result:=Inherited + FAutoFitWidth;
+//end;
+
+////自适应控件尺寸
+//function TSkinVirtualGridColumn.GetIsAutoFitControlWidth:Boolean;override;
+//begin
+//  Result:=FIsAutoFitControlWidth;
+//end;
+
 
 procedure TSkinVirtualGridColumn.SetPickList(Value: TStrings);
 begin
@@ -10108,6 +10218,18 @@ end;
 //begin
 //  FSortStateDescPicture.Assign(Value);
 //end;
+
+{ TSkinColumnHeaderLayoutsManager }
+
+function TSkinColumnHeaderLayoutsManager.CalcItemWidth(AItem: ISkinItem): Double;
+begin
+  Result:=Inherited;
+  if FIsAddAutoFitWidth and TSkinVirtualGridColumn(AItem).FIsAutoFitControlWidth then
+  begin
+    Result:=Result+TSkinVirtualGridColumn(AItem).FAutoFitWidth;
+  end;
+
+end;
 
 initialization
   RegisterClasses([TSkinColumnHeader]);

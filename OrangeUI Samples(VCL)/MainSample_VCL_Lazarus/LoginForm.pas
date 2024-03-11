@@ -1,24 +1,40 @@
+ï»¿//convert pas to utf8 by Â¥
+//convert pas to utf8 by Â¥
 unit LoginForm;
 
 interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, uSkinWindowsControl, uSkinPanelType, uSkinImageType, StdCtrls,
+  Dialogs,
 
 
   uConst,
   uManager,
   //uWaitingForm,
-  FormWaiting,
+  WaitingForm,
   uOpenClientCommon,
   uRestInterfaceCall,
+
+  {$IFDEF FPC}
   uSkinSuperObject,
+  {$ELSE}
+  {$IF CompilerVersion <= 21.0} // XE or older
+  SuperObject,
+  superobjecthelper,
+  {$ELSE}
+    {$IFDEF SKIN_SUPEROBJECT}
+    uSkinSuperObject,
+    {$ELSE}
+    XSuperObject,
+    XSuperJson,
+    {$ENDIF}
+  {$IFEND}
+  {$ENDIF}
 
 
-  uSkinLabelType, uSkinButtonType, uSkinMaterial, ExtCtrls, uSkinCheckBoxType,
-  uDrawCanvas, uSkinItems, uTimerTaskEvent, uSkinScrollControlType,
-  uSkinCustomListType, uSkinVirtualGridType, uSkinItemGridType, uTimerTask;
+  uSkinLabelType, uTimerTaskEvent, uSkinButtonType, Vcl.StdCtrls,
+  uSkinWindowsControl, uSkinPanelType,uTimerTask;
 
 type
 
@@ -37,7 +53,6 @@ type
     procedure btnCloseClick(Sender: TObject);
     procedure btnMinClick(Sender: TObject);
     procedure btnLoginClick(Sender: TObject);
-    procedure edtUserChange(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure tteLoginBegin(ATimerTask: TTimerTask);
     procedure tteLoginExecute(ATimerTask: TTimerTask);
@@ -67,14 +82,9 @@ begin
   uOpenClientCommon.CommonSyncServerSetting(GlobalManager.ServerHost,GlobalManager.ServerPort);
 
 
-  //µ÷ÓÃµÇÂ¼½Ó¿Ú
+  //è°ƒç”¨ç™»å½•æŽ¥å£
   tteLogin.Run;
   //Self.ModalResult:=mrOK;
-end;
-
-procedure TfrmLogin.edtUserChange(Sender: TObject);
-begin
-
 end;
 
 procedure TfrmLogin.btnMinClick(Sender: TObject);
@@ -85,9 +95,9 @@ end;
 //procedure TfrmLogin.CreateParams(var Params: TCreateParams);
 //begin
 //  inherited;
-//  //ÎÞ±ß¿ò,µ«Ò²²»ÄÜÀ­Éì
+//  //æ— è¾¹æ¡†,ä½†ä¹Ÿä¸èƒ½æ‹‰ä¼¸
 //  Params.Style:=Params.Style and not WS_THICKFRAME;// or WS_MINIMIZEBOX or WS_MAXIMIZEBOX;
-//  //ÔÚÈÎÎñÀ¸ÏÔÊ¾
+//  //åœ¨ä»»åŠ¡æ æ˜¾ç¤º
 //  Params.ExStyle := Params.ExStyle or WS_EX_APPWINDOW;
 //
 //
@@ -102,16 +112,16 @@ end;
 
 procedure TfrmLogin.tteLoginBegin(ATimerTask: TTimerTask);
 begin
-  ShowWaitingFrame(nil,'µÇÂ¼ÖÐ...');
+  ShowWaitingFrame(nil,'ç™»å½•ä¸­...');
 end;
 
 procedure TfrmLogin.tteLoginExecute(ATimerTask: TTimerTask);
 begin
-  //³ö´í
+  //å‡ºé”™
   TTimerTask(ATimerTask).TaskTag:=1;
   try
 
-  //ÏÈ¿ª·ÅÆ½Ì¨½øÐÐµÇÂ¼
+  //å…ˆå¼€æ”¾å¹³å°è¿›è¡Œç™»å½•
   TTimerTask(ATimerTask).TaskDesc:=
     SimpleCallAPI('login',
                   nil,
@@ -121,7 +131,7 @@ begin
                   'login_type',
                   'username',
                   'password',
-                  //ÊÇ·ñÐèÒª·µ»ØÓÃ»§È¨ÏÞ
+                  //æ˜¯å¦éœ€è¦è¿”å›žç”¨æˆ·æƒé™
                   'is_need_user_power'
                   ],
                   [AppID,
@@ -149,7 +159,7 @@ begin
     except
       on E:Exception do
       begin
-        //Òì³£
+        //å¼‚å¸¸
         TTimerTask(ATimerTask).TaskDesc:=E.Message;
       end;
     end;
@@ -170,7 +180,7 @@ begin
       if ASuperObject.I['Code']=200 then
       begin
 
-          //µÇÂ¼³É¹¦
+          //ç™»å½•æˆåŠŸ
           uManager.GlobalManager.LastLoginUser:=Self.edtUser.Text;
           uManager.GlobalManager.LastLoginPass:=Self.edtPassWord.Text;
 
@@ -178,10 +188,10 @@ begin
           GlobalManager.User.ParseFromJson(ASuperObject.O['Data'].A['User'].O[0]);
 
 
-          //µÇÂ¼ÁîÅÆ,ÓÃÓÚÈ·ÈÏÓÃ»§ÒÑ¾­µÇÂ¼
+          //ç™»å½•ä»¤ç‰Œ,ç”¨äºŽç¡®è®¤ç”¨æˆ·å·²ç»ç™»å½•
           GlobalManager.User.key:=ASuperObject.O['Data'].S['Key'];
 
-          //±£´æÓÃ»§µÇÂ¼key,ÓÃÓÚÏÂ´Î×Ô¶¯µÇÂ½
+          //ä¿å­˜ç”¨æˆ·ç™»å½•key,ç”¨äºŽä¸‹æ¬¡è‡ªåŠ¨ç™»é™†
           GlobalManager.LastLoginKey:=ASuperObject.O['Data'].S['login_key'];
 
 
@@ -192,19 +202,19 @@ begin
       end
       else
       begin
-        //µÇÂ¼Ê§°Ü
-        //ShowMessageBoxFrame(Self,ASuperObject.S['Desc'],'',TMsgDlgType.mtInformation,['È·¶¨'],nil);
+        //ç™»å½•å¤±è´¥
+        //ShowMessageBoxFrame(Self,ASuperObject.S['Desc'],'',TMsgDlgType.mtInformation,['ç¡®å®š'],nil);
       end;
 
     end
     else if TTimerTask(ATimerTask).TaskTag=1 then
     begin
-      //ÍøÂçÒì³£
-      //ShowMessageBoxFrame(Self,'ÍøÂçÒì³£,Çë¼ì²éÄúµÄÍøÂçÁ¬½Ó!',
+      //ç½‘ç»œå¼‚å¸¸
+      //ShowMessageBoxFrame(Self,'ç½‘ç»œå¼‚å¸¸,è¯·æ£€æŸ¥æ‚¨çš„ç½‘ç»œè¿žæŽ¥!',
       //                      UserCenterInterfaceUrl+#13#10
       //                      +TTimerTask(ATimerTask).TaskDesc,
       //                      TMsgDlgType.mtInformation,
-      //                      ['È·¶¨'],nil);
+      //                      ['ç¡®å®š'],nil);
     end;
   finally
     HideWaitingFrame;

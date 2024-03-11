@@ -150,6 +150,10 @@ type
     procedure SetChecked(const Value: Boolean);
     //鼠标是否在Item里面
     function PtInItem(APoint:TPointF):Boolean;virtual;
+
+//    //自适应控件尺寸
+//    function GetIsAutoFitControlWidth:Boolean;virtual;
+
   protected
     //实现ISkinItem接口,用于排列
 
@@ -3791,6 +3795,11 @@ begin
 end;
 
 { TBaseSkinItem }
+
+//function TBaseSkinItem.GetIsAutoFitControlWidth: Boolean;
+//begin
+//  Result:=False;
+//end;
 
 procedure TBaseSkinItem.ClearItemRect;
 begin

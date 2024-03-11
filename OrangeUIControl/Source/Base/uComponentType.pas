@@ -3136,6 +3136,8 @@ end;
 
 procedure TSkinControlType.FocusChanged;
 begin
+  //ComboBox失去焦点要重绘
+  Invalidate;
 end;
 
 function TSkinControlType.CalcAutoSize(var Width, Height: TControlSize): Boolean;

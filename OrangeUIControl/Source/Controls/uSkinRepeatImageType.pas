@@ -1125,10 +1125,12 @@ procedure TSkinRepeatImage.SetControlValueByBindItemField(const AFieldName: Stri
   AIsDrawItemInteractiveState: Boolean);
 var
   ARepeatCount:Double;
+  AFieldValueStr:String;
 begin
 
   ARepeatCount:=0;
-  if (AFieldValue<>'') and TryStrToFloat(AFieldValue,ARepeatCount) then
+  AFieldValueStr:=AFieldValue;
+  if (AFieldValueStr<>'') and TryStrToFloat(AFieldValueStr,ARepeatCount) then
   begin
   end;
 

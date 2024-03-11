@@ -6720,6 +6720,7 @@ begin
 
   //可拖动改变尺寸的时候，是不能拖拽Item的
   if (not Self.FSkinCustomListIntf.Prop.FIsInResizeArea)
+    and (Self.FSkinCustomListIntf.Prop.FResizingItem=nil)
     and (Self.FSkinCustomListIntf.Prop.MouseDownItem<>nil)
     and (TProtectedControl(Self.FSkinCustomListIntf.Prop.FSkinControl).DragMode=dmManual)
     and (GetDis(PointF(X,Y),FMouseDownPt)>5)

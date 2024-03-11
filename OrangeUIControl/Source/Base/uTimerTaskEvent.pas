@@ -25,50 +25,50 @@ uses
 
 
 
-
-type
-  {$I ComponentPlatformsAttribute.inc}
-  //线程任务事件组件
-  TTimerTaskEvent=class(TComponent)
-  private
-    FOnBegin:TTimerTaskNotify;
-    FOnExecuteEnd: TTimerTaskNotify;
-    FOnExecute: TTimerTaskNotify;
-    FTaskTag: Integer;
-    FTaskID: Integer;
-    FTaskName:String;
-    FTaskParams: TTaskParamList;
-    FTaskOtherInfo: TStringList;
-    //为了参数类型改成
-    procedure DoExecute(Sender:TObject);
-    procedure DoExecuteEnd(Sender:TObject);
-    procedure SetTaskOtherInfo(const Value: TStringList);
-  public
-    procedure DoBeginEvent;
-    function CreateTimerTask:TTimerTask;
-    //运行
-    function Run(const AIsStandalone:Boolean=True):TTimerTask;
-    //参数
-    property TaskParams:TTaskParamList read FTaskParams;
-  public
-    TaskObject:TObject;
-//    PageIndex:Integer;
-//    PageSize:Integer;
-    constructor Create(AOwner:TComponent);override;
-    destructor Destroy;override;
-
-  published
-    property TaskID:Integer read FTaskID write FTaskID;
-    property TaskName:String read FTaskName write FTaskName;
-    property TaskTag:Integer read FTaskTag write FTaskTag;
-    property TaskOtherInfo:TStringList read FTaskOtherInfo write SetTaskOtherInfo;
-    //需要在线程中执行的方法
-    property OnBegin:TTimerTaskNotify read FOnBegin write FOnBegin;
-    //需要在线程中执行的方法
-    property OnExecute:TTimerTaskNotify read FOnExecute write FOnExecute;
-    //执行结束(在主线程中调用)
-    property OnExecuteEnd:TTimerTaskNotify read FOnExecuteEnd write FOnExecuteEnd;
-  end;
+//
+//type
+//  {$I ComponentPlatformsAttribute.inc}
+//  //线程任务事件组件
+//  TTimerTaskEvent=class(TComponent)
+//  private
+//    FOnBegin:TTimerTaskNotify;
+//    FOnExecuteEnd: TTimerTaskNotify;
+//    FOnExecute: TTimerTaskNotify;
+//    FTaskTag: Integer;
+//    FTaskID: Integer;
+//    FTaskName:String;
+//    FTaskParams: TTaskParamList;
+//    FTaskOtherInfo: TStringList;
+//    //为了参数类型改成
+//    procedure DoExecute(Sender:TObject);
+//    procedure DoExecuteEnd(Sender:TObject);
+//    procedure SetTaskOtherInfo(const Value: TStringList);
+//  public
+//    procedure DoBeginEvent;
+//    function CreateTimerTask:TTimerTask;
+//    //运行
+//    function Run(const AIsStandalone:Boolean=True):TTimerTask;
+//    //参数
+//    property TaskParams:TTaskParamList read FTaskParams;
+//  public
+//    TaskObject:TObject;
+////    PageIndex:Integer;
+////    PageSize:Integer;
+//    constructor Create(AOwner:TComponent);override;
+//    destructor Destroy;override;
+//
+//  published
+//    property TaskID:Integer read FTaskID write FTaskID;
+//    property TaskName:String read FTaskName write FTaskName;
+//    property TaskTag:Integer read FTaskTag write FTaskTag;
+//    property TaskOtherInfo:TStringList read FTaskOtherInfo write SetTaskOtherInfo;
+//    //需要在线程中执行的方法
+//    property OnBegin:TTimerTaskNotify read FOnBegin write FOnBegin;
+//    //需要在线程中执行的方法
+//    property OnExecute:TTimerTaskNotify read FOnExecute write FOnExecute;
+//    //执行结束(在主线程中调用)
+//    property OnExecuteEnd:TTimerTaskNotify read FOnExecuteEnd write FOnExecuteEnd;
+//  end;
 
 
 
@@ -108,100 +108,100 @@ type
 implementation
 
 
-
-{ TTimerTaskEvent }
-
-function TTimerTaskEvent.CreateTimerTask: TTimerTask;
-begin
-  Result:=TTimerTask.Create(IntToStr(FTaskID));
-  Result.TaskTag:=FTaskTag;
-  //用于日志显示
-  if FTaskName='' then
-  begin
-    Result.TaskName:=Self.Name;
-  end
-  else
-  begin
-    Result.TaskName:=FTaskName;
-  end;
-
-//  Result.PageIndex:=PageIndex;
-//  Result.PageSize:=PageSize;
-
-  Result.TaskObject:=TaskObject;
-
-  Result.OnExecute:=DoExecute;
-  Result.OnExecuteEnd:=DoExecuteEnd;
-  Result.TaskOtherInfo.Assign(TaskOtherInfo);
-
-end;
-
-constructor TTimerTaskEvent.Create(AOwner: TComponent);
-begin
-  inherited;
-
-  FTaskParams:=TTaskParamList.Create;
-  FTaskOtherInfo:=TStringList.Create;
-
-end;
-
-destructor TTimerTaskEvent.Destroy;
-begin
-  FreeAndNil(FTaskParams);
-  FreeAndNil(FTaskOtherInfo);
-  inherited;
-end;
-
-procedure TTimerTaskEvent.DoExecute(Sender: TObject);
-begin
-//  TThread.Synchronize(nil,procedure
+//
+//{ TTimerTaskEvent }
+//
+//function TTimerTaskEvent.CreateTimerTask: TTimerTask;
+//begin
+//  Result:=TTimerTask.Create(IntToStr(FTaskID));
+//  Result.TaskTag:=FTaskTag;
+//  //用于日志显示
+//  if FTaskName='' then
 //  begin
-//    if Assigned(Self.FOnBegin) then
-//    begin
-//      FOnBegin(TTimerTask(Result));
-//    end;
-//  end);
-
-
-  if Assigned(Self.FOnExecute) then
-  begin
-    FOnExecute(TTimerTask(Sender));
-  end;
-end;
-
-procedure TTimerTaskEvent.DoExecuteEnd(Sender: TObject);
-begin
-  if Assigned(Self.FOnExecuteEnd) then
-  begin
-    FOnExecuteEnd(TTimerTask(Sender));
-  end;
-end;
-
-procedure TTimerTaskEvent.DoBeginEvent;
-begin
-    if Assigned(Self.FOnBegin) then
-    begin
-      FOnBegin(nil);
-    end;
-end;
-
-function TTimerTaskEvent.Run(const AIsStandalone:Boolean): TTimerTask;
-begin
-  Result:=CreateTimerTask;
-
-
-
-  //放在这里可以立即调用,不用放到Thread中
-  TThread.Synchronize(nil,DoBeginEvent);
-
-
-  GetGlobalTimerThread.RunTask(Result,AIsStandalone);
-end;
-
-procedure TTimerTaskEvent.SetTaskOtherInfo(const Value: TStringList);
-begin
-  FTaskOtherInfo.Assign(Value);
-end;
+//    Result.TaskName:=Self.Name;
+//  end
+//  else
+//  begin
+//    Result.TaskName:=FTaskName;
+//  end;
+//
+////  Result.PageIndex:=PageIndex;
+////  Result.PageSize:=PageSize;
+//
+//  Result.TaskObject:=TaskObject;
+//
+//  Result.OnExecute:=DoExecute;
+//  Result.OnExecuteEnd:=DoExecuteEnd;
+//  Result.TaskOtherInfo.Assign(TaskOtherInfo);
+//
+//end;
+//
+//constructor TTimerTaskEvent.Create(AOwner: TComponent);
+//begin
+//  inherited;
+//
+//  FTaskParams:=TTaskParamList.Create;
+//  FTaskOtherInfo:=TStringList.Create;
+//
+//end;
+//
+//destructor TTimerTaskEvent.Destroy;
+//begin
+//  FreeAndNil(FTaskParams);
+//  FreeAndNil(FTaskOtherInfo);
+//  inherited;
+//end;
+//
+//procedure TTimerTaskEvent.DoExecute(Sender: TObject);
+//begin
+////  TThread.Synchronize(nil,procedure
+////  begin
+////    if Assigned(Self.FOnBegin) then
+////    begin
+////      FOnBegin(TTimerTask(Result));
+////    end;
+////  end);
+//
+//
+//  if Assigned(Self.FOnExecute) then
+//  begin
+//    FOnExecute(TTimerTask(Sender));
+//  end;
+//end;
+//
+//procedure TTimerTaskEvent.DoExecuteEnd(Sender: TObject);
+//begin
+//  if Assigned(Self.FOnExecuteEnd) then
+//  begin
+//    FOnExecuteEnd(TTimerTask(Sender));
+//  end;
+//end;
+//
+//procedure TTimerTaskEvent.DoBeginEvent;
+//begin
+//  if Assigned(Self.FOnBegin) then
+//  begin
+//    FOnBegin(nil);
+//  end;
+//end;
+//
+//function TTimerTaskEvent.Run(const AIsStandalone:Boolean): TTimerTask;
+//begin
+//  Result:=CreateTimerTask;
+//
+//
+//
+//  //放在这里可以立即调用,不用放到Thread中
+//  TThread.Synchronize(nil,DoBeginEvent);
+//
+//
+//  GetGlobalTimerThread.RunTask(Result,AIsStandalone);
+//end;
+//
+//procedure TTimerTaskEvent.SetTaskOtherInfo(const Value: TStringList);
+//begin
+//  FTaskOtherInfo.Assign(Value);
+//end;
 
 //{ TCallRestAPITimerTaskEvent }
 //

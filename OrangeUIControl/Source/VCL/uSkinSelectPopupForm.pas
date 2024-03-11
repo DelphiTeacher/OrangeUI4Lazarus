@@ -59,7 +59,7 @@ type
     //选中了记录的事件
     OnSelectRecord: TOnSelectRecordEvent;
 
-
+    OnHidePopup:TNotifyEvent;
 
     //窗体是否已经弹出
     IsPopuped:Boolean;
@@ -231,7 +231,7 @@ end;
 procedure TfrmSkinSelectPopup.FormDeactivate(Sender: TObject);
 begin
   uBaseLog.OutputDebugString('TfrmSkinSelectPopup.FormDeactivate');
-  Hide;
+  HidePopup;
 end;
 
 procedure TfrmSkinSelectPopup.FormDestroy(Sender: TObject);
@@ -281,7 +281,10 @@ begin
   DoClear;
 
 //  DoHide;
-
+  if Assigned(OnHidePopup) then
+  begin
+    OnHidePopup(Self);
+  end;
 
 
 end;

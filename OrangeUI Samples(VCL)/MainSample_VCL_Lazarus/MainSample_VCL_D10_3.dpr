@@ -53,7 +53,17 @@ uses
   ItemGrid_FixedColsFrame in 'ItemGrid_FixedColsFrame.pas' {FrameFixedColsItemGrid: TFrame},
   ComboBoxFrame in 'ComboBoxFrame.pas' {FrameComboBox: TFrame},
   ItemGrid_ContentFrame in 'ItemGrid_ContentFrame.pas' {FrameContentItemGrid: TFrame},
-  ListItemStyle_Caption_CheckBoxRight_Selected in '..\..\OrangeProjectCommon\OrangeUIStyles_VCL\ListItemStyle_Caption_CheckBoxRight_Selected.pas';
+  ListItemStyle_Caption_CheckBoxRight_Selected in '..\..\OrangeProjectCommon\OrangeUIStyles_VCL\ListItemStyle_Caption_CheckBoxRight_Selected.pas',
+  GridSwitchPageFrame in '..\..\OrangeProjectCommon\VCLFrames_Lazarus\GridSwitchPageFrame.pas',
+  WaitingForm in '..\..\OrangeProjectCommon\VCLFrames\WaitingForm_VCL\WaitingForm.pas' {frmWaiting},
+  uconst in 'uconst.pas',
+  uOpenUISetting in '..\..\OrangeProjectCommon\uOpenUISetting.pas',
+  uOpenCommon in '..\..\OrangeProjectCommon\uOpenCommon.pas',
+  uRestInterfaceCall in '..\..\OrangeProjectCommon\uRestInterfaceCall.pas',
+  uDataSetToJson in '..\..\OrangeProjectCommon\uDataSetToJson.pas',
+  uOpenClientCommon in '..\..\OrangeProjectCommon\uOpenClientCommon.pas',
+  LoginForm in 'LoginForm.pas' {frmLogin},
+  uManager in 'uManager.pas';
 
 {$R *.res}
 var
@@ -69,13 +79,21 @@ begin
 //  if frmLogin.ShowModal=mrOK then
 //  begin
   Application.CreateForm(TdmEasyServiceCommonMaterial, dmEasyServiceCommonMaterial);
-  Application.CreateForm(TfrmMain, frmMain);
-  //  Application.CreateForm(TfrmWhiteMain, frmWhiteMain);
-  //  Application.CreateForm(TfrmBaseQuery, frmBaseQuery);
-  //  Application.CreateForm(TfrmBase, frmBase);
-  //    Application.CreateForm(TForm5, Form5);
-  Application.Run;
+  //  Application.CreateForm(TfrmLogin, frmLogin);
+  //  Application.CreateForm(TfrmLogin, frmLogin);
 
+  frmLogin:=TfrmLogin.Create(nil);
+  if frmLogin.ShowModal=mrOK then
+  begin
+    Application.CreateForm(TfrmMain, frmMain);
+    //  Application.CreateForm(TfrmWhiteMain, frmWhiteMain);
+    //  Application.CreateForm(TfrmBaseQuery, frmBaseQuery);
+    //  Application.CreateForm(TfrmBase, frmBase);
+    //    Application.CreateForm(TForm5, Form5);
+  end;
+  frmLogin.Free;
+
+  Application.Run;
 
 //  dmEasyServiceCommonMaterial.Free;
 //  FreeAndNil(GlobalSkinItemMaterialStylePackage);

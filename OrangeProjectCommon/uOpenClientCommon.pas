@@ -63,17 +63,17 @@ uses
   {$IFDEF FPC}
   uSkinSuperObject,
   {$ELSE}
-  {$IF CompilerVersion <= 21.0} // XE or older
-  SuperObject,
-  superobjecthelper,
-  {$ELSE}
-    {$IFDEF SKIN_SUPEROBJECT}
-    uSkinSuperObject,
+    {$IF CompilerVersion <= 21.0} // XE or older
+    SuperObject,
+    superobjecthelper,
     {$ELSE}
-    XSuperObject,
-    XSuperJson,
-    {$ENDIF}
-  {$IFEND}
+      {$IFDEF SKIN_SUPEROBJECT}
+      uSkinSuperObject,
+      {$ELSE}
+      XSuperObject,
+      XSuperJson,
+      {$ENDIF}
+    {$IFEND}
   {$ENDIF}
 
 

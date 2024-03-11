@@ -386,7 +386,7 @@ type
   end;
 
 
-  TSkinDBGridColumnLayoutsManager=TSkinVirtualGridColumnLayoutsManager;
+//  TSkinDBGridColumnLayoutsManager=TSkinVirtualGridColumnLayoutsManager;
 
 
 
@@ -856,8 +856,8 @@ type
     //创建列管理
     //function GetColumnClass:TSkinVirtualGridColumnClass;override;
     //function GetColumnsClass:TSkinVirtualGridColumnsClass;override;
-    //表格列
-    function GetColumnLayoutsManagerClass:TSkinListLayoutsManagerClass;override;
+//    //表格列
+//    function GetColumnLayoutsManagerClass:TSkinListLayoutsManagerClass;override;
   protected
     //更新统计汇总字段
     procedure UpdateFooterRow;override;
@@ -1148,10 +1148,10 @@ end;
 //  Result:=TSkinDBGridColumn;
 //end;
 
-function TDBGridProperties.GetColumnLayoutsManagerClass: TSkinListLayoutsManagerClass;
-begin
-  Result:=TSkinDBGridColumnLayoutsManager;
-end;
+//function TDBGridProperties.GetColumnLayoutsManagerClass: TSkinListLayoutsManagerClass;
+//begin
+//  Result:=TSkinDBGridColumnLayoutsManager;
+//end;
 
 function TDBGridProperties.GetColumns: TSkinDBGridColumns;
 begin
