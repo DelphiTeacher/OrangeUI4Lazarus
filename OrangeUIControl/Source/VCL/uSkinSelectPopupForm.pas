@@ -50,7 +50,10 @@ type
     procedure DoClear;virtual;
     procedure CustomPopup;virtual;
   protected
+    {$IFDEF FPC}
+    {$ELSE}
     FWinForm:TSkinWinForm;
+    {$ENDIF}
     procedure CreateParams(var Params:TCreateParams);override;
 
   public

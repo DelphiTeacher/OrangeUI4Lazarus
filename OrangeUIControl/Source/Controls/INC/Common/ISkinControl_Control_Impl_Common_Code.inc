@@ -80,8 +80,11 @@ begin
 
   if not (csReading in Self.ComponentState)
     and not (csLoading in Self.ComponentState)
-    and (GetSkinControlType<>nil) then
+    and (GetSkinControlType<>nil)
+    and ((FOldWidth<>Width) or (FOldHeight<>Height)) then
   begin
+    FOldWidth:=Width;
+    FOldHeight:=Height;
     GetSkinControlType.SizeChanged;
   end;
 

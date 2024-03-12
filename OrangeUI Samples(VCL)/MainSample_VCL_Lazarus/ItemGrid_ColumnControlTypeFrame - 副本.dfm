@@ -1093,7 +1093,7 @@ object FrameItemGrid_ColumnControlType: TFrameItemGrid_ColumnControlType
     SelfOwnMaterial.DrawGridCellDevideMaterial.DrawRowLineParam.Color.Color = 15592941
     SelfOwnMaterial.DrawGridCellDevideMaterial.DrawRowLineParam.PenWidth = 1.000000000000000000
     SelfOwnMaterial.DrawGridCellDevideMaterial.DrawColLineParam.Color.Alpha = 255
-    SelfOwnMaterial.DrawGridCellDevideMaterial.DrawColLineParam.Color.Color = 15592941
+    SelfOwnMaterial.DrawGridCellDevideMaterial.DrawColLineParam.Color.Color = -2830136
     SelfOwnMaterial.DrawGridCellDevideMaterial.DrawColLineParam.PenWidth = 1.000000000000000000
     SelfOwnMaterial.FooterRowBackColorMaterial.BackColor.Color = clWhite
     SelfOwnMaterial.FooterRowBackColorMaterial.BackColor.IsFill = False
@@ -1456,7 +1456,7 @@ object FrameItemGrid_ColumnControlType: TFrameItemGrid_ColumnControlType
       0015000000001810040000004900730043006C006900700052006F0075006E00
       640000002F6626546A52C18810620657625F0000000000001900000000160A05
       0000004600690078006500640043006F006C006F0072000000038C74659C9872
-      8200000000002065181200000008001A00000050006900630000005400440072
+      8200000000002000181200000008001A00000050006900630000005400440072
       0061007700500069006300740075007200650000000400000000140000000000
       49006D006100670065004E0061006D0065000000170000000018000000000047
       0049004600460069006C00650044006100740061000000170000000018000000
@@ -1480,7 +1480,7 @@ object FrameItemGrid_ColumnControlType: TFrameItemGrid_ColumnControlType
       00FE564772FE94A563000015000000001810040000004900730043006C006900
       700052006F0075006E00640000002F6626546A52C18810620657625F00000000
       00001900000000160A050000004600690078006500640043006F006C006F0072
-      000000038C74659C987282000000000020690700000000120004000000490074
+      000000038C74659C987282000000000020000700000000120004000000490074
       0065006D00540079007000650000000000000015000000001C00040000004100
       750074006F00530069007A006500570069006400740068000000000000001500
       0000001E00040000004100750074006F00530069007A00650048006500690067
@@ -1525,7 +1525,7 @@ object FrameItemGrid_ColumnControlType: TFrameItemGrid_ColumnControlType
       550072006C000000FE564772FE94A56300001500000000181004000000490073
       0043006C006900700052006F0075006E00640000002F6626546A52C188106206
       57625F0000000000001900000000160A05000000460069007800650064004300
-      6F006C006F0072000000038C74659C9872820000000000204D18120000000800
+      6F006C006F0072000000038C74659C9872820000000000200018120000000800
       1A00000050006900630000005400440072006100770050006900630074007500
       720065000000040000000014000000000049006D006100670065004E0061006D
       00650000001700000000180000000000470049004600460069006C0065004400
@@ -1550,7 +1550,7 @@ object FrameItemGrid_ColumnControlType: TFrameItemGrid_ColumnControlType
       001810040000004900730043006C006900700052006F0075006E00640000002F
       6626546A52C18810620657625F0000000000001900000000160A050000004600
       690078006500640043006F006C006F0072000000038C74659C98728200000000
-      00206107000000001200040000004900740065006D0054007900700065000000
+      00200007000000001200040000004900740065006D0054007900700065000000
       0000000015000000001C00040000004100750074006F00530069007A00650057
       00690064007400680000000000000015000000001E0004000000410075007400
       6F00530069007A00650048006500690067006800740000000000000004000000
@@ -1595,7 +1595,7 @@ object FrameItemGrid_ColumnControlType: TFrameItemGrid_ColumnControlType
       564772FE94A563000015000000001810040000004900730043006C0069007000
       52006F0075006E00640000002F6626546A52C18810620657625F000000000000
       1900000000160A050000004600690078006500640043006F006C006F00720000
-      00038C74659C98728200000000002077181200000008001A0000005000690063
+      00038C74659C98728200000000002000181200000008001A0000005000690063
       0000005400440072006100770050006900630074007500720065000000040000
       000014000000000049006D006100670065004E0061006D006500000017000000
       00180000000000470049004600460069006C0065004400610074006100000017
@@ -1619,7 +1619,7 @@ object FrameItemGrid_ColumnControlType: TFrameItemGrid_ColumnControlType
       00550072006C000000FE564772FE94A563000015000000001810040000004900
       730043006C006900700052006F0075006E00640000002F6626546A52C1881062
       0657625F0000000000001900000000160A050000004600690078006500640043
-      006F006C006F0072000000038C74659C98728200000000002009070000000012
+      006F006C006F0072000000038C74659C98728200000000002000070000000012
       00040000004900740065006D0054007900700065000000000000001500000000
       1C00040000004100750074006F00530069007A00650057006900640074006800
       00000000000015000000001E00040000004100750074006F00530069007A0065
@@ -1665,7 +1665,7 @@ object FrameItemGrid_ColumnControlType: TFrameItemGrid_ColumnControlType
       0000FE564772FE94A563000015000000001810040000004900730043006C0069
       00700052006F0075006E00640000002F6626546A52C18810620657625F000000
       0000001900000000160A050000004600690078006500640043006F006C006F00
-      72000000038C74659C9872820000000000204D181200000008001A0000005000
+      72000000038C74659C98728200000000002000181200000008001A0000005000
       6900630000005400440072006100770050006900630074007500720065000000
       040000000014000000000049006D006100670065004E0061006D006500000017
       00000000180000000000470049004600460069006C0065004400610074006100
@@ -1689,7 +1689,7 @@ object FrameItemGrid_ColumnControlType: TFrameItemGrid_ColumnControlType
       00000000550072006C000000FE564772FE94A563000015000000001810040000
       004900730043006C006900700052006F0075006E00640000002F6626546A52C1
       8810620657625F0000000000001900000000160A050000004600690078006500
-      640043006F006C006F0072000000038C74659C98728200000000002073070000
+      640043006F006C006F0072000000038C74659C98728200000000002000070000
       00001200040000004900740065006D0054007900700065000000000000001500
       0000001C00040000004100750074006F00530069007A00650057006900640074
       00680000000000000015000000001E00040000004100750074006F0053006900
@@ -1735,7 +1735,7 @@ object FrameItemGrid_ColumnControlType: TFrameItemGrid_ColumnControlType
       564772FE94A563000015000000001810040000004900730043006C0069007000
       52006F0075006E00640000002F6626546A52C18810620657625F000000000000
       1900000000160A050000004600690078006500640043006F006C006F00720000
-      00038C74659C9872820000000000206F181200000008001A0000005000690063
+      00038C74659C98728200000000002000181200000008001A0000005000690063
       0000005400440072006100770050006900630074007500720065000000040000
       000014000000000049006D006100670065004E0061006D006500000017000000
       00180000000000470049004600460069006C0065004400610074006100000017
@@ -1759,7 +1759,7 @@ object FrameItemGrid_ColumnControlType: TFrameItemGrid_ColumnControlType
       00550072006C000000FE564772FE94A563000015000000001810040000004900
       730043006C006900700052006F0075006E00640000002F6626546A52C1881062
       0657625F0000000000001900000000160A050000004600690078006500640043
-      006F006C006F0072000000038C74659C98728200000000002044070000000012
+      006F006C006F0072000000038C74659C98728200000000002000070000000012
       00040000004900740065006D0054007900700065000000000000001500000000
       1C00040000004100750074006F00530069007A00650057006900640074006800
       00000000000015000000001E00040000004100750074006F00530069007A0065
@@ -1805,7 +1805,7 @@ object FrameItemGrid_ColumnControlType: TFrameItemGrid_ColumnControlType
       0000FE564772FE94A563000015000000001810040000004900730043006C0069
       00700052006F0075006E00640000002F6626546A52C18810620657625F000000
       0000001900000000160A050000004600690078006500640043006F006C006F00
-      72000000038C74659C98728200000000002073181200000008001A0000005000
+      72000000038C74659C98728200000000002000181200000008001A0000005000
       6900630000005400440072006100770050006900630074007500720065000000
       040000000014000000000049006D006100670065004E0061006D006500000017
       00000000180000000000470049004600460069006C0065004400610074006100
@@ -1829,7 +1829,7 @@ object FrameItemGrid_ColumnControlType: TFrameItemGrid_ColumnControlType
       00000000550072006C000000FE564772FE94A563000015000000001810040000
       004900730043006C006900700052006F0075006E00640000002F6626546A52C1
       8810620657625F0000000000001900000000160A050000004600690078006500
-      640043006F006C006F0072000000038C74659C98728200000000002043070000
+      640043006F006C006F0072000000038C74659C98728200000000002000070000
       00001200040000004900740065006D0054007900700065000000000000001500
       0000001C00040000004100750074006F00530069007A00650057006900640074
       00680000000000000015000000001E00040000004100750074006F0053006900
@@ -1875,7 +1875,7 @@ object FrameItemGrid_ColumnControlType: TFrameItemGrid_ColumnControlType
       006C000000FE564772FE94A56300001500000000181004000000490073004300
       6C006900700052006F0075006E00640000002F6626546A52C18810620657625F
       0000000000001900000000160A050000004600690078006500640043006F006C
-      006F0072000000038C74659C98728200000000002031181200000008001A0000
+      006F0072000000038C74659C98728200000000002000181200000008001A0000
       0050006900630000005400440072006100770050006900630074007500720065
       000000040000000014000000000049006D006100670065004E0061006D006500
       00001700000000180000000000470049004600460069006C0065004400610074
@@ -1899,7 +1899,7 @@ object FrameItemGrid_ColumnControlType: TFrameItemGrid_ColumnControlType
       00080A00000000550072006C000000FE564772FE94A563000015000000001810
       040000004900730043006C006900700052006F0075006E00640000002F662654
       6A52C18810620657625F0000000000001900000000160A050000004600690078
-      006500640043006F006C006F0072000000038C74659C98728200000000002065
+      006500640043006F006C006F0072000000038C74659C98728200000000002000
       07000000001200040000004900740065006D0054007900700065000000000000
       0015000000001C00040000004100750074006F00530069007A00650057006900
       64007400680000000000000015000000001E00040000004100750074006F0053
@@ -1945,7 +1945,7 @@ object FrameItemGrid_ColumnControlType: TFrameItemGrid_ColumnControlType
       0000FE564772FE94A563000015000000001810040000004900730043006C0069
       00700052006F0075006E00640000002F6626546A52C18810620657625F000000
       0000001900000000160A050000004600690078006500640043006F006C006F00
-      72000000038C74659C98728200000000002020181200000008001A0000005000
+      72000000038C74659C98728200000000002000181200000008001A0000005000
       6900630000005400440072006100770050006900630074007500720065000000
       040000000014000000000049006D006100670065004E0061006D006500000017
       00000000180000000000470049004600460069006C0065004400610074006100
@@ -1969,7 +1969,7 @@ object FrameItemGrid_ColumnControlType: TFrameItemGrid_ColumnControlType
       00000000550072006C000000FE564772FE94A563000015000000001810040000
       004900730043006C006900700052006F0075006E00640000002F6626546A52C1
       8810620657625F0000000000001900000000160A050000004600690078006500
-      640043006F006C006F0072000000038C74659C98728200000000002072070000
+      640043006F006C006F0072000000038C74659C98728200000000002000070000
       00001200040000004900740065006D0054007900700065000000000000001500
       0000001C00040000004100750074006F00530069007A00650057006900640074
       00680000000000000015000000001E00040000004100750074006F0053006900
@@ -3249,7 +3249,10 @@ object FrameItemGrid_ColumnControlType: TFrameItemGrid_ColumnControlType
           9F0210FB25104CA86C283C58F52078C99E93026B0142C4DB019E6B6AE1217F64
           09150000000049454E44AE426082}
         Control.Properties.RepeatCount = 4.000000000000000000
-        Control.ExplicitHeight = 50
+        Control.ExplicitLeft = 0
+        Control.ExplicitTop = 0
+        Control.ExplicitWidth = 120
+        Control.ExplicitHeight = 100
         IsAutoFitControlWidth = False
         BindItemFieldName = 'ItemDetail'
       end
@@ -5760,7 +5763,7 @@ object FrameItemGrid_ColumnControlType: TFrameItemGrid_ColumnControlType
       140000020000000400000000005C00000018160000001A000000000042006900
       6E006100720079004F0062006A0065006300740000000E000000000E00080000
       004800650069006700680074000000000000000000F0BF0E000000000C000800
-      00005700690064007400680000000000000000F8914015000000001000040000
+      00005700690064007400680000000000000000B08D4015000000001000040000
       00560069007300690062006C0065000000FFFFFFFF04000000000A0000000000
       4E0061006D006500000007000000000800040000005400610067000000000000
       0007000000000A00040000005400610067003100000000000000150000000010
@@ -7594,7 +7597,7 @@ object FrameItemGrid_ColumnControlType: TFrameItemGrid_ColumnControlType
       000018160000001A0000000000420069006E006100720079004F0062006A0065
       006300740000000E000000000E00080000004800650069006700680074000000
       000000000000F0BF0E000000000C000800000057006900640074006800000000
-      00000000F891401500000000100004000000560069007300690062006C006500
+      00000000B08D401500000000100004000000560069007300690062006C006500
       0000FFFFFFFF04000000000A00000000004E0061006D00650000000700000000
       08000400000054006100670000000000000007000000000A0004000000540061
       0067003100000000000000150000000010000400000043006800650063006B00
@@ -9895,6 +9898,5466 @@ object FrameItemGrid_ColumnControlType: TFrameItemGrid_ColumnControlType
         AutoSizeWidth = False
         AutoSizeHeight = False
       end>
+    ColumnHeader.Left = 0
+    ColumnHeader.Top = 0
+    ColumnHeader.Width = 1451
+    ColumnHeader.Height = 30
+    ColumnHeader.ParentMouseEvent = True
+    ColumnHeader.DirectUIVisible = False
+    ColumnHeader.ComponentTypeUseKind = ctukDefault
+    ColumnHeader.MaterialUseKind = mukSelfOwn
+    ColumnHeader.KeepSelfOwnMaterial = True
+    ColumnHeader.SelfOwnMaterial.BackColor.Color = clWhite
+    ColumnHeader.SelfOwnMaterial.BackColor.IsFill = True
+    ColumnHeader.SelfOwnMaterial.BackColor.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.BackColor.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
+    ColumnHeader.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.FillColorChangeType = cctNone
+    ColumnHeader.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
+    ColumnHeader.SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
+    ColumnHeader.SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.FillColorChangeType = cctNone
+    ColumnHeader.SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.IsTransparent = False
+    ColumnHeader.SelfOwnMaterial.PullDownRefreshPanelMaterial.BackColor.Color = clWhite
+    ColumnHeader.SelfOwnMaterial.PullDownRefreshPanelMaterial.BackColor.IsFill = True
+    ColumnHeader.SelfOwnMaterial.PullDownRefreshPanelMaterial.BackColor.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.PullDownRefreshPanelMaterial.BackColor.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.PullDownRefreshPanelMaterial.BackColor.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.PullDownRefreshPanelMaterial.BackColor.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
+    ColumnHeader.SelfOwnMaterial.PullDownRefreshPanelMaterial.BackColor.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.PullDownRefreshPanelMaterial.BackColor.DrawEffectSetting.MouseOverEffect.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.PullDownRefreshPanelMaterial.BackColor.DrawEffectSetting.MouseOverEffect.FillColorChangeType = cctNone
+    ColumnHeader.SelfOwnMaterial.PullDownRefreshPanelMaterial.BackColor.DrawEffectSetting.MouseOverEffect.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.PullDownRefreshPanelMaterial.BackColor.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.PullDownRefreshPanelMaterial.BackColor.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
+    ColumnHeader.SelfOwnMaterial.PullDownRefreshPanelMaterial.BackColor.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.PullDownRefreshPanelMaterial.BackColor.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.PullDownRefreshPanelMaterial.BackColor.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
+    ColumnHeader.SelfOwnMaterial.PullDownRefreshPanelMaterial.BackColor.DrawEffectSetting.DisabledEffect.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.PullDownRefreshPanelMaterial.BackColor.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.PullDownRefreshPanelMaterial.BackColor.DrawEffectSetting.FocusedEffect.FillColorChangeType = cctNone
+    ColumnHeader.SelfOwnMaterial.PullDownRefreshPanelMaterial.BackColor.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.PullDownRefreshPanelMaterial.IsTransparent = False
+    ColumnHeader.SelfOwnMaterial.PullDownRefreshPanelMaterial.IndicatorColor = clBlack
+    ColumnHeader.SelfOwnMaterial.PullDownRefreshPanelMaterial.LoadingPicture.IsClipRound = False
+    ColumnHeader.SelfOwnMaterial.PullDownRefreshPanelMaterial.LoadingPicture.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.PullDownRefreshPanelMaterial.DrawLoadingCaptionParam.FontName = 'Tahoma'
+    ColumnHeader.SelfOwnMaterial.PullDownRefreshPanelMaterial.DrawLoadingCaptionParam.FontSize = 8
+    ColumnHeader.SelfOwnMaterial.PullDownRefreshPanelMaterial.DrawLoadingCaptionParam.DrawFont.Charset = DEFAULT_CHARSET
+    ColumnHeader.SelfOwnMaterial.PullDownRefreshPanelMaterial.DrawLoadingCaptionParam.DrawFont.Height = -11
+    ColumnHeader.SelfOwnMaterial.PullDownRefreshPanelMaterial.DrawLoadingCaptionParam.DrawFont.Name = 'Tahoma'
+    ColumnHeader.SelfOwnMaterial.PullDownRefreshPanelMaterial.DrawLoadingCaptionParam.DrawFont.Style = []
+    ColumnHeader.SelfOwnMaterial.PullDownRefreshPanelMaterial.DrawLoadingCaptionParam.DrawFont.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.PullDownRefreshPanelMaterial.DrawLoadingCaptionParam.FontTrimming = fttNone
+    ColumnHeader.SelfOwnMaterial.PullDownRefreshPanelMaterial.DrawLoadingCaptionParam.FontHorzAlign = fhaLeft
+    ColumnHeader.SelfOwnMaterial.PullDownRefreshPanelMaterial.DrawLoadingCaptionParam.FontVertAlign = fvaTop
+    ColumnHeader.SelfOwnMaterial.PullDownRefreshPanelMaterial.DrawLoadingCaptionParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.PullDownRefreshPanelMaterial.DrawLoadingCaptionParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.PullDownRefreshPanelMaterial.DrawLoadingCaptionParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.PullDownRefreshPanelMaterial.DrawLoadingCaptionParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.PullDownRefreshPanelMaterial.DrawLoadingCaptionParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.PullDownRefreshPanelMaterial.DrawLoadingCaptionParam.DrawEffectSetting.PushedEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.PullDownRefreshPanelMaterial.DrawLoadingCaptionParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.PullDownRefreshPanelMaterial.DrawLoadingCaptionParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.PullDownRefreshPanelMaterial.DrawLoadingCaptionParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.PullDownRefreshPanelMaterial.DrawLoadingCaptionParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.PullDownRefreshPanelMaterial.EnableAutoCenterPosition = False
+    ColumnHeader.SelfOwnMaterial.PullDownRefreshPanelMaterial.EnableLoadingImageBiggerEffect = False
+    ColumnHeader.SelfOwnMaterial.PullDownRefreshPanelMaterial.EnableLoadingImageRotateEffect = True
+    ColumnHeader.SelfOwnMaterial.PullDownRefreshPanelMaterial.LoadingCaption = #27491#22312#21047#26032'...'
+    ColumnHeader.SelfOwnMaterial.PullDownRefreshPanelMaterial.DecidedLoadCaption = #26494#24320#21047#26032
+    ColumnHeader.SelfOwnMaterial.PullDownRefreshPanelMaterial.UnDecidedLoadCaption = #19979#25289#21047#26032
+    ColumnHeader.SelfOwnMaterial.PullUpLoadMorePanelMaterial.BackColor.Color = clWhite
+    ColumnHeader.SelfOwnMaterial.PullUpLoadMorePanelMaterial.BackColor.IsFill = True
+    ColumnHeader.SelfOwnMaterial.PullUpLoadMorePanelMaterial.BackColor.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.PullUpLoadMorePanelMaterial.BackColor.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.PullUpLoadMorePanelMaterial.BackColor.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.PullUpLoadMorePanelMaterial.BackColor.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
+    ColumnHeader.SelfOwnMaterial.PullUpLoadMorePanelMaterial.BackColor.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.PullUpLoadMorePanelMaterial.BackColor.DrawEffectSetting.MouseOverEffect.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.PullUpLoadMorePanelMaterial.BackColor.DrawEffectSetting.MouseOverEffect.FillColorChangeType = cctNone
+    ColumnHeader.SelfOwnMaterial.PullUpLoadMorePanelMaterial.BackColor.DrawEffectSetting.MouseOverEffect.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.PullUpLoadMorePanelMaterial.BackColor.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.PullUpLoadMorePanelMaterial.BackColor.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
+    ColumnHeader.SelfOwnMaterial.PullUpLoadMorePanelMaterial.BackColor.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.PullUpLoadMorePanelMaterial.BackColor.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.PullUpLoadMorePanelMaterial.BackColor.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
+    ColumnHeader.SelfOwnMaterial.PullUpLoadMorePanelMaterial.BackColor.DrawEffectSetting.DisabledEffect.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.PullUpLoadMorePanelMaterial.BackColor.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.PullUpLoadMorePanelMaterial.BackColor.DrawEffectSetting.FocusedEffect.FillColorChangeType = cctNone
+    ColumnHeader.SelfOwnMaterial.PullUpLoadMorePanelMaterial.BackColor.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.PullUpLoadMorePanelMaterial.IsTransparent = False
+    ColumnHeader.SelfOwnMaterial.PullUpLoadMorePanelMaterial.IndicatorColor = clBlack
+    ColumnHeader.SelfOwnMaterial.PullUpLoadMorePanelMaterial.LoadingPicture.IsClipRound = False
+    ColumnHeader.SelfOwnMaterial.PullUpLoadMorePanelMaterial.LoadingPicture.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.PullUpLoadMorePanelMaterial.DrawLoadingCaptionParam.FontName = 'Tahoma'
+    ColumnHeader.SelfOwnMaterial.PullUpLoadMorePanelMaterial.DrawLoadingCaptionParam.FontSize = 8
+    ColumnHeader.SelfOwnMaterial.PullUpLoadMorePanelMaterial.DrawLoadingCaptionParam.DrawFont.Charset = DEFAULT_CHARSET
+    ColumnHeader.SelfOwnMaterial.PullUpLoadMorePanelMaterial.DrawLoadingCaptionParam.DrawFont.Height = -11
+    ColumnHeader.SelfOwnMaterial.PullUpLoadMorePanelMaterial.DrawLoadingCaptionParam.DrawFont.Name = 'Tahoma'
+    ColumnHeader.SelfOwnMaterial.PullUpLoadMorePanelMaterial.DrawLoadingCaptionParam.DrawFont.Style = []
+    ColumnHeader.SelfOwnMaterial.PullUpLoadMorePanelMaterial.DrawLoadingCaptionParam.DrawFont.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.PullUpLoadMorePanelMaterial.DrawLoadingCaptionParam.FontTrimming = fttNone
+    ColumnHeader.SelfOwnMaterial.PullUpLoadMorePanelMaterial.DrawLoadingCaptionParam.FontHorzAlign = fhaLeft
+    ColumnHeader.SelfOwnMaterial.PullUpLoadMorePanelMaterial.DrawLoadingCaptionParam.FontVertAlign = fvaTop
+    ColumnHeader.SelfOwnMaterial.PullUpLoadMorePanelMaterial.DrawLoadingCaptionParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.PullUpLoadMorePanelMaterial.DrawLoadingCaptionParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.PullUpLoadMorePanelMaterial.DrawLoadingCaptionParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.PullUpLoadMorePanelMaterial.DrawLoadingCaptionParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.PullUpLoadMorePanelMaterial.DrawLoadingCaptionParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.PullUpLoadMorePanelMaterial.DrawLoadingCaptionParam.DrawEffectSetting.PushedEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.PullUpLoadMorePanelMaterial.DrawLoadingCaptionParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.PullUpLoadMorePanelMaterial.DrawLoadingCaptionParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.PullUpLoadMorePanelMaterial.DrawLoadingCaptionParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.PullUpLoadMorePanelMaterial.DrawLoadingCaptionParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.PullUpLoadMorePanelMaterial.EnableAutoCenterPosition = False
+    ColumnHeader.SelfOwnMaterial.PullUpLoadMorePanelMaterial.EnableLoadingImageBiggerEffect = False
+    ColumnHeader.SelfOwnMaterial.PullUpLoadMorePanelMaterial.EnableLoadingImageRotateEffect = True
+    ColumnHeader.SelfOwnMaterial.PullUpLoadMorePanelMaterial.LoadingCaption = #27491#22312#21152#36733'...'
+    ColumnHeader.SelfOwnMaterial.PullUpLoadMorePanelMaterial.DecidedLoadCaption = #26494#24320#21152#36733#26356#22810
+    ColumnHeader.SelfOwnMaterial.PullUpLoadMorePanelMaterial.UnDecidedLoadCaption = #19978#25289#21152#36733#26356#22810
+    ColumnHeader.SelfOwnMaterial.DrawEmptyContentCaptionParam.FontName = 'Tahoma'
+    ColumnHeader.SelfOwnMaterial.DrawEmptyContentCaptionParam.FontSize = 8
+    ColumnHeader.SelfOwnMaterial.DrawEmptyContentCaptionParam.DrawFont.Charset = DEFAULT_CHARSET
+    ColumnHeader.SelfOwnMaterial.DrawEmptyContentCaptionParam.DrawFont.Height = -11
+    ColumnHeader.SelfOwnMaterial.DrawEmptyContentCaptionParam.DrawFont.Name = 'Tahoma'
+    ColumnHeader.SelfOwnMaterial.DrawEmptyContentCaptionParam.DrawFont.Style = []
+    ColumnHeader.SelfOwnMaterial.DrawEmptyContentCaptionParam.DrawFont.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawEmptyContentCaptionParam.FontTrimming = fttNone
+    ColumnHeader.SelfOwnMaterial.DrawEmptyContentCaptionParam.FontHorzAlign = fhaLeft
+    ColumnHeader.SelfOwnMaterial.DrawEmptyContentCaptionParam.FontVertAlign = fvaTop
+    ColumnHeader.SelfOwnMaterial.DrawEmptyContentCaptionParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawEmptyContentCaptionParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DrawEmptyContentCaptionParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawEmptyContentCaptionParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DrawEmptyContentCaptionParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawEmptyContentCaptionParam.DrawEffectSetting.PushedEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DrawEmptyContentCaptionParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawEmptyContentCaptionParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DrawEmptyContentCaptionParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawEmptyContentCaptionParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DrawEmptyContentDescriptionParam.FontName = 'Tahoma'
+    ColumnHeader.SelfOwnMaterial.DrawEmptyContentDescriptionParam.FontSize = 8
+    ColumnHeader.SelfOwnMaterial.DrawEmptyContentDescriptionParam.DrawFont.Charset = DEFAULT_CHARSET
+    ColumnHeader.SelfOwnMaterial.DrawEmptyContentDescriptionParam.DrawFont.Height = -11
+    ColumnHeader.SelfOwnMaterial.DrawEmptyContentDescriptionParam.DrawFont.Name = 'Tahoma'
+    ColumnHeader.SelfOwnMaterial.DrawEmptyContentDescriptionParam.DrawFont.Style = []
+    ColumnHeader.SelfOwnMaterial.DrawEmptyContentDescriptionParam.DrawFont.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawEmptyContentDescriptionParam.FontTrimming = fttNone
+    ColumnHeader.SelfOwnMaterial.DrawEmptyContentDescriptionParam.FontHorzAlign = fhaLeft
+    ColumnHeader.SelfOwnMaterial.DrawEmptyContentDescriptionParam.FontVertAlign = fvaTop
+    ColumnHeader.SelfOwnMaterial.DrawEmptyContentDescriptionParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawEmptyContentDescriptionParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DrawEmptyContentDescriptionParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawEmptyContentDescriptionParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DrawEmptyContentDescriptionParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawEmptyContentDescriptionParam.DrawEffectSetting.PushedEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DrawEmptyContentDescriptionParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawEmptyContentDescriptionParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DrawEmptyContentDescriptionParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawEmptyContentDescriptionParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DrawEmptyContentPictureParam.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawEmptyContentPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawEmptyContentPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawEmptyContentPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawEmptyContentPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawEmptyContentPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawSpaceParam.Color = clWhite
+    ColumnHeader.SelfOwnMaterial.DrawSpaceParam.IsFill = False
+    ColumnHeader.SelfOwnMaterial.DrawSpaceParam.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawSpaceParam.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawSpaceParam.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawSpaceParam.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
+    ColumnHeader.SelfOwnMaterial.DrawSpaceParam.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawSpaceParam.DrawEffectSetting.MouseOverEffect.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawSpaceParam.DrawEffectSetting.MouseOverEffect.FillColorChangeType = cctNone
+    ColumnHeader.SelfOwnMaterial.DrawSpaceParam.DrawEffectSetting.MouseOverEffect.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawSpaceParam.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawSpaceParam.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
+    ColumnHeader.SelfOwnMaterial.DrawSpaceParam.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawSpaceParam.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawSpaceParam.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
+    ColumnHeader.SelfOwnMaterial.DrawSpaceParam.DrawEffectSetting.DisabledEffect.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawSpaceParam.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawSpaceParam.DrawEffectSetting.FocusedEffect.FillColorChangeType = cctNone
+    ColumnHeader.SelfOwnMaterial.DrawSpaceParam.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.IsSimpleDrawGroupRoundRect = False
+    ColumnHeader.SelfOwnMaterial.IsSimpleDrawGroupBeginDevide = True
+    ColumnHeader.SelfOwnMaterial.IsSimpleDrawGroupEndDevide = True
+    ColumnHeader.SelfOwnMaterial.DrawGroupBeginDevideParam.Color = 15592941
+    ColumnHeader.SelfOwnMaterial.DrawGroupBeginDevideParam.IsFill = False
+    ColumnHeader.SelfOwnMaterial.DrawGroupBeginDevideParam.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawGroupBeginDevideParam.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawGroupBeginDevideParam.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawGroupBeginDevideParam.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
+    ColumnHeader.SelfOwnMaterial.DrawGroupBeginDevideParam.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawGroupBeginDevideParam.DrawEffectSetting.MouseOverEffect.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawGroupBeginDevideParam.DrawEffectSetting.MouseOverEffect.FillColorChangeType = cctNone
+    ColumnHeader.SelfOwnMaterial.DrawGroupBeginDevideParam.DrawEffectSetting.MouseOverEffect.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawGroupBeginDevideParam.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawGroupBeginDevideParam.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
+    ColumnHeader.SelfOwnMaterial.DrawGroupBeginDevideParam.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawGroupBeginDevideParam.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawGroupBeginDevideParam.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
+    ColumnHeader.SelfOwnMaterial.DrawGroupBeginDevideParam.DrawEffectSetting.DisabledEffect.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawGroupBeginDevideParam.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawGroupBeginDevideParam.DrawEffectSetting.FocusedEffect.FillColorChangeType = cctNone
+    ColumnHeader.SelfOwnMaterial.DrawGroupBeginDevideParam.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawGroupBackColorParam.Color = 15592941
+    ColumnHeader.SelfOwnMaterial.DrawGroupBackColorParam.IsFill = False
+    ColumnHeader.SelfOwnMaterial.DrawGroupBackColorParam.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawGroupBackColorParam.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawGroupBackColorParam.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawGroupBackColorParam.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
+    ColumnHeader.SelfOwnMaterial.DrawGroupBackColorParam.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawGroupBackColorParam.DrawEffectSetting.MouseOverEffect.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawGroupBackColorParam.DrawEffectSetting.MouseOverEffect.FillColorChangeType = cctNone
+    ColumnHeader.SelfOwnMaterial.DrawGroupBackColorParam.DrawEffectSetting.MouseOverEffect.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawGroupBackColorParam.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawGroupBackColorParam.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
+    ColumnHeader.SelfOwnMaterial.DrawGroupBackColorParam.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawGroupBackColorParam.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawGroupBackColorParam.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
+    ColumnHeader.SelfOwnMaterial.DrawGroupBackColorParam.DrawEffectSetting.DisabledEffect.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawGroupBackColorParam.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawGroupBackColorParam.DrawEffectSetting.FocusedEffect.FillColorChangeType = cctNone
+    ColumnHeader.SelfOwnMaterial.DrawGroupBackColorParam.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.GroupBackPicture.IsClipRound = False
+    ColumnHeader.SelfOwnMaterial.GroupBackPicture.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawGroupBackPictureParam.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawGroupBackPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawGroupBackPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawGroupBackPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawGroupBackPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawGroupBackPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawGroupEndDevideParam.Color = 15592941
+    ColumnHeader.SelfOwnMaterial.DrawGroupEndDevideParam.IsFill = False
+    ColumnHeader.SelfOwnMaterial.DrawGroupEndDevideParam.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawGroupEndDevideParam.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawGroupEndDevideParam.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawGroupEndDevideParam.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
+    ColumnHeader.SelfOwnMaterial.DrawGroupEndDevideParam.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawGroupEndDevideParam.DrawEffectSetting.MouseOverEffect.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawGroupEndDevideParam.DrawEffectSetting.MouseOverEffect.FillColorChangeType = cctNone
+    ColumnHeader.SelfOwnMaterial.DrawGroupEndDevideParam.DrawEffectSetting.MouseOverEffect.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawGroupEndDevideParam.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawGroupEndDevideParam.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
+    ColumnHeader.SelfOwnMaterial.DrawGroupEndDevideParam.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawGroupEndDevideParam.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawGroupEndDevideParam.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
+    ColumnHeader.SelfOwnMaterial.DrawGroupEndDevideParam.DrawEffectSetting.DisabledEffect.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawGroupEndDevideParam.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawGroupEndDevideParam.DrawEffectSetting.FocusedEffect.FillColorChangeType = cctNone
+    ColumnHeader.SelfOwnMaterial.DrawGroupEndDevideParam.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.ItemBackNormalPicture.IsClipRound = False
+    ColumnHeader.SelfOwnMaterial.ItemBackNormalPicture.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.ItemBackHoverPicture.IsClipRound = False
+    ColumnHeader.SelfOwnMaterial.ItemBackHoverPicture.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.ItemBackDownPicture.IsClipRound = False
+    ColumnHeader.SelfOwnMaterial.ItemBackDownPicture.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.ItemBackPushedPicture.IsClipRound = False
+    ColumnHeader.SelfOwnMaterial.ItemBackPushedPicture.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemBackColorParam.Color = clWhite
+    ColumnHeader.SelfOwnMaterial.DrawItemBackColorParam.IsFill = False
+    ColumnHeader.SelfOwnMaterial.DrawItemBackColorParam.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemBackColorParam.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
+    ColumnHeader.SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseOverEffect.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseOverEffect.FillColorChangeType = cctNone
+    ColumnHeader.SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseOverEffect.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
+    ColumnHeader.SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
+    ColumnHeader.SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.DisabledEffect.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.FocusedEffect.FillColorChangeType = cctNone
+    ColumnHeader.SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemBackGndPictureParam.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.ItemAccessoryPicture.IsClipRound = False
+    ColumnHeader.SelfOwnMaterial.ItemAccessoryPicture.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemAccessoryPictureParam.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.IsDrawCenterItemRect = False
+    ColumnHeader.SelfOwnMaterial.DrawCenterItemRectParam.Color = 15592941
+    ColumnHeader.SelfOwnMaterial.DrawCenterItemRectParam.IsFill = False
+    ColumnHeader.SelfOwnMaterial.DrawCenterItemRectParam.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawCenterItemRectParam.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawCenterItemRectParam.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawCenterItemRectParam.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
+    ColumnHeader.SelfOwnMaterial.DrawCenterItemRectParam.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawCenterItemRectParam.DrawEffectSetting.MouseOverEffect.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawCenterItemRectParam.DrawEffectSetting.MouseOverEffect.FillColorChangeType = cctNone
+    ColumnHeader.SelfOwnMaterial.DrawCenterItemRectParam.DrawEffectSetting.MouseOverEffect.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawCenterItemRectParam.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawCenterItemRectParam.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
+    ColumnHeader.SelfOwnMaterial.DrawCenterItemRectParam.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawCenterItemRectParam.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawCenterItemRectParam.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
+    ColumnHeader.SelfOwnMaterial.DrawCenterItemRectParam.DrawEffectSetting.DisabledEffect.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawCenterItemRectParam.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawCenterItemRectParam.DrawEffectSetting.FocusedEffect.FillColorChangeType = cctNone
+    ColumnHeader.SelfOwnMaterial.DrawCenterItemRectParam.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.IsSimpleDrawItemDevide = True
+    ColumnHeader.SelfOwnMaterial.DrawItemDevideParam.Color = 15592941
+    ColumnHeader.SelfOwnMaterial.DrawItemDevideParam.IsFill = False
+    ColumnHeader.SelfOwnMaterial.DrawItemDevideParam.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemDevideParam.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemDevideParam.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemDevideParam.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
+    ColumnHeader.SelfOwnMaterial.DrawItemDevideParam.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemDevideParam.DrawEffectSetting.MouseOverEffect.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemDevideParam.DrawEffectSetting.MouseOverEffect.FillColorChangeType = cctNone
+    ColumnHeader.SelfOwnMaterial.DrawItemDevideParam.DrawEffectSetting.MouseOverEffect.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemDevideParam.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemDevideParam.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
+    ColumnHeader.SelfOwnMaterial.DrawItemDevideParam.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemDevideParam.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemDevideParam.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
+    ColumnHeader.SelfOwnMaterial.DrawItemDevideParam.DrawEffectSetting.DisabledEffect.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemDevideParam.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemDevideParam.DrawEffectSetting.FocusedEffect.FillColorChangeType = cctNone
+    ColumnHeader.SelfOwnMaterial.DrawItemDevideParam.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemCaptionParam.FontName = 'Tahoma'
+    ColumnHeader.SelfOwnMaterial.DrawItemCaptionParam.FontSize = 8
+    ColumnHeader.SelfOwnMaterial.DrawItemCaptionParam.DrawFont.Charset = DEFAULT_CHARSET
+    ColumnHeader.SelfOwnMaterial.DrawItemCaptionParam.DrawFont.Height = -11
+    ColumnHeader.SelfOwnMaterial.DrawItemCaptionParam.DrawFont.Name = 'Tahoma'
+    ColumnHeader.SelfOwnMaterial.DrawItemCaptionParam.DrawFont.Style = []
+    ColumnHeader.SelfOwnMaterial.DrawItemCaptionParam.DrawFont.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemCaptionParam.FontTrimming = fttNone
+    ColumnHeader.SelfOwnMaterial.DrawItemCaptionParam.FontHorzAlign = fhaLeft
+    ColumnHeader.SelfOwnMaterial.DrawItemCaptionParam.FontVertAlign = fvaTop
+    ColumnHeader.SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.PushedEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DrawItemIconParam.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemIconParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemIconParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemIconParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemPicParam.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemPicParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemPicParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemPicParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemPicParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemPicParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemDetailParam.FontName = 'Tahoma'
+    ColumnHeader.SelfOwnMaterial.DrawItemDetailParam.FontSize = 8
+    ColumnHeader.SelfOwnMaterial.DrawItemDetailParam.DrawFont.Charset = DEFAULT_CHARSET
+    ColumnHeader.SelfOwnMaterial.DrawItemDetailParam.DrawFont.Height = -11
+    ColumnHeader.SelfOwnMaterial.DrawItemDetailParam.DrawFont.Name = 'Tahoma'
+    ColumnHeader.SelfOwnMaterial.DrawItemDetailParam.DrawFont.Style = []
+    ColumnHeader.SelfOwnMaterial.DrawItemDetailParam.DrawFont.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemDetailParam.FontTrimming = fttNone
+    ColumnHeader.SelfOwnMaterial.DrawItemDetailParam.FontHorzAlign = fhaLeft
+    ColumnHeader.SelfOwnMaterial.DrawItemDetailParam.FontVertAlign = fvaTop
+    ColumnHeader.SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.PushedEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail1Param.FontName = 'Tahoma'
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail1Param.FontSize = 8
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail1Param.DrawFont.Charset = DEFAULT_CHARSET
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail1Param.DrawFont.Height = -11
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail1Param.DrawFont.Name = 'Tahoma'
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail1Param.DrawFont.Style = []
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail1Param.DrawFont.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail1Param.FontTrimming = fttNone
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail1Param.FontHorzAlign = fhaLeft
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail1Param.FontVertAlign = fvaTop
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.PushedEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail2Param.FontName = 'Tahoma'
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail2Param.FontSize = 8
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail2Param.DrawFont.Charset = DEFAULT_CHARSET
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail2Param.DrawFont.Height = -11
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail2Param.DrawFont.Name = 'Tahoma'
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail2Param.DrawFont.Style = []
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail2Param.DrawFont.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail2Param.FontTrimming = fttNone
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail2Param.FontHorzAlign = fhaLeft
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail2Param.FontVertAlign = fvaTop
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.PushedEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail3Param.FontName = 'Tahoma'
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail3Param.FontSize = 8
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail3Param.DrawFont.Charset = DEFAULT_CHARSET
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail3Param.DrawFont.Height = -11
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail3Param.DrawFont.Name = 'Tahoma'
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail3Param.DrawFont.Style = []
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail3Param.DrawFont.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail3Param.FontTrimming = fttNone
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail3Param.FontHorzAlign = fhaLeft
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail3Param.FontVertAlign = fvaTop
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.PushedEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail4Param.FontName = 'Tahoma'
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail4Param.FontSize = 8
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail4Param.DrawFont.Charset = DEFAULT_CHARSET
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail4Param.DrawFont.Height = -11
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail4Param.DrawFont.Name = 'Tahoma'
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail4Param.DrawFont.Style = []
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail4Param.DrawFont.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail4Param.FontTrimming = fttNone
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail4Param.FontHorzAlign = fhaLeft
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail4Param.FontVertAlign = fvaTop
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.PushedEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail5Param.FontName = 'Tahoma'
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail5Param.FontSize = 8
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail5Param.DrawFont.Charset = DEFAULT_CHARSET
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail5Param.DrawFont.Height = -11
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail5Param.DrawFont.Name = 'Tahoma'
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail5Param.DrawFont.Style = []
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail5Param.DrawFont.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail5Param.FontTrimming = fttNone
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail5Param.FontHorzAlign = fhaLeft
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail5Param.FontVertAlign = fvaTop
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.PushedEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail6Param.FontName = 'Tahoma'
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail6Param.FontSize = 8
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail6Param.DrawFont.Charset = DEFAULT_CHARSET
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail6Param.DrawFont.Height = -11
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail6Param.DrawFont.Name = 'Tahoma'
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail6Param.DrawFont.Style = []
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail6Param.DrawFont.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail6Param.FontTrimming = fttNone
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail6Param.FontHorzAlign = fhaLeft
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail6Param.FontVertAlign = fvaTop
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.PushedEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.ItemAccessoryPicture.IsClipRound = False
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.ItemAccessoryPicture.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemAccessoryPictureParam.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.ItemBackNormalPicture.IsClipRound = False
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.ItemBackNormalPicture.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.ItemBackHoverPicture.IsClipRound = False
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.ItemBackHoverPicture.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.ItemBackDownPicture.IsClipRound = False
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.ItemBackDownPicture.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.ItemBackPushedPicture.IsClipRound = False
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.ItemBackPushedPicture.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemBackColorParam.Color = clWhite
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemBackColorParam.IsFill = False
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemBackColorParam.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemBackColorParam.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseOverEffect.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseOverEffect.FillColorChangeType = cctNone
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseOverEffect.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.DisabledEffect.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.FocusedEffect.FillColorChangeType = cctNone
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemBackGndPictureParam.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemCaptionParam.FontName = 'Tahoma'
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemCaptionParam.FontSize = 8
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemCaptionParam.DrawFont.Charset = DEFAULT_CHARSET
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemCaptionParam.DrawFont.Height = -11
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemCaptionParam.DrawFont.Name = 'Tahoma'
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemCaptionParam.DrawFont.Style = []
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemCaptionParam.DrawFont.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemCaptionParam.FontTrimming = fttNone
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemCaptionParam.FontHorzAlign = fhaLeft
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemCaptionParam.FontVertAlign = fvaTop
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemCaptionParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemCaptionParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemCaptionParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemCaptionParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemCaptionParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemCaptionParam.DrawEffectSetting.PushedEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemCaptionParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemCaptionParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemCaptionParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemCaptionParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemIconParam.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemIconParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemIconParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemIconParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemPicParam.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemPicParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemPicParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemPicParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemPicParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemPicParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetailParam.FontName = 'Tahoma'
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetailParam.FontSize = 8
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetailParam.DrawFont.Charset = DEFAULT_CHARSET
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetailParam.DrawFont.Height = -11
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetailParam.DrawFont.Name = 'Tahoma'
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetailParam.DrawFont.Style = []
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetailParam.DrawFont.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetailParam.FontTrimming = fttNone
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetailParam.FontHorzAlign = fhaLeft
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetailParam.FontVertAlign = fvaTop
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetailParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetailParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetailParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetailParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetailParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetailParam.DrawEffectSetting.PushedEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetailParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetailParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetailParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetailParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail1Param.FontName = 'Tahoma'
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail1Param.FontSize = 8
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail1Param.DrawFont.Charset = DEFAULT_CHARSET
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail1Param.DrawFont.Height = -11
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail1Param.DrawFont.Name = 'Tahoma'
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail1Param.DrawFont.Style = []
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail1Param.DrawFont.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail1Param.FontTrimming = fttNone
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail1Param.FontHorzAlign = fhaLeft
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail1Param.FontVertAlign = fvaTop
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail1Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail1Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail1Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail1Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail1Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail1Param.DrawEffectSetting.PushedEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail1Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail1Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail1Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail1Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail2Param.FontName = 'Tahoma'
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail2Param.FontSize = 8
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail2Param.DrawFont.Charset = DEFAULT_CHARSET
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail2Param.DrawFont.Height = -11
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail2Param.DrawFont.Name = 'Tahoma'
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail2Param.DrawFont.Style = []
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail2Param.DrawFont.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail2Param.FontTrimming = fttNone
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail2Param.FontHorzAlign = fhaLeft
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail2Param.FontVertAlign = fvaTop
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail2Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail2Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail2Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail2Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail2Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail2Param.DrawEffectSetting.PushedEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail2Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail2Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail2Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail2Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail3Param.FontName = 'Tahoma'
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail3Param.FontSize = 8
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail3Param.DrawFont.Charset = DEFAULT_CHARSET
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail3Param.DrawFont.Height = -11
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail3Param.DrawFont.Name = 'Tahoma'
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail3Param.DrawFont.Style = []
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail3Param.DrawFont.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail3Param.FontTrimming = fttNone
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail3Param.FontHorzAlign = fhaLeft
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail3Param.FontVertAlign = fvaTop
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail3Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail3Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail3Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail3Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail3Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail3Param.DrawEffectSetting.PushedEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail3Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail3Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail3Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail3Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail4Param.FontName = 'Tahoma'
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail4Param.FontSize = 8
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail4Param.DrawFont.Charset = DEFAULT_CHARSET
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail4Param.DrawFont.Height = -11
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail4Param.DrawFont.Name = 'Tahoma'
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail4Param.DrawFont.Style = []
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail4Param.DrawFont.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail4Param.FontTrimming = fttNone
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail4Param.FontHorzAlign = fhaLeft
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail4Param.FontVertAlign = fvaTop
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail4Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail4Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail4Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail4Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail4Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail4Param.DrawEffectSetting.PushedEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail4Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail4Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail4Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail4Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail5Param.FontName = 'Tahoma'
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail5Param.FontSize = 8
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail5Param.DrawFont.Charset = DEFAULT_CHARSET
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail5Param.DrawFont.Height = -11
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail5Param.DrawFont.Name = 'Tahoma'
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail5Param.DrawFont.Style = []
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail5Param.DrawFont.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail5Param.FontTrimming = fttNone
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail5Param.FontHorzAlign = fhaLeft
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail5Param.FontVertAlign = fvaTop
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail5Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail5Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail5Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail5Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail5Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail5Param.DrawEffectSetting.PushedEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail5Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail5Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail5Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail5Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail6Param.FontName = 'Tahoma'
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail6Param.FontSize = 8
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail6Param.DrawFont.Charset = DEFAULT_CHARSET
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail6Param.DrawFont.Height = -11
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail6Param.DrawFont.Name = 'Tahoma'
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail6Param.DrawFont.Style = []
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail6Param.DrawFont.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail6Param.FontTrimming = fttNone
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail6Param.FontHorzAlign = fhaLeft
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail6Param.FontVertAlign = fvaTop
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail6Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail6Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail6Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail6Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail6Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail6Param.DrawEffectSetting.PushedEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail6Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail6Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail6Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.DefaultTypeItemMaterial.DrawItemDetail6Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.ItemAccessoryPicture.IsClipRound = False
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.ItemAccessoryPicture.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemAccessoryPictureParam.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.ItemBackNormalPicture.IsClipRound = False
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.ItemBackNormalPicture.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.ItemBackHoverPicture.IsClipRound = False
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.ItemBackHoverPicture.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.ItemBackDownPicture.IsClipRound = False
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.ItemBackDownPicture.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.ItemBackPushedPicture.IsClipRound = False
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.ItemBackPushedPicture.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemBackColorParam.Color = clWhite
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemBackColorParam.IsFill = False
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemBackColorParam.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemBackColorParam.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseOverEffect.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseOverEffect.FillColorChangeType = cctNone
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseOverEffect.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.DisabledEffect.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.FocusedEffect.FillColorChangeType = cctNone
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemBackColorParam.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemBackGndPictureParam.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemCaptionParam.FontName = 'Tahoma'
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemCaptionParam.FontSize = 8
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemCaptionParam.DrawFont.Charset = DEFAULT_CHARSET
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemCaptionParam.DrawFont.Height = -11
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemCaptionParam.DrawFont.Name = 'Tahoma'
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemCaptionParam.DrawFont.Style = []
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemCaptionParam.DrawFont.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemCaptionParam.FontTrimming = fttNone
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemCaptionParam.FontHorzAlign = fhaLeft
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemCaptionParam.FontVertAlign = fvaTop
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemCaptionParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemCaptionParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemCaptionParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemCaptionParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemCaptionParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemCaptionParam.DrawEffectSetting.PushedEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemCaptionParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemCaptionParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemCaptionParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemCaptionParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemIconParam.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemIconParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemIconParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemIconParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemPicParam.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemPicParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemPicParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemPicParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemPicParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemPicParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetailParam.FontName = 'Tahoma'
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetailParam.FontSize = 8
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetailParam.DrawFont.Charset = DEFAULT_CHARSET
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetailParam.DrawFont.Height = -11
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetailParam.DrawFont.Name = 'Tahoma'
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetailParam.DrawFont.Style = []
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetailParam.DrawFont.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetailParam.FontTrimming = fttNone
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetailParam.FontHorzAlign = fhaLeft
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetailParam.FontVertAlign = fvaTop
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetailParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetailParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetailParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetailParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetailParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetailParam.DrawEffectSetting.PushedEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetailParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetailParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetailParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetailParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail1Param.FontName = 'Tahoma'
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail1Param.FontSize = 8
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail1Param.DrawFont.Charset = DEFAULT_CHARSET
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail1Param.DrawFont.Height = -11
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail1Param.DrawFont.Name = 'Tahoma'
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail1Param.DrawFont.Style = []
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail1Param.DrawFont.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail1Param.FontTrimming = fttNone
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail1Param.FontHorzAlign = fhaLeft
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail1Param.FontVertAlign = fvaTop
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail1Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail1Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail1Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail1Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail1Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail1Param.DrawEffectSetting.PushedEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail1Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail1Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail1Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail1Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail2Param.FontName = 'Tahoma'
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail2Param.FontSize = 8
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail2Param.DrawFont.Charset = DEFAULT_CHARSET
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail2Param.DrawFont.Height = -11
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail2Param.DrawFont.Name = 'Tahoma'
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail2Param.DrawFont.Style = []
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail2Param.DrawFont.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail2Param.FontTrimming = fttNone
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail2Param.FontHorzAlign = fhaLeft
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail2Param.FontVertAlign = fvaTop
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail2Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail2Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail2Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail2Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail2Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail2Param.DrawEffectSetting.PushedEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail2Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail2Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail2Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail2Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail3Param.FontName = 'Tahoma'
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail3Param.FontSize = 8
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail3Param.DrawFont.Charset = DEFAULT_CHARSET
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail3Param.DrawFont.Height = -11
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail3Param.DrawFont.Name = 'Tahoma'
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail3Param.DrawFont.Style = []
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail3Param.DrawFont.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail3Param.FontTrimming = fttNone
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail3Param.FontHorzAlign = fhaLeft
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail3Param.FontVertAlign = fvaTop
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail3Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail3Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail3Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail3Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail3Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail3Param.DrawEffectSetting.PushedEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail3Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail3Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail3Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail3Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail4Param.FontName = 'Tahoma'
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail4Param.FontSize = 8
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail4Param.DrawFont.Charset = DEFAULT_CHARSET
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail4Param.DrawFont.Height = -11
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail4Param.DrawFont.Name = 'Tahoma'
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail4Param.DrawFont.Style = []
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail4Param.DrawFont.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail4Param.FontTrimming = fttNone
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail4Param.FontHorzAlign = fhaLeft
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail4Param.FontVertAlign = fvaTop
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail4Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail4Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail4Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail4Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail4Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail4Param.DrawEffectSetting.PushedEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail4Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail4Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail4Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail4Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail5Param.FontName = 'Tahoma'
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail5Param.FontSize = 8
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail5Param.DrawFont.Charset = DEFAULT_CHARSET
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail5Param.DrawFont.Height = -11
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail5Param.DrawFont.Name = 'Tahoma'
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail5Param.DrawFont.Style = []
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail5Param.DrawFont.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail5Param.FontTrimming = fttNone
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail5Param.FontHorzAlign = fhaLeft
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail5Param.FontVertAlign = fvaTop
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail5Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail5Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail5Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail5Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail5Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail5Param.DrawEffectSetting.PushedEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail5Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail5Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail5Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail5Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail6Param.FontName = 'Tahoma'
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail6Param.FontSize = 8
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail6Param.DrawFont.Charset = DEFAULT_CHARSET
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail6Param.DrawFont.Height = -11
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail6Param.DrawFont.Name = 'Tahoma'
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail6Param.DrawFont.Style = []
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail6Param.DrawFont.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail6Param.FontTrimming = fttNone
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail6Param.FontHorzAlign = fhaLeft
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail6Param.FontVertAlign = fvaTop
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail6Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail6Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail6Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail6Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail6Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail6Param.DrawEffectSetting.PushedEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail6Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail6Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail6Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+    ColumnHeader.SelfOwnMaterial.Item1TypeItemMaterial.DrawItemDetail6Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+    ColumnHeader.SelfOwnMaterial.IsAutoAdjustItemDesignerPanelSize = True
+    ColumnHeader.HitTest = True
+    ColumnHeader.MouseDownFocus = False
+    ColumnHeader.Align = alTop
+    ColumnHeader.ParentBackground = False
+    ColumnHeader.TabOrder = 0
+    ColumnHeader.VertScrollBar.Left = 1439
+    ColumnHeader.VertScrollBar.Top = 0
+    ColumnHeader.VertScrollBar.Width = 12
+    ColumnHeader.VertScrollBar.Height = 30
+    ColumnHeader.VertScrollBar.ParentMouseEvent = True
+    ColumnHeader.VertScrollBar.DirectUIVisible = False
+    ColumnHeader.VertScrollBar.ComponentTypeUseKind = ctukDefault
+    ColumnHeader.VertScrollBar.MaterialUseKind = mukSelfOwn
+    ColumnHeader.VertScrollBar.KeepSelfOwnMaterial = True
+    ColumnHeader.VertScrollBar.SelfOwnMaterial.BackColor.Color = clWhite
+    ColumnHeader.VertScrollBar.SelfOwnMaterial.BackColor.IsFill = True
+    ColumnHeader.VertScrollBar.SelfOwnMaterial.BackColor.FillColor.Alpha = 255
+    ColumnHeader.VertScrollBar.SelfOwnMaterial.BackColor.BorderColor.Alpha = 255
+    ColumnHeader.VertScrollBar.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
+    ColumnHeader.VertScrollBar.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
+    ColumnHeader.VertScrollBar.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
+    ColumnHeader.VertScrollBar.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.FillColor.Alpha = 255
+    ColumnHeader.VertScrollBar.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.FillColorChangeType = cctNone
+    ColumnHeader.VertScrollBar.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.BorderColor.Alpha = 255
+    ColumnHeader.VertScrollBar.SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
+    ColumnHeader.VertScrollBar.SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
+    ColumnHeader.VertScrollBar.SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
+    ColumnHeader.VertScrollBar.SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
+    ColumnHeader.VertScrollBar.SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
+    ColumnHeader.VertScrollBar.SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.BorderColor.Alpha = 255
+    ColumnHeader.VertScrollBar.SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
+    ColumnHeader.VertScrollBar.SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.FillColorChangeType = cctNone
+    ColumnHeader.VertScrollBar.SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
+    ColumnHeader.VertScrollBar.SelfOwnMaterial.IsTransparent = False
+    ColumnHeader.VertScrollBar.SelfOwnMaterial.ThumbBtnMinSize = 40
+    ColumnHeader.VertScrollBar.SelfOwnMaterial.ThumbBtnDrawSize = 4
+    ColumnHeader.VertScrollBar.SelfOwnMaterial.IsDefaultDrawThumbBtn = True
+    ColumnHeader.VertScrollBar.SelfOwnMaterial.ThumbBtnRectParam.Color = 11513775
+    ColumnHeader.VertScrollBar.SelfOwnMaterial.ThumbBtnRectParam.IsFill = False
+    ColumnHeader.VertScrollBar.SelfOwnMaterial.ThumbBtnRectParam.FillColor.Alpha = 255
+    ColumnHeader.VertScrollBar.SelfOwnMaterial.ThumbBtnRectParam.FillColor.Color = 11513775
+    ColumnHeader.VertScrollBar.SelfOwnMaterial.ThumbBtnRectParam.BorderColor.Alpha = 255
+    ColumnHeader.VertScrollBar.SelfOwnMaterial.ThumbBtnRectParam.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
+    ColumnHeader.VertScrollBar.SelfOwnMaterial.ThumbBtnRectParam.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
+    ColumnHeader.VertScrollBar.SelfOwnMaterial.ThumbBtnRectParam.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
+    ColumnHeader.VertScrollBar.SelfOwnMaterial.ThumbBtnRectParam.DrawEffectSetting.MouseOverEffect.FillColor.Alpha = 255
+    ColumnHeader.VertScrollBar.SelfOwnMaterial.ThumbBtnRectParam.DrawEffectSetting.MouseOverEffect.FillColorChangeType = cctNone
+    ColumnHeader.VertScrollBar.SelfOwnMaterial.ThumbBtnRectParam.DrawEffectSetting.MouseOverEffect.BorderColor.Alpha = 255
+    ColumnHeader.VertScrollBar.SelfOwnMaterial.ThumbBtnRectParam.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
+    ColumnHeader.VertScrollBar.SelfOwnMaterial.ThumbBtnRectParam.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
+    ColumnHeader.VertScrollBar.SelfOwnMaterial.ThumbBtnRectParam.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
+    ColumnHeader.VertScrollBar.SelfOwnMaterial.ThumbBtnRectParam.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
+    ColumnHeader.VertScrollBar.SelfOwnMaterial.ThumbBtnRectParam.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
+    ColumnHeader.VertScrollBar.SelfOwnMaterial.ThumbBtnRectParam.DrawEffectSetting.DisabledEffect.BorderColor.Alpha = 255
+    ColumnHeader.VertScrollBar.SelfOwnMaterial.ThumbBtnRectParam.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
+    ColumnHeader.VertScrollBar.SelfOwnMaterial.ThumbBtnRectParam.DrawEffectSetting.FocusedEffect.FillColorChangeType = cctNone
+    ColumnHeader.VertScrollBar.SelfOwnMaterial.ThumbBtnRectParam.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
+    ColumnHeader.VertScrollBar.HitTest = True
+    ColumnHeader.VertScrollBar.MouseDownFocus = False
+    ColumnHeader.VertScrollBar.ParentBackground = False
+    ColumnHeader.VertScrollBar.Properties.AutoSize = False
+    ColumnHeader.VertScrollBar.Properties.Kind = sbVertical
+    ColumnHeader.VertScrollBar.Properties.SmallChange = 1
+    ColumnHeader.VertScrollBar.Properties.LargeChange = 10
+    ColumnHeader.VertScrollBar.Properties.CanOverRangeTypes = [cortMin, cortMax]
+    ColumnHeader.HorzScrollBar.Left = 0
+    ColumnHeader.HorzScrollBar.Top = 18
+    ColumnHeader.HorzScrollBar.Width = 1451
+    ColumnHeader.HorzScrollBar.Height = 12
+    ColumnHeader.HorzScrollBar.ParentMouseEvent = True
+    ColumnHeader.HorzScrollBar.DirectUIVisible = False
+    ColumnHeader.HorzScrollBar.ComponentTypeUseKind = ctukDefault
+    ColumnHeader.HorzScrollBar.MaterialUseKind = mukSelfOwn
+    ColumnHeader.HorzScrollBar.KeepSelfOwnMaterial = True
+    ColumnHeader.HorzScrollBar.SelfOwnMaterial.BackColor.Color = clWhite
+    ColumnHeader.HorzScrollBar.SelfOwnMaterial.BackColor.IsFill = True
+    ColumnHeader.HorzScrollBar.SelfOwnMaterial.BackColor.FillColor.Alpha = 255
+    ColumnHeader.HorzScrollBar.SelfOwnMaterial.BackColor.BorderColor.Alpha = 255
+    ColumnHeader.HorzScrollBar.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
+    ColumnHeader.HorzScrollBar.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
+    ColumnHeader.HorzScrollBar.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
+    ColumnHeader.HorzScrollBar.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.FillColor.Alpha = 255
+    ColumnHeader.HorzScrollBar.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.FillColorChangeType = cctNone
+    ColumnHeader.HorzScrollBar.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.BorderColor.Alpha = 255
+    ColumnHeader.HorzScrollBar.SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
+    ColumnHeader.HorzScrollBar.SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
+    ColumnHeader.HorzScrollBar.SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
+    ColumnHeader.HorzScrollBar.SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
+    ColumnHeader.HorzScrollBar.SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
+    ColumnHeader.HorzScrollBar.SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.BorderColor.Alpha = 255
+    ColumnHeader.HorzScrollBar.SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
+    ColumnHeader.HorzScrollBar.SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.FillColorChangeType = cctNone
+    ColumnHeader.HorzScrollBar.SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
+    ColumnHeader.HorzScrollBar.SelfOwnMaterial.IsTransparent = False
+    ColumnHeader.HorzScrollBar.SelfOwnMaterial.ThumbBtnMinSize = 40
+    ColumnHeader.HorzScrollBar.SelfOwnMaterial.ThumbBtnDrawSize = 4
+    ColumnHeader.HorzScrollBar.SelfOwnMaterial.IsDefaultDrawThumbBtn = True
+    ColumnHeader.HorzScrollBar.SelfOwnMaterial.ThumbBtnRectParam.Color = 11513775
+    ColumnHeader.HorzScrollBar.SelfOwnMaterial.ThumbBtnRectParam.IsFill = False
+    ColumnHeader.HorzScrollBar.SelfOwnMaterial.ThumbBtnRectParam.FillColor.Alpha = 255
+    ColumnHeader.HorzScrollBar.SelfOwnMaterial.ThumbBtnRectParam.FillColor.Color = 11513775
+    ColumnHeader.HorzScrollBar.SelfOwnMaterial.ThumbBtnRectParam.BorderColor.Alpha = 255
+    ColumnHeader.HorzScrollBar.SelfOwnMaterial.ThumbBtnRectParam.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
+    ColumnHeader.HorzScrollBar.SelfOwnMaterial.ThumbBtnRectParam.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
+    ColumnHeader.HorzScrollBar.SelfOwnMaterial.ThumbBtnRectParam.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
+    ColumnHeader.HorzScrollBar.SelfOwnMaterial.ThumbBtnRectParam.DrawEffectSetting.MouseOverEffect.FillColor.Alpha = 255
+    ColumnHeader.HorzScrollBar.SelfOwnMaterial.ThumbBtnRectParam.DrawEffectSetting.MouseOverEffect.FillColorChangeType = cctNone
+    ColumnHeader.HorzScrollBar.SelfOwnMaterial.ThumbBtnRectParam.DrawEffectSetting.MouseOverEffect.BorderColor.Alpha = 255
+    ColumnHeader.HorzScrollBar.SelfOwnMaterial.ThumbBtnRectParam.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
+    ColumnHeader.HorzScrollBar.SelfOwnMaterial.ThumbBtnRectParam.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
+    ColumnHeader.HorzScrollBar.SelfOwnMaterial.ThumbBtnRectParam.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
+    ColumnHeader.HorzScrollBar.SelfOwnMaterial.ThumbBtnRectParam.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
+    ColumnHeader.HorzScrollBar.SelfOwnMaterial.ThumbBtnRectParam.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
+    ColumnHeader.HorzScrollBar.SelfOwnMaterial.ThumbBtnRectParam.DrawEffectSetting.DisabledEffect.BorderColor.Alpha = 255
+    ColumnHeader.HorzScrollBar.SelfOwnMaterial.ThumbBtnRectParam.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
+    ColumnHeader.HorzScrollBar.SelfOwnMaterial.ThumbBtnRectParam.DrawEffectSetting.FocusedEffect.FillColorChangeType = cctNone
+    ColumnHeader.HorzScrollBar.SelfOwnMaterial.ThumbBtnRectParam.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
+    ColumnHeader.HorzScrollBar.HitTest = True
+    ColumnHeader.HorzScrollBar.MouseDownFocus = False
+    ColumnHeader.HorzScrollBar.ParentBackground = False
+    ColumnHeader.HorzScrollBar.Properties.AutoSize = False
+    ColumnHeader.HorzScrollBar.Properties.Kind = sbHorizontal
+    ColumnHeader.HorzScrollBar.Properties.Min = 0.000000000000000000
+    ColumnHeader.HorzScrollBar.Properties.Max = 0.000000000000000000
+    ColumnHeader.HorzScrollBar.Properties.Position = 0.000000000000000000
+    ColumnHeader.HorzScrollBar.Properties.SmallChange = 0
+    ColumnHeader.HorzScrollBar.Properties.LargeChange = 3
+    ColumnHeader.HorzScrollBar.Properties.CanOverRangeTypes = []
+    ColumnHeader.ScrollControlCorner.Left = 1439
+    ColumnHeader.ScrollControlCorner.Top = 18
+    ColumnHeader.ScrollControlCorner.Width = 12
+    ColumnHeader.ScrollControlCorner.Height = 12
+    ColumnHeader.ScrollControlCorner.ParentMouseEvent = True
+    ColumnHeader.ScrollControlCorner.DirectUIVisible = False
+    ColumnHeader.ScrollControlCorner.ComponentTypeUseKind = ctukDefault
+    ColumnHeader.ScrollControlCorner.MaterialUseKind = mukSelfOwn
+    ColumnHeader.ScrollControlCorner.KeepSelfOwnMaterial = True
+    ColumnHeader.ScrollControlCorner.SelfOwnMaterial.BackColor.Color = clWhite
+    ColumnHeader.ScrollControlCorner.SelfOwnMaterial.BackColor.IsFill = True
+    ColumnHeader.ScrollControlCorner.SelfOwnMaterial.BackColor.FillColor.Alpha = 255
+    ColumnHeader.ScrollControlCorner.SelfOwnMaterial.BackColor.BorderColor.Alpha = 255
+    ColumnHeader.ScrollControlCorner.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
+    ColumnHeader.ScrollControlCorner.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
+    ColumnHeader.ScrollControlCorner.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
+    ColumnHeader.ScrollControlCorner.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.FillColor.Alpha = 255
+    ColumnHeader.ScrollControlCorner.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.FillColorChangeType = cctNone
+    ColumnHeader.ScrollControlCorner.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.BorderColor.Alpha = 255
+    ColumnHeader.ScrollControlCorner.SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
+    ColumnHeader.ScrollControlCorner.SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
+    ColumnHeader.ScrollControlCorner.SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
+    ColumnHeader.ScrollControlCorner.SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
+    ColumnHeader.ScrollControlCorner.SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
+    ColumnHeader.ScrollControlCorner.SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.BorderColor.Alpha = 255
+    ColumnHeader.ScrollControlCorner.SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
+    ColumnHeader.ScrollControlCorner.SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.FillColorChangeType = cctNone
+    ColumnHeader.ScrollControlCorner.SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
+    ColumnHeader.ScrollControlCorner.SelfOwnMaterial.IsTransparent = False
+    ColumnHeader.ScrollControlCorner.HitTest = True
+    ColumnHeader.ScrollControlCorner.MouseDownFocus = False
+    ColumnHeader.ScrollControlCorner.ParentBackground = False
+    ColumnHeader.Properties.ContentWidth = -1.000000000000000000
+    ColumnHeader.Properties.ContentHeight = -1.000000000000000000
+    ColumnHeader.Properties.EnableAutoPullDownRefreshPanel = False
+    ColumnHeader.Properties.EnableAutoPullUpLoadMorePanel = False
+    ColumnHeader.Properties.VertCanOverRangeTypes = [cortMin, cortMax]
+    ColumnHeader.Properties.HorzCanOverRangeTypes = []
+    ColumnHeader.Properties.VertScrollBarShowType = sbstNone
+    ColumnHeader.Properties.HorzScrollBarShowType = sbstNone
+    ColumnHeader.Properties.MultiSelect = False
+    ColumnHeader.Properties.IsAutoSelected = True
+    ColumnHeader.Properties.ItemHeight = 30.000000000000000000
+    ColumnHeader.Properties.ItemSpaceType = sistDefault
+    ColumnHeader.Properties.SelectedItemHeight = -1.000000000000000000
+    ColumnHeader.Properties.ItemHeightCalcType = isctSeparate
+    ColumnHeader.Properties.ItemPanDragGestureDirection = ipdgdtLeft
+    ColumnHeader.Properties.IsEmptyContent = False
+    ColumnHeader.Properties.EmptyContentPicture.IsClipRound = False
+    ColumnHeader.Properties.EmptyContentPicture.FixedColor.Alpha = 255
+    ColumnHeader.Properties.StopEditingItemMode = seimAuto
+    ColumnHeader.Properties.FixedItems = 0
+    ColumnHeader.Properties.IsEnabledCenterItemSelectMode = False
+    ColumnHeader.Properties.ItemWidth = 100.000000000000000000
+    ColumnHeader.Properties.SelectedItemWidth = -1.000000000000000000
+    ColumnHeader.Properties.ItemWidthCalcType = isctSeparate
+    ColumnHeader.Properties.ItemLayoutType = iltHorizontal
+    ColumnHeader.Properties.ItemColorType = sictNone
+    ColumnHeader.Properties.ItemColorFieldSetType = sicstNone
+    ColumnHeader.Properties.Items.Data = {
+      140000080000000400000000005C00000018160000001A000000000042006900
+      6E006100720079004F0062006A0065006300740000000E000000000E00080000
+      004800650069006700680074000000000000000000F0BF0E000000000C000800
+      00005700690064007400680000000000000000C0624015000000001000040000
+      00560069007300690062006C0065000000FFFFFFFF04000000000A0000000000
+      4E0061006D006500000007000000000800040000005400610067000000000000
+      0007000000000A00040000005400610067003100000000000000150000000010
+      000400000043006800650063006B006500640000000000000007000000001200
+      040000004900740065006D00540079007000650000000000000018120000000A
+      001A000000490063006F006E0000005400440072006100770050006900630074
+      007500720065000000040000000014000000000049006D006100670065004E00
+      61006D00650000001700000000180000000000470049004600460069006C0065
+      0044006100740061000000170000000018000000000053005600470046006900
+      6C0065004400610074006100000004000000000A060A0000004E0061006D0065
+      0000000D54F0790000490063006F006E00000004000000001006060000004300
+      61007000740069006F006E000000076898980000FE560768000004000000000C
+      0600000000470072006F007500700000000652C47E0000070000000012060400
+      000052006F00770043006F0075006E00740000004C8870650000010000000700
+      00000012060400000043006F006C0043006F0075006E00740000001752706500
+      0001000000070000000012080400000052006F00770049006E00640065007800
+      00004C880B4E07680000FFFFFFFF070000000012080400000043006F006C0049
+      006E00640065007800000017520B4E07680000FFFFFFFF0700000000200A0400
+      0000500069006300740075007200650044007200610077005400790070006500
+      0000D87E36527B7C8B570000000000000700000000160A0400000049006D0061
+      006700650049006E006400650078000000FE5647720B4E07680000FFFFFFFF04
+      00000000140A0000000049006D006100670065004E0061006D0065000000FE56
+      47720D54F07900000400000000120C00000000460069006C0065004E0061006D
+      0065000000FE5647728765F64E0D54000004000000001A0E0000000052006500
+      73006F0075007200630065004E0061006D0065000000FE564772448D906E0D54
+      F07900000400000000080A00000000550072006C000000FE564772FE94A56300
+      0015000000001810040000004900730043006C006900700052006F0075006E00
+      640000002F6626546A52C18810620657625F0000000000001900000000160A05
+      0000004600690078006500640043006F006C006F0072000000038C74659C9872
+      82000000000020AE181200000008001A00000050006900630000005400440072
+      0061007700500069006300740075007200650000000400000000140000000000
+      49006D006100670065004E0061006D0065000000170000000018000000000047
+      0049004600460069006C00650044006100740061000000170000000018000000
+      0000530056004700460069006C0065004400610074006100000004000000000A
+      06080000004E0061006D00650000000D54F07900005000690063000000040000
+      0000100606000000430061007000740069006F006E000000076898980000FE56
+      4772000004000000000C0600000000470072006F007500700000000652C47E00
+      00070000000012060400000052006F00770043006F0075006E00740000004C88
+      7065000001000000070000000012060400000043006F006C0043006F0075006E
+      007400000017527065000001000000070000000012080400000052006F007700
+      49006E0064006500780000004C880B4E07680000FFFFFFFF0700000000120804
+      00000043006F006C0049006E00640065007800000017520B4E07680000FFFFFF
+      FF0700000000200A040000005000690063007400750072006500440072006100
+      770054007900700065000000D87E36527B7C8B57000000000000070000000016
+      0A0400000049006D0061006700650049006E006400650078000000FE5647720B
+      4E07680000FFFFFFFF0400000000140A0000000049006D006100670065004E00
+      61006D0065000000FE5647720D54F07900000400000000120C00000000460069
+      006C0065004E0061006D0065000000FE5647728765F64E0D5400000400000000
+      1A0E000000005200650073006F0075007200630065004E0061006D0065000000
+      FE564772448D906E0D54F07900000400000000080A00000000550072006C0000
+      00FE564772FE94A563000015000000001810040000004900730043006C006900
+      700052006F0075006E00640000002F6626546A52C18810620657625F00000000
+      00001900000000160A050000004600690078006500640043006F006C006F0072
+      000000038C74659C987282000000000020E70700000000120004000000490074
+      0065006D00540079007000650000000000000015000000001C00040000004100
+      750074006F00530069007A006500570069006400740068000000000000001500
+      0000001E00040000004100750074006F00530069007A00650048006500690067
+      0068007400000000000000040000000010001E00000043006100700074006900
+      6F006E00000049006D006100670065002D004900740065006D00490063006F00
+      6E00000004000000000E0000000000440065007400610069006C000000040000
+      0000100000000000440065007400610069006C00310000000400000000100000
+      000000440065007400610069006C003200000004000000001000000000004400
+      65007400610069006C0033000000040000000010000000000044006500740061
+      0069006C00340000000400000000100000000000440065007400610069006C00
+      350000000400000000100000000000440065007400610069006C003600000007
+      000000001400040000004100630063006500730073006F007200790000000000
+      000018160000001A0000000000420069006E006100720079004F0062006A0065
+      006300740000000E000000000E00080000004800650069006700680074000000
+      000000000000F0BF0E000000000C000800000057006900640074006800000000
+      000000000064401500000000100004000000560069007300690062006C006500
+      0000FFFFFFFF04000000000A00000000004E0061006D00650000000700000000
+      08000400000054006100670000000000000007000000000A0004000000540061
+      0067003100000000000000150000000010000400000043006800650063006B00
+      6500640000000000000007000000001200040000004900740065006D00540079
+      007000650000000000000018120000000A001A000000490063006F006E000000
+      5400440072006100770050006900630074007500720065000000040000000014
+      000000000049006D006100670065004E0061006D006500000017000000001800
+      00000000470049004600460069006C0065004400610074006100000017000000
+      00180000000000530056004700460069006C0065004400610074006100000004
+      000000000A060A0000004E0061006D00650000000D54F0790000490063006F00
+      6E0000000400000000100606000000430061007000740069006F006E00000007
+      6898980000FE560768000004000000000C0600000000470072006F0075007000
+      00000652C47E0000070000000012060400000052006F00770043006F0075006E
+      00740000004C887065000001000000070000000012060400000043006F006C00
+      43006F0075006E00740000001752706500000100000007000000001208040000
+      0052006F00770049006E0064006500780000004C880B4E07680000FFFFFFFF07
+      0000000012080400000043006F006C0049006E00640065007800000017520B4E
+      07680000FFFFFFFF0700000000200A0400000050006900630074007500720065
+      00440072006100770054007900700065000000D87E36527B7C8B570000000000
+      000700000000160A0400000049006D0061006700650049006E00640065007800
+      0000FE5647720B4E07680000FFFFFFFF0400000000140A0000000049006D0061
+      00670065004E0061006D0065000000FE5647720D54F07900000400000000120C
+      00000000460069006C0065004E0061006D0065000000FE5647728765F64E0D54
+      000004000000001A0E000000005200650073006F0075007200630065004E0061
+      006D0065000000FE564772448D906E0D54F07900000400000000080A00000000
+      550072006C000000FE564772FE94A56300001500000000181004000000490073
+      0043006C006900700052006F0075006E00640000002F6626546A52C188106206
+      57625F0000000000001900000000160A05000000460069007800650064004300
+      6F006C006F0072000000038C74659C9872820000000000204418120000000800
+      1A00000050006900630000005400440072006100770050006900630074007500
+      720065000000040000000014000000000049006D006100670065004E0061006D
+      00650000001700000000180000000000470049004600460069006C0065004400
+      61007400610000001700000000180000000000530056004700460069006C0065
+      004400610074006100000004000000000A06080000004E0061006D0065000000
+      0D54F07900005000690063000000040000000010060600000043006100700074
+      0069006F006E000000076898980000FE564772000004000000000C0600000000
+      470072006F007500700000000652C47E0000070000000012060400000052006F
+      00770043006F0075006E00740000004C88706500000100000007000000001206
+      0400000043006F006C0043006F0075006E007400000017527065000001000000
+      070000000012080400000052006F00770049006E0064006500780000004C880B
+      4E07680000FFFFFFFF070000000012080400000043006F006C0049006E006400
+      65007800000017520B4E07680000FFFFFFFF0700000000200A04000000500069
+      0063007400750072006500440072006100770054007900700065000000D87E36
+      527B7C8B570000000000000700000000160A0400000049006D00610067006500
+      49006E006400650078000000FE5647720B4E07680000FFFFFFFF040000000014
+      0A0000000049006D006100670065004E0061006D0065000000FE5647720D54F0
+      7900000400000000120C00000000460069006C0065004E0061006D0065000000
+      FE5647728765F64E0D54000004000000001A0E000000005200650073006F0075
+      007200630065004E0061006D0065000000FE564772448D906E0D54F079000004
+      00000000080A00000000550072006C000000FE564772FE94A563000015000000
+      001810040000004900730043006C006900700052006F0075006E00640000002F
+      6626546A52C18810620657625F0000000000001900000000160A050000004600
+      690078006500640043006F006C006F0072000000038C74659C98728200000000
+      00205507000000001200040000004900740065006D0054007900700065000000
+      0000000015000000001C00040000004100750074006F00530069007A00650057
+      00690064007400680000000000000015000000001E0004000000410075007400
+      6F00530069007A00650048006500690067006800740000000000000004000000
+      00100024000000430061007000740069006F006E0000004C006100620065006C
+      002D004900740065006D00430061007000740069006F006E0000000400000000
+      0E0000000000440065007400610069006C000000040000000010000000000044
+      0065007400610069006C00310000000400000000100000000000440065007400
+      610069006C00320000000400000000100000000000440065007400610069006C
+      00330000000400000000100000000000440065007400610069006C0034000000
+      0400000000100000000000440065007400610069006C00350000000400000000
+      100000000000440065007400610069006C003600000007000000001400040000
+      004100630063006500730073006F007200790000000000000018160000001A00
+      00000000420069006E006100720079004F0062006A0065006300740000000E00
+      0000000E00080000004800650069006700680074000000000000000000F0BF0E
+      000000000C000800000057006900640074006800000000000000000069401500
+      000000100004000000560069007300690062006C0065000000FFFFFFFF040000
+      00000A00000000004E0061006D00650000000700000000080004000000540061
+      00670000000000000007000000000A0004000000540061006700310000000000
+      0000150000000010000400000043006800650063006B00650064000000000000
+      0007000000001200040000004900740065006D00540079007000650000000000
+      000018120000000A001A000000490063006F006E000000540044007200610077
+      0050006900630074007500720065000000040000000014000000000049006D00
+      6100670065004E0061006D006500000017000000001800000000004700490046
+      00460069006C0065004400610074006100000017000000001800000000005300
+      56004700460069006C0065004400610074006100000004000000000A060A0000
+      004E0061006D00650000000D54F0790000490063006F006E0000000400000000
+      100606000000430061007000740069006F006E000000076898980000FE560768
+      000004000000000C0600000000470072006F007500700000000652C47E000007
+      0000000012060400000052006F00770043006F0075006E00740000004C887065
+      000001000000070000000012060400000043006F006C0043006F0075006E0074
+      00000017527065000001000000070000000012080400000052006F0077004900
+      6E0064006500780000004C880B4E07680000FFFFFFFF07000000001208040000
+      0043006F006C0049006E00640065007800000017520B4E07680000FFFFFFFF07
+      00000000200A0400000050006900630074007500720065004400720061007700
+      54007900700065000000D87E36527B7C8B570000000000000700000000160A04
+      00000049006D0061006700650049006E006400650078000000FE5647720B4E07
+      680000FFFFFFFF0400000000140A0000000049006D006100670065004E006100
+      6D0065000000FE5647720D54F07900000400000000120C00000000460069006C
+      0065004E0061006D0065000000FE5647728765F64E0D54000004000000001A0E
+      000000005200650073006F0075007200630065004E0061006D0065000000FE56
+      4772448D906E0D54F07900000400000000080A00000000550072006C000000FE
+      564772FE94A563000015000000001810040000004900730043006C0069007000
+      52006F0075006E00640000002F6626546A52C18810620657625F000000000000
+      1900000000160A050000004600690078006500640043006F006C006F00720000
+      00038C74659C9872820000000000205D181200000008001A0000005000690063
+      0000005400440072006100770050006900630074007500720065000000040000
+      000014000000000049006D006100670065004E0061006D006500000017000000
+      00180000000000470049004600460069006C0065004400610074006100000017
+      00000000180000000000530056004700460069006C0065004400610074006100
+      000004000000000A06080000004E0061006D00650000000D54F0790000500069
+      00630000000400000000100606000000430061007000740069006F006E000000
+      076898980000FE564772000004000000000C0600000000470072006F00750070
+      0000000652C47E0000070000000012060400000052006F00770043006F007500
+      6E00740000004C887065000001000000070000000012060400000043006F006C
+      0043006F0075006E007400000017527065000001000000070000000012080400
+      000052006F00770049006E0064006500780000004C880B4E07680000FFFFFFFF
+      070000000012080400000043006F006C0049006E00640065007800000017520B
+      4E07680000FFFFFFFF0700000000200A04000000500069006300740075007200
+      6500440072006100770054007900700065000000D87E36527B7C8B5700000000
+      00000700000000160A0400000049006D0061006700650049006E006400650078
+      000000FE5647720B4E07680000FFFFFFFF0400000000140A0000000049006D00
+      6100670065004E0061006D0065000000FE5647720D54F0790000040000000012
+      0C00000000460069006C0065004E0061006D0065000000FE5647728765F64E0D
+      54000004000000001A0E000000005200650073006F0075007200630065004E00
+      61006D0065000000FE564772448D906E0D54F07900000400000000080A000000
+      00550072006C000000FE564772FE94A563000015000000001810040000004900
+      730043006C006900700052006F0075006E00640000002F6626546A52C1881062
+      0657625F0000000000001900000000160A050000004600690078006500640043
+      006F006C006F0072000000038C74659C9872820000000000205A070000000012
+      00040000004900740065006D0054007900700065000000000000001500000000
+      1C00040000004100750074006F00530069007A00650057006900640074006800
+      00000000000015000000001E00040000004100750074006F00530069007A0065
+      0048006500690067006800740000000000000004000000001000300000004300
+      61007000740069006F006E00000052006500700065006100740049006D006100
+      670065002D0049006D00610067006500440065007400610069006C0000000400
+      0000000E0000000000440065007400610069006C000000040000000010000000
+      0000440065007400610069006C00310000000400000000100000000000440065
+      007400610069006C003200000004000000001000000000004400650074006100
+      69006C00330000000400000000100000000000440065007400610069006C0034
+      0000000400000000100000000000440065007400610069006C00350000000400
+      000000100000000000440065007400610069006C003600000007000000001400
+      040000004100630063006500730073006F007200790000000000000018160000
+      001A0000000000420069006E006100720079004F0062006A0065006300740000
+      000E000000000E00080000004800650069006700680074000000000000000000
+      F0BF0E000000000C000800000057006900640074006800000000000000008066
+      401500000000100004000000560069007300690062006C0065000000FFFFFFFF
+      04000000000A00000000004E0061006D00650000000700000000080004000000
+      54006100670000000000000007000000000A0004000000540061006700310000
+      0000000000150000000010000400000043006800650063006B00650064000000
+      0000000007000000001200040000004900740065006D00540079007000650000
+      000000000018120000000A001A000000490063006F006E000000540044007200
+      6100770050006900630074007500720065000000040000000014000000000049
+      006D006100670065004E0061006D006500000017000000001800000000004700
+      49004600460069006C0065004400610074006100000017000000001800000000
+      00530056004700460069006C0065004400610074006100000004000000000A06
+      0A0000004E0061006D00650000000D54F0790000490063006F006E0000000400
+      000000100606000000430061007000740069006F006E000000076898980000FE
+      560768000004000000000C0600000000470072006F007500700000000652C47E
+      0000070000000012060400000052006F00770043006F0075006E00740000004C
+      887065000001000000070000000012060400000043006F006C0043006F007500
+      6E007400000017527065000001000000070000000012080400000052006F0077
+      0049006E0064006500780000004C880B4E07680000FFFFFFFF07000000001208
+      0400000043006F006C0049006E00640065007800000017520B4E07680000FFFF
+      FFFF0700000000200A0400000050006900630074007500720065004400720061
+      00770054007900700065000000D87E36527B7C8B570000000000000700000000
+      160A0400000049006D0061006700650049006E006400650078000000FE564772
+      0B4E07680000FFFFFFFF0400000000140A0000000049006D006100670065004E
+      0061006D0065000000FE5647720D54F07900000400000000120C000000004600
+      69006C0065004E0061006D0065000000FE5647728765F64E0D54000004000000
+      001A0E000000005200650073006F0075007200630065004E0061006D00650000
+      00FE564772448D906E0D54F07900000400000000080A00000000550072006C00
+      0000FE564772FE94A563000015000000001810040000004900730043006C0069
+      00700052006F0075006E00640000002F6626546A52C18810620657625F000000
+      0000001900000000160A050000004600690078006500640043006F006C006F00
+      72000000038C74659C987282000000000020DD181200000008001A0000005000
+      6900630000005400440072006100770050006900630074007500720065000000
+      040000000014000000000049006D006100670065004E0061006D006500000017
+      00000000180000000000470049004600460069006C0065004400610074006100
+      00001700000000180000000000530056004700460069006C0065004400610074
+      006100000004000000000A06080000004E0061006D00650000000D54F0790000
+      50006900630000000400000000100606000000430061007000740069006F006E
+      000000076898980000FE564772000004000000000C0600000000470072006F00
+      7500700000000652C47E0000070000000012060400000052006F00770043006F
+      0075006E00740000004C88706500000100000007000000001206040000004300
+      6F006C0043006F0075006E007400000017527065000001000000070000000012
+      080400000052006F00770049006E0064006500780000004C880B4E07680000FF
+      FFFFFF070000000012080400000043006F006C0049006E006400650078000000
+      17520B4E07680000FFFFFFFF0700000000200A04000000500069006300740075
+      0072006500440072006100770054007900700065000000D87E36527B7C8B5700
+      00000000000700000000160A0400000049006D0061006700650049006E006400
+      650078000000FE5647720B4E07680000FFFFFFFF0400000000140A0000000049
+      006D006100670065004E0061006D0065000000FE5647720D54F0790000040000
+      0000120C00000000460069006C0065004E0061006D0065000000FE5647728765
+      F64E0D54000004000000001A0E000000005200650073006F0075007200630065
+      004E0061006D0065000000FE564772448D906E0D54F07900000400000000080A
+      00000000550072006C000000FE564772FE94A563000015000000001810040000
+      004900730043006C006900700052006F0075006E00640000002F6626546A52C1
+      8810620657625F0000000000001900000000160A050000004600690078006500
+      640043006F006C006F0072000000038C74659C98728200000000002053070000
+      00001200040000004900740065006D0054007900700065000000000000001500
+      0000001C00040000004100750074006F00530069007A00650057006900640074
+      00680000000000000015000000001E00040000004100750074006F0053006900
+      7A006500480065006900670068007400000000000000040000000010002A0000
+      00430061007000740069006F006E00000043006800650063006B0042006F0078
+      002D004900740065006D0043006800650063006B006500640000000400000000
+      0E0000000000440065007400610069006C000000040000000010000000000044
+      0065007400610069006C00310000000400000000100000000000440065007400
+      610069006C00320000000400000000100000000000440065007400610069006C
+      00330000000400000000100000000000440065007400610069006C0034000000
+      0400000000100000000000440065007400610069006C00350000000400000000
+      100000000000440065007400610069006C003600000007000000001400040000
+      004100630063006500730073006F007200790000000000000018160000001A00
+      00000000420069006E006100720079004F0062006A0065006300740000000E00
+      0000000E00080000004800650069006700680074000000000000000000F0BF0E
+      000000000C000800000057006900640074006800000000000000008066401500
+      000000100004000000560069007300690062006C006500000000000000040000
+      00000A00000000004E0061006D00650000000700000000080004000000540061
+      00670000000000000007000000000A0004000000540061006700310000000000
+      0000150000000010000400000043006800650063006B00650064000000000000
+      0007000000001200040000004900740065006D00540079007000650000000000
+      000018120000000A001A000000490063006F006E000000540044007200610077
+      0050006900630074007500720065000000040000000014000000000049006D00
+      6100670065004E0061006D006500000017000000001800000000004700490046
+      00460069006C0065004400610074006100000017000000001800000000005300
+      56004700460069006C0065004400610074006100000004000000000A060A0000
+      004E0061006D00650000000D54F0790000490063006F006E0000000400000000
+      100606000000430061007000740069006F006E000000076898980000FE560768
+      000004000000000C0600000000470072006F007500700000000652C47E000007
+      0000000012060400000052006F00770043006F0075006E00740000004C887065
+      000001000000070000000012060400000043006F006C0043006F0075006E0074
+      00000017527065000001000000070000000012080400000052006F0077004900
+      6E0064006500780000004C880B4E07680000FFFFFFFF07000000001208040000
+      0043006F006C0049006E00640065007800000017520B4E07680000FFFFFFFF07
+      00000000200A0400000050006900630074007500720065004400720061007700
+      54007900700065000000D87E36527B7C8B570000000000000700000000160A04
+      00000049006D0061006700650049006E006400650078000000FE5647720B4E07
+      680000FFFFFFFF0400000000140A0000000049006D006100670065004E006100
+      6D0065000000FE5647720D54F07900000400000000120C00000000460069006C
+      0065004E0061006D0065000000FE5647728765F64E0D54000004000000001A0E
+      000000005200650073006F0075007200630065004E0061006D0065000000FE56
+      4772448D906E0D54F07900000400000000080A00000000550072006C000000FE
+      564772FE94A563000015000000001810040000004900730043006C0069007000
+      52006F0075006E00640000002F6626546A52C18810620657625F000000000000
+      1900000000160A050000004600690078006500640043006F006C006F00720000
+      00038C74659C987282000000000020D4181200000008001A0000005000690063
+      0000005400440072006100770050006900630074007500720065000000040000
+      000014000000000049006D006100670065004E0061006D006500000017000000
+      00180000000000470049004600460069006C0065004400610074006100000017
+      00000000180000000000530056004700460069006C0065004400610074006100
+      000004000000000A06080000004E0061006D00650000000D54F0790000500069
+      00630000000400000000100606000000430061007000740069006F006E000000
+      076898980000FE564772000004000000000C0600000000470072006F00750070
+      0000000652C47E0000070000000012060400000052006F00770043006F007500
+      6E00740000004C887065000001000000070000000012060400000043006F006C
+      0043006F0075006E007400000017527065000001000000070000000012080400
+      000052006F00770049006E0064006500780000004C880B4E07680000FFFFFFFF
+      070000000012080400000043006F006C0049006E00640065007800000017520B
+      4E07680000FFFFFFFF0700000000200A04000000500069006300740075007200
+      6500440072006100770054007900700065000000D87E36527B7C8B5700000000
+      00000700000000160A0400000049006D0061006700650049006E006400650078
+      000000FE5647720B4E07680000FFFFFFFF0400000000140A0000000049006D00
+      6100670065004E0061006D0065000000FE5647720D54F0790000040000000012
+      0C00000000460069006C0065004E0061006D0065000000FE5647728765F64E0D
+      54000004000000001A0E000000005200650073006F0075007200630065004E00
+      61006D0065000000FE564772448D906E0D54F07900000400000000080A000000
+      00550072006C000000FE564772FE94A563000015000000001810040000004900
+      730043006C006900700052006F0075006E00640000002F6626546A52C1881062
+      0657625F0000000000001900000000160A050000004600690078006500640043
+      006F006C006F0072000000038C74659C987282000000000020B1070000000012
+      00040000004900740065006D0054007900700065000000000000001500000000
+      1C00040000004100750074006F00530069007A00650057006900640074006800
+      00000000000015000000001E00040000004100750074006F00530069007A0065
+      0048006500690067006800740000000000000004000000001000300000004300
+      61007000740069006F006E00000052006100640069006F004200750074007400
+      6F006E002D004900740065006D00440065007400610069006C00310000000400
+      0000000E0000000000440065007400610069006C000000040000000010000000
+      0000440065007400610069006C00310000000400000000100000000000440065
+      007400610069006C003200000004000000001000000000004400650074006100
+      69006C00330000000400000000100000000000440065007400610069006C0034
+      0000000400000000100000000000440065007400610069006C00350000000400
+      000000100000000000440065007400610069006C003600000007000000001400
+      040000004100630063006500730073006F007200790000000000000018160000
+      001A0000000000420069006E006100720079004F0062006A0065006300740000
+      000E000000000E00080000004800650069006700680074000000000000000000
+      F0BF0E000000000C000800000057006900640074006800000000000000008066
+      401500000000100004000000560069007300690062006C0065000000FFFFFFFF
+      04000000000A00000000004E0061006D00650000000700000000080004000000
+      54006100670000000000000007000000000A0004000000540061006700310000
+      0000000000150000000010000400000043006800650063006B00650064000000
+      0000000007000000001200040000004900740065006D00540079007000650000
+      000000000018120000000A001A000000490063006F006E000000540044007200
+      6100770050006900630074007500720065000000040000000014000000000049
+      006D006100670065004E0061006D006500000017000000001800000000004700
+      49004600460069006C0065004400610074006100000017000000001800000000
+      00530056004700460069006C0065004400610074006100000004000000000A06
+      0A0000004E0061006D00650000000D54F0790000490063006F006E0000000400
+      000000100606000000430061007000740069006F006E000000076898980000FE
+      560768000004000000000C0600000000470072006F007500700000000652C47E
+      0000070000000012060400000052006F00770043006F0075006E00740000004C
+      887065000001000000070000000012060400000043006F006C0043006F007500
+      6E007400000017527065000001000000070000000012080400000052006F0077
+      0049006E0064006500780000004C880B4E07680000FFFFFFFF07000000001208
+      0400000043006F006C0049006E00640065007800000017520B4E07680000FFFF
+      FFFF0700000000200A0400000050006900630074007500720065004400720061
+      00770054007900700065000000D87E36527B7C8B570000000000000700000000
+      160A0400000049006D0061006700650049006E006400650078000000FE564772
+      0B4E07680000FFFFFFFF0400000000140A0000000049006D006100670065004E
+      0061006D0065000000FE5647720D54F07900000400000000120C000000004600
+      69006C0065004E0061006D0065000000FE5647728765F64E0D54000004000000
+      001A0E000000005200650073006F0075007200630065004E0061006D00650000
+      00FE564772448D906E0D54F07900000400000000080A00000000550072006C00
+      0000FE564772FE94A563000015000000001810040000004900730043006C0069
+      00700052006F0075006E00640000002F6626546A52C18810620657625F000000
+      0000001900000000160A050000004600690078006500640043006F006C006F00
+      72000000038C74659C9872820000000000205A181200000008001A0000005000
+      6900630000005400440072006100770050006900630074007500720065000000
+      040000000014000000000049006D006100670065004E0061006D006500000017
+      00000000180000000000470049004600460069006C0065004400610074006100
+      00001700000000180000000000530056004700460069006C0065004400610074
+      006100000004000000000A06080000004E0061006D00650000000D54F0790000
+      50006900630000000400000000100606000000430061007000740069006F006E
+      000000076898980000FE564772000004000000000C0600000000470072006F00
+      7500700000000652C47E0000070000000012060400000052006F00770043006F
+      0075006E00740000004C88706500000100000007000000001206040000004300
+      6F006C0043006F0075006E007400000017527065000001000000070000000012
+      080400000052006F00770049006E0064006500780000004C880B4E07680000FF
+      FFFFFF070000000012080400000043006F006C0049006E006400650078000000
+      17520B4E07680000FFFFFFFF0700000000200A04000000500069006300740075
+      0072006500440072006100770054007900700065000000D87E36527B7C8B5700
+      00000000000700000000160A0400000049006D0061006700650049006E006400
+      650078000000FE5647720B4E07680000FFFFFFFF0400000000140A0000000049
+      006D006100670065004E0061006D0065000000FE5647720D54F0790000040000
+      0000120C00000000460069006C0065004E0061006D0065000000FE5647728765
+      F64E0D54000004000000001A0E000000005200650073006F0075007200630065
+      004E0061006D0065000000FE564772448D906E0D54F07900000400000000080A
+      00000000550072006C000000FE564772FE94A563000015000000001810040000
+      004900730043006C006900700052006F0075006E00640000002F6626546A52C1
+      8810620657625F0000000000001900000000160A050000004600690078006500
+      640043006F006C006F0072000000038C74659C98728200000000002058070000
+      00001200040000004900740065006D0054007900700065000000000000001500
+      0000001C00040000004100750074006F00530069007A00650057006900640074
+      00680000000000000015000000001E00040000004100750074006F0053006900
+      7A00650048006500690067006800740000000000000004000000001000300000
+      00430061007000740069006F006E000000500072006F00670072006500730073
+      004200610072002D004900740065006D00440065007400610069006C00320000
+      0004000000000E0000000000440065007400610069006C000000040000000010
+      0000000000440065007400610069006C00310000000400000000100000000000
+      440065007400610069006C003200000004000000001000000000004400650074
+      00610069006C0033000000040000000010000000000044006500740061006900
+      6C00340000000400000000100000000000440065007400610069006C00350000
+      000400000000100000000000440065007400610069006C003600000007000000
+      001400040000004100630063006500730073006F007200790000000000000018
+      160000001A0000000000420069006E006100720079004F0062006A0065006300
+      740000000E000000000E00080000004800650069006700680074000000000000
+      000000F0BF0E000000000C000800000057006900640074006800000000000000
+      008066401500000000100004000000560069007300690062006C0065000000FF
+      FFFFFF04000000000A00000000004E0061006D00650000000700000000080004
+      00000054006100670000000000000007000000000A0004000000540061006700
+      3100000000000000150000000010000400000043006800650063006B00650064
+      0000000000000007000000001200040000004900740065006D00540079007000
+      650000000000000018120000000A001A000000490063006F006E000000540044
+      0072006100770050006900630074007500720065000000040000000014000000
+      000049006D006100670065004E0061006D006500000017000000001800000000
+      00470049004600460069006C0065004400610074006100000017000000001800
+      00000000530056004700460069006C0065004400610074006100000004000000
+      000A060A0000004E0061006D00650000000D54F0790000490063006F006E0000
+      000400000000100606000000430061007000740069006F006E00000007689898
+      0000FE560768000004000000000C0600000000470072006F0075007000000006
+      52C47E0000070000000012060400000052006F00770043006F0075006E007400
+      00004C887065000001000000070000000012060400000043006F006C0043006F
+      0075006E00740000001752706500000100000007000000001208040000005200
+      6F00770049006E0064006500780000004C880B4E07680000FFFFFFFF07000000
+      0012080400000043006F006C0049006E00640065007800000017520B4E076800
+      00FFFFFFFF0700000000200A0400000050006900630074007500720065004400
+      72006100770054007900700065000000D87E36527B7C8B570000000000000700
+      000000160A0400000049006D0061006700650049006E006400650078000000FE
+      5647720B4E07680000FFFFFFFF0400000000140A0000000049006D0061006700
+      65004E0061006D0065000000FE5647720D54F07900000400000000120C000000
+      00460069006C0065004E0061006D0065000000FE5647728765F64E0D54000004
+      000000001A0E000000005200650073006F0075007200630065004E0061006D00
+      65000000FE564772448D906E0D54F07900000400000000080A00000000550072
+      006C000000FE564772FE94A56300001500000000181004000000490073004300
+      6C006900700052006F0075006E00640000002F6626546A52C18810620657625F
+      0000000000001900000000160A050000004600690078006500640043006F006C
+      006F0072000000038C74659C98728200000000002011181200000008001A0000
+      0050006900630000005400440072006100770050006900630074007500720065
+      000000040000000014000000000049006D006100670065004E0061006D006500
+      00001700000000180000000000470049004600460069006C0065004400610074
+      00610000001700000000180000000000530056004700460069006C0065004400
+      610074006100000004000000000A06080000004E0061006D00650000000D54F0
+      7900005000690063000000040000000010060600000043006100700074006900
+      6F006E000000076898980000FE564772000004000000000C0600000000470072
+      006F007500700000000652C47E0000070000000012060400000052006F007700
+      43006F0075006E00740000004C88706500000100000007000000001206040000
+      0043006F006C0043006F0075006E007400000017527065000001000000070000
+      000012080400000052006F00770049006E0064006500780000004C880B4E0768
+      0000FFFFFFFF070000000012080400000043006F006C0049006E006400650078
+      00000017520B4E07680000FFFFFFFF0700000000200A04000000500069006300
+      7400750072006500440072006100770054007900700065000000D87E36527B7C
+      8B570000000000000700000000160A0400000049006D0061006700650049006E
+      006400650078000000FE5647720B4E07680000FFFFFFFF0400000000140A0000
+      000049006D006100670065004E0061006D0065000000FE5647720D54F0790000
+      0400000000120C00000000460069006C0065004E0061006D0065000000FE5647
+      728765F64E0D54000004000000001A0E000000005200650073006F0075007200
+      630065004E0061006D0065000000FE564772448D906E0D54F079000004000000
+      00080A00000000550072006C000000FE564772FE94A563000015000000001810
+      040000004900730043006C006900700052006F0075006E00640000002F662654
+      6A52C18810620657625F0000000000001900000000160A050000004600690078
+      006500640043006F006C006F0072000000038C74659C98728200000000002001
+      07000000001200040000004900740065006D0054007900700065000000000000
+      0015000000001C00040000004100750074006F00530069007A00650057006900
+      64007400680000000000000015000000001E00040000004100750074006F0053
+      0069007A00650048006500690067006800740000000000000004000000001000
+      2A000000430061007000740069006F006E00000043006F006D0062006F004200
+      6F0078002D004900740065006D00440065007400610069006C00330000000400
+      0000000E0000000000440065007400610069006C000000040000000010000000
+      0000440065007400610069006C00310000000400000000100000000000440065
+      007400610069006C003200000004000000001000000000004400650074006100
+      69006C00330000000400000000100000000000440065007400610069006C0034
+      0000000400000000100000000000440065007400610069006C00350000000400
+      000000100000000000440065007400610069006C003600000007000000001400
+      040000004100630063006500730073006F007200790000000000000018160000
+      001A0000000000420069006E006100720079004F0062006A0065006300740000
+      000E000000000E00080000004800650069006700680074000000000000000000
+      F0BF0E000000000C000800000057006900640074006800000000000000000059
+      401500000000100004000000560069007300690062006C0065000000FFFFFFFF
+      04000000000A00000000004E0061006D00650000000700000000080004000000
+      54006100670000000000000007000000000A0004000000540061006700310000
+      0000000000150000000010000400000043006800650063006B00650064000000
+      0000000007000000001200040000004900740065006D00540079007000650000
+      000000000018120000000A001A000000490063006F006E000000540044007200
+      6100770050006900630074007500720065000000040000000014000000000049
+      006D006100670065004E0061006D006500000017000000001800000000004700
+      49004600460069006C0065004400610074006100000017000000001800000000
+      00530056004700460069006C0065004400610074006100000004000000000A06
+      0A0000004E0061006D00650000000D54F0790000490063006F006E0000000400
+      000000100606000000430061007000740069006F006E000000076898980000FE
+      560768000004000000000C0600000000470072006F007500700000000652C47E
+      0000070000000012060400000052006F00770043006F0075006E00740000004C
+      887065000001000000070000000012060400000043006F006C0043006F007500
+      6E007400000017527065000001000000070000000012080400000052006F0077
+      0049006E0064006500780000004C880B4E07680000FFFFFFFF07000000001208
+      0400000043006F006C0049006E00640065007800000017520B4E07680000FFFF
+      FFFF0700000000200A0400000050006900630074007500720065004400720061
+      00770054007900700065000000D87E36527B7C8B570000000000000700000000
+      160A0400000049006D0061006700650049006E006400650078000000FE564772
+      0B4E07680000FFFFFFFF0400000000140A0000000049006D006100670065004E
+      0061006D0065000000FE5647720D54F07900000400000000120C000000004600
+      69006C0065004E0061006D0065000000FE5647728765F64E0D54000004000000
+      001A0E000000005200650073006F0075007200630065004E0061006D00650000
+      00FE564772448D906E0D54F07900000400000000080A00000000550072006C00
+      0000FE564772FE94A563000015000000001810040000004900730043006C0069
+      00700052006F0075006E00640000002F6626546A52C18810620657625F000000
+      0000001900000000160A050000004600690078006500640043006F006C006F00
+      72000000038C74659C9872820000000000201C181200000008001A0000005000
+      6900630000005400440072006100770050006900630074007500720065000000
+      040000000014000000000049006D006100670065004E0061006D006500000017
+      00000000180000000000470049004600460069006C0065004400610074006100
+      00001700000000180000000000530056004700460069006C0065004400610074
+      006100000004000000000A06080000004E0061006D00650000000D54F0790000
+      50006900630000000400000000100606000000430061007000740069006F006E
+      000000076898980000FE564772000004000000000C0600000000470072006F00
+      7500700000000652C47E0000070000000012060400000052006F00770043006F
+      0075006E00740000004C88706500000100000007000000001206040000004300
+      6F006C0043006F0075006E007400000017527065000001000000070000000012
+      080400000052006F00770049006E0064006500780000004C880B4E07680000FF
+      FFFFFF070000000012080400000043006F006C0049006E006400650078000000
+      17520B4E07680000FFFFFFFF0700000000200A04000000500069006300740075
+      0072006500440072006100770054007900700065000000D87E36527B7C8B5700
+      00000000000700000000160A0400000049006D0061006700650049006E006400
+      650078000000FE5647720B4E07680000FFFFFFFF0400000000140A0000000049
+      006D006100670065004E0061006D0065000000FE5647720D54F0790000040000
+      0000120C00000000460069006C0065004E0061006D0065000000FE5647728765
+      F64E0D54000004000000001A0E000000005200650073006F0075007200630065
+      004E0061006D0065000000FE564772448D906E0D54F07900000400000000080A
+      00000000550072006C000000FE564772FE94A563000015000000001810040000
+      004900730043006C006900700052006F0075006E00640000002F6626546A52C1
+      8810620657625F0000000000001900000000160A050000004600690078006500
+      640043006F006C006F0072000000038C74659C9872820000000000208D070000
+      00001200040000004900740065006D0054007900700065000000000000001500
+      0000001C00040000004100750074006F00530069007A00650057006900640074
+      00680000000000000015000000001E00040000004100750074006F0053006900
+      7A006500480065006900670068007400000000000000040000000010000E0000
+      00430061007000740069006F006E00000042007500740074006F006E00000004
+      000000000E0000000000440065007400610069006C0000000400000000100000
+      000000440065007400610069006C003100000004000000001000000000004400
+      65007400610069006C0032000000040000000010000000000044006500740061
+      0069006C00330000000400000000100000000000440065007400610069006C00
+      340000000400000000100000000000440065007400610069006C003500000004
+      00000000100000000000440065007400610069006C0036000000070000000014
+      00040000004100630063006500730073006F0072007900000000000000}
+    ColumnHeader.Properties.Items = <
+      item
+        Selected = False
+        Checked = False
+        Height = -1.000000000000000000
+        Visible = True
+        Color = clBlack
+        Width = 150.000000000000000000
+        Icon.IsClipRound = False
+        Icon.FixedColor.Alpha = 255
+        Pic.IsClipRound = False
+        Pic.FixedColor.Alpha = 255
+        Tag = 0
+        Tag1 = 0
+        ItemType = sitDefault
+        Caption = 'Image-ItemIcon'
+        Accessory = satNone
+        AutoSizeWidth = False
+        AutoSizeHeight = False
+        ReadOnly = False
+        AutoSize = False
+        AutoSizeMinWidth = 100.000000000000000000
+        Footer.ValueType = fvtNone
+        FooterValueType = fvtNone
+        IsUseDefaultGridColumnMaterial = True
+        IsUseDefaultGridColumnCaptionParam = True
+        SelfOwnMaterial.ItemAccessoryPicture.IsClipRound = False
+        SelfOwnMaterial.ItemAccessoryPicture.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemAccessoryPictureParam.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.ItemBackNormalPicture.IsClipRound = False
+        SelfOwnMaterial.ItemBackNormalPicture.FixedColor.Alpha = 255
+        SelfOwnMaterial.ItemBackHoverPicture.IsClipRound = False
+        SelfOwnMaterial.ItemBackHoverPicture.FixedColor.Alpha = 255
+        SelfOwnMaterial.ItemBackDownPicture.IsClipRound = False
+        SelfOwnMaterial.ItemBackDownPicture.FixedColor.Alpha = 255
+        SelfOwnMaterial.ItemBackPushedPicture.IsClipRound = False
+        SelfOwnMaterial.ItemBackPushedPicture.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.Color = clWhite
+        SelfOwnMaterial.DrawItemBackColorParam.IsFill = True
+        SelfOwnMaterial.DrawItemBackColorParam.FillColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.BorderColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseOverEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseOverEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseOverEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.DisabledEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.FocusedEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackGndPictureParam.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemCaptionParam.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawItemCaptionParam.FontSize = 8
+        SelfOwnMaterial.DrawItemCaptionParam.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawItemCaptionParam.DrawFont.Height = -11
+        SelfOwnMaterial.DrawItemCaptionParam.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawItemCaptionParam.DrawFont.Style = []
+        SelfOwnMaterial.DrawItemCaptionParam.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemCaptionParam.FontTrimming = fttNone
+        SelfOwnMaterial.DrawItemCaptionParam.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawItemCaptionParam.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemIconParam.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemIconParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemIconParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemIconParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemPicParam.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemPicParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemPicParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemPicParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemPicParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemPicParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetailParam.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetailParam.FontSize = 8
+        SelfOwnMaterial.DrawItemDetailParam.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawItemDetailParam.DrawFont.Height = -11
+        SelfOwnMaterial.DrawItemDetailParam.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetailParam.DrawFont.Style = []
+        SelfOwnMaterial.DrawItemDetailParam.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetailParam.FontTrimming = fttNone
+        SelfOwnMaterial.DrawItemDetailParam.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawItemDetailParam.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail1Param.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail1Param.FontSize = 8
+        SelfOwnMaterial.DrawItemDetail1Param.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawItemDetail1Param.DrawFont.Height = -11
+        SelfOwnMaterial.DrawItemDetail1Param.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail1Param.DrawFont.Style = []
+        SelfOwnMaterial.DrawItemDetail1Param.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail1Param.FontTrimming = fttNone
+        SelfOwnMaterial.DrawItemDetail1Param.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawItemDetail1Param.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail2Param.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail2Param.FontSize = 8
+        SelfOwnMaterial.DrawItemDetail2Param.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawItemDetail2Param.DrawFont.Height = -11
+        SelfOwnMaterial.DrawItemDetail2Param.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail2Param.DrawFont.Style = []
+        SelfOwnMaterial.DrawItemDetail2Param.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail2Param.FontTrimming = fttNone
+        SelfOwnMaterial.DrawItemDetail2Param.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawItemDetail2Param.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail3Param.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail3Param.FontSize = 8
+        SelfOwnMaterial.DrawItemDetail3Param.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawItemDetail3Param.DrawFont.Height = -11
+        SelfOwnMaterial.DrawItemDetail3Param.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail3Param.DrawFont.Style = []
+        SelfOwnMaterial.DrawItemDetail3Param.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail3Param.FontTrimming = fttNone
+        SelfOwnMaterial.DrawItemDetail3Param.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawItemDetail3Param.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail4Param.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail4Param.FontSize = 8
+        SelfOwnMaterial.DrawItemDetail4Param.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawItemDetail4Param.DrawFont.Height = -11
+        SelfOwnMaterial.DrawItemDetail4Param.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail4Param.DrawFont.Style = []
+        SelfOwnMaterial.DrawItemDetail4Param.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail4Param.FontTrimming = fttNone
+        SelfOwnMaterial.DrawItemDetail4Param.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawItemDetail4Param.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail5Param.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail5Param.FontSize = 8
+        SelfOwnMaterial.DrawItemDetail5Param.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawItemDetail5Param.DrawFont.Height = -11
+        SelfOwnMaterial.DrawItemDetail5Param.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail5Param.DrawFont.Style = []
+        SelfOwnMaterial.DrawItemDetail5Param.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail5Param.FontTrimming = fttNone
+        SelfOwnMaterial.DrawItemDetail5Param.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawItemDetail5Param.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail6Param.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail6Param.FontSize = 8
+        SelfOwnMaterial.DrawItemDetail6Param.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawItemDetail6Param.DrawFont.Height = -11
+        SelfOwnMaterial.DrawItemDetail6Param.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail6Param.DrawFont.Style = []
+        SelfOwnMaterial.DrawItemDetail6Param.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail6Param.FontTrimming = fttNone
+        SelfOwnMaterial.DrawItemDetail6Param.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawItemDetail6Param.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.IsTransparent = False
+        SelfOwnMaterial.BackColor.Color = clWhite
+        SelfOwnMaterial.BackColor.IsFill = True
+        SelfOwnMaterial.BackColor.FillColor.Alpha = 255
+        SelfOwnMaterial.BackColor.BorderColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.DrawCaptionParam.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawCaptionParam.FontSize = 8
+        SelfOwnMaterial.DrawCaptionParam.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawCaptionParam.DrawFont.Height = -11
+        SelfOwnMaterial.DrawCaptionParam.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawCaptionParam.DrawFont.Style = []
+        SelfOwnMaterial.DrawCaptionParam.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCaptionParam.FontTrimming = fttNone
+        SelfOwnMaterial.DrawCaptionParam.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawCaptionParam.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellTextParam.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawCellTextParam.FontSize = 8
+        SelfOwnMaterial.DrawCellTextParam.FontColor = clBlack
+        SelfOwnMaterial.DrawCellTextParam.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawCellTextParam.DrawFont.Height = -11
+        SelfOwnMaterial.DrawCellTextParam.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawCellTextParam.DrawFont.Style = []
+        SelfOwnMaterial.DrawCellTextParam.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellTextParam.FontTrimming = fttNone
+        SelfOwnMaterial.DrawCellTextParam.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawCellTextParam.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellPictureParam.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawCellPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawCellPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawCellPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawCellPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawCellPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawFooterCellTextParam.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawFooterCellTextParam.FontSize = 8
+        SelfOwnMaterial.DrawFooterCellTextParam.FontColor = clBlack
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawFont.Height = -11
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawFont.Style = []
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawFooterCellTextParam.FontTrimming = fttNone
+        SelfOwnMaterial.DrawFooterCellTextParam.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawFooterCellTextParam.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellText1Param.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawCellText1Param.FontSize = 8
+        SelfOwnMaterial.DrawCellText1Param.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawCellText1Param.DrawFont.Height = -11
+        SelfOwnMaterial.DrawCellText1Param.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawCellText1Param.DrawFont.Style = []
+        SelfOwnMaterial.DrawCellText1Param.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellText1Param.FontTrimming = fttNone
+        SelfOwnMaterial.DrawCellText1Param.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawCellText1Param.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+        ControlType = 'Image'
+        Control.AlignWithMargins = True
+        Control.Left = 5
+        Control.Top = 5
+        Control.Width = 140
+        Control.Height = 40
+        Control.Margins.Left = 5
+        Control.Margins.Top = 5
+        Control.Margins.Right = 5
+        Control.Margins.Bottom = 5
+        Control.ParentMouseEvent = True
+        Control.BindItemFieldName = 'ItemIcon'
+        Control.DirectUIVisible = False
+        Control.ComponentTypeUseKind = ctukDefault
+        Control.MaterialUseKind = mukSelfOwn
+        Control.KeepSelfOwnMaterial = True
+        Control.SelfOwnMaterial.BackColor.Color = clWhite
+        Control.SelfOwnMaterial.BackColor.IsFill = False
+        Control.SelfOwnMaterial.BackColor.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.FillColorChangeType = cctNone
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.FillColorChangeType = cctNone
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.IsTransparent = True
+        Control.SelfOwnMaterial.DrawPictureParam.IsAutoFit = True
+        Control.SelfOwnMaterial.DrawPictureParam.PictureHorzAlign = phaCenter
+        Control.SelfOwnMaterial.DrawPictureParam.PictureVertAlign = pvaCenter
+        Control.SelfOwnMaterial.DrawPictureParam.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCaptionParam.FontName = 'Tahoma'
+        Control.SelfOwnMaterial.DrawCaptionParam.FontSize = 8
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawFont.Charset = DEFAULT_CHARSET
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawFont.Height = -11
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawFont.Name = 'Tahoma'
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawFont.Style = []
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawFont.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCaptionParam.FontTrimming = fttNone
+        Control.SelfOwnMaterial.DrawCaptionParam.FontHorzAlign = fhaLeft
+        Control.SelfOwnMaterial.DrawCaptionParam.FontVertAlign = fvaTop
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.PushedEffect.FontSize = 12
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+        Control.HitTest = False
+        Control.MouseDownFocus = False
+        Control.Align = alClient
+        Control.ParentBackground = False
+        Control.TabOrder = 0
+        Control.Caption = ''
+        Control.Properties.AutoSize = False
+        Control.Properties.Picture.IsClipRound = False
+        Control.Properties.Picture.FixedColor.Alpha = 255
+        Control.Properties.Picture.PictureDrawType = pdtRefDrawPicture
+        Control.Properties.Animated = False
+        Control.Properties.AnimateSpeed = 10.000000000000000000
+        Control.Properties.GIFDelayExp = 12
+        Control.Properties.CurrentRotateAngle = 0
+        Control.Properties.Rotated = False
+        Control.Properties.RotateSpeed = 5.000000000000000000
+        Control.Properties.RotateIncrement = 20
+        Control.ExplicitWidth = 190
+        Control.ExplicitHeight = 50
+        IsAutoFitControlWidth = False
+        BindItemFieldName = 'ItemIcon'
+      end
+      item
+        Selected = False
+        Checked = False
+        Height = -1.000000000000000000
+        Visible = True
+        Color = clBlack
+        Width = 160.000000000000000000
+        Icon.IsClipRound = False
+        Icon.FixedColor.Alpha = 255
+        Pic.IsClipRound = False
+        Pic.FixedColor.Alpha = 255
+        Tag = 0
+        Tag1 = 0
+        ItemType = sitDefault
+        Caption = 'Label-ItemCaption'
+        Accessory = satNone
+        AutoSizeWidth = False
+        AutoSizeHeight = False
+        ReadOnly = False
+        AutoSize = False
+        AutoSizeMinWidth = 100.000000000000000000
+        Footer.ValueType = fvtNone
+        FooterValueType = fvtNone
+        IsUseDefaultGridColumnMaterial = True
+        IsUseDefaultGridColumnCaptionParam = True
+        SelfOwnMaterial.ItemAccessoryPicture.IsClipRound = False
+        SelfOwnMaterial.ItemAccessoryPicture.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemAccessoryPictureParam.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.ItemBackNormalPicture.IsClipRound = False
+        SelfOwnMaterial.ItemBackNormalPicture.FixedColor.Alpha = 255
+        SelfOwnMaterial.ItemBackHoverPicture.IsClipRound = False
+        SelfOwnMaterial.ItemBackHoverPicture.FixedColor.Alpha = 255
+        SelfOwnMaterial.ItemBackDownPicture.IsClipRound = False
+        SelfOwnMaterial.ItemBackDownPicture.FixedColor.Alpha = 255
+        SelfOwnMaterial.ItemBackPushedPicture.IsClipRound = False
+        SelfOwnMaterial.ItemBackPushedPicture.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.Color = clWhite
+        SelfOwnMaterial.DrawItemBackColorParam.IsFill = True
+        SelfOwnMaterial.DrawItemBackColorParam.FillColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.BorderColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseOverEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseOverEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseOverEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.DisabledEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.FocusedEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackGndPictureParam.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemCaptionParam.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawItemCaptionParam.FontSize = 8
+        SelfOwnMaterial.DrawItemCaptionParam.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawItemCaptionParam.DrawFont.Height = -11
+        SelfOwnMaterial.DrawItemCaptionParam.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawItemCaptionParam.DrawFont.Style = []
+        SelfOwnMaterial.DrawItemCaptionParam.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemCaptionParam.FontTrimming = fttNone
+        SelfOwnMaterial.DrawItemCaptionParam.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawItemCaptionParam.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemIconParam.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemIconParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemIconParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemIconParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemPicParam.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemPicParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemPicParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemPicParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemPicParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemPicParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetailParam.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetailParam.FontSize = 8
+        SelfOwnMaterial.DrawItemDetailParam.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawItemDetailParam.DrawFont.Height = -11
+        SelfOwnMaterial.DrawItemDetailParam.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetailParam.DrawFont.Style = []
+        SelfOwnMaterial.DrawItemDetailParam.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetailParam.FontTrimming = fttNone
+        SelfOwnMaterial.DrawItemDetailParam.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawItemDetailParam.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail1Param.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail1Param.FontSize = 8
+        SelfOwnMaterial.DrawItemDetail1Param.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawItemDetail1Param.DrawFont.Height = -11
+        SelfOwnMaterial.DrawItemDetail1Param.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail1Param.DrawFont.Style = []
+        SelfOwnMaterial.DrawItemDetail1Param.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail1Param.FontTrimming = fttNone
+        SelfOwnMaterial.DrawItemDetail1Param.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawItemDetail1Param.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail2Param.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail2Param.FontSize = 8
+        SelfOwnMaterial.DrawItemDetail2Param.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawItemDetail2Param.DrawFont.Height = -11
+        SelfOwnMaterial.DrawItemDetail2Param.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail2Param.DrawFont.Style = []
+        SelfOwnMaterial.DrawItemDetail2Param.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail2Param.FontTrimming = fttNone
+        SelfOwnMaterial.DrawItemDetail2Param.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawItemDetail2Param.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail3Param.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail3Param.FontSize = 8
+        SelfOwnMaterial.DrawItemDetail3Param.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawItemDetail3Param.DrawFont.Height = -11
+        SelfOwnMaterial.DrawItemDetail3Param.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail3Param.DrawFont.Style = []
+        SelfOwnMaterial.DrawItemDetail3Param.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail3Param.FontTrimming = fttNone
+        SelfOwnMaterial.DrawItemDetail3Param.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawItemDetail3Param.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail4Param.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail4Param.FontSize = 8
+        SelfOwnMaterial.DrawItemDetail4Param.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawItemDetail4Param.DrawFont.Height = -11
+        SelfOwnMaterial.DrawItemDetail4Param.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail4Param.DrawFont.Style = []
+        SelfOwnMaterial.DrawItemDetail4Param.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail4Param.FontTrimming = fttNone
+        SelfOwnMaterial.DrawItemDetail4Param.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawItemDetail4Param.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail5Param.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail5Param.FontSize = 8
+        SelfOwnMaterial.DrawItemDetail5Param.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawItemDetail5Param.DrawFont.Height = -11
+        SelfOwnMaterial.DrawItemDetail5Param.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail5Param.DrawFont.Style = []
+        SelfOwnMaterial.DrawItemDetail5Param.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail5Param.FontTrimming = fttNone
+        SelfOwnMaterial.DrawItemDetail5Param.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawItemDetail5Param.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail6Param.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail6Param.FontSize = 8
+        SelfOwnMaterial.DrawItemDetail6Param.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawItemDetail6Param.DrawFont.Height = -11
+        SelfOwnMaterial.DrawItemDetail6Param.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail6Param.DrawFont.Style = []
+        SelfOwnMaterial.DrawItemDetail6Param.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail6Param.FontTrimming = fttNone
+        SelfOwnMaterial.DrawItemDetail6Param.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawItemDetail6Param.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.IsTransparent = False
+        SelfOwnMaterial.BackColor.Color = clWhite
+        SelfOwnMaterial.BackColor.IsFill = True
+        SelfOwnMaterial.BackColor.FillColor.Alpha = 255
+        SelfOwnMaterial.BackColor.BorderColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.DrawCaptionParam.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawCaptionParam.FontSize = 8
+        SelfOwnMaterial.DrawCaptionParam.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawCaptionParam.DrawFont.Height = -11
+        SelfOwnMaterial.DrawCaptionParam.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawCaptionParam.DrawFont.Style = []
+        SelfOwnMaterial.DrawCaptionParam.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCaptionParam.FontTrimming = fttNone
+        SelfOwnMaterial.DrawCaptionParam.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawCaptionParam.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellTextParam.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawCellTextParam.FontSize = 8
+        SelfOwnMaterial.DrawCellTextParam.FontColor = clBlack
+        SelfOwnMaterial.DrawCellTextParam.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawCellTextParam.DrawFont.Height = -11
+        SelfOwnMaterial.DrawCellTextParam.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawCellTextParam.DrawFont.Style = []
+        SelfOwnMaterial.DrawCellTextParam.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellTextParam.FontTrimming = fttNone
+        SelfOwnMaterial.DrawCellTextParam.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawCellTextParam.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellPictureParam.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawCellPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawCellPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawCellPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawCellPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawCellPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawFooterCellTextParam.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawFooterCellTextParam.FontSize = 8
+        SelfOwnMaterial.DrawFooterCellTextParam.FontColor = clBlack
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawFont.Height = -11
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawFont.Style = []
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawFooterCellTextParam.FontTrimming = fttNone
+        SelfOwnMaterial.DrawFooterCellTextParam.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawFooterCellTextParam.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellText1Param.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawCellText1Param.FontSize = 8
+        SelfOwnMaterial.DrawCellText1Param.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawCellText1Param.DrawFont.Height = -11
+        SelfOwnMaterial.DrawCellText1Param.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawCellText1Param.DrawFont.Style = []
+        SelfOwnMaterial.DrawCellText1Param.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellText1Param.FontTrimming = fttNone
+        SelfOwnMaterial.DrawCellText1Param.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawCellText1Param.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+        ControlType = 'Label'
+        Control.AlignWithMargins = True
+        Control.Left = 5
+        Control.Top = 5
+        Control.Width = 150
+        Control.Height = 40
+        Control.Margins.Left = 5
+        Control.Margins.Top = 5
+        Control.Margins.Right = 5
+        Control.Margins.Bottom = 5
+        Control.ParentMouseEvent = True
+        Control.BindItemFieldName = 'ItemCaption'
+        Control.DirectUIVisible = False
+        Control.ComponentTypeUseKind = ctukDefault
+        Control.MaterialUseKind = mukSelfOwn
+        Control.KeepSelfOwnMaterial = True
+        Control.SelfOwnMaterial.BackColor.Color = clWhite
+        Control.SelfOwnMaterial.BackColor.IsFill = False
+        Control.SelfOwnMaterial.BackColor.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.FillColorChangeType = cctNone
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.FillColorChangeType = cctNone
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.IsTransparent = True
+        Control.SelfOwnMaterial.DrawCaptionParam.FontName = 'Tahoma'
+        Control.SelfOwnMaterial.DrawCaptionParam.FontSize = 8
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawFont.Charset = DEFAULT_CHARSET
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawFont.Height = -11
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawFont.Name = 'Tahoma'
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawFont.Style = []
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawFont.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCaptionParam.FontTrimming = fttNone
+        Control.SelfOwnMaterial.DrawCaptionParam.FontHorzAlign = fhaCenter
+        Control.SelfOwnMaterial.DrawCaptionParam.FontVertAlign = fvaCenter
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.PushedEffect.FontSize = 12
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+        Control.HitTest = False
+        Control.MouseDownFocus = False
+        Control.Align = alClient
+        Control.ParentBackground = False
+        Control.TabOrder = 0
+        Control.Caption = 'OrangeUI'
+        Control.Text = 'OrangeUI'
+        Control.Properties.AutoSize = False
+        Control.ExplicitWidth = 190
+        Control.ExplicitHeight = 50
+        IsAutoFitControlWidth = False
+        BindItemFieldName = 'ItemCaption'
+      end
+      item
+        Selected = False
+        Checked = False
+        Height = -1.000000000000000000
+        Visible = True
+        Color = clBlack
+        Width = 200.000000000000000000
+        Icon.IsClipRound = False
+        Icon.FixedColor.Alpha = 255
+        Pic.IsClipRound = False
+        Pic.FixedColor.Alpha = 255
+        Tag = 0
+        Tag1 = 0
+        ItemType = sitDefault
+        Caption = 'RepeatImage-ImageDetail'
+        Accessory = satNone
+        AutoSizeWidth = False
+        AutoSizeHeight = False
+        ReadOnly = False
+        AutoSize = False
+        AutoSizeMinWidth = 100.000000000000000000
+        Footer.ValueType = fvtNone
+        FooterValueType = fvtNone
+        IsUseDefaultGridColumnMaterial = True
+        IsUseDefaultGridColumnCaptionParam = True
+        SelfOwnMaterial.ItemAccessoryPicture.IsClipRound = False
+        SelfOwnMaterial.ItemAccessoryPicture.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemAccessoryPictureParam.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.ItemBackNormalPicture.IsClipRound = False
+        SelfOwnMaterial.ItemBackNormalPicture.FixedColor.Alpha = 255
+        SelfOwnMaterial.ItemBackHoverPicture.IsClipRound = False
+        SelfOwnMaterial.ItemBackHoverPicture.FixedColor.Alpha = 255
+        SelfOwnMaterial.ItemBackDownPicture.IsClipRound = False
+        SelfOwnMaterial.ItemBackDownPicture.FixedColor.Alpha = 255
+        SelfOwnMaterial.ItemBackPushedPicture.IsClipRound = False
+        SelfOwnMaterial.ItemBackPushedPicture.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.Color = clWhite
+        SelfOwnMaterial.DrawItemBackColorParam.IsFill = False
+        SelfOwnMaterial.DrawItemBackColorParam.FillColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.BorderColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseOverEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseOverEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseOverEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.DisabledEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.FocusedEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackGndPictureParam.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemCaptionParam.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawItemCaptionParam.FontSize = 8
+        SelfOwnMaterial.DrawItemCaptionParam.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawItemCaptionParam.DrawFont.Height = -11
+        SelfOwnMaterial.DrawItemCaptionParam.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawItemCaptionParam.DrawFont.Style = []
+        SelfOwnMaterial.DrawItemCaptionParam.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemCaptionParam.FontTrimming = fttNone
+        SelfOwnMaterial.DrawItemCaptionParam.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawItemCaptionParam.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemIconParam.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemIconParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemIconParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemIconParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemPicParam.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemPicParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemPicParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemPicParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemPicParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemPicParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetailParam.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetailParam.FontSize = 8
+        SelfOwnMaterial.DrawItemDetailParam.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawItemDetailParam.DrawFont.Height = -11
+        SelfOwnMaterial.DrawItemDetailParam.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetailParam.DrawFont.Style = []
+        SelfOwnMaterial.DrawItemDetailParam.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetailParam.FontTrimming = fttNone
+        SelfOwnMaterial.DrawItemDetailParam.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawItemDetailParam.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail1Param.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail1Param.FontSize = 8
+        SelfOwnMaterial.DrawItemDetail1Param.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawItemDetail1Param.DrawFont.Height = -11
+        SelfOwnMaterial.DrawItemDetail1Param.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail1Param.DrawFont.Style = []
+        SelfOwnMaterial.DrawItemDetail1Param.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail1Param.FontTrimming = fttNone
+        SelfOwnMaterial.DrawItemDetail1Param.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawItemDetail1Param.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail2Param.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail2Param.FontSize = 8
+        SelfOwnMaterial.DrawItemDetail2Param.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawItemDetail2Param.DrawFont.Height = -11
+        SelfOwnMaterial.DrawItemDetail2Param.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail2Param.DrawFont.Style = []
+        SelfOwnMaterial.DrawItemDetail2Param.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail2Param.FontTrimming = fttNone
+        SelfOwnMaterial.DrawItemDetail2Param.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawItemDetail2Param.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail3Param.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail3Param.FontSize = 8
+        SelfOwnMaterial.DrawItemDetail3Param.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawItemDetail3Param.DrawFont.Height = -11
+        SelfOwnMaterial.DrawItemDetail3Param.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail3Param.DrawFont.Style = []
+        SelfOwnMaterial.DrawItemDetail3Param.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail3Param.FontTrimming = fttNone
+        SelfOwnMaterial.DrawItemDetail3Param.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawItemDetail3Param.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail4Param.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail4Param.FontSize = 8
+        SelfOwnMaterial.DrawItemDetail4Param.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawItemDetail4Param.DrawFont.Height = -11
+        SelfOwnMaterial.DrawItemDetail4Param.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail4Param.DrawFont.Style = []
+        SelfOwnMaterial.DrawItemDetail4Param.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail4Param.FontTrimming = fttNone
+        SelfOwnMaterial.DrawItemDetail4Param.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawItemDetail4Param.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail5Param.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail5Param.FontSize = 8
+        SelfOwnMaterial.DrawItemDetail5Param.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawItemDetail5Param.DrawFont.Height = -11
+        SelfOwnMaterial.DrawItemDetail5Param.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail5Param.DrawFont.Style = []
+        SelfOwnMaterial.DrawItemDetail5Param.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail5Param.FontTrimming = fttNone
+        SelfOwnMaterial.DrawItemDetail5Param.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawItemDetail5Param.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail6Param.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail6Param.FontSize = 8
+        SelfOwnMaterial.DrawItemDetail6Param.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawItemDetail6Param.DrawFont.Height = -11
+        SelfOwnMaterial.DrawItemDetail6Param.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail6Param.DrawFont.Style = []
+        SelfOwnMaterial.DrawItemDetail6Param.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail6Param.FontTrimming = fttNone
+        SelfOwnMaterial.DrawItemDetail6Param.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawItemDetail6Param.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.IsTransparent = False
+        SelfOwnMaterial.BackColor.Color = clWhite
+        SelfOwnMaterial.BackColor.IsFill = False
+        SelfOwnMaterial.BackColor.FillColor.Alpha = 255
+        SelfOwnMaterial.BackColor.BorderColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.DrawCaptionParam.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawCaptionParam.FontSize = 8
+        SelfOwnMaterial.DrawCaptionParam.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawCaptionParam.DrawFont.Height = -11
+        SelfOwnMaterial.DrawCaptionParam.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawCaptionParam.DrawFont.Style = []
+        SelfOwnMaterial.DrawCaptionParam.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCaptionParam.FontTrimming = fttNone
+        SelfOwnMaterial.DrawCaptionParam.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawCaptionParam.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellTextParam.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawCellTextParam.FontSize = 8
+        SelfOwnMaterial.DrawCellTextParam.FontColor = clBlack
+        SelfOwnMaterial.DrawCellTextParam.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawCellTextParam.DrawFont.Height = -11
+        SelfOwnMaterial.DrawCellTextParam.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawCellTextParam.DrawFont.Style = []
+        SelfOwnMaterial.DrawCellTextParam.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellTextParam.FontTrimming = fttNone
+        SelfOwnMaterial.DrawCellTextParam.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawCellTextParam.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellPictureParam.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawCellPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawCellPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawCellPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawCellPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawCellPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawFooterCellTextParam.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawFooterCellTextParam.FontSize = 8
+        SelfOwnMaterial.DrawFooterCellTextParam.FontColor = clBlack
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawFont.Height = -11
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawFont.Style = []
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawFooterCellTextParam.FontTrimming = fttNone
+        SelfOwnMaterial.DrawFooterCellTextParam.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawFooterCellTextParam.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellText1Param.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawCellText1Param.FontSize = 8
+        SelfOwnMaterial.DrawCellText1Param.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawCellText1Param.DrawFont.Height = -11
+        SelfOwnMaterial.DrawCellText1Param.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawCellText1Param.DrawFont.Style = []
+        SelfOwnMaterial.DrawCellText1Param.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellText1Param.FontTrimming = fttNone
+        SelfOwnMaterial.DrawCellText1Param.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawCellText1Param.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+        ControlType = 'RepeatImage'
+        Control.AlignWithMargins = True
+        Control.Left = 5
+        Control.Top = 5
+        Control.Width = 190
+        Control.Height = 40
+        Control.Margins.Left = 5
+        Control.Margins.Top = 5
+        Control.Margins.Right = 5
+        Control.Margins.Bottom = 5
+        Control.ParentMouseEvent = True
+        Control.BindItemFieldName = 'ItemDetail'
+        Control.DirectUIVisible = False
+        Control.ComponentTypeUseKind = ctukDefault
+        Control.MaterialUseKind = mukSelfOwn
+        Control.KeepSelfOwnMaterial = True
+        Control.SelfOwnMaterial.BackColor.Color = clWhite
+        Control.SelfOwnMaterial.BackColor.IsFill = False
+        Control.SelfOwnMaterial.BackColor.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.FillColorChangeType = cctNone
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.FillColorChangeType = cctNone
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.IsTransparent = True
+        Control.SelfOwnMaterial.DrawPictureParam.IsAutoFit = True
+        Control.SelfOwnMaterial.DrawPictureParam.PictureHorzAlign = phaCenter
+        Control.SelfOwnMaterial.DrawPictureParam.PictureVertAlign = pvaCenter
+        Control.SelfOwnMaterial.DrawPictureParam.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawPictureWidth = 24.000000000000000000
+        Control.HitTest = False
+        Control.MouseDownFocus = False
+        Control.Align = alClient
+        Control.ParentBackground = False
+        Control.TabOrder = 0
+        Control.Caption = ''
+        Control.Properties.AutoSize = False
+        Control.Properties.Picture.IsClipRound = False
+        Control.Properties.Picture.FixedColor.Alpha = 255
+        Control.Properties.Picture.Data = {
+          0954506E67496D61676589504E470D0A1A0A0000000D49484452000000200000
+          00200806000000737A7AF4000000017352474200AECE1CE90000017E49444154
+          78DAD597ED6D8330108663C420640440FC2E4CD23049D249924E12FA1B0123C4
+          9340EE541B01F127B51DF5A4888F18BF0FE7F7CE0939BC39C8BF05E8BAEE0487
+          3321844ED3F49DE7F92D180013BF6E6ED77B20F6023CE0906C6ED3288AAA344D
+          A9570010BFC0E12CF9DA3A0B7B00446FFF3B19214D9665953780B66D4B48F35D
+          33CC2A0B56007DDFDFC1F1A57242CB2C18010CC3908CE388C25793F130B68AE3
+          98E2B9CE942F00ACC43ED8258A263659120465BDE207C01A045B42CD0086EBEB
+          2440E7C821660093F575154B9FCC0090FA2984380FA814B20540839D02E9DF00
+          A05E0130A7A30712CFE214C48FFC625505012056E22F009E2128CC5B1745D128
+          013C4108C5A5008E21A4E24A000CCDD66B1AB3E3AD015C3427DDE6A4CB8093E6
+          C49B8E1500F3C0C305C0B2F71B03B8DC9C707BB636A12303F290FE4AFA13001A
+          0C4C9A1CF4A52AAD0415806A73A2F0F9E26FC5FFA428407601C83280C217C533
+          9F0210FB25104CA86C283C58F52078C99E93026B0142C4DB019E6B6AE1217F64
+          09150000000049454E44AE426082}
+        Control.Properties.RepeatCount = 4.000000000000000000
+        Control.ExplicitLeft = 0
+        Control.ExplicitTop = 0
+        Control.ExplicitWidth = 120
+        Control.ExplicitHeight = 100
+        IsAutoFitControlWidth = False
+        BindItemFieldName = 'ItemDetail'
+      end
+      item
+        Selected = False
+        Checked = False
+        Height = -1.000000000000000000
+        Visible = True
+        Color = clBlack
+        Width = 180.000000000000000000
+        Icon.IsClipRound = False
+        Icon.FixedColor.Alpha = 255
+        Pic.IsClipRound = False
+        Pic.FixedColor.Alpha = 255
+        Tag = 0
+        Tag1 = 0
+        ItemType = sitDefault
+        Caption = 'CheckBox-ItemChecked'
+        Accessory = satNone
+        AutoSizeWidth = False
+        AutoSizeHeight = False
+        ReadOnly = False
+        AutoSize = False
+        AutoSizeMinWidth = 100.000000000000000000
+        Footer.ValueType = fvtNone
+        FooterValueType = fvtNone
+        IsUseDefaultGridColumnMaterial = True
+        IsUseDefaultGridColumnCaptionParam = True
+        SelfOwnMaterial.ItemAccessoryPicture.IsClipRound = False
+        SelfOwnMaterial.ItemAccessoryPicture.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemAccessoryPictureParam.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.ItemBackNormalPicture.IsClipRound = False
+        SelfOwnMaterial.ItemBackNormalPicture.FixedColor.Alpha = 255
+        SelfOwnMaterial.ItemBackHoverPicture.IsClipRound = False
+        SelfOwnMaterial.ItemBackHoverPicture.FixedColor.Alpha = 255
+        SelfOwnMaterial.ItemBackDownPicture.IsClipRound = False
+        SelfOwnMaterial.ItemBackDownPicture.FixedColor.Alpha = 255
+        SelfOwnMaterial.ItemBackPushedPicture.IsClipRound = False
+        SelfOwnMaterial.ItemBackPushedPicture.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.Color = clWhite
+        SelfOwnMaterial.DrawItemBackColorParam.IsFill = True
+        SelfOwnMaterial.DrawItemBackColorParam.FillColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.BorderColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseOverEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseOverEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseOverEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.DisabledEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.FocusedEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackGndPictureParam.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemCaptionParam.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawItemCaptionParam.FontSize = 8
+        SelfOwnMaterial.DrawItemCaptionParam.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawItemCaptionParam.DrawFont.Height = -11
+        SelfOwnMaterial.DrawItemCaptionParam.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawItemCaptionParam.DrawFont.Style = []
+        SelfOwnMaterial.DrawItemCaptionParam.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemCaptionParam.FontTrimming = fttNone
+        SelfOwnMaterial.DrawItemCaptionParam.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawItemCaptionParam.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemIconParam.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemIconParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemIconParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemIconParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemPicParam.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemPicParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemPicParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemPicParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemPicParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemPicParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetailParam.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetailParam.FontSize = 8
+        SelfOwnMaterial.DrawItemDetailParam.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawItemDetailParam.DrawFont.Height = -11
+        SelfOwnMaterial.DrawItemDetailParam.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetailParam.DrawFont.Style = []
+        SelfOwnMaterial.DrawItemDetailParam.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetailParam.FontTrimming = fttNone
+        SelfOwnMaterial.DrawItemDetailParam.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawItemDetailParam.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail1Param.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail1Param.FontSize = 8
+        SelfOwnMaterial.DrawItemDetail1Param.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawItemDetail1Param.DrawFont.Height = -11
+        SelfOwnMaterial.DrawItemDetail1Param.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail1Param.DrawFont.Style = []
+        SelfOwnMaterial.DrawItemDetail1Param.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail1Param.FontTrimming = fttNone
+        SelfOwnMaterial.DrawItemDetail1Param.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawItemDetail1Param.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail2Param.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail2Param.FontSize = 8
+        SelfOwnMaterial.DrawItemDetail2Param.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawItemDetail2Param.DrawFont.Height = -11
+        SelfOwnMaterial.DrawItemDetail2Param.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail2Param.DrawFont.Style = []
+        SelfOwnMaterial.DrawItemDetail2Param.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail2Param.FontTrimming = fttNone
+        SelfOwnMaterial.DrawItemDetail2Param.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawItemDetail2Param.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail3Param.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail3Param.FontSize = 8
+        SelfOwnMaterial.DrawItemDetail3Param.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawItemDetail3Param.DrawFont.Height = -11
+        SelfOwnMaterial.DrawItemDetail3Param.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail3Param.DrawFont.Style = []
+        SelfOwnMaterial.DrawItemDetail3Param.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail3Param.FontTrimming = fttNone
+        SelfOwnMaterial.DrawItemDetail3Param.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawItemDetail3Param.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail4Param.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail4Param.FontSize = 8
+        SelfOwnMaterial.DrawItemDetail4Param.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawItemDetail4Param.DrawFont.Height = -11
+        SelfOwnMaterial.DrawItemDetail4Param.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail4Param.DrawFont.Style = []
+        SelfOwnMaterial.DrawItemDetail4Param.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail4Param.FontTrimming = fttNone
+        SelfOwnMaterial.DrawItemDetail4Param.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawItemDetail4Param.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail5Param.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail5Param.FontSize = 8
+        SelfOwnMaterial.DrawItemDetail5Param.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawItemDetail5Param.DrawFont.Height = -11
+        SelfOwnMaterial.DrawItemDetail5Param.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail5Param.DrawFont.Style = []
+        SelfOwnMaterial.DrawItemDetail5Param.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail5Param.FontTrimming = fttNone
+        SelfOwnMaterial.DrawItemDetail5Param.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawItemDetail5Param.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail6Param.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail6Param.FontSize = 8
+        SelfOwnMaterial.DrawItemDetail6Param.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawItemDetail6Param.DrawFont.Height = -11
+        SelfOwnMaterial.DrawItemDetail6Param.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail6Param.DrawFont.Style = []
+        SelfOwnMaterial.DrawItemDetail6Param.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail6Param.FontTrimming = fttNone
+        SelfOwnMaterial.DrawItemDetail6Param.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawItemDetail6Param.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.IsTransparent = False
+        SelfOwnMaterial.BackColor.Color = clWhite
+        SelfOwnMaterial.BackColor.IsFill = True
+        SelfOwnMaterial.BackColor.FillColor.Alpha = 255
+        SelfOwnMaterial.BackColor.BorderColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.DrawCaptionParam.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawCaptionParam.FontSize = 8
+        SelfOwnMaterial.DrawCaptionParam.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawCaptionParam.DrawFont.Height = -11
+        SelfOwnMaterial.DrawCaptionParam.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawCaptionParam.DrawFont.Style = []
+        SelfOwnMaterial.DrawCaptionParam.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCaptionParam.FontTrimming = fttNone
+        SelfOwnMaterial.DrawCaptionParam.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawCaptionParam.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellTextParam.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawCellTextParam.FontSize = 8
+        SelfOwnMaterial.DrawCellTextParam.FontColor = clBlack
+        SelfOwnMaterial.DrawCellTextParam.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawCellTextParam.DrawFont.Height = -11
+        SelfOwnMaterial.DrawCellTextParam.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawCellTextParam.DrawFont.Style = []
+        SelfOwnMaterial.DrawCellTextParam.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellTextParam.FontTrimming = fttNone
+        SelfOwnMaterial.DrawCellTextParam.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawCellTextParam.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellPictureParam.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawCellPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawCellPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawCellPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawCellPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawCellPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawFooterCellTextParam.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawFooterCellTextParam.FontSize = 8
+        SelfOwnMaterial.DrawFooterCellTextParam.FontColor = clBlack
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawFont.Height = -11
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawFont.Style = []
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawFooterCellTextParam.FontTrimming = fttNone
+        SelfOwnMaterial.DrawFooterCellTextParam.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawFooterCellTextParam.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellText1Param.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawCellText1Param.FontSize = 8
+        SelfOwnMaterial.DrawCellText1Param.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawCellText1Param.DrawFont.Height = -11
+        SelfOwnMaterial.DrawCellText1Param.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawCellText1Param.DrawFont.Style = []
+        SelfOwnMaterial.DrawCellText1Param.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellText1Param.FontTrimming = fttNone
+        SelfOwnMaterial.DrawCellText1Param.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawCellText1Param.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+        ControlType = 'CheckBox'
+        Control.AlignWithMargins = True
+        Control.Left = 5
+        Control.Top = 5
+        Control.Width = 170
+        Control.Height = 40
+        Control.Margins.Left = 5
+        Control.Margins.Top = 5
+        Control.Margins.Right = 5
+        Control.Margins.Bottom = 5
+        Control.ParentMouseEvent = True
+        Control.BindItemFieldName = 'ItemChecked'
+        Control.DirectUIVisible = False
+        Control.ComponentTypeUseKind = ctukDefault
+        Control.MaterialUseKind = mukRef
+        Control.KeepSelfOwnMaterial = True
+        Control.MaterialName = 'chkDefaultCheckBoxMaterial'
+        Control.SelfOwnMaterial.BackColor.Color = clWhite
+        Control.SelfOwnMaterial.BackColor.IsFill = False
+        Control.SelfOwnMaterial.BackColor.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.FillColorChangeType = cctNone
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.FillColorChangeType = cctNone
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.IsTransparent = True
+        Control.SelfOwnMaterial.IsAutoPosition = False
+        Control.SelfOwnMaterial.DrawCaptionParam.FontName = 'Tahoma'
+        Control.SelfOwnMaterial.DrawCaptionParam.FontSize = 8
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawFont.Charset = DEFAULT_CHARSET
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawFont.Height = -11
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawFont.Name = 'Tahoma'
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawFont.Style = []
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawFont.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCaptionParam.FontTrimming = fttNone
+        Control.SelfOwnMaterial.DrawCaptionParam.FontHorzAlign = fhaLeft
+        Control.SelfOwnMaterial.DrawCaptionParam.FontVertAlign = fvaTop
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.PushedEffect.FontSize = 12
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+        Control.SelfOwnMaterial.NormalUnCheckedPicture.IsClipRound = False
+        Control.SelfOwnMaterial.NormalUnCheckedPicture.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.NormalCheckedPicture.IsClipRound = False
+        Control.SelfOwnMaterial.NormalCheckedPicture.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.HoverUnCheckedPicture.IsClipRound = False
+        Control.SelfOwnMaterial.HoverUnCheckedPicture.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.HoverCheckedPicture.IsClipRound = False
+        Control.SelfOwnMaterial.HoverCheckedPicture.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.DisabledCheckedPicture.IsClipRound = False
+        Control.SelfOwnMaterial.DisabledCheckedPicture.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.DisabledUnCheckedPicture.IsClipRound = False
+        Control.SelfOwnMaterial.DisabledUnCheckedPicture.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawPictureParam.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.CheckChar = #10004
+        Control.SelfOwnMaterial.DrawCheckStateParam.IsFill = False
+        Control.SelfOwnMaterial.DrawCheckStateParam.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCheckStateParam.PenColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCheckStateParam.PathActions = <
+          item
+            X = 15.000000000000000000
+            Y = 50.000000000000000000
+            SizeType = dpstPercent
+            ActionType = patMoveTo
+          end
+          item
+            X = 35.000000000000000000
+            Y = 75.000000000000000000
+            SizeType = dpstPercent
+            ActionType = patLineTo
+          end
+          item
+            SizeType = dpstPixel
+            ActionType = patDrawPath
+          end
+          item
+            X = 80.000000000000000000
+            Y = 15.000000000000000000
+            SizeType = dpstPercent
+            ActionType = patLineTo
+          end
+          item
+            SizeType = dpstPixel
+            ActionType = patDrawPath
+          end>
+        Control.SelfOwnMaterial.DrawCheckStateParam.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCheckStateParam.DrawEffectSetting.MouseDownEffect.PenColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCheckStateParam.DrawEffectSetting.MouseOverEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCheckStateParam.DrawEffectSetting.MouseOverEffect.PenColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCheckStateParam.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCheckStateParam.DrawEffectSetting.PushedEffect.PenColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCheckStateParam.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCheckStateParam.DrawEffectSetting.DisabledEffect.PenColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCheckStateParam.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCheckStateParam.DrawEffectSetting.FocusedEffect.PenColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCheckRectParam.Color = clWhite
+        Control.SelfOwnMaterial.DrawCheckRectParam.IsFill = False
+        Control.SelfOwnMaterial.DrawCheckRectParam.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCheckRectParam.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCheckRectParam.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCheckRectParam.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
+        Control.SelfOwnMaterial.DrawCheckRectParam.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCheckRectParam.DrawEffectSetting.MouseOverEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCheckRectParam.DrawEffectSetting.MouseOverEffect.FillColorChangeType = cctNone
+        Control.SelfOwnMaterial.DrawCheckRectParam.DrawEffectSetting.MouseOverEffect.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCheckRectParam.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCheckRectParam.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
+        Control.SelfOwnMaterial.DrawCheckRectParam.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCheckRectParam.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCheckRectParam.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
+        Control.SelfOwnMaterial.DrawCheckRectParam.DrawEffectSetting.DisabledEffect.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCheckRectParam.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCheckRectParam.DrawEffectSetting.FocusedEffect.FillColorChangeType = cctNone
+        Control.SelfOwnMaterial.DrawCheckRectParam.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.IsSimpleDrawCheckState = True
+        Control.SelfOwnMaterial.IsSimpleDrawCheckChar = False
+        Control.SelfOwnMaterial.DrawCheckCharParam.FontName = 'Tahoma'
+        Control.SelfOwnMaterial.DrawCheckCharParam.FontSize = 8
+        Control.SelfOwnMaterial.DrawCheckCharParam.DrawFont.Charset = DEFAULT_CHARSET
+        Control.SelfOwnMaterial.DrawCheckCharParam.DrawFont.Height = -11
+        Control.SelfOwnMaterial.DrawCheckCharParam.DrawFont.Name = 'Tahoma'
+        Control.SelfOwnMaterial.DrawCheckCharParam.DrawFont.Style = []
+        Control.SelfOwnMaterial.DrawCheckCharParam.DrawFont.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCheckCharParam.FontTrimming = fttNone
+        Control.SelfOwnMaterial.DrawCheckCharParam.FontHorzAlign = fhaLeft
+        Control.SelfOwnMaterial.DrawCheckCharParam.FontVertAlign = fvaTop
+        Control.SelfOwnMaterial.DrawCheckCharParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCheckCharParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        Control.SelfOwnMaterial.DrawCheckCharParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCheckCharParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        Control.SelfOwnMaterial.DrawCheckCharParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCheckCharParam.DrawEffectSetting.PushedEffect.FontSize = 12
+        Control.SelfOwnMaterial.DrawCheckCharParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCheckCharParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+        Control.SelfOwnMaterial.DrawCheckCharParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCheckCharParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+        Control.RefMaterial = dmEasyServiceCommonMaterial.chkDefaultCheckBoxMaterial
+        Control.HitTest = False
+        Control.MouseDownFocus = False
+        Control.Align = alClient
+        Control.ParentBackground = False
+        Control.TabOrder = 0
+        Control.Caption = 'married'
+        Control.Text = 'married'
+        Control.Properties.AutoSize = False
+        Control.Properties.Checked = True
+        Control.Properties.IsAutoChecked = True
+        Control.Properties.IsAutoCaption = False
+        Control.ExplicitWidth = 190
+        Control.ExplicitHeight = 50
+        IsAutoFitControlWidth = False
+        BindItemFieldName = 'ItemChecked'
+      end
+      item
+        Selected = False
+        Checked = False
+        Height = -1.000000000000000000
+        Visible = False
+        Color = clBlack
+        Width = 180.000000000000000000
+        Icon.IsClipRound = False
+        Icon.FixedColor.Alpha = 255
+        Pic.IsClipRound = False
+        Pic.FixedColor.Alpha = 255
+        Tag = 0
+        Tag1 = 0
+        ItemType = sitDefault
+        Caption = 'RadioButton-ItemDetail1'
+        Accessory = satNone
+        AutoSizeWidth = False
+        AutoSizeHeight = False
+        ReadOnly = False
+        AutoSize = False
+        AutoSizeMinWidth = 100.000000000000000000
+        Footer.ValueType = fvtNone
+        FooterValueType = fvtNone
+        IsUseDefaultGridColumnMaterial = True
+        IsUseDefaultGridColumnCaptionParam = True
+        SelfOwnMaterial.ItemAccessoryPicture.IsClipRound = False
+        SelfOwnMaterial.ItemAccessoryPicture.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemAccessoryPictureParam.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.ItemBackNormalPicture.IsClipRound = False
+        SelfOwnMaterial.ItemBackNormalPicture.FixedColor.Alpha = 255
+        SelfOwnMaterial.ItemBackHoverPicture.IsClipRound = False
+        SelfOwnMaterial.ItemBackHoverPicture.FixedColor.Alpha = 255
+        SelfOwnMaterial.ItemBackDownPicture.IsClipRound = False
+        SelfOwnMaterial.ItemBackDownPicture.FixedColor.Alpha = 255
+        SelfOwnMaterial.ItemBackPushedPicture.IsClipRound = False
+        SelfOwnMaterial.ItemBackPushedPicture.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.Color = clWhite
+        SelfOwnMaterial.DrawItemBackColorParam.IsFill = True
+        SelfOwnMaterial.DrawItemBackColorParam.FillColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.BorderColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseOverEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseOverEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseOverEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.DisabledEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.FocusedEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackGndPictureParam.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemCaptionParam.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawItemCaptionParam.FontSize = 8
+        SelfOwnMaterial.DrawItemCaptionParam.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawItemCaptionParam.DrawFont.Height = -11
+        SelfOwnMaterial.DrawItemCaptionParam.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawItemCaptionParam.DrawFont.Style = []
+        SelfOwnMaterial.DrawItemCaptionParam.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemCaptionParam.FontTrimming = fttNone
+        SelfOwnMaterial.DrawItemCaptionParam.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawItemCaptionParam.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemIconParam.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemIconParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemIconParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemIconParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemPicParam.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemPicParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemPicParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemPicParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemPicParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemPicParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetailParam.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetailParam.FontSize = 8
+        SelfOwnMaterial.DrawItemDetailParam.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawItemDetailParam.DrawFont.Height = -11
+        SelfOwnMaterial.DrawItemDetailParam.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetailParam.DrawFont.Style = []
+        SelfOwnMaterial.DrawItemDetailParam.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetailParam.FontTrimming = fttNone
+        SelfOwnMaterial.DrawItemDetailParam.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawItemDetailParam.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail1Param.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail1Param.FontSize = 8
+        SelfOwnMaterial.DrawItemDetail1Param.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawItemDetail1Param.DrawFont.Height = -11
+        SelfOwnMaterial.DrawItemDetail1Param.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail1Param.DrawFont.Style = []
+        SelfOwnMaterial.DrawItemDetail1Param.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail1Param.FontTrimming = fttNone
+        SelfOwnMaterial.DrawItemDetail1Param.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawItemDetail1Param.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail2Param.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail2Param.FontSize = 8
+        SelfOwnMaterial.DrawItemDetail2Param.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawItemDetail2Param.DrawFont.Height = -11
+        SelfOwnMaterial.DrawItemDetail2Param.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail2Param.DrawFont.Style = []
+        SelfOwnMaterial.DrawItemDetail2Param.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail2Param.FontTrimming = fttNone
+        SelfOwnMaterial.DrawItemDetail2Param.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawItemDetail2Param.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail3Param.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail3Param.FontSize = 8
+        SelfOwnMaterial.DrawItemDetail3Param.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawItemDetail3Param.DrawFont.Height = -11
+        SelfOwnMaterial.DrawItemDetail3Param.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail3Param.DrawFont.Style = []
+        SelfOwnMaterial.DrawItemDetail3Param.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail3Param.FontTrimming = fttNone
+        SelfOwnMaterial.DrawItemDetail3Param.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawItemDetail3Param.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail4Param.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail4Param.FontSize = 8
+        SelfOwnMaterial.DrawItemDetail4Param.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawItemDetail4Param.DrawFont.Height = -11
+        SelfOwnMaterial.DrawItemDetail4Param.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail4Param.DrawFont.Style = []
+        SelfOwnMaterial.DrawItemDetail4Param.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail4Param.FontTrimming = fttNone
+        SelfOwnMaterial.DrawItemDetail4Param.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawItemDetail4Param.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail5Param.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail5Param.FontSize = 8
+        SelfOwnMaterial.DrawItemDetail5Param.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawItemDetail5Param.DrawFont.Height = -11
+        SelfOwnMaterial.DrawItemDetail5Param.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail5Param.DrawFont.Style = []
+        SelfOwnMaterial.DrawItemDetail5Param.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail5Param.FontTrimming = fttNone
+        SelfOwnMaterial.DrawItemDetail5Param.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawItemDetail5Param.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail6Param.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail6Param.FontSize = 8
+        SelfOwnMaterial.DrawItemDetail6Param.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawItemDetail6Param.DrawFont.Height = -11
+        SelfOwnMaterial.DrawItemDetail6Param.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail6Param.DrawFont.Style = []
+        SelfOwnMaterial.DrawItemDetail6Param.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail6Param.FontTrimming = fttNone
+        SelfOwnMaterial.DrawItemDetail6Param.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawItemDetail6Param.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.IsTransparent = False
+        SelfOwnMaterial.BackColor.Color = clWhite
+        SelfOwnMaterial.BackColor.IsFill = True
+        SelfOwnMaterial.BackColor.FillColor.Alpha = 255
+        SelfOwnMaterial.BackColor.BorderColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.DrawCaptionParam.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawCaptionParam.FontSize = 8
+        SelfOwnMaterial.DrawCaptionParam.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawCaptionParam.DrawFont.Height = -11
+        SelfOwnMaterial.DrawCaptionParam.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawCaptionParam.DrawFont.Style = []
+        SelfOwnMaterial.DrawCaptionParam.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCaptionParam.FontTrimming = fttNone
+        SelfOwnMaterial.DrawCaptionParam.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawCaptionParam.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellTextParam.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawCellTextParam.FontSize = 8
+        SelfOwnMaterial.DrawCellTextParam.FontColor = clBlack
+        SelfOwnMaterial.DrawCellTextParam.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawCellTextParam.DrawFont.Height = -11
+        SelfOwnMaterial.DrawCellTextParam.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawCellTextParam.DrawFont.Style = []
+        SelfOwnMaterial.DrawCellTextParam.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellTextParam.FontTrimming = fttNone
+        SelfOwnMaterial.DrawCellTextParam.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawCellTextParam.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellPictureParam.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawCellPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawCellPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawCellPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawCellPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawCellPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawFooterCellTextParam.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawFooterCellTextParam.FontSize = 8
+        SelfOwnMaterial.DrawFooterCellTextParam.FontColor = clBlack
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawFont.Height = -11
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawFont.Style = []
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawFooterCellTextParam.FontTrimming = fttNone
+        SelfOwnMaterial.DrawFooterCellTextParam.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawFooterCellTextParam.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellText1Param.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawCellText1Param.FontSize = 8
+        SelfOwnMaterial.DrawCellText1Param.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawCellText1Param.DrawFont.Height = -11
+        SelfOwnMaterial.DrawCellText1Param.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawCellText1Param.DrawFont.Style = []
+        SelfOwnMaterial.DrawCellText1Param.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellText1Param.FontTrimming = fttNone
+        SelfOwnMaterial.DrawCellText1Param.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawCellText1Param.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+        ControlType = 'RadioButton'
+        Control.AlignWithMargins = True
+        Control.Left = 5
+        Control.Top = 5
+        Control.Width = 190
+        Control.Height = 50
+        Control.Margins.Left = 5
+        Control.Margins.Top = 5
+        Control.Margins.Right = 5
+        Control.Margins.Bottom = 5
+        Control.ParentMouseEvent = True
+        Control.BindItemFieldName = 'ItemDetail1'
+        Control.DirectUIVisible = False
+        Control.ComponentTypeUseKind = ctukDefault
+        Control.MaterialUseKind = mukRef
+        Control.KeepSelfOwnMaterial = True
+        Control.MaterialName = 'rbRedRadioButtonMaterial'
+        Control.SelfOwnMaterial.BackColor.Color = clWhite
+        Control.SelfOwnMaterial.BackColor.IsFill = False
+        Control.SelfOwnMaterial.BackColor.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.FillColorChangeType = cctNone
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.FillColorChangeType = cctNone
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.IsTransparent = True
+        Control.SelfOwnMaterial.DrawCaptionParam.FontName = 'Tahoma'
+        Control.SelfOwnMaterial.DrawCaptionParam.FontSize = 8
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawFont.Charset = DEFAULT_CHARSET
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawFont.Height = -11
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawFont.Name = 'Tahoma'
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawFont.Style = []
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawFont.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCaptionParam.FontTrimming = fttNone
+        Control.SelfOwnMaterial.DrawCaptionParam.FontHorzAlign = fhaLeft
+        Control.SelfOwnMaterial.DrawCaptionParam.FontVertAlign = fvaTop
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.PushedEffect.FontSize = 12
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+        Control.SelfOwnMaterial.IsAutoPosition = False
+        Control.SelfOwnMaterial.NormalUnCheckedPicture.IsClipRound = False
+        Control.SelfOwnMaterial.NormalUnCheckedPicture.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.NormalCheckedPicture.IsClipRound = False
+        Control.SelfOwnMaterial.NormalCheckedPicture.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.HoverUnCheckedPicture.IsClipRound = False
+        Control.SelfOwnMaterial.HoverUnCheckedPicture.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.HoverCheckedPicture.IsClipRound = False
+        Control.SelfOwnMaterial.HoverCheckedPicture.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.DisabledCheckedPicture.IsClipRound = False
+        Control.SelfOwnMaterial.DisabledCheckedPicture.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.DisabledUnCheckedPicture.IsClipRound = False
+        Control.SelfOwnMaterial.DisabledUnCheckedPicture.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawPictureParam.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCheckStateParam.Color = clWhite
+        Control.SelfOwnMaterial.DrawCheckStateParam.IsFill = False
+        Control.SelfOwnMaterial.DrawCheckStateParam.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCheckStateParam.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCheckStateParam.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCheckStateParam.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
+        Control.SelfOwnMaterial.DrawCheckStateParam.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCheckStateParam.DrawEffectSetting.MouseOverEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCheckStateParam.DrawEffectSetting.MouseOverEffect.FillColorChangeType = cctNone
+        Control.SelfOwnMaterial.DrawCheckStateParam.DrawEffectSetting.MouseOverEffect.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCheckStateParam.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCheckStateParam.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
+        Control.SelfOwnMaterial.DrawCheckStateParam.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCheckStateParam.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCheckStateParam.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
+        Control.SelfOwnMaterial.DrawCheckStateParam.DrawEffectSetting.DisabledEffect.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCheckStateParam.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCheckStateParam.DrawEffectSetting.FocusedEffect.FillColorChangeType = cctNone
+        Control.SelfOwnMaterial.DrawCheckStateParam.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCheckRectParam.Color = clWhite
+        Control.SelfOwnMaterial.DrawCheckRectParam.IsFill = False
+        Control.SelfOwnMaterial.DrawCheckRectParam.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCheckRectParam.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCheckRectParam.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCheckRectParam.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
+        Control.SelfOwnMaterial.DrawCheckRectParam.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCheckRectParam.DrawEffectSetting.MouseOverEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCheckRectParam.DrawEffectSetting.MouseOverEffect.FillColorChangeType = cctNone
+        Control.SelfOwnMaterial.DrawCheckRectParam.DrawEffectSetting.MouseOverEffect.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCheckRectParam.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCheckRectParam.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
+        Control.SelfOwnMaterial.DrawCheckRectParam.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCheckRectParam.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCheckRectParam.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
+        Control.SelfOwnMaterial.DrawCheckRectParam.DrawEffectSetting.DisabledEffect.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCheckRectParam.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCheckRectParam.DrawEffectSetting.FocusedEffect.FillColorChangeType = cctNone
+        Control.SelfOwnMaterial.DrawCheckRectParam.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
+        Control.RefMaterial = dmEasyServiceCommonMaterial.rbRedRadioButtonMaterial
+        Control.HitTest = False
+        Control.MouseDownFocus = False
+        Control.Align = alClient
+        Control.ParentBackground = False
+        Control.TabOrder = 0
+        Control.Caption = 'man'
+        Control.Text = 'man'
+        Control.Properties.AutoSize = False
+        Control.Properties.Checked = False
+        Control.Properties.IsAutoChecked = True
+        IsAutoFitControlWidth = False
+        BindItemFieldName = 'ItemDetail1'
+      end
+      item
+        Selected = False
+        Checked = False
+        Height = -1.000000000000000000
+        Visible = True
+        Color = clBlack
+        Width = 180.000000000000000000
+        Icon.IsClipRound = False
+        Icon.FixedColor.Alpha = 255
+        Pic.IsClipRound = False
+        Pic.FixedColor.Alpha = 255
+        Tag = 0
+        Tag1 = 0
+        ItemType = sitDefault
+        Caption = 'ProgressBar-ItemDetail2'
+        Accessory = satNone
+        AutoSizeWidth = False
+        AutoSizeHeight = False
+        ReadOnly = False
+        AutoSize = False
+        AutoSizeMinWidth = 100.000000000000000000
+        Footer.ValueType = fvtNone
+        FooterValueType = fvtNone
+        IsUseDefaultGridColumnMaterial = True
+        IsUseDefaultGridColumnCaptionParam = True
+        SelfOwnMaterial.ItemAccessoryPicture.IsClipRound = False
+        SelfOwnMaterial.ItemAccessoryPicture.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemAccessoryPictureParam.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.ItemBackNormalPicture.IsClipRound = False
+        SelfOwnMaterial.ItemBackNormalPicture.FixedColor.Alpha = 255
+        SelfOwnMaterial.ItemBackHoverPicture.IsClipRound = False
+        SelfOwnMaterial.ItemBackHoverPicture.FixedColor.Alpha = 255
+        SelfOwnMaterial.ItemBackDownPicture.IsClipRound = False
+        SelfOwnMaterial.ItemBackDownPicture.FixedColor.Alpha = 255
+        SelfOwnMaterial.ItemBackPushedPicture.IsClipRound = False
+        SelfOwnMaterial.ItemBackPushedPicture.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.Color = clWhite
+        SelfOwnMaterial.DrawItemBackColorParam.IsFill = True
+        SelfOwnMaterial.DrawItemBackColorParam.FillColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.BorderColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseOverEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseOverEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseOverEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.DisabledEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.FocusedEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackGndPictureParam.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemCaptionParam.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawItemCaptionParam.FontSize = 8
+        SelfOwnMaterial.DrawItemCaptionParam.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawItemCaptionParam.DrawFont.Height = -11
+        SelfOwnMaterial.DrawItemCaptionParam.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawItemCaptionParam.DrawFont.Style = []
+        SelfOwnMaterial.DrawItemCaptionParam.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemCaptionParam.FontTrimming = fttNone
+        SelfOwnMaterial.DrawItemCaptionParam.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawItemCaptionParam.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemIconParam.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemIconParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemIconParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemIconParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemPicParam.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemPicParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemPicParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemPicParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemPicParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemPicParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetailParam.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetailParam.FontSize = 8
+        SelfOwnMaterial.DrawItemDetailParam.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawItemDetailParam.DrawFont.Height = -11
+        SelfOwnMaterial.DrawItemDetailParam.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetailParam.DrawFont.Style = []
+        SelfOwnMaterial.DrawItemDetailParam.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetailParam.FontTrimming = fttNone
+        SelfOwnMaterial.DrawItemDetailParam.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawItemDetailParam.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail1Param.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail1Param.FontSize = 8
+        SelfOwnMaterial.DrawItemDetail1Param.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawItemDetail1Param.DrawFont.Height = -11
+        SelfOwnMaterial.DrawItemDetail1Param.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail1Param.DrawFont.Style = []
+        SelfOwnMaterial.DrawItemDetail1Param.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail1Param.FontTrimming = fttNone
+        SelfOwnMaterial.DrawItemDetail1Param.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawItemDetail1Param.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail2Param.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail2Param.FontSize = 8
+        SelfOwnMaterial.DrawItemDetail2Param.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawItemDetail2Param.DrawFont.Height = -11
+        SelfOwnMaterial.DrawItemDetail2Param.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail2Param.DrawFont.Style = []
+        SelfOwnMaterial.DrawItemDetail2Param.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail2Param.FontTrimming = fttNone
+        SelfOwnMaterial.DrawItemDetail2Param.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawItemDetail2Param.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail3Param.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail3Param.FontSize = 8
+        SelfOwnMaterial.DrawItemDetail3Param.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawItemDetail3Param.DrawFont.Height = -11
+        SelfOwnMaterial.DrawItemDetail3Param.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail3Param.DrawFont.Style = []
+        SelfOwnMaterial.DrawItemDetail3Param.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail3Param.FontTrimming = fttNone
+        SelfOwnMaterial.DrawItemDetail3Param.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawItemDetail3Param.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail4Param.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail4Param.FontSize = 8
+        SelfOwnMaterial.DrawItemDetail4Param.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawItemDetail4Param.DrawFont.Height = -11
+        SelfOwnMaterial.DrawItemDetail4Param.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail4Param.DrawFont.Style = []
+        SelfOwnMaterial.DrawItemDetail4Param.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail4Param.FontTrimming = fttNone
+        SelfOwnMaterial.DrawItemDetail4Param.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawItemDetail4Param.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail5Param.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail5Param.FontSize = 8
+        SelfOwnMaterial.DrawItemDetail5Param.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawItemDetail5Param.DrawFont.Height = -11
+        SelfOwnMaterial.DrawItemDetail5Param.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail5Param.DrawFont.Style = []
+        SelfOwnMaterial.DrawItemDetail5Param.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail5Param.FontTrimming = fttNone
+        SelfOwnMaterial.DrawItemDetail5Param.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawItemDetail5Param.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail6Param.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail6Param.FontSize = 8
+        SelfOwnMaterial.DrawItemDetail6Param.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawItemDetail6Param.DrawFont.Height = -11
+        SelfOwnMaterial.DrawItemDetail6Param.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail6Param.DrawFont.Style = []
+        SelfOwnMaterial.DrawItemDetail6Param.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail6Param.FontTrimming = fttNone
+        SelfOwnMaterial.DrawItemDetail6Param.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawItemDetail6Param.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.IsTransparent = False
+        SelfOwnMaterial.BackColor.Color = clWhite
+        SelfOwnMaterial.BackColor.IsFill = True
+        SelfOwnMaterial.BackColor.FillColor.Alpha = 255
+        SelfOwnMaterial.BackColor.BorderColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.DrawCaptionParam.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawCaptionParam.FontSize = 8
+        SelfOwnMaterial.DrawCaptionParam.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawCaptionParam.DrawFont.Height = -11
+        SelfOwnMaterial.DrawCaptionParam.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawCaptionParam.DrawFont.Style = []
+        SelfOwnMaterial.DrawCaptionParam.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCaptionParam.FontTrimming = fttNone
+        SelfOwnMaterial.DrawCaptionParam.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawCaptionParam.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellTextParam.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawCellTextParam.FontSize = 8
+        SelfOwnMaterial.DrawCellTextParam.FontColor = clBlack
+        SelfOwnMaterial.DrawCellTextParam.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawCellTextParam.DrawFont.Height = -11
+        SelfOwnMaterial.DrawCellTextParam.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawCellTextParam.DrawFont.Style = []
+        SelfOwnMaterial.DrawCellTextParam.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellTextParam.FontTrimming = fttNone
+        SelfOwnMaterial.DrawCellTextParam.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawCellTextParam.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellPictureParam.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawCellPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawCellPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawCellPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawCellPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawCellPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawFooterCellTextParam.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawFooterCellTextParam.FontSize = 8
+        SelfOwnMaterial.DrawFooterCellTextParam.FontColor = clBlack
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawFont.Height = -11
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawFont.Style = []
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawFooterCellTextParam.FontTrimming = fttNone
+        SelfOwnMaterial.DrawFooterCellTextParam.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawFooterCellTextParam.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellText1Param.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawCellText1Param.FontSize = 8
+        SelfOwnMaterial.DrawCellText1Param.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawCellText1Param.DrawFont.Height = -11
+        SelfOwnMaterial.DrawCellText1Param.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawCellText1Param.DrawFont.Style = []
+        SelfOwnMaterial.DrawCellText1Param.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellText1Param.FontTrimming = fttNone
+        SelfOwnMaterial.DrawCellText1Param.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawCellText1Param.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+        ControlType = 'ProgressBar'
+        Control.AlignWithMargins = True
+        Control.Left = 5
+        Control.Top = 5
+        Control.Width = 170
+        Control.Height = 40
+        Control.Margins.Left = 5
+        Control.Margins.Top = 5
+        Control.Margins.Right = 5
+        Control.Margins.Bottom = 5
+        Control.ParentMouseEvent = True
+        Control.BindItemFieldName = 'ItemDetail2'
+        Control.DirectUIVisible = False
+        Control.ComponentTypeUseKind = ctukDefault
+        Control.MaterialUseKind = mukRef
+        Control.KeepSelfOwnMaterial = True
+        Control.MaterialName = 'SkinWinProgressBar1_Material'
+        Control.SelfOwnMaterial.BackColor.Color = clWhite
+        Control.SelfOwnMaterial.BackColor.IsFill = False
+        Control.SelfOwnMaterial.BackColor.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.FillColorChangeType = cctNone
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.FillColorChangeType = cctNone
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.IsTransparent = True
+        Control.SelfOwnMaterial.IsClipPercentRect = False
+        Control.SelfOwnMaterial.IsDrawPercent = False
+        Control.SelfOwnMaterial.DrawPercentParam.FontName = 'Tahoma'
+        Control.SelfOwnMaterial.DrawPercentParam.FontSize = 8
+        Control.SelfOwnMaterial.DrawPercentParam.DrawFont.Charset = DEFAULT_CHARSET
+        Control.SelfOwnMaterial.DrawPercentParam.DrawFont.Height = -11
+        Control.SelfOwnMaterial.DrawPercentParam.DrawFont.Name = 'Tahoma'
+        Control.SelfOwnMaterial.DrawPercentParam.DrawFont.Style = []
+        Control.SelfOwnMaterial.DrawPercentParam.DrawFont.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawPercentParam.FontTrimming = fttNone
+        Control.SelfOwnMaterial.DrawPercentParam.FontHorzAlign = fhaLeft
+        Control.SelfOwnMaterial.DrawPercentParam.FontVertAlign = fvaTop
+        Control.SelfOwnMaterial.DrawPercentParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawPercentParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        Control.SelfOwnMaterial.DrawPercentParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawPercentParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        Control.SelfOwnMaterial.DrawPercentParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawPercentParam.DrawEffectSetting.PushedEffect.FontSize = 12
+        Control.SelfOwnMaterial.DrawPercentParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawPercentParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+        Control.SelfOwnMaterial.DrawPercentParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawPercentParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+        Control.SelfOwnMaterial.DrawCaptionParam.FontName = 'Tahoma'
+        Control.SelfOwnMaterial.DrawCaptionParam.FontSize = 8
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawFont.Charset = DEFAULT_CHARSET
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawFont.Height = -11
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawFont.Name = 'Tahoma'
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawFont.Style = []
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawFont.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCaptionParam.FontTrimming = fttNone
+        Control.SelfOwnMaterial.DrawCaptionParam.FontHorzAlign = fhaLeft
+        Control.SelfOwnMaterial.DrawCaptionParam.FontVertAlign = fvaTop
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.PushedEffect.FontSize = 12
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+        Control.SelfOwnMaterial.VertBackGndPicture.IsClipRound = False
+        Control.SelfOwnMaterial.VertBackGndPicture.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.HorzBackGndPicture.IsClipRound = False
+        Control.SelfOwnMaterial.HorzBackGndPicture.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.VertForeGndPicture.IsClipRound = False
+        Control.SelfOwnMaterial.VertForeGndPicture.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.HorzForeGndPicture.IsClipRound = False
+        Control.SelfOwnMaterial.HorzForeGndPicture.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.BackGndDrawPictureParam.StretchStyle = issThreePartHorz
+        Control.SelfOwnMaterial.BackGndDrawPictureParam.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.BackGndDrawPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.BackGndDrawPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.BackGndDrawPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.BackGndDrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.BackGndDrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.ForeGndDrawPictureParam.StretchStyle = issThreePartHorz
+        Control.SelfOwnMaterial.ForeGndDrawPictureParam.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.ForeGndDrawPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.ForeGndDrawPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.ForeGndDrawPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.ForeGndDrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.ForeGndDrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.ForeColor.Color = clWhite
+        Control.SelfOwnMaterial.ForeColor.IsFill = False
+        Control.SelfOwnMaterial.ForeColor.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.ForeColor.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.ForeColor.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.ForeColor.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
+        Control.SelfOwnMaterial.ForeColor.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.ForeColor.DrawEffectSetting.MouseOverEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.ForeColor.DrawEffectSetting.MouseOverEffect.FillColorChangeType = cctNone
+        Control.SelfOwnMaterial.ForeColor.DrawEffectSetting.MouseOverEffect.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.ForeColor.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.ForeColor.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
+        Control.SelfOwnMaterial.ForeColor.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.ForeColor.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.ForeColor.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
+        Control.SelfOwnMaterial.ForeColor.DrawEffectSetting.DisabledEffect.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.ForeColor.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.ForeColor.DrawEffectSetting.FocusedEffect.FillColorChangeType = cctNone
+        Control.SelfOwnMaterial.ForeColor.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.IsReverse = False
+        Control.SelfOwnMaterial.StartAngle = -180.000000000000000000
+        Control.SelfOwnMaterial.MaxAngle = 180.000000000000000000
+        Control.SelfOwnMaterial.BarSize = 10.000000000000000000
+        Control.SelfOwnMaterial.DrawForePathParam.IsFill = False
+        Control.SelfOwnMaterial.DrawForePathParam.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawForePathParam.PenColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawForePathParam.PathActions = <>
+        Control.SelfOwnMaterial.DrawForePathParam.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawForePathParam.DrawEffectSetting.MouseDownEffect.PenColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawForePathParam.DrawEffectSetting.MouseOverEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawForePathParam.DrawEffectSetting.MouseOverEffect.PenColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawForePathParam.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawForePathParam.DrawEffectSetting.PushedEffect.PenColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawForePathParam.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawForePathParam.DrawEffectSetting.DisabledEffect.PenColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawForePathParam.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawForePathParam.DrawEffectSetting.FocusedEffect.PenColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawBackPathParam.IsFill = False
+        Control.SelfOwnMaterial.DrawBackPathParam.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawBackPathParam.PenColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawBackPathParam.PathActions = <>
+        Control.SelfOwnMaterial.DrawBackPathParam.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawBackPathParam.DrawEffectSetting.MouseDownEffect.PenColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawBackPathParam.DrawEffectSetting.MouseOverEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawBackPathParam.DrawEffectSetting.MouseOverEffect.PenColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawBackPathParam.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawBackPathParam.DrawEffectSetting.PushedEffect.PenColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawBackPathParam.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawBackPathParam.DrawEffectSetting.DisabledEffect.PenColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawBackPathParam.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawBackPathParam.DrawEffectSetting.FocusedEffect.PenColor.Alpha = 255
+        Control.RefMaterial = SkinWinProgressBar1_Material
+        Control.HitTest = False
+        Control.MouseDownFocus = False
+        Control.Align = alClient
+        Control.ParentBackground = False
+        Control.TabOrder = 0
+        Control.Caption = ''
+        Control.Text = ''
+        Control.Properties.Min = 0
+        Control.Properties.Max = 100
+        Control.Properties.Position = 3
+        Control.Properties.Orientation = prHorizontal
+        Control.ExplicitWidth = 190
+        Control.ExplicitHeight = 50
+        IsAutoFitControlWidth = False
+        BindItemFieldName = 'ItemDetail2'
+      end
+      item
+        Selected = False
+        Checked = False
+        Height = -1.000000000000000000
+        Visible = True
+        Color = clBlack
+        Width = 180.000000000000000000
+        Icon.IsClipRound = False
+        Icon.FixedColor.Alpha = 255
+        Pic.IsClipRound = False
+        Pic.FixedColor.Alpha = 255
+        Tag = 0
+        Tag1 = 0
+        ItemType = sitDefault
+        Caption = 'ComboBox-ItemDetail3'
+        Accessory = satNone
+        AutoSizeWidth = False
+        AutoSizeHeight = False
+        ReadOnly = False
+        AutoSize = False
+        AutoSizeMinWidth = 100.000000000000000000
+        Footer.ValueType = fvtNone
+        FooterValueType = fvtNone
+        IsUseDefaultGridColumnMaterial = True
+        IsUseDefaultGridColumnCaptionParam = True
+        SelfOwnMaterial.ItemAccessoryPicture.IsClipRound = False
+        SelfOwnMaterial.ItemAccessoryPicture.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemAccessoryPictureParam.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.ItemBackNormalPicture.IsClipRound = False
+        SelfOwnMaterial.ItemBackNormalPicture.FixedColor.Alpha = 255
+        SelfOwnMaterial.ItemBackHoverPicture.IsClipRound = False
+        SelfOwnMaterial.ItemBackHoverPicture.FixedColor.Alpha = 255
+        SelfOwnMaterial.ItemBackDownPicture.IsClipRound = False
+        SelfOwnMaterial.ItemBackDownPicture.FixedColor.Alpha = 255
+        SelfOwnMaterial.ItemBackPushedPicture.IsClipRound = False
+        SelfOwnMaterial.ItemBackPushedPicture.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.Color = clWhite
+        SelfOwnMaterial.DrawItemBackColorParam.IsFill = True
+        SelfOwnMaterial.DrawItemBackColorParam.FillColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.BorderColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseOverEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseOverEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseOverEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.DisabledEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.FocusedEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackGndPictureParam.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemCaptionParam.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawItemCaptionParam.FontSize = 8
+        SelfOwnMaterial.DrawItemCaptionParam.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawItemCaptionParam.DrawFont.Height = -11
+        SelfOwnMaterial.DrawItemCaptionParam.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawItemCaptionParam.DrawFont.Style = []
+        SelfOwnMaterial.DrawItemCaptionParam.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemCaptionParam.FontTrimming = fttNone
+        SelfOwnMaterial.DrawItemCaptionParam.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawItemCaptionParam.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemIconParam.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemIconParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemIconParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemIconParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemPicParam.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemPicParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemPicParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemPicParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemPicParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemPicParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetailParam.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetailParam.FontSize = 8
+        SelfOwnMaterial.DrawItemDetailParam.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawItemDetailParam.DrawFont.Height = -11
+        SelfOwnMaterial.DrawItemDetailParam.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetailParam.DrawFont.Style = []
+        SelfOwnMaterial.DrawItemDetailParam.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetailParam.FontTrimming = fttNone
+        SelfOwnMaterial.DrawItemDetailParam.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawItemDetailParam.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail1Param.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail1Param.FontSize = 8
+        SelfOwnMaterial.DrawItemDetail1Param.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawItemDetail1Param.DrawFont.Height = -11
+        SelfOwnMaterial.DrawItemDetail1Param.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail1Param.DrawFont.Style = []
+        SelfOwnMaterial.DrawItemDetail1Param.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail1Param.FontTrimming = fttNone
+        SelfOwnMaterial.DrawItemDetail1Param.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawItemDetail1Param.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail2Param.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail2Param.FontSize = 8
+        SelfOwnMaterial.DrawItemDetail2Param.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawItemDetail2Param.DrawFont.Height = -11
+        SelfOwnMaterial.DrawItemDetail2Param.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail2Param.DrawFont.Style = []
+        SelfOwnMaterial.DrawItemDetail2Param.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail2Param.FontTrimming = fttNone
+        SelfOwnMaterial.DrawItemDetail2Param.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawItemDetail2Param.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail3Param.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail3Param.FontSize = 8
+        SelfOwnMaterial.DrawItemDetail3Param.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawItemDetail3Param.DrawFont.Height = -11
+        SelfOwnMaterial.DrawItemDetail3Param.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail3Param.DrawFont.Style = []
+        SelfOwnMaterial.DrawItemDetail3Param.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail3Param.FontTrimming = fttNone
+        SelfOwnMaterial.DrawItemDetail3Param.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawItemDetail3Param.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail4Param.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail4Param.FontSize = 8
+        SelfOwnMaterial.DrawItemDetail4Param.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawItemDetail4Param.DrawFont.Height = -11
+        SelfOwnMaterial.DrawItemDetail4Param.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail4Param.DrawFont.Style = []
+        SelfOwnMaterial.DrawItemDetail4Param.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail4Param.FontTrimming = fttNone
+        SelfOwnMaterial.DrawItemDetail4Param.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawItemDetail4Param.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail5Param.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail5Param.FontSize = 8
+        SelfOwnMaterial.DrawItemDetail5Param.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawItemDetail5Param.DrawFont.Height = -11
+        SelfOwnMaterial.DrawItemDetail5Param.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail5Param.DrawFont.Style = []
+        SelfOwnMaterial.DrawItemDetail5Param.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail5Param.FontTrimming = fttNone
+        SelfOwnMaterial.DrawItemDetail5Param.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawItemDetail5Param.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail6Param.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail6Param.FontSize = 8
+        SelfOwnMaterial.DrawItemDetail6Param.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawItemDetail6Param.DrawFont.Height = -11
+        SelfOwnMaterial.DrawItemDetail6Param.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail6Param.DrawFont.Style = []
+        SelfOwnMaterial.DrawItemDetail6Param.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail6Param.FontTrimming = fttNone
+        SelfOwnMaterial.DrawItemDetail6Param.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawItemDetail6Param.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.IsTransparent = False
+        SelfOwnMaterial.BackColor.Color = clWhite
+        SelfOwnMaterial.BackColor.IsFill = True
+        SelfOwnMaterial.BackColor.FillColor.Alpha = 255
+        SelfOwnMaterial.BackColor.BorderColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.DrawCaptionParam.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawCaptionParam.FontSize = 8
+        SelfOwnMaterial.DrawCaptionParam.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawCaptionParam.DrawFont.Height = -11
+        SelfOwnMaterial.DrawCaptionParam.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawCaptionParam.DrawFont.Style = []
+        SelfOwnMaterial.DrawCaptionParam.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCaptionParam.FontTrimming = fttNone
+        SelfOwnMaterial.DrawCaptionParam.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawCaptionParam.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellTextParam.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawCellTextParam.FontSize = 8
+        SelfOwnMaterial.DrawCellTextParam.FontColor = clBlack
+        SelfOwnMaterial.DrawCellTextParam.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawCellTextParam.DrawFont.Height = -11
+        SelfOwnMaterial.DrawCellTextParam.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawCellTextParam.DrawFont.Style = []
+        SelfOwnMaterial.DrawCellTextParam.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellTextParam.FontTrimming = fttNone
+        SelfOwnMaterial.DrawCellTextParam.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawCellTextParam.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellPictureParam.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawCellPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawCellPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawCellPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawCellPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawCellPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawFooterCellTextParam.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawFooterCellTextParam.FontSize = 8
+        SelfOwnMaterial.DrawFooterCellTextParam.FontColor = clBlack
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawFont.Height = -11
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawFont.Style = []
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawFooterCellTextParam.FontTrimming = fttNone
+        SelfOwnMaterial.DrawFooterCellTextParam.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawFooterCellTextParam.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellText1Param.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawCellText1Param.FontSize = 8
+        SelfOwnMaterial.DrawCellText1Param.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawCellText1Param.DrawFont.Height = -11
+        SelfOwnMaterial.DrawCellText1Param.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawCellText1Param.DrawFont.Style = []
+        SelfOwnMaterial.DrawCellText1Param.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellText1Param.FontTrimming = fttNone
+        SelfOwnMaterial.DrawCellText1Param.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawCellText1Param.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+        ControlType = 'ComboBox'
+        Control.AlignWithMargins = True
+        Control.Left = 5
+        Control.Top = 5
+        Control.Width = 170
+        Control.Height = 40
+        Control.Margins.Left = 5
+        Control.Margins.Top = 5
+        Control.Margins.Right = 5
+        Control.Margins.Bottom = 5
+        Control.ParentMouseEvent = True
+        Control.BindItemFieldName = 'ItemDetail3'
+        Control.DirectUIVisible = False
+        Control.ComponentTypeUseKind = ctukDefault
+        Control.MaterialUseKind = mukRef
+        Control.KeepSelfOwnMaterial = True
+        Control.MaterialName = 'cmbGrayBorderFocusedThemeBorderEffectMaterial'
+        Control.SelfOwnMaterial.BackColor.Color = clWhite
+        Control.SelfOwnMaterial.BackColor.IsFill = False
+        Control.SelfOwnMaterial.BackColor.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.FillColorChangeType = cctNone
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.FillColorChangeType = cctNone
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.IsTransparent = True
+        Control.SelfOwnMaterial.ArrowPicture.IsClipRound = False
+        Control.SelfOwnMaterial.ArrowPicture.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawArrowPictureParam.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawArrowPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawArrowPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawArrowPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawArrowPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawArrowPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.NormalPicture.IsClipRound = False
+        Control.SelfOwnMaterial.NormalPicture.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.HoverPicture.IsClipRound = False
+        Control.SelfOwnMaterial.HoverPicture.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.FocusedPicture.IsClipRound = False
+        Control.SelfOwnMaterial.FocusedPicture.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.DisabledPicture.IsClipRound = False
+        Control.SelfOwnMaterial.DisabledPicture.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawPictureParam.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawHelpTextParam.FontName = 'Tahoma'
+        Control.SelfOwnMaterial.DrawHelpTextParam.FontSize = 8
+        Control.SelfOwnMaterial.DrawHelpTextParam.FontColor = clGray
+        Control.SelfOwnMaterial.DrawHelpTextParam.DrawFont.Charset = DEFAULT_CHARSET
+        Control.SelfOwnMaterial.DrawHelpTextParam.DrawFont.Color = clGray
+        Control.SelfOwnMaterial.DrawHelpTextParam.DrawFont.Height = -11
+        Control.SelfOwnMaterial.DrawHelpTextParam.DrawFont.Name = 'Tahoma'
+        Control.SelfOwnMaterial.DrawHelpTextParam.DrawFont.Style = []
+        Control.SelfOwnMaterial.DrawHelpTextParam.DrawFont.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawHelpTextParam.DrawFont.FontColor.Color = clGray
+        Control.SelfOwnMaterial.DrawHelpTextParam.FontTrimming = fttNone
+        Control.SelfOwnMaterial.DrawHelpTextParam.FontHorzAlign = fhaLeft
+        Control.SelfOwnMaterial.DrawHelpTextParam.FontVertAlign = fvaTop
+        Control.SelfOwnMaterial.DrawHelpTextParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawHelpTextParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        Control.SelfOwnMaterial.DrawHelpTextParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawHelpTextParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        Control.SelfOwnMaterial.DrawHelpTextParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawHelpTextParam.DrawEffectSetting.PushedEffect.FontSize = 12
+        Control.SelfOwnMaterial.DrawHelpTextParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawHelpTextParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+        Control.SelfOwnMaterial.DrawHelpTextParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawHelpTextParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+        Control.SelfOwnMaterial.DrawTextParam.FontName = 'Tahoma'
+        Control.SelfOwnMaterial.DrawTextParam.FontSize = 8
+        Control.SelfOwnMaterial.DrawTextParam.DrawFont.Charset = DEFAULT_CHARSET
+        Control.SelfOwnMaterial.DrawTextParam.DrawFont.Height = -11
+        Control.SelfOwnMaterial.DrawTextParam.DrawFont.Name = 'Tahoma'
+        Control.SelfOwnMaterial.DrawTextParam.DrawFont.Style = []
+        Control.SelfOwnMaterial.DrawTextParam.DrawFont.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawTextParam.FontTrimming = fttNone
+        Control.SelfOwnMaterial.DrawTextParam.FontHorzAlign = fhaLeft
+        Control.SelfOwnMaterial.DrawTextParam.FontVertAlign = fvaTop
+        Control.SelfOwnMaterial.DrawTextParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawTextParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        Control.SelfOwnMaterial.DrawTextParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawTextParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        Control.SelfOwnMaterial.DrawTextParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawTextParam.DrawEffectSetting.PushedEffect.FontSize = 12
+        Control.SelfOwnMaterial.DrawTextParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawTextParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+        Control.SelfOwnMaterial.DrawTextParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawTextParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+        Control.RefMaterial = dmEasyServiceCommonMaterial.cmbGrayBorderFocusedThemeBorderEffectMaterial
+        Control.HitTest = False
+        Control.MouseDownFocus = False
+        Control.Align = alClient
+        Control.ParentBackground = False
+        Control.TabOrder = 0
+        Control.TabStop = True
+        Control.MultiSelect = False
+        Control.ViewType = scbvtText
+        Control.AutoDropDown = True
+        Control.Items.Strings = (
+          'Administrator'
+          'System'
+          'Anoymous'
+          'User')
+        Control.ItemIndex = -1
+        Control.ExplicitWidth = 190
+        Control.ExplicitHeight = 50
+        IsAutoFitControlWidth = False
+        BindItemFieldName = 'ItemDetail3'
+      end
+      item
+        Selected = False
+        Checked = False
+        Height = -1.000000000000000000
+        Visible = True
+        Color = clBlack
+        Width = 100.000000000000000000
+        Icon.IsClipRound = False
+        Icon.FixedColor.Alpha = 255
+        Pic.IsClipRound = False
+        Pic.FixedColor.Alpha = 255
+        Tag = 0
+        Tag1 = 0
+        ItemType = sitDefault
+        Caption = 'Button'
+        Accessory = satNone
+        AutoSizeWidth = False
+        AutoSizeHeight = False
+        ReadOnly = False
+        AutoSize = False
+        AutoSizeMinWidth = 100.000000000000000000
+        Footer.ValueType = fvtNone
+        FooterValueType = fvtNone
+        IsUseDefaultGridColumnMaterial = True
+        IsUseDefaultGridColumnCaptionParam = True
+        SelfOwnMaterial.ItemAccessoryPicture.IsClipRound = False
+        SelfOwnMaterial.ItemAccessoryPicture.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemAccessoryPictureParam.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemAccessoryPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.ItemBackNormalPicture.IsClipRound = False
+        SelfOwnMaterial.ItemBackNormalPicture.FixedColor.Alpha = 255
+        SelfOwnMaterial.ItemBackHoverPicture.IsClipRound = False
+        SelfOwnMaterial.ItemBackHoverPicture.FixedColor.Alpha = 255
+        SelfOwnMaterial.ItemBackDownPicture.IsClipRound = False
+        SelfOwnMaterial.ItemBackDownPicture.FixedColor.Alpha = 255
+        SelfOwnMaterial.ItemBackPushedPicture.IsClipRound = False
+        SelfOwnMaterial.ItemBackPushedPicture.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.Color = clWhite
+        SelfOwnMaterial.DrawItemBackColorParam.IsFill = True
+        SelfOwnMaterial.DrawItemBackColorParam.FillColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.BorderColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseOverEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseOverEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.MouseOverEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.DisabledEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.FocusedEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.DrawItemBackColorParam.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackGndPictureParam.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemBackGndPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemCaptionParam.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawItemCaptionParam.FontSize = 8
+        SelfOwnMaterial.DrawItemCaptionParam.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawItemCaptionParam.DrawFont.Height = -11
+        SelfOwnMaterial.DrawItemCaptionParam.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawItemCaptionParam.DrawFont.Style = []
+        SelfOwnMaterial.DrawItemCaptionParam.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemCaptionParam.FontTrimming = fttNone
+        SelfOwnMaterial.DrawItemCaptionParam.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawItemCaptionParam.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemCaptionParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemIconParam.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemIconParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemIconParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemIconParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemPicParam.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemPicParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemPicParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemPicParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemPicParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemPicParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetailParam.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetailParam.FontSize = 8
+        SelfOwnMaterial.DrawItemDetailParam.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawItemDetailParam.DrawFont.Height = -11
+        SelfOwnMaterial.DrawItemDetailParam.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetailParam.DrawFont.Style = []
+        SelfOwnMaterial.DrawItemDetailParam.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetailParam.FontTrimming = fttNone
+        SelfOwnMaterial.DrawItemDetailParam.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawItemDetailParam.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetailParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail1Param.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail1Param.FontSize = 8
+        SelfOwnMaterial.DrawItemDetail1Param.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawItemDetail1Param.DrawFont.Height = -11
+        SelfOwnMaterial.DrawItemDetail1Param.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail1Param.DrawFont.Style = []
+        SelfOwnMaterial.DrawItemDetail1Param.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail1Param.FontTrimming = fttNone
+        SelfOwnMaterial.DrawItemDetail1Param.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawItemDetail1Param.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail1Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail2Param.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail2Param.FontSize = 8
+        SelfOwnMaterial.DrawItemDetail2Param.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawItemDetail2Param.DrawFont.Height = -11
+        SelfOwnMaterial.DrawItemDetail2Param.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail2Param.DrawFont.Style = []
+        SelfOwnMaterial.DrawItemDetail2Param.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail2Param.FontTrimming = fttNone
+        SelfOwnMaterial.DrawItemDetail2Param.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawItemDetail2Param.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail2Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail3Param.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail3Param.FontSize = 8
+        SelfOwnMaterial.DrawItemDetail3Param.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawItemDetail3Param.DrawFont.Height = -11
+        SelfOwnMaterial.DrawItemDetail3Param.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail3Param.DrawFont.Style = []
+        SelfOwnMaterial.DrawItemDetail3Param.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail3Param.FontTrimming = fttNone
+        SelfOwnMaterial.DrawItemDetail3Param.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawItemDetail3Param.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail3Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail4Param.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail4Param.FontSize = 8
+        SelfOwnMaterial.DrawItemDetail4Param.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawItemDetail4Param.DrawFont.Height = -11
+        SelfOwnMaterial.DrawItemDetail4Param.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail4Param.DrawFont.Style = []
+        SelfOwnMaterial.DrawItemDetail4Param.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail4Param.FontTrimming = fttNone
+        SelfOwnMaterial.DrawItemDetail4Param.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawItemDetail4Param.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail4Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail5Param.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail5Param.FontSize = 8
+        SelfOwnMaterial.DrawItemDetail5Param.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawItemDetail5Param.DrawFont.Height = -11
+        SelfOwnMaterial.DrawItemDetail5Param.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail5Param.DrawFont.Style = []
+        SelfOwnMaterial.DrawItemDetail5Param.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail5Param.FontTrimming = fttNone
+        SelfOwnMaterial.DrawItemDetail5Param.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawItemDetail5Param.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail5Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail6Param.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail6Param.FontSize = 8
+        SelfOwnMaterial.DrawItemDetail6Param.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawItemDetail6Param.DrawFont.Height = -11
+        SelfOwnMaterial.DrawItemDetail6Param.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawItemDetail6Param.DrawFont.Style = []
+        SelfOwnMaterial.DrawItemDetail6Param.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail6Param.FontTrimming = fttNone
+        SelfOwnMaterial.DrawItemDetail6Param.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawItemDetail6Param.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawItemDetail6Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.IsTransparent = False
+        SelfOwnMaterial.BackColor.Color = clWhite
+        SelfOwnMaterial.BackColor.IsFill = True
+        SelfOwnMaterial.BackColor.FillColor.Alpha = 255
+        SelfOwnMaterial.BackColor.BorderColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
+        SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.FillColorChangeType = cctNone
+        SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
+        SelfOwnMaterial.DrawCaptionParam.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawCaptionParam.FontSize = 8
+        SelfOwnMaterial.DrawCaptionParam.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawCaptionParam.DrawFont.Height = -11
+        SelfOwnMaterial.DrawCaptionParam.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawCaptionParam.DrawFont.Style = []
+        SelfOwnMaterial.DrawCaptionParam.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCaptionParam.FontTrimming = fttNone
+        SelfOwnMaterial.DrawCaptionParam.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawCaptionParam.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellTextParam.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawCellTextParam.FontSize = 8
+        SelfOwnMaterial.DrawCellTextParam.FontColor = clBlack
+        SelfOwnMaterial.DrawCellTextParam.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawCellTextParam.DrawFont.Height = -11
+        SelfOwnMaterial.DrawCellTextParam.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawCellTextParam.DrawFont.Style = []
+        SelfOwnMaterial.DrawCellTextParam.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellTextParam.FontTrimming = fttNone
+        SelfOwnMaterial.DrawCellTextParam.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawCellTextParam.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellTextParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellPictureParam.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawCellPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawCellPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawCellPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawCellPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawCellPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+        SelfOwnMaterial.DrawFooterCellTextParam.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawFooterCellTextParam.FontSize = 8
+        SelfOwnMaterial.DrawFooterCellTextParam.FontColor = clBlack
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawFont.Height = -11
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawFont.Style = []
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawFooterCellTextParam.FontTrimming = fttNone
+        SelfOwnMaterial.DrawFooterCellTextParam.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawFooterCellTextParam.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawFooterCellTextParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellText1Param.FontName = 'Tahoma'
+        SelfOwnMaterial.DrawCellText1Param.FontSize = 8
+        SelfOwnMaterial.DrawCellText1Param.DrawFont.Charset = DEFAULT_CHARSET
+        SelfOwnMaterial.DrawCellText1Param.DrawFont.Height = -11
+        SelfOwnMaterial.DrawCellText1Param.DrawFont.Name = 'Tahoma'
+        SelfOwnMaterial.DrawCellText1Param.DrawFont.Style = []
+        SelfOwnMaterial.DrawCellText1Param.DrawFont.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellText1Param.FontTrimming = fttNone
+        SelfOwnMaterial.DrawCellText1Param.FontHorzAlign = fhaLeft
+        SelfOwnMaterial.DrawCellText1Param.FontVertAlign = fvaTop
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.PushedEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        SelfOwnMaterial.DrawCellText1Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+        ControlType = 'Button'
+        Control.AlignWithMargins = True
+        Control.Left = 5
+        Control.Top = 5
+        Control.Width = 90
+        Control.Height = 40
+        Control.Margins.Left = 5
+        Control.Margins.Top = 5
+        Control.Margins.Right = 5
+        Control.Margins.Bottom = 5
+        Control.ParentMouseEvent = True
+        Control.DirectUIVisible = False
+        Control.ComponentTypeUseKind = ctukDefault
+        Control.MaterialUseKind = mukRef
+        Control.KeepSelfOwnMaterial = True
+        Control.MaterialName = 'btnThemeColorCaptionLeftIconRight'
+        Control.SelfOwnMaterial.BackColor.Color = clWhite
+        Control.SelfOwnMaterial.BackColor.IsFill = False
+        Control.SelfOwnMaterial.BackColor.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.FillColorChangeType = cctNone
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseDownEffect.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.FillColorChangeType = cctNone
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.MouseOverEffect.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.DisabledEffect.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.FillColor.Alpha = 255
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.FillColorChangeType = cctNone
+        Control.SelfOwnMaterial.BackColor.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
+        Control.SelfOwnMaterial.IsTransparent = True
+        Control.SelfOwnMaterial.ArrowPicture.IsClipRound = False
+        Control.SelfOwnMaterial.ArrowPicture.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawArrowPictureParam.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawArrowPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawArrowPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawArrowPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawArrowPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawArrowPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.IsAutoCenterIconAndCaption = False
+        Control.SelfOwnMaterial.DrawDetailParam.FontName = 'Tahoma'
+        Control.SelfOwnMaterial.DrawDetailParam.FontSize = 8
+        Control.SelfOwnMaterial.DrawDetailParam.DrawFont.Charset = DEFAULT_CHARSET
+        Control.SelfOwnMaterial.DrawDetailParam.DrawFont.Height = -11
+        Control.SelfOwnMaterial.DrawDetailParam.DrawFont.Name = 'Tahoma'
+        Control.SelfOwnMaterial.DrawDetailParam.DrawFont.Style = []
+        Control.SelfOwnMaterial.DrawDetailParam.DrawFont.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawDetailParam.FontTrimming = fttNone
+        Control.SelfOwnMaterial.DrawDetailParam.FontHorzAlign = fhaLeft
+        Control.SelfOwnMaterial.DrawDetailParam.FontVertAlign = fvaTop
+        Control.SelfOwnMaterial.DrawDetailParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawDetailParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        Control.SelfOwnMaterial.DrawDetailParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawDetailParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        Control.SelfOwnMaterial.DrawDetailParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawDetailParam.DrawEffectSetting.PushedEffect.FontSize = 12
+        Control.SelfOwnMaterial.DrawDetailParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawDetailParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+        Control.SelfOwnMaterial.DrawDetailParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawDetailParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+        Control.SelfOwnMaterial.DrawDetail1Param.FontName = 'Tahoma'
+        Control.SelfOwnMaterial.DrawDetail1Param.FontSize = 8
+        Control.SelfOwnMaterial.DrawDetail1Param.DrawFont.Charset = DEFAULT_CHARSET
+        Control.SelfOwnMaterial.DrawDetail1Param.DrawFont.Height = -11
+        Control.SelfOwnMaterial.DrawDetail1Param.DrawFont.Name = 'Tahoma'
+        Control.SelfOwnMaterial.DrawDetail1Param.DrawFont.Style = []
+        Control.SelfOwnMaterial.DrawDetail1Param.DrawFont.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawDetail1Param.FontTrimming = fttNone
+        Control.SelfOwnMaterial.DrawDetail1Param.FontHorzAlign = fhaLeft
+        Control.SelfOwnMaterial.DrawDetail1Param.FontVertAlign = fvaTop
+        Control.SelfOwnMaterial.DrawDetail1Param.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawDetail1Param.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        Control.SelfOwnMaterial.DrawDetail1Param.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawDetail1Param.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        Control.SelfOwnMaterial.DrawDetail1Param.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawDetail1Param.DrawEffectSetting.PushedEffect.FontSize = 12
+        Control.SelfOwnMaterial.DrawDetail1Param.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawDetail1Param.DrawEffectSetting.DisabledEffect.FontSize = 12
+        Control.SelfOwnMaterial.DrawDetail1Param.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawDetail1Param.DrawEffectSetting.FocusedEffect.FontSize = 12
+        Control.SelfOwnMaterial.DrawHelpTextParam.FontName = 'Tahoma'
+        Control.SelfOwnMaterial.DrawHelpTextParam.FontSize = 8
+        Control.SelfOwnMaterial.DrawHelpTextParam.FontColor = clGray
+        Control.SelfOwnMaterial.DrawHelpTextParam.DrawFont.Charset = DEFAULT_CHARSET
+        Control.SelfOwnMaterial.DrawHelpTextParam.DrawFont.Color = clGray
+        Control.SelfOwnMaterial.DrawHelpTextParam.DrawFont.Height = -11
+        Control.SelfOwnMaterial.DrawHelpTextParam.DrawFont.Name = 'Tahoma'
+        Control.SelfOwnMaterial.DrawHelpTextParam.DrawFont.Style = []
+        Control.SelfOwnMaterial.DrawHelpTextParam.DrawFont.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawHelpTextParam.DrawFont.FontColor.Color = clGray
+        Control.SelfOwnMaterial.DrawHelpTextParam.FontTrimming = fttNone
+        Control.SelfOwnMaterial.DrawHelpTextParam.FontHorzAlign = fhaLeft
+        Control.SelfOwnMaterial.DrawHelpTextParam.FontVertAlign = fvaTop
+        Control.SelfOwnMaterial.DrawHelpTextParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawHelpTextParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        Control.SelfOwnMaterial.DrawHelpTextParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawHelpTextParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        Control.SelfOwnMaterial.DrawHelpTextParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawHelpTextParam.DrawEffectSetting.PushedEffect.FontSize = 12
+        Control.SelfOwnMaterial.DrawHelpTextParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawHelpTextParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+        Control.SelfOwnMaterial.DrawHelpTextParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawHelpTextParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+        Control.SelfOwnMaterial.DrawIconParam.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawIconParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawIconParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawIconParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawIconParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCaptionParam.FontName = 'Tahoma'
+        Control.SelfOwnMaterial.DrawCaptionParam.FontSize = 8
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawFont.Charset = DEFAULT_CHARSET
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawFont.Height = -11
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawFont.Name = 'Tahoma'
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawFont.Style = []
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawFont.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCaptionParam.FontTrimming = fttNone
+        Control.SelfOwnMaterial.DrawCaptionParam.FontHorzAlign = fhaLeft
+        Control.SelfOwnMaterial.DrawCaptionParam.FontVertAlign = fvaTop
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseDownEffect.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseDownEffect.FontSize = 12
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseOverEffect.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.MouseOverEffect.FontSize = 12
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.PushedEffect.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.PushedEffect.FontSize = 12
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.DisabledEffect.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.DisabledEffect.FontSize = 12
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.FocusedEffect.FontColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawCaptionParam.DrawEffectSetting.FocusedEffect.FontSize = 12
+        Control.SelfOwnMaterial.NormalPicture.IsClipRound = False
+        Control.SelfOwnMaterial.NormalPicture.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.HoverPicture.IsClipRound = False
+        Control.SelfOwnMaterial.HoverPicture.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.DownPicture.IsClipRound = False
+        Control.SelfOwnMaterial.DownPicture.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.DisabledPicture.IsClipRound = False
+        Control.SelfOwnMaterial.DisabledPicture.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.FocusedPicture.IsClipRound = False
+        Control.SelfOwnMaterial.FocusedPicture.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.PushedPicture.IsClipRound = False
+        Control.SelfOwnMaterial.PushedPicture.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawPictureParam.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.MouseDownEffect.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.MouseOverEffect.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
+        Control.SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
+        Control.RefMaterial = dmEasyServiceCommonMaterial.btnThemeColorCaptionLeftIconRight
+        Control.HitTest = True
+        Control.MouseDownFocus = False
+        Control.Align = alClient
+        Control.ParentBackground = False
+        Control.TabOrder = 0
+        Control.Caption = 'Edit'
+        Control.Text = 'Edit'
+        Control.Properties.AutoSize = False
+        Control.Properties.IsAutoPush = False
+        Control.Properties.IsPushed = False
+        Control.Properties.Icon.IsClipRound = False
+        Control.Properties.Icon.FixedColor.Alpha = 255
+        Control.Properties.PushedIcon.IsClipRound = False
+        Control.Properties.PushedIcon.FixedColor.Alpha = 255
+        Control.Properties.ButtonIndex = -1
+        Control.Properties.PushedGroupIndex = 0
+        Control.ExplicitWidth = 190
+        Control.ExplicitHeight = 50
+        IsAutoFitControlWidth = False
+      end>
+    ColumnHeader.Properties.EnableBuffer = False
     OnClickColumn = gridDataClickColumn
     OnCustomPaintCellBegin = gridDataCustomPaintCellBegin
     OnClickCellItemDesignerPanelChild = gridDataClickCellItemDesignerPanelChild

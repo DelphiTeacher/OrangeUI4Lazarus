@@ -1,16 +1,21 @@
 object FrameCheckBox: TFrameCheckBox
   Left = 0
+  Height = 431
   Top = 0
   Width = 603
-  Height = 431
+  ClientHeight = 431
+  ClientWidth = 603
   TabOrder = 0
+  DesignLeft = 815
+  DesignTop = 213
   object SkinWinCheckBox2: TSkinWinCheckBox
     Left = 16
+    Height = 43
     Top = 70
     Width = 193
-    Height = 43
-    ParentMouseEvent = True
+    ParentMouseEvent = False
     DirectUIVisible = False
+    AlignWithMargins = False
     ComponentTypeUseKind = ctukName
     MaterialUseKind = mukRef
     KeepSelfOwnMaterial = True
@@ -38,10 +43,8 @@ object FrameCheckBox: TFrameCheckBox
     SelfOwnMaterial.IsAutoPosition = True
     SelfOwnMaterial.DrawCaptionParam.FontName = 'Tahoma'
     SelfOwnMaterial.DrawCaptionParam.FontSize = 8
-    SelfOwnMaterial.DrawCaptionParam.DrawFont.Charset = DEFAULT_CHARSET
     SelfOwnMaterial.DrawCaptionParam.DrawFont.Height = -11
     SelfOwnMaterial.DrawCaptionParam.DrawFont.Name = 'Tahoma'
-    SelfOwnMaterial.DrawCaptionParam.DrawFont.Style = []
     SelfOwnMaterial.DrawCaptionParam.DrawFont.FontColor.Alpha = 255
     SelfOwnMaterial.DrawCaptionParam.FontTrimming = fttNone
     SelfOwnMaterial.DrawCaptionParam.FontHorzAlign = fhaLeft
@@ -74,35 +77,35 @@ object FrameCheckBox: TFrameCheckBox
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
-    SelfOwnMaterial.CheckChar = #37441'?'
+    SelfOwnMaterial.CheckChar = '鉁?'
     SelfOwnMaterial.DrawCheckStateParam.IsFill = False
     SelfOwnMaterial.DrawCheckStateParam.FillColor.Alpha = 255
     SelfOwnMaterial.DrawCheckStateParam.PenColor.UseThemeColor = ctThemeColor
     SelfOwnMaterial.DrawCheckStateParam.PenColor.Alpha = 255
     SelfOwnMaterial.DrawCheckStateParam.PenWidth = 2
-    SelfOwnMaterial.DrawCheckStateParam.PathActions = <
+    SelfOwnMaterial.DrawCheckStateParam.PathActions = <    
       item
-        X = 15.000000000000000000
-        Y = 50.000000000000000000
+        X = 15
+        Y = 50
         SizeType = dpstPercent
         ActionType = patMoveTo
-      end
+      end    
       item
-        X = 35.000000000000000000
-        Y = 75.000000000000000000
+        X = 35
+        Y = 75
         SizeType = dpstPercent
         ActionType = patLineTo
-      end
+      end    
       item
         SizeType = dpstPixel
         ActionType = patDrawPath
-      end
+      end    
       item
-        X = 80.000000000000000000
-        Y = 15.000000000000000000
+        X = 80
+        Y = 15
         SizeType = dpstPercent
         ActionType = patLineTo
-      end
+      end    
       item
         SizeType = dpstPixel
         ActionType = patDrawPath
@@ -140,17 +143,15 @@ object FrameCheckBox: TFrameCheckBox
     SelfOwnMaterial.DrawCheckRectParam.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
     SelfOwnMaterial.IsSimpleDrawCheckState = True
     SelfOwnMaterial.IsSimpleDrawCheckChar = False
-    SelfOwnMaterial.DrawCheckCharParam.FontName = #23536#57791#33931#38342#21620#31910
+    SelfOwnMaterial.DrawCheckCharParam.FontName = '寰蒋闆呴粦'
     SelfOwnMaterial.DrawCheckCharParam.FontSize = 12
-    SelfOwnMaterial.DrawCheckCharParam.FontColor = 16085628
-    SelfOwnMaterial.DrawCheckCharParam.DrawFont.Charset = DEFAULT_CHARSET
-    SelfOwnMaterial.DrawCheckCharParam.DrawFont.Color = 16085628
+    SelfOwnMaterial.DrawCheckCharParam.FontColor = -16672257
+    SelfOwnMaterial.DrawCheckCharParam.DrawFont.Color = -16672257
     SelfOwnMaterial.DrawCheckCharParam.DrawFont.Height = -16
-    SelfOwnMaterial.DrawCheckCharParam.DrawFont.Name = #23536#57791#33931#38342#21620#31910
-    SelfOwnMaterial.DrawCheckCharParam.DrawFont.Style = []
+    SelfOwnMaterial.DrawCheckCharParam.DrawFont.Name = '寰蒋闆呴粦'
     SelfOwnMaterial.DrawCheckCharParam.DrawFont.FontColor.UseThemeColor = ctThemeColor
     SelfOwnMaterial.DrawCheckCharParam.DrawFont.FontColor.Alpha = 255
-    SelfOwnMaterial.DrawCheckCharParam.DrawFont.FontColor.Color = 16085628
+    SelfOwnMaterial.DrawCheckCharParam.DrawFont.FontColor.Color = -16672257
     SelfOwnMaterial.DrawCheckCharParam.FontTrimming = fttNone
     SelfOwnMaterial.DrawCheckCharParam.FontHorzAlign = fhaCenter
     SelfOwnMaterial.DrawCheckCharParam.FontVertAlign = fvaCenter
@@ -178,11 +179,12 @@ object FrameCheckBox: TFrameCheckBox
   end
   object SkinWinCheckBox3: TSkinWinCheckBox
     Left = 16
+    Height = 43
     Top = 119
     Width = 193
-    Height = 43
-    ParentMouseEvent = True
+    ParentMouseEvent = False
     DirectUIVisible = False
+    AlignWithMargins = False
     ComponentTypeUseKind = ctukName
     MaterialUseKind = mukRef
     KeepSelfOwnMaterial = True
@@ -210,10 +212,8 @@ object FrameCheckBox: TFrameCheckBox
     SelfOwnMaterial.IsAutoPosition = True
     SelfOwnMaterial.DrawCaptionParam.FontName = 'Tahoma'
     SelfOwnMaterial.DrawCaptionParam.FontSize = 8
-    SelfOwnMaterial.DrawCaptionParam.DrawFont.Charset = DEFAULT_CHARSET
     SelfOwnMaterial.DrawCaptionParam.DrawFont.Height = -11
     SelfOwnMaterial.DrawCaptionParam.DrawFont.Name = 'Tahoma'
-    SelfOwnMaterial.DrawCaptionParam.DrawFont.Style = []
     SelfOwnMaterial.DrawCaptionParam.DrawFont.FontColor.Alpha = 255
     SelfOwnMaterial.DrawCaptionParam.FontTrimming = fttNone
     SelfOwnMaterial.DrawCaptionParam.FontHorzAlign = fhaLeft
@@ -246,35 +246,35 @@ object FrameCheckBox: TFrameCheckBox
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
-    SelfOwnMaterial.CheckChar = #37441'?'
+    SelfOwnMaterial.CheckChar = '鉁?'
     SelfOwnMaterial.DrawCheckStateParam.IsFill = False
     SelfOwnMaterial.DrawCheckStateParam.FillColor.Alpha = 255
     SelfOwnMaterial.DrawCheckStateParam.PenColor.UseThemeColor = ctThemeColor
     SelfOwnMaterial.DrawCheckStateParam.PenColor.Alpha = 255
     SelfOwnMaterial.DrawCheckStateParam.PenWidth = 2
-    SelfOwnMaterial.DrawCheckStateParam.PathActions = <
+    SelfOwnMaterial.DrawCheckStateParam.PathActions = <    
       item
-        X = 15.000000000000000000
-        Y = 50.000000000000000000
+        X = 15
+        Y = 50
         SizeType = dpstPercent
         ActionType = patMoveTo
-      end
+      end    
       item
-        X = 35.000000000000000000
-        Y = 75.000000000000000000
+        X = 35
+        Y = 75
         SizeType = dpstPercent
         ActionType = patLineTo
-      end
+      end    
       item
         SizeType = dpstPixel
         ActionType = patDrawPath
-      end
+      end    
       item
-        X = 80.000000000000000000
-        Y = 15.000000000000000000
+        X = 80
+        Y = 15
         SizeType = dpstPercent
         ActionType = patLineTo
-      end
+      end    
       item
         SizeType = dpstPixel
         ActionType = patDrawPath
@@ -312,17 +312,15 @@ object FrameCheckBox: TFrameCheckBox
     SelfOwnMaterial.DrawCheckRectParam.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
     SelfOwnMaterial.IsSimpleDrawCheckState = True
     SelfOwnMaterial.IsSimpleDrawCheckChar = True
-    SelfOwnMaterial.DrawCheckCharParam.FontName = #23536#57791#33931#38342#21620#31910
+    SelfOwnMaterial.DrawCheckCharParam.FontName = '寰蒋闆呴粦'
     SelfOwnMaterial.DrawCheckCharParam.FontSize = 12
-    SelfOwnMaterial.DrawCheckCharParam.FontColor = 16085628
-    SelfOwnMaterial.DrawCheckCharParam.DrawFont.Charset = DEFAULT_CHARSET
-    SelfOwnMaterial.DrawCheckCharParam.DrawFont.Color = 16085628
+    SelfOwnMaterial.DrawCheckCharParam.FontColor = -16672257
+    SelfOwnMaterial.DrawCheckCharParam.DrawFont.Color = -16672257
     SelfOwnMaterial.DrawCheckCharParam.DrawFont.Height = -16
-    SelfOwnMaterial.DrawCheckCharParam.DrawFont.Name = #23536#57791#33931#38342#21620#31910
-    SelfOwnMaterial.DrawCheckCharParam.DrawFont.Style = []
+    SelfOwnMaterial.DrawCheckCharParam.DrawFont.Name = '寰蒋闆呴粦'
     SelfOwnMaterial.DrawCheckCharParam.DrawFont.FontColor.UseThemeColor = ctThemeColor
     SelfOwnMaterial.DrawCheckCharParam.DrawFont.FontColor.Alpha = 255
-    SelfOwnMaterial.DrawCheckCharParam.DrawFont.FontColor.Color = 16085628
+    SelfOwnMaterial.DrawCheckCharParam.DrawFont.FontColor.Color = -16672257
     SelfOwnMaterial.DrawCheckCharParam.FontTrimming = fttNone
     SelfOwnMaterial.DrawCheckCharParam.FontHorzAlign = fhaCenter
     SelfOwnMaterial.DrawCheckCharParam.FontVertAlign = fvaCenter
@@ -350,11 +348,12 @@ object FrameCheckBox: TFrameCheckBox
   end
   object SkinWinCheckBox5: TSkinWinCheckBox
     Left = 224
+    Height = 43
     Top = 70
     Width = 193
-    Height = 43
-    ParentMouseEvent = True
+    ParentMouseEvent = False
     DirectUIVisible = False
+    AlignWithMargins = False
     ComponentTypeUseKind = ctukName
     MaterialUseKind = mukRef
     KeepSelfOwnMaterial = True
@@ -382,10 +381,8 @@ object FrameCheckBox: TFrameCheckBox
     SelfOwnMaterial.IsAutoPosition = True
     SelfOwnMaterial.DrawCaptionParam.FontName = 'Tahoma'
     SelfOwnMaterial.DrawCaptionParam.FontSize = 8
-    SelfOwnMaterial.DrawCaptionParam.DrawFont.Charset = DEFAULT_CHARSET
     SelfOwnMaterial.DrawCaptionParam.DrawFont.Height = -11
     SelfOwnMaterial.DrawCaptionParam.DrawFont.Name = 'Tahoma'
-    SelfOwnMaterial.DrawCaptionParam.DrawFont.Style = []
     SelfOwnMaterial.DrawCaptionParam.DrawFont.FontColor.Alpha = 255
     SelfOwnMaterial.DrawCaptionParam.FontTrimming = fttNone
     SelfOwnMaterial.DrawCaptionParam.FontHorzAlign = fhaLeft
@@ -418,35 +415,35 @@ object FrameCheckBox: TFrameCheckBox
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
-    SelfOwnMaterial.CheckChar = #37441'?'
+    SelfOwnMaterial.CheckChar = '鉁?'
     SelfOwnMaterial.DrawCheckStateParam.IsFill = False
     SelfOwnMaterial.DrawCheckStateParam.FillColor.Alpha = 255
     SelfOwnMaterial.DrawCheckStateParam.PenColor.UseThemeColor = ctThemeColor
     SelfOwnMaterial.DrawCheckStateParam.PenColor.Alpha = 255
     SelfOwnMaterial.DrawCheckStateParam.PenWidth = 2
-    SelfOwnMaterial.DrawCheckStateParam.PathActions = <
+    SelfOwnMaterial.DrawCheckStateParam.PathActions = <    
       item
-        X = 15.000000000000000000
-        Y = 50.000000000000000000
+        X = 15
+        Y = 50
         SizeType = dpstPercent
         ActionType = patMoveTo
-      end
+      end    
       item
-        X = 35.000000000000000000
-        Y = 75.000000000000000000
+        X = 35
+        Y = 75
         SizeType = dpstPercent
         ActionType = patLineTo
-      end
+      end    
       item
         SizeType = dpstPixel
         ActionType = patDrawPath
-      end
+      end    
       item
-        X = 80.000000000000000000
-        Y = 15.000000000000000000
+        X = 80
+        Y = 15
         SizeType = dpstPercent
         ActionType = patLineTo
-      end
+      end    
       item
         SizeType = dpstPixel
         ActionType = patDrawPath
@@ -484,17 +481,15 @@ object FrameCheckBox: TFrameCheckBox
     SelfOwnMaterial.DrawCheckRectParam.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
     SelfOwnMaterial.IsSimpleDrawCheckState = True
     SelfOwnMaterial.IsSimpleDrawCheckChar = True
-    SelfOwnMaterial.DrawCheckCharParam.FontName = #23536#57791#33931#38342#21620#31910
+    SelfOwnMaterial.DrawCheckCharParam.FontName = '寰蒋闆呴粦'
     SelfOwnMaterial.DrawCheckCharParam.FontSize = 12
-    SelfOwnMaterial.DrawCheckCharParam.FontColor = 16085628
-    SelfOwnMaterial.DrawCheckCharParam.DrawFont.Charset = DEFAULT_CHARSET
-    SelfOwnMaterial.DrawCheckCharParam.DrawFont.Color = 16085628
+    SelfOwnMaterial.DrawCheckCharParam.FontColor = -16672257
+    SelfOwnMaterial.DrawCheckCharParam.DrawFont.Color = -16672257
     SelfOwnMaterial.DrawCheckCharParam.DrawFont.Height = -16
-    SelfOwnMaterial.DrawCheckCharParam.DrawFont.Name = #23536#57791#33931#38342#21620#31910
-    SelfOwnMaterial.DrawCheckCharParam.DrawFont.Style = []
+    SelfOwnMaterial.DrawCheckCharParam.DrawFont.Name = '寰蒋闆呴粦'
     SelfOwnMaterial.DrawCheckCharParam.DrawFont.FontColor.UseThemeColor = ctThemeColor
     SelfOwnMaterial.DrawCheckCharParam.DrawFont.FontColor.Alpha = 255
-    SelfOwnMaterial.DrawCheckCharParam.DrawFont.FontColor.Color = 16085628
+    SelfOwnMaterial.DrawCheckCharParam.DrawFont.FontColor.Color = -16672257
     SelfOwnMaterial.DrawCheckCharParam.FontTrimming = fttNone
     SelfOwnMaterial.DrawCheckCharParam.FontHorzAlign = fhaCenter
     SelfOwnMaterial.DrawCheckCharParam.FontVertAlign = fvaCenter
@@ -522,11 +517,12 @@ object FrameCheckBox: TFrameCheckBox
   end
   object SkinWinCheckBox6: TSkinWinCheckBox
     Left = 224
+    Height = 43
     Top = 119
     Width = 193
-    Height = 43
-    ParentMouseEvent = True
+    ParentMouseEvent = False
     DirectUIVisible = False
+    AlignWithMargins = False
     ComponentTypeUseKind = ctukName
     MaterialUseKind = mukRef
     KeepSelfOwnMaterial = True
@@ -554,10 +550,8 @@ object FrameCheckBox: TFrameCheckBox
     SelfOwnMaterial.IsAutoPosition = True
     SelfOwnMaterial.DrawCaptionParam.FontName = 'Tahoma'
     SelfOwnMaterial.DrawCaptionParam.FontSize = 8
-    SelfOwnMaterial.DrawCaptionParam.DrawFont.Charset = DEFAULT_CHARSET
     SelfOwnMaterial.DrawCaptionParam.DrawFont.Height = -11
     SelfOwnMaterial.DrawCaptionParam.DrawFont.Name = 'Tahoma'
-    SelfOwnMaterial.DrawCaptionParam.DrawFont.Style = []
     SelfOwnMaterial.DrawCaptionParam.DrawFont.FontColor.Alpha = 255
     SelfOwnMaterial.DrawCaptionParam.FontTrimming = fttNone
     SelfOwnMaterial.DrawCaptionParam.FontHorzAlign = fhaLeft
@@ -590,35 +584,35 @@ object FrameCheckBox: TFrameCheckBox
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
-    SelfOwnMaterial.CheckChar = #37441'?'
+    SelfOwnMaterial.CheckChar = '鉁?'
     SelfOwnMaterial.DrawCheckStateParam.IsFill = False
     SelfOwnMaterial.DrawCheckStateParam.FillColor.Alpha = 255
     SelfOwnMaterial.DrawCheckStateParam.PenColor.UseThemeColor = ctThemeColor
     SelfOwnMaterial.DrawCheckStateParam.PenColor.Alpha = 255
     SelfOwnMaterial.DrawCheckStateParam.PenWidth = 2
-    SelfOwnMaterial.DrawCheckStateParam.PathActions = <
+    SelfOwnMaterial.DrawCheckStateParam.PathActions = <    
       item
-        X = 15.000000000000000000
-        Y = 50.000000000000000000
+        X = 15
+        Y = 50
         SizeType = dpstPercent
         ActionType = patMoveTo
-      end
+      end    
       item
-        X = 35.000000000000000000
-        Y = 75.000000000000000000
+        X = 35
+        Y = 75
         SizeType = dpstPercent
         ActionType = patLineTo
-      end
+      end    
       item
         SizeType = dpstPixel
         ActionType = patDrawPath
-      end
+      end    
       item
-        X = 80.000000000000000000
-        Y = 15.000000000000000000
+        X = 80
+        Y = 15
         SizeType = dpstPercent
         ActionType = patLineTo
-      end
+      end    
       item
         SizeType = dpstPixel
         ActionType = patDrawPath
@@ -656,17 +650,15 @@ object FrameCheckBox: TFrameCheckBox
     SelfOwnMaterial.DrawCheckRectParam.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
     SelfOwnMaterial.IsSimpleDrawCheckState = True
     SelfOwnMaterial.IsSimpleDrawCheckChar = True
-    SelfOwnMaterial.DrawCheckCharParam.FontName = #23536#57791#33931#38342#21620#31910
+    SelfOwnMaterial.DrawCheckCharParam.FontName = '寰蒋闆呴粦'
     SelfOwnMaterial.DrawCheckCharParam.FontSize = 12
-    SelfOwnMaterial.DrawCheckCharParam.FontColor = 16085628
-    SelfOwnMaterial.DrawCheckCharParam.DrawFont.Charset = DEFAULT_CHARSET
-    SelfOwnMaterial.DrawCheckCharParam.DrawFont.Color = 16085628
+    SelfOwnMaterial.DrawCheckCharParam.FontColor = -16672257
+    SelfOwnMaterial.DrawCheckCharParam.DrawFont.Color = -16672257
     SelfOwnMaterial.DrawCheckCharParam.DrawFont.Height = -16
-    SelfOwnMaterial.DrawCheckCharParam.DrawFont.Name = #23536#57791#33931#38342#21620#31910
-    SelfOwnMaterial.DrawCheckCharParam.DrawFont.Style = []
+    SelfOwnMaterial.DrawCheckCharParam.DrawFont.Name = '寰蒋闆呴粦'
     SelfOwnMaterial.DrawCheckCharParam.DrawFont.FontColor.UseThemeColor = ctThemeColor
     SelfOwnMaterial.DrawCheckCharParam.DrawFont.FontColor.Alpha = 255
-    SelfOwnMaterial.DrawCheckCharParam.DrawFont.FontColor.Color = 16085628
+    SelfOwnMaterial.DrawCheckCharParam.DrawFont.FontColor.Color = -16672257
     SelfOwnMaterial.DrawCheckCharParam.FontTrimming = fttNone
     SelfOwnMaterial.DrawCheckCharParam.FontHorzAlign = fhaCenter
     SelfOwnMaterial.DrawCheckCharParam.FontVertAlign = fvaCenter
@@ -694,11 +686,12 @@ object FrameCheckBox: TFrameCheckBox
   end
   object SkinWinCheckBox1: TSkinWinCheckBox
     Left = 64
+    Height = 43
     Top = 183
     Width = 145
-    Height = 43
-    ParentMouseEvent = True
+    ParentMouseEvent = False
     DirectUIVisible = False
+    AlignWithMargins = False
     ComponentTypeUseKind = ctukName
     MaterialUseKind = mukRef
     KeepSelfOwnMaterial = True
@@ -726,10 +719,8 @@ object FrameCheckBox: TFrameCheckBox
     SelfOwnMaterial.IsAutoPosition = True
     SelfOwnMaterial.DrawCaptionParam.FontName = 'Tahoma'
     SelfOwnMaterial.DrawCaptionParam.FontSize = 8
-    SelfOwnMaterial.DrawCaptionParam.DrawFont.Charset = DEFAULT_CHARSET
     SelfOwnMaterial.DrawCaptionParam.DrawFont.Height = -11
     SelfOwnMaterial.DrawCaptionParam.DrawFont.Name = 'Tahoma'
-    SelfOwnMaterial.DrawCaptionParam.DrawFont.Style = []
     SelfOwnMaterial.DrawCaptionParam.DrawFont.FontColor.Alpha = 255
     SelfOwnMaterial.DrawCaptionParam.FontTrimming = fttNone
     SelfOwnMaterial.DrawCaptionParam.FontHorzAlign = fhaLeft
@@ -762,35 +753,35 @@ object FrameCheckBox: TFrameCheckBox
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
-    SelfOwnMaterial.CheckChar = #37441'?'
+    SelfOwnMaterial.CheckChar = '鉁?'
     SelfOwnMaterial.DrawCheckStateParam.IsFill = False
     SelfOwnMaterial.DrawCheckStateParam.FillColor.Alpha = 255
     SelfOwnMaterial.DrawCheckStateParam.PenColor.UseThemeColor = ctThemeColor
     SelfOwnMaterial.DrawCheckStateParam.PenColor.Alpha = 255
     SelfOwnMaterial.DrawCheckStateParam.PenWidth = 2
-    SelfOwnMaterial.DrawCheckStateParam.PathActions = <
+    SelfOwnMaterial.DrawCheckStateParam.PathActions = <    
       item
-        X = 15.000000000000000000
-        Y = 50.000000000000000000
+        X = 15
+        Y = 50
         SizeType = dpstPercent
         ActionType = patMoveTo
-      end
+      end    
       item
-        X = 35.000000000000000000
-        Y = 75.000000000000000000
+        X = 35
+        Y = 75
         SizeType = dpstPercent
         ActionType = patLineTo
-      end
+      end    
       item
         SizeType = dpstPixel
         ActionType = patDrawPath
-      end
+      end    
       item
-        X = 80.000000000000000000
-        Y = 15.000000000000000000
+        X = 80
+        Y = 15
         SizeType = dpstPercent
         ActionType = patLineTo
-      end
+      end    
       item
         SizeType = dpstPixel
         ActionType = patDrawPath
@@ -828,17 +819,15 @@ object FrameCheckBox: TFrameCheckBox
     SelfOwnMaterial.DrawCheckRectParam.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
     SelfOwnMaterial.IsSimpleDrawCheckState = True
     SelfOwnMaterial.IsSimpleDrawCheckChar = True
-    SelfOwnMaterial.DrawCheckCharParam.FontName = #23536#57791#33931#38342#21620#31910
+    SelfOwnMaterial.DrawCheckCharParam.FontName = '寰蒋闆呴粦'
     SelfOwnMaterial.DrawCheckCharParam.FontSize = 12
-    SelfOwnMaterial.DrawCheckCharParam.FontColor = 16085628
-    SelfOwnMaterial.DrawCheckCharParam.DrawFont.Charset = DEFAULT_CHARSET
-    SelfOwnMaterial.DrawCheckCharParam.DrawFont.Color = 16085628
+    SelfOwnMaterial.DrawCheckCharParam.FontColor = -16672257
+    SelfOwnMaterial.DrawCheckCharParam.DrawFont.Color = -16672257
     SelfOwnMaterial.DrawCheckCharParam.DrawFont.Height = -16
-    SelfOwnMaterial.DrawCheckCharParam.DrawFont.Name = #23536#57791#33931#38342#21620#31910
-    SelfOwnMaterial.DrawCheckCharParam.DrawFont.Style = []
+    SelfOwnMaterial.DrawCheckCharParam.DrawFont.Name = '寰蒋闆呴粦'
     SelfOwnMaterial.DrawCheckCharParam.DrawFont.FontColor.UseThemeColor = ctThemeColor
     SelfOwnMaterial.DrawCheckCharParam.DrawFont.FontColor.Alpha = 255
-    SelfOwnMaterial.DrawCheckCharParam.DrawFont.FontColor.Color = 16085628
+    SelfOwnMaterial.DrawCheckCharParam.DrawFont.FontColor.Color = -16672257
     SelfOwnMaterial.DrawCheckCharParam.FontTrimming = fttNone
     SelfOwnMaterial.DrawCheckCharParam.FontHorzAlign = fhaCenter
     SelfOwnMaterial.DrawCheckCharParam.FontVertAlign = fvaCenter
@@ -866,11 +855,12 @@ object FrameCheckBox: TFrameCheckBox
   end
   object SkinWinCheckBox4: TSkinWinCheckBox
     Left = 224
+    Height = 43
     Top = 183
     Width = 145
-    Height = 43
-    ParentMouseEvent = True
+    ParentMouseEvent = False
     DirectUIVisible = False
+    AlignWithMargins = False
     ComponentTypeUseKind = ctukName
     MaterialUseKind = mukRef
     KeepSelfOwnMaterial = True
@@ -898,10 +888,8 @@ object FrameCheckBox: TFrameCheckBox
     SelfOwnMaterial.IsAutoPosition = True
     SelfOwnMaterial.DrawCaptionParam.FontName = 'Tahoma'
     SelfOwnMaterial.DrawCaptionParam.FontSize = 8
-    SelfOwnMaterial.DrawCaptionParam.DrawFont.Charset = DEFAULT_CHARSET
     SelfOwnMaterial.DrawCaptionParam.DrawFont.Height = -11
     SelfOwnMaterial.DrawCaptionParam.DrawFont.Name = 'Tahoma'
-    SelfOwnMaterial.DrawCaptionParam.DrawFont.Style = []
     SelfOwnMaterial.DrawCaptionParam.DrawFont.FontColor.Alpha = 255
     SelfOwnMaterial.DrawCaptionParam.FontTrimming = fttNone
     SelfOwnMaterial.DrawCaptionParam.FontHorzAlign = fhaLeft
@@ -934,35 +922,35 @@ object FrameCheckBox: TFrameCheckBox
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     SelfOwnMaterial.DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
-    SelfOwnMaterial.CheckChar = #37441'?'
+    SelfOwnMaterial.CheckChar = '鉁?'
     SelfOwnMaterial.DrawCheckStateParam.IsFill = False
     SelfOwnMaterial.DrawCheckStateParam.FillColor.Alpha = 255
     SelfOwnMaterial.DrawCheckStateParam.PenColor.UseThemeColor = ctThemeColor
     SelfOwnMaterial.DrawCheckStateParam.PenColor.Alpha = 255
     SelfOwnMaterial.DrawCheckStateParam.PenWidth = 2
-    SelfOwnMaterial.DrawCheckStateParam.PathActions = <
+    SelfOwnMaterial.DrawCheckStateParam.PathActions = <    
       item
-        X = 15.000000000000000000
-        Y = 50.000000000000000000
+        X = 15
+        Y = 50
         SizeType = dpstPercent
         ActionType = patMoveTo
-      end
+      end    
       item
-        X = 35.000000000000000000
-        Y = 75.000000000000000000
+        X = 35
+        Y = 75
         SizeType = dpstPercent
         ActionType = patLineTo
-      end
+      end    
       item
         SizeType = dpstPixel
         ActionType = patDrawPath
-      end
+      end    
       item
-        X = 80.000000000000000000
-        Y = 15.000000000000000000
+        X = 80
+        Y = 15
         SizeType = dpstPercent
         ActionType = patLineTo
-      end
+      end    
       item
         SizeType = dpstPixel
         ActionType = patDrawPath
@@ -1000,17 +988,15 @@ object FrameCheckBox: TFrameCheckBox
     SelfOwnMaterial.DrawCheckRectParam.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
     SelfOwnMaterial.IsSimpleDrawCheckState = True
     SelfOwnMaterial.IsSimpleDrawCheckChar = True
-    SelfOwnMaterial.DrawCheckCharParam.FontName = #23536#57791#33931#38342#21620#31910
+    SelfOwnMaterial.DrawCheckCharParam.FontName = '寰蒋闆呴粦'
     SelfOwnMaterial.DrawCheckCharParam.FontSize = 12
-    SelfOwnMaterial.DrawCheckCharParam.FontColor = 16085628
-    SelfOwnMaterial.DrawCheckCharParam.DrawFont.Charset = DEFAULT_CHARSET
-    SelfOwnMaterial.DrawCheckCharParam.DrawFont.Color = 16085628
+    SelfOwnMaterial.DrawCheckCharParam.FontColor = -16672257
+    SelfOwnMaterial.DrawCheckCharParam.DrawFont.Color = -16672257
     SelfOwnMaterial.DrawCheckCharParam.DrawFont.Height = -16
-    SelfOwnMaterial.DrawCheckCharParam.DrawFont.Name = #23536#57791#33931#38342#21620#31910
-    SelfOwnMaterial.DrawCheckCharParam.DrawFont.Style = []
+    SelfOwnMaterial.DrawCheckCharParam.DrawFont.Name = '寰蒋闆呴粦'
     SelfOwnMaterial.DrawCheckCharParam.DrawFont.FontColor.UseThemeColor = ctThemeColor
     SelfOwnMaterial.DrawCheckCharParam.DrawFont.FontColor.Alpha = 255
-    SelfOwnMaterial.DrawCheckCharParam.DrawFont.FontColor.Color = 16085628
+    SelfOwnMaterial.DrawCheckCharParam.DrawFont.FontColor.Color = -16672257
     SelfOwnMaterial.DrawCheckCharParam.FontTrimming = fttNone
     SelfOwnMaterial.DrawCheckCharParam.FontHorzAlign = fhaCenter
     SelfOwnMaterial.DrawCheckCharParam.FontVertAlign = fvaCenter
@@ -1061,10 +1047,8 @@ object FrameCheckBox: TFrameCheckBox
     IsAutoPosition = True
     DrawCaptionParam.FontName = 'Tahoma'
     DrawCaptionParam.FontSize = 10
-    DrawCaptionParam.DrawFont.Charset = DEFAULT_CHARSET
     DrawCaptionParam.DrawFont.Height = -13
     DrawCaptionParam.DrawFont.Name = 'Tahoma'
-    DrawCaptionParam.DrawFont.Style = []
     DrawCaptionParam.DrawFont.FontColor.Alpha = 255
     DrawCaptionParam.FontTrimming = fttNone
     DrawCaptionParam.FontHorzAlign = fhaLeft
@@ -1097,40 +1081,40 @@ object FrameCheckBox: TFrameCheckBox
     DrawPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
     DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
-    CheckChar = #37441'?'
+    CheckChar = '鉁?'
     DrawCheckStateParam.IsFill = False
     DrawCheckStateParam.FillColor.Alpha = 255
     DrawCheckStateParam.PenColor.Alpha = 255
     DrawCheckStateParam.PenColor.Color = 16758016
-    DrawCheckStateParam.PathActions = <
+    DrawCheckStateParam.PathActions = <    
       item
-        X = 15.000000000000000000
-        Y = 50.000000000000000000
+        X = 15
+        Y = 50
         SizeType = dpstPercent
         ActionType = patMoveTo
-      end
+      end    
       item
-        X = 35.000000000000000000
-        Y = 75.000000000000000000
+        X = 35
+        Y = 75
         SizeType = dpstPercent
         ActionType = patLineTo
-      end
+      end    
       item
         SizeType = dpstPixel
         ActionType = patDrawPath
-      end
+      end    
       item
-        X = 80.000000000000000000
-        Y = 15.000000000000000000
+        X = 80
+        Y = 15
         SizeType = dpstPercent
         ActionType = patLineTo
-      end
+      end    
       item
         SizeType = dpstPixel
         ActionType = patDrawPath
       end>
-    DrawCheckStateParam.DrawRectSetting.Width = 24.000000000000000000
-    DrawCheckStateParam.DrawRectSetting.Height = 24.000000000000000000
+    DrawCheckStateParam.DrawRectSetting.Width = 24
+    DrawCheckStateParam.DrawRectSetting.Height = 24
     DrawCheckStateParam.DrawRectSetting.Enabled = True
     DrawCheckStateParam.DrawRectSetting.PositionVertType = dppvtCenter
     DrawCheckStateParam.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
@@ -1141,7 +1125,7 @@ object FrameCheckBox: TFrameCheckBox
     DrawCheckStateParam.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
     DrawCheckStateParam.DrawEffectSetting.PushedEffect.PenColor.UseThemeColor = ctThemeColor
     DrawCheckStateParam.DrawEffectSetting.PushedEffect.PenColor.Alpha = 255
-    DrawCheckStateParam.DrawEffectSetting.PushedEffect.PenColor.Color = 16085628
+    DrawCheckStateParam.DrawEffectSetting.PushedEffect.PenColor.Color = -16672257
     DrawCheckStateParam.DrawEffectSetting.PushedEffect.EffectTypes = [dppetPenWidthChange, dppetPenColorChange]
     DrawCheckStateParam.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
     DrawCheckStateParam.DrawEffectSetting.DisabledEffect.PenColor.Alpha = 255
@@ -1155,8 +1139,8 @@ object FrameCheckBox: TFrameCheckBox
     DrawCheckRectParam.BorderColor.Alpha = 255
     DrawCheckRectParam.BorderColor.Color = 13882323
     DrawCheckRectParam.BorderWidth = 2
-    DrawCheckRectParam.DrawRectSetting.Width = 24.000000000000000000
-    DrawCheckRectParam.DrawRectSetting.Height = 24.000000000000000000
+    DrawCheckRectParam.DrawRectSetting.Width = 24
+    DrawCheckRectParam.DrawRectSetting.Height = 24
     DrawCheckRectParam.DrawRectSetting.Enabled = True
     DrawCheckRectParam.DrawRectSetting.PositionVertType = dppvtCenter
     DrawCheckRectParam.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
@@ -1167,11 +1151,11 @@ object FrameCheckBox: TFrameCheckBox
     DrawCheckRectParam.DrawEffectSetting.MouseOverEffect.BorderColor.Alpha = 255
     DrawCheckRectParam.DrawEffectSetting.PushedEffect.FillColor.UseThemeColor = ctThemeColor
     DrawCheckRectParam.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
-    DrawCheckRectParam.DrawEffectSetting.PushedEffect.FillColor.Color = 16085628
+    DrawCheckRectParam.DrawEffectSetting.PushedEffect.FillColor.Color = -16672257
     DrawCheckRectParam.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
     DrawCheckRectParam.DrawEffectSetting.PushedEffect.BorderColor.UseThemeColor = ctThemeColor
     DrawCheckRectParam.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
-    DrawCheckRectParam.DrawEffectSetting.PushedEffect.BorderColor.Color = 16085628
+    DrawCheckRectParam.DrawEffectSetting.PushedEffect.BorderColor.Color = -16672257
     DrawCheckRectParam.DrawEffectSetting.PushedEffect.EffectTypes = [drpetBorderColorChange]
     DrawCheckRectParam.DrawEffectSetting.DisabledEffect.FillColor.Alpha = 255
     DrawCheckRectParam.DrawEffectSetting.DisabledEffect.FillColorChangeType = cctNone
@@ -1181,17 +1165,15 @@ object FrameCheckBox: TFrameCheckBox
     DrawCheckRectParam.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
     IsSimpleDrawCheckState = True
     IsSimpleDrawCheckChar = False
-    DrawCheckCharParam.FontName = #23536#57791#33931#38342#21620#31910
+    DrawCheckCharParam.FontName = '寰蒋闆呴粦'
     DrawCheckCharParam.FontSize = 12
-    DrawCheckCharParam.FontColor = 16085628
-    DrawCheckCharParam.DrawFont.Charset = DEFAULT_CHARSET
-    DrawCheckCharParam.DrawFont.Color = 16085628
+    DrawCheckCharParam.FontColor = -16672257
+    DrawCheckCharParam.DrawFont.Color = -16672257
     DrawCheckCharParam.DrawFont.Height = -16
-    DrawCheckCharParam.DrawFont.Name = #23536#57791#33931#38342#21620#31910
-    DrawCheckCharParam.DrawFont.Style = []
+    DrawCheckCharParam.DrawFont.Name = '寰蒋闆呴粦'
     DrawCheckCharParam.DrawFont.FontColor.UseThemeColor = ctThemeColor
     DrawCheckCharParam.DrawFont.FontColor.Alpha = 255
-    DrawCheckCharParam.DrawFont.FontColor.Color = 16085628
+    DrawCheckCharParam.DrawFont.FontColor.Color = -16672257
     DrawCheckCharParam.FontTrimming = fttNone
     DrawCheckCharParam.FontHorzAlign = fhaCenter
     DrawCheckCharParam.FontVertAlign = fvaCenter
@@ -1233,11 +1215,9 @@ object FrameCheckBox: TFrameCheckBox
     DrawCaptionParam.FontName = 'Tahoma'
     DrawCaptionParam.FontSize = 10
     DrawCaptionParam.FontColor = 5263440
-    DrawCaptionParam.DrawFont.Charset = DEFAULT_CHARSET
     DrawCaptionParam.DrawFont.Color = 5263440
     DrawCaptionParam.DrawFont.Height = -13
     DrawCaptionParam.DrawFont.Name = 'Tahoma'
-    DrawCaptionParam.DrawFont.Style = []
     DrawCaptionParam.DrawFont.FontColor.Alpha = 255
     DrawCaptionParam.DrawFont.FontColor.Color = 5263440
     DrawCaptionParam.FontTrimming = fttNone
@@ -1271,40 +1251,40 @@ object FrameCheckBox: TFrameCheckBox
     DrawPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
     DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
-    CheckChar = #37441'?'
+    CheckChar = '鉁?'
     DrawCheckStateParam.IsFill = False
     DrawCheckStateParam.FillColor.Alpha = 255
     DrawCheckStateParam.PenColor.Alpha = 255
     DrawCheckStateParam.PenColor.Color = 16758016
-    DrawCheckStateParam.PathActions = <
+    DrawCheckStateParam.PathActions = <    
       item
-        X = 15.000000000000000000
-        Y = 50.000000000000000000
+        X = 15
+        Y = 50
         SizeType = dpstPercent
         ActionType = patMoveTo
-      end
+      end    
       item
-        X = 35.000000000000000000
-        Y = 75.000000000000000000
+        X = 35
+        Y = 75
         SizeType = dpstPercent
         ActionType = patLineTo
-      end
+      end    
       item
         SizeType = dpstPixel
         ActionType = patDrawPath
-      end
+      end    
       item
-        X = 80.000000000000000000
-        Y = 15.000000000000000000
+        X = 80
+        Y = 15
         SizeType = dpstPercent
         ActionType = patLineTo
-      end
+      end    
       item
         SizeType = dpstPixel
         ActionType = patDrawPath
       end>
-    DrawCheckStateParam.DrawRectSetting.Width = 24.000000000000000000
-    DrawCheckStateParam.DrawRectSetting.Height = 24.000000000000000000
+    DrawCheckStateParam.DrawRectSetting.Width = 24
+    DrawCheckStateParam.DrawRectSetting.Height = 24
     DrawCheckStateParam.DrawRectSetting.Enabled = True
     DrawCheckStateParam.DrawRectSetting.PositionVertType = dppvtCenter
     DrawCheckStateParam.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
@@ -1329,8 +1309,8 @@ object FrameCheckBox: TFrameCheckBox
     DrawCheckRectParam.RoundHeight = 2
     DrawCheckRectParam.BorderColor.Alpha = 255
     DrawCheckRectParam.BorderColor.Color = clGray
-    DrawCheckRectParam.DrawRectSetting.Width = 24.000000000000000000
-    DrawCheckRectParam.DrawRectSetting.Height = 24.000000000000000000
+    DrawCheckRectParam.DrawRectSetting.Width = 24
+    DrawCheckRectParam.DrawRectSetting.Height = 24
     DrawCheckRectParam.DrawRectSetting.Enabled = True
     DrawCheckRectParam.DrawRectSetting.PositionVertType = dppvtCenter
     DrawCheckRectParam.DrawEffectSetting.MouseDownEffect.FillColor.Alpha = 255
@@ -1342,7 +1322,7 @@ object FrameCheckBox: TFrameCheckBox
     DrawCheckRectParam.DrawEffectSetting.PushedEffect.IsFill = True
     DrawCheckRectParam.DrawEffectSetting.PushedEffect.FillColor.UseThemeColor = ctThemeColor
     DrawCheckRectParam.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
-    DrawCheckRectParam.DrawEffectSetting.PushedEffect.FillColor.Color = 16085628
+    DrawCheckRectParam.DrawEffectSetting.PushedEffect.FillColor.Color = -16672257
     DrawCheckRectParam.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
     DrawCheckRectParam.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
     DrawCheckRectParam.DrawEffectSetting.PushedEffect.BorderColor.Color = 16092483
@@ -1355,14 +1335,12 @@ object FrameCheckBox: TFrameCheckBox
     DrawCheckRectParam.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
     IsSimpleDrawCheckState = True
     IsSimpleDrawCheckChar = False
-    DrawCheckCharParam.FontName = #23536#57791#33931#38342#21620#31910
+    DrawCheckCharParam.FontName = '寰蒋闆呴粦'
     DrawCheckCharParam.FontSize = 12
     DrawCheckCharParam.FontColor = clWhite
-    DrawCheckCharParam.DrawFont.Charset = DEFAULT_CHARSET
     DrawCheckCharParam.DrawFont.Color = clWhite
     DrawCheckCharParam.DrawFont.Height = -16
-    DrawCheckCharParam.DrawFont.Name = #23536#57791#33931#38342#21620#31910
-    DrawCheckCharParam.DrawFont.Style = []
+    DrawCheckCharParam.DrawFont.Name = '寰蒋闆呴粦'
     DrawCheckCharParam.DrawFont.FontColor.Alpha = 255
     DrawCheckCharParam.DrawFont.FontColor.Color = clWhite
     DrawCheckCharParam.FontTrimming = fttNone
@@ -1406,11 +1384,9 @@ object FrameCheckBox: TFrameCheckBox
     DrawCaptionParam.FontName = 'Tahoma'
     DrawCaptionParam.FontSize = 10
     DrawCaptionParam.FontColor = 5263440
-    DrawCaptionParam.DrawFont.Charset = DEFAULT_CHARSET
     DrawCaptionParam.DrawFont.Color = 5263440
     DrawCaptionParam.DrawFont.Height = -13
     DrawCaptionParam.DrawFont.Name = 'Tahoma'
-    DrawCaptionParam.DrawFont.Style = []
     DrawCaptionParam.DrawFont.FontColor.Alpha = 255
     DrawCaptionParam.DrawFont.FontColor.Color = 5263440
     DrawCaptionParam.FontTrimming = fttNone
@@ -1444,40 +1420,40 @@ object FrameCheckBox: TFrameCheckBox
     DrawPictureParam.DrawEffectSetting.PushedEffect.FixedColor.Alpha = 255
     DrawPictureParam.DrawEffectSetting.DisabledEffect.FixedColor.Alpha = 255
     DrawPictureParam.DrawEffectSetting.FocusedEffect.FixedColor.Alpha = 255
-    CheckChar = #37441'?'
+    CheckChar = '鉁?'
     DrawCheckStateParam.IsFill = False
     DrawCheckStateParam.FillColor.Alpha = 255
     DrawCheckStateParam.PenColor.Alpha = 255
     DrawCheckStateParam.PenColor.Color = 16758016
-    DrawCheckStateParam.PathActions = <
+    DrawCheckStateParam.PathActions = <    
       item
-        X = 15.000000000000000000
-        Y = 50.000000000000000000
+        X = 15
+        Y = 50
         SizeType = dpstPercent
         ActionType = patMoveTo
-      end
+      end    
       item
-        X = 35.000000000000000000
-        Y = 75.000000000000000000
+        X = 35
+        Y = 75
         SizeType = dpstPercent
         ActionType = patLineTo
-      end
+      end    
       item
         SizeType = dpstPixel
         ActionType = patDrawPath
-      end
+      end    
       item
-        X = 80.000000000000000000
-        Y = 15.000000000000000000
+        X = 80
+        Y = 15
         SizeType = dpstPercent
         ActionType = patLineTo
-      end
+      end    
       item
         SizeType = dpstPixel
         ActionType = patDrawPath
       end>
-    DrawCheckStateParam.DrawRectSetting.Width = 24.000000000000000000
-    DrawCheckStateParam.DrawRectSetting.Height = 24.000000000000000000
+    DrawCheckStateParam.DrawRectSetting.Width = 24
+    DrawCheckStateParam.DrawRectSetting.Height = 24
     DrawCheckStateParam.DrawRectSetting.Enabled = True
     DrawCheckStateParam.DrawRectSetting.PositionHorzType = dpphtRight
     DrawCheckStateParam.DrawRectSetting.PositionVertType = dppvtCenter
@@ -1503,8 +1479,8 @@ object FrameCheckBox: TFrameCheckBox
     DrawCheckRectParam.RoundHeight = 2
     DrawCheckRectParam.BorderColor.Alpha = 255
     DrawCheckRectParam.BorderColor.Color = clGray
-    DrawCheckRectParam.DrawRectSetting.Width = 24.000000000000000000
-    DrawCheckRectParam.DrawRectSetting.Height = 24.000000000000000000
+    DrawCheckRectParam.DrawRectSetting.Width = 24
+    DrawCheckRectParam.DrawRectSetting.Height = 24
     DrawCheckRectParam.DrawRectSetting.Enabled = True
     DrawCheckRectParam.DrawRectSetting.PositionHorzType = dpphtRight
     DrawCheckRectParam.DrawRectSetting.PositionVertType = dppvtCenter
@@ -1517,7 +1493,7 @@ object FrameCheckBox: TFrameCheckBox
     DrawCheckRectParam.DrawEffectSetting.PushedEffect.IsFill = True
     DrawCheckRectParam.DrawEffectSetting.PushedEffect.FillColor.UseThemeColor = ctThemeColor
     DrawCheckRectParam.DrawEffectSetting.PushedEffect.FillColor.Alpha = 255
-    DrawCheckRectParam.DrawEffectSetting.PushedEffect.FillColor.Color = 16085628
+    DrawCheckRectParam.DrawEffectSetting.PushedEffect.FillColor.Color = -16672257
     DrawCheckRectParam.DrawEffectSetting.PushedEffect.FillColorChangeType = cctNone
     DrawCheckRectParam.DrawEffectSetting.PushedEffect.BorderColor.Alpha = 255
     DrawCheckRectParam.DrawEffectSetting.PushedEffect.BorderColor.Color = 16092483
@@ -1530,14 +1506,12 @@ object FrameCheckBox: TFrameCheckBox
     DrawCheckRectParam.DrawEffectSetting.FocusedEffect.BorderColor.Alpha = 255
     IsSimpleDrawCheckState = True
     IsSimpleDrawCheckChar = False
-    DrawCheckCharParam.FontName = #23536#57791#33931#38342#21620#31910
+    DrawCheckCharParam.FontName = '寰蒋闆呴粦'
     DrawCheckCharParam.FontSize = 12
     DrawCheckCharParam.FontColor = clWhite
-    DrawCheckCharParam.DrawFont.Charset = DEFAULT_CHARSET
     DrawCheckCharParam.DrawFont.Color = clWhite
     DrawCheckCharParam.DrawFont.Height = -16
-    DrawCheckCharParam.DrawFont.Name = #23536#57791#33931#38342#21620#31910
-    DrawCheckCharParam.DrawFont.Style = []
+    DrawCheckCharParam.DrawFont.Name = '寰蒋闆呴粦'
     DrawCheckCharParam.DrawFont.FontColor.Alpha = 255
     DrawCheckCharParam.DrawFont.FontColor.Color = clWhite
     DrawCheckCharParam.FontTrimming = fttNone

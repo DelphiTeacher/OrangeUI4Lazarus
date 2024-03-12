@@ -1368,7 +1368,7 @@ begin
   if FAutoDropDown then
   begin
     //当它在设计面板中的时候就不能这么计算
-    APopupPoint:=Self.ClientToScreen(Point(0,Self.Height));
+    APopupPoint:=Self.ClientToScreen(Types.Point(0,Self.Height));
     DropDown(APopupPoint);
   end;
 end;

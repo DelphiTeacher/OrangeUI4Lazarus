@@ -34,7 +34,7 @@ uses
 
   uSkinWindowsControl, uSkinScrollControlType, uSkinCustomListType,
   uSkinVirtualGridType, uSkinItemGridType, uSkinPanelType, StdCtrls,
-  uSkinButtonType, Vcl.ExtCtrls;
+  uSkinButtonType, ExtCtrls;
 
 type
   TFrameEditJsonItemGrid = class(TFrame)

@@ -33,7 +33,7 @@ uses
   {$ENDIF}
 
 
-  uSkinLabelType, uTimerTaskEvent, uSkinButtonType, Vcl.StdCtrls,
+  uSkinLabelType, uTimerTaskEvent, uSkinButtonType, StdCtrls,
   uSkinWindowsControl, uSkinPanelType,uTimerTask;
 
 type
@@ -112,7 +112,7 @@ end;
 
 procedure TfrmLogin.tteLoginBegin(ATimerTask: TTimerTask);
 begin
-  ShowWaitingFrame(nil,'登录中...');
+  ShowWaitingFrame(nil,'Login...');
 end;
 
 procedure TfrmLogin.tteLoginExecute(ATimerTask: TTimerTask);

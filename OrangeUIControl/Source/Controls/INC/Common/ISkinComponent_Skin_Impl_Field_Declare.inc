@@ -123,14 +123,14 @@
     {$IFDEF FPC}
   public
     FAlignWithMargins:Boolean;
-    FMargins:TBorderMargins;
-    FPadding:TBorderMargins;
-    procedure SetMargins(const Value: TBorderMargins);
-    procedure SetPadding(const Value: TBorderMargins);
+    FMargins:TLazControlMargins;
+    FPadding:TLazControlMargins;
+    procedure SetMargins(const Value: TLazControlMargins);
+    procedure SetPadding(const Value: TLazControlMargins);
 
   published
-    property Margins:TBorderMargins read FMargins write SetMargins;
-    property Padding:TBorderMargins read FPadding write SetPadding;
+    property Margins:TLazControlMargins read FMargins write SetMargins;
+    property Padding:TLazControlMargins read FPadding write SetPadding;
     property AlignWithMargins:Boolean read FAlignWithMargins write FAlignWithMargins;
     {$ENDIF}
   published

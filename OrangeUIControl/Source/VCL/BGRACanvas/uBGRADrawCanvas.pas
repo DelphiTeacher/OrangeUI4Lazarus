@@ -3402,14 +3402,14 @@ begin
 //  ADrawTextParam.FTextLayout.Text := BText;
 //
 //  ADrawTextParam.FTextLayout.Opacity := ADrawTextParam.DrawAlpha/255;
-//
-//  case ADrawTextParam.FontTrimming of
-//    fttNone: ADrawTextParam.FTextLayout.Trimming:=TTextTrimming.None;
-//    fttCharacter: ADrawTextParam.FTextLayout.Trimming:=TTextTrimming.Character;
-//    fftWord: ADrawTextParam.FTextLayout.Trimming:=TTextTrimming.Word;
-//  end;
-//
-//
+
+  case ADrawTextParam.FontTrimming of
+    fttNone: ATextStyle.EndEllipsis:=False;//ADrawTextParam.FTextLayout.Trimming:=TTextTrimming.None;
+    fttCharacter: ATextStyle.EndEllipsis:=True;//ADrawTextParam.FTextLayout.Trimming:=TTextTrimming.Character;
+    fftWord: ATextStyle.EndEllipsis:=True;//ADrawTextParam.FTextLayout.Trimming:=TTextTrimming.Word;
+  end;
+
+
 //  if Not GlobalIsUseDefaultFontFamily  then
 //  begin
 //    ADrawTextParam.FTextLayout.Font.Family:=ADrawTextParam.CurrentEffectFontName;
@@ -3427,7 +3427,7 @@ begin
 //  end;
 
   //-2125987840
-  FBGRACanvas.Font.Height:=Floor(-MulDiv(ADrawFont.Size, Screen.PixelsPerInch, 72));
+  FBGRACanvas.Font.Height:=Floor(-MulDiv(ADrawTextParam.CurrentEffectFontSize, Screen.PixelsPerInch, 72));
 //  //一定要加Ceil,如果不加Ceil,在Windows上会出现字体异常
 //  ADrawTextParam.FTextLayout.Font.Size:=Floor(ADrawTextParam.CurrentEffectFontSize);
 ////  uBaseLog.OutputDebugString('CurrentEffectFontSize'+FloatToStr(ADrawTextParam.CurrentEffectFontSize));

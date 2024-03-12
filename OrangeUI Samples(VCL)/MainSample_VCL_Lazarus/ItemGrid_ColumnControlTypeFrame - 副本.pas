@@ -1,7 +1,7 @@
 ﻿//convert pas to utf8 by ¥
 //convert pas to utf8 by ¥
 
-unit ItemGrid_FixedColsFrame;
+unit ItemGrid_ColumnControlTypeFrame;
 
 interface
 
@@ -21,7 +21,6 @@ uses
   uSkinLabelType,
   Types,
   uSkinItemDesignerPanelType,
-  uSkinRepeatImageType,
   uComponentType,
 
 
@@ -33,15 +32,20 @@ uses
   {$ENDIF}
 
 
+  uSkinCheckBoxType,
+  uSkinComboBoxType,
   uSkinWindowsControl, uSkinScrollControlType, uSkinCustomListType,
   uSkinVirtualGridType, uSkinItemGridType, uSkinPanelType, StdCtrls,
-  uSkinButtonType, ExtCtrls;
+  uSkinButtonType, Vcl.ExtCtrls, uSkinMaterial, uSkinProgressBarType;
 
 type
-  TFrameFixedColsItemGrid = class(TFrame)
+  TFrameItemGrid_ColumnControlType = class(TFrame)
     gridData: TSkinWinItemGrid;
     lblPublished: TSkinLabel;
     lblDraft: TSkinLabel;
+    btnEditCell: TSkinButton;
+    btnSaveCell: TSkinButton;
+    SkinWinProgressBar1_Material: TSkinProgressBarDefaultMaterial;
     procedure gridDataResize(Sender: TObject);
     procedure gridDataCustomPaintCellBegin(ACanvas: TDrawCanvas;
       ARowIndex: Integer; ARow: TBaseSkinItem; ARowDrawRect: TRectF;
@@ -54,6 +58,8 @@ type
     procedure gridDataClickCellItemDesignerPanelChild(Sender: TObject;
       ARow: TBaseSkinItem; AColumn: TSkinVirtualGridColumn;
       AItemDesignerPanel: TSkinItemDesignerPanel; AChild: TControl);
+    procedure gridDataClickColumn(Sender: TObject;
+      ACol: TSkinVirtualGridColumn);
   private
     { Private declarations }
   public
@@ -65,28 +71,33 @@ implementation
 
 {$R *.dfm}
 
-procedure TFrameFixedColsItemGrid.gridDataClickCellItemDesignerPanelChild(
+procedure TFrameItemGrid_ColumnControlType.gridDataClickCellItemDesignerPanelChild(
   Sender: TObject; ARow: TBaseSkinItem; AColumn: TSkinVirtualGridColumn;
   AItemDesignerPanel: TSkinItemDesignerPanel; AChild: TControl);
 begin
-  if AColumn.Caption='Action' then
+  if AColumn.Caption='Button' then
   begin
-    if Self.gridData.Prop.EditingItem=nil then
-    begin
-      //开始编辑
-      Self.gridData.Prop.StartEditingCell(ARow,Self.gridData.Prop.Columns.Find('title'),0,0);
-    end
-    else
-    begin
-      //结束编辑
-      Self.gridData.Prop.StopEditingItem;
-    end;
-    
+    ShowMessage('Edit');
   end;
+//  if AChild is TSkinCheckBox then
+//  begin
+//    Self.gridData.Prop.StartEditingCell(ARow,AColumn,0,0,AChild);
+//  end;
+//  if AChild is TSkinComboBox then
+//  begin
+////    TSkinComboBox(AChild).AutoDropDown:=True;
+//    Self.gridData.Prop.StartEditingCell(ARow,AColumn,0,0,AChild);
+//  end;
 
 end;
 
-procedure TFrameFixedColsItemGrid.gridDataCustomPaintCellBegin(ACanvas: TDrawCanvas;
+procedure TFrameItemGrid_ColumnControlType.gridDataClickColumn(Sender: TObject;
+  ACol: TSkinVirtualGridColumn);
+begin
+  ShowMessage('You clicked Col '+ACol.Caption);
+end;
+
+procedure TFrameItemGrid_ColumnControlType.gridDataCustomPaintCellBegin(ACanvas: TDrawCanvas;
   ARowIndex: Integer; ARow: TBaseSkinItem; ARowDrawRect: TRectF;
   AColumn: TSkinVirtualGridColumn; AColumnIndex: Integer; ACellDrawRect: TRectF;
   ARowEffectStates: TDPEffectStates;
@@ -97,9 +108,9 @@ procedure TFrameFixedColsItemGrid.gridDataCustomPaintCellBegin(ACanvas: TDrawCan
 var
   AStatus:String;
 begin
-  if AColumn.GetBindItemFieldName='ItemDetail3' then
+  if AColumn.GetBindItemFieldName='status' then
   begin
-    AStatus:=ARow.GetValueByBindItemField('ItemDetail3');
+    AStatus:=ARow.GetValueByBindItemField('status');
     //switch color by value
 
 //    if AStatus='success' then
@@ -146,29 +157,29 @@ begin
 
   end;
 
-//  if AColumn.Caption='Action' then
-//  begin
-//    if (AColumn.FSkinControl<>nil) then
-//    begin
-//      if (Self.gridData.Prop.EditingItem=ARow) then
-//      begin
-//        //已经开始编辑了
-//        //Started Edit
-//        TSkinButton(AColumn.FSkinControl).RefMaterial:=Self.btnSaveCell.RefMaterial;
-//        TSkinButton(AColumn.FSkinControl).Caption:='Save';
-//      end
-//      else
-//      begin
-//        //尚未开启编辑
-//        //not Started Edit
-//        TSkinButton(AColumn.FSkinControl).RefMaterial:=Self.btnEditCell.RefMaterial;
-//        TSkinButton(AColumn.FSkinControl).Caption:='Edit';
-//      end;
-//    end;
-//  end;
+  if AColumn.Caption='Action' then
+  begin
+    if (AColumn.FSkinControl<>nil) then
+    begin
+      if (Self.gridData.Prop.EditingItem=ARow) then
+      begin
+        //已经开始编辑了
+        //Started Edit
+        TSkinButton(AColumn.FSkinControl).RefMaterial:=Self.btnSaveCell.RefMaterial;
+        TSkinButton(AColumn.FSkinControl).Caption:='Save';
+      end
+      else
+      begin
+        //尚未开启编辑
+        //not Started Edit
+        TSkinButton(AColumn.FSkinControl).RefMaterial:=Self.btnEditCell.RefMaterial;
+        TSkinButton(AColumn.FSkinControl).Caption:='Edit';
+      end;
+    end;
+  end;
 end;
 
-procedure TFrameFixedColsItemGrid.gridDataResize(Sender: TObject);
+procedure TFrameItemGrid_ColumnControlType.gridDataResize(Sender: TObject);
 begin
   //Self.Color:=clDefault;
 
@@ -177,7 +188,7 @@ begin
 
 end;
 
-constructor TFrameFixedColsItemGrid.Create(AOwner:TComponent);
+constructor TFrameItemGrid_ColumnControlType.Create(AOwner:TComponent);
 var
   I:Integer;
   AOrderJson:ISuperObject;

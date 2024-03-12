@@ -591,7 +591,7 @@ type
     function IsRightStored(const Index: Integer): Boolean;
     function IsTopStored(const Index: Integer): Boolean;
   protected
-    procedure DoChange;
+    procedure DoChange;virtual;
     procedure AssignTo(Dest: TPersistent); override;
     class procedure InitDefaults(Margins: TBorderMargins); virtual;
   public

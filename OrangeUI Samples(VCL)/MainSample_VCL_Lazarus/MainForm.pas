@@ -85,7 +85,7 @@ uses
   uSkinCustomListType, uSkinVirtualListType, uSkinListBoxType, uSkinButtonType,
   uSkinMaterial, uSkinPageControlType, uSkinImageType, uSkinLabelType, StdCtrls,
   uSkinEditType, Menus, uSkinListViewType,
-  uSkinTreeViewType, ExtDlgs, uSkinNotifyNumberIconType, Vcl.ComCtrls;
+  uSkinTreeViewType, ExtDlgs, uSkinNotifyNumberIconType, ComCtrls;
 
 
 type
@@ -646,7 +646,10 @@ begin
   Self.FCurrentFrame.Parent:=ATabSheet;
 //  Self.FCurrentFrame.Parent:=Self;
 //  Self.FCurrentFrame.Align:=alTop;
+  {$IFDEF FPC}
+  {$ELSE}
   FCurrentFrame.AlignWithMargins:=True;
+  {$ENDIF}
 //  FCurrentFrame.Margins.SetBounds(5,5,5,5);
   Self.FCurrentFrame.Align:=alClient;
 

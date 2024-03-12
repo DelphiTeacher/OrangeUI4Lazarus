@@ -57,7 +57,7 @@
     function GetParentIsScrollBox:Boolean;
     function GetParentScrollBox:TControl;
   protected
-
+    FOldWidth,FOldHeight:TControlSize;
     //控件大小更改
     procedure Resize;override;
 

@@ -2047,7 +2047,7 @@ type
     procedure SetCustomListProperties(Value:TCustomListProperties);
 
   protected
-    procedure ReadState(Reader: TReader); override;
+    //procedure ReadState(Reader: TReader); override;
 
     procedure Loaded;override;
     //通知
@@ -7711,21 +7711,21 @@ begin
 
 end;
 
-procedure TSkinCustomList.ReadState(Reader: TReader);
-begin
-  { #todo : 需要处理 }
-  //开始更新
-  //Self.Properties.Items.BeginUpdate;
-  //
-  //LockSkinControlInvalidate;
-  //try
-    inherited ReadState(Reader);
-  //finally
-  //  UnLockSkinControlInvalidate;
-  //end;
-
-
-end;
+//procedure TSkinCustomList.ReadState(Reader: TReader);
+//begin
+//  { #todo : 需要处理 }
+//  //开始更新
+//  //Self.Properties.Items.BeginUpdate;
+//  //
+//  //LockSkinControlInvalidate;
+//  //try
+//    inherited ReadState(Reader);
+//  //finally
+//  //  UnLockSkinControlInvalidate;
+//  //end;
+//
+//
+//end;
 
 procedure TSkinCustomList.Notification(AComponent: TComponent; Operation: TOperation);
 begin

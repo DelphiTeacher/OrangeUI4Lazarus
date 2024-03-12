@@ -1858,7 +1858,7 @@ protected
   public
     procedure SizeChanged;override;
     //自定义绘制方法
-    function CustomPaint(ACanvas:TDrawCanvas;ASkinMaterial:TSkinControlMaterial;const ADrawRect:TRectF;APaintData:TPaintData):Boolean;override;
+    //function CustomPaint(ACanvas:TDrawCanvas;ASkinMaterial:TSkinControlMaterial;const ADrawRect:TRectF;APaintData:TPaintData):Boolean;override;
     //绘制行背景色,区分奇偶行,区分固定列活动列
     procedure DrawRowBackColor(ACanvas:TDrawCanvas;
                               AItemIndex:Integer;
@@ -1872,31 +1872,31 @@ protected
                                     const ADrawRect:TRectF;
                                     APaintData:TPaintData)
                                     :Boolean;override;
-    //绘制表头,表头尾分隔线
-    function CustomPaintColumnsHeader(ACanvas:TDrawCanvas;
-                                      ASkinMaterial:TSkinControlMaterial;
-                                      const ADrawRect:TRectF;
-                                      APaintData:TPaintData;
-                                      //表头背景区域
-                                      AHeaderDrawRect:TRectF;
-//                                      ADrawColumnStartIndex:Integer;
-//                                      ADrawColumnEndIndex:Integer;
-                                      ASkinVirtualGridMaterial:TSkinVirtualGridDefaultMaterial
-                                      ):Boolean;virtual;
-    //绘制表格列,列分隔线
-    function CustomPaintColumn(ACanvas:TDrawCanvas;
-                              //表格列
-                              AColumn:TSkinVirtualGridColumn;
-                              //列下标
-                              AColumnIndex:Integer;
-                              //列的绘制区域
-                              AColumnDrawRect:TRectF;
-                              ADrawRect:TRectF;
-                              APaintData:TPaintData;
-                              //绘制列的素材
-                              ADrawColumnMaterial:TSkinVirtualGridColumnMaterial;
-                              ASkinVirtualGridMaterial:TSkinVirtualGridDefaultMaterial
-                              ):Boolean;virtual;
+//    //绘制表头,表头尾分隔线
+//    function CustomPaintColumnsHeader(ACanvas:TDrawCanvas;
+//                                      ASkinMaterial:TSkinControlMaterial;
+//                                      const ADrawRect:TRectF;
+//                                      APaintData:TPaintData;
+//                                      //表头背景区域
+//                                      AHeaderDrawRect:TRectF;
+////                                      ADrawColumnStartIndex:Integer;
+////                                      ADrawColumnEndIndex:Integer;
+//                                      ASkinVirtualGridMaterial:TSkinVirtualGridDefaultMaterial
+//                                      ):Boolean;virtual;
+//    //绘制表格列,列分隔线
+//    function CustomPaintColumn(ACanvas:TDrawCanvas;
+//                              //表格列
+//                              AColumn:TSkinVirtualGridColumn;
+//                              //列下标
+//                              AColumnIndex:Integer;
+//                              //列的绘制区域
+//                              AColumnDrawRect:TRectF;
+//                              ADrawRect:TRectF;
+//                              APaintData:TPaintData;
+//                              //绘制列的素材
+//                              ADrawColumnMaterial:TSkinVirtualGridColumnMaterial;
+//                              ASkinVirtualGridMaterial:TSkinVirtualGridDefaultMaterial
+//                              ):Boolean;virtual;
 
     //处理Item的状态
     function ProcessItemDrawEffectStates(AItem:TBaseSkinItem):TDPEffectStates;override;
@@ -2068,12 +2068,12 @@ protected
   public
 //    procedure StayClick;override;
     property Prop:TVirtualGridProperties read GetVirtualGridProperties write SetVirtualGridProperties;
+    //表头,如果变成published，在Lazarus中使用时加载Columns会报错
+    property ColumnHeader:TSkinColumnHeader read FColumnHeader;// write SetColumnHeader;
   published
     //属性(必须在VertScrollBar和HorzScrollBar之前)
     property Properties:TVirtualGridProperties read GetVirtualGridProperties write SetVirtualGridProperties;
 
-    //表头
-    property ColumnHeader:TSkinColumnHeader read FColumnHeader;// write SetColumnHeader;
 
     //垂直滚动条
     property VertScrollBar;
@@ -4372,46 +4372,45 @@ begin
 
 end;
 
-function TSkinVirtualGridDefaultType.CustomPaint(ACanvas: TDrawCanvas;
-  ASkinMaterial: TSkinControlMaterial; const ADrawRect: TRectF;
-  APaintData: TPaintData): Boolean;
-var
-  AHeaderDrawRect:TRectF;
-begin
-  Result:=Inherited;
-
-  {$IFDEF VCL}
-
-  if
-      //设置了列头的高度
-      BiggerDouble(Self.FSkinVirtualGridIntf.Prop.ColumnsHeaderHeight,0) then
-  begin
-
-      //绘制列头
-      AHeaderDrawRect:=Self.FSkinVirtualGridIntf.Prop.GetContentRect_Header;
-      //列头不能上下滑动的,所以不需要加上上下偏移
-      //加上水平滚动偏移
-      AHeaderDrawRect.Left:=AHeaderDrawRect.Left-Self.FDrawRectLeftOffset;
-      AHeaderDrawRect.Right:=AHeaderDrawRect.Right-Self.FDrawRectRightOffset;
-
-      Self.CustomPaintColumnsHeader(
-                                ACanvas,
-                                ASkinMaterial,
-                                RectF(0,0,ADrawRect.Width,ADrawRect.Height),
-                                APaintData,
-
-                                AHeaderDrawRect,
-
-//                                FDrawColumnStartIndex,
-//                                FDrawColumnEndIndex,
-
-                                TSkinVirtualGridDefaultMaterial(ASkinMaterial));
-
-  end;
-  {$ENDIF}
-
-
-end;
+//function TSkinVirtualGridDefaultType.CustomPaint(ACanvas: TDrawCanvas;
+//  ASkinMaterial: TSkinControlMaterial; const ADrawRect: TRectF;
+//  APaintData: TPaintData): Boolean;
+//var
+//  AHeaderDrawRect:TRectF;
+//begin
+//  Result:=Inherited;
+//
+////  {$IFDEF VCL}
+////  if
+////      //设置了列头的高度
+////      BiggerDouble(Self.FSkinVirtualGridIntf.Prop.ColumnsHeaderHeight,0) then
+////  begin
+////
+////      //绘制列头
+////      AHeaderDrawRect:=Self.FSkinVirtualGridIntf.Prop.GetContentRect_Header;
+////      //列头不能上下滑动的,所以不需要加上上下偏移
+////      //加上水平滚动偏移
+////      AHeaderDrawRect.Left:=AHeaderDrawRect.Left-Self.FDrawRectLeftOffset;
+////      AHeaderDrawRect.Right:=AHeaderDrawRect.Right-Self.FDrawRectRightOffset;
+////
+////      Self.CustomPaintColumnsHeader(
+////                                ACanvas,
+////                                ASkinMaterial,
+////                                RectF(0,0,ADrawRect.Width,ADrawRect.Height),
+////                                APaintData,
+////
+////                                AHeaderDrawRect,
+////
+//////                                FDrawColumnStartIndex,
+//////                                FDrawColumnEndIndex,
+////
+////                                TSkinVirtualGridDefaultMaterial(ASkinMaterial));
+////
+////  end;
+////  {$ENDIF}
+//
+//
+//end;
 
 function TSkinVirtualGridDefaultType.CustomPaintCell(
                                                       ACanvas: TDrawCanvas;
@@ -5446,319 +5445,319 @@ begin
 end;
 
 
-function TSkinVirtualGridDefaultType.CustomPaintColumn(
-                              ACanvas: TDrawCanvas;
-                              AColumn:TSkinVirtualGridColumn;
-                              AColumnIndex:Integer;
-                              AColumnDrawRect:TRectF;
-                              ADrawRect: TRectF;
-                              APaintData: TPaintData;
-                              ADrawColumnMaterial:TSkinVirtualGridColumnMaterial;
-                              ASkinVirtualGridMaterial:TSkinVirtualGridDefaultMaterial
-                              ): Boolean;
-begin
-
-
-  if ADrawColumnMaterial<>nil then
-  begin
-    //绘制表格列的背景色
-    ACanvas.DrawRect(ADrawColumnMaterial.BackColor,AColumnDrawRect);
-    //绘制表格列的标题
-    ACanvas.DrawText(ADrawColumnMaterial.DrawCaptionParam,
-                        AColumn.Caption,
-                        AColumnDrawRect);
-  end;
-
-
-
-  //有固定列
-  if (Self.FRealFixColCount>0) then
-  begin
-
-      //存在表格列头
-      //存在指示列
-      //如果要画指示列的列尾分隔线
-      //要画左上角的右边框
-      //第一列
-      //那就不要画表格列的列头分隔线
-      //避免线看起来重复
-      if Not ( BiggerDouble(Self.FSkinVirtualGridIntf.Prop.ColumnsHeaderHeight,0)
-              and BiggerDouble(Self.FSkinVirtualGridIntf.Prop.FIndicatorWidth,0)
-              and BiggerDouble(ASkinVirtualGridMaterial.FDrawIndicatorHeaderBackColor.BorderWidth,0)
-              and (beRight in ASkinVirtualGridMaterial.FDrawIndicatorHeaderBackColor.BorderEadges)
-              and (AColumnIndex=0)
-              ) then
-      begin
-        //绘制表格列的列头分隔线
-        if (AColumnIndex=0)
-          and (ASkinVirtualGridMaterial.FDrawColumnDevideMaterial.IsDrawColBeginLine) then
-        begin
-          ACanvas.DrawRectLine(ASkinVirtualGridMaterial.FDrawColumnDevideMaterial.FDrawColLineParam,
-                                AColumnDrawRect,lpLeft);
-        end;
-      end;
-
-      //存在表格列头
-      //如果要画列的分隔线
-      //并且当前水平位置是0
-      //活动列的第一列
-      //那就不要画表格列的列头分隔线
-      //避免线看起来重复
-      if Not ( BiggerDouble(Self.FSkinVirtualGridIntf.Prop.ColumnsHeaderHeight,0)
-              and ASkinVirtualGridMaterial.FDrawColumnDevideMaterial.IsDrawColLine
-              and EqualDouble(Self.FDrawRectLeftOffset,0)
-              and (AColumnIndex=FRealFixColCount)
-              ) then
-      begin
-        //绘制表格列的列头分隔线
-        if (AColumnIndex=FRealFixColCount)
-          and (ASkinVirtualGridMaterial.FDrawColumnDevideMaterial.IsDrawColBeginLine) then
-        begin
-          ACanvas.DrawRectLine(ASkinVirtualGridMaterial.FDrawColumnDevideMaterial.FDrawColLineParam,
-                                AColumnDrawRect,lpLeft);
-        end;
-      end;
-
-
-
-  end
-  else
-  begin
-      //存在表格列头
-      //存在指示列
-      //如果要画指示列的列尾分隔线
-      //要画左上角的右边框
-      //并且当前水平位置是0
-      //那就不要画表格列的列头分隔线
-      //避免线看起来重复
-      if Not ( BiggerDouble(Self.FSkinVirtualGridIntf.Prop.ColumnsHeaderHeight,0)
-              and BiggerDouble(Self.FSkinVirtualGridIntf.Prop.FIndicatorWidth,0)
-              and BiggerDouble(ASkinVirtualGridMaterial.FDrawIndicatorHeaderBackColor.BorderWidth,0)
-              and (beRight in ASkinVirtualGridMaterial.FDrawIndicatorHeaderBackColor.BorderEadges)
-              and EqualDouble(Self.FDrawRectLeftOffset,0)
-              ) then
-      begin
-        //绘制表格列的列头分隔线
-        if (AColumnIndex=0)
-          and (ASkinVirtualGridMaterial.FDrawColumnDevideMaterial.IsDrawColBeginLine) then
-        begin
-          ACanvas.DrawRectLine(ASkinVirtualGridMaterial.FDrawColumnDevideMaterial.FDrawColLineParam,
-                                AColumnDrawRect,lpLeft);
-        end;
-      end;
-
-  end;
-
-
-
-  //绘制表格列的列尾分隔线
-  if (AColumnIndex=Self.FSkinVirtualGridIntf.Prop.Columns.Count-1)
-    and (ASkinVirtualGridMaterial.FDrawColumnDevideMaterial.IsDrawColEndLine) then
-  begin
-    ACanvas.DrawRectLine(ASkinVirtualGridMaterial.FDrawColumnDevideMaterial.FDrawColLineParam,
-                        AColumnDrawRect,lpRight);
-  end;
-
-  //绘制表格列的列分隔线
-  if (AColumnIndex<Self.FSkinVirtualGridIntf.Prop.Columns.Count-1)
-    and (ASkinVirtualGridMaterial.FDrawColumnDevideMaterial.IsDrawColLine) then
-  begin
-    ACanvas.DrawRectLine(ASkinVirtualGridMaterial.FDrawColumnDevideMaterial.FDrawColLineParam,
-                        AColumnDrawRect,lpRight);
-  end;
-
-end;
-
-function TSkinVirtualGridDefaultType.CustomPaintColumnsHeader(ACanvas: TDrawCanvas;
-                                                              ASkinMaterial:TSkinControlMaterial;
-                                                              const ADrawRect: TRectF;
-                                                              APaintData: TPaintData;
-                                                              AHeaderDrawRect:TRectF;
-//                                                              ADrawColumnStartIndex:Integer;
-//                                                              ADrawColumnEndIndex:Integer;
-                                                              ASkinVirtualGridMaterial:TSkinVirtualGridDefaultMaterial
-                                                              ): Boolean;
-var
-  I: Integer;
-  AColumn:TSkinVirtualGridColumn;
-  ADrawColumnMaterial:TSkinVirtualGridColumnMaterial;
-  ATemp_ColumnHeaderDrawRect:TRectF;
-  AColumnDrawRect:TRectF;
-  AIndicatorHeaderDrawRect:TRectF;
-  AClipRect:TRectF;
-begin
-
-  //再绘制活动列
-  //设置绘制剪裁区域
-  //有需要绘制的活动列
-  if FDrawColumnStartIndex<=FDrawColumnEndIndex then
-  begin
-      AClipRect:=Self.FSkinVirtualGridIntf.Prop.GetClientRect_ColumnHeader_UnfixedCols;
-      OffsetRectF(AClipRect,ADrawRect.Left,ADrawRect.Top);
-      if Self.FSkinVirtualGridIntf.Properties.FIsNeedClip then ACanvas.SetClip(AClipRect);
-      try
-          //活动列背景的绘制区域
-          ATemp_ColumnHeaderDrawRect:=
-            Self.FSkinVirtualGridIntf.Prop.GetRowDrawRect_UnfixedCols(ADrawRect,AHeaderDrawRect);
-
-          //活动列的列头背景
-          ACanvas.DrawRect(ASkinVirtualGridMaterial.FColumnHeaderBackColor,
-                            ATemp_ColumnHeaderDrawRect);
-
-          //绘制活动的表格列
-          for I := FDrawColumnStartIndex to FDrawColumnEndIndex do
-          begin
-            if I>=FRealFixColCount then
-            begin
-              AColumn:=TSkinVirtualGridColumn(Self.FSkinVirtualGridIntf.Prop.FColumnLayoutsManager.GetVisibleItemObject(I));
-              AColumnDrawRect:=Self.FSkinVirtualGridIntf.Prop.VisibleColumnDrawRect(I);
-
-              //绘制单元格
-              //默认的绘制参数
-              ADrawColumnMaterial:=ASkinVirtualGridMaterial.FDrawColumnMaterial;
-              //自定的绘制参数
-//              if Not AColumn.FIsUseDefaultGridColumnMaterial then
-              if Not AColumn.FIsUseDefaultGridColumnCaptionParam then
-              begin
-                ADrawColumnMaterial:=AColumn.SelfOwnMaterial;
-              end;
-
-
-              CustomPaintColumn(ACanvas,
-                                AColumn,
-                                I,
-                                AColumnDrawRect,
-                                ADrawRect,
-                                APaintData,
-                                ADrawColumnMaterial,
-                                ASkinVirtualGridMaterial);
-            end;
-          end;
-
-
-          //活动表格列头的行头分隔线
-          if ASkinVirtualGridMaterial.FDrawColumnDevideMaterial.FIsDrawRowBeginLine then
-          begin
-            ACanvas.DrawRectLine(ASkinVirtualGridMaterial.FDrawColumnDevideMaterial.FDrawColLineParam,
-                                ATemp_ColumnHeaderDrawRect,lpTop);
-          end;
-
-
-          //活动表格列头的行尾分隔线
-          if ASkinVirtualGridMaterial.FDrawColumnDevideMaterial.FIsDrawRowEndLine then
-          begin
-            ACanvas.DrawRectLine(ASkinVirtualGridMaterial.FDrawColumnDevideMaterial.FDrawColLineParam,
-                                ATemp_ColumnHeaderDrawRect,lpBottom);
-          end;
-
-
-      finally
-        if Self.FSkinVirtualGridIntf.Properties.FIsNeedClip then ACanvas.ResetClip;
-      end;
-  end;
-
-
-
-
-  //wn
-  //绘制固定列的列头
-//  if BiggerDouble(FFixedColsWidth,0) then
-//  if Self.FSkinVirtualGridIntf.Prop.FFixedCols>0 then
-  if FRealFixColCount>0 then
-  begin
-
-      //需要绘制固定列,开始下标小于结束小标则表示需要绘制一些固定列
-      if FDrawFixedColumnStartIndex<=FDrawFixedColumnEndIndex then
-      begin
-      
-            //有固定列,获取固定列头的矩形
-            ATemp_ColumnHeaderDrawRect:=
-              Self.FSkinVirtualGridIntf.Prop.GetRowDrawRect_FixedCols(ADrawRect,AHeaderDrawRect);
-
-
-            //固定列的列头背景
-            ACanvas.DrawRect(ASkinVirtualGridMaterial.FFixedColumnHeaderBackColor,
-                              ATemp_ColumnHeaderDrawRect);
-
-            //绘制固定的表格列
-            //wn
-      //      for I := 0 to FRealFixColCount-1 do
-            for I := Self.FDrawFixedColumnStartIndex to FDrawFixedColumnEndIndex do
-            begin
-              AColumn:=TSkinVirtualGridColumn(Self.FSkinVirtualGridIntf.Prop.FColumnLayoutsManager.GetVisibleItemObject(I));
-              AColumnDrawRect:=Self.FSkinVirtualGridIntf.Prop.VisibleColumnDrawRect(I);
-
-              //绘制单元格
-              //默认的绘制参数
-              ADrawColumnMaterial:=ASkinVirtualGridMaterial.FDrawColumnMaterial;
-
-              //自定的绘制参数
-              if Not AColumn.FIsUseDefaultGridColumnMaterial then
-              begin
-                ADrawColumnMaterial:=AColumn.SelfOwnMaterial;
-              end;
-
-              CustomPaintColumn(ACanvas,
-                                AColumn,
-                                I,
-                                AColumnDrawRect,
-                                ADrawRect,
-                                APaintData,
-                                ADrawColumnMaterial,
-                                ASkinVirtualGridMaterial);
-            end;
-
-
-
-            //固定表格列头的行头分隔线
-            if ASkinVirtualGridMaterial.FDrawColumnDevideMaterial.FIsDrawRowBeginLine then
-            begin
-              ACanvas.DrawRectLine(ASkinVirtualGridMaterial.FDrawColumnDevideMaterial.FDrawColLineParam,
-                                  ATemp_ColumnHeaderDrawRect,lpTop);
-            end;
-
-
-            //固定表格列头的行尾分隔线
-            if ASkinVirtualGridMaterial.FDrawColumnDevideMaterial.FIsDrawRowEndLine then
-            begin
-              ACanvas.DrawRectLine(ASkinVirtualGridMaterial.FDrawColumnDevideMaterial.FDrawColLineParam,
-                                  ATemp_ColumnHeaderDrawRect,lpBottom);
-            end;
-
-      end;
-  end;
-
-
-
-
-
-
-  
-  //绘制固定的指示列头,也就是左上角
-  if BiggerDouble(Self.FSkinVirtualGridIntf.Prop.FIndicatorWidth,0) then
-  begin
-
-    AIndicatorHeaderDrawRect:=AHeaderDrawRect;
-    AIndicatorHeaderDrawRect.Left:=ADrawRect.Left;
-    AIndicatorHeaderDrawRect.Right:=AIndicatorHeaderDrawRect.Left
-                                    +Self.FSkinVirtualGridIntf.Prop.FIndicatorWidth;
-//                              +Self.FSkinVirtualGridIntf.Prop.GetClientRect_Cells.Left;
-
-    ACanvas.DrawRect(ASkinVirtualGridMaterial.FDrawIndicatorHeaderBackColor,
-                      AIndicatorHeaderDrawRect);
-  end;
-
-
-
-//  //不存在表格列
-//  if (Self.FSkinVirtualGridIntf.Prop.FColumnLayoutsManager.GetVisibleItemsCount=0) then
+//function TSkinVirtualGridDefaultType.CustomPaintColumn(
+//                              ACanvas: TDrawCanvas;
+//                              AColumn:TSkinVirtualGridColumn;
+//                              AColumnIndex:Integer;
+//                              AColumnDrawRect:TRectF;
+//                              ADrawRect: TRectF;
+//                              APaintData: TPaintData;
+//                              ADrawColumnMaterial:TSkinVirtualGridColumnMaterial;
+//                              ASkinVirtualGridMaterial:TSkinVirtualGridDefaultMaterial
+//                              ): Boolean;
+//begin
+//
+//
+//  if ADrawColumnMaterial<>nil then
 //  begin
-//    Exit;
+//    //绘制表格列的背景色
+//    ACanvas.DrawRect(ADrawColumnMaterial.BackColor,AColumnDrawRect);
+//    //绘制表格列的标题
+//    ACanvas.DrawText(ADrawColumnMaterial.DrawCaptionParam,
+//                        AColumn.Caption,
+//                        AColumnDrawRect);
 //  end;
-
-
-
-end;
+//
+//
+//
+//  //有固定列
+//  if (Self.FRealFixColCount>0) then
+//  begin
+//
+//      //存在表格列头
+//      //存在指示列
+//      //如果要画指示列的列尾分隔线
+//      //要画左上角的右边框
+//      //第一列
+//      //那就不要画表格列的列头分隔线
+//      //避免线看起来重复
+//      if Not ( BiggerDouble(Self.FSkinVirtualGridIntf.Prop.ColumnsHeaderHeight,0)
+//              and BiggerDouble(Self.FSkinVirtualGridIntf.Prop.FIndicatorWidth,0)
+//              and BiggerDouble(ASkinVirtualGridMaterial.FDrawIndicatorHeaderBackColor.BorderWidth,0)
+//              and (beRight in ASkinVirtualGridMaterial.FDrawIndicatorHeaderBackColor.BorderEadges)
+//              and (AColumnIndex=0)
+//              ) then
+//      begin
+//        //绘制表格列的列头分隔线
+//        if (AColumnIndex=0)
+//          and (ASkinVirtualGridMaterial.FDrawColumnDevideMaterial.IsDrawColBeginLine) then
+//        begin
+//          ACanvas.DrawRectLine(ASkinVirtualGridMaterial.FDrawColumnDevideMaterial.FDrawColLineParam,
+//                                AColumnDrawRect,lpLeft);
+//        end;
+//      end;
+//
+//      //存在表格列头
+//      //如果要画列的分隔线
+//      //并且当前水平位置是0
+//      //活动列的第一列
+//      //那就不要画表格列的列头分隔线
+//      //避免线看起来重复
+//      if Not ( BiggerDouble(Self.FSkinVirtualGridIntf.Prop.ColumnsHeaderHeight,0)
+//              and ASkinVirtualGridMaterial.FDrawColumnDevideMaterial.IsDrawColLine
+//              and EqualDouble(Self.FDrawRectLeftOffset,0)
+//              and (AColumnIndex=FRealFixColCount)
+//              ) then
+//      begin
+//        //绘制表格列的列头分隔线
+//        if (AColumnIndex=FRealFixColCount)
+//          and (ASkinVirtualGridMaterial.FDrawColumnDevideMaterial.IsDrawColBeginLine) then
+//        begin
+//          ACanvas.DrawRectLine(ASkinVirtualGridMaterial.FDrawColumnDevideMaterial.FDrawColLineParam,
+//                                AColumnDrawRect,lpLeft);
+//        end;
+//      end;
+//
+//
+//
+//  end
+//  else
+//  begin
+//      //存在表格列头
+//      //存在指示列
+//      //如果要画指示列的列尾分隔线
+//      //要画左上角的右边框
+//      //并且当前水平位置是0
+//      //那就不要画表格列的列头分隔线
+//      //避免线看起来重复
+//      if Not ( BiggerDouble(Self.FSkinVirtualGridIntf.Prop.ColumnsHeaderHeight,0)
+//              and BiggerDouble(Self.FSkinVirtualGridIntf.Prop.FIndicatorWidth,0)
+//              and BiggerDouble(ASkinVirtualGridMaterial.FDrawIndicatorHeaderBackColor.BorderWidth,0)
+//              and (beRight in ASkinVirtualGridMaterial.FDrawIndicatorHeaderBackColor.BorderEadges)
+//              and EqualDouble(Self.FDrawRectLeftOffset,0)
+//              ) then
+//      begin
+//        //绘制表格列的列头分隔线
+//        if (AColumnIndex=0)
+//          and (ASkinVirtualGridMaterial.FDrawColumnDevideMaterial.IsDrawColBeginLine) then
+//        begin
+//          ACanvas.DrawRectLine(ASkinVirtualGridMaterial.FDrawColumnDevideMaterial.FDrawColLineParam,
+//                                AColumnDrawRect,lpLeft);
+//        end;
+//      end;
+//
+//  end;
+//
+//
+//
+//  //绘制表格列的列尾分隔线
+//  if (AColumnIndex=Self.FSkinVirtualGridIntf.Prop.Columns.Count-1)
+//    and (ASkinVirtualGridMaterial.FDrawColumnDevideMaterial.IsDrawColEndLine) then
+//  begin
+//    ACanvas.DrawRectLine(ASkinVirtualGridMaterial.FDrawColumnDevideMaterial.FDrawColLineParam,
+//                        AColumnDrawRect,lpRight);
+//  end;
+//
+//  //绘制表格列的列分隔线
+//  if (AColumnIndex<Self.FSkinVirtualGridIntf.Prop.Columns.Count-1)
+//    and (ASkinVirtualGridMaterial.FDrawColumnDevideMaterial.IsDrawColLine) then
+//  begin
+//    ACanvas.DrawRectLine(ASkinVirtualGridMaterial.FDrawColumnDevideMaterial.FDrawColLineParam,
+//                        AColumnDrawRect,lpRight);
+//  end;
+//
+//end;
+//
+//function TSkinVirtualGridDefaultType.CustomPaintColumnsHeader(ACanvas: TDrawCanvas;
+//                                                              ASkinMaterial:TSkinControlMaterial;
+//                                                              const ADrawRect: TRectF;
+//                                                              APaintData: TPaintData;
+//                                                              AHeaderDrawRect:TRectF;
+////                                                              ADrawColumnStartIndex:Integer;
+////                                                              ADrawColumnEndIndex:Integer;
+//                                                              ASkinVirtualGridMaterial:TSkinVirtualGridDefaultMaterial
+//                                                              ): Boolean;
+//var
+//  I: Integer;
+//  AColumn:TSkinVirtualGridColumn;
+//  ADrawColumnMaterial:TSkinVirtualGridColumnMaterial;
+//  ATemp_ColumnHeaderDrawRect:TRectF;
+//  AColumnDrawRect:TRectF;
+//  AIndicatorHeaderDrawRect:TRectF;
+//  AClipRect:TRectF;
+//begin
+//
+//  //再绘制活动列
+//  //设置绘制剪裁区域
+//  //有需要绘制的活动列
+//  if FDrawColumnStartIndex<=FDrawColumnEndIndex then
+//  begin
+//      AClipRect:=Self.FSkinVirtualGridIntf.Prop.GetClientRect_ColumnHeader_UnfixedCols;
+//      OffsetRectF(AClipRect,ADrawRect.Left,ADrawRect.Top);
+//      if Self.FSkinVirtualGridIntf.Properties.FIsNeedClip then ACanvas.SetClip(AClipRect);
+//      try
+//          //活动列背景的绘制区域
+//          ATemp_ColumnHeaderDrawRect:=
+//            Self.FSkinVirtualGridIntf.Prop.GetRowDrawRect_UnfixedCols(ADrawRect,AHeaderDrawRect);
+//
+//          //活动列的列头背景
+//          ACanvas.DrawRect(ASkinVirtualGridMaterial.FColumnHeaderBackColor,
+//                            ATemp_ColumnHeaderDrawRect);
+//
+//          //绘制活动的表格列
+//          for I := FDrawColumnStartIndex to FDrawColumnEndIndex do
+//          begin
+//            if I>=FRealFixColCount then
+//            begin
+//              AColumn:=TSkinVirtualGridColumn(Self.FSkinVirtualGridIntf.Prop.FColumnLayoutsManager.GetVisibleItemObject(I));
+//              AColumnDrawRect:=Self.FSkinVirtualGridIntf.Prop.VisibleColumnDrawRect(I);
+//
+//              //绘制单元格
+//              //默认的绘制参数
+//              ADrawColumnMaterial:=ASkinVirtualGridMaterial.FDrawColumnMaterial;
+//              //自定的绘制参数
+////              if Not AColumn.FIsUseDefaultGridColumnMaterial then
+//              if Not AColumn.FIsUseDefaultGridColumnCaptionParam then
+//              begin
+//                ADrawColumnMaterial:=AColumn.SelfOwnMaterial;
+//              end;
+//
+//
+//              CustomPaintColumn(ACanvas,
+//                                AColumn,
+//                                I,
+//                                AColumnDrawRect,
+//                                ADrawRect,
+//                                APaintData,
+//                                ADrawColumnMaterial,
+//                                ASkinVirtualGridMaterial);
+//            end;
+//          end;
+//
+//
+//          //活动表格列头的行头分隔线
+//          if ASkinVirtualGridMaterial.FDrawColumnDevideMaterial.FIsDrawRowBeginLine then
+//          begin
+//            ACanvas.DrawRectLine(ASkinVirtualGridMaterial.FDrawColumnDevideMaterial.FDrawColLineParam,
+//                                ATemp_ColumnHeaderDrawRect,lpTop);
+//          end;
+//
+//
+//          //活动表格列头的行尾分隔线
+//          if ASkinVirtualGridMaterial.FDrawColumnDevideMaterial.FIsDrawRowEndLine then
+//          begin
+//            ACanvas.DrawRectLine(ASkinVirtualGridMaterial.FDrawColumnDevideMaterial.FDrawColLineParam,
+//                                ATemp_ColumnHeaderDrawRect,lpBottom);
+//          end;
+//
+//
+//      finally
+//        if Self.FSkinVirtualGridIntf.Properties.FIsNeedClip then ACanvas.ResetClip;
+//      end;
+//  end;
+//
+//
+//
+//
+//  //wn
+//  //绘制固定列的列头
+////  if BiggerDouble(FFixedColsWidth,0) then
+////  if Self.FSkinVirtualGridIntf.Prop.FFixedCols>0 then
+//  if FRealFixColCount>0 then
+//  begin
+//
+//      //需要绘制固定列,开始下标小于结束小标则表示需要绘制一些固定列
+//      if FDrawFixedColumnStartIndex<=FDrawFixedColumnEndIndex then
+//      begin
+//      
+//            //有固定列,获取固定列头的矩形
+//            ATemp_ColumnHeaderDrawRect:=
+//              Self.FSkinVirtualGridIntf.Prop.GetRowDrawRect_FixedCols(ADrawRect,AHeaderDrawRect);
+//
+//
+//            //固定列的列头背景
+//            ACanvas.DrawRect(ASkinVirtualGridMaterial.FFixedColumnHeaderBackColor,
+//                              ATemp_ColumnHeaderDrawRect);
+//
+//            //绘制固定的表格列
+//            //wn
+//      //      for I := 0 to FRealFixColCount-1 do
+//            for I := Self.FDrawFixedColumnStartIndex to FDrawFixedColumnEndIndex do
+//            begin
+//              AColumn:=TSkinVirtualGridColumn(Self.FSkinVirtualGridIntf.Prop.FColumnLayoutsManager.GetVisibleItemObject(I));
+//              AColumnDrawRect:=Self.FSkinVirtualGridIntf.Prop.VisibleColumnDrawRect(I);
+//
+//              //绘制单元格
+//              //默认的绘制参数
+//              ADrawColumnMaterial:=ASkinVirtualGridMaterial.FDrawColumnMaterial;
+//
+//              //自定的绘制参数
+//              if Not AColumn.FIsUseDefaultGridColumnMaterial then
+//              begin
+//                ADrawColumnMaterial:=AColumn.SelfOwnMaterial;
+//              end;
+//
+//              CustomPaintColumn(ACanvas,
+//                                AColumn,
+//                                I,
+//                                AColumnDrawRect,
+//                                ADrawRect,
+//                                APaintData,
+//                                ADrawColumnMaterial,
+//                                ASkinVirtualGridMaterial);
+//            end;
+//
+//
+//
+//            //固定表格列头的行头分隔线
+//            if ASkinVirtualGridMaterial.FDrawColumnDevideMaterial.FIsDrawRowBeginLine then
+//            begin
+//              ACanvas.DrawRectLine(ASkinVirtualGridMaterial.FDrawColumnDevideMaterial.FDrawColLineParam,
+//                                  ATemp_ColumnHeaderDrawRect,lpTop);
+//            end;
+//
+//
+//            //固定表格列头的行尾分隔线
+//            if ASkinVirtualGridMaterial.FDrawColumnDevideMaterial.FIsDrawRowEndLine then
+//            begin
+//              ACanvas.DrawRectLine(ASkinVirtualGridMaterial.FDrawColumnDevideMaterial.FDrawColLineParam,
+//                                  ATemp_ColumnHeaderDrawRect,lpBottom);
+//            end;
+//
+//      end;
+//  end;
+//
+//
+//
+//
+//
+//
+//  
+//  //绘制固定的指示列头,也就是左上角
+//  if BiggerDouble(Self.FSkinVirtualGridIntf.Prop.FIndicatorWidth,0) then
+//  begin
+//
+//    AIndicatorHeaderDrawRect:=AHeaderDrawRect;
+//    AIndicatorHeaderDrawRect.Left:=ADrawRect.Left;
+//    AIndicatorHeaderDrawRect.Right:=AIndicatorHeaderDrawRect.Left
+//                                    +Self.FSkinVirtualGridIntf.Prop.FIndicatorWidth;
+////                              +Self.FSkinVirtualGridIntf.Prop.GetClientRect_Cells.Left;
+//
+//    ACanvas.DrawRect(ASkinVirtualGridMaterial.FDrawIndicatorHeaderBackColor,
+//                      AIndicatorHeaderDrawRect);
+//  end;
+//
+//
+//
+////  //不存在表格列
+////  if (Self.FSkinVirtualGridIntf.Prop.FColumnLayoutsManager.GetVisibleItemsCount=0) then
+////  begin
+////    Exit;
+////  end;
+//
+//
+//
+//end;
 
 function TSkinVirtualGridDefaultType.CustomPaintContentBegin(
                                     ACanvas:TDrawCanvas;
@@ -6715,7 +6714,10 @@ begin
     end;
   end;
   //如果表格列是按比例的,那么每次拖动尺寸,都要重新计算
-  if AHasPercentColumn then Self.FSkinVirtualGridIntf.Properties.Columns.GetListLayoutsManager.DoItemSizeChange(nil);
+  if AHasPercentColumn then
+  begin
+    Self.FSkinVirtualGridIntf.Properties.Columns.GetListLayoutsManager.DoItemSizeChange(nil);
+  end;
 
 end;
 
@@ -8157,6 +8159,7 @@ begin
   inherited Create(Collection);
 
   FWidth:=Const_DefaultColumnWidth;
+  FIsAutoFitControlWidth:=False;
 
 //  Self.FMaterialUseKind:=mukSelfOwn;
 
@@ -8673,8 +8676,15 @@ begin
           //必须得有Owner,不然设计时点不开属性
           FSkinControl:=AControlClass.Create((Self.Owner).FVirtualGridProperties.FSkinControl);
           FSkinControl.SetSubComponent(True);
+          {$IFDEF FPC}
+          FSkinControl.BorderSpacing.Left:=5;
+          FSkinControl.BorderSpacing.Top:=5;
+          FSkinControl.BorderSpacing.Right:=5;
+          FSkinControl.BorderSpacing.Bottom:=5;
+          {$ELSE}
           FSkinControl.AlignWithMargins:=True;
           FSkinControl.Margins.SetBounds(5,5,5,5);
+          {$ENDIF}
 
           FSkinControlIntf:=FSkinControl as ISkinControl;
           (FSkinControl as ISkinItemBindingControl).SetBindItemFieldName(Self.GetBindItemFieldName);
@@ -10224,10 +10234,10 @@ end;
 function TSkinColumnHeaderLayoutsManager.CalcItemWidth(AItem: ISkinItem): Double;
 begin
   Result:=Inherited;
-  if FIsAddAutoFitWidth and TSkinVirtualGridColumn(AItem).FIsAutoFitControlWidth then
-  begin
-    Result:=Result+TSkinVirtualGridColumn(AItem).FAutoFitWidth;
-  end;
+  //if FIsAddAutoFitWidth and TSkinVirtualGridColumn(AItem).FIsAutoFitControlWidth then
+  //begin
+  //  Result:=Result+TSkinVirtualGridColumn(AItem).FAutoFitWidth;
+  //end;
 
 end;
 

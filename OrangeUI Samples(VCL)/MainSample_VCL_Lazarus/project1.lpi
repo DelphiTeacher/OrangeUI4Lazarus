@@ -204,14 +204,26 @@
         <IsPartOfProject Value="True"/>
       </Unit>
       <Unit>
-        <Filename Value="..\..\OrangeProjectCommon\VCLFrames\WaitingForm_VCL\FormWaiting.pas"/>
+        <Filename Value="OrderGridFrame.pas"/>
         <IsPartOfProject Value="True"/>
-        <ComponentName Value="frmWaiting"/>
         <HasResources Value="True"/>
-        <ResourceBaseClass Value="Form"/>
       </Unit>
       <Unit>
-        <Filename Value="OrderGridFrame.pas"/>
+        <Filename Value="..\..\OrangeProjectCommon\VCLFrames_Lazarus\GridSwitchPageFrame.dfm"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeProjectCommon\VCLFrames_Lazarus\GridSwitchPageFrame.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeProjectCommon\VCLFrames\WaitingForm_VCL\WaitingForm.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="ItemGrid_DefaultFrame.pas"/>
         <IsPartOfProject Value="True"/>
         <HasResources Value="True"/>
       </Unit>
@@ -225,7 +237,7 @@
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
-      <OtherUnitFiles Value="D:\MyFiles\OrangeUIControlNew\lib\x86_64-win64\;..\..\OrangeProjectCommon;..\..\OrangeUIListItemStyles_VCL;..\..\OrangeUIControl\Source\VCL\BGRACanvas;..\..\OrangeUIControl\Source\VCL\NativeCanvas;..\..\OrangeProjectCommon\VCLFrames\WaitingForm_VCL"/>
+      <OtherUnitFiles Value="D:\MyFiles\OrangeUIControlNew\lib\x86_64-win64\;..\..\OrangeProjectCommon;..\..\OrangeUIListItemStyles_VCL;..\..\OrangeUIControl\Source\VCL\BGRACanvas;..\..\OrangeUIControl\Source\VCL\NativeCanvas;..\..\OrangeProjectCommon\VCLFrames_Lazarus;..\..\OrangeProjectCommon\VCLFrames\WaitingForm_VCL"/>
       <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <Linking>

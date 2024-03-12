@@ -391,6 +391,10 @@
         <HasRegisterProc Value="True"/>
         <UnitName Value="uDrawPictureEditor"/>
       </Item>
+      <Item>
+        <Filename Value="Source\Controls\uSkinRepeatImageType.pas"/>
+        <UnitName Value="uSkinRepeatImageType"/>
+      </Item>
     </Files>
     <RequiredPkgs>
       <Item>

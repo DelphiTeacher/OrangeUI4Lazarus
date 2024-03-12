@@ -1027,6 +1027,11 @@ type
   {$ENDREGION '列表项绑定'}
 
 
+  TLazControlMargins=class(TBorderMargins)
+  public
+    FControl:TControl;
+    procedure DoChange;override;
+  end;
 
 
 
@@ -4219,6 +4224,22 @@ end;
 
 
 
+
+{ TLazControlMargins }
+
+procedure TLazControlMargins.DoChange;
+begin
+  inherited;
+  {$IFDEF FPC}
+  if FControl<>nil then
+  begin
+    FControl.BorderSpacing.Left:=Self.Left;
+    FControl.BorderSpacing.Top:=Self.Top;
+    FControl.BorderSpacing.Right:=Self.Right;
+    FControl.BorderSpacing.Bottom:=Self.Bottom;
+  end;
+  {$ENDIF}
+end;
 
 initialization
   GlobalNullPaintData.OtherData:=nil;

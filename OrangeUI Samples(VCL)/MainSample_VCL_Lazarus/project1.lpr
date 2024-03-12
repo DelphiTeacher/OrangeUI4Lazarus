@@ -20,13 +20,13 @@ uses
 
   EasyServiceCommonMaterialDataMoudle_VCL_Lazarus, uBGRASVGSupport,
   uRestInterfaceCall, uDataSetToJson, uIdHttpControl, uOpenClientCommon,
-  FormWaiting, ListItemStyle_Default, indylaz, MainForm,
+  WaitingForm, GridSwitchPageFrame, ListItemStyle_Default, indylaz, MainForm,
   ButtonFrame, CheckBoxFrame, DashBoard_AnalyseFrame, DashBoard_ProjectsFrame,
   DashBoard_Analyse_BarChart_MonthSummaryFrame,
   DashBoard_Projects_PieChart_ProjectStatusFrame,
   DashBoard_Analyse_ItemGrid_TwoCellTextFrame,
   DashBoard_Projects_ItemGrid_TwoCellTextHasBackColorFrame, LoginForm,
-  HomeFrame, EditFrame, uConst, OrderGridFrame;
+  HomeFrame, EditFrame, uConst, OrderGridFrame, ItemGrid_DefaultFrame;
 
 {$R *.res}
 

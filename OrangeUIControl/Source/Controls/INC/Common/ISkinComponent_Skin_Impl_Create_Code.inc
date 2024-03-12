@@ -2,8 +2,9 @@
 //控件素材所需要的属性初始代码
 
   {$IFDEF FPC}
-  FMargins:=TBorderMargins.Create;
-  FPadding:=TBorderMargins.Create;
+  FMargins:=TLazControlMargins.Create;
+  FMargins.FControl:=Self;
+  FPadding:=TLazControlMargins.Create;
   {$ENDIF}
 
 

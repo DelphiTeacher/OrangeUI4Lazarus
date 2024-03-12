@@ -5,11 +5,20 @@ unit ItemGrid_ContentFrame;
 
 interface
 
+{$IFDEF FPC}
+  //Lazarus
+  //{$mode objfpc}{$H+}
+  {$mode delphi}{$H+}
+{$ELSE}
+  {$DEFINE DELPHI}
+{$ENDIF}
+
+
 uses
   {$IFDEF MSWINDOWS}
     Windows,
   {$ENDIF}
-  Messages, SysUtils, Variants, Classes,
+  Messages, SysUtils, Variants, Classes, StrUtils,
   Graphics, Controls, Forms, Dialogs, uDrawCanvas, uSkinItems,
 
   uDrawParam,
@@ -42,7 +51,7 @@ uses
 
   uSkinWindowsControl, uSkinScrollControlType, uSkinCustomListType,
   uSkinVirtualGridType, uSkinItemGridType, uSkinPanelType, StdCtrls,
-  uSkinButtonType, Vcl.ExtCtrls, uSkinComboBoxType, uTimerTask, uTimerTaskEvent;
+  uSkinButtonType, ExtCtrls, uSkinComboBoxType, uTimerTask, uTimerTaskEvent;
 
 type
   TFrameContentItemGrid = class(TFrame)
@@ -59,6 +68,9 @@ type
     SkinButton1: TSkinButton;
     cmbType: TSkinComboBox;
     tteLoadData: TTimerTaskEvent;
+    idpAction: TSkinItemDesignerPanel;
+    btnEditRow: TSkinButton;
+    btnDeleteRow: TSkinButton;
     procedure gridDataResize(Sender: TObject);
     procedure gridDataCustomPaintCellBegin(ACanvas: TDrawCanvas;
       ARowIndex: Integer; ARow: TBaseSkinItem; ARowDrawRect: TRectF;
@@ -74,6 +86,8 @@ type
     procedure tteLoadDataBegin(ATimerTask: TTimerTask);
     procedure tteLoadDataExecute(ATimerTask: TTimerTask);
     procedure tteLoadDataExecuteEnd(ATimerTask: TTimerTask);
+    procedure btnEditRowClick(Sender: TObject);
+    procedure btnDeleteRowClick(Sender: TObject);
   private
     { Private declarations }
     FGridSwitchPageFrame:TFrameGridSwitchPage;
@@ -328,7 +342,11 @@ begin
                       1
                       ],
                       GlobalRestAPISignType,
-                      GlobalRestAPIAppSecret
+                      GlobalRestAPIAppSecret,
+                      False,
+                      nil,
+                      '',
+                      []
                       );
 
     //SaveStringToFile(TTimerTask(ATimerTask).TaskDesc,'D:\aaaa.json',TEncoding.UTF8);
@@ -398,7 +416,8 @@ begin
 
               AListViewItem:=TSkinJsonItemGridRow.Create(Self.gridData.Prop.Items);
               ASuperArray.O[I].I['importance']:=Ceil(ASuperArray.O[I].I['read_count'] / 10);
-              if ASuperArray.O[I].I['importance'] then
+              ASuperArray.O[I].S['content']:=ReplaceStr(ASuperArray.O[I].S['content'],#13#10,'');
+              if ASuperArray.O[I].I['importance']>4 then ASuperArray.O[I].I['importance']:=4;
               
               AListViewItem.Json:=ASuperArray.O[I];
 
@@ -455,6 +474,28 @@ begin
 
   end;
 
+end;
+
+procedure TFrameContentItemGrid.btnDeleteRowClick(Sender: TObject);
+begin
+  if Self.gridData.Prop.InteractiveItem<>nil then
+  begin
+    Self.gridData.Prop.Items.BeginUpdate;
+    try
+      Self.gridData.Prop.InteractiveItem.Free;
+    finally
+      Self.gridData.Prop.Items.EndUpdate;
+    end;
+  end;
+
+end;
+
+procedure TFrameContentItemGrid.btnEditRowClick(Sender: TObject);
+begin
+  if Self.gridData.Prop.InteractiveItem<>nil then
+  begin
+    ShowMessage(Self.gridData.Prop.InteractiveItem.GetValueByBindItemField('content'));
+  end;
 end;
 
 constructor TFrameContentItemGrid.Create(AOwner:TComponent);

@@ -19,7 +19,24 @@ uses
 
   Variants,
   IdURI,
-  System.StrUtils,
+  StrUtils,
+//  uGPSUtils,
+
+  {$IFDEF FPC}
+  uSkinSuperObject,
+  {$ELSE}
+  {$IF CompilerVersion <= 21.0} // XE or older
+  SuperObject,
+  superobjecthelper,
+  {$ELSE}
+    {$IFDEF SKIN_SUPEROBJECT}
+    uSkinSuperObject,
+    {$ELSE}
+    XSuperObject,
+    XSuperJson,
+    {$ENDIF}
+  {$IFEND}
+  {$ENDIF}
 
 //  uThumbCommon,
   uFuncCommon,
@@ -28,11 +45,7 @@ uses
   uDataSetToJson,
   uOpenClientCommon,
 //  uOpenCommon,
-  uOpenCommon,
-//  uGPSUtils,
-
-  XSuperObject,
-  XSuperJson;
+  uOpenCommon;
 
 
 type
@@ -223,12 +236,12 @@ var
 
 
 
-function GetAuditStateColor(AAuditState:TAuditState;AAuditRejectColor:TAlphaColor=TAlphaColorRec.Red):TAlphaColor;
-
-
-function HideBankCardNumber( num:string ):String;
-
-function GetDistance(ADistance:Integer):String;
+//function GetAuditStateColor(AAuditState:TAuditState;AAuditRejectColor:TAlphaColor=TAlphaColorRec.Red):TAlphaColor;
+//
+//
+//function HideBankCardNumber( num:string ):String;
+//
+//function GetDistance(ADistance:Integer):String;
 
 
 
@@ -238,53 +251,53 @@ implementation
 
 
 
-function GetDistance(ADistance:Integer):String;
-begin
-  if ADistance<1000 then
-  begin
-    Result:=IntToStr(ADistance)+'m';
-  end
-  else
-  begin
-    Result:=Format('%.1f',[ADistance/1000])+'km';
-  end;
-
-end;
-
-function HideBankCardNumber( num:string ):String;
-var
-  I: Integer;
-begin
-  Result:=num;
-  for I := Low(num) to High(num)-4 do
-  begin
-    Result[I]:='*';
-  end;
-end;
-
-function GetAuditStateColor(AAuditState:TAuditState;AAuditRejectColor:TAlphaColor):TAlphaColor;
-begin
-  Result:=TAlphaColorRec.Gray;
-
-  //根据审核状态设置标题的颜色
-  if AAuditState=asRequestAudit then
-  begin
-    Result:=TAlphaColorRec.Orange;
-  end
-  else if AAuditState=asAuditPass then
-  begin
-    Result:=$FF1296db;//#FF35B34A
-  end
-  else if AAuditState=asAuditReject then
-  begin
-    Result:=AAuditRejectColor;//TAlphaColorRec.Red;
-  end
-  else
-  begin
-    Result:=TAlphaColorRec.Gray;
-  end;
-
-end;
+//function GetDistance(ADistance:Integer):String;
+//begin
+//  if ADistance<1000 then
+//  begin
+//    Result:=IntToStr(ADistance)+'m';
+//  end
+//  else
+//  begin
+//    Result:=Format('%.1f',[ADistance/1000])+'km';
+//  end;
+//
+//end;
+//
+//function HideBankCardNumber( num:string ):String;
+//var
+//  I: Integer;
+//begin
+//  Result:=num;
+//  for I := Low(num) to High(num)-4 do
+//  begin
+//    Result[I]:='*';
+//  end;
+//end;
+//
+//function GetAuditStateColor(AAuditState:TAuditState;AAuditRejectColor:TAlphaColor):TAlphaColor;
+//begin
+//  Result:=TAlphaColorRec.Gray;
+//
+//  //根据审核状态设置标题的颜色
+//  if AAuditState=asRequestAudit then
+//  begin
+//    Result:=TAlphaColorRec.Orange;
+//  end
+//  else if AAuditState=asAuditPass then
+//  begin
+//    Result:=$FF1296db;//#FF35B34A
+//  end
+//  else if AAuditState=asAuditReject then
+//  begin
+//    Result:=AAuditRejectColor;//TAlphaColorRec.Red;
+//  end
+//  else
+//  begin
+//    Result:=TAlphaColorRec.Gray;
+//  end;
+//
+//end;
 
 
 { TManager }

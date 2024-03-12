@@ -2760,7 +2760,7 @@ begin
           if FActivePage <> nil then
           begin
             (FActivePage as ISkinControl).Visible:=False;
-            (FActivePage as ISkinControl).Left:=-MaxInt;
+            //(FActivePage as ISkinControl).Left:=-MaxInt;
           end;
         end;
 

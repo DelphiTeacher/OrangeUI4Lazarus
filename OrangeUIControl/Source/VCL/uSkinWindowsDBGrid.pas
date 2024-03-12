@@ -1,8 +1,8 @@
 unit uSkinWindowsDBGrid;
 
-{$I WinControl.inc}
+//{$I WinControl.inc}
 
-{$I Source\Controls\uSkinDBGrid_Impl_Code.inc}
+//{$I Source\Controls\uSkinDBGrid_Impl_Code.inc}
 
 
 

@@ -909,12 +909,19 @@ begin
 end;
 
 {$IFDEF FPC}
-procedure {$I Source\Controls\INC\Common\ISkinComponent_Skin_Impl_ClassName.inc}.SetMargins(const Value:TBorderMargins);
+procedure {$I Source\Controls\INC\Common\ISkinComponent_Skin_Impl_ClassName.inc}.SetMargins(const Value:TLazControlMargins);
 begin
   FMargins.Assign(Value);
+  //if Value<>nil then
+  //begin
+  //  Self.BorderSpacing.Left:=Value.Left;
+  //  Self.BorderSpacing.Top:=Value.Top;
+  //  Self.BorderSpacing.Right:=Value.Right;
+  //  Self.BorderSpacing.Bottom:=Value.Bottom;
+  //end;
 end;
 
-procedure {$I Source\Controls\INC\Common\ISkinComponent_Skin_Impl_ClassName.inc}.SetPadding(const Value:TBorderMargins);
+procedure {$I Source\Controls\INC\Common\ISkinComponent_Skin_Impl_ClassName.inc}.SetPadding(const Value:TLazControlMargins);
 begin
   FPadding.Assign(Value);
 end;
