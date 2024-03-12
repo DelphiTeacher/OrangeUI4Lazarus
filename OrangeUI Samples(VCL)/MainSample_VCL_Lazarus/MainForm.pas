@@ -430,6 +430,9 @@ begin
 //    AFrame.btnDelete.Margins.Bottom:=5;
     AFrame.btnDelete.Width:=16;
 
+    AFrame.imgItemCaption.AlignWithMargins:=True;
+    AFrame.imgItemCaption.Margins.Left:=5;
+
     AFrame.ItemDesignerPanel.Material.IsTransparent:=False;
 
     AFrame.ItemDesignerPanel.Material.DrawBackColorParam.DrawRectSetting.Enabled:=True;

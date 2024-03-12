@@ -145,6 +145,8 @@ contains
   uSkinSelectPopupForm in 'Source\VCL\uSkinSelectPopupForm.pas',
   uSkinWindowsForm in 'Source\VCL\uSkinWindowsForm.pas',
   uSkinItemsEditor in '..\OrangeUIDesign\Source\uSkinItemsEditor.pas',
-  uSkinRepeatImageType in 'Source\Controls\uSkinRepeatImageType.pas';
+  uSkinRepeatImageType in 'Source\Controls\uSkinRepeatImageType.pas',
+  uSkinVirtualChartMapDrawer in 'Source\Controls\uSkinVirtualChartMapDrawer.pas',
+  uSkinVirtualChartBezierLineDrawer in 'Source\Controls\uSkinVirtualChartBezierLineDrawer.pas';
 
 end.
