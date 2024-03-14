@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Compiler Value="D:\Lazarus\fpc\3.2.2\bin\x86_64-win64\fpc.exe" Date="1449427374"/>
+  <Params Value=" -MDelphi -Scgi -O1 -g -gl -l -vewnhibq -FiD:\三方控件\Indy10\Lib -FiD:\三方控件\Indy10\Lib\Core -FiD:\三方控件\Indy10\Lib\Protocols -FiD:\三方控件\Indy10\Lib\System -FuD:\三方控件\Indy10\Lib -FuD:\三方控件\Indy10\Lib\Core -FuD:\三方控件\Indy10\Lib\Protocols -FuD:\三方控件\Indy10\Lib\System -FuD:\Lazarus\packager\units\x86_64-win64 -FuD:\Lazarus\components\lazutils\lib\x86_64-win64 -FuD:\Lazarus\components\buildintf\units\x86_64-win64 -FuD:\Lazarus\components\freetype\lib\x86_64-win64 -FuD:\Lazarus\lcl\units\x86_64-win64 -FuD:\Lazarus\lcl\units\x86_64-win64\win32 -FuD:\Lazarus\components\lazcontrols\lib\x86_64-win64\win32 -FuD:\Lazarus\components\ideintf\units\x86_64-win64\win32 -FUD:\三方控件\Indy10\Lib\lib\x86_64-win64\ -dLCL -dLCLwin32 -dDEBUG indylaz.pas"/>
+</CONFIG>
