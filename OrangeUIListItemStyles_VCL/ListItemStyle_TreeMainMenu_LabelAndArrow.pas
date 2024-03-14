@@ -3,7 +3,7 @@ unit ListItemStyle_TreeMainMenu_LabelAndArrow;
 interface
 
 uses
-  Windows, Messages, SysUtils, Variants, Classes,
+  Messages, SysUtils, Variants, Classes,
 
   uSkinItems,
   uSkinVirtualListType,

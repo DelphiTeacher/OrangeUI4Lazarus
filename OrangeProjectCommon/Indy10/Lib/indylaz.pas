@@ -4,12 +4,14 @@
 
 unit indylaz;
 
+{$warn 5023 off : no warning about unused units}
 interface
 
 uses
-  IdAboutVCL, IdAntiFreeze, IdCoreDsnRegister, IdDsnCoreResourceStrings, IdDsnPropEdBindingVCL, 
-  IdDsnRegister, IdDsnResourceStrings, IdDsnSASLListEditorFormVCL, IdRegister, IdRegisterCore, IdStreamVCL, 
-  IdStream, LazarusPackageIntf;
+  IdAboutVCL, IdAntiFreeze, IdCoreDsnRegister, IdDsnCoreResourceStrings, 
+  IdDsnPropEdBindingVCL, IdDsnRegister, IdDsnResourceStrings, 
+  IdDsnSASLListEditorFormVCL, IdRegister, IdRegisterCore, IdStreamVCL, 
+  IdStream, ItemGrid_ContentFrame, LazarusPackageIntf;
 
 implementation
 

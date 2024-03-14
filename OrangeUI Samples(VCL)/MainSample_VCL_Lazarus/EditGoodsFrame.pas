@@ -4,7 +4,7 @@ unit EditGoodsFrame;
 interface
 
 uses
-  Windows, Messages, SysUtils, Variants, Classes,
+  Messages, SysUtils, Variants, Classes,
 
   {$IFDEF FPC}
   EasyServiceCommonMaterialDataMoudle_VCL_Lazarus,

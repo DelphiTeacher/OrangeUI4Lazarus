@@ -3,7 +3,7 @@ unit ListItemStyle_Caption_CheckBoxRight_Selected;
 interface
 
 uses
-  Windows, Messages, SysUtils, Variants, Classes,
+  Messages, SysUtils, Variants, Classes,
 
   uSkinItems,
   uSkinVirtualListType,

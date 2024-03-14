@@ -29,7 +29,8 @@ uses
 
   IdBaseComponent,
   IdComponent,
-  IdHttp,
+  //IdHttp,
+  IdHTTP,
   IdGlobal,
   IdIOHandlerSocket,
   IdIOHandlerStack,

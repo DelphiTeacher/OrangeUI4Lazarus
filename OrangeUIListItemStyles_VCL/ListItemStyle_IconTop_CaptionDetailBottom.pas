@@ -3,7 +3,7 @@ unit ListItemStyle_IconTop_CaptionDetailBottom;
 interface
 
 uses
-  Windows, Messages, SysUtils, Variants, Classes,
+  Messages, SysUtils, Variants, Classes,
 
   uSkinItems,
   uSkinVirtualListType,

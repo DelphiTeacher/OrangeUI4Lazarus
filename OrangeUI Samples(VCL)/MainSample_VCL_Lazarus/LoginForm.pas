@@ -5,7 +5,7 @@ unit LoginForm;
 interface
 
 uses
-  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs,
 
 
@@ -14,7 +14,7 @@ uses
   //uWaitingForm,
   WaitingForm,
   uOpenClientCommon,
-  uRestInterfaceCall,
+  uRestInterfaceCall, IdHTTP,
 
   {$IFDEF FPC}
   uSkinSuperObject,
