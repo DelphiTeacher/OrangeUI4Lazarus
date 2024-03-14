@@ -21,8 +21,13 @@ uses
   StrUtils,
   Classes,
 
-  {$IFDEF VCL}
+  {$IFDEF MSWINDOWS}
   Windows,
+  //ImageList_SetDragCursorImage
+  CommCtrl,
+  {$ENDIF}
+
+  {$IFDEF VCL}
   Messages,
   ExtCtrls,
   Controls,
@@ -30,8 +35,6 @@ uses
   StdCtrls,
   Graphics,
   Dialogs,
-  //ImageList_SetDragCursorImage
-  CommCtrl,
   {$ENDIF}
   {$IFDEF FMX}
   UITypes,
@@ -8628,7 +8631,9 @@ begin
       FDragImages.Width := Bmp.Width;
       FDragImages.Height := Bmp.Height;
       Pt := Mouse.CursorPos;
+      {$IFDEF MSWINDOWS}
       MapWindowPoints(HWND_DESKTOP, FListControl.Handle, Pt, 1);
+      {$ENDIF}
       Pt.X:=Pt.X-Ceil(FItem.FItemDrawRect.Left);
       Pt.Y:=Pt.Y-Ceil(FItem.FItemDrawRect.Top);
       FDragImages.DragHotspot := Pt;

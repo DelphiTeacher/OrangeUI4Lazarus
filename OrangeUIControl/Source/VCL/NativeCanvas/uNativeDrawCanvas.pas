@@ -3579,7 +3579,7 @@ begin
 
 
 
-
+  {$IFDEF MSWINDOWS}
   //方向,默认是逆时针AD_COUNTERCLOCKWISE的
   if ASweepAngle>0 then
   begin
@@ -3589,6 +3589,7 @@ begin
   begin
     SetArcDirection(FCanvas.Handle, AD_COUNTERCLOCKWISE);
   end;
+  {$ENDIF}
 
   //ARC的实现不一样，在Delphi和Lazarus中
 

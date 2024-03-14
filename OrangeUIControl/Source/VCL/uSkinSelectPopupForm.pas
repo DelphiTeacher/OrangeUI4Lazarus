@@ -4,7 +4,9 @@ unit uSkinSelectPopupForm;
 interface
 
 uses
+  {$IFDEF MSWINDOWS}
   Windows,
+  {$ENDIF}
   Messages,
   SysUtils,
   Variants,

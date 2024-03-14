@@ -13,7 +13,7 @@
         <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
       </SearchPaths>
       <Other>
-        <CompilerPath Value="D:\Lazarus\fpc\3.2.2\bin\x86_64-win64\fpc.exe"/>
+        <CompilerPath Value="\usr\bin\fpc"/>
       </Other>
     </CompilerOptions>
     <Files>

@@ -58,6 +58,7 @@ const
 
 
 type
+  {$IFDEF DELPHI}
   {$IFDEF VCL}
   TWindowsBitmap=class
   private
@@ -106,6 +107,7 @@ type
     property Canvas:TCanvas read GetBitmapCanvas;
 //    property DrawCanvas:TDrawCanvas read GetDrawCanvas;
   end;
+  {$ENDIF}
   {$ENDIF}
 
 
@@ -625,6 +627,7 @@ end;
 
 
 
+{$IFDEF DELPHI}
 {$IFDEF VCL}
 { TWindowsBitmap }
 
@@ -744,6 +747,7 @@ begin
 //  FPlatformBitmap.DrawTo();
 end;
 
+{$ENDIF}
 {$ENDIF}
 
 
@@ -896,8 +900,11 @@ begin
 //         FDrawCanvas.Handle,
 //         0,0,
 //         SRCCOPY);
+  {$IFDEF FPC}
+  ACanvas.Draw(0,0,FPlatformBitmap);
+  {$ELSE}
   FPlatformBitmap.DrawTo(ACanvas);
-//  ACanvas.Draw(0,0,FPlatformBitmap);
+  {$ENDIF}
 
 end;
 
