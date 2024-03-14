@@ -395,6 +395,10 @@
         <Filename Value="Source\Controls\uSkinRepeatImageType.pas"/>
         <UnitName Value="uSkinRepeatImageType"/>
       </Item>
+      <Item>
+        <Filename Value="Source\Controls\uSkinVirtualChartBezierLineDrawer.pas"/>
+        <UnitName Value="uSkinVirtualChartBezierLineDrawer"/>
+      </Item>
     </Files>
     <RequiredPkgs>
       <Item>

@@ -33,7 +33,8 @@ uses
   uSkinSwitchType, uSkinTimeEditType, uSkinTrackBarType, uSkinTreeViewType, 
   uSkinVirtualChartType, uSkinVirtualGridType, uSkinVirtualListType, 
   uskinsuperobject, uNativeDrawCanvas, uNativeSkinPictureEngine, 
-  uSkinFormType, uDrawPictureEditor, uSkinRepeatImageType, LazarusPackageIntf;
+  uSkinFormType, uDrawPictureEditor, uSkinRepeatImageType, 
+  uSkinVirtualChartBezierLineDrawer, LazarusPackageIntf;
 
 implementation
 

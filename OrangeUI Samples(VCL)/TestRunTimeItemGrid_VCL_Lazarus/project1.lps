@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="project1.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="21"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unit1.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit1"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="92"/>
+        <CursorPos X="13" Y="101"/>
+        <UsageCount Value="21"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControl\Source\Controls\uSkinVirtualGridType.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="4386"/>
+        <CursorPos Y="4407"/>
+        <UsageCount Value="10"/>
+        <Bookmarks Count="1">
+          <Item0 Y="2561" ID="3"/>
+        </Bookmarks>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControl\Source\Controls\uSkinItemGridType.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="992"/>
+        <CursorPos Y="1012"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControl\Source\Base\uSkinItems.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2849"/>
+        <CursorPos Y="2861"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControl\Source\Controls\uSkinDBGridType.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="5351"/>
+        <CursorPos X="64" Y="5371"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControl\Source\Controls\uSkinListBoxType.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="108"/>
+        <CursorPos X="27" Y="133"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControl\Source\Controls\uSkinVirtualListType.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1678"/>
+        <CursorPos Y="1700"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControl\Source\Base\uBaseLog.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="349"/>
+        <CursorPos Y="374"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControl\Source\Controls\uSkinScrollControlType.pas"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="2995"/>
+        <CursorPos X="20" Y="3018"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControl\Source\VCL\uSkinWindowsControl.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="215"/>
+        <CursorPos Y="252"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControl\Source\Controls\INC\Common\ISkinComponent_Skin_Impl_Create_Code.inc"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos Y="30"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControl\Source\Base\uBinaryObjectList.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="228"/>
+        <CursorPos X="3" Y="253"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControl\Source\Base\uBaseList.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="369"/>
+        <CursorPos X="3" Y="394"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\Lazarus\fpc\3.2.2\source\rtl\objpas\classes\classesh.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="525"/>
+        <CursorPos X="56" Y="549"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControl\Source\Base\uComponentType.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="355"/>
+        <CursorPos X="9" Y="372"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\Lazarus\lcl\include\customform.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="901"/>
+        <CursorPos Y="921"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControl\Source\Base\uSkinGIFImage.pas"/>
+        <TopLine Value="8364"/>
+        <CursorPos X="15" Y="8390"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControl\Source\Controls\uSkinVirtualChartType.pas"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="3010"/>
+        <CursorPos X="22" Y="3048"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControl\Source\Controls\uSkinCustomListType.pas"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="8446"/>
+        <CursorPos X="47" Y="8450"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\Lazarus\lcl\include\dragobject.inc"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="70"/>
+        <CursorPos X="27" Y="96"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="12">
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\Controls\uSkinVirtualChartType.pas"/>
+        <Caret TopLine="259"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\Controls\uSkinVirtualChartType.pas"/>
+        <Caret Line="3013" Column="23" TopLine="2977"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\Controls\uSkinVirtualChartType.pas"/>
+        <Caret Line="3017" Column="25" TopLine="2981"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\Controls\uSkinVirtualChartType.pas"/>
+        <Caret Line="3048" Column="22" TopLine="3010"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\Controls\uSkinScrollControlType.pas"/>
+        <Caret Line="3018" Column="20" TopLine="2995"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\Controls\uSkinCustomListType.pas"/>
+        <Caret Line="4638" Column="10" TopLine="4614"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\Controls\uSkinCustomListType.pas"/>
+        <Caret Line="7778" Column="24" TopLine="7771"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\Controls\uSkinCustomListType.pas"/>
+        <Caret Line="7777" Column="27" TopLine="7752"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\Base\uSkinGIFImage.pas"/>
+        <Caret Line="8318" Column="66" TopLine="8293"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\Controls\uSkinCustomListType.pas"/>
+        <Caret Line="7775" Column="43" TopLine="7752"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\Controls\uSkinCustomListType.pas"/>
+        <Caret Line="23"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\Controls\uSkinCustomListType.pas"/>
+        <Caret Line="7776" Column="33" TopLine="7752"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\Controls\uSkinCustomListType.pas"/>
+        <Caret Line="8407" Column="32" TopLine="8382"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+  <Debugging>
+    <BreakPoints>
+      <Item>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="..\..\OrangeUIControl\Source\Controls\uSkinItemGridType.pas"/>
+        <Line Value="519"/>
+      </Item>
+      <Item>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="..\..\OrangeUIControl\Source\Controls\uSkinDBGridType.pas"/>
+        <Line Value="5373"/>
+      </Item>
+      <Item>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="..\..\OrangeUIControl\Source\Controls\uSkinVirtualGridType.pas"/>
+        <Line Value="3023"/>
+      </Item>
+      <Item>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="..\..\OrangeUIControl\Source\Controls\uSkinVirtualGridType.pas"/>
+        <Line Value="3037"/>
+      </Item>
+      <Item>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="..\..\OrangeUIControl\Source\Controls\uSkinVirtualGridType.pas"/>
+        <Line Value="3020"/>
+      </Item>
+    </BreakPoints>
+  </Debugging>
+</CONFIG>

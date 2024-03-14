@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="project1.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="45"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unit1.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit1"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos Y="33"/>
+        <UsageCount Value="45"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\MainSample_VCL_Lazarus\GoodsGridFrame.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameGoodsGrid"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <TopLine Value="51"/>
+        <UsageCount Value="45"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeProjectCommon\VCLFrames_Lazarus\EasyServiceCommonMaterialDataMoudle_VCL.dfm"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="45"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeProjectCommon\VCLFrames_Lazarus\EasyServiceCommonMaterialDataMoudle_VCL.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="45"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeProjectCommon\VCLFrames_Lazarus\GridSwitchPageFrame.dfm"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="45"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeProjectCommon\VCLFrames_Lazarus\GridSwitchPageFrame.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameGridSwitchPage"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="240"/>
+        <CursorPos Y="269"/>
+        <UsageCount Value="45"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeProjectCommon\uSkinItemJsonHelper.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="500"/>
+        <CursorPos X="54" Y="527"/>
+        <UsageCount Value="44"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeProjectCommon\VCLFrames\GridSwitchPageFrame.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="26"/>
+        <CursorPos X="34" Y="42"/>
+        <UsageCount Value="17"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeProjectCommon\VCLFrames\GridSwitchPage2Frame.pas"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="17"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\MyFiles\OrangeProjectCommon\VCLFrames_Lazarus\GridSwitchPageFrame.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="75" Y="2"/>
+        <UsageCount Value="7"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\MyFiles\OrangeProjectCommon\VCLFrames_Lazarus\EasyServiceCommonMaterialDataMoudle_VCL.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="17"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControl\Source\Base\uSkinListLayouts.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2236"/>
+        <CursorPos X="31" Y="2260"/>
+        <UsageCount Value="15"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControl\Source\Controls\uSkinItemGridType.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="609"/>
+        <CursorPos Y="650"/>
+        <UsageCount Value="15"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControl\Source\Base\uBinaryObjectList.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1057"/>
+        <CursorPos X="9" Y="1083"/>
+        <UsageCount Value="15"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControl\Source\Controls\uSkinVirtualGridType.pas"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="300"/>
+        <CursorPos X="15" Y="700"/>
+        <FoldState Value=" TM H=T41I"/>
+        <UsageCount Value="20"/>
+        <Bookmarks Count="1">
+          <Item0 X="4" Y="8139" ID="3"/>
+        </Bookmarks>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControl\Source\Base\uSkinItems.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="3707"/>
+        <CursorPos X="49" Y="3735"/>
+        <UsageCount Value="15"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\Lazarus\components\codetools\stdcodetools.pas"/>
+        <UnitName Value="StdCodeTools"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="4863"/>
+        <CursorPos X="28" Y="4890"/>
+        <UsageCount Value="15"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\Lazarus\components\codetools\tests\testcompreaderwriterpas.pas"/>
+        <UnitName Value="TestCompReaderWriterPas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="368"/>
+        <CursorPos X="33" Y="386"/>
+        <UsageCount Value="15"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\Lazarus\fpc\3.2.2\source\rtl\objpas\classes\classesh.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="511"/>
+        <CursorPos X="15" Y="531"/>
+        <UsageCount Value="15"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\Lazarus\fpc\3.2.2\source\rtl\inc\objpash.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="177"/>
+        <CursorPos X="23" Y="206"/>
+        <UsageCount Value="15"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\Lazarus\fpc\3.2.2\source\rtl\objpas\classes\collect.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="200"/>
+        <CursorPos X="40" Y="203"/>
+        <UsageCount Value="15"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeProjectCommon\SkinSuperObject\uskinsuperobject.pas"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="2520"/>
+        <CursorPos X="3" Y="2523"/>
+        <UsageCount Value="16"/>
+        <Loaded Value="True"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="29">
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\Controls\uSkinVirtualGridType.pas"/>
+        <Caret Line="4491" Column="66" TopLine="4458"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\Controls\uSkinVirtualGridType.pas"/>
+        <Caret Line="5721" Column="16" TopLine="5680"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\Controls\uSkinVirtualGridType.pas"/>
+        <Caret Line="5722" Column="16" TopLine="5681"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\Controls\uSkinVirtualGridType.pas"/>
+        <Caret Line="5883" Column="27" TopLine="5841"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\Controls\uSkinVirtualGridType.pas"/>
+        <Caret Line="5906" Column="29" TopLine="5864"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\Controls\uSkinVirtualGridType.pas"/>
+        <Caret Line="5998" Column="20" TopLine="5956"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\Controls\uSkinVirtualGridType.pas"/>
+        <Caret Line="5999" Column="20" TopLine="5957"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\Controls\uSkinVirtualGridType.pas"/>
+        <Caret Line="6023" Column="23" TopLine="5981"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\Controls\uSkinVirtualGridType.pas"/>
+        <Caret Line="1596" Column="18" TopLine="1550"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\Controls\uSkinVirtualGridType.pas"/>
+        <Caret Line="8127" Column="4" TopLine="8110"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\Controls\uSkinVirtualGridType.pas"/>
+        <Caret Line="189" Column="29" TopLine="160"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\Controls\uSkinVirtualGridType.pas"/>
+        <Caret Line="1191" Column="29" TopLine="1151"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\Controls\uSkinVirtualGridType.pas"/>
+        <Caret Line="1269" Column="65" TopLine="1228"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\Controls\uSkinVirtualGridType.pas"/>
+        <Caret Line="1559" Column="23" TopLine="1526"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\Controls\uSkinVirtualGridType.pas"/>
+        <Caret Line="1612" Column="62" TopLine="1571"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\Controls\uSkinVirtualGridType.pas"/>
+        <Caret Line="2807" Column="46" TopLine="2766"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\Controls\uSkinVirtualGridType.pas"/>
+        <Caret Line="5904" Column="57" TopLine="5862"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\Controls\uSkinVirtualGridType.pas"/>
+        <Caret Line="8462" Column="42" TopLine="8426"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\Controls\uSkinVirtualGridType.pas"/>
+        <Caret Line="8148" Column="39" TopLine="8114"/>
+      </Position>
+      <Position>
+        <Filename Value="..\MainSample_VCL_Lazarus\GoodsGridFrame.pas"/>
+        <Caret Line="92" Column="35" TopLine="55"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\Controls\uSkinVirtualGridType.pas"/>
+        <Caret Line="1173" Column="31" TopLine="1159"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\Controls\uSkinVirtualGridType.pas"/>
+        <Caret Line="930" Column="97" TopLine="893"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\Controls\uSkinVirtualGridType.pas"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\Controls\uSkinVirtualGridType.pas"/>
+        <Caret Line="700" Column="37" TopLine="658"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\Controls\uSkinVirtualGridType.pas"/>
+        <Caret Line="930" Column="97" TopLine="889"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\Controls\uSkinVirtualGridType.pas"/>
+        <Caret Line="2538" Column="5" TopLine="2498"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\Controls\uSkinVirtualGridType.pas"/>
+        <Caret Line="2525" Column="8" TopLine="2500"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\Controls\uSkinVirtualGridType.pas"/>
+        <Caret Line="2528" Column="11" TopLine="2500"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\Controls\uSkinVirtualGridType.pas"/>
+        <Caret Line="2537" Column="31" TopLine="2494"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\OrangeUIControl\Source\Controls\uSkinVirtualGridType.pas"/>
+        <Caret Line="2518" Column="41" TopLine="2498"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+  <Debugging>
+    <BreakPoints>
+      <Item>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="..\..\OrangeUIControl\Source\Controls\uSkinVirtualGridType.pas"/>
+        <Line Value="8139"/>
+      </Item>
+      <Item>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="..\..\OrangeUIControl\Source\Controls\uSkinVirtualGridType.pas"/>
+        <Line Value="8151"/>
+      </Item>
+    </BreakPoints>
+  </Debugging>
+</CONFIG>

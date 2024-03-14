@@ -351,6 +351,9 @@ type
   TVirtualChartSeriesDrawer=class
   public
     FSeries:TVirtualChartSeries;
+  public
+    //判断鼠标是否在Item里面
+    function PtInItem(ADataItem:TVirtualChartSeriesDataItem;APoint:TPointF):Boolean;virtual;
     //获取Path的绘制区域
     function GetPathDrawRect(ADrawRect:TRectF):TRectF;virtual;
     //生成绘制的Path列表
@@ -387,6 +390,10 @@ type
   //线状图生成路径
   TVirtualChartSeriesLineDrawer=class(TVirtualChartSeriesDrawer)
   public
+
+    //判断鼠标是否在Item里面
+    function PtInItem(ADataItem:TVirtualChartSeriesDataItem;APoint:TPointF):Boolean;override;
+
     procedure GenerateDrawPathList(APathDrawRect:TRectF);override;
 //    function GetDataItemColor(ADataItem:TVirtualChartSeriesDataItem):TDelphiColor;override;
     //绘制Y轴分隔线，X轴刻度值
@@ -412,6 +419,9 @@ type
     FInnerRadius:Double;
     //圆心
     FCircleCenterPoint:TPointF;
+
+    //判断鼠标是否在Item里面
+    function PtInItem(ADataItem:TVirtualChartSeriesDataItem;APoint:TPointF):Boolean;override;
 
     procedure DoLegendListViewPrepareDrawItem(Sender: TObject; ACanvas: TDrawCanvas;
       AItemDesignerPanel: {$IFDEF FMX}TSkinFMXItemDesignerPanel{$ENDIF}{$IFDEF VCL}TSkinItemDesignerPanel{$ENDIF}; AItem: TSkinItem;
@@ -2692,6 +2702,13 @@ begin
 
 end;
 
+function TVirtualChartSeriesDrawer.PtInItem(ADataItem:TVirtualChartSeriesDataItem;APoint: TPointF): Boolean;
+begin
+  //有时候是矩形内的柱子里移上去就要有效果
+  Result:=PtInRectF(ADataItem.FBarPathDrawRect,APoint);
+
+end;
+
 { TVirtualChartSeriesBarDrawer }
 
 function TVirtualChartSeriesBarDrawer.CustomPaint(ACanvas: TDrawCanvas;
@@ -3025,42 +3042,45 @@ begin
 //  {$ENDIF}
 //  {$IFDEF FMX}
 
-
-  //if (TVirtualChartSeriesDataItems(Self.Owner).FSeries.FChartType=sctPie) then
-  if (TVirtualChartSeriesDataItems(Self.Collection).FSeries.FChartType=sctPie) then
-  begin
-    //饼图是扇形,需要判断鼠标是否在扇形中
-    //Result:=Self.FDrawPathActions.FDrawPathData.IsInRegion(APoint);
-    //APieDrawer:=TVirtualChartSeriesPieDrawer(TVirtualChartSeriesDataItems(Self.Owner).FSeries.FDrawer);
-    APieDrawer:=TVirtualChartSeriesPieDrawer(TVirtualChartSeriesDataItems(Self.Collection).FSeries.FDrawer);
-    //判断鼠标是否在外扇形中
-    Result:=PtInPie(APieDrawer.FCircleCenterPoint,APoint,Self,APieDrawer.FRadius,Self.FPieStartAngle+90,Self.FPieSweepAngle);
-    if APieDrawer.FInnerRadius>0 then
-    begin
-      //判断鼠标是否在空心圆的内扇形中
-      if PtInPie(APieDrawer.FCircleCenterPoint,APoint,Self,APieDrawer.FInnerRadius,Self.FPieStartAngle+90,Self.FPieSweepAngle) then
-      begin
-        Result:=False;
-      end;
-    end;
-
-  end
-  //else if (TVirtualChartSeriesDataItems(Self.Owner).FSeries.FChartType=sctLine) then
-  else if (TVirtualChartSeriesDataItems(Self.Collection).FSeries.FChartType=sctLine)
-      or (TVirtualChartSeriesDataItems(Self.Collection).FSeries.FChartType=sctBezierLine) then
-  begin
-    //线状图,只需要判断鼠标是否在那个圆点上即可
-    Result:=PtInRectF(Self.FLineDotRect,APoint);
-  end
-  else
-  begin
-    //有时候是矩形内的柱子里移上去就要有效果
-    Result:=PtInRectF(FBarPathDrawRect,APoint);
+  //有时候是在整个矩形内就要有鼠标停靠效果
+  Result:=TVirtualChartSeriesDataItems(Self.Collection).FSeries.FDrawer.PtInItem(Self,APoint);
 
 
-    //有时候是在整个矩形内就要有鼠标停靠效果
-  //  Result:=PtInRect(FItemDrawRect,APoint);
-  end;
+//  //if (TVirtualChartSeriesDataItems(Self.Owner).FSeries.FChartType=sctPie) then
+//  if (TVirtualChartSeriesDataItems(Self.Collection).FSeries.FChartType=sctPie) then
+//  begin
+//    //饼图是扇形,需要判断鼠标是否在扇形中
+//    //Result:=Self.FDrawPathActions.FDrawPathData.IsInRegion(APoint);
+//    //APieDrawer:=TVirtualChartSeriesPieDrawer(TVirtualChartSeriesDataItems(Self.Owner).FSeries.FDrawer);
+//    APieDrawer:=TVirtualChartSeriesPieDrawer(TVirtualChartSeriesDataItems(Self.Collection).FSeries.FDrawer);
+//    //判断鼠标是否在外扇形中
+//    Result:=PtInPie(APieDrawer.FCircleCenterPoint,APoint,Self,APieDrawer.FRadius,Self.FPieStartAngle+90,Self.FPieSweepAngle);
+//    if APieDrawer.FInnerRadius>0 then
+//    begin
+//      //判断鼠标是否在空心圆的内扇形中
+//      if PtInPie(APieDrawer.FCircleCenterPoint,APoint,Self,APieDrawer.FInnerRadius,Self.FPieStartAngle+90,Self.FPieSweepAngle) then
+//      begin
+//        Result:=False;
+//      end;
+//    end;
+//
+//  end
+//  //else if (TVirtualChartSeriesDataItems(Self.Owner).FSeries.FChartType=sctLine) then
+//  else if (TVirtualChartSeriesDataItems(Self.Collection).FSeries.FChartType=sctLine)
+//      or (TVirtualChartSeriesDataItems(Self.Collection).FSeries.FChartType=sctBezierLine) then
+//  begin
+//    //线状图,只需要判断鼠标是否在那个圆点上即可
+//    Result:=PtInRectF(Self.FLineDotRect,APoint);
+//  end
+//  else
+//  begin
+//    //有时候是矩形内的柱子里移上去就要有效果
+//    Result:=PtInRectF(FBarPathDrawRect,APoint);
+//
+//
+//    //有时候是在整个矩形内就要有鼠标停靠效果
+//  //  Result:=PtInRect(FItemDrawRect,APoint);
+//  end;
 
 //  {$ENDIF}
 
@@ -3955,6 +3975,25 @@ begin
 
 end;
 
+function TVirtualChartSeriesPieDrawer.PtInItem(
+  ADataItem: TVirtualChartSeriesDataItem; APoint: TPointF): Boolean;
+begin
+  //饼图是扇形,需要判断鼠标是否在扇形中
+  //Result:=Self.FDrawPathActions.FDrawPathData.IsInRegion(APoint);
+  //APieDrawer:=TVirtualChartSeriesPieDrawer(TVirtualChartSeriesDataItems(Self.Owner).FSeries.FDrawer);
+  //判断鼠标是否在外扇形中
+  Result:=PtInPie(Self.FCircleCenterPoint,APoint,ADataItem,Self.FRadius,ADataItem.FPieStartAngle+90,ADataItem.FPieSweepAngle);
+  if Self.FInnerRadius>0 then
+  begin
+    //判断鼠标是否在空心圆的内扇形中
+    if PtInPie(Self.FCircleCenterPoint,APoint,ADataItem,Self.FInnerRadius,ADataItem.FPieStartAngle+90,ADataItem.FPieSweepAngle) then
+    begin
+      Result:=False;
+    end;
+  end;
+
+end;
+
 function GetAngle(ACircleCenterPoint:TPointF;APoint:TPointF):Double;
 var
   x,y:Double;
@@ -4172,6 +4211,14 @@ begin
 
   end;
 
+
+end;
+
+function TVirtualChartSeriesLineDrawer.PtInItem(
+  ADataItem: TVirtualChartSeriesDataItem; APoint: TPointF): Boolean;
+begin
+  //线状图,只需要判断鼠标是否在那个圆点上即可
+  Result:=PtInRectF(ADataItem.FLineDotRect,APoint);
 
 end;
 

@@ -20,10 +20,10 @@ uses
   Classes,
   SysUtils,
   uFuncCommon,
-
-  {$IF CompilerVersion>=30.0}
   Types,//定义了TRectF
-  {$IFEND}
+
+  //{$IF CompilerVersion>=30.0}
+  //{$IFEND}
 
   uBaseList,
   uBaseLog,
@@ -88,6 +88,8 @@ type
   //贝塞尔线状图生成路径
   TVirtualChartSeriesBezierLineDrawer=class(TVirtualChartSeriesDrawer)
   public
+    //判断鼠标是否在Item里面
+    function PtInItem(ADataItem:TVirtualChartSeriesDataItem;APoint:TPointF):Boolean;override;
     procedure GenerateDrawPathList(APathDrawRect:TRectF);override;
 //    function GetDataItemColor(ADataItem:TVirtualChartSeriesDataItem):TDelphiColor;override;
     //绘制Y轴分隔线，X轴刻度值
@@ -232,6 +234,14 @@ end;
 
 
 
+
+function TVirtualChartSeriesBezierLineDrawer.PtInItem(
+  ADataItem: TVirtualChartSeriesDataItem; APoint: TPointF): Boolean;
+begin
+  //线状图,只需要判断鼠标是否在那个圆点上即可
+  Result:=PtInRectF(ADataItem.FLineDotRect,APoint);
+
+end;
 
 function TVirtualChartSeriesBezierLineDrawer.CustomPaint(ACanvas: TDrawCanvas;
   ASkinMaterial: TSkinControlMaterial; const ADrawRect: TRectF;

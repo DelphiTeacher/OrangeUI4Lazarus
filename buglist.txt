@@ -1,0 +1,4 @@
+on laz:
+combobox's select popup form has caption,need hide
+edit box is too small when Grid Edit Cell
+  
