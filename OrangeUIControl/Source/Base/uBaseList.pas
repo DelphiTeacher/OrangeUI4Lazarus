@@ -1,5 +1,4 @@
 ﻿//convert pas to utf8 by ¥
-//convert pas to utf8 by
 /// <summary>
 ///   <para>
 ///     列表基类

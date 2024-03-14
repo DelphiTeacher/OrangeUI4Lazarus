@@ -1,0 +1,235 @@
+object Form1: TForm1
+  Left = 257
+  Height = 622
+  Top = 140
+  Width = 1239
+  Caption = 'XYZ horseshoe'
+  ClientHeight = 622
+  ClientWidth = 1239
+  DesignTimePPI = 144
+  Font.Height = -20
+  OnCreate = FormCreate
+  LCLVersion = '2.1.0.0'
+  object Panel1: TPanel
+    Left = 0
+    Height = 622
+    Top = 0
+    Width = 620
+    Align = alLeft
+    ClientHeight = 622
+    ClientWidth = 620
+    TabOrder = 0
+    object cbYAxis: TComboBox
+      Left = 6
+      Height = 36
+      Top = 6
+      Width = 150
+      ItemHeight = 0
+      OnChange = cbYAxisChange
+      TabOrder = 1
+      Text = 'cbYAxis'
+    end
+    object vsGradient: TBGRAVirtualScreen
+      Left = 6
+      Height = 408
+      Top = 48
+      Width = 602
+      OnRedraw = vsGradientRedraw
+      Alignment = taLeftJustify
+      Anchors = [akTop, akLeft, akRight, akBottom]
+      Color = clWhite
+      ParentColor = False
+      TabOrder = 2
+    end
+    object cbXAxis: TComboBox
+      Left = 458
+      Height = 36
+      Top = 462
+      Width = 150
+      Anchors = [akRight, akBottom]
+      ItemHeight = 0
+      OnChange = cbXAxisChange
+      TabOrder = 0
+      Text = 'cbXAxis'
+    end
+    object cbColorspace: TComboBox
+      Left = 452
+      Height = 36
+      Top = 6
+      Width = 160
+      Anchors = [akTop, akRight]
+      ItemHeight = 0
+      OnChange = cbColorspaceChange
+      TabOrder = 3
+      Text = 'cbColorspace'
+    end
+    object Label1: TLabel
+      Left = 334
+      Height = 24
+      Top = 12
+      Width = 110
+      Anchors = [akTop, akRight]
+      Caption = 'Colorspace'
+      ParentColor = False
+    end
+    object lblMaxY: TLabel
+      Left = 160
+      Height = 24
+      Top = 12
+      Width = 53
+      Caption = 'MaxY'
+      ParentColor = False
+    end
+    object lblMaxX: TLabel
+      Left = 389
+      Height = 24
+      Top = 468
+      Width = 55
+      Alignment = taRightJustify
+      Anchors = [akRight, akBottom]
+      Caption = 'MaxX'
+      ParentColor = False
+    end
+    object lblMin: TLabel
+      Left = 6
+      Height = 24
+      Top = 468
+      Width = 117
+      Anchors = [akLeft, akBottom]
+      Caption = 'MinY / MinX'
+      ParentColor = False
+    end
+    object tbZ: TTrackBar
+      Left = 120
+      Height = 68
+      Top = 491
+      Width = 488
+      OnChange = tbZChange
+      Position = 0
+      Anchors = [akRight, akBottom]
+      TabOrder = 4
+    end
+    object lblZ: TLabel
+      Left = 12
+      Height = 24
+      Top = 517
+      Width = 97
+      Anchors = [akLeft, akBottom]
+      Caption = 'ChannelZ'
+      ParentColor = False
+    end
+    object lblZ2: TLabel
+      Left = 12
+      Height = 24
+      Top = 577
+      Width = 110
+      Anchors = [akLeft, akBottom]
+      Caption = 'ChannelZ2'
+      ParentColor = False
+    end
+    object tbZ2: TTrackBar
+      Left = 124
+      Height = 68
+      Top = 551
+      Width = 484
+      OnChange = tbZChange
+      Position = 0
+      Anchors = [akRight, akBottom]
+      TabOrder = 5
+    end
+    object cbFluorescent: TCheckBox
+      Left = 227
+      Height = 28
+      Hint = 'Include fluorescent colors or light sources'
+      Top = 10
+      Width = 90
+      Anchors = [akTop, akLeft, akRight]
+      Caption = 'Fluo'
+      OnClick = cbFluorescentClick
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 6
+    end
+  end
+  object Splitter1: TSplitter
+    Left = 620
+    Height = 622
+    Top = 0
+    Width = 8
+  end
+  object Panel2: TPanel
+    Left = 628
+    Height = 622
+    Top = 0
+    Width = 611
+    Align = alClient
+    ClientHeight = 622
+    ClientWidth = 611
+    TabOrder = 2
+    object vsHorseshoe: TBGRAVirtualScreen
+      Left = 1
+      Height = 572
+      Top = 49
+      Width = 609
+      OnRedraw = vsHorseshoeRedraw
+      Align = alClient
+      Alignment = taLeftJustify
+      Color = clWhite
+      ParentColor = False
+      TabOrder = 0
+    end
+    object Panel3: TPanel
+      Left = 1
+      Height = 48
+      Top = 1
+      Width = 609
+      Align = alTop
+      BevelOuter = bvNone
+      ClientHeight = 48
+      ClientWidth = 609
+      TabOrder = 1
+      object Label2: TLabel
+        Left = 8
+        Height = 24
+        Top = 9
+        Width = 98
+        Caption = 'Ref. white'
+        ParentColor = False
+      end
+      object cbReferenceWhite: TComboBox
+        Left = 120
+        Height = 36
+        Top = 4
+        Width = 136
+        ItemHeight = 0
+        OnChange = cbReferenceWhiteChange
+        TabOrder = 0
+        Text = 'cbReferenceWhite'
+      end
+      object Label3: TLabel
+        Left = 264
+        Height = 24
+        Top = 9
+        Width = 89
+        Caption = 'Overflow'
+        ParentColor = False
+      end
+      object cbOverflow: TComboBox
+        Left = 360
+        Height = 34
+        Top = 4
+        Width = 240
+        ItemHeight = 0
+        Items.Strings = (
+          'Clip to RGB display'
+          'Saturate per channel'
+          'Preserve hue'
+        )
+        OnChange = cbOverflowChange
+        Style = csDropDownList
+        TabOrder = 1
+      end
+    end
+  end
+end

@@ -1,0 +1,10 @@
+cd ..\..
+manager update_BGRABitmap.json
+archive https://github.com/bgrabitmap/bgrabitmap/archive/v$(Version).zip
+cd bgrabitmap
+package bgrabitmappack.lpk
+package bgrabitmappack4fpgui.lpk
+package bgrabitmappack4nogui.lpk
+package bgrabitmappack4android.lpk
+const bgrabitmaptypes.pas BGRABitmapVersion
+

@@ -1,3 +1,4 @@
+﻿//convert pas to utf8 by ¥
 unit Unit2;
 
 interface
@@ -26,7 +27,7 @@ implementation
 
 procedure TForm2.Button1Click(Sender: TObject);
 begin
-  ShowMessage('��ã�Delphi!');
+  ShowMessage('你好，Delphi!');
 end;
 
 end.
