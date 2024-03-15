@@ -153,15 +153,15 @@ type
   //平台无关Bitmap
   //TPlatformBitmap={$IFDEF FMX}TFMXPlatformBitmap{$ENDIF}{$IFDEF VCL}TWindowsBitmap{$ENDIF};
   {$IFDEF FMX}
-  TPlatformBitmap=TFMXPlatformBitmap
+  TPlatformBitmap=TFMXPlatformBitmap;
   {$ENDIF}
   {$IFDEF VCL}
-  {$IFDEF MSWINDOWS}
-  TPlatformBitmap=TWindowsBitmap
+  {$IFDEF FPC}
+  TPlatformBitmap=TBitmap;
   {$ELSE}
-  TPlatformBitmap=TBitmap
+  TPlatformBitmap=TWindowsBitmap;
   {$ENDIF}
-  {$ENDIF};
+  {$ENDIF}
 
 
 

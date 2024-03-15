@@ -12,9 +12,6 @@
         <OtherUnitFiles Value="Source\Base;Source\Controls;Source\VCL;..\OrangeProjectCommon\SkinSuperObject;..\OrangeUIDesignNew\Source;..\OrangeProjectCommon;..\OrangeProjectCommon\SVGIconImageList\Svg;..\OrangeProjectCommon\GDIPlus;Source\VCL\GDIPlusNew;Source\VCL\GDIPlusNewCanvas;Source\VCL\NativeCanvas;..\OrangeUIDesign\Source"/>
         <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
       </SearchPaths>
-      <Other>
-        <CompilerPath Value="\usr\bin\fpc"/>
-      </Other>
     </CompilerOptions>
     <Files>
       <Item>
