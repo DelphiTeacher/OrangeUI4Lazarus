@@ -20,7 +20,9 @@ uses
   Classes,
   SysUtils,
   Math,
+  {$IFDEF DELPHI}
   UITypes,
+  {$ENDIF}
 
 
   {$IFDEF VCL}

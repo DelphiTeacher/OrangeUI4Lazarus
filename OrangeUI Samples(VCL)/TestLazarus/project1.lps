@@ -49,10 +49,24 @@
       </Unit>
       <Unit>
         <Filename Value="..\..\OrangeUIControl\Source\Base\uSkinBufferBitmap.pas"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
         <TopLine Value="136"/>
-        <CursorPos X="11" Y="164"/>
+        <CursorPos X="44" Y="152"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControl\Source\Base\uDrawPicture.pas"/>
+        <EditorIndex Value="2"/>
+        <CursorPos Y="25"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControl\Source\Base\uSkinPicture.pas"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="3"/>
+        <CursorPos X="35" Y="28"/>
         <UsageCount Value="10"/>
         <Loaded Value="True"/>
       </Unit>
