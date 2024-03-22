@@ -257,12 +257,6 @@ type
     FVertScrollBarShowType: TScrollBarShowType;
 
 
-    //水平手势管理者
-    FHorzControlGestureManager: TSkinControlGestureManager;
-    FIsRefHorzControlGestureManager: Boolean;
-    //垂直手势管理者
-    FVertControlGestureManager: TSkinControlGestureManager;
-
 
     FIsProcessGestureInScrollBox: Boolean;
 
@@ -466,6 +460,14 @@ type
                                                 var AMaxOverRangePosValue_Min:Double);virtual;
 
   public
+
+    //水平手势管理者
+    FHorzControlGestureManager: TSkinControlGestureManager;
+    FIsRefHorzControlGestureManager: Boolean;
+    //垂直手势管理者
+    FVertControlGestureManager: TSkinControlGestureManager;
+
+
     //底部空间,留给全选/全不选的CheckBox
     FClientMarginBottom:TControlSize;
     constructor Create(ASkinControl:TControl);override;
@@ -764,6 +766,8 @@ type
 //    procedure DoCustomStartDrag(var DragObject: TObject);virtual;
     procedure DoCustomDragOver(const Data: TObject; const Point: TPointF;var Accept: Boolean);virtual;
     procedure DoCustomDragDrop(ADragObject:TObject; const Point: TPointF);virtual;
+    procedure DoCustomDragEnd;virtual;
+    procedure DoCustomDragCanceled;virtual;
 
     {$IFDEF FMX}
     //拖拽
@@ -2944,6 +2948,9 @@ end;
 procedure TSkinScrollControl.DragEnd;
 begin
   Inherited;
+
+  DoCustomDragEnd;
+
   if FAutoDragScrollTimer<>nil then
   begin
     FAutoDragScrollTimer.Enabled:=False;
@@ -2980,6 +2987,16 @@ begin
 end;
 
 procedure TSkinScrollControl.DoCustomDragDrop(ADragObject:TObject; const Point: TPointF);
+begin
+
+end;
+
+procedure TSkinScrollControl.DoCustomDragCanceled;
+begin
+
+end;
+
+procedure TSkinScrollControl.DoCustomDragEnd;
 begin
 
 end;
@@ -3059,6 +3076,7 @@ end;
 procedure TSkinScrollControl.DragCanceled;
 begin
   Inherited;
+  DoCustomDragCanceled;
   if FAutoDragScrollTimer<>nil then
   begin
     FAutoDragScrollTimer.Enabled:=False;
@@ -3076,6 +3094,7 @@ end;
 procedure TSkinScrollControl.DoEndDrag(Target: TObject; X, Y: Integer);
 begin
   Inherited;
+  DoCustomDragEnd;
   if FAutoDragScrollTimer<>nil then
   begin
     FAutoDragScrollTimer.Enabled:=False;

@@ -2532,10 +2532,11 @@ initialization
   SkinControlInvalidateLocked:=0;
 
 
-//  {$IFNDEF MSWINDOWS}
+  {$IFDEF MSWINDOWS}
+  {$ELSE}
   //线的粗细设置
   IsAdjustDrawLinePos:=True;
-//  {$ENDIF}
+  {$ENDIF}
 
 
   //默认边框宽度

@@ -2882,7 +2882,7 @@ end;
 
 function TBaseSkinItems.GetUpdateCount: Integer;
 begin
-  Result:=0;
+  Result:=inherited UpdateCount;
   { TODO : 这里要处理1 }
 //  if (Self.FSkinObjectChangeManager<>nil) then
 //  begin
@@ -3821,6 +3821,9 @@ begin
   FWidth:=-1;
 
   FVisible:=True;
+
+  FItemDrawRect:=RectF(0,0,0,0);
+  FItemRect:=RectF(0,0,0,0);
 
   FTempBindDrawPictureList:=TDrawPictureList.Create;
   FItemStyleConfig:=TStringList.Create;

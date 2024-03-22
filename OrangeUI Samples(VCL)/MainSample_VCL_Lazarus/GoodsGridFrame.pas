@@ -18,8 +18,14 @@ uses
   uSkinSuperObject,
   uSkinItemJsonHelper,
 
+
   //公共素材模块
-  //EasyServiceCommonMaterialDataMoudle_VCL_Lazarus,
+  {$IFDEF FPC}
+  EasyServiceCommonMaterialDataMoudle_VCL_Lazarus,
+  {$ELSE}
+  Vcl.Imaging.jpeg,Vcl.Imaging.pngimage,
+  EasyServiceCommonMaterialDataMoudle_VCL,
+  {$ENDIF}
 
   uSkinWindowsControl, uSkinScrollControlType, uSkinCustomListType,
   uSkinVirtualGridType, uSkinItemGridType, uSkinPanelType, StdCtrls,

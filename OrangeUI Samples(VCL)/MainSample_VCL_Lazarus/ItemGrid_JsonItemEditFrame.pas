@@ -22,12 +22,14 @@ uses
   Types,
   uSkinItemDesignerPanelType,
   uComponentType,
+  uSkinRepeatImageType,
 
 
   //公共素材模块
   {$IFDEF FPC}
   EasyServiceCommonMaterialDataMoudle_VCL_Lazarus,
   {$ELSE}
+  Vcl.Imaging.pngimage,
   EasyServiceCommonMaterialDataMoudle_VCL,
   {$ENDIF}
 
@@ -43,8 +45,8 @@ type
     lblDraft: TSkinLabel;
     btnEditCell: TSkinButton;
     btnSaveCell: TSkinButton;
-    Panel1: TPanel;
-    Button1: TButton;
+    SkinItemGrid1: TSkinItemGrid;
+    imgStar: TImage;
     procedure gridDataResize(Sender: TObject);
     procedure gridDataCustomPaintCellBegin(ACanvas: TDrawCanvas;
       ARowIndex: Integer; ARow: TBaseSkinItem; ARowDrawRect: TRectF;
@@ -61,12 +63,17 @@ type
     { Private declarations }
   public
     constructor Create(AOwner:TComponent);override;
+    procedure InitColumns(AGrid:TSkinItemGrid);
+    procedure InitRows(AGrid:TSkinItemGrid);
     { Public declarations }
   end;
 
 implementation
 
 {$R *.dfm}
+
+uses
+  ItemGrid_DefaultFrame;
 
 procedure TFrameEditJsonItemGrid.gridDataClickCellItemDesignerPanelChild(
   Sender: TObject; ARow: TBaseSkinItem; AColumn: TSkinVirtualGridColumn;
@@ -180,193 +187,138 @@ begin
 
 end;
 
-constructor TFrameEditJsonItemGrid.Create(AOwner:TComponent);
+procedure TFrameEditJsonItemGrid.InitColumns(AGrid: TSkinItemGrid);
 var
-  I:Integer;
-  AOrderJson:ISuperObject;
-  AOrderJsonArray:ISuperArray;
-  ARow:TSkinJsonItemGridRow;
   AColumn:TSkinItemGridColumn;
 begin
-
-  Inherited;
-
-
-  //不允许鼠标按下拖动
-//  Self.gridData.Prop.VertControlGestureManager.FIsEnableMouseDragScroll:=False;
-//  Self.gridData.Prop.HorzControlGestureManager.FIsEnableMouseDragScroll:=False;
-
-
-
-
-
   //Create Columns
-  Self.gridData.Prop.Columns.BeginUpdate;
+  AGrid.Prop.Columns.BeginUpdate;
+  AGrid.Prop.Items.BeginUpdate;
   try
-//    Self.gridData.Prop.Columns.Clear;
-//
-//    AColumn:=Self.gridData.Prop.Columns.Add;
-//    AColumn.BindItemFieldName:='orderno';
-//    AColumn.Caption:='Order_no';
-//    AColumn.Width:=0.65;
-//
-//
-//    AColumn:=Self.gridData.Prop.Columns.Add;
-//    AColumn.BindItemFieldName:='price';
-//    AColumn.Caption:='Price';
-//    AColumn.Width:=0.20;
+    AGrid.Prop.Columns.Clear;
+
+    AColumn:=AGrid.Prop.Columns.Add;
+    AColumn.BindItemFieldName:='id';
+    AColumn.Caption:='ID';
+    AColumn.Width:=100;
+
+
+    AColumn:=AGrid.Prop.Columns.Add;
+    AColumn.BindItemFieldName:='date';
+    AColumn.Caption:='Date';
+    AColumn.Width:=150;
+
+
+    AColumn:=AGrid.Prop.Columns.Add;
+    AColumn.BindItemFieldName:='author';
+    AColumn.Caption:='Author';
+    AColumn.Width:=100;
+
+
+    AColumn:=AGrid.Prop.Columns.Add;
+    AColumn.BindItemFieldName:='ItemDetail2';
+    AColumn.Caption:='Importance';
+    AColumn.Width:=100;
+    AColumn.ControlType:='RepeatImage';
+    TSkinRepeatImage(AColumn.FSkinControl).Prop.Picture.Assign(imgStar.Picture);
 
 
 
 
     //make column status to Label
-    AColumn:=Self.gridData.Prop.Columns.Find('status');
-    if AColumn<>nil then
-    begin
-      AColumn.BindItemFieldName:='status';
-      AColumn.Caption:='Status';
-      AColumn.Width:=100;
-      //create AColumn.FSkinControl as TSkinLabel
-      AColumn.ControlType:='Label';
-  //    TSkinLabelMaterial(AColumn.FSkinControlIntf.GetSelfOwnMaterial).BackColor.BorderWidth:=1;
-      TSkinLabel(AColumn.FSkinControl).Material.BackColor.BorderColor.Color:=$66CE13;
-      TSkinLabel(AColumn.FSkinControl).Material.BackColor.BorderWidth:=1;
-      TSkinLabel(AColumn.FSkinControl).Material.BackColor.IsRound:=True;
-      TSkinLabel(AColumn.FSkinControl).Material.BackColor.RoundWidth:=4;
-      TSkinLabel(AColumn.FSkinControl).Material.BackColor.RoundHeight:=4;
-      TSkinLabel(AColumn.FSkinControl).Material.BackColor.IsFill:=True;
-      TSkinLabel(AColumn.FSkinControl).Material.BackColor.FillColor.Color:=$F0FAE7;
+    AColumn:=AGrid.Prop.Columns.Add;
+    AColumn.BindItemFieldName:='status';
+    AColumn.Caption:='Status';
+    AColumn.Width:=100;
+    //create AColumn.FSkinControl as TSkinLabel
+    AColumn.ControlType:='Label';
+//    TSkinLabelMaterial(AColumn.FSkinControlIntf.GetSelfOwnMaterial).BackColor.BorderWidth:=1;
+    TSkinLabel(AColumn.FSkinControl).Material.BackColor.BorderColor.Color:=$66CE13;
+    TSkinLabel(AColumn.FSkinControl).Material.BackColor.BorderWidth:=1;
+    TSkinLabel(AColumn.FSkinControl).Material.BackColor.IsRound:=True;
+    TSkinLabel(AColumn.FSkinControl).Material.BackColor.RoundWidth:=4;
+    TSkinLabel(AColumn.FSkinControl).Material.BackColor.RoundHeight:=4;
+    TSkinLabel(AColumn.FSkinControl).Material.BackColor.IsFill:=True;
+    TSkinLabel(AColumn.FSkinControl).Material.BackColor.FillColor.Color:=$F0FAE7;
 
-      TSkinLabel(AColumn.FSkinControl).Material.DrawCaptionParam.FontVertAlign:=fvaCenter;
-      TSkinLabel(AColumn.FSkinControl).Material.DrawCaptionParam.FontHorzAlign:=fhaCenter;
-      TSkinLabel(AColumn.FSkinControl).Material.DrawCaptionParam.FontColor:=$66CE13;
+    TSkinLabel(AColumn.FSkinControl).Material.DrawCaptionParam.FontVertAlign:=fvaCenter;
+    TSkinLabel(AColumn.FSkinControl).Material.DrawCaptionParam.FontHorzAlign:=fhaCenter;
+    TSkinLabel(AColumn.FSkinControl).Material.DrawCaptionParam.FontColor:=$66CE13;
 
-      {$IFDEF FPC}
-      //AColumn.FSkinControl.Margins.SetBounds(20,10,20,10);
-      AColumn.FSkinControl.BorderSpacing.Left:=20;
-      AColumn.FSkinControl.BorderSpacing.Top:=10;
-      AColumn.FSkinControl.BorderSpacing.Right:=20;
-      AColumn.FSkinControl.BorderSpacing.Bottom:=10;
-      {$ELSE}
-      AColumn.FSkinControl.AlignWithMargins:=True;
-      AColumn.FSkinControl.Margins.SetBounds(20,10,20,10);
-      {$ENDIF}
-    end;
+    {$IFDEF FPC}
+    //AColumn.FSkinControl.Margins.SetBounds(20,10,20,10);
+    AColumn.FSkinControl.BorderSpacing.Left:=20;
+    AColumn.FSkinControl.BorderSpacing.Top:=10;
+    AColumn.FSkinControl.BorderSpacing.Right:=20;
+    AColumn.FSkinControl.BorderSpacing.Bottom:=10;
+    {$ELSE}
+    AColumn.FSkinControl.AlignWithMargins:=True;
+    AColumn.FSkinControl.Margins.SetBounds(20,10,20,10);
+    {$ENDIF}
 
 
     //自定义标题列的字体对齐
     //set column title text align to left
-    AColumn:=Self.gridData.Prop.Columns.Find('title');
-    if AColumn<>nil then
-    begin
-      AColumn.IsUseDefaultGridColumnMaterial:=False;
-      AColumn.IsUseDefaultGridColumnCaptionParam:=False;
+    AColumn:=AGrid.Prop.Columns.Add;
+    AColumn.BindItemFieldName:='title';
+    AColumn.Caption:='Title';
+    AColumn.Width:=300;
 
-      AColumn.Material.DrawItemBackColorParam.IsFill:=False;
-      AColumn.Material.DrawItemBackColorParam.BorderWidth:=1;
-      AColumn.Material.DrawItemBackColorParam.BorderColor.Color:=$EDEDED;
+    AColumn.IsUseDefaultGridColumnMaterial:=False;
+    AColumn.IsUseDefaultGridColumnCaptionParam:=False;
 
-      AColumn.Material.DrawCaptionParam.DrawRectSetting.Enabled:=True;
-      AColumn.Material.DrawCaptionParam.DrawRectSetting.Left:=10;
-      AColumn.Material.DrawCaptionParam.FontVertAlign:=fvaCenter;
-      AColumn.Material.DrawCaptionParam.FontSize:=12;
+    AColumn.Material.DrawItemBackColorParam.IsFill:=False;
+    AColumn.Material.DrawItemBackColorParam.BorderWidth:=1;
+    AColumn.Material.DrawItemBackColorParam.BorderColor.Color:=$EDEDED;
 
-      AColumn.Material.DrawCellTextParam.DrawRectSetting.Enabled:=True;
-      AColumn.Material.DrawCellTextParam.DrawRectSetting.Left:=10;
-      AColumn.Material.DrawCellTextParam.FontVertAlign:=fvaCenter;
-      AColumn.Material.DrawCellTextParam.FontSize:=12;
-    end;
+    AColumn.Material.DrawCaptionParam.DrawRectSetting.Enabled:=True;
+    AColumn.Material.DrawCaptionParam.DrawRectSetting.Left:=10;
+    AColumn.Material.DrawCaptionParam.FontVertAlign:=fvaCenter;
+    AColumn.Material.DrawCaptionParam.FontSize:=12;
+
+    AColumn.Material.DrawCellTextParam.DrawRectSetting.Enabled:=True;
+    AColumn.Material.DrawCellTextParam.DrawRectSetting.Left:=10;
+    AColumn.Material.DrawCellTextParam.FontVertAlign:=fvaCenter;
+    AColumn.Material.DrawCellTextParam.FontSize:=12;
+
 
 
     //自定义操作列的控件类型为Button
-    AColumn:=TSkinItemGridColumn(Self.gridData.Prop.Columns.FindByCaption('Action'));
-    if AColumn<>nil then
-    begin
-      //create AColumn.FSkinControl as TSkinButton
-      AColumn.ControlType:='Button';
-      TSkinButton(AColumn.FSkinControl).Caption:='Edit';
-      {$IFDEF FPC}
-      //AColumn.FSkinControl.Margins.SetBounds(20,10,20,10);
-      AColumn.FSkinControl.BorderSpacing.Left:=20;
-      AColumn.FSkinControl.BorderSpacing.Top:=10;
-      AColumn.FSkinControl.BorderSpacing.Right:=20;
-      AColumn.FSkinControl.BorderSpacing.Bottom:=10;
-      {$ELSE}
-      AColumn.FSkinControl.AlignWithMargins:=True;
-      AColumn.FSkinControl.Margins.SetBounds(20,10,20,10);
-      {$ENDIF}
-    end;
+    AColumn:=AGrid.Prop.Columns.Add;
+    AColumn.BindItemFieldName:='';
+    AColumn.Caption:='Action';
+    //create AColumn.FSkinControl as TSkinButton
+    AColumn.ControlType:='Button';
+    TSkinButton(AColumn.FSkinControl).Caption:='Edit';
+    TSkinButton(AColumn.FSkinControl).RefMaterial:=dmEasyServiceCommonMaterial.btnSkinThemeColorMaterial;
+    {$IFDEF FPC}
+    //AColumn.FSkinControl.Margins.SetBounds(20,10,20,10);
+    AColumn.FSkinControl.BorderSpacing.Left:=20;
+    AColumn.FSkinControl.BorderSpacing.Top:=10;
+    AColumn.FSkinControl.BorderSpacing.Right:=20;
+    AColumn.FSkinControl.BorderSpacing.Bottom:=10;
+    {$ELSE}
+    AColumn.FSkinControl.AlignWithMargins:=True;
+    AColumn.FSkinControl.Margins.SetBounds(20,10,20,10);
+    {$ENDIF}
 
 
 
   finally
-    Self.gridData.Prop.Columns.EndUpdate;
+    AGrid.Prop.Columns.EndUpdate;
+    AGrid.Prop.Items.EndUpdate;
   end;
 
 
-  //init column header caption style
-//  Self.gridData.Material.DrawColumnMaterial.DrawCaptionParam.FontSize:=16;
-//  Self.gridData.Material.DrawColumnMaterial.DrawCaptionParam.FontStyle:=[fsBold];
-//  Self.gridData.Material.DrawColumnMaterial.DrawCaptionParam.FontVertAlign:=fvaCenter;
-//  Self.gridData.Material.DrawColumnMaterial.DrawCaptionParam.DrawRectSetting.Enabled:=True;
-//  Self.gridData.Material.DrawColumnMaterial.DrawCaptionParam.DrawRectSetting.SizeType:=TDPSizeType.dpstPixel;
-//  Self.gridData.Material.DrawColumnMaterial.DrawCaptionParam.DrawRectSetting.Left:=10;
+end;
 
-  Self.gridData.Prop.ColumnsHeaderHeight:=50;
-  Self.gridData.Prop.ItemHeight:=50;
-
-
-  //表头有分隔线
-  //has column header devide line
-  Self.gridData.ColumnHeader.Material.DrawItemDevideParam.IsFill:=True;
-
-//  Self.gridData.ColumnHeader.Material.BackColor.BorderWidth:=1;
-////  Self.gridData.ColumnHeader.Material.BackColor.BorderEadges:=[TDRPBorderEadge.beBottom];
-//  Self.gridData.ColumnHeader.Material.BackColor.BorderColor.Color:=$EDEDED;
-//  Self.gridData.ColumnHeader.Material.BackColor.FillColor.Color:=$EDEDED;
-
-  //表头不填充背景色
-  //Column header no fill
-  Self.gridData.Material.DrawColumnMaterial.DrawItemBackColorParam.BorderWidth:=1;
-  Self.gridData.Material.DrawColumnMaterial.DrawItemBackColorParam.BorderColor.Color:=$EDEDED;
-  Self.gridData.Material.DrawColumnMaterial.DrawItemBackColorParam.IsFill:=False;
-
-
-//  Self.gridData.ColumnHeader.Material.DrawItemBackColorParam.IsFill:=False;
-//
-//  Self.gridData.ColumnHeader.Material.DrawItemCaptionParam.FontColor:=clGray;
-//  Self.gridData.ColumnHeader.Material.DrawItemCaptionParam.FontSize:=11;
-//  Self.gridData.ColumnHeader.Material.DrawItemCaptionParam.FontStyle:=[fsBold];
-//  Self.gridData.ColumnHeader.Material.DrawItemCaptionParam.FontVertAlign:=fvaCenter;
-//  Self.gridData.ColumnHeader.Material.DrawItemCaptionParam.DrawRectSetting.Enabled:=True;
-//  Self.gridData.ColumnHeader.Material.DrawItemCaptionParam.DrawRectSetting.SizeType:=TDPSizeType.dpstPixel;
-//  Self.gridData.ColumnHeader.Material.DrawItemCaptionParam.DrawRectSetting.Left:=10;
-
-
-
-
-//  Self.gridData.Material.IsSimpleDrawGroupBeginDevide:=True;
-//  Self.gridData.Material.DrawGroupBeginDevideParam.IsFill:=True;
-
-  //no col line
-//  Self.gridData.Material.DrawGridCellDevideMaterial.IsDrawColLine:=False;
-
-
-  //Grid devide line
-  //表格有分隔线
-  Self.gridData.Material.DrawGridCellDevideMaterial.DrawRowLineParam.PenDrawColor.Color:=$EDEDED;
-  Self.gridData.Material.DrawGridCellDevideMaterial.DrawColLineParam.PenDrawColor.Color:=$EDEDED;
-  Self.gridData.Material.DrawGridCellDevideMaterial.IsDrawColEndLine:=True;
-
-
-  //单元格内容水平居中
-//  Self.gridData.Material.DrawColumnMaterial.DrawCellTextParam.IsFill:=False;
-
-
-
-  Self.gridData.VertScrollBar.Material.IsTransparent:=True;
-  Self.gridData.VertScrollBar.Material.BackColor.IsFill:=False;
-
+procedure TFrameEditJsonItemGrid.InitRows(AGrid: TSkinItemGrid);
+var
+  I:Integer;
+  AOrderJson:ISuperObject;
+  AOrderJsonArray:ISuperArray;
+  ARow:TSkinJsonItemGridRow;
+begin
 
   //init data
   AOrderJsonArray:=SA();
@@ -400,63 +352,33 @@ begin
 
 
 
-//  AOrderJson:=SO();
-//  AOrderJson.S['orderno']:='332850CE-D5D0-DF39-e22C-aFEb41';
-//  AOrderJson.F['price']:=1698.3;
-//  AOrderJson.S['status']:='pending';
-//  AOrderJsonArray.O[AOrderJsonArray.Length]:=AOrderJson;
-//
-//  AOrderJson:=SO();
-//  AOrderJson.S['orderno']:='6DAD8f58-683F-aa47-a3de-BBcacC';
-//  AOrderJson.F['price']:=9512;
-//  AOrderJson.S['status']:='pending';
-//  AOrderJsonArray.O[AOrderJsonArray.Length]:=AOrderJson;
-//
-//  AOrderJson:=SO();
-//  AOrderJson.S['orderno']:='eBAB4Ce5-36AF-7feB-9fcf-f5ccbc';
-//  AOrderJson.F['price']:=11078.4;
-//  AOrderJson.S['status']:='pending';
-//  AOrderJsonArray.O[AOrderJsonArray.Length]:=AOrderJson;
-//
-//  AOrderJson:=SO();
-//  AOrderJson.S['orderno']:='eCcc5B4E-DB21-5D7A-c425-4E139F';
-//  AOrderJson.F['price']:=4810.4;
-//  AOrderJson.S['status']:='success';
-//  AOrderJsonArray.O[AOrderJsonArray.Length]:=AOrderJson;
-//
-//  AOrderJson:=SO();
-//  AOrderJson.S['orderno']:='F2fcEC5B-9f53-61BA-42F6-187463';
-//  AOrderJson.F['price']:=8686.42;
-//  AOrderJson.S['status']:='pending';
-//  AOrderJsonArray.O[AOrderJsonArray.Length]:=AOrderJson;
-//
-//  AOrderJson:=SO();
-//  AOrderJson.S['orderno']:='2Dea2c4D-C4AD-6Dbd-B18F-b26BdD';
-//  AOrderJson.F['price']:=1341.7;
-//  AOrderJson.S['status']:='success';
-//  AOrderJsonArray.O[AOrderJsonArray.Length]:=AOrderJson;
-//
-//  AOrderJson:=SO();
-//  AOrderJson.S['orderno']:='eF23fF9e-eE70-87fC-1d07-c643b5';
-//  AOrderJson.F['price']:=14215;
-//  AOrderJson.S['status']:='success';
-//  AOrderJsonArray.O[AOrderJsonArray.Length]:=AOrderJson;
 
-
-
-  Self.gridData.Prop.Items.BeginUpdate;
+  AGrid.Prop.Items.BeginUpdate;
   try
-    Self.gridData.Prop.Items.Clear;
+    AGrid.Prop.Items.Clear;
     for I:=0 to AOrderJsonArray.Length-1 do
     begin
-      ARow:=TSkinJsonItemGridRow.Create(Self.gridData.Prop.Items);
+      ARow:=TSkinJsonItemGridRow.Create(AGrid.Prop.Items);
       ARow.Json:=AOrderJsonArray.O[I];
     end;
 
   finally
-    Self.gridData.Prop.Items.EndUpdate;
+    AGrid.Prop.Items.EndUpdate;
   end;
 
+
+end;
+
+constructor TFrameEditJsonItemGrid.Create(AOwner:TComponent);
+begin
+
+  Inherited;
+
+  InitRows(gridData);
+
+  InitGridMaterial(SkinItemGrid1);
+  InitColumns(SkinItemGrid1);
+  InitRows(SkinItemGrid1);
 
 end;
 

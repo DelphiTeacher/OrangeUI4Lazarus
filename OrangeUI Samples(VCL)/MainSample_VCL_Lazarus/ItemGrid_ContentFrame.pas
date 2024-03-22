@@ -39,12 +39,14 @@ uses
   uManager,
   uRestInterfaceCall,
   uOpenClientCommon,
+  uSkinRepeatImageType,
 
 
   //公共素材模块
   {$IFDEF FPC}
   EasyServiceCommonMaterialDataMoudle_VCL_Lazarus,
   {$ELSE}
+  Vcl.Imaging.jpeg,Vcl.Imaging.pngimage,
   EasyServiceCommonMaterialDataMoudle_VCL,
   {$ENDIF}
 
@@ -71,6 +73,8 @@ type
     idpAction: TSkinItemDesignerPanel;
     btnEditRow: TSkinButton;
     btnDeleteRow: TSkinButton;
+    SkinItemGrid1: TSkinItemGrid;
+    imgStar: TImage;
     procedure gridDataResize(Sender: TObject);
     procedure gridDataCustomPaintCellBegin(ACanvas: TDrawCanvas;
       ARowIndex: Integer; ARow: TBaseSkinItem; ARowDrawRect: TRectF;
@@ -94,12 +98,19 @@ type
     procedure DoGridSwitchPageFrameLoadData(Sender:Tobject;APageIndex:Integer;APageSize:Integer);
   public
     constructor Create(AOwner:TComponent);override;
+
+    procedure InitColumns(AGrid:TSkinItemGrid);
+    procedure InitRows(AGrid:TSkinItemGrid);
     { Public declarations }
   end;
 
 implementation
 
 {$R *.dfm}
+
+uses
+  ItemGrid_DefaultFrame;
+
 
 procedure TFrameContentItemGrid.DoGridSwitchPageFrameLoadData(Sender: Tobject;
   APageIndex, APageSize: Integer);
@@ -218,6 +229,208 @@ begin
 //  //如果表格列是按比例的,那么每次拖动尺寸,都要重新计算
 //  Self.gridData.Prop.Columns.GetListLayoutsManager.DoItemSizeChange(nil);
   Self.gridData.Prop.SetColumnsAutoFitControlWidth;
+
+end;
+
+procedure TFrameContentItemGrid.InitColumns(AGrid: TSkinItemGrid);
+var
+  AColumn:TSkinItemGridColumn;
+begin
+  //Create Columns
+  AGrid.Prop.Columns.BeginUpdate;
+  AGrid.Prop.Items.BeginUpdate;
+  try
+    AGrid.Prop.Columns.Clear;
+
+    AColumn:=AGrid.Prop.Columns.Add;
+    AColumn.BindItemFieldName:='fid';
+    AColumn.Caption:='ID';
+    AColumn.Width:=100;
+
+
+    AColumn:=AGrid.Prop.Columns.Add;
+    AColumn.BindItemFieldName:='createtime';
+    AColumn.Caption:='Date';
+    AColumn.Width:=180;
+
+
+    //自定义标题列的字体对齐
+    //set column title text align to left
+    AColumn:=AGrid.Prop.Columns.Add;
+    AColumn.BindItemFieldName:='content';
+    AColumn.Caption:='Title';
+    AColumn.Width:=300;
+
+    AColumn.IsUseDefaultGridColumnMaterial:=False;
+    AColumn.IsUseDefaultGridColumnCaptionParam:=False;
+
+    AColumn.Material.DrawItemBackColorParam.IsFill:=False;
+    AColumn.Material.DrawItemBackColorParam.BorderWidth:=1;
+    AColumn.Material.DrawItemBackColorParam.BorderColor.Color:=$EDEDED;
+
+    AColumn.Material.DrawCaptionParam.DrawRectSetting.Enabled:=True;
+    AColumn.Material.DrawCaptionParam.DrawRectSetting.Left:=10;
+    AColumn.Material.DrawCaptionParam.FontVertAlign:=fvaCenter;
+    AColumn.Material.DrawCaptionParam.FontSize:=12;
+
+    AColumn.Material.DrawCellTextParam.DrawRectSetting.Enabled:=True;
+    AColumn.Material.DrawCellTextParam.DrawRectSetting.Left:=10;
+    AColumn.Material.DrawCellTextParam.FontVertAlign:=fvaCenter;
+    AColumn.Material.DrawCellTextParam.FontSize:=12;
+
+
+
+    AColumn:=AGrid.Prop.Columns.Add;
+    AColumn.BindItemFieldName:='user_name';
+    AColumn.Caption:='Author';
+    AColumn.Width:=150;
+
+
+    AColumn:=AGrid.Prop.Columns.Add;
+    AColumn.BindItemFieldName:='importance';
+    AColumn.Caption:='Importance';
+    AColumn.Width:=100;
+    AColumn.ControlType:='RepeatImage';
+    TSkinRepeatImage(AColumn.FSkinControl).Prop.Picture.Assign(imgStar.Picture);
+
+
+    AColumn:=AGrid.Prop.Columns.Add;
+    AColumn.BindItemFieldName:='read_count';
+    AColumn.Caption:='ReadCount';
+    AColumn.Width:=100;
+
+
+//    AColumn:=AGrid.Prop.Columns.Add;
+//    AColumn.BindItemFieldName:='status';
+//    AColumn.Caption:='Status';
+//    AColumn.Width:=100;
+
+
+
+
+//    //make column status to Label
+//    AColumn:=AGrid.Prop.Columns.Add;
+//    AColumn.BindItemFieldName:='status';
+//    AColumn.Caption:='Status';
+//    AColumn.Width:=100;
+//    //create AColumn.FSkinControl as TSkinLabel
+//    AColumn.ControlType:='Label';
+////    TSkinLabelMaterial(AColumn.FSkinControlIntf.GetSelfOwnMaterial).BackColor.BorderWidth:=1;
+//    TSkinLabel(AColumn.FSkinControl).Material.BackColor.BorderColor.Color:=$66CE13;
+//    TSkinLabel(AColumn.FSkinControl).Material.BackColor.BorderWidth:=1;
+//    TSkinLabel(AColumn.FSkinControl).Material.BackColor.IsRound:=True;
+//    TSkinLabel(AColumn.FSkinControl).Material.BackColor.RoundWidth:=4;
+//    TSkinLabel(AColumn.FSkinControl).Material.BackColor.RoundHeight:=4;
+//    TSkinLabel(AColumn.FSkinControl).Material.BackColor.IsFill:=True;
+//    TSkinLabel(AColumn.FSkinControl).Material.BackColor.FillColor.Color:=$F0FAE7;
+//
+//    TSkinLabel(AColumn.FSkinControl).Material.DrawCaptionParam.FontVertAlign:=fvaCenter;
+//    TSkinLabel(AColumn.FSkinControl).Material.DrawCaptionParam.FontHorzAlign:=fhaCenter;
+//    TSkinLabel(AColumn.FSkinControl).Material.DrawCaptionParam.FontColor:=$66CE13;
+//
+//    {$IFDEF FPC}
+//    //AColumn.FSkinControl.Margins.SetBounds(20,10,20,10);
+//    AColumn.FSkinControl.BorderSpacing.Left:=20;
+//    AColumn.FSkinControl.BorderSpacing.Top:=10;
+//    AColumn.FSkinControl.BorderSpacing.Right:=20;
+//    AColumn.FSkinControl.BorderSpacing.Bottom:=10;
+//    {$ELSE}
+//    AColumn.FSkinControl.AlignWithMargins:=True;
+//    AColumn.FSkinControl.Margins.SetBounds(20,10,20,10);
+//    {$ENDIF}
+
+
+
+    //自定义操作列的控件类型为Button
+    AColumn:=AGrid.Prop.Columns.Add;
+    AColumn.BindItemFieldName:='';
+    AColumn.Caption:='Action';
+    AColumn.ItemDesignerPanel:=idpAction;
+    AColumn.Width:=160;
+//    //create AColumn.FSkinControl as TSkinButton
+//    AColumn.ControlType:='Button';
+//    TSkinButton(AColumn.FSkinControl).Caption:='Edit';
+//    TSkinButton(AColumn.FSkinControl).RefMaterial:=dmEasyServiceCommonMaterial.btnSkinThemeColorMaterial;
+//    {$IFDEF FPC}
+//    //AColumn.FSkinControl.Margins.SetBounds(20,10,20,10);
+//    AColumn.FSkinControl.BorderSpacing.Left:=20;
+//    AColumn.FSkinControl.BorderSpacing.Top:=10;
+//    AColumn.FSkinControl.BorderSpacing.Right:=20;
+//    AColumn.FSkinControl.BorderSpacing.Bottom:=10;
+//    {$ELSE}
+//    AColumn.FSkinControl.AlignWithMargins:=True;
+//    AColumn.FSkinControl.Margins.SetBounds(20,10,20,10);
+//    {$ENDIF}
+
+
+
+  finally
+    AGrid.Prop.Columns.EndUpdate;
+    AGrid.Prop.Items.EndUpdate;
+  end;
+
+
+
+end;
+
+procedure TFrameContentItemGrid.InitRows(AGrid: TSkinItemGrid);
+var
+  I:Integer;
+  AOrderJson:ISuperObject;
+  AOrderJsonArray:ISuperArray;
+  ARow:TSkinJsonItemGridRow;
+begin
+
+  //init data
+  AOrderJsonArray:=SA();
+
+  AOrderJson:=SO();
+  AOrderJson.I['fid']:=1;
+  AOrderJson.S['createtime']:='2023-02-27 10:40:51';
+  AOrderJson.S['content']:='Who is your best friend?';
+  AOrderJson.S['user_name']:='Jennifer';
+  AOrderJson.I['importance']:=1;
+  AOrderJson.I['read_count']:=27;
+  AOrderJson.S['status']:='draft';
+  AOrderJsonArray.O[AOrderJsonArray.Length]:=AOrderJson;
+
+  AOrderJson:=SO();
+  AOrderJson.I['fid']:=2;
+  AOrderJson.S['createtime']:='2012-01-04 16:29';
+  AOrderJson.S['content']:='Merry christmas!!!';
+  AOrderJson.S['user_name']:='Brenda';
+  AOrderJson.I['importance']:=3;
+  AOrderJson.I['read_count']:=2;
+  AOrderJson.S['status']:='draft';
+  AOrderJsonArray.O[AOrderJsonArray.Length]:=AOrderJson;
+
+  AOrderJson:=SO();
+  AOrderJson.I['fid']:=3;
+  AOrderJson.S['createtime']:='2001-07-18 01:54';
+  AOrderJson.S['content']:='Today is rainning.';
+  AOrderJson.S['author']:='Steven';
+  AOrderJson.I['importance']:=2;
+  AOrderJson.I['read_count']:=5;
+  AOrderJson.S['status']:='published';
+  AOrderJsonArray.O[AOrderJsonArray.Length]:=AOrderJson;
+
+
+
+
+  AGrid.Prop.Items.BeginUpdate;
+  try
+    AGrid.Prop.Items.Clear;
+    for I:=0 to AOrderJsonArray.Length-1 do
+    begin
+      ARow:=TSkinJsonItemGridRow.Create(AGrid.Prop.Items);
+      ARow.Json:=AOrderJsonArray.O[I];
+    end;
+
+  finally
+    AGrid.Prop.Items.EndUpdate;
+  end;
+
+
 
 end;
 
@@ -519,73 +732,9 @@ begin
 
 
 
-
-
-
-
-
-  //init column header caption style
-//  Self.gridData.Material.DrawColumnMaterial.DrawCaptionParam.FontSize:=16;
-//  Self.gridData.Material.DrawColumnMaterial.DrawCaptionParam.FontStyle:=[fsBold];
-//  Self.gridData.Material.DrawColumnMaterial.DrawCaptionParam.FontVertAlign:=fvaCenter;
-//  Self.gridData.Material.DrawColumnMaterial.DrawCaptionParam.DrawRectSetting.Enabled:=True;
-//  Self.gridData.Material.DrawColumnMaterial.DrawCaptionParam.DrawRectSetting.SizeType:=TDPSizeType.dpstPixel;
-//  Self.gridData.Material.DrawColumnMaterial.DrawCaptionParam.DrawRectSetting.Left:=10;
-
-  Self.gridData.Prop.ColumnsHeaderHeight:=50;
-  Self.gridData.Prop.ItemHeight:=50;
-
-
-  //表头有分隔线
-  //has column header devide line
-  Self.gridData.ColumnHeader.Material.DrawItemDevideParam.IsFill:=True;
-
-//  Self.gridData.ColumnHeader.Material.BackColor.BorderWidth:=1;
-////  Self.gridData.ColumnHeader.Material.BackColor.BorderEadges:=[TDRPBorderEadge.beBottom];
-//  Self.gridData.ColumnHeader.Material.BackColor.BorderColor.Color:=$EDEDED;
-//  Self.gridData.ColumnHeader.Material.BackColor.FillColor.Color:=$EDEDED;
-
-  //表头不填充背景色
-  //Column header no fill
-  Self.gridData.Material.DrawColumnMaterial.DrawItemBackColorParam.BorderWidth:=1;
-  Self.gridData.Material.DrawColumnMaterial.DrawItemBackColorParam.BorderColor.Color:=$EDEDED;
-  Self.gridData.Material.DrawColumnMaterial.DrawItemBackColorParam.IsFill:=False;
-
-
-//  Self.gridData.ColumnHeader.Material.DrawItemBackColorParam.IsFill:=False;
-//
-//  Self.gridData.ColumnHeader.Material.DrawItemCaptionParam.FontColor:=clGray;
-//  Self.gridData.ColumnHeader.Material.DrawItemCaptionParam.FontSize:=11;
-//  Self.gridData.ColumnHeader.Material.DrawItemCaptionParam.FontStyle:=[fsBold];
-//  Self.gridData.ColumnHeader.Material.DrawItemCaptionParam.FontVertAlign:=fvaCenter;
-//  Self.gridData.ColumnHeader.Material.DrawItemCaptionParam.DrawRectSetting.Enabled:=True;
-//  Self.gridData.ColumnHeader.Material.DrawItemCaptionParam.DrawRectSetting.SizeType:=TDPSizeType.dpstPixel;
-//  Self.gridData.ColumnHeader.Material.DrawItemCaptionParam.DrawRectSetting.Left:=10;
-
-
-
-
-//  Self.gridData.Material.IsSimpleDrawGroupBeginDevide:=True;
-//  Self.gridData.Material.DrawGroupBeginDevideParam.IsFill:=True;
-
-  //no col line
-//  Self.gridData.Material.DrawGridCellDevideMaterial.IsDrawColLine:=False;
-
-
-  //Grid devide line
-  //表格有分隔线
-  Self.gridData.Material.DrawGridCellDevideMaterial.DrawRowLineParam.PenDrawColor.Color:=$EDEDED;
-  Self.gridData.Material.DrawGridCellDevideMaterial.DrawColLineParam.PenDrawColor.Color:=$EDEDED;
-  Self.gridData.Material.DrawGridCellDevideMaterial.IsDrawColEndLine:=True;
-
-
-  //单元格内容水平居中
-//  Self.gridData.Material.DrawColumnMaterial.DrawCellTextParam.IsFill:=False;
-
-
-
-  Self.gridData.VertScrollBar.Material.IsTransparent:=True;
-  Self.gridData.VertScrollBar.Material.BackColor.IsFill:=False;
+  InitGridMaterial(SkinItemGrid1);
+  InitColumns(SkinItemGrid1);
+  InitRows(SkinItemGrid1);
 
 
 
@@ -593,118 +742,6 @@ begin
 
 
 
-
-
-//  //不允许鼠标按下拖动
-////  Self.gridData.Prop.VertControlGestureManager.FIsEnableMouseDragScroll:=False;
-////  Self.gridData.Prop.HorzControlGestureManager.FIsEnableMouseDragScroll:=False;
-//
-//
-//
-//
-//
-//  //Create Columns
-//  Self.gridData.Prop.Columns.BeginUpdate;
-//  try
-////    Self.gridData.Prop.Columns.Clear;
-////
-////    AColumn:=Self.gridData.Prop.Columns.Add;
-////    AColumn.BindItemFieldName:='orderno';
-////    AColumn.Caption:='Order_no';
-////    AColumn.Width:=0.65;
-////
-////
-////    AColumn:=Self.gridData.Prop.Columns.Add;
-////    AColumn.BindItemFieldName:='price';
-////    AColumn.Caption:='Price';
-////    AColumn.Width:=0.20;
-//
-//
-//
-//
-//    //make column status to Label
-//    AColumn:=Self.gridData.Prop.Columns.Find('status');
-//    if AColumn<>nil then
-//    begin
-//      AColumn.BindItemFieldName:='status';
-//      AColumn.Caption:='Status';
-//      AColumn.Width:=100;
-//      //create AColumn.FSkinControl as TSkinLabel
-//      AColumn.ControlType:='Label';
-//  //    TSkinLabelMaterial(AColumn.FSkinControlIntf.GetSelfOwnMaterial).BackColor.BorderWidth:=1;
-//      TSkinLabel(AColumn.FSkinControl).Material.BackColor.BorderColor.Color:=$66CE13;
-//      TSkinLabel(AColumn.FSkinControl).Material.BackColor.BorderWidth:=1;
-//      TSkinLabel(AColumn.FSkinControl).Material.BackColor.IsRound:=True;
-//      TSkinLabel(AColumn.FSkinControl).Material.BackColor.RoundWidth:=4;
-//      TSkinLabel(AColumn.FSkinControl).Material.BackColor.RoundHeight:=4;
-//      TSkinLabel(AColumn.FSkinControl).Material.BackColor.IsFill:=True;
-//      TSkinLabel(AColumn.FSkinControl).Material.BackColor.FillColor.Color:=$F0FAE7;
-//
-//      TSkinLabel(AColumn.FSkinControl).Material.DrawCaptionParam.FontVertAlign:=fvaCenter;
-//      TSkinLabel(AColumn.FSkinControl).Material.DrawCaptionParam.FontHorzAlign:=fhaCenter;
-//      TSkinLabel(AColumn.FSkinControl).Material.DrawCaptionParam.FontColor:=$66CE13;
-//
-//      {$IFDEF FPC}
-//      //AColumn.FSkinControl.Margins.SetBounds(20,10,20,10);
-//      AColumn.FSkinControl.BorderSpacing.Left:=20;
-//      AColumn.FSkinControl.BorderSpacing.Top:=10;
-//      AColumn.FSkinControl.BorderSpacing.Right:=20;
-//      AColumn.FSkinControl.BorderSpacing.Bottom:=10;
-//      {$ELSE}
-//      AColumn.FSkinControl.AlignWithMargins:=True;
-//      AColumn.FSkinControl.Margins.SetBounds(20,10,20,10);
-//      {$ENDIF}
-//    end;
-//
-//
-//    //自定义标题列的字体对齐
-//    //set column title text align to left
-//    AColumn:=Self.gridData.Prop.Columns.Find('title');
-//    if AColumn<>nil then
-//    begin
-//      AColumn.IsUseDefaultGridColumnMaterial:=False;
-//      AColumn.IsUseDefaultGridColumnCaptionParam:=False;
-//
-//      AColumn.Material.DrawItemBackColorParam.IsFill:=False;
-//      AColumn.Material.DrawItemBackColorParam.BorderWidth:=1;
-//      AColumn.Material.DrawItemBackColorParam.BorderColor.Color:=$EDEDED;
-//
-//      AColumn.Material.DrawCaptionParam.DrawRectSetting.Enabled:=True;
-//      AColumn.Material.DrawCaptionParam.DrawRectSetting.Left:=10;
-//      AColumn.Material.DrawCaptionParam.FontVertAlign:=fvaCenter;
-//      AColumn.Material.DrawCaptionParam.FontSize:=12;
-//
-//      AColumn.Material.DrawCellTextParam.DrawRectSetting.Enabled:=True;
-//      AColumn.Material.DrawCellTextParam.DrawRectSetting.Left:=10;
-//      AColumn.Material.DrawCellTextParam.FontVertAlign:=fvaCenter;
-//      AColumn.Material.DrawCellTextParam.FontSize:=12;
-//    end;
-//
-//
-//    //自定义操作列的控件类型为Button
-//    AColumn:=TSkinItemGridColumn(Self.gridData.Prop.Columns.FindByCaption('Action'));
-//    if AColumn<>nil then
-//    begin
-//      //create AColumn.FSkinControl as TSkinButton
-//      AColumn.ControlType:='Button';
-//      TSkinButton(AColumn.FSkinControl).Caption:='Edit';
-//      {$IFDEF FPC}
-//      //AColumn.FSkinControl.Margins.SetBounds(20,10,20,10);
-//      AColumn.FSkinControl.BorderSpacing.Left:=20;
-//      AColumn.FSkinControl.BorderSpacing.Top:=10;
-//      AColumn.FSkinControl.BorderSpacing.Right:=20;
-//      AColumn.FSkinControl.BorderSpacing.Bottom:=10;
-//      {$ELSE}
-//      AColumn.FSkinControl.AlignWithMargins:=True;
-//      AColumn.FSkinControl.Margins.SetBounds(20,10,20,10);
-//      {$ENDIF}
-//    end;
-//
-//
-//
-//  finally
-//    Self.gridData.Prop.Columns.EndUpdate;
-//  end;
 
 
 

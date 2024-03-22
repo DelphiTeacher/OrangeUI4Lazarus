@@ -26,7 +26,8 @@ uses
   DashBoard_Projects_PieChart_ProjectStatusFrame,
   DashBoard_Analyse_ItemGrid_TwoCellTextFrame,
   DashBoard_Projects_ItemGrid_TwoCellTextHasBackColorFrame, LoginForm,
-  HomeFrame, EditFrame, uConst, OrderGridFrame, ItemGrid_DefaultFrame;
+  HomeFrame, EditFrame, uConst, OrderGridFrame, ItemGrid_DefaultFrame,
+  ItemGrid_JsonItemEditFrame;
 
 {$R *.res}
 

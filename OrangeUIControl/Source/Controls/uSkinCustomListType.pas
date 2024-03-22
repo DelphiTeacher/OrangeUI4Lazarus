@@ -2062,6 +2062,8 @@ type
     procedure DoCustomDragDrop(ADragObject:TObject; const Point: TPointF);override;
     procedure DoStartDrag(var DragObject: TDragObject); override;
     procedure DoCustomDragOver(const Data: TObject; const Point: TPointF;var Accept: Boolean);override;
+    procedure DoCustomDragEnd;override;
+    procedure DoCustomDragCanceled;override;
   protected
     //ISkinItems接口的实现
     function GetItems:TBaseSkinItems;
@@ -6099,10 +6101,16 @@ begin
             if Not AItem.IsNotNeedDrawDevide then
             begin
               //需要画分隔线
+//              ACanvas.DrawRect(ASkinMaterial.FDrawItemDevideParam,
+//                              RectF(AItemDrawRect.Right,
+//                                  AItemDrawRect.Top,
+//                                  AItemDrawRect.Right+1,//为什么要加1,在ColumnHeader中加1的话，会被后面的item覆盖掉
+//                                  AItemDrawRect.Bottom)
+//                                  );
               ACanvas.DrawRect(ASkinMaterial.FDrawItemDevideParam,
-                              RectF(AItemDrawRect.Right,
+                              RectF(AItemDrawRect.Right-1,
                                   AItemDrawRect.Top,
-                                  AItemDrawRect.Right+1,
+                                  AItemDrawRect.Right,
                                   AItemDrawRect.Bottom)
                                   );
             end;
@@ -6292,6 +6300,8 @@ begin
 
 
   inherited;
+
+  Self.FSkinCustomListIntf.Prop.FListItemDragObject:=nil;
 
 
   //去掉子控件传递过来的鼠标消息
@@ -6727,7 +6737,10 @@ begin
     and (Self.FSkinCustomListIntf.Prop.MouseDownItem<>nil)
     and (TProtectedControl(Self.FSkinCustomListIntf.Prop.FSkinControl).DragMode=dmManual)
     and (GetDis(PointF(X,Y),FMouseDownPt)>5)
-    and (Self.FSkinCustomListIntf.Prop.FEnableAutoDragDropItem) then
+    and (Self.FSkinCustomListIntf.Prop.FEnableAutoDragDropItem)
+    //没有开始拖拽
+    and (Self.FSkinCustomListIntf.Prop.FListItemDragObject=nil)
+    then
   begin
     Self.FSkinCustomListIntf.Prop.StartDragItem;
   end;
@@ -7501,8 +7514,15 @@ end;
 //
 //end;
 
+procedure TSkinCustomList.DoCustomDragCanceled;
+begin
+//  Properties.FListItemDragObject:=nil;
+
+end;
+
 procedure TSkinCustomList.DoCustomDragDrop(ADragObject:TObject; const Point: TPointF);
 var
+  AOldIndex:Integer;
   ANewIndex:Integer;
   ADragOverItem:TBaseSkinItem;
 begin
@@ -7515,18 +7535,29 @@ begin
       ADragOverItem:=Self.Prop.VisibleItemAt(Point.X,Point.Y);
       if (ADragOverItem<>nil) and (Properties.FListItemDragObject.FItem<>ADragOverItem) then
       begin
+        AOldIndex:=Properties.FListItemDragObject.FItem.Index;
         ANewIndex:=ADragOverItem.Index;
-        Properties.Items.BeginUpdate;
-        try
-          Self.Prop.Items.Remove(Properties.FListItemDragObject.FItem,False);
-          Self.Prop.Items.Insert(ANewIndex,Properties.FListItemDragObject.FItem);
-        finally
-          Properties.Items.EndUpdate;
+        if AOldIndex<>ANewIndex then
+        begin
+          Properties.Items.BeginUpdate;
+          try
+            Self.Prop.Items.Remove(Properties.FListItemDragObject.FItem,False);
+            Self.Prop.Items.Insert(ANewIndex,Properties.FListItemDragObject.FItem);
+          finally
+            Properties.Items.EndUpdate;
+          end;
+
         end;
       end;
     end;
   end;
+//  //取消拖拽的状态
+//  Properties.FListItemDragObject:=nil;
+end;
 
+procedure TSkinCustomList.DoCustomDragEnd;
+begin
+//  Properties.FListItemDragObject:=nil;
 end;
 
 procedure TSkinCustomList.DoCustomDragOver(const Data: TObject; const Point: TPointF;var Accept: Boolean);
@@ -8577,23 +8608,35 @@ end;
 function TMyListItemDragObject.GetDragImages: TDragImageList;
 var
   Bmp: TBitmap;
+  ABufferBitmap: TBaseBufferBitmap;
   Pt: TPoint;
   ADrawCanvas:TDrawCanvas;
   APaintData:TPaintData;
 begin
+//  Result:=nil;
+//  Exit;
+//  {$IFDEF FPC}
+//  {$ELSE}
   if not Assigned(FDragImages) then begin
     Bmp := TBitmap.Create;
+    ABufferBitmap:=GlobalBufferBitmapClass.Create;
     try
+
+
       Bmp.PixelFormat := pf32bit;
       Bmp.Canvas.Brush.Color := clBlack;
 
       // 2px margin at each side just to show image can have transparency.
-      Bmp.Width := Ceil(FListControl.Prop.CalcItemWidth(FItem)) + 4;
-      Bmp.Height := Ceil(FListControl.Prop.CalcItemHeight(FItem)) + 4;
+      Bmp.Width := Ceil(FListControl.Prop.CalcItemWidth(FItem));// + 4;
+      Bmp.Height := Ceil(FListControl.Prop.CalcItemHeight(FItem));// + 4;
 
-      ADrawCanvas:=CreateDrawCanvas('');
-      ADrawCanvas.Prepare(Bmp.Canvas);
-      Bmp.Canvas.Lock;
+
+      ABufferBitmap.CreateBufferBitmap(Bmp.Width,Bmp.Height);
+
+
+//      ADrawCanvas:=CreateDrawCanvas('');//用的是GDIPlus,黑色能显示出来,如果用是的NativeCanvs,黑色就变成透明的了
+//      ADrawCanvas.Prepare(Bmp.Canvas);
+//      Bmp.Canvas.Lock;
       //将Item绘制在bmp上面
       //.FItem.PaintTo(Bmp.Canvas.Handle, 2, 2);
 //    //绘制Item
@@ -8606,23 +8649,28 @@ begin
 //                        ACustomListPaintData:TPaintData
 //                        ): Boolean;
 
-//      ADrawCanvas.Clear(0,RectF(0,0,Bmp.Width,Bmp.Height));
+      //为什么不能加这么一句？透明色全变黑了
+//      ABufferBitmap.DrawCanvas.Clear(0,RectF(0,0,Bmp.Width,Bmp.Height));/
 //      FListControl.Material.DrawItemBackColorParam.FillColor.Color:=clBlack;
       //需要白色的背景，但是半透明该怎么实现
-      TSkinCustomListDefaultType(FListControl.SkinControlType).PaintItem(ADrawCanvas,
+      TSkinCustomListDefaultType(FListControl.SkinControlType).PaintItem(ABufferBitmap.DrawCanvas,
                                   FItem.Index,
                                   FItem,
-                                  RectF(0,0,Bmp.Width-2,Bmp.Height-2),
+                                  RectF(0,0,Bmp.Width,Bmp.Height),
                                   FListControl.Material,
                                   RectF(0,0,FListControl.Width,FListControl.Height),
                                   APaintData);
 //      FListControl.Material.DrawItemBackColorParam.FillColor.Color:=clWhite;
-      Bmp.Canvas.Unlock;
+//      Bmp.Canvas.Unlock;
 
 //      Bmp.SaveToFile('D:\item.bmp');
 
-      ADrawCanvas.UnPrepare;
-      FreeAndNil(ADrawCanvas);
+//      ADrawCanvas.UnPrepare;
+//      FreeAndNil(ADrawCanvas);
+
+
+
+
 
       FDragImages := TDragImageList.Create(nil);
       {$IFDEF DELPHI}
@@ -8638,13 +8686,86 @@ begin
       Pt.Y:=Pt.Y-Ceil(FItem.FItemDrawRect.Top);
       FDragImages.DragHotspot := Pt;
       FDragImages.Masked := True;
+
+      ABufferBitmap.DrawTo(Bmp.Canvas);
+
       FDragImages.AddMasked(Bmp, clBlack);
 //      FDragImages.AddMasked(Bmp,clWhite);
     finally
       Bmp.Free;
+      FreeAndNil(ABufferBitmap);
     end;
   end;
   Result := FDragImages;
+//  {$ENDIF}
+
+
+
+//  if not Assigned(FDragImages) then begin
+//    Bmp := TBitmap.Create;
+//    try
+//      Bmp.PixelFormat := pf32bit;
+//      Bmp.Canvas.Brush.Color := clBlack;
+//
+//      // 2px margin at each side just to show image can have transparency.
+//      Bmp.Width := Ceil(FListControl.Prop.CalcItemWidth(FItem)) + 4;
+//      Bmp.Height := Ceil(FListControl.Prop.CalcItemHeight(FItem)) + 4;
+//
+//      ADrawCanvas:=CreateDrawCanvas('');//用的是GDIPlus,黑色能显示出来,如果用是的NativeCanvs,黑色就变成透明的了
+//      ADrawCanvas.Prepare(Bmp.Canvas);
+//      Bmp.Canvas.Lock;
+//      //将Item绘制在bmp上面
+//      //.FItem.PaintTo(Bmp.Canvas.Handle, 2, 2);
+////    //绘制Item
+////    function PaintItem(ACanvas: TDrawCanvas;
+////                        AItemIndex:Integer;
+////                        AItem:TBaseSkinItem;
+////                        AItemDrawRect:TRectF;
+////                        ASkinMaterial:TSkinCustomListDefaultMaterial;
+////                        const ADrawRect: TRectF;
+////                        ACustomListPaintData:TPaintData
+////                        ): Boolean;
+//
+////      ADrawCanvas.Clear(0,RectF(0,0,Bmp.Width,Bmp.Height));
+////      FListControl.Material.DrawItemBackColorParam.FillColor.Color:=clBlack;
+//      //需要白色的背景，但是半透明该怎么实现
+//      TSkinCustomListDefaultType(FListControl.SkinControlType).PaintItem(ADrawCanvas,
+//                                  FItem.Index,
+//                                  FItem,
+//                                  RectF(0,0,Bmp.Width-2,Bmp.Height-2),
+//                                  FListControl.Material,
+//                                  RectF(0,0,FListControl.Width,FListControl.Height),
+//                                  APaintData);
+////      FListControl.Material.DrawItemBackColorParam.FillColor.Color:=clWhite;
+//      Bmp.Canvas.Unlock;
+//
+////      Bmp.SaveToFile('D:\item.bmp');
+//
+//      ADrawCanvas.UnPrepare;
+//      FreeAndNil(ADrawCanvas);
+//
+//      FDragImages := TDragImageList.Create(nil);
+//      {$IFDEF DELPHI}
+//      FDragImages.ColorDepth:=TColorDepth.cd32Bit;//如果是32位的话，黑色会变成透明的了
+//      {$ENDIF}
+//      FDragImages.Width := Bmp.Width;
+//      FDragImages.Height := Bmp.Height;
+//      Pt := Mouse.CursorPos;
+//      {$IFDEF MSWINDOWS}
+//      MapWindowPoints(HWND_DESKTOP, FListControl.Handle, Pt, 1);
+//      {$ENDIF}
+//      Pt.X:=Pt.X-Ceil(FItem.FItemDrawRect.Left);
+//      Pt.Y:=Pt.Y-Ceil(FItem.FItemDrawRect.Top);
+//      FDragImages.DragHotspot := Pt;
+//      FDragImages.Masked := True;
+//      FDragImages.AddMasked(Bmp, clBlack);
+////      FDragImages.AddMasked(Bmp,clWhite);
+//    finally
+//      Bmp.Free;
+//    end;
+//  end;
+//  Result := FDragImages;
+
 
 end;
 

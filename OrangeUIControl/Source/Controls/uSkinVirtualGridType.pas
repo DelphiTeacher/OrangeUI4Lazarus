@@ -81,15 +81,15 @@ uses
   {$IFDEF FMX}
   uSkinFireMonkeyItemDesignerPanel,
   {$ENDIF}
-
+  uSkinColumnHeaderType,
   uSkinListBoxType,
 
   uDrawPictureParam;
 
 
 
-const
-  IID_ISkinColumnHeader:TGUID='{D3D65F7C-398C-42DA-B745-B095EF372A4B}';
+//const
+//  IID_ISkinColumnHeader:TGUID='{D3D65F7C-398C-42DA-B745-B095EF372A4B}';
 
 const
   IID_ISkinVirtualGrid:TGUID='{06786B16-959B-49B5-A48A-227F76786231}';
@@ -111,8 +111,8 @@ const
 
 
 type
-  TSkinColumnHeader=class;
-  TSkinColumnHeaderClass=class of TSkinColumnHeader;
+//  TSkinColumnHeader=class;
+//  TSkinColumnHeaderClass=class of TSkinColumnHeader;
 
   TSkinVirtualGridRow=class;
   TSkinVirtualGridRows=class;
@@ -361,7 +361,7 @@ type
     FPickList: TStrings;
     function GetPickList: TStrings;
     procedure SetPickList(Value: TStrings);
-  protected
+  public
 //
 //    //ISkinItem接口需要,用于排列
 //    //宽度
@@ -381,7 +381,8 @@ type
 
     //拉宽的时候自动增加宽度
     FIsAutoFitControlWidth:Boolean;
-    FAutoFitWidth:Double;
+    { #todo : 真奇怪  }
+    FAutoFitWidth:Integer;//如果用double，在Lazarus会报flt overflow，真奇怪
 //    function GetWidth: Double;override;
 //    //自适应控件尺寸
 //    function GetIsAutoFitControlWidth:Boolean;override;
@@ -681,295 +682,295 @@ type
 
 
 
-
-
-//type
-  //TSkinColumnHeaderItems=class;
-  //TSkinColumnHeaderItemsClass=class of TSkinColumnHeaderItems;
-  TColumnHeaderProperties=class;
-  //TSkinColumnHeaderLayoutsManager=class;
-
-  /// <summary>
-  ///   <para>
-  ///     列表框接口
-  ///   </para>
-  ///   <para>
-  ///     Interface of ColumnHeader
-  ///   </para>
-  /// </summary>
-  ISkinColumnHeader=interface//(ISkinScrollControl)
-  ['{D3D65F7C-398C-42DA-B745-B095EF372A4B}']
-
-
-    function GetColumnHeaderProperties:TColumnHeaderProperties;
-    property Properties:TColumnHeaderProperties read GetColumnHeaderProperties;
-    property Prop:TColumnHeaderProperties read GetColumnHeaderProperties;
-  end;
-
-
-
-  /// <summary>
-  ///   <para>
-  ///     列表项逻辑
-  ///   </para>
-  ///   <para>
-  ///     ListItem Logic
-  ///   </para>
-  /// </summary>
-  TSkinColumnHeaderLayoutsManager=class(TSkinVirtualListLayoutsManager)
-  private
-    FIsAddAutoFitWidth:Boolean;
-    function CalcItemWidth(AItem: ISkinItem): Double;override;
-  end;
-
-
-  /// <summary>
-  ///   <para>
-  ///     列表框属性
-  ///   </para>
-  ///   <para>
-  ///     Properties of ColumnHeader
-  ///   </para>
-  /// </summary>
-  TColumnHeaderProperties=class(TVirtualListProperties)
-  protected
-//      FSkinVirutalGridIntf:ISkinVirtualGrid;
-    FSkinColumnHeaderIntf:ISkinColumnHeader;
-    function GetItems: TSkinVirtualGridColumns;
-    procedure SetItems(const Value: TSkinVirtualGridColumns);
-  //protected
-  //  function GetMouseDownItem: TSkinItem;
-  //  function GetMouseOverItem: TSkinItem;
-  //  function GetSelectedItem: TSkinItem;
-  //  function GetPanDragItem: TSkinItem;
-  //
-  //  procedure SetMouseDownItem(Value: TSkinItem);
-  //  procedure SetMouseOverItem(Value: TSkinItem);
-  //  procedure SetSelectedItem(Value: TSkinItem);
-  //  procedure SetPanDragItem(Value: TSkinItem);
-  protected
-    ////列表逻辑
-    //function GetListLayoutsManager: TSkinColumnHeaderLayoutsManager;
-    //获取列表项列表的类
-    function GetItemsClass:TBaseSkinItemsClass;override;
-    //获取列表逻辑类
-    function GetCustomListLayoutsManagerClass:TSkinCustomListLayoutsManagerClass;override;
-
-protected
-  //点击列表项,TreeView需要扩展它来实现自动展开
-  procedure DoClickItem(AItem:TBaseSkinItem;X:Double;Y:Double);override;
-  protected
-    //获取分类名称
-    function GetComponentClassify:String;override;
-  protected
-  public
-    constructor Create(ASkinControl:TControl);override;
-  public
-
-    /// <summary>
-    ///   <para>
-    ///     列表项布局管理者
-    ///   </para>
-    ///   <para>
-    ///     ??
-    ///   </para>
-    /// </summary>
-    //property ListLayoutsManager:TSkinColumnHeaderLayoutsManager read GetListLayoutsManager;
-//
-//        /// <summary>
-//        ///   <para>
-//        ///     获取当前交互的列表项
-//        ///   </para>
-//        ///   <para>
-//        ///     Get interactive ListItem
-//        ///   </para>
-//        /// </summary>
-//        function GetInteractiveItem:TSkinItem;
-//        /// <summary>
-//        ///   <para>
-//        ///     获取当前交互的列表项
-//        ///   </para>
-//        ///   <para>
-//        ///     Get interactive ListItem
-//        ///   </para>
-//        /// </summary>
-//        property InteractiveItem:TSkinItem read GetInteractiveItem;
-//        /// <summary>
-//        ///   <para>
-//        ///     选中的列表项
-//        ///   </para>
-//        ///   <para>
-//        ///     Selected ListItem
-//        ///   </para>
-//        /// </summary>
-//        property SelectedItem:TSkinItem read GetSelectedItem write SetSelectedItem;
-//
-//        /// <summary>
-//        ///   <para>
-//        ///     按下的列表项
-//        ///   </para>
-//        ///   <para>
-//        ///     Pressed ListeItem
-//        ///   </para>
-//        /// </summary>
-//        property MouseDownItem:TSkinItem read GetMouseDownItem write SetMouseDownItem;
-//
-//        /// <summary>
-//        ///   <para>
-//        ///     停靠的列表项
-//        ///   </para>
-//        ///   <para>
-//        ///     Hovered ListItem
-//        ///   </para>
-//        /// </summary>
-//        property MouseOverItem:TSkinItem read GetMouseOverItem write SetMouseOverItem;
 //
 //
-//        /// <summary>
-//        ///   <para>
-//        ///     平拖的列表项
-//        ///   </para>
-//        ///   <para>
-//        ///     PanDrag ListItem
-//        ///   </para>
-//        /// </summary>
-//        property PanDragItem:TSkinItem read GetPanDragItem write SetPanDragItem;
-
-
-  published
-
-    /// <summary>
-    ///   <para>
-    ///     列表项列表
-    ///   </para>
-    ///   <para>
-    ///     ListItem List
-    ///   </para>
-    /// </summary>
-    property Items:TSkinVirtualGridColumns read GetItems write SetItems;
-
-    /// <summary>
-    ///   <para>
-    ///     是否启用居中选择模式
-    ///   </para>
-    ///   <para>
-    ///     Center selected pattern
-    ///   </para>
-    /// </summary>
-    //property IsEnabledCenterItemSelectMode;
-  end;
-
-
-
-  /// <summary>
-  ///   <para>
-  ///     列表项列表
-  ///   </para>
-  ///   <para>
-  ///     ListItem List
-  ///   </para>
-  /// </summary>
-//  TSkinColumnHeaderItems=class(TSkinItems)
-//  private
-//    function GetItem(Index: Integer): TSkinColumnHeaderItem;
-//    procedure SetItem(Index: Integer; const Value: TSkinColumnHeaderItem);
-//  protected
-////    function CreateBinaryObject(const AClassName:String=''):TInterfacedPersistent;override;
-////    procedure InitSkinItemClass;override;
-//    function GetSkinItemClass:TBaseSkinItemClass;override;
-//  public
-//    function Add:TSkinColumnHeaderItem;overload;
-//    function Insert(Index:Integer):TSkinColumnHeaderItem;
-//    property Items[Index:Integer]:TSkinColumnHeaderItem read GetItem write SetItem;default;
+////type
+//  //TSkinColumnHeaderItems=class;
+//  //TSkinColumnHeaderItemsClass=class of TSkinColumnHeaderItems;
+//  TColumnHeaderProperties=class;
+//  //TSkinColumnHeaderLayoutsManager=class;
+//
+//  /// <summary>
+//  ///   <para>
+//  ///     列表框接口
+//  ///   </para>
+//  ///   <para>
+//  ///     Interface of ColumnHeader
+//  ///   </para>
+//  /// </summary>
+//  ISkinColumnHeader=interface//(ISkinScrollControl)
+//  ['{D3D65F7C-398C-42DA-B745-B095EF372A4B}']
+//
+//
+//    function GetColumnHeaderProperties:TColumnHeaderProperties;
+//    property Properties:TColumnHeaderProperties read GetColumnHeaderProperties;
+//    property Prop:TColumnHeaderProperties read GetColumnHeaderProperties;
 //  end;
-
-
-
-
-
-
-
-
-
-  /// <summary>
-  ///   <para>
-  ///     列表框素材基类
-  ///   </para>
-  ///   <para>
-  ///     Base class of ColumnHeader material
-  ///   </para>
-  /// </summary>
-  {$I ComponentPlatformsAttribute.inc}
-  TSkinColumnHeaderDefaultMaterial=class(TSkinVirtualListDefaultMaterial)
+//
+//
+//
+//  /// <summary>
+//  ///   <para>
+//  ///     列表项逻辑
+//  ///   </para>
+//  ///   <para>
+//  ///     ListItem Logic
+//  ///   </para>
+//  /// </summary>
+//  TSkinColumnHeaderLayoutsManager=class(TSkinVirtualListLayoutsManager)
 //  private
-//    //展开图片
-//    FSortStateAscPicture:TDrawPicture;
-//    FSortStateDescPicture:TDrawPicture;
-//    //展开图片绘制参数
-//    FDrawSortStatePictureParam:TDrawPictureParam;
-//  private
-//    procedure SetDrawSortStatePictureParam(const Value: TDrawPictureParam);
-//    procedure SetSortStateAscPicture(const Value: TDrawPicture);
-//    procedure SetSortStateDescPicture(const Value: TDrawPicture);
+//    FIsAddAutoFitWidth:Boolean;
+//    function CalcItemWidth(AItem: ISkinItem): Double;override;
+//  end;
+//
+//
+//  /// <summary>
+//  ///   <para>
+//  ///     列表框属性
+//  ///   </para>
+//  ///   <para>
+//  ///     Properties of ColumnHeader
+//  ///   </para>
+//  /// </summary>
+//  TColumnHeaderProperties=class(TVirtualListProperties)
+//  protected
+////      FSkinVirutalGridIntf:ISkinVirtualGrid;
+//    FSkinColumnHeaderIntf:ISkinColumnHeader;
+//    function GetItems: TSkinVirtualGridColumns;
+//    procedure SetItems(const Value: TSkinVirtualGridColumns);
+//  //protected
+//  //  function GetMouseDownItem: TSkinItem;
+//  //  function GetMouseOverItem: TSkinItem;
+//  //  function GetSelectedItem: TSkinItem;
+//  //  function GetPanDragItem: TSkinItem;
+//  //
+//  //  procedure SetMouseDownItem(Value: TSkinItem);
+//  //  procedure SetMouseOverItem(Value: TSkinItem);
+//  //  procedure SetSelectedItem(Value: TSkinItem);
+//  //  procedure SetPanDragItem(Value: TSkinItem);
+//  protected
+//    ////列表逻辑
+//    //function GetListLayoutsManager: TSkinColumnHeaderLayoutsManager;
+//    //获取列表项列表的类
+//    function GetItemsClass:TBaseSkinItemsClass;override;
+//    //获取列表逻辑类
+//    function GetCustomListLayoutsManagerClass:TSkinCustomListLayoutsManagerClass;override;
+//
+//protected
+//  //点击列表项,TreeView需要扩展它来实现自动展开
+//  procedure DoClickItem(AItem:TBaseSkinItem;X:Double;Y:Double);override;
+//  protected
+//    //获取分类名称
+//    function GetComponentClassify:String;override;
+//  protected
 //  public
-//    constructor Create(AOwner:TComponent);override;
-//    destructor Destroy;override;
+//    constructor Create(ASkinControl:TControl);override;
+//  public
+//
+//    /// <summary>
+//    ///   <para>
+//    ///     列表项布局管理者
+//    ///   </para>
+//    ///   <para>
+//    ///     ??
+//    ///   </para>
+//    /// </summary>
+//    //property ListLayoutsManager:TSkinColumnHeaderLayoutsManager read GetListLayoutsManager;
+////
+////        /// <summary>
+////        ///   <para>
+////        ///     获取当前交互的列表项
+////        ///   </para>
+////        ///   <para>
+////        ///     Get interactive ListItem
+////        ///   </para>
+////        /// </summary>
+////        function GetInteractiveItem:TSkinItem;
+////        /// <summary>
+////        ///   <para>
+////        ///     获取当前交互的列表项
+////        ///   </para>
+////        ///   <para>
+////        ///     Get interactive ListItem
+////        ///   </para>
+////        /// </summary>
+////        property InteractiveItem:TSkinItem read GetInteractiveItem;
+////        /// <summary>
+////        ///   <para>
+////        ///     选中的列表项
+////        ///   </para>
+////        ///   <para>
+////        ///     Selected ListItem
+////        ///   </para>
+////        /// </summary>
+////        property SelectedItem:TSkinItem read GetSelectedItem write SetSelectedItem;
+////
+////        /// <summary>
+////        ///   <para>
+////        ///     按下的列表项
+////        ///   </para>
+////        ///   <para>
+////        ///     Pressed ListeItem
+////        ///   </para>
+////        /// </summary>
+////        property MouseDownItem:TSkinItem read GetMouseDownItem write SetMouseDownItem;
+////
+////        /// <summary>
+////        ///   <para>
+////        ///     停靠的列表项
+////        ///   </para>
+////        ///   <para>
+////        ///     Hovered ListItem
+////        ///   </para>
+////        /// </summary>
+////        property MouseOverItem:TSkinItem read GetMouseOverItem write SetMouseOverItem;
+////
+////
+////        /// <summary>
+////        ///   <para>
+////        ///     平拖的列表项
+////        ///   </para>
+////        ///   <para>
+////        ///     PanDrag ListItem
+////        ///   </para>
+////        /// </summary>
+////        property PanDragItem:TSkinItem read GetPanDragItem write SetPanDragItem;
+//
+//
 //  published
-//    property SortStateAscPicture:TDrawPicture read FSortStateAscPicture write SetSortStateAscPicture;
-//    property SortStateDescPicture:TDrawPicture read FSortStateDescPicture write SetSortStateDescPicture;
-//    property DrawSortStatePictureParam:TDrawPictureParam read FDrawSortStatePictureParam write SetDrawSortStatePictureParam;
-  end;
-
-  TSkinColumnHeaderDefaultType=class(TSkinVirtualListDefaultType)
-  protected
-    FSkinColumnHeaderIntf:ISkinColumnHeader;
-  protected
-    function GetGrid:TSkinVirtualGrid;
-    //绑定对象
-    function CustomBind(ASkinControl:TControl):Boolean;override;
-    //解除绑定
-    procedure CustomUnBind;override;
-    //决定列表项所使用的素材,因为有的素材在Grid中设置,所以需要判断一下
-    function DecideItemMaterial(AItem:TBaseSkinItem;ASkinMaterial:TSkinCustomListDefaultMaterial): TBaseSkinListItemMaterial;override;
-    //绘制内容(绘制背景色)
-    function CustomDrawItemContent(ACanvas: TDrawCanvas;
-                                    AItemIndex:Integer;
-                                    AItem:TBaseSkinItem;
-                                    AItemDrawRect:TRectF;
-                                    ASkinMaterial:TSkinCustomListDefaultMaterial;
-                                    const ADrawRect: TRectF;
-                                    ACustomListPaintData:TPaintData;
-                                    ASkinItemMaterial:TBaseSkinListItemMaterial;
-                                    AItemEffectStates:TDPEffectStates;
-                                    AIsDrawItemInteractiveState:Boolean
-                                    ): Boolean;override;
-
-    procedure SizeChanged;override;
-  protected
-    function GetSkinMaterial:TSkinColumnHeaderDefaultMaterial;
-  end;
-
-
-  {$I ComponentPlatformsAttribute.inc}
-  TSkinColumnHeader=class(TSkinVirtualList,ISkinColumnHeader)
-  private
-
-    function GetColumnHeaderProperties:TColumnHeaderProperties;
-    procedure SetColumnHeaderProperties(Value:TColumnHeaderProperties);
-  protected
-    //获取控件属性类
-    function GetPropertiesClassType:TPropertiesClassType;override;
-  public
-    function SelfOwnMaterialToDefault:TSkinColumnHeaderDefaultMaterial;
-    function CurrentUseMaterialToDefault:TSkinColumnHeaderDefaultMaterial;
-    function Material:TSkinColumnHeaderDefaultMaterial;
-
-    property Prop:TColumnHeaderProperties read GetColumnHeaderProperties write SetColumnHeaderProperties;
-  published
-    //属性(必须在VertScrollBar和HorzScrollBar之前)
-    property Properties:TColumnHeaderProperties read GetColumnHeaderProperties write SetColumnHeaderProperties;
-
-  end;
+//
+//    /// <summary>
+//    ///   <para>
+//    ///     列表项列表
+//    ///   </para>
+//    ///   <para>
+//    ///     ListItem List
+//    ///   </para>
+//    /// </summary>
+//    property Items:TSkinVirtualGridColumns read GetItems write SetItems;
+//
+//    /// <summary>
+//    ///   <para>
+//    ///     是否启用居中选择模式
+//    ///   </para>
+//    ///   <para>
+//    ///     Center selected pattern
+//    ///   </para>
+//    /// </summary>
+//    //property IsEnabledCenterItemSelectMode;
+//  end;
+//
+//
+//
+//  /// <summary>
+//  ///   <para>
+//  ///     列表项列表
+//  ///   </para>
+//  ///   <para>
+//  ///     ListItem List
+//  ///   </para>
+//  /// </summary>
+////  TSkinColumnHeaderItems=class(TSkinItems)
+////  private
+////    function GetItem(Index: Integer): TSkinColumnHeaderItem;
+////    procedure SetItem(Index: Integer; const Value: TSkinColumnHeaderItem);
+////  protected
+//////    function CreateBinaryObject(const AClassName:String=''):TInterfacedPersistent;override;
+//////    procedure InitSkinItemClass;override;
+////    function GetSkinItemClass:TBaseSkinItemClass;override;
+////  public
+////    function Add:TSkinColumnHeaderItem;overload;
+////    function Insert(Index:Integer):TSkinColumnHeaderItem;
+////    property Items[Index:Integer]:TSkinColumnHeaderItem read GetItem write SetItem;default;
+////  end;
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//  /// <summary>
+//  ///   <para>
+//  ///     列表框素材基类
+//  ///   </para>
+//  ///   <para>
+//  ///     Base class of ColumnHeader material
+//  ///   </para>
+//  /// </summary>
+//  {$I ComponentPlatformsAttribute.inc}
+//  TSkinColumnHeaderDefaultMaterial=class(TSkinVirtualListDefaultMaterial)
+////  private
+////    //展开图片
+////    FSortStateAscPicture:TDrawPicture;
+////    FSortStateDescPicture:TDrawPicture;
+////    //展开图片绘制参数
+////    FDrawSortStatePictureParam:TDrawPictureParam;
+////  private
+////    procedure SetDrawSortStatePictureParam(const Value: TDrawPictureParam);
+////    procedure SetSortStateAscPicture(const Value: TDrawPicture);
+////    procedure SetSortStateDescPicture(const Value: TDrawPicture);
+////  public
+////    constructor Create(AOwner:TComponent);override;
+////    destructor Destroy;override;
+////  published
+////    property SortStateAscPicture:TDrawPicture read FSortStateAscPicture write SetSortStateAscPicture;
+////    property SortStateDescPicture:TDrawPicture read FSortStateDescPicture write SetSortStateDescPicture;
+////    property DrawSortStatePictureParam:TDrawPictureParam read FDrawSortStatePictureParam write SetDrawSortStatePictureParam;
+//  end;
+//
+//  TSkinColumnHeaderDefaultType=class(TSkinVirtualListDefaultType)
+//  protected
+//    FSkinColumnHeaderIntf:ISkinColumnHeader;
+//  protected
+//    function GetGrid:TSkinVirtualGrid;
+//    //绑定对象
+//    function CustomBind(ASkinControl:TControl):Boolean;override;
+//    //解除绑定
+//    procedure CustomUnBind;override;
+//    //决定列表项所使用的素材,因为有的素材在Grid中设置,所以需要判断一下
+//    function DecideItemMaterial(AItem:TBaseSkinItem;ASkinMaterial:TSkinCustomListDefaultMaterial): TBaseSkinListItemMaterial;override;
+//    //绘制内容(绘制背景色)
+//    function CustomDrawItemContent(ACanvas: TDrawCanvas;
+//                                    AItemIndex:Integer;
+//                                    AItem:TBaseSkinItem;
+//                                    AItemDrawRect:TRectF;
+//                                    ASkinMaterial:TSkinCustomListDefaultMaterial;
+//                                    const ADrawRect: TRectF;
+//                                    ACustomListPaintData:TPaintData;
+//                                    ASkinItemMaterial:TBaseSkinListItemMaterial;
+//                                    AItemEffectStates:TDPEffectStates;
+//                                    AIsDrawItemInteractiveState:Boolean
+//                                    ): Boolean;override;
+//
+//    procedure SizeChanged;override;
+//  protected
+//    function GetSkinMaterial:TSkinColumnHeaderDefaultMaterial;
+//  end;
+//
+//
+//  {$I ComponentPlatformsAttribute.inc}
+//  TSkinColumnHeader=class(TSkinVirtualList,ISkinColumnHeader)
+//  private
+//
+//    function GetColumnHeaderProperties:TColumnHeaderProperties;
+//    procedure SetColumnHeaderProperties(Value:TColumnHeaderProperties);
+//  protected
+//    //获取控件属性类
+//    function GetPropertiesClassType:TPropertiesClassType;override;
+//  public
+//    function SelfOwnMaterialToDefault:TSkinColumnHeaderDefaultMaterial;
+//    function CurrentUseMaterialToDefault:TSkinColumnHeaderDefaultMaterial;
+//    function Material:TSkinColumnHeaderDefaultMaterial;
+//
+//    property Prop:TColumnHeaderProperties read GetColumnHeaderProperties write SetColumnHeaderProperties;
+//  published
+//    //属性(必须在VertScrollBar和HorzScrollBar之前)
+//    property Properties:TColumnHeaderProperties read GetColumnHeaderProperties write SetColumnHeaderProperties;
+//
+//  end;
 
 
 
@@ -1195,7 +1196,6 @@ protected
     procedure DoClickItem(ARow:TBaseSkinItem;X:Double;Y:Double);override;
     //点击单元格
     procedure DoClickCell(ARow:TBaseSkinItem;ACol:TSkinVirtualGridColumn;X:Double;Y:Double);virtual;
-    procedure DoClickColumn(ACol:TSkinVirtualGridColumn;X:Double;Y:Double);virtual;
 
     //根据表格列自动创建对应的编辑控件,是下拉框还是编辑框
     function AutoCreateEditControl(ACol:TSkinVirtualGridColumn):TControl;virtual;
@@ -1279,6 +1279,7 @@ protected
 
 
   public
+    procedure DoClickColumn(ACol:TSkinVirtualGridColumn;X:Double;Y:Double);virtual;
     procedure CalcAutoSizeColumnWidth;
 
     //让所有表格列能填满控件
@@ -2045,10 +2046,10 @@ protected
     function GetVirtualGridProperties:TVirtualGridProperties;
     procedure SetVirtualGridProperties(Value:TVirtualGridProperties);
     function GetOnClickColumn: TGridClickColumnEvent;
+    function GetColumnHeaderMaterial: TSkinColumnHeaderDefaultMaterial;
 //
 //    procedure DoClickGridHeaderClickItem(AItem:TBaseSkinItem);
   protected
-    function GetColumnsClass:TSkinVirtualGridColumnsClass;virtual;
     procedure ReadState(Reader: TReader); override;
 
     procedure Loaded;override;
@@ -2059,6 +2060,8 @@ protected
     //绘制滚动条
     procedure AfterPaint; {$IFDEF FMX}override;{$ENDIF}
   public
+    function GetColumnsClass:TSkinVirtualGridColumnsClass;virtual;
+
     function SelfOwnMaterialToDefault:TSkinVirtualGridDefaultMaterial;
     function CurrentUseMaterialToDefault:TSkinVirtualGridDefaultMaterial;
     function Material:TSkinVirtualGridDefaultMaterial;
@@ -2074,6 +2077,7 @@ protected
     //属性(必须在VertScrollBar和HorzScrollBar之前)
     property Properties:TVirtualGridProperties read GetVirtualGridProperties write SetVirtualGridProperties;
 
+//    property ColumnHeaderMaterial:TSkinColumnHeaderDefaultMaterial read GetColumnHeaderMaterial;// write SetColumnHeader;
 
     //垂直滚动条
     property VertScrollBar;
@@ -2109,306 +2113,6 @@ implementation
 
 
 
-{ TColumnHeaderProperties }
-
-
-constructor TColumnHeaderProperties.Create(ASkinControl:TControl);
-begin
-  inherited Create(ASkinControl);
-  if Not ASkinControl.GetInterface(IID_ISkinColumnHeader,Self.FSkinColumnHeaderIntf) then
-  begin
-    ShowException('This Component Do not Support ISkinColumnHeader Interface');
-  end
-  else
-  begin
-  end;
-//  if Not ASkinControl.GetInterface(IID_ISkinColumnHeader,Self.FSkinColumnHeaderIntf) then
-//  begin
-//    ShowException('This Component Do not Support ISkinColumnHeader Interface');
-//  end
-//  else
-//  begin
-//  end;
-end;
-
-procedure TColumnHeaderProperties.DoClickItem(AItem: TBaseSkinItem; X,
-  Y: Double);
-begin
-  inherited;
-
-//  //点击表头
-//  if Assigned(TSkinVirtualGrid(Self.FSkinControl.Owner).FOnClickColumn) then
-//  begin
-//    TSkinVirtualGrid(Self.FSkinControl.Owner).FOnClickColumn(Self.FSkinControl.Owner,TSkinVirtualGridColumn(AItem));
-//  end;
-
-  //自动排序
-  TSkinVirtualGrid(Self.FSkinControl.Owner).Prop.DoClickColumn(TSkinVirtualGridColumn(AItem),X,Y);
-
-end;
-
-function TColumnHeaderProperties.GetComponentClassify: String;
-begin
-  Result:='SkinColumnHeader';
-end;
-
-//function TColumnHeaderProperties.GetInteractiveItem: TSkinItem;
-//begin
-//  Result:=TSkinItem(Inherited InteractiveItem);
-//end;
-
-function TColumnHeaderProperties.GetItems: TSkinVirtualGridColumns;
-begin
-  Result:=TSkinVirtualGridColumns(FItems);
-end;
-
-function TColumnHeaderProperties.GetItemsClass: TBaseSkinItemsClass;
-begin
-  //Result:=TSkinVirtualGridColumns;
-  Result:=TSkinVirtualGrid(FSkinControl.Owner).GetColumnsClass;
-end;
-
-//function TColumnHeaderProperties.GetListLayoutsManager: TSkinColumnHeaderLayoutsManager;
-//begin
-//  Result:=TSkinColumnHeaderLayoutsManager(Self.FListLayoutsManager);
-//end;
-
-function TColumnHeaderProperties.GetCustomListLayoutsManagerClass: TSkinCustomListLayoutsManagerClass;
-begin
-  Result:=TSkinColumnHeaderLayoutsManager;
-end;
-
-procedure TColumnHeaderProperties.SetItems(const Value: TSkinVirtualGridColumns);
-begin
-  Inherited SetItems(Value);
-end;
-
-//function TColumnHeaderProperties.GetMouseDownItem: TSkinItem;
-//begin
-//  Result:=TSkinItem(Inherited MouseDownItem);
-//end;
-//
-//function TColumnHeaderProperties.GetMouseOverItem: TSkinItem;
-//begin
-//  Result:=TSkinItem(Inherited MouseOverItem);
-//end;
-//
-//function TColumnHeaderProperties.GetPanDragItem: TSkinItem;
-//begin
-//  Result:=TSkinItem(Inherited PanDragItem);
-//end;
-//
-//function TColumnHeaderProperties.GetSelectedItem: TSkinItem;
-//begin
-//  Result:=TSkinItem(Inherited SelectedItem);
-//end;
-//
-//procedure TColumnHeaderProperties.SetMouseDownItem(Value: TSkinItem);
-//begin
-//  Inherited MouseDownItem:=Value;
-//end;
-//
-//procedure TColumnHeaderProperties.SetMouseOverItem(Value: TSkinItem);
-//begin
-//  Inherited MouseOverItem:=Value;
-//end;
-//
-//procedure TColumnHeaderProperties.SetSelectedItem(Value: TSkinItem);
-//begin
-//  Inherited SelectedItem:=Value;
-//end;
-//
-//procedure TColumnHeaderProperties.SetPanDragItem(Value: TSkinItem);
-//begin
-//  Inherited PanDragItem:=Value;
-//end;
-
-{ TSkinColumnHeaderDefaultType }
-
-function TSkinColumnHeaderDefaultType.CustomBind(ASkinControl:TControl):Boolean;
-begin
-  if Inherited CustomBind(ASkinControl) then
-  begin
-    if ASkinControl.GetInterface(IID_ISkinColumnHeader,Self.FSkinColumnHeaderIntf) then
-    begin
-      Result:=True;
-    end
-    else
-    begin
-      ShowException('This Component Do not Support ISkinColumnHeader Interface');
-    end;
-  end;
-end;
-
-function TSkinColumnHeaderDefaultType.CustomDrawItemContent(
-  ACanvas: TDrawCanvas; AItemIndex: Integer; AItem: TBaseSkinItem;
-  AItemDrawRect: TRectF; ASkinMaterial: TSkinCustomListDefaultMaterial;
-  const ADrawRect: TRectF; ACustomListPaintData: TPaintData;
-  ASkinItemMaterial: TBaseSkinListItemMaterial;
-  AItemEffectStates: TDPEffectStates;
-  AIsDrawItemInteractiveState: Boolean): Boolean;
-var
-  ASortStatePicture:TDrawPicture;
-  ASortStatePath:TPathActionCollection;
-  AGridMaterial:TSkinVirtualGridDefaultMaterial;
-begin
-  Inherited;
-
-  //绘制排序状态
-  ASortStatePicture:=nil;
-  ASortStatePath:=nil;
-  if GetGrid<>nil then
-  begin
-    AGridMaterial:=GetGrid.CurrentUseMaterialToDefault;
-    if TSkinVirtualGridColumn(AItem).FSortState=sissAsc then
-    begin
-      ASortStatePicture:=AGridMaterial.FSortStateAscPicture;
-      ASortStatePath:=AGridMaterial.FSortStateAscPath;
-    end
-    else
-    if TSkinVirtualGridColumn(AItem).FSortState=sissDesc then
-    begin
-      ASortStatePicture:=AGridMaterial.FSortStateDescPicture;
-      ASortStatePath:=AGridMaterial.FSortStateDescPath;
-    end;
-
-    if ASortStatePicture<>nil then
-    begin
-      ACanvas.DrawPicture(AGridMaterial.FDrawSortStatePictureParam,ASortStatePicture,AItemDrawRect);
-    end;
-
-//    if ASortStatePath<>nil then
-//    begin
-//      //自己用路径来画三角形,它有上下两个三角形,一个灰色，一个其他颜色
-//      ACanvas.DrawPath(AGridMaterial.DrawSortStatePathParam,AItemDrawRect,ASortStatePath);
-//    end;
-
-  end;
-
-end;
-
-procedure TSkinColumnHeaderDefaultType.CustomUnBind;
-begin
-  Inherited CustomUnBind;
-  Self.FSkinColumnHeaderIntf:=nil;
-end;
-
-function TSkinColumnHeaderDefaultType.DecideItemMaterial(AItem: TBaseSkinItem;ASkinMaterial: TSkinCustomListDefaultMaterial): TBaseSkinListItemMaterial;
-var
-  AColumn:TSkinVirtualGridColumn;
-begin
-  if AItem is TSkinVirtualGridColumn then
-  begin
-    AColumn:=TSkinVirtualGridColumn(AItem);
-    if AColumn.FIsUseDefaultGridColumnMaterial then
-    begin
-      //使用表格素材中的DrawColumnMaterial
-      Result:=TSkinVirtualGridDefaultMaterial(GetGrid.GetCurrentUseMaterial).FDrawColumnMaterial;
-    end
-    else
-    begin
-      //使用Column自己的FMaterial
-      Result:=AColumn.SelfOwnMaterial;
-    end;
-
-  end;
-
-end;
-
-function TSkinColumnHeaderDefaultType.GetGrid: TSkinVirtualGrid;
-begin
-  Result:=TSkinVirtualGrid(Self.FSkinControl.Owner);
-end;
-
-function TSkinColumnHeaderDefaultType.GetSkinMaterial: TSkinColumnHeaderDefaultMaterial;
-begin
-  if Self.FSkinControlIntf.GetCurrentUseMaterial<>nil then
-  begin
-    Result:=TSkinColumnHeaderDefaultMaterial(Self.FSkinControlIntf.GetCurrentUseMaterial);
-  end
-  else
-  begin
-    Result:=nil;
-  end;
-end;
-procedure TSkinColumnHeaderDefaultType.SizeChanged;
-begin
-  inherited;
-  Self.GetGrid.Prop.SetColumnsAutoFitControlWidth;
-end;
-
-//
-//{ TSkinColumnHeaderItems }
-//
-//
-//function TSkinColumnHeaderItems.Add: TSkinColumnHeaderItem;
-//begin
-//  Result:=TSkinColumnHeaderItem(Inherited Add);
-//end;
-//
-////procedure TSkinColumnHeaderItems.InitSkinItemClass;
-////begin
-////  SkinItemClass:=TSkinColumnHeaderItem;
-////end;
-//
-//function TSkinColumnHeaderItems.Insert(Index:Integer): TSkinColumnHeaderItem;
-//begin
-//  Result:=TSkinColumnHeaderItem(Inherited Insert(Index));
-//end;
-//
-//procedure TSkinColumnHeaderItems.SetItem(Index: Integer;const Value: TSkinColumnHeaderItem);
-//begin
-//  Inherited Items[Index]:=Value;
-//end;
-//
-////function TSkinColumnHeaderItems.CreateBinaryObject(const AClassName:String=''): TInterfacedPersistent;
-////begin
-////  Result:=SkinItemClass.Create;//(Self);
-////end;
-//
-//function TSkinColumnHeaderItems.GetItem(Index: Integer): TSkinColumnHeaderItem;
-//begin
-//  Result:=TSkinColumnHeaderItem(Inherited Items[Index]);
-//end;
-//
-//function TSkinColumnHeaderItems.GetSkinItemClass: TBaseSkinItemClass;
-//begin
-//  Result:=TSkinColumnHeaderItem;
-//end;
-
-{ TSkinColumnHeader }
-
-function TSkinColumnHeader.Material:TSkinColumnHeaderDefaultMaterial;
-begin
-  Result:=TSkinColumnHeaderDefaultMaterial(SelfOwnMaterial);
-end;
-
-function TSkinColumnHeader.SelfOwnMaterialToDefault:TSkinColumnHeaderDefaultMaterial;
-begin
-  Result:=TSkinColumnHeaderDefaultMaterial(SelfOwnMaterial);
-end;
-
-function TSkinColumnHeader.CurrentUseMaterialToDefault:TSkinColumnHeaderDefaultMaterial;
-begin
-  Result:=TSkinColumnHeaderDefaultMaterial(CurrentUseMaterial);
-end;
-
-function TSkinColumnHeader.GetPropertiesClassType: TPropertiesClassType;
-begin
-  Result:=TColumnHeaderProperties;
-end;
-
-function TSkinColumnHeader.GetColumnHeaderProperties: TColumnHeaderProperties;
-begin
-  Result:=TColumnHeaderProperties(Self.FProperties);
-end;
-
-procedure TSkinColumnHeader.SetColumnHeaderProperties(Value: TColumnHeaderProperties);
-begin
-  Self.FProperties.Assign(Value);
-end;
-
-
 
 
 { TVirtualGridProperties }
@@ -2423,6 +2127,8 @@ var
 begin
   //如果有自适应尺寸的列
   uBaseLog.HandleException(nil,'TVirtualListProperties.CalcAutoSizeColumnWidth Begin');
+
+  if csLoading in Self.FSkinControl.ComponentState then Exit;
 
   AColumnsWidth:=0;
   AAutoFitColumnsCount:=0;
@@ -2902,7 +2608,7 @@ begin
       ////表格列布局管理
       //FColumnLayoutsManager:=GetColumnLayoutsManagerClass.Create(Self.FColumns);
 
-      FColumns:=FSkinVirtualGridIntf.GetColumnHeader.Prop.Items;
+      FColumns:=TSkinVirtualGridColumns(FSkinVirtualGridIntf.GetColumnHeader.Prop.Items);
       FColumns.FVirtualGridProperties:=Self;
       FColumnLayoutsManager:=FSkinVirtualGridIntf.GetColumnHeader.Prop.ListLayoutsManager;
 
@@ -2983,8 +2689,11 @@ end;
 procedure TVirtualGridProperties.DoClickCell(ARow: TBaseSkinItem; ACol: TSkinVirtualGridColumn;X:Double;Y:Double);
 begin
 
-    if (Self.FSelectedItem=ARow)
+    if
+        //点击的是同一个单元格
+        (Self.FSelectedItem=ARow)
       and (FClickedCellCol=ACol)
+      //上一次点击了该单元格
       and (FClickedCellCol<>nil)
       and not FClickedCellCol.ReadOnly
       and not Self.ReadOnly
@@ -3032,6 +2741,10 @@ begin
 //
 //            //行选择,并且点击行
 //            inherited;
+
+            //如果正在编辑,那么停止编辑
+            Self.StopEditingItem;
+
 
             FClickedCellCol:=ACol;
 
@@ -3191,7 +2904,8 @@ procedure TVirtualGridProperties.DoColumnSizeChange(Sender: TObject);
 begin
   uBaseLog.OutputDebugString('UpdateScrollBars In DoColumnSizeChange');
   //重新排列表格数据行
-  Self.FListLayoutsManager.DoItemSizeChange(nil,False);
+  //Self.FListLayoutsManager.DoItemSizeChange(nil,False);
+  Self.FListLayoutsManager.DoItemSizeChange(nil,True);
 
   Self.UpdateScrollBars;
   Invalidate;
@@ -4514,6 +4228,8 @@ begin
 //        AutoAdjustItemDesignerPanelSize(AColItemDesignerPanel,ASkinItem);
 //      end;
 
+      //if (AWidth>100000) or (AHeight>100000) then
+      //  BoundsOutOfBounds;
 
       //自动调整ItemDesignerPanel的尺寸(区分设计时与运行时)
       AColItemDesignerPanel.Width:=Ceil(ACellDrawRect.Width);
@@ -4997,7 +4713,7 @@ begin
 
 
 
-
+    //if Self.FSkinVirtualGridIntf.Prop.FColumnLayoutsManager.
 
 
 
@@ -5031,11 +4747,17 @@ begin
           begin
             if I>=FRealFixColCount then
             begin
-
               //绘制单元格
               //根据表格列的类型来判断绘制
               //比如表格列的内容是字段串的,那么就绘制这个字符串就可以了
               ACellDrawRect:=Self.FSkinVirtualGridIntf.Prop.VisibleColumnDrawRect(I);
+              //uBaseLog.OutputDebugString('ACellDrawRect'
+              //                                          +' I:'+FloatToStr(I)
+              //                                          +' '+FloatToStr(ACellDrawRect.Left)
+              //                                          +' '+FloatToStr(ACellDrawRect.Top)
+              //                                          +' '+FloatToStr(ACellDrawRect.Width)
+              //                                          +' '+FloatToStr(ACellDrawRect.Height)
+              //                                          );
               //加上水平垂直的偏移
               ACellDrawRect.Top:=AItemDrawRect.Top;
               ACellDrawRect.Bottom:=AItemDrawRect.Bottom;
@@ -6076,7 +5798,8 @@ begin
                                 //绘制表格列的开始分隔线
                                 if (I=FRealFixColCount)
                                   and ASkinVirtualGridMaterial.FDrawGridCellDevideMaterial.FIsDrawColBeginLine
-                                  and (ALineRect.Left>ADrawRect.Left+Self.FSkinVirtualGridIntf.Prop.GetRealFixedColsDrawRight) then
+                                  and (ALineRect.Left>ADrawRect.Left+Self.FSkinVirtualGridIntf.Prop.GetRealFixedColsDrawRight)
+                                  then
                                 begin
                                   ACanvas.DrawRectLine(ASkinVirtualGridMaterial.DrawGridCellDevideMaterial.FDrawColLineParam,
                                                       ALineRect,lpLeft);
@@ -6094,7 +5817,9 @@ begin
                           if (BiggerDouble(Self.FSkinVirtualGridIntf.Prop.FIndicatorWidth,0)
                                   and ASkinVirtualGridMaterial.FDrawIndicatorDevideMaterial.FIsDrawColEndLine
                                   and EqualDouble(Self.FDrawRectLeftOffset,0))
-                                  or IsSameDouble(Self.FSkinVirtualGridIntf.Prop.FIndicatorWidth,0) then
+                                  { TODO : 注释掉了 }
+//                                  or IsSameDouble(Self.FSkinVirtualGridIntf.Prop.FIndicatorWidth,0)
+                                  then
                           begin
                           end
                           else
@@ -6105,8 +5830,9 @@ begin
                               if (I=0)
                                 and (
                                       ASkinVirtualGridMaterial.FDrawGridCellDevideMaterial.FIsDrawColBeginLine
-                                    and (ALineRect.Left>ADrawRect.Left+Self.FSkinVirtualGridIntf.Prop.GetRealFixedColsDrawRight)
-                                    or IsSameDouble(Self.FSkinVirtualGridIntf.Prop.FIndicatorWidth,0)
+//                                    and (ALineRect.Left>ADrawRect.Left+Self.FSkinVirtualGridIntf.Prop.GetRealFixedColsDrawRight)
+                                  { TODO : 注释掉了 难道FIndicatorWidth为0就必须得画吗 }
+//                                    or IsSameDouble(Self.FSkinVirtualGridIntf.Prop.FIndicatorWidth,0)
                                     ) then
                               begin
                                 ACanvas.DrawRectLine(ASkinVirtualGridMaterial.DrawGridCellDevideMaterial.FDrawColLineParam,
@@ -8154,6 +7880,7 @@ begin
 
   FAutoSize:=False;
   FAutoSizeMinWidth:=Const_DefaultColumnWidth;
+  FAutoFitWidth:=0;
 
 
   inherited Create(Collection);
@@ -8179,6 +7906,7 @@ begin
   FDefaultItemStyleSetting.FOnInit:=Self.DoNewListItemStyleFrameCacheInit;
   FDefaultItemStyleSetting.FOnChangeItem:=Self.DoNewListItemStyleFrameCacheChangeItem;
   FDefaultItemStyleSetting.FCustomListProperties:=TSkinVirtualGridColumns(Collection).FVirtualGridProperties;
+
 
 end;
 
@@ -9597,8 +9325,9 @@ begin
   FColumnHeader.Prop.FHorzControlGestureManager:=Self.Prop.FHorzControlGestureManager;
   FColumnHeader.Prop.FIsRefHorzControlGestureManager:=True;
 
-  //
+  //允许拖拽列来改变顺序
   FColumnHeader.Prop.FEnableAutoDragDropItem:=True;
+  //允许拖动来改变宽度
   FColumnHeader.Prop.FEnableResizeItemWidth:=True;
 
 
@@ -9939,6 +9668,11 @@ begin
   Result:=FColumnHeader;
 end;
 
+function TSkinVirtualGrid.GetColumnHeaderMaterial: TSkinColumnHeaderDefaultMaterial;
+begin
+  Result:=TSkinColumnHeaderDefaultMaterial(FColumnHeader.SelfOwnMaterial);
+end;
+
 //procedure TSkinVirtualGrid.SetColumnHeader(Value: TSkinListBox);
 //begin
 //  if FColumnHeader<>Value then
@@ -10229,23 +9963,23 @@ end;
 //  FSortStateDescPicture.Assign(Value);
 //end;
 
-{ TSkinColumnHeaderLayoutsManager }
+//{ TSkinColumnHeaderLayoutsManager }
+//
+//function TSkinColumnHeaderLayoutsManager.CalcItemWidth(AItem: ISkinItem): Double;
+//begin
+//  Result:=Inherited;
+//  //if FIsAddAutoFitWidth and TSkinVirtualGridColumn(AItem).FIsAutoFitControlWidth then
+//  //begin
+//  //  Result:=Result+TSkinVirtualGridColumn(AItem).FAutoFitWidth;
+//  //end;
+//
+//end;
 
-function TSkinColumnHeaderLayoutsManager.CalcItemWidth(AItem: ISkinItem): Double;
-begin
-  Result:=Inherited;
-  //if FIsAddAutoFitWidth and TSkinVirtualGridColumn(AItem).FIsAutoFitControlWidth then
-  //begin
-  //  Result:=Result+TSkinVirtualGridColumn(AItem).FAutoFitWidth;
-  //end;
-
-end;
-
-initialization
-  RegisterClasses([TSkinColumnHeader]);
-
-  RegisterSkinControlStyle('SkinColumnHeader',TSkinColumnHeaderDefaultType,TSkinColumnHeaderDefaultMaterial,TColumnHeaderProperties,Const_Default_ComponentType,True);
-
+//initialization
+//  RegisterClasses([TSkinColumnHeader]);
+//
+//  RegisterSkinControlStyle('SkinColumnHeader',TSkinColumnHeaderDefaultType,TSkinColumnHeaderDefaultMaterial,TColumnHeaderProperties,Const_Default_ComponentType,True);
+//
 
 end.
 

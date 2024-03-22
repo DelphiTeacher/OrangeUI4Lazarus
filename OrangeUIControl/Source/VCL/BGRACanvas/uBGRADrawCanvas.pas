@@ -3016,6 +3016,7 @@ begin
       end
       else
       begin
+          //不填充
           Self.FBGRACanvas.Brush.Style:=TBrushStyle.bsClear;
 
       end;

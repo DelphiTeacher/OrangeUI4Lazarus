@@ -29,6 +29,7 @@ uses
   {$IFDEF FPC}
   EasyServiceCommonMaterialDataMoudle_VCL_Lazarus,
   {$ELSE}
+  Vcl.Imaging.jpeg,Vcl.Imaging.pngimage,
   EasyServiceCommonMaterialDataMoudle_VCL,
   {$ENDIF}
 
@@ -49,6 +50,10 @@ type
     btnEditCell: TSkinButton;
     btnSaveCell: TSkinButton;
     SkinWinProgressBar1_Material: TSkinProgressBarDefaultMaterial;
+    SkinItemGrid1: TSkinItemGrid;
+    imgStar: TImage;
+    imgHeader1: TImage;
+    imgHeader2: TImage;
     procedure gridDataResize(Sender: TObject);
     procedure gridDataCustomPaintCellBegin(ACanvas: TDrawCanvas;
       ARowIndex: Integer; ARow: TBaseSkinItem; ARowDrawRect: TRectF;
@@ -67,12 +72,18 @@ type
     { Private declarations }
   public
     constructor Create(AOwner:TComponent);override;
+    procedure InitColumns(AGrid:TSkinItemGrid);
+    procedure InitRows(AGrid:TSkinItemGrid);
     { Public declarations }
   end;
 
 implementation
 
 {$R *.dfm}
+
+uses
+  ItemGrid_DefaultFrame;
+
 
 procedure TFrameItemGrid_ColumnControlType.gridDataClickCellItemDesignerPanelChild(
   Sender: TObject; ARow: TBaseSkinItem; AColumn: TSkinVirtualGridColumn;
@@ -191,32 +202,19 @@ begin
 
 end;
 
-constructor TFrameItemGrid_ColumnControlType.Create(AOwner:TComponent);
+procedure TFrameItemGrid_ColumnControlType.InitColumns(AGrid: TSkinItemGrid);
 var
-  I:Integer;
-  AOrderJson:ISuperObject;
-  AOrderJsonArray:ISuperArray;
-  ARow:TSkinJsonItemGridRow;
   AColumn:TSkinItemGridColumn;
 begin
 
-  Inherited;
-
-
-  //不允许鼠标按下拖动,必须使用滚动条
-//  Self.gridData.Prop.VertControlGestureManager.FIsEnableMouseDragScroll:=False;
-//  Self.gridData.Prop.HorzControlGestureManager.FIsEnableMouseDragScroll:=False;
-
-
-
-
 
   //Create Columns
-  Self.gridData.Prop.Columns.BeginUpdate;
+  AGrid.Prop.Columns.BeginUpdate;
+  AGrid.Prop.Items.BeginUpdate;
   try
-    Self.gridData.Prop.Columns.Clear;
+    AGrid.Prop.Columns.Clear;
 
-    AColumn:=Self.gridData.Prop.Columns.Add;
+    AColumn:=AGrid.Prop.Columns.Add;
     AColumn.BindItemFieldName:='ItemIcon';
     AColumn.Caption:='Image-Icon';
     AColumn.Width:=150;
@@ -226,7 +224,7 @@ begin
     TSkinImage(AColumn.FSkinControl).Material.DrawPictureParam.PictureVertAlign:=TPictureVertAlign.pvaCenter;
 
 
-    AColumn:=Self.gridData.Prop.Columns.Add;
+    AColumn:=AGrid.Prop.Columns.Add;
     AColumn.BindItemFieldName:='ItemCaption';
     AColumn.Caption:='Label-Caption';
     AColumn.Width:=150;
@@ -235,15 +233,15 @@ begin
     TSkinLabel(AColumn.FSkinControl).Material.DrawCaptionParam.FontHorzAlign:=fhaCenter;
 
 
-    AColumn:=Self.gridData.Prop.Columns.Add;
+    AColumn:=AGrid.Prop.Columns.Add;
     AColumn.BindItemFieldName:='ItemDetail';
     AColumn.Caption:='RepeatImage-Detail1';
     AColumn.Width:=150;
     AColumn.ControlType:='RepeatImage';
-    TSkinRepeatImage(AColumn.FSkinControl).Prop.Picture.FileName:='star.png';
+    TSkinRepeatImage(AColumn.FSkinControl).Prop.Picture.Assign(imgStar.Picture);
 
 
-    AColumn:=Self.gridData.Prop.Columns.Add;
+    AColumn:=AGrid.Prop.Columns.Add;
     AColumn.BindItemFieldName:='ItemChecked';
     AColumn.Caption:='CheckBox-Checked';
     AColumn.Width:=150;
@@ -252,33 +250,34 @@ begin
     TSkinCheckBox(AColumn.FSkinControl).Caption:='married';
 
 
-    AColumn:=Self.gridData.Prop.Columns.Add;
+    AColumn:=AGrid.Prop.Columns.Add;
     AColumn.BindItemFieldName:='ItemDetail2';
     AColumn.Caption:='ProgressBar-Detail2';
     AColumn.Width:=150;
     AColumn.ControlType:='ProgressBar';
     TSkinProgressBar(AColumn.FSkinControl).RefMaterial:=SkinWinProgressBar1_Material;
 
-    AColumn:=Self.gridData.Prop.Columns.Add;
+    AColumn:=AGrid.Prop.Columns.Add;
     AColumn.BindItemFieldName:='ItemDetail3';
     AColumn.Caption:='ComboBox-Detail3';
     AColumn.Width:=150;
     AColumn.ControlType:='ComboBox';
     TSkinComboBox(AColumn.FSkinControl).RefMaterial:=dmEasyServiceCommonMaterial.cmbGrayBorderFocusedThemeBorderEffectMaterial;
 
-    AColumn:=Self.gridData.Prop.Columns.Add;
+    AColumn:=AGrid.Prop.Columns.Add;
     AColumn.BindItemFieldName:='';
     AColumn.Caption:='Button';
     AColumn.Width:=100;
     AColumn.ControlType:='Button';
     TSkinButton(AColumn.FSkinControl).RefMaterial:=dmEasyServiceCommonMaterial.btnThemeColorCaptionLeftIconRight;
     TSkinButton(AColumn.FSkinControl).Caption:='Action';
+    TSkinButton(AColumn.FSkinControl).HitTest:=True;
 
 
 
 
 //    //make column status to Label
-//    AColumn:=Self.gridData.Prop.Columns.Find('status');
+//    AColumn:=AGrid.Prop.Columns.Find('status');
 //    if AColumn<>nil then
 //    begin
 //      AColumn.BindItemFieldName:='status';
@@ -314,7 +313,7 @@ begin
 //
 //    //自定义标题列的字体对齐
 //    //set column title text align to left
-//    AColumn:=Self.gridData.Prop.Columns.Find('title');
+//    AColumn:=AGrid.Prop.Columns.Find('title');
 //    if AColumn<>nil then
 //    begin
 //      AColumn.IsUseDefaultGridColumnMaterial:=False;
@@ -337,7 +336,7 @@ begin
 //
 //
 //    //自定义操作列的控件类型为Button
-//    AColumn:=TSkinItemGridColumn(Self.gridData.Prop.Columns.FindByCaption('Action'));
+//    AColumn:=TSkinItemGridColumn(AGrid.Prop.Columns.FindByCaption('Action'));
 //    if AColumn<>nil then
 //    begin
 //      //create AColumn.FSkinControl as TSkinButton
@@ -358,88 +357,149 @@ begin
 
 
   finally
-    Self.gridData.Prop.Columns.EndUpdate;
+    AGrid.Prop.Columns.EndUpdate;
+    AGrid.Prop.Items.EndUpdate;
   end;
 
 
 
+end;
+
+procedure TFrameItemGrid_ColumnControlType.InitRows(AGrid: TSkinItemGrid);
+var
+  ARow:TSkinItemGridRow;
+begin
+  AGrid.Prop.Items.BeginUpdate;
+  try
+    AGrid.Prop.Items.Clear;
+
+    ARow:=TSkinJsonItemGridRow(AGrid.Prop.Items.Add);
+    ARow.Icon.Assign(imgHeader1.Picture);
+    ARow.Caption:='DelphiTeacher';
+    ARow.Detail:='1';
+    ARow.Checked:=True;
+    ARow.Detail2:='50';
+    ARow.Detail3:='Administrator';
 
 
-  //init column header caption style
-//  Self.gridData.Material.DrawColumnMaterial.DrawCaptionParam.FontSize:=16;
-//  Self.gridData.Material.DrawColumnMaterial.DrawCaptionParam.FontStyle:=[fsBold];
-//  Self.gridData.Material.DrawColumnMaterial.DrawCaptionParam.FontVertAlign:=fvaCenter;
-//  Self.gridData.Material.DrawColumnMaterial.DrawCaptionParam.DrawRectSetting.Enabled:=True;
-//  Self.gridData.Material.DrawColumnMaterial.DrawCaptionParam.DrawRectSetting.SizeType:=TDPSizeType.dpstPixel;
-//  Self.gridData.Material.DrawColumnMaterial.DrawCaptionParam.DrawRectSetting.Left:=10;
-
-
-
-  Self.gridData.Prop.ColumnsHeaderHeight:=50;
-  Self.gridData.Prop.ItemHeight:=50;
-
-
-  //表头有分隔线
-  //has column header devide line
-  Self.gridData.ColumnHeader.Material.DrawItemDevideParam.IsFill:=True;
-
-//  Self.gridData.ColumnHeader.Material.BackColor.BorderWidth:=1;
-////  Self.gridData.ColumnHeader.Material.BackColor.BorderEadges:=[TDRPBorderEadge.beBottom];
-//  Self.gridData.ColumnHeader.Material.BackColor.BorderColor.Color:=$EDEDED;
-//  Self.gridData.ColumnHeader.Material.BackColor.FillColor.Color:=$EDEDED;
-
-
-
-  //表头不填充背景色
-  //Column header no fill
-  Self.gridData.Material.DrawColumnMaterial.DrawItemBackColorParam.BorderWidth:=1;
-  Self.gridData.Material.DrawColumnMaterial.DrawItemBackColorParam.BorderColor.Color:=$EDEDED;
-  Self.gridData.Material.DrawColumnMaterial.DrawItemBackColorParam.IsFill:=False;
+    ARow:=TSkinJsonItemGridRow(AGrid.Prop.Items.Add);
+    ARow.Icon.Assign(imgHeader2.Picture);
+    ARow.Caption:='OrangeUI';
+    ARow.Detail:='4';
+    ARow.Checked:=False;
+    ARow.Detail2:='10';
+    ARow.Detail3:='System';
 
 
 
+  finally
+    AGrid.Prop.Items.EndUpdate;
+  end;
 
-//  Self.gridData.ColumnHeader.Material.DrawItemBackColorParam.IsFill:=False;
+
+end;
+
+constructor TFrameItemGrid_ColumnControlType.Create(AOwner:TComponent);
+//var
+//  I:Integer;
+//  AOrderJson:ISuperObject;
+//  AOrderJsonArray:ISuperArray;
+//  ARow:TSkinJsonItemGridRow;
+//  AColumn:TSkinItemGridColumn;
+begin
+
+  Inherited;
+
+
+  //不允许鼠标按下拖动,必须使用滚动条
+//  Self.gridData.Prop.VertControlGestureManager.FIsEnableMouseDragScroll:=False;
+//  Self.gridData.Prop.HorzControlGestureManager.FIsEnableMouseDragScroll:=False;
+
+
+  InitGridMaterial(SkinItemGrid1);
+  InitColumns(SkinItemGrid1);
+  InitRows(SkinItemGrid1);
+
+
+
+
+
 //
-//  Self.gridData.ColumnHeader.Material.DrawItemCaptionParam.FontColor:=clGray;
-//  Self.gridData.ColumnHeader.Material.DrawItemCaptionParam.FontSize:=11;
-//  Self.gridData.ColumnHeader.Material.DrawItemCaptionParam.FontStyle:=[fsBold];
-//  Self.gridData.ColumnHeader.Material.DrawItemCaptionParam.FontVertAlign:=fvaCenter;
-//  Self.gridData.ColumnHeader.Material.DrawItemCaptionParam.DrawRectSetting.Enabled:=True;
-//  Self.gridData.ColumnHeader.Material.DrawItemCaptionParam.DrawRectSetting.SizeType:=TDPSizeType.dpstPixel;
-//  Self.gridData.ColumnHeader.Material.DrawItemCaptionParam.DrawRectSetting.Left:=10;
-
-
-
-
-//  Self.gridData.Material.IsSimpleDrawGroupBeginDevide:=True;
-//  Self.gridData.Material.DrawGroupBeginDevideParam.IsFill:=True;
-
-  //no col line
-//  Self.gridData.Material.DrawGridCellDevideMaterial.IsDrawColLine:=False;
-
-
-
-
-
-  //Grid devide line
-  //表格有分隔线
-  Self.gridData.Material.DrawGridCellDevideMaterial.DrawRowLineParam.PenDrawColor.Color:=$EDEDED;
-  Self.gridData.Material.DrawGridCellDevideMaterial.DrawColLineParam.PenDrawColor.Color:=$EDEDED;
-  Self.gridData.Material.DrawGridCellDevideMaterial.IsDrawColEndLine:=True;
-
-
-
-
-  //单元格内容水平居中
-//  Self.gridData.Material.DrawColumnMaterial.DrawCellTextParam.IsFill:=False;
-
-
-
-  Self.gridData.VertScrollBar.Material.IsTransparent:=True;
-  Self.gridData.VertScrollBar.Material.BackColor.IsFill:=False;
-
-
+//  //init column header caption style
+////  Self.gridData.Material.DrawColumnMaterial.DrawCaptionParam.FontSize:=16;
+////  Self.gridData.Material.DrawColumnMaterial.DrawCaptionParam.FontStyle:=[fsBold];
+////  Self.gridData.Material.DrawColumnMaterial.DrawCaptionParam.FontVertAlign:=fvaCenter;
+////  Self.gridData.Material.DrawColumnMaterial.DrawCaptionParam.DrawRectSetting.Enabled:=True;
+////  Self.gridData.Material.DrawColumnMaterial.DrawCaptionParam.DrawRectSetting.SizeType:=TDPSizeType.dpstPixel;
+////  Self.gridData.Material.DrawColumnMaterial.DrawCaptionParam.DrawRectSetting.Left:=10;
+//
+//
+//
+//  Self.gridData.Prop.ColumnsHeaderHeight:=50;
+//  Self.gridData.Prop.ItemHeight:=50;
+//
+//
+//  //表头有分隔线
+//  //has column header devide line
+//  Self.gridData.ColumnHeader.Material.DrawItemDevideParam.IsFill:=True;
+//
+////  Self.gridData.ColumnHeader.Material.BackColor.BorderWidth:=1;
+//////  Self.gridData.ColumnHeader.Material.BackColor.BorderEadges:=[TDRPBorderEadge.beBottom];
+////  Self.gridData.ColumnHeader.Material.BackColor.BorderColor.Color:=$EDEDED;
+////  Self.gridData.ColumnHeader.Material.BackColor.FillColor.Color:=$EDEDED;
+//
+//
+//
+//  //表头不填充背景色
+//  //Column header no fill
+//  Self.gridData.Material.DrawColumnMaterial.DrawItemBackColorParam.BorderWidth:=1;
+//  Self.gridData.Material.DrawColumnMaterial.DrawItemBackColorParam.BorderColor.Color:=$EDEDED;
+//  Self.gridData.Material.DrawColumnMaterial.DrawItemBackColorParam.IsFill:=False;
+//
+//
+//
+//
+////  Self.gridData.ColumnHeader.Material.DrawItemBackColorParam.IsFill:=False;
+////
+////  Self.gridData.ColumnHeader.Material.DrawItemCaptionParam.FontColor:=clGray;
+////  Self.gridData.ColumnHeader.Material.DrawItemCaptionParam.FontSize:=11;
+////  Self.gridData.ColumnHeader.Material.DrawItemCaptionParam.FontStyle:=[fsBold];
+////  Self.gridData.ColumnHeader.Material.DrawItemCaptionParam.FontVertAlign:=fvaCenter;
+////  Self.gridData.ColumnHeader.Material.DrawItemCaptionParam.DrawRectSetting.Enabled:=True;
+////  Self.gridData.ColumnHeader.Material.DrawItemCaptionParam.DrawRectSetting.SizeType:=TDPSizeType.dpstPixel;
+////  Self.gridData.ColumnHeader.Material.DrawItemCaptionParam.DrawRectSetting.Left:=10;
+//
+//
+//
+//
+////  Self.gridData.Material.IsSimpleDrawGroupBeginDevide:=True;
+////  Self.gridData.Material.DrawGroupBeginDevideParam.IsFill:=True;
+//
+//  //no col line
+////  Self.gridData.Material.DrawGridCellDevideMaterial.IsDrawColLine:=False;
+//
+//
+//
+//
+//
+//  //Grid devide line
+//  //表格有分隔线
+//  Self.gridData.Material.DrawGridCellDevideMaterial.DrawRowLineParam.PenDrawColor.Color:=$EDEDED;
+//  Self.gridData.Material.DrawGridCellDevideMaterial.DrawColLineParam.PenDrawColor.Color:=$EDEDED;
+//  Self.gridData.Material.DrawGridCellDevideMaterial.IsDrawColEndLine:=True;
+//
+//
+//
+//
+//  //单元格内容水平居中
+////  Self.gridData.Material.DrawColumnMaterial.DrawCellTextParam.IsFill:=False;
+//
+//
+//
+//  Self.gridData.VertScrollBar.Material.IsTransparent:=True;
+//  Self.gridData.VertScrollBar.Material.BackColor.IsFill:=False;
+//
+//
 
 
 //  //init data

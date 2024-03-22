@@ -1,28 +1,29 @@
 object frmLogin: TfrmLogin
   Left = 844
-  Height = 401
   Top = 505
-  Width = 457
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'OrangeUI'
   ClientHeight = 401
   ClientWidth = 457
   Color = 4602417
+  Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'Tahoma'
-  OnCreate = FormCreate
+  Font.Style = []
+  OldCreateOrder = True
   Position = poScreenCenter
-  LCLVersion = '3.2.0.0'
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
   object pnlBottom: TSkinWinPanel
     Left = 0
-    Height = 230
     Top = 171
     Width = 457
-    ParentMouseEvent = False
+    Height = 230
+    ParentMouseEvent = True
     DirectUIVisible = False
-    AlignWithMargins = False
     ComponentTypeUseKind = ctukDefault
     MaterialUseKind = mukSelfOwn
     KeepSelfOwnMaterial = True
@@ -49,8 +50,10 @@ object frmLogin: TfrmLogin
     SelfOwnMaterial.IsTransparent = False
     SelfOwnMaterial.DrawCaptionParam.FontName = 'Tahoma'
     SelfOwnMaterial.DrawCaptionParam.FontSize = 8
+    SelfOwnMaterial.DrawCaptionParam.DrawFont.Charset = DEFAULT_CHARSET
     SelfOwnMaterial.DrawCaptionParam.DrawFont.Height = -11
     SelfOwnMaterial.DrawCaptionParam.DrawFont.Name = 'Tahoma'
+    SelfOwnMaterial.DrawCaptionParam.DrawFont.Style = []
     SelfOwnMaterial.DrawCaptionParam.DrawFont.FontColor.Alpha = 255
     SelfOwnMaterial.DrawCaptionParam.FontTrimming = fttNone
     SelfOwnMaterial.DrawCaptionParam.FontHorzAlign = fhaLeft
@@ -70,14 +73,15 @@ object frmLogin: TfrmLogin
     Align = alBottom
     ParentBackground = False
     TabOrder = 0
+    Caption = ''
+    Text = ''
     object pnlUser: TSkinWinPanel
       Left = 130
-      Height = 33
       Top = 32
       Width = 200
-      ParentMouseEvent = False
+      Height = 33
+      ParentMouseEvent = True
       DirectUIVisible = False
-      AlignWithMargins = False
       ComponentTypeUseKind = ctukDefault
       MaterialUseKind = mukSelfOwn
       KeepSelfOwnMaterial = True
@@ -105,8 +109,10 @@ object frmLogin: TfrmLogin
       SelfOwnMaterial.IsTransparent = False
       SelfOwnMaterial.DrawCaptionParam.FontName = 'Tahoma'
       SelfOwnMaterial.DrawCaptionParam.FontSize = 8
+      SelfOwnMaterial.DrawCaptionParam.DrawFont.Charset = DEFAULT_CHARSET
       SelfOwnMaterial.DrawCaptionParam.DrawFont.Height = -11
       SelfOwnMaterial.DrawCaptionParam.DrawFont.Name = 'Tahoma'
+      SelfOwnMaterial.DrawCaptionParam.DrawFont.Style = []
       SelfOwnMaterial.DrawCaptionParam.DrawFont.FontColor.Alpha = 255
       SelfOwnMaterial.DrawCaptionParam.FontTrimming = fttNone
       SelfOwnMaterial.DrawCaptionParam.FontHorzAlign = fhaLeft
@@ -125,28 +131,32 @@ object frmLogin: TfrmLogin
       MouseDownFocus = False
       ParentBackground = False
       TabOrder = 0
+      Caption = ''
+      Text = ''
       object edtUser: TEdit
         Left = 0
-        Height = 33
         Top = 0
         Width = 200
+        Height = 33
         Align = alClient
+        Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -16
         Font.Name = 'Tahoma'
+        Font.Style = []
         ParentFont = False
         TabOrder = 0
         Text = '18957901025'
+        ExplicitHeight = 27
       end
     end
     object pnlPassword: TSkinWinPanel
       Left = 130
-      Height = 33
       Top = 64
       Width = 200
-      ParentMouseEvent = False
+      Height = 33
+      ParentMouseEvent = True
       DirectUIVisible = False
-      AlignWithMargins = False
       ComponentTypeUseKind = ctukDefault
       MaterialUseKind = mukSelfOwn
       KeepSelfOwnMaterial = True
@@ -174,8 +184,10 @@ object frmLogin: TfrmLogin
       SelfOwnMaterial.IsTransparent = False
       SelfOwnMaterial.DrawCaptionParam.FontName = 'Tahoma'
       SelfOwnMaterial.DrawCaptionParam.FontSize = 8
+      SelfOwnMaterial.DrawCaptionParam.DrawFont.Charset = DEFAULT_CHARSET
       SelfOwnMaterial.DrawCaptionParam.DrawFont.Height = -11
       SelfOwnMaterial.DrawCaptionParam.DrawFont.Name = 'Tahoma'
+      SelfOwnMaterial.DrawCaptionParam.DrawFont.Style = []
       SelfOwnMaterial.DrawCaptionParam.DrawFont.FontColor.Alpha = 255
       SelfOwnMaterial.DrawCaptionParam.FontTrimming = fttNone
       SelfOwnMaterial.DrawCaptionParam.FontHorzAlign = fhaLeft
@@ -194,38 +206,41 @@ object frmLogin: TfrmLogin
       MouseDownFocus = False
       ParentBackground = False
       TabOrder = 1
+      Caption = ''
+      Text = ''
       object edtPassword: TEdit
         Left = 0
-        Height = 33
         Top = 0
         Width = 200
+        Height = 33
         Align = alClient
-        EchoMode = emPassword
+        Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -16
         Font.Name = 'Tahoma'
+        Font.Style = []
         ParentFont = False
         PasswordChar = '*'
         TabOrder = 0
         Text = '123456'
+        ExplicitHeight = 27
       end
     end
     object chkRememberPassword: TCheckBox
       Left = 130
-      Height = 23
       Top = 103
       Width = 144
+      Height = 23
       Caption = 'Remember password'
       TabOrder = 2
     end
     object lblForget: TSkinWinLabel
       Left = 272
-      Height = 22
       Top = 103
       Width = 55
-      ParentMouseEvent = False
+      Height = 22
+      ParentMouseEvent = True
       DirectUIVisible = False
-      AlignWithMargins = False
       ComponentTypeUseKind = ctukDefault
       MaterialUseKind = mukSelfOwn
       KeepSelfOwnMaterial = True
@@ -252,9 +267,11 @@ object frmLogin: TfrmLogin
       SelfOwnMaterial.DrawCaptionParam.FontName = 'Tahoma'
       SelfOwnMaterial.DrawCaptionParam.FontSize = 8
       SelfOwnMaterial.DrawCaptionParam.FontColor = 10796800
+      SelfOwnMaterial.DrawCaptionParam.DrawFont.Charset = DEFAULT_CHARSET
       SelfOwnMaterial.DrawCaptionParam.DrawFont.Color = 10796800
       SelfOwnMaterial.DrawCaptionParam.DrawFont.Height = -11
       SelfOwnMaterial.DrawCaptionParam.DrawFont.Name = 'Tahoma'
+      SelfOwnMaterial.DrawCaptionParam.DrawFont.Style = []
       SelfOwnMaterial.DrawCaptionParam.DrawFont.FontColor.Alpha = 255
       SelfOwnMaterial.DrawCaptionParam.DrawFont.FontColor.Color = 10796800
       SelfOwnMaterial.DrawCaptionParam.FontTrimming = fttNone
@@ -280,12 +297,11 @@ object frmLogin: TfrmLogin
     end
     object btnLogin: TSkinWinButton
       Left = 133
-      Height = 40
       Top = 144
       Width = 194
-      ParentMouseEvent = False
+      Height = 40
+      ParentMouseEvent = True
       DirectUIVisible = False
-      AlignWithMargins = False
       ComponentTypeUseKind = ctukDefault
       MaterialUseKind = mukSelfOwn
       KeepSelfOwnMaterial = True
@@ -321,8 +337,10 @@ object frmLogin: TfrmLogin
       SelfOwnMaterial.IsAutoCenterIconAndCaption = False
       SelfOwnMaterial.DrawDetailParam.FontName = 'Tahoma'
       SelfOwnMaterial.DrawDetailParam.FontSize = 8
+      SelfOwnMaterial.DrawDetailParam.DrawFont.Charset = DEFAULT_CHARSET
       SelfOwnMaterial.DrawDetailParam.DrawFont.Height = -11
       SelfOwnMaterial.DrawDetailParam.DrawFont.Name = 'Tahoma'
+      SelfOwnMaterial.DrawDetailParam.DrawFont.Style = []
       SelfOwnMaterial.DrawDetailParam.DrawFont.FontColor.Alpha = 255
       SelfOwnMaterial.DrawDetailParam.FontTrimming = fttNone
       SelfOwnMaterial.DrawDetailParam.FontHorzAlign = fhaLeft
@@ -339,8 +357,10 @@ object frmLogin: TfrmLogin
       SelfOwnMaterial.DrawDetailParam.DrawEffectSetting.FocusedEffect.FontSize = 12
       SelfOwnMaterial.DrawDetail1Param.FontName = 'Tahoma'
       SelfOwnMaterial.DrawDetail1Param.FontSize = 8
+      SelfOwnMaterial.DrawDetail1Param.DrawFont.Charset = DEFAULT_CHARSET
       SelfOwnMaterial.DrawDetail1Param.DrawFont.Height = -11
       SelfOwnMaterial.DrawDetail1Param.DrawFont.Name = 'Tahoma'
+      SelfOwnMaterial.DrawDetail1Param.DrawFont.Style = []
       SelfOwnMaterial.DrawDetail1Param.DrawFont.FontColor.Alpha = 255
       SelfOwnMaterial.DrawDetail1Param.FontTrimming = fttNone
       SelfOwnMaterial.DrawDetail1Param.FontHorzAlign = fhaLeft
@@ -358,9 +378,11 @@ object frmLogin: TfrmLogin
       SelfOwnMaterial.DrawHelpTextParam.FontName = 'Tahoma'
       SelfOwnMaterial.DrawHelpTextParam.FontSize = 8
       SelfOwnMaterial.DrawHelpTextParam.FontColor = clGray
+      SelfOwnMaterial.DrawHelpTextParam.DrawFont.Charset = DEFAULT_CHARSET
       SelfOwnMaterial.DrawHelpTextParam.DrawFont.Color = clGray
       SelfOwnMaterial.DrawHelpTextParam.DrawFont.Height = -11
       SelfOwnMaterial.DrawHelpTextParam.DrawFont.Name = 'Tahoma'
+      SelfOwnMaterial.DrawHelpTextParam.DrawFont.Style = []
       SelfOwnMaterial.DrawHelpTextParam.DrawFont.FontColor.Alpha = 255
       SelfOwnMaterial.DrawHelpTextParam.DrawFont.FontColor.Color = clGray
       SelfOwnMaterial.DrawHelpTextParam.FontTrimming = fttNone
@@ -385,9 +407,11 @@ object frmLogin: TfrmLogin
       SelfOwnMaterial.DrawCaptionParam.FontName = 'Tahoma'
       SelfOwnMaterial.DrawCaptionParam.FontSize = 12
       SelfOwnMaterial.DrawCaptionParam.FontColor = clWhite
+      SelfOwnMaterial.DrawCaptionParam.DrawFont.Charset = DEFAULT_CHARSET
       SelfOwnMaterial.DrawCaptionParam.DrawFont.Color = clWhite
       SelfOwnMaterial.DrawCaptionParam.DrawFont.Height = -16
       SelfOwnMaterial.DrawCaptionParam.DrawFont.Name = 'Tahoma'
+      SelfOwnMaterial.DrawCaptionParam.DrawFont.Style = []
       SelfOwnMaterial.DrawCaptionParam.DrawFont.FontColor.Alpha = 255
       SelfOwnMaterial.DrawCaptionParam.DrawFont.FontColor.Color = clWhite
       SelfOwnMaterial.DrawCaptionParam.FontTrimming = fttNone
@@ -441,12 +465,11 @@ object frmLogin: TfrmLogin
   end
   object lblForget1: TSkinWinLabel
     Left = 0
-    Height = 171
     Top = 0
     Width = 457
-    ParentMouseEvent = False
+    Height = 171
+    ParentMouseEvent = True
     DirectUIVisible = False
-    AlignWithMargins = False
     ComponentTypeUseKind = ctukDefault
     MaterialUseKind = mukSelfOwn
     KeepSelfOwnMaterial = True
@@ -474,6 +497,7 @@ object frmLogin: TfrmLogin
     SelfOwnMaterial.DrawCaptionParam.FontStyle = [fsBold]
     SelfOwnMaterial.DrawCaptionParam.FontSize = 28
     SelfOwnMaterial.DrawCaptionParam.FontColor = clWhite
+    SelfOwnMaterial.DrawCaptionParam.DrawFont.Charset = DEFAULT_CHARSET
     SelfOwnMaterial.DrawCaptionParam.DrawFont.Color = clWhite
     SelfOwnMaterial.DrawCaptionParam.DrawFont.Height = -37
     SelfOwnMaterial.DrawCaptionParam.DrawFont.Name = 'Tahoma'

@@ -11,7 +11,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="5"/>
         <CursorPos X="47" Y="29"/>
-        <UsageCount Value="187"/>
+        <UsageCount Value="201"/>
       </Unit>
       <Unit>
         <Filename Value="MainForm.pas"/>
@@ -22,7 +22,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="419"/>
         <CursorPos X="29" Y="435"/>
-        <UsageCount Value="187"/>
+        <UsageCount Value="201"/>
       </Unit>
       <Unit>
         <Filename Value="..\..\OrangeProjectCommon\EasyServiceCommonMaterialDataMoudle_VCL_Lazarus.pas"/>
@@ -33,7 +33,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="129"/>
         <CursorPos X="53" Y="150"/>
-        <UsageCount Value="172"/>
+        <UsageCount Value="187"/>
       </Unit>
       <Unit>
         <Filename Value="ButtonFrame.pas"/>
@@ -44,7 +44,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="70"/>
         <CursorPos X="18" Y="70"/>
-        <UsageCount Value="171"/>
+        <UsageCount Value="186"/>
       </Unit>
       <Unit>
         <Filename Value="CheckBoxFrame.pas"/>
@@ -54,7 +54,7 @@
         <ResourceBaseClass Value="Frame"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="18" Y="2"/>
-        <UsageCount Value="170"/>
+        <UsageCount Value="185"/>
       </Unit>
       <Unit>
         <Filename Value="DashBoard_AnalyseFrame.pas"/>
@@ -65,7 +65,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="73"/>
         <CursorPos X="27" Y="101"/>
-        <UsageCount Value="166"/>
+        <UsageCount Value="181"/>
       </Unit>
       <Unit>
         <Filename Value="DashBoard_ProjectsFrame.pas"/>
@@ -76,7 +76,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="85"/>
         <CursorPos X="37" Y="93"/>
-        <UsageCount Value="165"/>
+        <UsageCount Value="180"/>
       </Unit>
       <Unit>
         <Filename Value="DashBoard_Analyse_BarChart_MonthSummaryFrame.pas"/>
@@ -87,7 +87,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="123"/>
         <CursorPos X="26" Y="173"/>
-        <UsageCount Value="165"/>
+        <UsageCount Value="180"/>
       </Unit>
       <Unit>
         <Filename Value="DashBoard_Projects_PieChart_ProjectStatusFrame.pas"/>
@@ -98,7 +98,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="93"/>
         <CursorPos X="108" Y="106"/>
-        <UsageCount Value="165"/>
+        <UsageCount Value="180"/>
       </Unit>
       <Unit>
         <Filename Value="DashBoard_Analyse_ItemGrid_TwoCellTextFrame.pas"/>
@@ -109,7 +109,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="8"/>
         <CursorPos X="49" Y="17"/>
-        <UsageCount Value="165"/>
+        <UsageCount Value="180"/>
       </Unit>
       <Unit>
         <Filename Value="DashBoard_Projects_ItemGrid_TwoCellTextHasBackColorFrame.pas"/>
@@ -120,7 +120,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="33"/>
         <CursorPos X="85" Y="125"/>
-        <UsageCount Value="164"/>
+        <UsageCount Value="179"/>
       </Unit>
       <Unit>
         <Filename Value="LoginForm.pas"/>
@@ -130,7 +130,7 @@
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="92" Y="9"/>
-        <UsageCount Value="127"/>
+        <UsageCount Value="142"/>
       </Unit>
       <Unit>
         <Filename Value="HomeFrame.pas"/>
@@ -140,14 +140,14 @@
         <ResourceBaseClass Value="Frame"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="28" Y="31"/>
-        <UsageCount Value="108"/>
+        <UsageCount Value="123"/>
       </Unit>
       <Unit>
         <Filename Value="..\..\OrangeUIControl\Source\VCL\NativeCanvas\uNativeSkinPictureEngine.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="13" Y="26"/>
-        <UsageCount Value="71"/>
+        <UsageCount Value="86"/>
       </Unit>
       <Unit>
         <Filename Value="..\..\OrangeUIControl\Source\VCL\NativeCanvas\uNativeDrawCanvas.pas"/>
@@ -155,7 +155,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="3581"/>
         <CursorPos X="40" Y="3599"/>
-        <UsageCount Value="71"/>
+        <UsageCount Value="86"/>
       </Unit>
       <Unit>
         <Filename Value="..\..\OrangeUIListItemStyles_VCL\ListItemStyle_Default.pas"/>
@@ -163,7 +163,7 @@
         <HasResources Value="True"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="3" Y="6"/>
-        <UsageCount Value="71"/>
+        <UsageCount Value="86"/>
       </Unit>
       <Unit>
         <Filename Value="..\..\OrangeUIControl\Source\VCL\BGRACanvas\uBGRABufferBitmap.pas"/>
@@ -171,15 +171,16 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="63"/>
         <CursorPos Y="106"/>
-        <UsageCount Value="71"/>
+        <UsageCount Value="86"/>
       </Unit>
       <Unit>
         <Filename Value="..\..\OrangeUIControl\Source\VCL\BGRACanvas\uBGRADrawCanvas.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="2767"/>
-        <CursorPos X="3" Y="2773"/>
-        <UsageCount Value="71"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="2995"/>
+        <CursorPos X="11" Y="3019"/>
+        <UsageCount Value="86"/>
+        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="..\..\OrangeUIControl\Source\VCL\BGRACanvas\uBGRASkinPictureEngine.pas"/>
@@ -187,7 +188,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="84"/>
         <CursorPos X="27" Y="124"/>
-        <UsageCount Value="71"/>
+        <UsageCount Value="86"/>
       </Unit>
       <Unit>
         <Filename Value="EditFrame.pas"/>
@@ -197,7 +198,7 @@
         <ResourceBaseClass Value="Frame"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="3" Y="7"/>
-        <UsageCount Value="103"/>
+        <UsageCount Value="118"/>
       </Unit>
       <Unit>
         <Filename Value="EditGoodsFrame.pas"/>
@@ -207,7 +208,7 @@
         <ResourceBaseClass Value="Frame"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="3" Y="7"/>
-        <UsageCount Value="70"/>
+        <UsageCount Value="85"/>
       </Unit>
       <Unit>
         <Filename Value="..\..\OrangeProjectCommon\uBGRASVGSupport.pas"/>
@@ -215,14 +216,14 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="96"/>
         <CursorPos Y="130"/>
-        <UsageCount Value="62"/>
+        <UsageCount Value="77"/>
       </Unit>
       <Unit>
         <Filename Value="..\..\OrangeProjectCommon\uRestInterfaceCall.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="70"/>
-        <UsageCount Value="61"/>
+        <UsageCount Value="76"/>
         <Bookmarks Count="1">
           <Item0 X="5" Y="1606" ID="3"/>
         </Bookmarks>
@@ -233,7 +234,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="496"/>
         <CursorPos X="26" Y="525"/>
-        <UsageCount Value="61"/>
+        <UsageCount Value="76"/>
       </Unit>
       <Unit>
         <Filename Value="..\..\OrangeProjectCommon\uIdHttpControl.pas"/>
@@ -241,7 +242,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="30"/>
         <CursorPos X="14" Y="37"/>
-        <UsageCount Value="51"/>
+        <UsageCount Value="66"/>
       </Unit>
       <Unit>
         <Filename Value="uconst.pas"/>
@@ -249,7 +250,7 @@
         <UnitName Value="uConst"/>
         <EditorIndex Value="-1"/>
         <CursorPos Y="126"/>
-        <UsageCount Value="48"/>
+        <UsageCount Value="63"/>
       </Unit>
       <Unit>
         <Filename Value="..\..\OrangeProjectCommon\uOpenClientCommon.pas"/>
@@ -257,7 +258,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="2357"/>
         <CursorPos X="34" Y="2370"/>
-        <UsageCount Value="48"/>
+        <UsageCount Value="63"/>
       </Unit>
       <Unit>
         <Filename Value="..\..\OrangeProjectCommon\uManager.pas"/>
@@ -265,7 +266,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="937"/>
         <CursorPos X="3" Y="989"/>
-        <UsageCount Value="48"/>
+        <UsageCount Value="63"/>
       </Unit>
       <Unit>
         <Filename Value="OrderGridFrame.pas"/>
@@ -274,7 +275,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="156"/>
         <CursorPos X="46" Y="184"/>
-        <UsageCount Value="40"/>
+        <UsageCount Value="55"/>
       </Unit>
       <Unit>
         <Filename Value="..\..\OrangeProjectCommon\VCLFrames_Lazarus\GridSwitchPageFrame.dfm"/>
@@ -283,7 +284,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="34"/>
+        <UsageCount Value="49"/>
         <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit>
       <Unit>
@@ -293,7 +294,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="413"/>
         <CursorPos X="37" Y="428"/>
-        <UsageCount Value="34"/>
+        <UsageCount Value="49"/>
       </Unit>
       <Unit>
         <Filename Value="..\..\OrangeProjectCommon\VCLFrames\WaitingForm_VCL\WaitingForm.pas"/>
@@ -302,16 +303,26 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="292"/>
         <CursorPos X="41" Y="301"/>
-        <UsageCount Value="33"/>
+        <UsageCount Value="48"/>
       </Unit>
       <Unit>
         <Filename Value="ItemGrid_DefaultFrame.pas"/>
         <IsPartOfProject Value="True"/>
         <HasResources Value="True"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="347"/>
-        <CursorPos X="64" Y="359"/>
-        <UsageCount Value="22"/>
+        <TopLine Value="19"/>
+        <CursorPos X="26" Y="32"/>
+        <UsageCount Value="37"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="ItemGrid_JsonItemEditFrame.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="31"/>
+        <CursorPos X="26" Y="32"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="DashBoard_Analyse_ItemGrid_TwoCellTextFrame.dfm"/>
@@ -323,14 +334,129 @@
           <TopLine Value="-1"/>
           <CursorPos X="-1" Y="-1"/>
         </ExtraEditor1>
-        <UsageCount Value="72"/>
+        <UsageCount Value="79"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit>
+      <Unit>
+        <Filename Value="ItemGrid_ColumnControlTypeFrame.pas"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="24"/>
+        <CursorPos Y="32"/>
+        <UsageCount Value="14"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="ItemGrid_ContentFrame.pas"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="217"/>
+        <CursorPos X="22" Y="231"/>
+        <UsageCount Value="14"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControl\Source\Controls\uSkinColumnHeaderType.pas"/>
+        <EditorIndex Value="6"/>
+        <TopLine Value="771"/>
+        <CursorPos X="50" Y="785"/>
+        <UsageCount Value="14"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControl\Source\Controls\uSkinVirtualListType.pas"/>
+        <EditorIndex Value="16"/>
+        <TopLine Value="4152"/>
+        <CursorPos Y="4170"/>
+        <UsageCount Value="14"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\Lazarus\lcl\include\dragmanager.inc"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="145"/>
+        <CursorPos Y="164"/>
+        <UsageCount Value="14"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControl\Source\Controls\uSkinCustomListType.pas"/>
+        <EditorIndex Value="7"/>
+        <TopLine Value="1950"/>
+        <CursorPos X="14" Y="1962"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControl\Source\Controls\uSkinVirtualGridType.pas"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="8"/>
+        <TopLine Value="4737"/>
+        <CursorPos Y="4753"/>
+        <UsageCount Value="12"/>
+        <Bookmarks Count="2">
+          <Item0 X="41" Y="4715" ID="3"/>
+          <Item1 X="26" Y="1099" ID="4"/>
+        </Bookmarks>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControl\Source\Controls\uSkinVirtualChartType.pas"/>
+        <EditorIndex Value="9"/>
+        <TopLine Value="1306"/>
+        <CursorPos Y="1325"/>
+        <UsageCount Value="12"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControl\Source\Base\uSkinListLayouts.pas"/>
+        <EditorIndex Value="10"/>
+        <TopLine Value="1865"/>
+        <CursorPos X="55" Y="1872"/>
+        <UsageCount Value="12"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\Lazarus\components\lazutils\laztracer.pas"/>
+        <UnitName Value="LazTracer"/>
+        <EditorIndex Value="13"/>
+        <TopLine Value="36"/>
+        <CursorPos Y="50"/>
+        <UsageCount Value="12"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\Lazarus\lcl\include\control.inc"/>
+        <EditorIndex Value="14"/>
+        <TopLine Value="763"/>
+        <CursorPos Y="783"/>
+        <UsageCount Value="12"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\Lazarus\lcl\include\wincontrol.inc"/>
+        <EditorIndex Value="15"/>
+        <TopLine Value="3821"/>
+        <CursorPos Y="3835"/>
+        <UsageCount Value="12"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\OrangeUIControl\Source\Base\uSkinItems.pas"/>
+        <EditorIndex Value="11"/>
+        <TopLine Value="3811"/>
+        <CursorPos X="31" Y="3825"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\Lazarus\fpc\3.2.2\source\rtl\objpas\classes\classesh.inc"/>
+        <EditorIndex Value="12"/>
+        <TopLine Value="485"/>
+        <CursorPos X="17" Y="498"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit>
     </Units>
-    <General>
-      <ActiveWindowIndexAtStart Value="-1"/>
-    </General>
     <RunParams>
       <FormatVersion Value="2"/>
       <Modes ActiveMode=""/>
@@ -427,13 +553,6 @@
         <WatchScope Value="wpsLocal"/>
         <WatchKind Value="wpkWrite"/>
         <Source Value="..\..\OrangeUIControl\Source\Controls\uSkinVirtualChartType.pas"/>
-        <Line Value="1325"/>
-      </Item>
-      <Item>
-        <Kind Value="bpkSource"/>
-        <WatchScope Value="wpsLocal"/>
-        <WatchKind Value="wpkWrite"/>
-        <Source Value="..\..\OrangeUIControl\Source\Controls\uSkinVirtualChartType.pas"/>
         <Line Value="1741"/>
       </Item>
       <Item>
@@ -442,6 +561,20 @@
         <WatchKind Value="wpkWrite"/>
         <Source Value="..\..\OrangeUIControl\Source\VCL\uSkinWindowsControl.pas"/>
         <Line Value="391"/>
+      </Item>
+      <Item>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="..\..\OrangeUIControl\Source\Controls\uSkinVirtualGridType.pas"/>
+        <Line Value="2179"/>
+      </Item>
+      <Item>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="..\..\OrangeUIControl\Source\Controls\uSkinVirtualGridType.pas"/>
+        <Line Value="2175"/>
       </Item>
     </BreakPoints>
     <Watches>

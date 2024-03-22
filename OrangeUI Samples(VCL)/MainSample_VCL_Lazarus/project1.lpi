@@ -224,6 +224,11 @@
         <IsPartOfProject Value="True"/>
         <HasResources Value="True"/>
       </Unit>
+      <Unit>
+        <Filename Value="ItemGrid_JsonItemEditFrame.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
@@ -234,7 +239,7 @@
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
-      <OtherUnitFiles Value="D:\MyFiles\OrangeUIControlNew\lib\x86_64-win64;..\..\OrangeProjectCommon;..\..\OrangeUIListItemStyles_VCL;..\..\OrangeUIControl\Source\VCL\BGRACanvas;..\..\OrangeUIControl\Source\VCL\NativeCanvas;..\..\OrangeProjectCommon\VCLFrames_Lazarus;..\..\OrangeProjectCommon\VCLFrames\WaitingForm_VCL"/>
+      <OtherUnitFiles Value="D:\MyFiles\OrangeUIControlNew\lib\x86_64-win64\;..\..\OrangeProjectCommon;..\..\OrangeUIListItemStyles_VCL;..\..\OrangeUIControl\Source\VCL\BGRACanvas;..\..\OrangeUIControl\Source\VCL\NativeCanvas;..\..\OrangeProjectCommon\VCLFrames_Lazarus;..\..\OrangeProjectCommon\VCLFrames\WaitingForm_VCL"/>
       <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <Linking>

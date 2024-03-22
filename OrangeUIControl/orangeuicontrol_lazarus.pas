@@ -34,7 +34,7 @@ uses
   uSkinVirtualChartType, uSkinVirtualGridType, uSkinVirtualListType, 
   uskinsuperobject, uNativeDrawCanvas, uNativeSkinPictureEngine, 
   uSkinFormType, uDrawPictureEditor, uSkinRepeatImageType, 
-  uSkinVirtualChartBezierLineDrawer, LazarusPackageIntf;
+  uSkinVirtualChartBezierLineDrawer, uSkinColumnHeaderType, LazarusPackageIntf;
 
 implementation
 

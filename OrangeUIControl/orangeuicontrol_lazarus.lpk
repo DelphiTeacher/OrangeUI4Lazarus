@@ -396,6 +396,10 @@
         <Filename Value="Source\Controls\uSkinVirtualChartBezierLineDrawer.pas"/>
         <UnitName Value="uSkinVirtualChartBezierLineDrawer"/>
       </Item>
+      <Item>
+        <Filename Value="Source\Controls\uSkinColumnHeaderType.pas"/>
+        <UnitName Value="uSkinColumnHeaderType"/>
+      </Item>
     </Files>
     <RequiredPkgs>
       <Item>
