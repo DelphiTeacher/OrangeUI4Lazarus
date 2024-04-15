@@ -1,71 +1,64 @@
 object frmSkinPictureListPropertyEditor: TfrmSkinPictureListPropertyEditor
   Left = 232
+  Height = 710
   Top = 143
+  Width = 854
   BorderIcons = [biSystemMenu]
-  Caption = #22270#29255#21015#34920#32534#36753#22120
-  ClientHeight = 568
-  ClientWidth = 683
+  Caption = '图片列表编辑器'
+  ClientHeight = 710
+  ClientWidth = 854
   Color = clBtnFace
-  ParentFont = True
-  OldCreateOrder = True
-  Position = poScreenCenter
+  DesignTimePPI = 120
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  DesignSize = (
-    683
-    568)
-  PixelsPerInch = 96
-  TextHeight = 13
+  ParentFont = True
+  Position = poScreenCenter
+  LCLVersion = '3.2.0.0'
   object lblImageIndex: TLabel
-    Left = 532
-    Top = 178
-    Width = 100
-    Height = 13
+    Left = 666
+    Height = 20
+    Top = 222
+    Width = 124
     Anchors = [akTop, akRight]
-    Caption = #24403#21069#36873#20013#22270#29255#19979#26631':'
-    ExplicitLeft = 453
+    Caption = '当前选中图片下标:'
   end
   object lblImageName: TLabel
-    Left = 530
-    Top = 218
-    Width = 100
-    Height = 13
+    Left = 664
+    Height = 20
+    Top = 272
+    Width = 124
     Anchors = [akTop, akRight]
-    Caption = #24403#21069#36873#20013#22270#29255#21517#31216':'
-    ExplicitLeft = 451
+    Caption = '当前选中图片名称:'
   end
   object lblFileName: TLabel
-    Left = 530
-    Top = 261
-    Width = 100
-    Height = 13
+    Left = 664
+    Height = 20
+    Top = 326
+    Width = 124
     Anchors = [akTop, akRight]
-    Caption = #24403#21069#36873#20013#22270#29255#36335#24452':'
-    ExplicitLeft = 451
+    Caption = '当前选中图片路径:'
   end
   object lblResourceName: TLabel
-    Left = 530
-    Top = 304
-    Width = 124
-    Height = 13
+    Left = 664
+    Height = 20
+    Top = 380
+    Width = 154
     Anchors = [akTop, akRight]
-    Caption = #24403#21069#36873#20013#22270#29255#36164#28304#21517#31216':'
-    ExplicitLeft = 451
+    Caption = '当前选中图片资源名称:'
   end
   object lblUrl: TLabel
-    Left = 530
-    Top = 346
-    Width = 100
-    Height = 13
+    Left = 664
+    Height = 20
+    Top = 432
+    Width = 124
     Anchors = [akTop, akRight]
-    Caption = #24403#21069#36873#20013#22270#29255#38142#25509':'
-    ExplicitLeft = 451
+    Caption = '当前选中图片链接:'
   end
   object OKButton: TButton
-    Left = 590
-    Top = 8
-    Width = 75
-    Height = 25
+    Left = 738
+    Height = 31
+    Top = 10
+    Width = 94
     Anchors = [akTop, akRight]
     Caption = 'OK'
     Default = True
@@ -74,41 +67,42 @@ object frmSkinPictureListPropertyEditor: TfrmSkinPictureListPropertyEditor
     OnClick = OKButtonClick
   end
   object CancelButton: TButton
-    Left = 590
-    Top = 39
-    Width = 75
-    Height = 25
+    Left = 738
+    Height = 31
+    Top = 49
+    Width = 94
     Anchors = [akTop, akRight]
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
     TabOrder = 1
+    OnClick = CancelButtonClick
   end
   object GroupBox1: TGroupBox
-    Left = 10
-    Top = 8
-    Width = 502
-    Height = 552
-    Anchors = [akLeft, akTop, akRight, akBottom]
+    Left = 12
+    Height = 690
+    Top = 10
+    Width = 628
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    ClientHeight = 665
+    ClientWidth = 624
+    ParentBackground = False
     TabOrder = 2
-    DesignSize = (
-      502
-      552)
     object Add: TButton
-      Left = 17
-      Top = 521
-      Width = 75
-      Height = 23
+      Left = 21
+      Height = 29
+      Top = 626
+      Width = 94
       Anchors = [akLeft, akBottom]
       Caption = '&Add...'
       TabOrder = 0
       OnClick = AddClick
     end
     object Delete: TButton
-      Left = 179
-      Top = 521
-      Width = 75
-      Height = 23
+      Left = 224
+      Height = 29
+      Top = 626
+      Width = 94
       Anchors = [akLeft, akBottom]
       Caption = '&Delete'
       Enabled = False
@@ -116,20 +110,20 @@ object frmSkinPictureListPropertyEditor: TfrmSkinPictureListPropertyEditor
       OnClick = DeleteClick
     end
     object Clear: TButton
-      Left = 260
-      Top = 521
-      Width = 75
-      Height = 23
+      Left = 325
+      Height = 29
+      Top = 626
+      Width = 94
       Anchors = [akLeft, akBottom]
       Caption = '&Clear'
       TabOrder = 2
       OnClick = ClearClick
     end
     object Replace: TButton
-      Left = 98
-      Top = 521
-      Width = 75
-      Height = 23
+      Left = 122
+      Height = 29
+      Top = 626
+      Width = 94
       Anchors = [akLeft, akBottom]
       Caption = '&Replace...'
       Enabled = False
@@ -137,10 +131,10 @@ object frmSkinPictureListPropertyEditor: TfrmSkinPictureListPropertyEditor
       OnClick = ReplaceClick
     end
     object ExportPicture: TButton
-      Left = 341
-      Top = 521
-      Width = 75
-      Height = 23
+      Left = 426
+      Height = 29
+      Top = 626
+      Width = 94
       Anchors = [akLeft, akBottom]
       Caption = '&Export...'
       Enabled = False
@@ -149,11 +143,11 @@ object frmSkinPictureListPropertyEditor: TfrmSkinPictureListPropertyEditor
     end
     object ListView1: TListView
       Left = 9
+      Height = 613
       Top = 15
-      Width = 485
-      Height = 500
+      Width = 607
       Align = alCustom
-      Anchors = [akLeft, akTop, akRight, akBottom]
+      Anchors = [akTop, akLeft, akRight, akBottom]
       Columns = <>
       IconOptions.AutoArrange = True
       LargeImages = ImageList1
@@ -163,81 +157,78 @@ object frmSkinPictureListPropertyEditor: TfrmSkinPictureListPropertyEditor
     end
   end
   object edtImageIndex: TEdit
-    Left = 536
-    Top = 197
-    Width = 139
-    Height = 21
+    Left = 670
+    Height = 28
+    Top = 246
+    Width = 174
     Anchors = [akTop, akRight]
     TabOrder = 3
   end
   object edtImageName: TEdit
-    Left = 535
-    Top = 238
-    Width = 140
-    Height = 21
+    Left = 669
+    Height = 28
+    Top = 298
+    Width = 175
     Anchors = [akTop, akRight]
     TabOrder = 4
   end
   object edtFileName: TEdit
-    Left = 535
-    Top = 281
-    Width = 140
-    Height = 21
+    Left = 669
+    Height = 28
+    Top = 351
+    Width = 175
     Anchors = [akTop, akRight]
     TabOrder = 5
   end
   object edtResourceName: TEdit
-    Left = 535
-    Top = 324
-    Width = 140
-    Height = 21
+    Left = 669
+    Height = 28
+    Top = 405
+    Width = 175
     Anchors = [akTop, akRight]
     TabOrder = 6
   end
   object edtUrl: TEdit
-    Left = 537
-    Top = 366
-    Width = 140
-    Height = 21
+    Left = 671
+    Height = 28
+    Top = 458
+    Width = 175
     Anchors = [akTop, akRight]
     TabOrder = 7
   end
   object SaveSelected: TButton
-    Left = 565
-    Top = 439
-    Width = 80
-    Height = 25
+    Left = 706
+    Height = 31
+    Top = 549
+    Width = 100
     Anchors = [akTop, akRight]
-    Caption = #20445#23384
+    Caption = '保存'
     TabOrder = 8
     OnClick = SaveSelectedClick
   end
   object chkIsClipRound: TCheckBox
-    Left = 536
-    Top = 394
-    Width = 153
-    Height = 19
+    Left = 736
+    Height = 24
+    Top = 492
+    Width = 126
     Anchors = [akTop, akRight]
-    Caption = #26159#21542#21098#35009#25104#22278#24418
+    Caption = '是否剪裁成圆形'
     TabOrder = 9
   end
   object SaveDialog: TSavePictureDialog
-    Filter = 
-      'All (*.bmp;*.ico;*.emf;*.wmf)|*.bmp;*.ico;*.emf;*.wmf|Bitmaps (*' +
-      '.bmp)|*.bmp|Icons (*.ico)|*.ico|Enhanced Metafiles (*.emf)|*.emf' +
-      '|Metafiles (*.wmf)|*.wmf'
+    Filter = 'All (*.bmp;*.ico;*.emf;*.wmf)|*.bmp;*.ico;*.emf;*.wmf|Bitmaps (*.bmp)|*.bmp|Icons (*.ico)|*.ico|Enhanced Metafiles (*.emf)|*.emf|Metafiles (*.wmf)|*.wmf'
     Options = [ofOverwritePrompt, ofEnableSizing]
-    Left = 236
-    Top = 20
+    Left = 295
+    Top = 25
   end
   object OpenDialog: TOpenPictureDialog
-    Left = 120
-    Top = 16
+    Left = 150
+    Top = 20
   end
   object ImageList1: TImageList
     Height = 48
     Width = 48
-    Left = 128
-    Top = 88
+    Left = 160
+    Top = 110
   end
 end

@@ -60,7 +60,6 @@ uses
   FMX.Dialogs,
   {$ENDIF}
 
-
   Math,
   MD5_OrangeUI,
   uFileCommon,
@@ -1170,6 +1169,7 @@ type
       ///   </para>
       /// </summary>
       function SaveToDocNode(ADocNode:TBTNode20_Class):Boolean;override;
+      procedure AssignTo(Dest: TPersistent); override;
     public
       FDrawPicture:TDrawPicture;
       constructor Create(ACollection:TCollection);override;
@@ -1694,6 +1694,13 @@ end;
 function TDrawPictureItem.SaveToDocNode(ADocNode: TBTNode20_Class): Boolean;
 begin
   Result:=FDrawPicture.SaveToDocNode(ADocNode);
+end;
+
+procedure TDrawPictureItem.AssignTo(Dest: TPersistent);
+var
+  DestNew: TDrawPictureItem absolute Dest;
+begin
+  DestNew.DrawPicture.Assign(Self.DrawPicture);
 end;
 
 constructor TDrawPictureItem.Create(ACollection: TCollection);

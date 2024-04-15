@@ -8,33 +8,24 @@ unit OrangeUIControl_Lazarus;
 interface
 
 uses
-  MD5_OrangeUI, uBasePageStructure, uBasePathData, uBinaryObjectList, 
-  uDownloadPictureManager, uFrameContext, uLang, uSkinBufferBitmap, 
-  uSkinGIFImage, uUIFunction, uUrlPicture, uVersion, uBaseHttpControl, 
-  uBaseList, uBaseLog, uBinaryTreeDoc, uComponentType, uDrawCanvas, 
-  uDrawEngine, uDrawLineParam, uDrawParam, uDrawPathParam, uDrawPicture, 
-  uDrawPictureParam, uDrawRectParam, uDrawTextParam, uFileCommon, uFuncCommon, 
-  uGraphicCommon, uSkinAnimator, uSkinImageList, uSkinItems, uSkinListLayouts, 
-  uSkinMaterial, uSkinPicture, uSkinPublic, uSkinRegManager, uTimerTask, 
-  uTimerTaskEvent, uSkinButtonType, uSkinLabelType, uBaseSkinControl, 
-  uSkinWindowsControl, uSkinCheckBoxType, uComponentTypeRegister, 
-  uSkinCalloutRectType, uSkinComboBoxType, uSkinComboEditType, 
-  uSkinControlGestureManager, uSkinControlPanDragGestureManager, 
-  uSkinCustomListType, uSkinDateEditType, uSkinDBGridType, uSkinDrawPanelType, 
-  uSkinEditType, uSkinFrameImageType, uSkinImageListPlayerType, 
-  uSkinImageListViewerType, uSkinImageType, uSkinItemDesignerPanelType, 
-  uSkinItemGridType, uSkinListBoxType, uSkinListViewType, uSkinMemoType, 
-  uSkinMultiColorLabelType, uSkinNotifyNumberIconType, uSkinPageControlType, 
-  uSkinPanelType, uSkinPopupType, uSkinProgressBarType, 
-  uSkinPullLoadPanelType, uSkinRadioButtonType, uSkinRoundImageType, 
-  uSkinScrollBarType, uSkinScrollBoxContentType, uSkinScrollBoxType, 
-  uSkinScrollControlCornerType, uSkinScrollControlType, uSkinSwitchBarType, 
-  uSkinSwitchPageListControlGestureManager, uSkinSwitchPageListPanelType, 
-  uSkinSwitchType, uSkinTimeEditType, uSkinTrackBarType, uSkinTreeViewType, 
-  uSkinVirtualChartType, uSkinVirtualGridType, uSkinVirtualListType, 
-  uskinsuperobject, uNativeDrawCanvas, uNativeSkinPictureEngine, 
-  uSkinFormType, uDrawPictureEditor, uSkinRepeatImageType, 
-  uSkinVirtualChartBezierLineDrawer, uSkinColumnHeaderType, LazarusPackageIntf;
+  MD5_OrangeUI, uBasePageStructure, uBasePathData, uBinaryObjectList, uDownloadPictureManager, uFrameContext, uLang, 
+  uSkinBufferBitmap, uSkinGIFImage, uUIFunction, uUrlPicture, uVersion, uBaseHttpControl, uBaseList, uBaseLog, 
+  uBinaryTreeDoc, uComponentType, uDrawCanvas, uDrawEngine, uDrawLineParam, uDrawParam, uDrawPathParam, uDrawPicture, 
+  uDrawPictureParam, uDrawRectParam, uDrawTextParam, uFileCommon, uFuncCommon, uGraphicCommon, uSkinAnimator, 
+  uSkinImageList, uSkinItems, uSkinListLayouts, uSkinMaterial, uSkinPicture, uSkinPublic, uSkinRegManager, uTimerTask, 
+  uTimerTaskEvent, uSkinButtonType, uSkinLabelType, uBaseSkinControl, uSkinWindowsControl, uSkinCheckBoxType, 
+  uComponentTypeRegister, uSkinCalloutRectType, uSkinComboBoxType, uSkinComboEditType, uSkinControlGestureManager, 
+  uSkinControlPanDragGestureManager, uSkinCustomListType, uSkinDateEditType, uSkinDBGridType, uSkinDrawPanelType, 
+  uSkinEditType, uSkinFrameImageType, uSkinImageListPlayerType, uSkinImageListViewerType, uSkinImageType, 
+  uSkinItemDesignerPanelType, uSkinItemGridType, uSkinListBoxType, uSkinListViewType, uSkinMemoType, 
+  uSkinMultiColorLabelType, uSkinNotifyNumberIconType, uSkinPageControlType, uSkinPanelType, uSkinPopupType, 
+  uSkinProgressBarType, uSkinPullLoadPanelType, uSkinRadioButtonType, uSkinRoundImageType, uSkinScrollBarType, 
+  uSkinScrollBoxContentType, uSkinScrollBoxType, uSkinScrollControlCornerType, uSkinScrollControlType, 
+  uSkinSwitchBarType, uSkinSwitchPageListControlGestureManager, uSkinSwitchPageListPanelType, uSkinSwitchType, 
+  uSkinTimeEditType, uSkinTrackBarType, uSkinTreeViewType, uSkinVirtualChartType, uSkinVirtualGridType, 
+  uSkinVirtualListType, uskinsuperobject, uNativeDrawCanvas, uNativeSkinPictureEngine, uSkinFormType, 
+  uDrawPictureEditor, uSkinRepeatImageType, uSkinVirtualChartBezierLineDrawer, uSkinColumnHeaderType, 
+  uSkinImageListEditor, LazarusPackageIntf;
 
 implementation
 
@@ -42,6 +33,7 @@ procedure Register;
 begin
   RegisterUnit('uComponentTypeRegister', @uComponentTypeRegister.Register);
   RegisterUnit('uDrawPictureEditor', @uDrawPictureEditor.Register);
+  RegisterUnit('uSkinImageListEditor', @uSkinImageListEditor.Register);
 end;
 
 initialization

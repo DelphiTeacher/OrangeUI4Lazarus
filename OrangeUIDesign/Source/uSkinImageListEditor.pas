@@ -23,10 +23,11 @@ uses
   ImgList,
   VCL_SkinPictureListPropertyEditorForm,
   CommCtrl,
-
+  {$IFDEF DELPHI}
   PngImage,
   GifImg,
   Jpeg,
+  {$ENDIF}
   {$ENDIF}
   {$IFDEF FMX}
   UITypes,
@@ -43,9 +44,15 @@ uses
   uSkinPicture,
   uDrawPicture,
   uSkinImageList,
-
+  {$IFDEF DELPHI}
   DesignIntf,
-  DesignEditors;
+  DesignEditors
+  {$ENDIF}
+  {$IFDEF FPC}
+  ComponentEditors,
+  PropEdits
+  {$ENDIF}
+  ;
 
 
 
@@ -99,7 +106,7 @@ uses
 procedure Register;
 begin
   //属性编辑器
-  RegisterPropertyEditor(TypeInfo(TSkinPictureList),//属性名称
+  RegisterPropertyEditor(TypeInfo(TDrawPictureCollection),//属性名称
                           nil,                      //指定类
                           '',                       //指定属性名
                           TSkinPictureListPropertyEditor);//属性编辑器类
@@ -166,12 +173,12 @@ end;
 
 procedure TSkinPictureListPropertyEditor.Edit;
 var
-  ASkinPictureList:TSkinPictureList;
+  ASkinPictureList: TDrawPictureCollection;
   PictureEditor: TSkinPictureListEditorPopupForm;
 begin
   PictureEditor := TSkinPictureListEditorPopupForm.Create(nil);
   try
-    ASkinPictureList:=TSkinPictureList(Pointer(GetOrdValue));
+    ASkinPictureList:=TDrawPictureCollection(Pointer(GetOrdValue));
     PictureEditor.FPicDlg.PictureList:=ASkinPictureList;
     if PictureEditor.Execute then
     begin
@@ -189,9 +196,9 @@ end;
 
 function TSkinPictureListPropertyEditor.GetValue: string;
 var
-  ASkinPictureList: TSkinPictureList;
+  ASkinPictureList: TDrawPictureCollection;
 begin
-  ASkinPictureList := TSkinPictureList(GetOrdValue);
+  ASkinPictureList := TDrawPictureCollection(GetOrdValue);
   Result:=Format(Langs_PictureListCount[LangKind],[ASkinPictureList.Count]);
 end;
 
