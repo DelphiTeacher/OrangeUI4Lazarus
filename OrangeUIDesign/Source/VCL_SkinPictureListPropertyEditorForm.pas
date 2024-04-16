@@ -2,6 +2,8 @@ unit VCL_SkinPictureListPropertyEditorForm;
 
 interface
 
+{$I FrameWork.inc}
+
 uses
   Windows,
   Classes,
@@ -12,26 +14,37 @@ uses
   Dialogs,
   Buttons,
   Types,
+  {$IFDEF DELPHI}
   PngImage,
   GifImg,
   Jpeg,
+  {$ENDIF}
   uBaseLog,
   uSkinImageList,
+  {$IFDEF DELPHI}
   DesignConst,
   DesignIntf,
   DesignEditors,
+  {$ENDIF}
+  {$IFDEF FPC}
+  ComponentEditors,
+  uGraphicCommon,
+  {$ENDIF}
   uSkinPicture,
   uDrawPicture,
   StdCtrls,
   ExtCtrls,
   ExtDlgs,
+  {$IFDEF DELPHI}
+  System.ImageList,
+  {$ENDIF}
   ComCtrls,
-
-//  System.ImageList,
-
-  ImgList, System.ImageList;
+  ImgList;
 
 type
+
+  { TfrmSkinPictureListPropertyEditor }
+
   TfrmSkinPictureListPropertyEditor = class(TForm)
     SaveDialog: TSavePictureDialog;
     OKButton: TButton;
@@ -57,6 +70,7 @@ type
     lblUrl: TLabel;
     SaveSelected: TButton;
     chkIsClipRound: TCheckBox;
+    procedure CancelButtonClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
     procedure AddClick(Sender: TObject);
@@ -74,7 +88,12 @@ type
     FPictureList: TDrawPictureCollection;
     procedure SetSkinPictureList(const Value: TDrawPictureCollection);
   public
-    FDesigner:IDesigner;
+    {$IFDEF DELPHI}
+    FDesigner: IDesigner;
+    {$ENDIF}
+    {$IFDEF FPC}
+    FDesigner: TIDesigner;
+    {$ENDIF}
     FComponent:TComponent;
     property PictureList: TDrawPictureCollection read FPictureList write SetSkinPictureList;
   end;
@@ -92,6 +111,11 @@ implementation
 procedure TfrmSkinPictureListPropertyEditor.FormCreate(Sender: TObject);
 begin
   FPictureList := TDrawPictureCollection.Create(TDrawPictureItem);
+end;
+
+procedure TfrmSkinPictureListPropertyEditor.CancelButtonClick(Sender: TObject);
+begin
+  Close;
 end;
 
 procedure TfrmSkinPictureListPropertyEditor.FormDestroy(Sender: TObject);
@@ -162,7 +186,12 @@ begin
   if Self.ListView1.Selected<>nil then
   begin
     SelectedIndex:=Self.ListView1.Selected.Index;
+    {$IFDEF DELPHI}
     Self.ListView1.DeleteSelected;
+    {$ENDIF}
+    {$IFDEF FPC}
+    Self.ListView1.Selected.Delete;
+    {$ENDIF}
     Self.FPictureList.Delete(SelectedIndex);
     Self.ListView1.Invalidate;
   end;

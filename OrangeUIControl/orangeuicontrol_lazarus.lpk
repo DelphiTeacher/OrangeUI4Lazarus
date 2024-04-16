@@ -400,6 +400,11 @@
         <Filename Value="Source\Controls\uSkinColumnHeaderType.pas"/>
         <UnitName Value="uSkinColumnHeaderType"/>
       </Item>
+      <Item>
+        <Filename Value="..\OrangeUIDesign\Source\uSkinImageListEditor.pas"/>
+        <HasRegisterProc Value="True"/>
+        <UnitName Value="uSkinImageListEditor"/>
+      </Item>
     </Files>
     <RequiredPkgs>
       <Item>
