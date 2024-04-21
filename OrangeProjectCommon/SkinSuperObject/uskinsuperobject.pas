@@ -2520,7 +2520,7 @@ end;
 
 function TSuperObject.Contains(AKey:String):Boolean;
 begin
-  Result := (ParseString(PSOChar(AKey), False, true, self)<>nil);
+  Result := (ParseString(PSOChar(SOString(AKey)), False, true, self)<>nil);
 end;
 
 function TSuperObject.GetEnumerator: TSuperEnumerator;
