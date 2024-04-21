@@ -405,6 +405,10 @@
         <HasRegisterProc Value="True"/>
         <UnitName Value="uSkinImageListEditor"/>
       </Item>
+      <Item>
+        <Filename Value="..\OrangeProjectCommon\uSkinItemJsonHelper.pas"/>
+        <UnitName Value="uSkinItemJsonHelper"/>
+      </Item>
     </Files>
     <RequiredPkgs>
       <Item>

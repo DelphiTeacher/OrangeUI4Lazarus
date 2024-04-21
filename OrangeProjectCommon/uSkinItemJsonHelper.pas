@@ -72,7 +72,7 @@ type
 
 
   //Json列表项
-  TJsonSkinItem=class(TSkinItem)
+  TJsonSkinItem=class(TRealSkinItem)
   private
     FJsonStr:String;
     FJson: ISuperObject;

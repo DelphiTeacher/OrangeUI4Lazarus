@@ -25,7 +25,7 @@ uses
   uSkinTimeEditType, uSkinTrackBarType, uSkinTreeViewType, uSkinVirtualChartType, uSkinVirtualGridType, 
   uSkinVirtualListType, uskinsuperobject, uNativeDrawCanvas, uNativeSkinPictureEngine, uSkinFormType, 
   uDrawPictureEditor, uSkinRepeatImageType, uSkinVirtualChartBezierLineDrawer, uSkinColumnHeaderType, 
-  uSkinImageListEditor, LazarusPackageIntf;
+  uSkinImageListEditor, uSkinItemJsonHelper, LazarusPackageIntf;
 
 implementation
 
