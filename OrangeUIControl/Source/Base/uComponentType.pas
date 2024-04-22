@@ -369,7 +369,7 @@ type
   /// </summary>
   ISkinControl=interface
   ['{BF586D36-805F-4BB4-BB58-2F82EF4C3181}']
-    {$I Source\Controls\INC\Common\ISkinControl_Declare.inc}
+    {$I ..\..\Source\Controls\INC\Common\ISkinControl_Declare.inc}
 
     /// <summary>
     ///   <para>

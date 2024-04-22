@@ -56,15 +56,15 @@ Type
       IControlForPageFramework
       )
   private
-    {$I Source\Controls\INC\Common\ISkinControl_Declare.inc}
-    {$I Source\Controls\INC\VCL\ISkinControl_Control_Impl_Mouse_Declare_VCL.inc}
-    {$I Source\Controls\INC\VCL\ISkinControl_Control_Impl_Key_Declare_VCL.inc}
-    {$I Source\Controls\INC\Common\ISkinControl_Control_Impl_Common_Declare.inc}
-    {$I Source\Controls\INC\Common\ISkinControl_Control_Impl_DirectUI_Declare.inc}
-    {$I Source\Controls\INC\Common\ISkinComponent_Skin_Impl_Field_Declare.inc}
-    {$I Source\Controls\INC\Common\ISkinComponent_Skin_Impl_Property_Declare.inc}
-    {$I Source\Controls\INC\Common\ISkinComponent_Properties_Impl_Declare.inc}
-    {$I Source\Controls\INC\Common\ISkinControl_Control_Impl_Mouse_Declare.inc}
+    {$I ..\..\Source\Controls\INC\Common\ISkinControl_Declare.inc}
+    {$I ..\..\Source\Controls\INC\VCL\ISkinControl_Control_Impl_Mouse_Declare_VCL.inc}
+    {$I ..\..\Source\Controls\INC\VCL\ISkinControl_Control_Impl_Key_Declare_VCL.inc}
+    {$I ..\..\Source\Controls\INC\Common\ISkinControl_Control_Impl_Common_Declare.inc}
+    {$I ..\..\Source\Controls\INC\Common\ISkinControl_Control_Impl_DirectUI_Declare.inc}
+    {$I ..\..\Source\Controls\INC\Common\ISkinComponent_Skin_Impl_Field_Declare.inc}
+    {$I ..\..\Source\Controls\INC\Common\ISkinComponent_Skin_Impl_Property_Declare.inc}
+    {$I ..\..\Source\Controls\INC\Common\ISkinComponent_Properties_Impl_Declare.inc}
+    {$I ..\..\Source\Controls\INC\Common\ISkinControl_Control_Impl_Mouse_Declare.inc}
   protected
     //标题
     function GetCaption:String;
